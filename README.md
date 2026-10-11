@@ -174,6 +174,21 @@ grandes: lentos y durísimos, el suelo tiembla a cada paso, cargan de lejos y de
 que te tumba o aplasta tu coche; se enfurecen a media vida. Tienen su barra de vida arriba y tumbar uno da 150 € y
 50 más por oleada.
 
+**Los Backrooms, bajo el teatro** (de prueba): en la Casa de la Cultura, sube al escenario. Al fondo a la izquierda
+hay una puerta pintada de amarillo, con una raya de luz fría por debajo y un zumbido de fluorescentes detrás. Ábrela y
+caes al **Nivel 0, «The Lobby»**: salas vacías de papel amarillo, moqueta húmeda y fluorescentes que zumban sin parar.
+- **No se acaba nunca**: un plano de 48 m que da la vuelta sobre sí mismo, con dos pasillos sin fin.
+- **24 salas**, entre ellas:
+  - un salón de pilares, uno de los cuales no toca el suelo;
+  - dos salas gemelas con la misma silla;
+  - un pasillo que se estrecha hasta nada y un techo que baja;
+  - una escalera que se mete en el techo y una puerta a media pared;
+  - una sala a oscuras con un tubo que parpadea y un pasillo de enchufes;
+  - una rendija por la que no cabes.
+- **La luz de cada rincón**, calculada al entrar.
+- **En Plastilina y en Realista**.
+- **La vuelta**: por la misma puerta. Detalle en docs/backrooms.md.
+
 **Las sombras, quietas**: la caja de sombras del sol se encaja en su propia rejilla y se centra donde mira la cámara;
 al moverse ya no parpadean ni dejan trozos de calle saltando de la sombra a la luz (se veía sobre todo en el vuelo del
 menú).

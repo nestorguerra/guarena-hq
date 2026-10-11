@@ -11,9 +11,10 @@ import { mulberry32 } from './util.js';
 import { statue } from './statues.js';
 import { goldEnv, goldTexture } from './church.js';
 import { calTexture } from './churchtex.js';
+import { buildBackrooms, doorMesh } from './backrooms.js';
 
 export function buildVenue(kind, seed = 1, origin = INTERIOR_ORIGIN) {
-  const make = { ayto: ayuntamiento, teatro, mercado, pabellon, corbacho, sangregorio }[kind];
+  const make = { ayto: ayuntamiento, teatro, mercado, pabellon, corbacho, sangregorio, backrooms: (o) => buildBackrooms(o) }[kind];
   const h = make ? make(origin, seed) : ayuntamiento(origin, seed);
   h.venue = kind;
   return h;
@@ -254,7 +255,21 @@ function teatro(origin, seed) {
   for (const z of [DF + 4, DF + 9, DF + 14]) K.chandelier(0, H - 1.4, z, 0.9, 10);
   K.lamp(0, 3, 3, 0xfff0d8, 6, 9); K.lamp(-4.5, 3.1, 2.6, 0xfff0d8, 5, 8); K.lamp(4.5, 3.1, 2.6, 0xfff0d8, 5, 8);
   B.interact({ type: 'info', x: 0, z: ZS - 2.2, r: 1.8, label: 'El escenario', text: 'Las tablas del teatro de la Casa de la Cultura: aquí ensaya la Escuela Municipal de Teatro y actúan las compañías del festival Escénicas. Puedes subir por las escaleras de los lados.' });
+  // the easter egg: a door at the back of the stage, on its left, painted yellow for now (to be found while it is being
+  // tried out). Behind it, where the wings should be, the Backrooms (backrooms.js): a line of cold light under it, the
+  // hum of fluorescent tubes where there are none
+  const BX = -hw + 0.095, BZ = 27.2;
+  B.extraMesh(doorMesh({ color: 0xd4a72c, frame: 0x2e2216 }), BX, SY, BZ, Math.PI / 2);
+  const leak = new THREE.Mesh(planeGeo(0.95, 0.5, 1), new THREE.MeshBasicMaterial({ map: canvasTexture('leak', 32, 64, (x, w2, h2) => { const g2 = x.createLinearGradient(0, h2, 0, 0); // (bright at the door, v 0)
+    g2.addColorStop(0, 'rgba(255,246,214,0.85)'); g2.addColorStop(0.25, 'rgba(255,242,200,0.35)'); g2.addColorStop(1, 'rgba(255,240,190,0)'); x.fillStyle = g2; x.fillRect(0, 0, w2, h2); }), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+  leak.geometry.rotateX(-Math.PI / 2); leak.geometry.rotateY(-Math.PI / 2); leak.renderOrder = 2;
+  { const uv = leak.geometry.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) / 0.95, uv.getY(i) / 0.5); }
+  B.extraMesh(leak, BX + 0.3, SY + 0.004, BZ, 0);
+  K.lamp(BX + 0.25, SY + 0.12, BZ, 0xfff0c8, 1.6, 2.4);
+  B.interact({ type: 'backrooms', x: BX + 0.75, z: BZ, y: SY, r: 1.15, label: 'Abrir la puerta amarilla' });
   const h = K.finish({ kind: 'teatro', daylight: { sun: 0.08, hemi: 0.3 } });
+  h.spots.backrooms = { x: K.ox + BX + 1.15, z: K.oz + BZ, h: Math.PI / 2 };
+  h.brDoor = { x: K.ox + BX - 0.2, z: K.oz + BZ };
   h.ceilY = () => H;
   h.spots.entrada = { x: K.ox, z: K.oz + 1.6, h: 0 };
   h.bounds = { x0: K.ox - hw, x1: K.ox + hw, z0: K.oz, z1: K.oz + D };

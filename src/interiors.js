@@ -837,7 +837,7 @@ export class Interiors {
   }
 
   // step inside: build (or reuse) the house, swap the collider, park the outside world
-  async enter(door, { kind = 'casa', seed = door ? door.seed : 1, silent = false, spot = 'entrada', mode = 'sneak' } = {}) {
+  async enter(door, { kind = 'casa', seed = door ? door.seed : 1, silent = false, spot = 'entrada', mode = 'sneak', banner = true } = {}) {
     const g = this.game, p = g.player;
     if (this.entering) return null; // a second press during the fade
     if (door && door.x !== undefined && !door.shop && !door.church && !door.venue && g.mode === 'normal' && !this.house) g.police.onHide('house', door); // did the police see you go in?
@@ -869,7 +869,7 @@ export class Interiors {
     this.church = h.church ? new ChurchLife(g, h, { randomDesc: () => randomDesc(Math.random), massTime, weekday }) : null;
     this.venueLife = h.cast ? new VenueLife(g, h) : null;
     if (h.onEnter) setTimeout(() => { if (this.house === h) h.onEnter(g); }, 900);
-    if (h.venue && door && door.name && g.hud.banner) g.hud.banner(door.name, door.sub || '', 'title');
+    if (banner && h.venue && door && door.name && g.hud.banner) g.hud.banner(door.name, door.sub || '', 'title');
     if (h.church) {
       g.hud.banner && g.hud.banner('Santa María', 'Iglesia parroquial · s. XVI', 'title');
       // you have just pushed through the lobby: its padded leaves swing back behind you; the great door shuts beyond
@@ -919,6 +919,8 @@ export class Interiors {
     if (g.shops && g.shops.here) g.shops.onLeave();
     if (g.decor && g.decor.house) g.decor.leave();
     if (g.homeSafe) g.homeSafe.menu.close();
+    if (this.house.unlook) this.house.unlook(g);
+    if (this.brHum) { g.audio.loopAt('brdoor', { on: false }); this.brHum = false; }
     this.root.remove(this.house.group);
     this.house.group.traverse((o) => { if (o.geometry) o.geometry.dispose(); });
     this.house = null;
@@ -989,6 +991,8 @@ export class Interiors {
     for (const l of this.house.lights) if (l.userData.fire) l.intensity = l.userData.base * (0.75 + Math.sin(this.t * 11) * 0.12 + Math.sin(this.t * 23.7) * 0.08);
     if (this.life) this.life.update(dt);
     if (this.venueLife) this.venueLife.update(dt);
+    if (hs.tick) hs.tick(dt, g); // (the Backrooms: their endless plan, the failing tube, the hum)
+    if (hs.brDoor && g.audio.ready) { g.audio.loopAt('brdoor', { x: hs.brDoor.x, z: hs.brDoor.z, kind: 'hum', vol: 0.5, ref: 1.0, max: 14, on: true }); this.brHum = true; }
     if (this.church) {
       this.lobbyStep(dt);
       this.church.update(dt);
@@ -1076,6 +1080,28 @@ export class Interiors {
     const dl = this.house.daylight;
     g.sky.sun.intensity *= dl ? dl.sun : 0.12;
     g.sky.hemi.intensity *= dl ? dl.hemi : this.house.powered ? 0.55 : 0.18;
+    if (this.house.look) this.house.look(g); // (the Backrooms: their own light)
+  }
+
+  // the theatre's yellow door and back (backrooms.js): through it, a long fade, the static and the thump of falling out of
+  // the world, and the Backrooms; back the same way to the stage, in front of the door. (The theatre's street door is
+  // kept: it is still the way out of the theatre)
+  async noclip(on) {
+    const g = this.game;
+    if (this.entering || this.noclipping) return;
+    this.noclipping = true;
+    try {
+      g.audio.sfx('noclip', { vol: on ? 1 : 0.6 });
+      await this.fade(true, on ? 900 : 600);
+      if (on) {
+        if (this.current && this.current.venue === 'teatro') this.theatreDoor = this.current;
+        await this.enter({ venue: 'backrooms', name: 'Nivel 0', sub: '«The Lobby» · los Backrooms', seed: 1 }, { silent: true, mode: 'visit' });
+      } else {
+        const d = this.theatreDoor || this.doors.find((q) => q.venue === 'teatro');
+        await this.enter(d, { silent: true, mode: 'visit', spot: 'backrooms', banner: false });
+      }
+    } finally { this.noclipping = false; }
+    await this.fade(false, on ? 1500 : 700);
   }
 
   // ---------------------------------------------------------------- neighbours' doors: knock, or sneak in
@@ -1238,6 +1264,8 @@ export class Interiors {
       case 'guitar': return { label: best.label, run: () => { g.audio.sfx('guitar'); if (this.life) this.life.noise(p.pos.x, p.pos.z, 9); } };
       case 'hide': return this.hiding ? { label: 'Salir del armario', run: () => this.unhide() } : { label: best.label, run: () => this.hideIn(best) };
       case 'exit': return { label: best.label, run: () => this.exit(best.door) };
+      case 'backrooms': return { label: best.label, run: () => this.noclip(true) };
+      case 'backrooms_out': return { label: best.label, run: () => this.noclip(false) };
       case 'info': return { label: best.label, run: () => { g.hud.subtitle(best.label, best.text); setTimeout(() => g.hud.subtitle(null), 6500); } };
       case 'pila': return { label: best.label, run: () => { g.hud.notify('Mojas los dedos en el agua bendita y te santiguas.', 'info', 3); g.audio.sfx('pickup', { vol: 0.2 }); } };
       case 'cepillo': return { label: best.label, run: () => { if (g.player.money < 1) { g.hud.notify('No llevas ni un euro suelto.', 'info', 2.5); return; } g.player.money -= 1; g.audio.sfx('money', { vol: 0.5 }); g.hud.notify('Echas un euro en el cepillo. Las monedas suenan en la caja de madera.', 'ok', 3); } };

@@ -804,6 +804,8 @@ export class Game {
       this.bloom.threshold = lerp(1.8, 0.85, night);
       this.bloom.radius = lerp(0.3, 0.6, night);
       if (STYLE.plastilina) { this.bloom.strength = lerp(0.14, 0.6, night); this.bloom.threshold = lerp(0.95, 0.85, night); this.bloom.radius = lerp(0.75, 0.6, night); } // (claymation: the soft halation of a photographed set)
+      const ib = this.interior && this.interior.bloom; // (an interior with a glow of its own: the Backrooms' tubes)
+      if (ib) { this.bloom.strength = ib.strength; this.bloom.threshold = ib.threshold; this.bloom.radius = ib.radius; }
     }
     // claymation: the puppets not due a new pose are drawn as they were at the last one; at each pose the lamps flicker
     // a hair
@@ -830,6 +832,7 @@ export class Game {
     this.canvas.style.filter = ''; this.timeScale = 1;
   }
   setMode(id, opts = {}) {
+    if (this.interior && this.interiors && id !== this.mode) this.interiors.leave(); // (a house, the Backrooms…: a new game mode starts in the street)
     if (this.zombieSys.active) this.zombieSys.stop();
     if (this.state === 'ended') this.state = 'play';
     this.revive();

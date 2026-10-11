@@ -795,7 +795,7 @@ class Liminal {
   set(on) { this.want = !!on; this.level(); }
   // up while wanted and no radio plays; the chords are written 2.5 s ahead on a timer of their own (menus included)
   level() {
-    const A = this.A, t = A.ctx.currentTime, on = this.want && !A._radioOn;
+    const A = this.A, t = A.ctx.currentTime, on = this.want && !A._radioOn && !A._hush; // (the Backrooms hush it: their lights' hum is their music)
     glide(this.out.gain, on ? 0.34 : 0, t, on ? 1.5 : 0.6);
     if (this.want && !this.timer) { this.nextT = Math.max(this.nextT, t + 0.2); this.timer = setInterval(() => this.tick(), 250); this.tick(); }
     else if (!this.want && this.timer) { clearInterval(this.timer); this.timer = null; }
@@ -843,6 +843,38 @@ class Liminal {
     o.start(t); o2.start(t); o.stop(t + 6); o2.stop(t + 6);
     o.onended = () => { this.wow.disconnect(o.detune); this.wow.disconnect(o2.detune); o.disconnect(); o2.disconnect(); g2.disconnect(); g.disconnect(); };
   }
+}
+
+// The Backrooms' ceiling (backrooms.js): the hum-buzz of a few hundred old fluorescent tubes on magnetic ballasts — the
+// mains' hum at twice its frequency (120 Hz: the photographs' America) and its harmonics, the ballasts' laminations
+// buzzing higher up, a thin whine, the air of an empty building. level: louder under a tube; flick: the failing tube's
+// share, coming and going with its light; tick(): the click and crackle of its starter as it tries again
+class BackroomsHum {
+  constructor(A) {
+    const c = A.ctx, t = c.currentTime;
+    this.A = A;
+    this.out = c.createGain(); this.out.gain.value = 0; this.out.connect(A.world);
+    const g = (v, d) => { const n = c.createGain(); n.gain.value = v; n.connect(d); return n; };
+    const f = (type, fr, q, d) => { const b = c.createBiquadFilter(); b.type = type; b.frequency.value = fr; b.Q.value = q; b.connect(d); return b; };
+    const srcs = (this.srcs = []);
+    const o = (type, fr, d, det = 0) => { const n = c.createOscillator(); n.type = type; n.frequency.value = fr; n.detune.value = det; n.connect(d); n.start(t); srcs.push(n); return n; };
+    this.flk = g(1, this.out);
+    // (levels: about −28 dB under a tube, a bed under the steps — never as loud as a car)
+    const lp = f('lowpass', 480, 0.6, g(0.065, this.out)); o('sawtooth', 120, lp); o('sawtooth', 120, lp, 4);
+    o('sawtooth', 120, f('lowpass', 620, 0.6, g(0.024, this.flk)), -7);
+    const buzz = g(0.011, this.out); o('square', 120, f('bandpass', 2300, 1.3, buzz), 2);
+    o('square', 120, f('bandpass', 3100, 2, g(0.008, this.flk)), 9);
+    o('sine', 0.21, g(0.0035, buzz.gain)); // (the ballasts never quite steady)
+    o('sine', 7900, g(0.0012, this.out));
+    const n = c.createBufferSource(); n.buffer = A.bank.get('pink'); n.loop = true; n.connect(f('lowpass', 700, 0.5, g(0.016, this.out))); n.start(t); srcs.push(n);
+  }
+  set(level, flick) { const t = this.A.ctx.currentTime; glide(this.out.gain, level, t, 0.3); glide(this.flk.gain, flick, t, 0.012); }
+  tick() {
+    const c = this.A.ctx, t = c.currentTime, k = new Kit(c), bp = k.filter('bandpass', 2600, 1.5), gg = k.gain(0);
+    k.buf(this.A.bank.get('white'), t, t + 0.05, 1, false, Math.random()).connect(bp); bp.connect(gg); gg.connect(this.out);
+    gg.gain.setValueAtTime(0, t); gg.gain.linearRampToValueAtTime(0.03, t + 0.004); gg.gain.exponentialRampToValueAtTime(0.001, t + 0.045);
+  }
+  stop() { const t = this.A.ctx.currentTime; glide(this.out.gain, 0, t, 0.2); for (const s of this.srcs) s.stop(t + 1.2); setTimeout(() => { try { this.out.disconnect(); } catch (e) { /* gone */ } }, 1500); }
 }
 
 const GUITAR_WARM = [40, 41, 43, 45, 46, 47, 48, 50, 52, 53, 55, 56, 57, 59, 60, 61, 62, 64, 65, 67, 69].map((m) => [m, 0.5])
@@ -1185,6 +1217,10 @@ export class GameAudio {
           const lo = k.buf(this.bank.get('brown'), t, undefined, 1, true, Math.random() * 2), lp = k.filter('lowpass', 700, 0.7), g2 = k.gain(0.7);
           chain(hi, bp, g1, out); chain(lo, lp, g2, out);
           const lfo = k.osc('sine', 0.37, t), lg = k.gain(0.18); chain(lfo, lg, g1.gain);
+        } else if (o.kind === 'hum') {
+          // fluorescent tubes behind a door (the theatre's yellow one): the mains' hum and the ballasts' buzz, muffled
+          chain(k.osc('sawtooth', 120, t), k.filter('lowpass', 360, 0.7), k.gain(0.09), out);
+          chain(k.osc('square', 120, t), k.filter('bandpass', 1900, 1.4), k.gain(0.01), out);
         }
         L = { k, sp, out, x: num(o.x, 0), z: num(o.z, 0), vol: num(o.vol, 0.6), on: true };
         this._place(sp, L.x, L.z, t, 0, true);
@@ -1237,6 +1273,16 @@ export class GameAudio {
     this._bgWant = !!on;
     this._safe(() => { if (!this._liminal && this._bgWant) this._liminal = new Liminal(this); if (this._liminal) this._liminal.set(this._bgWant); });
   }
+  // the Backrooms (backrooms.js): their lights' hum at `level` (0: gone), the failing tube's share; the music hushed meanwhile
+  backrooms(level, flick = 1) {
+    this._hush = level > 0;
+    this._safe(() => {
+      if (level > 0 && !this._brHum) this._brHum = new BackroomsHum(this);
+      if (this._brHum) { if (level > 0) this._brHum.set(level, flick); else { this._brHum.stop(); this._brHum = null; } }
+      if (this._liminal) this._liminal.level();
+    });
+  }
+  backroomsTick() { this._safe(() => { if (this._brHum) this._brHum.tick(); }); }
   tuneNoise() { this._safe(() => this._static(this.ctx.currentTime)); } // the hiss of turning the dial
   radioNext() { this.stationIndex = this._station + 1; return this.stationName; }
   radioPrev() { this.stationIndex = this._station - 1; return this.stationName; }
@@ -1545,6 +1591,19 @@ const SFX = {
     chain(tone(v, 'sine', 95 * p, t + 0.06, 0.2), eg(v, t + 0.06, 0.5, 0.003, 0.1), v.out);
     chain(nz(A, v, t + 0.1, 0.35, 'pink'), v.k.filter('bandpass', 1400 * p, 0.8), eg(v, t + 0.1, 0.15, 0.08, 0.25), v.out);
   },
+  noclip(A, v, t, p) {
+    // through reality: a rush of static falling away, a deep thump, the tubes' buzz cutting in
+    const f = v.k.filter('bandpass', 3000 * p, 0.9); sweep(f.frequency, t, 3000 * p, 180 * p, 0.8);
+    chain(nz(A, v, t, 0.9), f, eg(v, t, 0.55, 0.05, 0.7), v.out);
+    const o = tone(v, 'sine', 70 * p, t + 0.55, 0.6); sweep(o.frequency, t + 0.55, 70 * p, 34 * p, 0.4); chain(o, eg(v, t + 0.55, 0.9, 0.005, 0.45), v.out);
+    chain(tone(v, 'square', 120, t + 0.75, 0.35), v.k.filter('bandpass', 2200, 1.2), eg(v, t + 0.75, 0.12, 0.002, 0.3), v.out);
+  },
+  footstep_carpet(A, v, t, p) {
+    // on old wet carpet: a dull pad, a faint squelch
+    const r = p * rnd(0.85, 1.15);
+    chain(nz(A, v, t, 0.1, 'pink'), v.k.filter('lowpass', 420 * r, 0.8), eg(v, t, 0.6, 0.008, 0.08), v.out);
+    chain(nz(A, v, t + 0.03, 0.06, 'pink'), v.k.filter('bandpass', 1300 * r, 2.2), eg(v, t + 0.03, 0.07, 0.01, 0.05), v.out);
+  },
   door_close(A, v, t, p) {
     const o = tone(v, 'sine', 90 * p, t, 0.35);
     sweep(o.frequency, t, 90 * p, 52 * p, 0.15);
@@ -1747,7 +1806,7 @@ const SFX = {
 const SFX_META = {
   explosion: { ref: 20, max: 500, rev: 0.45 }, crash_big: { ref: 12, max: 250, rev: 0.25 }, crash_small: { ref: 10, max: 180, rev: 0.12, vol: 0.8 },
   alarm: { ref: 10, max: 220, rev: 0.12 }, whistle: { ref: 12, max: 250, rev: 0.15, vol: 0.8 }, glass: { rev: 0.1 },
-  footstep: { ref: 3, max: 45, vol: 0.5 }, jump: { ref: 4, max: 50, vol: 0.6 }, land: { ref: 4, max: 60, vol: 0.7 },
+  footstep: { ref: 3, max: 45, vol: 0.5 }, footstep_carpet: { ref: 3, max: 40, vol: 0.5 }, noclip: { vol: 0.9 }, jump: { ref: 4, max: 50, vol: 0.6 }, land: { ref: 4, max: 60, vol: 0.7 },
   punch: { ref: 4, max: 60, vol: 0.7 }, punch_hit: { ref: 5, max: 80 }, door_open: { ref: 5, max: 70, vol: 0.7 }, door_close: { ref: 5, max: 90, vol: 0.8 },
   car_break_in: { ref: 4, max: 50, vol: 0.7 }, bin_hit: { ref: 8, max: 120, rev: 0.08 }, splash: { ref: 8, max: 120, rev: 0.08 }, ball: { ref: 8, max: 90, rev: 0.25 },
   yelp_m: { ref: 6, max: 90, vol: 0.7 }, yelp_f: { ref: 6, max: 90, vol: 0.7 },

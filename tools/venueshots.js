@@ -6,7 +6,7 @@ const G = () => window.game;
 async function post(name) { const c = G().renderer.domElement; const o = document.createElement('canvas'); o.width = c.width; o.height = c.height; o.getContext('2d').drawImage(c, 0, 0); await fetch('/__snap?name=' + name, { method: 'POST', body: o.toDataURL('image/jpeg', 0.86) }); }
 function size(w, h) { const g = G(); g.renderer.setSize(w, h, false); }
 export const VIEWS = {
-  teatro: [['foyer', [0, 1.7, 1.0], [-5, 1.6, 4], 70], ['sala', [0, 1.8, 7.2], [0, 3, 26], 66], ['escenario', [-3, 1.5, 15], [0, 3.4, 26], 60], ['desde', [0, 2.7, 25.5], [0, 1.2, 8], 72]],
+  teatro: [['foyer', [0, 1.7, 1.0], [-5, 1.6, 4], 70], ['sala', [0, 1.8, 7.2], [0, 3, 26], 66], ['escenario', [-3, 1.5, 15], [0, 3.4, 26], 60], ['desde', [0, 2.7, 25.5], [0, 1.2, 8], 72], ['puerta', [-3.4, 2.6, 25.2], [-7.4, 2.0, 27.2], 60]],
   pabellon: [['entrada', [0, 1.7, 1.2], [0, 2.5, 30], 76], ['pista', [-10, 6, 4], [4, 0, 26], 70], ['grada', [-8, 1.7, 23], [11, 1.4, 23], 70], ['porteria', [0, 1.6, 34], [0, 1.4, 44], 66], ['marcador', [0, 2, 30], [0, 6.2, 46], 50], ['canasta', [3, 2.0, 37], [0, 3.2, 44.6], 60]],
   corbacho: [['entrada', [0, 1.7, 1.2], [0, 1.8, 10], 72], ['tractor', [-1, 1.7, 2.5], [-4.2, 1.4, 6.2], 66], ['mostrador', [2, 1.7, 5.5], [6, 1.3, 9.8], 64], ['taller', [0, 2.2, 11.5], [0, 1.3, 20], 72], ['banco', [3, 1.7, 16], [-8, 1.4, 21.3], 66], ['fuera', [5, 1.7, 22.5], [-3, 1.6, 14], 74]],
   sangregorio: [['nave', [0, 1.6, 1.2], [0, 3.2, 20], 70], ['retablo', [0, 2.2, 15.5], [0, 3.6, 24], 64], ['cupula', [0, 1.8, 17.5], [0, 9, 20.2], 80], ['lateral', [2.5, 1.7, 11], [-4.3, 2.0, 14.3], 66], ['desde', [-3, 2.5, 22.5], [2, 1.2, 4], 72], ['santo', [0, 2.1, 21.2], [0, 2.6, 23.6], 40]],

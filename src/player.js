@@ -153,7 +153,7 @@ export class Player {
       for (const sd of ['L', 'R']) {
         const c = sd === 'L' ? mpl.contactL : mpl.contactR;
         if (c && !fs[sd] && this.grounded && ns > 0.8) {
-          g.audio.sfx('footstep', { vol: this.crouch ? 0.08 : ns > 5 ? 0.6 : ns > 2.5 ? 0.42 : 0.3 });
+          g.audio.sfx((g.interior && g.interior.step) || 'footstep', { vol: this.crouch ? 0.08 : ns > 5 ? 0.6 : ns > 2.5 ? 0.42 : 0.3 });
           if (ns > 4.4 && !g.interior) this.footDust(sd, ns);
         }
         fs[sd] = c;
@@ -161,7 +161,7 @@ export class Player {
     } else if (this.grounded && ns > 1) {
       this.stepAcc = (this.stepAcc || 0) + ns * dt;
       const stride = ns > 5 ? 1.5 : ns > 3 ? 1.1 : 0.75;
-      if (this.stepAcc > stride) { this.stepAcc = 0; g.audio.sfx('footstep', { vol: this.crouch ? 0.08 : ns > 5 ? 0.6 : 0.35 }); }
+      if (this.stepAcc > stride) { this.stepAcc = 0; g.audio.sfx((g.interior && g.interior.step) || 'footstep', { vol: this.crouch ? 0.08 : ns > 5 ? 0.6 : 0.35 }); }
     }
     // weapons (fists, bat, guns) — not while a stall's menu is open: its number keys and B would draw a gun or
     // throw a punch at the stallholder
