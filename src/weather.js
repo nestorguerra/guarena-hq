@@ -16,7 +16,7 @@ const EVERY = 10 * 60e3;                         // (the current conditions come
 const RETRY = [60e3, 120e3, 300e3, 600e3];       // after a failure: 1, 2, 5, then every 10 minutes
 const STALE = 45 * 60e3;                         // a reading older than three quarters of an hour is old
 const KEEP = 3 * 3600e3;                         // a saved reading is still worth showing at the next start for 3 h
-const CACHE = 'guarena-evo-tiempo';
+const CACHE = 'guarena-hq-tiempo';
 const HOSTED = typeof location !== 'undefined' && /claudeusercontent\.com$|claude\.ai$/.test(location.hostname);
 
 // The WMO weather codes (Open-Meteo's table) → what the town looks like: k the kind, l its name, c the least cloud cover

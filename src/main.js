@@ -395,7 +395,7 @@ function renderMulti() {
 // online, browser to browser (the page on GitHub): a public room everybody shares, or a private one with its own link
 function renderOnline() {
   const net = game.net, yes = net.connected;
-  const home = (typeof window !== 'undefined' && window.GUARENA_ONLINE_URL) || 'https://nestorguerra.github.io/guarena-evolucion/';
+  const home = (typeof window !== 'undefined' && window.GUARENA_ONLINE_URL) || 'https://nestorguerra.github.io/guarena-hq/';
   $('mpOnline').hidden = true; $('mpNo').hidden = true; $('mpInvite').hidden = true;
   // could not reach the meeting servers: from a page that blocks them (the published copy), send people to GitHub
   $('mpGo').hidden = !(net.onlineError && !location.href.startsWith(home));

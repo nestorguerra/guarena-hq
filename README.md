@@ -1,11 +1,16 @@
-# Guareña · Evolución
+# Guareña · HQ
 
-Copia de [Guareña · Vegas Altas](https://github.com/nestorguerra/guarena) para seguir evolucionando el juego. Aquella
-queda **fija** (la versión 42, con Annie de protagonista desde su puerta en la calle Malfeitos); esta sigue con
-**Álex** y los cambios nuevos van aquí. La etiqueta `v42-fija` de este repositorio es el punto de partida. Las dos
-versiones no se pisan: cada una guarda su partida (la primera vez, esta empieza desde la partida de la
-fija, sin tocarla), su caché de personajes y sus salas online, y el servidor multijugador propio de esta usa el
-puerto 8921.
+Proyecto propio nacido de [Guareña · Evolución](https://github.com/nestorguerra/guarena-evolucion) el 11 de octubre de
+2026. Tiene todo lo de aquella hasta ese día: Álex, la Plastilina y la Realista, los zombis gigantes, la música
+Liminal… Y además los **Backrooms** bajo el teatro.
+
+Las tres versiones del juego (la [fija](https://github.com/nestorguerra/guarena), la Evolución y esta) no se pisan,
+aunque compartan sitio en GitHub Pages. Cada una guarda:
+- su partida (la primera vez, esta empieza desde la de la Evolución, o si no desde la de la fija, sin tocarlas);
+- su caché de personajes y del tiempo;
+- sus salas online.
+
+El servidor multijugador propio de esta usa el puerto 8923 y en Render se llama `guarena-hq`.
 
 Juego de mundo abierto en el Guareña real (Badajoz, Extremadura), en el navegador: sus calles de
 OpenStreetMap, los edificios del Catastro con su número de plantas, la Iglesia de Santa María, la Plaza de
@@ -197,11 +202,11 @@ menú).
 
 ## Jugar
 
-- **En el navegador:** https://nestorguerra.github.io/guarena-evolucion/ (la versión fija sigue en https://nestorguerra.github.io/guarena/)
+- **En el navegador:** https://nestorguerra.github.io/guarena-hq/ (la Evolución sigue en https://nestorguerra.github.io/guarena-evolucion/ y la versión fija en https://nestorguerra.github.io/guarena/)
 - **Multijugador online, sin servidor:** en esa misma página, *Multijugador* (o *Pausa › Jugar online*). Entras en
   la sala pública: ves por la calle a todos los que estén jugando online en ese momento, con su nombre encima, en el
   radar y en el mapa, y podéis hablar por el chat (T). Con *Crear sala privada* tienes un enlace propio
-  (`…/guarena-evolucion/#sala-XXXXX`) que solo conoce quien tú se lo mandes. Ver [Cómo funciona el online](#cómo-funciona-el-online).
+  (`…/guarena-hq/#sala-XXXXX`) que solo conoce quien tú se lo mandes. Ver [Cómo funciona el online](#cómo-funciona-el-online).
 
 Funciona en Chrome, Edge, Safari y Firefox con WebGL2, en ordenador y en móvil (con teclado y ratón, mando o
 pantalla táctil). La primera vez necesita internet para descargar la librería 3D (three.js).
@@ -240,14 +245,14 @@ copia publicada en claude.ai no puede conectar con ellas y usa las tres emisoras
 `python3 multijugador/servidor.py --nube`, que sirve el juego y conecta a los jugadores (WebSocket, o sondeo HTTP
 si algo corta los WebSocket). Solo usa la biblioteca estándar de Python; caben 8 jugadores por sala.
 
-Para montarlo en tu cuenta: [Desplegar en Render](https://dashboard.render.com/blueprint/new?repo=https://github.com/nestorguerra/guarena-evolucion)
+Para montarlo en tu cuenta: [Desplegar en Render](https://dashboard.render.com/blueprint/new?repo=https://github.com/nestorguerra/guarena-hq)
 (plan gratuito). Cada vez que se sube algo a `main` se vuelve a desplegar solo.
 
 ## Desarrollar
 
 ```bash
 python3 tools/devserver.py 8918     # http://localhost:8918/index.html · el código fuente, sin empaquetar
-python3 tools/build.py              # dist/guarena-evolucion.html: el juego en un solo archivo
+python3 tools/build.py              # dist/guarena-hq.html: el juego en un solo archivo
 python3 tools/build_map.py          # regenera data/map.json desde OpenStreetMap, el Catastro y data/aceras.json
 python3 tools/aceras/pnoa.py        # descarga las ortofotos del PNOA (a .cache/pnoa, fuera del repositorio)
 python3 tools/aceras/medir.py       # mide los bordillos en ellas; final.py escribe data/aceras.json
