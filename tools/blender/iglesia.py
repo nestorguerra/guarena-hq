@@ -394,13 +394,13 @@ def nest(name, x, y, z, r, role):
     return link_bm(name, bm, role)
 
 def reuv(ob):
-    """UVs in metres over the material's tile, each face from the side it faces most (box projection), in the frame's
-    own axes so the courses run level"""
-    me = ob.data; t = TILE.get(me.materials[0].name, 2.0) if me.materials else 2.0
+    """UVs in metres over the face's material's tile, each face from the side it faces most (box projection), in the
+    frame's own axes so the courses run level"""
+    me = ob.data; tiles = [TILE.get(m.name, 2.0) if m else 2.0 for m in me.materials] or [2.0]
     bm = bmesh.new(); bm.from_mesh(me)
     uv = bm.loops.layers.uv.verify(); bm.normal_update()
     for f in bm.faces:
-        n = f.normal
+        n = f.normal; t = tiles[f.material_index] if f.material_index < len(tiles) else tiles[0] # (each face its own material's tile)
         for l in f.loops:
             p = l.vert.co
             if abs(n.z) > max(abs(n.x), abs(n.y)): l[uv].uv = (p.x / t, p.y / t)
@@ -428,7 +428,10 @@ def build_detail():
     for k, (x, y0) in enumerate(zip(W['xs'], W['sills'])):
         win.append((f'n{k}', x, zn, 0.0, -1.0, y0))
         win.append((f's{k}', x, south_wall_z(x), *south_n(x), y0))
-    cutters = [wall_prism('c', arch_pts(W['w'], W['h']), x, z, nx, nz, y0, 0.3, -1.0, 'hueco') for tag, x, z, nx, nz, y0 in win]
+    # (the openings' cuts leave their own faces: stone where the stone shows — the windows' reveals down to the glass,
+    # the oculi's, the belfry's arches —, the black «hueco» only where it is dark: the doors' pockets and the slits.
+    # Cut in black, the reveals stayed black whatever the light: Unity's comparison and the reviewer, 2026-10-11)
+    cutters = [wall_prism('c', arch_pts(W['w'], W['h']), x, z, nx, nz, y0, 0.3, -1.0, 'silleria') for tag, x, z, nx, nz, y0 in win]
     X0w = FRAME['x0']; xs = FRAME['xs']
     kw = SPEC['west_portal']['scale']
     doors = [('oeste', X0w, 0.0, -1.0, 0.0, 2.6 * kw, 3.7 * kw, 0.65 * kw, 1.85 * kw), ('sur', xs, south_wall_z(xs), *south_n(xs), 2.3, 3.3, 0.6, 2.4), ('norte', xs, zn, 0.0, -1.0, 2.2, 3.2, 0.4, 0.0)]
@@ -439,25 +442,29 @@ def build_detail():
             cutters.append(wall_prism('c', [(-Wv / 2, 0), (Wv / 2, 0), (Wv / 2, Hv), (-Wv / 2, Hv)], x, z, nx, nz, 0.0, -(z0 - 0.05), -(z0 + dep + 0.2), 'hueco'))
     O1, O2 = SPEC['oculus'], SPEC['oculus2']
     for O, r_in in ((O1, 1.72), (O2, 0.72)):
-        cutters.append(disc('c', west_x(O['z']), O['y'], O['z'], -1.0, 0.0, r_in, 0.3, -1.0, 'hueco'))
+        cutters.append(disc('c', west_x(O['z']), O['y'], O['z'], -1.0, 0.0, r_in, 0.3, -1.0, 'silleria'))
     cut(nave, *cutters)
     # ---- the windows: surround, sill, the relief under it, glass and bars at the back of the reveal
     for tag, x, z, nx, nz, y0 in win:
         fr = wall_prism(f'recercado_{tag}', arch_pts(W['w'] + 0.56, W['h'] + 0.28), x, z, nx, nz, y0 - 0.02, -0.02, 0.07, 'silleria')
-        cut(fr, wall_prism('c', arch_pts(W['w'], W['h']), x, z, nx, nz, y0, 0.3, -0.3, 'hueco'))
+        cut(fr, wall_prism('c', arch_pts(W['w'], W['h']), x, z, nx, nz, y0, 0.3, -0.3, 'silleria'))
         wall_prism(f'alfeizar_{tag}', [(-(W['w'] + 0.7) / 2, 0), ((W['w'] + 0.7) / 2, 0), ((W['w'] + 0.7) / 2, 0.16), (-(W['w'] + 0.7) / 2, 0.16)], x, z, nx, nz, y0 - 0.16, -0.05, 0.16, 'silleria')
         # the cartouche under the sill: a moulded frame and an oval boss
         fr2 = wall_prism(f'cartela_{tag}', [(-0.58, 0), (0.58, 0), (0.58, 0.64), (-0.58, 0.64)], x, z, nx, nz, y0 - 0.86, -0.02, 0.05, 'silleria')
-        cut(fr2, wall_prism('c', [(-0.44, 0), (0.44, 0), (0.44, 0.42), (-0.44, 0.42)], x, z, nx, nz, y0 - 0.75, 0.2, 0.0, 'hueco'))
+        # (its sunk panel is carved stone: cut with the «hueco» of the openings, its sides came out black — a slot round
+        # the boss, which Unity's baked light, 2026-10-11, showed as the stone it is)
+        # (and its floor stops 2 cm short of the wall: on the wall's own plane the two faces lay one on the other, and
+        # the bake gave it no light at all)
+        cut(fr2, wall_prism('c', [(-0.44, 0), (0.44, 0), (0.44, 0.42), (-0.44, 0.42)], x, z, nx, nz, y0 - 0.75, 0.2, 0.02, 'silleria'))
         wall_prism(f'cartela_ovalo_{tag}', [(0.3 * math.cos(2 * math.pi * k / 24), 0.13 * math.sin(2 * math.pi * k / 24) + 0.21) for k in range(24)], x, z, nx, nz, y0 - 0.75, -0.02, 0.08, 'silleria')
         wall_prism(f'vidrio_{tag}', arch_pts(W['w'], W['h']), x, z, nx, nz, y0, -0.82, -0.85, 'vidrio')
         # the tracery: a stone mullion, and over it a plate under the arch pierced by two small arches and a round eye
         ys = W['h'] - 1.2
         wall_prism(f'parteluz_{tag}', [(-0.07, 0), (0.07, 0), (0.07, ys), (-0.07, ys)], x, z, nx, nz, y0, -0.42, -0.6, 'silleria')
         tym = wall_prism(f'traceria_{tag}', arch_pts(W['w'] + 0.02, 1.2), x, z, nx, nz, y0 + ys, -0.42, -0.6, 'silleria')
-        cut(tym, wall_prism('c', [(u - 0.35, v) for u, v in arch_pts(0.56, 0.63)], x, z, nx, nz, y0 + ys - 0.01, 0.3, -1.0, 'hueco'),
-            wall_prism('c', [(u + 0.35, v) for u, v in arch_pts(0.56, 0.63)], x, z, nx, nz, y0 + ys - 0.01, 0.3, -1.0, 'hueco'),
-            wall_prism('c', [(0.14 * math.cos(2 * math.pi * k / 20), 0.14 * math.sin(2 * math.pi * k / 20) + 0.86) for k in range(20)], x, z, nx, nz, y0 + ys, 0.3, -1.0, 'hueco'))
+        cut(tym, wall_prism('c', [(u - 0.35, v) for u, v in arch_pts(0.56, 0.63)], x, z, nx, nz, y0 + ys - 0.01, 0.3, -1.0, 'silleria'),
+            wall_prism('c', [(u + 0.35, v) for u, v in arch_pts(0.56, 0.63)], x, z, nx, nz, y0 + ys - 0.01, 0.3, -1.0, 'silleria'),
+            wall_prism('c', [(0.14 * math.cos(2 * math.pi * k / 20), 0.14 * math.sin(2 * math.pi * k / 20) + 0.86) for k in range(20)], x, z, nx, nz, y0 + ys, 0.3, -1.0, 'silleria'))
     # ---- the oculi: the great one with four moulded rings and a wheel; the small one with two rings
     xo = west_x(O1['z']); yo, zo = O1['y'], O1['z']
     lathe_wall('oculo_anillo1', xo, yo, zo, -1, 0, [(2.32, 0.0), (2.32, 0.12), (2.24, 0.2), (2.12, 0.2), (2.05, 0.1)], 'silleria')
@@ -539,9 +546,9 @@ def build_detail():
     nfz = lambda x: RING[5][1] + (RING[6][1] - RING[5][1]) * (x - RING[5][0]) / (RING[6][0] - RING[5][0])
     for k, (xw2, yw) in enumerate(NB['windows']):
         zw = nfz(xw2)
-        cut(nave, wall_prism('c', [(-0.3, 0), (0.3, 0), (0.3, 0.9), (-0.3, 0.9)], xw2, zw, 0.0, -1.0, yw - 0.45, 0.3, -0.6, 'hueco'))
+        cut(nave, wall_prism('c', [(-0.3, 0), (0.3, 0), (0.3, 0.9), (-0.3, 0.9)], xw2, zw, 0.0, -1.0, yw - 0.45, 0.3, -0.6, 'silleria'))
         frw = wall_prism(f'ventanita_{k}', [(-0.48, 0), (0.48, 0), (0.48, 1.2), (-0.48, 1.2)], xw2, zw, 0.0, -1.0, yw - 0.6, -0.02, 0.05, 'silleria')
-        cut(frw, wall_prism('c', [(-0.3, 0), (0.3, 0), (0.3, 0.9), (-0.3, 0.9)], xw2, zw, 0.0, -1.0, yw - 0.45, 0.3, -0.3, 'hueco'))
+        cut(frw, wall_prism('c', [(-0.3, 0), (0.3, 0), (0.3, 0.9), (-0.3, 0.9)], xw2, zw, 0.0, -1.0, yw - 0.45, 0.3, -0.3, 'silleria'))
         wall_prism(f'ventanita_vidrio_{k}', [(-0.3, 0), (0.3, 0), (0.3, 0.9), (-0.3, 0.9)], xw2, zw, 0.0, -1.0, yw - 0.45, -0.5, -0.52, 'vidrio')
     # ---- the west front wears the masonry's variant with few dark stones (the photo's sunlit front: 3–5 %)
     # (its own slot: the booleans have already added others to the wall — the openings' 'hueco')
@@ -570,10 +577,10 @@ def build_detail():
             for o in offs:
                 for nx, nz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
                     tx, tz = -nz, nx
-                    out.append(wall_prism('c', arch_pts(aw, ah), cx + nx * w / 2 + tx * o, cz + nz * w / 2 + tz * o, nx, nz, y0 + ay, 0.5, -wall - 0.3, 'hueco'))
+                    out.append(wall_prism('c', arch_pts(aw, ah), cx + nx * w / 2 + tx * o, cz + nz * w / 2 + tz * o, nx, nz, y0 + ay, 0.5, -wall - 0.3, 'silleria'))
             return out
-        cut(outer, cube('c', cx - w / 2 + wall, cx + w / 2 - wall, cz - w / 2 + wall, cz + w / 2 - wall, y0 + 0.4, y1 + 1, 'hueco'), *arches())
-        cut(imp, cube('c', cx - w / 2 + wall, cx + w / 2 - wall, cz - w / 2 + wall, cz + w / 2 - wall, y0, y1, 'hueco'), *arches())  # (round the piers, not across the arches)
+        cut(outer, cube('c', cx - w / 2 + wall, cx + w / 2 - wall, cz - w / 2 + wall, cz + w / 2 - wall, y0 + 0.4, y1 + 1, 'silleria'), *arches())
+        cut(imp, cube('c', cx - w / 2 + wall, cx + w / 2 - wall, cz - w / 2 + wall, cz + w / 2 - wall, y0, y1, 'silleria'), *arches())  # (round the piers, not across the arches)
         pw = min(0.6, w * 0.13)
         for sx in (-1, 1):
             for sz in (-1, 1):
@@ -619,7 +626,7 @@ def build_detail():
         fx2, fz2 = tcx + nx * (hw2 - 0.15), tcz + nz * (hw2 - 0.15)
         wall_prism('torreon_fronton', shape(rp, st), fx2, fz2, nx, nz, yb, -0.15, 0.15, 'silleria')
         ring = wall_prism('torreon_fronton_moldura', shape(rp + 0.09, st), fx2, fz2, nx, nz, yb, 0.1, 0.2, 'silleria')
-        cut(ring, wall_prism('c', shape(rp - 0.02, st), fx2, fz2, nx, nz, yb - 0.01, 0.3, 0.0, 'hueco'))
+        cut(ring, wall_prism('c', shape(rp - 0.02, st), fx2, fz2, nx, nz, yb - 0.01, 0.3, 0.0, 'silleria'))
     # (behind the four pediments, the cap they frame: a cross vault, seen as a pyramid)
     bm = bmesh.new()
     base = [bm.verts.new(B(tcx + a * (hw2 - 0.3), yb, tcz + c * (hw2 - 0.3))) for a, c in [(-1, -1), (1, -1), (1, 1), (-1, 1)]]
@@ -688,10 +695,14 @@ def merge():
     json.dump(marks, open(os.path.splitext(OUT)[0] + '.json', 'w'), indent=1)
 
 # ================================================================ phase 4: the light — ambient occlusion baked in Cycles
-def bake_ao(res=2048, samples=48):
-    """the stone's own shadowing (corners, reveals, under the cornice and the buttresses' caps) baked once in Cycles into
-    an atlas over a second UV set, which the exporter hands to three.js as the occlusion map (aoMap: it darkens the sky's
-    and the bounce's light, not the sun's)"""
+def bake_ao(res=2048, samples=48, rebote=256):
+    """the light of the sky as the stone gets it, baked once in Cycles into an atlas over a second UV set, which the
+    exporter hands to three.js as the occlusion map (aoMap: it darkens the sky's and the bounce's light, not the sun's).
+    First the bare occlusion — the sky each point sees: corners, reveals, under the cornice and the buttresses' caps —
+    as approved in phase 4. Then the light that bounces into those places off the stone round them and off the street,
+    added on: ao + (1 − ao)·bounce. Bare, a reveal or a cartouche came out near black; Unity's baked light showed them
+    shaded, not black (2026-10-11). The open walls hardly change: there is little left to add there"""
+    import numpy as np
     targets = [o for o in COL.objects if o.type == 'MESH' and o.data.materials and o.data.materials[0].name in ('mamposteria', 'silleria', 'zocalo', 'teja')]
     # a ground under the church, so its foot gets the dark of the ground (removed after the bake)
     bpy.ops.mesh.primitive_plane_add(size=200, location=(0, 0, 0)); ground = bpy.context.object
@@ -715,7 +726,33 @@ def bake_ao(res=2048, samples=48):
     for o in targets: o.select_set(True)
     bpy.context.view_layer.objects.active = targets[0]
     bpy.ops.object.bake(type='AO', uv_layer='AO')
-    bpy.data.objects.remove(ground)
+    ao = np.array(img.pixels[:], dtype=np.float32).reshape(-1, 4)[:, 0].copy()
+    # the bounce: under a white sky, the street as dark as a street, Cycles' indirect diffuse alone
+    gm = bpy.data.materials.new('calle_horneado'); gm.use_nodes = True
+    bsdf = gm.node_tree.nodes.get('Principled BSDF')
+    bsdf.inputs['Base Color'].default_value = (0.25, 0.23, 0.21, 1.0); bsdf.inputs['Roughness'].default_value = 1.0
+    ground.data.materials.append(gm)
+    wd = bpy.data.worlds.new('cielo_blanco'); wd.use_nodes = True
+    bg = wd.node_tree.nodes.get('Background'); bg.inputs['Color'].default_value = (1, 1, 1, 1); bg.inputs['Strength'].default_value = 1.0
+    sc.world = wd
+    try: # the Mac's GPU (Metal) when there is one: the same bake, minutes sooner
+        prefs = bpy.context.preferences.addons['cycles'].preferences
+        prefs.compute_device_type = 'METAL'; prefs.get_devices()
+        if any(d.type == 'METAL' for d in prefs.devices):
+            for d in prefs.devices: d.use = d.type == 'METAL'
+            sc.cycles.device = 'GPU'
+    except Exception as e: print('rebote en CPU:', e)
+    sc.cycles.samples = rebote; sc.cycles.max_bounces = 4; sc.cycles.diffuse_bounces = 3
+    sc.render.bake.use_pass_direct = False; sc.render.bake.use_pass_indirect = True; sc.render.bake.use_pass_color = False
+    bpy.ops.object.bake(type='DIFFUSE', pass_filter={'INDIRECT'}, uv_layer='AO')
+    bpy.data.objects.remove(ground); sc.world = None
+    px = np.array(img.pixels[:], dtype=np.float32).reshape(-1, 4)
+    rb = np.clip(0.2126 * px[:, 0] + 0.7152 * px[:, 1] + 0.0722 * px[:, 2], 0.0, 1.0) # (one grey: the bounce off the golden stone is warm)
+    v = np.clip(ao + (1.0 - ao) * rb, 0.0, 1.0)
+    px[:, 0] = px[:, 1] = px[:, 2] = v; px[:, 3] = 1.0
+    img.pixels[:] = px.ravel()
+    cov = ao > 0.012
+    print(f'oclusión con rebote ({sc.cycles.device}): rebote mediano {np.median(rb[cov]):.3f}; oclusión p5/50/95 {np.percentile(ao[cov], 5):.2f}/{np.median(ao[cov]):.2f}/{np.percentile(ao[cov], 95):.2f} → {np.percentile(v[cov], 5):.2f}/{np.median(v[cov]):.2f}/{np.percentile(v[cov], 95):.2f}')
     img.filepath_raw = os.path.join(ROOT, '.cache', 'hq', 'tex', 'ao.png'); img.file_format = 'PNG'; img.save()
     # hand it to the exporter: a «glTF Material Output» group with an Occlusion socket, fed by the AO map's red, UV 'AO'
     grp = bpy.data.node_groups.get('glTF Material Output')

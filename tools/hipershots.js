@@ -35,12 +35,23 @@ export const VIEWS = [
   ['fachada', [-32.5, 1.7, 0.5], [-25.9, 9.5, 0.5], 74, 18.6, 1200, 1200],
   ['ventana', [-6.9, 16.6, -22.5], [-6.9, 16.6, -13.5], 40, 15.0, 1200, 1200],
   ['torre', [-40, 30, 22], [-22.7, 31.5, 9.9], 42, 18.6, 1000, 1200],
+  // phase 4b (what came from Unity, 2026-10-11): the second north window's cartouche and the foot of its light, close up;
+  // and the same window from the street under it, looking up, where its glass gives back the sky
+  ['cartela', [-6.9, 14.6, -19.0], [-6.9, 15.0, -13.5], 34, 15.0, 1200, 1200],
+  ['vidrio', [-6.9, 1.7, -24.0], [-6.9, 16.6, -13.5], 28, 15.0, 1000, 1200],
 ];
 // straight down over the PNOA crop's window (pnoa_iglesia.jpg: x −205 → −120, z −90 → −25, north up, 0.075 m/px)
 export const TOP = { x0: -205, x1: -120, z0: -90, z1: -25, px: 0.075, hour: 12.5 };
 
-export async function shoot(tag = 'a', { only = null, top = true, clear = false } = {}) {
+export async function shoot(tag = 'a', { only = null, top = true, clear = false, pr = null, sinmancha = false } = {}) {
   const g = G(), f = g.world.landmarks.poi.churchFrame;
+  // (pr: the renderer's pixel ratio for the shots — 2 draws each picture at twice its size, brought down when saved, as
+  // the Unity comparison does; sinmancha: the hyperreal church without hiper.js's colour stain, the same material as
+  // Unity's, for a fair comparison)
+  const keepPR = g.renderer.getPixelRatio();
+  if (pr) g.renderer.setPixelRatio(pr);
+  const manchas = [];
+  if (sinmancha && g.world.hiper) g.world.hiper.traverse((o) => { if (!o.isMesh) return; for (const m of [].concat(o.material)) if (m.userData.hqMacro && !manchas.some(([q]) => q === m)) { manchas.push([m, m.onBeforeCompile, m.customProgramCacheKey]); m.onBeforeCompile = () => {}; m.customProgramCacheKey = () => 'hq-sin-mancha'; m.needsUpdate = true; } });
   // (clear: the photo's clear evening, whatever the real weather is now — the live reading off for the shots)
   if (clear && g.weather) { g.weather.on = false; Object.assign(g.weather.now, { cover: 0.12, over: 0, rain: 0, snow: 0, fog: 0, storm: 0 }); }
   for (const id of ['pause', 'menu', 'hud']) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
@@ -81,6 +92,9 @@ export async function shoot(tag = 'a', { only = null, top = true, clear = false 
       await post(`hq_cenital_${tag}`, W, H);
       out.push('cenital');
     }
-  } finally { g.render = keepR; g.resize = keepResize; g.resize(); g.sky.sunAt = null; }
+  } finally {
+    g.render = keepR; g.resize = keepResize; g.renderer.setPixelRatio(keepPR); g.resize(); g.sky.sunAt = null;
+    for (const [m, obc, key] of manchas) { m.onBeforeCompile = obc; m.customProgramCacheKey = key; m.needsUpdate = true; }
+  }
   return out;
 }

@@ -340,3 +340,239 @@ torre, «muy parecida a la foto». Mis arreglos menores están hechos.
   vale.
 - **La escala de una textura tiene una sola fuente.** Cuando cambia el tamaño real de una textura, se cambia en el sitio
   que la genera y en el que la aplica a la vez. Mejor aún: que el modelo lo lea de un único sitio.
+
+## 2026-10-11 · el usuario: la iglesia también en Unity
+
+- Vuelve a pegar la guía y pregunta qué hay que hacer ahora con Blender y Unity. Decide:
+  - **Unity, aparte y solo con la iglesia:** un proyecto Unity 6 (HDRP) con la zona de la iglesia, para comparar la
+    calidad visual. No sustituye al juego, que sigue en el navegador.
+  - **Blender y Unity, con scripts sin ventana:** Blender con Python, como hasta ahora; Unity con C# en modo batch,
+    sin conector MCP.
+  - **El proyecto, solo en local:** una carpeta junto a HQ (`unity-iglesia`), fuera de git, mientras sea una prueba.
+  - **Descargas:** sí a Unity Hub, al editor Unity 6.3 LTS y a los paquetes de HDRP.
+- Instala él Rosetta 2 y activa su licencia Personal de Unity (lo que necesita su cuenta o su contraseña).
+
+## 2026-10-11 · Unity: instalación y preparación (el que construye)
+
+- **Instalado:** Unity Hub 3.22.2 y el editor 6000.3.26f1 (Apple silicon, 9,2 GB), que trae HDRP 17.3.0. La plantilla
+  HDRP de Unity (com.unity.template.hdrp-blank 17.1.1, 61 MB, comprobada su suma) da la escena de partida: sol, cielo
+  físico con niebla y los ajustes «High Fidelity».
+- **Por qué hace falta Rosetta:** el horneado de luz de Unity (`LightBaker`, `JobProcess`) solo existe para Intel. Sin
+  Rosetta, la iglesia solo tendría luz en tiempo real.
+- **Las portadas:** en el juego son las antiguas, procedurales, y no están en el GLB de Blender. Se exportan del propio
+  juego (Realista, la oeste a 0,85 y entonada como en `src/hiper.js`) a un GLB en el marco de la iglesia. Sin ellas,
+  las puertas serían agujeros negros.
+- **La escena es un script** (`Assets/Editor/IglesiaUnity.cs`): `Montar` pone la iglesia, las portadas y el suelo
+  (adoquín de Poly Haven, CC0) sobre la escena de la plantilla, con su sol y un volumen propio (exposición medida,
+  ACES, sombras a 4096 con las de contacto, oclusión e iluminación global en pantalla). `Fotos` saca las vistas de
+  `tools/hipershots.js` dibujando cada una muchas veces (para que el antialiasing temporal y la luz se asienten), al
+  doble de tamaño, y luego la reduce.
+- **Los ejes:** glTFast pasa de glTF (diestro) a Unity (zurdo) invirtiendo la x: un punto (x, y, z) del marco es
+  (−x, y, z) en Unity. El giro de la cámara conserva su signo. Se comprueba con las marcas de la foto
+  (`tools/hipermarcas.py`).
+- **El sol de la foto:** en Unity, la vista «noroeste» lleva el sol real de la foto, a ≈4° y rumbo 237°. El juego no
+  puede ponerlo tan bajo y usa 9° (la vista «noroeste9» es esa, para compararlas). La prueba de la luz: en la foto, la
+  fachada al sol está 3,4 veces más clara que el muro norte en sombra.
+
+## 2026-10-11 · Unity: la escena, la luz y el ajuste a la foto (el que construye)
+
+- **La primera foto de Unity** salió bien de geometría: las marcas de la foto caen en sus ventanales, óculos, gárgolas
+  y torre, como en el juego. El espejo de los ejes y el signo del giro están bien.
+- **La luz salió mal:**
+
+  | | sol | sombra | razón | cielo |
+  |---|---|---|---|---|
+  | Unity | 125 | 14 | 8,9 | 47 |
+  | foto | 194 | 59 | 3,3 | 122 |
+
+  Además, el lado al sol salía rojo naranja (190, 110, 32).
+- **Lo que no era:**
+  - El ambiente «estático» de la plantilla: cambiarlo a dinámico no cambió nada.
+  - La iluminación global en pantalla (SSGI), ni la niebla.
+  - Que HDRP lee la luz del cielo de la GPU un fotograma después: se probó a dibujar una pasada por actualización
+    del editor, como un juego. Se queda así, pero no era esto.
+- **Lo que era:** medido en lineal (exposición fija, sin curva), la física de HDRP está bien: sol/sombra ≈ 14, donde la
+  foto, estimada, da ≈ 12. Lo que fallaba era el «revelado»: la exposición automática dejaba el sol en 125, y la curva
+  ACES hunde mucho los oscuros (por eso la sombra casi negra y el cielo de «fachada» casi negro).
+- **El ajuste**, como el de una cámara y solo en la vista de la foto: +1,6 EV sobre el fotómetro y una curva de tono
+  propia, con un pie corto y suave y un hombro largo. Queda en los parches de la foto:
+
+  | | sol | sombra | razón | cielo |
+  |---|---|---|---|---|
+  | foto | 194 | 59 | 3,29 | 122 |
+  | Unity (4°) | 193 | 64 | 3,02 | 120 |
+
+- **Probado y descartado:**
+  - Más saturación, para el azul más intenso de la foto: quema la fachada al sol (el azul baja a 0).
+  - Más aerosoles en el cielo: aclaran el cielo, pero el sol a 4° se apaga demasiado.
+- **Lo que queda distinto:**
+  - La sombra de la foto es más cálida (84, 53, 26 frente a 74, 63, 40): allí le llega luz rebotada del pueblo al sol,
+    que en Unity no hay.
+  - El cielo de la foto es más azul y saturado: es el estilo de color de la cámara, o un polarizador.
+- **Una puerta encendida:** la puerta norte brillaba en la sombra. El juego le da una luz para la noche, a fuerza 0 de
+  día, y el importador de Unity no respeta esa fuerza 0. La exportación de las portadas apaga esas luces.
+- **El servidor de HQ** (8920) lo paró la aplicación a mitad de trabajo, y las fotos del juego fallaban con «no carga».
+  Se arrancó de nuevo. Además, hipercheck cierra ya su pestaña aunque falle (una pestaña colgada hacía fallar la
+  siguiente).
+
+## 2026-10-11 · revisión de la escena de Unity (el revisor): APROBADO CON ARREGLOS
+
+- **Para qué sirve ya:** sirve para comparar geometría, materiales, oclusión y bordes. Para comparar la luz con la foto le
+  falta el pueblo alrededor, y la exposición no puede estar ajustada a la propia foto.
+- **1. Ejes y cámara:** bien. Las marcas caen en Unity igual que en el juego, a 3–5 px como mucho.
+  - Con el espejo en x mal hecho, la torre saldría a la izquierda. Con el signo del giro cambiado, las marcas del borde
+    se moverían unos 50 px.
+  - **Corrección a una revisión anterior:** la marca del pie de la esquina noroeste cae en lo alto del zócalo, ≈1 m sobre
+    el suelo, en el greybox, en el juego y en Unity por igual. Queda para la fase 5 (cámara o terreno de la calle).
+- **2. Luz:**
+  - El ajuste vale como revelado, pero no como prueba: cinco parámetros de curva más la exposición, ajustados a tres
+    parches, los clavan sea cual sea la luz.
+  - Lo propuesto: la exposición fija del EXIF de la foto (1/640 s, f/4,5, ISO 200: EV100 ≈ 12,7) y una curva elegida
+    sin mirar la foto.
+  - La medida buena es la de sol/sombra en lineal, ≈14 en Unity frente a ≈12 en la foto. Esa sí está bien.
+  - En otras vistas el ajuste no aguanta: «fachada» saca un cielo casi negro, ≈5 pasos bajo la piedra (un cielo
+    despejado a 90° del sol queda 2–3 pasos por debajo), y «ventana» sale lavada.
+  - La sombra de Unity tiene un tono gris frío (74, 63, 40); la de la foto es parda (84, 52, 26). Las piedras oscuras
+    en sombra salen gris azuladas; en la foto son pardo rojizas (≈44, 18, 4).
+  - Faltan las sombras de las casas sobre los 5–6 m de abajo de la fachada de los pies.
+  - Las caras oeste de las bandas del muro norte tienen filos naranjas encendidos, y deberían estar en sombra (el rayo
+    hacia el sol choca con el muro a ≈0,9 m).
+  - El cielo sale gris pizarra (102, 124, 148) frente al azul de la foto (66, 135, 199), y crema abajo a la izquierda
+    frente al (161, 210, 244) de la foto.
+- **3. Calidad:**
+  - **Gana Unity:** piedra al sol, oclusión y relieve (derrame, cartela, vuelo de la cornisa, anillos del óculo) y el
+    vidrio, que refleja el cielo. En «torre», la cara en sombra queda almohadillada.
+  - **Gana el juego:** el tono de la sombra y las sombras de las casas.
+  - **Bordes:** comparación injusta, porque Unity va al doble de tamaño y con 64 pasadas.
+  - **Materiales:** falta en Unity la mancha de color del juego (`hiper.js`), y la textura se repite cada 6 m.
+- **4. Arreglos, por orden:**
+  1. El pueblo alrededor en volúmenes simples: las casas del Catastro con su altura, encaladas y con tejado pardo, en
+     60–80 m.
+  2. El cielo: menos aerosoles, ozono, y la niebla sin el crema del horizonte.
+  3. La exposición fija (EXIF en «noroeste», fija por hora en las demás) y una curva de cámara congelada.
+  4. La fuga de las bandas.
+  5. Comparación justa: la misma mancha en Unity y el mismo supermuestreo en los dos motores.
+
+## 2026-10-11 · los arreglos de Unity (el que construye)
+
+1. **El pueblo.** No se rehízo desde el Catastro: es la geometría del propio juego (casas, calles, bordillos), exportada
+   a 80 m de la iglesia (`entorno_glb.py`). Así coinciden alturas y tejados. Va en tres materiales lisos, porque las
+   casas del juego toman su aspecto de sus propios sombreadores:
+   - paredes encaladas (0,78);
+   - tejados pardos (0,45, 0,25, 0,17);
+   - suelo gris (0,33).
+   Quedan fuera los árboles, los coches, las farolas y la gente. Ahora la sombra de las casas cae sobre la parte baja de
+   la fachada de los pies y sobre la portada, como en la foto y en el juego.
+2. **El cielo.** Queda sin tocar: el modelo de HDRP por defecto ya trae ozono y aerosoles mínimos. Más aerosoles
+   apagaban el sol a 4°, y la saturación quemaba la piedra.
+3. **Exposición y curva, sin mirar la foto.**
+   - EV100 fija: 12,7 en «noroeste», la del EXIF (1/640 s, f/4,5, ISO 200). En las demás vistas, según la altura del
+     sol: de 12,7 a 4° hasta 15 («sunny 16») a 40° o más, en línea recta.
+   - La curva es la neutra de HDRP, tal cual.
+   - Ahora la medida es una medida. En «noroeste», Unity da sol 143, sombra 36 y cielo 86; la foto, 194, 59 y 122: Unity
+     sale ≈0,7–1 paso más oscuro.
+4. **La fuga de las bandas.** No era el sesgo de la sombra: con la luz directa del sol apagada, las líneas naranjas
+   seguían ahí. Era la luz del cielo de poniente, que en tiempo real llega sin tapar a esas caras.
+   - El arreglo es luz horneada por vista: lightmaps del cielo y del rebote del sol, el pueblo incluido, sobre el
+     segundo UV del modelo, a 5 texeles/m. Son ≈20 s por vista, con el horneador de Unity bajo Rosetta.
+   - La luz directa sigue en tiempo real.
+   - La SSGI queda apagada.
+   - La AO de Blender queda a 0 (si no, oscurecería las esquinas dos veces).
+   - Las portadas toman la luz de sondas puestas delante.
+5. **Comparación justa.** Las fotos del juego («_justa») van al doble de tamaño y reducidas, como las de Unity, y sin
+   la mancha de `hiper.js` (`tools/hipershots.js`: opciones `pr` y `sinmancha`).
+
+## 2026-10-11 · segunda revisión de Unity (el revisor): APROBADO CON ARREGLOS
+
+- **Para qué sirve:** la escena de Unity ya es base de comparación. La cámara está bien y la exposición ya no está
+  ajustada a la foto, así que la medida dice algo.
+- **Los cinco arreglos:**
+  1. Pueblo: en parte. La sombra de las casas ya cae en la fachada, pero el muro norte no se calienta: sigue
+     (43, 34, 23) frente a (84, 53, 26).
+  2. Cielo: no. Sigue gris pizarra y crema junto al horizonte; queda probarlo sin niebla.
+  3. Exposición y curva: sí.
+  4. Fuga: en parte. Las líneas naranjas se fueron, pero el horneado ha traído manchas de color: una roja y otra amarillo
+     verdosa en «ventana», y cartelas rojizas en «noroeste». El segundo UV es el atlas de la oclusión, compartido y con
+     márgenes de 0,003: a 5 téxeles/m sangra. Y 512 muestras dejan ruido.
+  5. Comparación justa: sí, para fotos fijas.
+- **La medida:**
+  - El reparto sol/cielo es el de la foto: 2,95 frente a 2,77 en lineal.
+  - El paso de menos se explica por dos mitades:
+    - medio paso de convención: el EV100 de HDRP pone la saturación donde la cámara pone el gris del 18 %;
+    - y la incertidumbre de la altura del sol (en la foto el frontón de la portada está al sol; en Unity a 4°, no) o de
+      la altura de las casas.
+  - El contraste de más está en la sombra: es luz cálida que no llega.
+- **Motor contra motor:**
+  - **Unity hace mejor:** el brillo del cielo (el del juego es tan claro como el muro, y eso un cielo despejado no lo
+    da), el sol a 4°, las sombras con su penumbra, la oclusión de huecos, cartelas y óculo, y el vidrio que refleja.
+  - **El juego hace mejor:** el tono de la sombra; no tiene manchas; y va todo en tiempo real, con el sol moviéndose.
+  - **Injusto a favor de Unity:** hornea la luz para cada vista, y las 64 pasadas de TAA con la cámara quieta.
+- **Arreglos pendientes de Unity:**
+  1. la sombra cálida (comprobar que el pueblo rebota en el horneado);
+  2. el cielo sin niebla;
+  3. un horneado limpio (segundo UV propio, márgenes, más muestras y eliminación de ruido);
+  4. la altura del sol de la foto, en la fase 5;
+  5. −0,5 EV de convención si se comparan brillos;
+  6. menores: SSAO a 0,5 m y el relieve de la sillería de la torre.
+
+## 2026-10-11 · el usuario: lo de Unity, al juego
+
+- Quiere ver el resultado en el juego. Elige pasar al juego del navegador lo que Unity hace mejor y se puede llevar, y
+  publicarlo en GitHub Pages (HQ). Unity sigue siendo solo la comparación.
+- Lo que no se toca es la luz de todo el pueblo (su decisión anterior). Las mejoras van en la iglesia.
+
+## 2026-10-11 · fase 4b en el juego, primera vuelta (el que construye)
+
+- **Vidrio:** toma el mapa del cielo de la escena como su envMap propio, a intensidad 1, con rugosidad 0,06
+  (`src/hiper.js`, `glass`). Pasa de negro (15, 15, 13) a (31, 32, 27).
+- **Oclusión con rebote** (`bake_ao`):
+  - **Primer intento, descartado:** hornear la luz entera de un cielo blanco y escalarla a la mediana. Los muros abiertos
+    bajaban de ≈0,95 a ≈0,63, porque la calle contaba como cielo tapado y el juego ya la pone en su luz ambiente.
+  - **El bueno:** el AO aprobado tal cual, más el difuso indirecto bajo cielo blanco, con una calle de albedo 0,25:
+    `ao + (1 − ao)·rebote`. La mediana pasa de 0,59 a 0,63; los muros abiertos no cambian (sol 153 → 154, sombra 52).
+- **Cartela:** cortada con sillería en vez de «hueco».
+- **Rendimiento:** 59,9 fps junto a la iglesia.
+
+## 2026-10-11 · revisión de la fase 4b (el revisor): NO APROBADO, todavía
+
+- **Lo que está bien:** nada empeora. El vidrio ya refleja, en la cantidad de un vidrio de verdad (un 4 % de frente), y los
+  muros abiertos no cambian.
+- **Lo que falla: derrames y cartela siguen negros.**
+  - **Los derrames:** sus caras no son de piedra. Los cortadores de ventanales, recercados y arcos del campanario dejan
+    el material «hueco», de albedo 0,01, y ninguna oclusión puede aclararlo.
+  - **La cartela:** el fondo de su rebaje coincide con el plano del muro, y dos caras en el mismo sitio se hornean sin
+    luz.
+  - **El mapa nuevo:** no se nota en ninguna vista. Sube poco: la mediana, de 0,59 a 0,63.
+- **Arreglos pedidos:**
+  1. derrames de piedra; el negro, solo en los huecos de verdad (puertas y saeteras);
+  2. la cartela, a 1–2 cm del muro;
+  3. capturas que lo enseñen: un primer plano de la cartela y el vidrio visto desde la calle.
+- **Opcional:** un mapa del cielo propio para el vidrio, sin la banda de fachadas (a 16 m de altura no es creíble), y
+  rugosidad 0,15–0,25 para las vidrieras emplomadas.
+
+## 2026-10-11 · fase 4b, segunda vuelta (el que construye)
+
+1. **Derrames de piedra.** Dejan caras de sillería todos estos cortadores: ventanales, recercados, tracerías, óculos y
+   su anillo, ventanitas del bloque noroeste, arcos y cámara del campanario y del cuerpo alto. El «hueco» queda solo
+   en las bolsas de las puertas y en las saeteras. En el GLB, «hueco» pasa de 2150 a 221 triángulos.
+   - **Escala de la textura:** las UV de cada cara van ahora a la escala de su propio material (`reuv`). Un derrame
+     cortado en la mampostería iba a 6 m y ahora va a los 3 m de la sillería.
+2. **Cartela:** el fondo, a 0,02 m delante del muro.
+3. **Capturas nuevas** en `tools/hipershots.js`: «cartela», el primer plano, y «vidrio», desde la calle bajo el ventanal.
+- **El resultado se ve** en el campanario (jambas, intradoses y la cámara, ahora de piedra en sombra), en los derrames
+  de los ventanales y en la cartela. Los muros abiertos siguen igual, y el juego, a 59,9 fps.
+
+## 2026-10-11 · segunda revisión de la fase 4b (el revisor): APROBADO
+
+- **Los cuatro criterios se cumplen:**
+  - **El vidrio refleja el cielo.** Visto desde la calle, a 49–55°, sale azul marino oscuro, como los ventanales del
+    muro norte en la foto. De frente y a su altura, refleja el horizonte.
+  - **Derrames, cartela, campanario y cuerpo alto:** de piedra con su sombra. El negro queda solo en saeteras y puertas.
+  - **Muros abiertos:** sin cambio. La mampostería sigue a 6 m.
+  - **Rendimiento:** a 59,9 fps.
+- **Nada ha empeorado.**
+- **Para la próxima vuelta** (ya estaban antes; no bloquean):
+  1. Los cañones de las gárgolas salen negros en sombra, seguramente con oclusión 0 en el atlas.
+  2. Los lados de 3 cm del rebaje de la cartela salen como una línea negra de 1–2 px: son más estrechos que un téxel.
+  3. Las juntas de la sillería cruzan el marco y el óvalo de la cartela.
+  4. Opcional: el mapa del cielo propio para el vidrio, sin la banda de fachadas.

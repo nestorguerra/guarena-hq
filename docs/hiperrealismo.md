@@ -235,6 +235,32 @@ Crédito: texturas de Poly Haven (polyhaven.com), CC0.
 
    Las fases 2, 3 y 4 se revisan juntas. El detalle no se puede juzgar frente a la foto sin su piedra y su luz:
    un muro gris liso no dice si un recercado sobra o falta. Los focos de noche quedan para después.
+   **4b. Lo que se trae de Unity (2026-10-11).** *Aprobado el 2026-10-11, a la segunda; publicado en HQ.* La comparación con Unity HDRP (proyecto aparte, `unity-iglesia`;
+   ver el registro) mostró qué hace mejor un motor de gama alta con el mismo modelo. Al juego se trae lo que se puede
+   llevar sin tocar la luz de todo el pueblo, que el usuario quiere como está:
+   - **El vidrio refleja el cielo.** En el juego era un agujero negro; ahora toma el mapa del cielo entero, con la
+     rugosidad de un vidrio (0,06).
+   - **La oclusión, con la luz que rebota.** El mapa de oclusión aprobado se queda tal cual, y se le suma la luz que
+     rebota entre las piedras y en la calle (Cycles, difuso indirecto bajo un cielo blanco, 256 muestras):
+     oclusión + (1 − oclusión) · rebote. Los muros abiertos apenas cambian. Los derrames, las cartelas y los rincones
+     quedan en sombra, pero no negros.
+     - *Primer intento, descartado:* hornear la luz entera de un cielo blanco y escalarla a la mediana del mapa anterior.
+       La calle de debajo cuenta como cielo que el muro no ve, y el juego ya pone ese suelo oscuro en su luz ambiente. Los
+       muros abiertos habrían bajado de ≈0,95 a ≈0,63, y toda la cara en sombra se habría oscurecido.
+   - **La cartela es piedra.** El panel rehundido bajo cada ventanal se cortaba con el material de los huecos y salía
+     una ranura negra alrededor del óculo.
+
+   Se aprueba si, en las mismas vistas:
+   - el vidrio enseña el cielo;
+   - los rincones y derrames no salen negros;
+   - los muros abiertos no cambian (±5 % en los parches de la foto);
+   - el juego sigue a más de 50 fps.
+
+   Lo que Unity hace mejor y no se trae, porque es la luz de todo el pueblo:
+   - el cielo más azul y oscuro;
+   - el sol bajo a pleno;
+   - la penumbra de las sombras.
+
 5. **Alrededores:** el atrio y las calles de alrededor, el suelo, los bordillos, las casas de enfrente y los faroles.
 
 ## Lo que mira el revisor

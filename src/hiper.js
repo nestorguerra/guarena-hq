@@ -38,6 +38,18 @@ function breakTiling(m) {
   m.needsUpdate = true;
 }
 
+// The windows' glass gives back the sky, as glass does (Unity's picture showed it, 2026-10-11). Through the town's own
+// reflections (scene.environment at 0,4–0,55, which suit stone and plaster) it stayed a black hole; it takes the same
+// sky map by its own hand, whole. The map is the sky's one render target, redrawn in place (sky.js): taken once, it
+// follows the hour.
+function glass(mesh, m) {
+  m.roughness = 0.06;
+  m.envMapIntensity = 1;
+  mesh.onBeforeRender = (renderer, scene) => {
+    if (scene.environment && m.envMap !== scene.environment) { m.envMap = scene.environment; m.needsUpdate = true; }
+  };
+}
+
 export async function hiperIglesia(landmarks, { aniso = 1 } = {}) {
   if (STYLE.plastilina) return null;
   const f = landmarks && landmarks.poi.churchFrame;
@@ -54,6 +66,7 @@ export async function hiperIglesia(landmarks, { aniso = 1 } = {}) {
     for (const m of [].concat(o.material)) {
       for (const k of ['map', 'normalMap', 'roughnessMap', 'metalnessMap']) if (m[k]) { m[k].anisotropy = aniso; m[k].needsUpdate = true; }
       if (['mamposteria', 'mamposteria_pies', 'silleria', 'zocalo'].includes(m.name)) breakTiling(m);
+      if (m.name === 'vidrio') glass(o, m);
     }
   });
   const keep = new Set((f.portals || []).filter(Boolean));
