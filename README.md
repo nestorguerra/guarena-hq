@@ -2,7 +2,16 @@
 
 Proyecto propio nacido de [Guareña · Evolución](https://github.com/nestorguerra/guarena-evolucion) el 11 de octubre de
 2026. Tiene todo lo de aquella hasta ese día: Álex, la Plastilina y la Realista, los zombis gigantes, la música
-Liminal… Y además los **Backrooms** bajo el teatro.
+Liminal… Y además los **Backrooms** bajo el teatro, y la primera zona **hiperrealista**: la iglesia de Santa María,
+en la estética Realista.
+
+La iglesia se ha hecho así ([docs/hiperrealismo.md](docs/hiperrealismo.md), y el registro de cada revisión y arreglo
+en [docs/hiperrealismo-registro.md](docs/hiperrealismo-registro.md)):
+- modelada en Blender por un script (`tools/blender/iglesia.py`) sobre su planta del Catastro;
+- medida con una foto de Wikimedia Commons, que se usa solo como referencia: ni un píxel entra en el juego;
+- con texturas propias y de Poly Haven (CC0);
+- con la luz cocida;
+- revisada fase a fase.
 
 Las tres versiones del juego (la [fija](https://github.com/nestorguerra/guarena), la Evolución y esta) no se pisan,
 aunque compartan sitio en GitHub Pages. Cada una guarda:

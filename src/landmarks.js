@@ -392,6 +392,18 @@ class Landmarks {
       const dx = b.ring[i] - ob.cx, dz = b.ring[i + 1] - ob.cz;
       ringLocal.push(dx * ca + dz * sa, -dx * sa + dz * ca);
     }
+    // the nave's own axis: half way between its north and south walls — the sacristy pulls the outline's rectangle off
+    // it (2 m at Santa María): the frame moves onto it, so the portal, the oculus and the nave stand where they are
+    {
+      let xmin = Infinity, xmax = -Infinity, zmin = Infinity, zmax = -Infinity;
+      for (let i = 0; i < ringLocal.length; i += 2) { xmin = Math.min(xmin, ringLocal[i]); xmax = Math.max(xmax, ringLocal[i]); }
+      const xcut = xmin + 0.6 * (xmax - xmin); // (the west part, before the sacristy and the apse)
+      for (let i = 0; i < ringLocal.length; i += 2) { const z2 = ringLocal[i + 1]; zmin = Math.min(zmin, z2); if (ringLocal[i] < xcut) zmax = Math.max(zmax, z2); }
+      const zc = (zmin + zmax) / 2;
+      for (let i = 1; i < ringLocal.length; i += 2) ringLocal[i] -= zc;
+      g.position.x += -uz * zc; g.position.z += ux * zc; g.updateMatrixWorld(true);
+      ob.cx = g.position.x; ob.cz = g.position.z;
+    }
     // where a line across the footprint meets its outline (local frame): along z at a given x, or along x at a given z
     const cross = (axis, at, pick) => {
       let best = null;
@@ -562,6 +574,9 @@ class Landmarks {
     this.put(g, F.nido, nestMat, xa - 2, H + 5.1, 0);
     const towerWorld = new THREE.Vector3(tx, 0, tz).applyMatrix4(g.matrixWorld);
     this.poi.churchTower = { x: towerWorld.x, z: towerWorld.z, top: 31 };
+    // the church's frame and the measures taken from its outline, for the hyperreal model (hiper.js, tools/blender):
+    // local x along the axis (east, towards the apse), local z across (south when south > 0), metres
+    this.poi.churchFrame = { group: g, cx: ob.cx, cz: ob.cz, rotY: g.rotation.y, L, W, south, x0, xa, nw, xs, H, ring: ringLocal.slice(), portals: [] };
     const doorWorld = new THREE.Vector3(x0 - 6, 0, 0).applyMatrix4(g.matrixWorld);
     this.poi.churchDoor = { x: doorWorld.x, z: doorWorld.z };
     // the doors (the inside: church.js): the main one at the foot and the Mediodía one go in; the Gospel one is shut. For
@@ -577,13 +592,16 @@ class Landmarks {
     this.poi.churchWest = doorPoi(wP, x0, 0, -1, 0);
     if (sP) this.poi.churchSouth = doorPoi(sP, xs, sHit.v, sHit.nx, sHit.nz);
     if (nP) this.poi.churchNorth = doorPoi(nP, xs, nHit.v, nHit.nx, nHit.nz);
-    // the portals' pedestals stand out into the street: you walk round them
+    // the portals' pedestals stand out into the street: you walk round them (the west portal's first: hiper.js may
+    // resize that portal, and its pedestals with it)
+    this.poi.churchFrame.westPosts = { from: (this.circleColliders || []).length, n: wP.posts.length, origin: toW(x0, 0) };
     for (const [P, lx, lz] of [[wP, x0, 0], [sP, xs, sHit && sHit.v], [nP, xs, nHit && nHit.v]]) {
       if (!P) continue;
       const ry = P.group.rotation.y, c = Math.cos(ry), s2 = Math.sin(ry);
       for (const [px, pz, pr] of P.posts) { const q = toW(lx + px * c + pz * s2, lz - px * s2 + pz * c); this.circle(q.x, q.z, pr, 3); }
     }
     this.churchDoors = [wP.door, sP && sP.door, nP && nP.door].filter(Boolean);
+    this.poi.churchFrame.portals = [wP.group, sP && sP.group, nP && nP.group].filter(Boolean);
     this.storkSpots = [new THREE.Vector3(tx + 2.2, 31.2, tz - 2.2).applyMatrix4(g.matrixWorld), new THREE.Vector3(xa - 2, H + 5.6, 0).applyMatrix4(g.matrixWorld)];
     // collider: full footprint is already claimed
   }

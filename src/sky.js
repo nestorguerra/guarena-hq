@@ -416,7 +416,8 @@ export class SkySystem {
 
   // view: the camera, to put the shadows where it looks
   update(dt, focus, forceEnv = false, view = null) {
-    const d = sunDirection(this.hour, this.sunDir);
+    // (sunAt: a sun set by hand, for comparing with a photograph taken on another day — tools/hipershots.js)
+    const d = this.sunAt ? this.sunDir.copy(this.sunAt) : sunDirection(this.hour, this.sunDir);
     const alt = d.y;
     const U = this.uniforms;
     U.uSun.value.copy(d);

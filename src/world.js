@@ -16,6 +16,7 @@ import { plantTown } from './vegetation.js';
 import { STYLE } from './style.js';
 import { clayRepaint } from './plastilina.js';
 import { buildLandmarks } from './landmarks.js';
+import { hiperIglesia } from './hiper.js';
 import { Reservoir } from './pantano.js';
 import { buildTrafficSigns } from './signs.js';
 import { measuredGaps, resolveMeasured, buildMeasuredDetails, measuredLamps } from './fachadas.js';
@@ -65,6 +66,8 @@ export class World {
     // ---------------- landmarks (claim their footprints first)
     await step('Levantando la torre de Santa María…', 0.26);
     this.landmarks = buildLandmarks(this, map);
+    // (Guareña HQ: the church of Santa María made hyperreal in the Realista look — hiper.js, docs/hiperrealismo.md)
+    this.hiper = await hiperIglesia(this.landmarks, { aniso: q.aniso }).catch((e) => { console.warn('[hiper]', e); return null; });
     const skipPart = (p) => this.landmarks.claims(p.c[0], p.c[1]);
     // the street fronts the Catastro leaves open where the town has houses (src/infill.js)
     // (the houses the photographs show where the Catastro has none — calle Malfeitos, fachadas.js — before the town's
