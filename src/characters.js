@@ -1869,7 +1869,7 @@ export class Character {
     // kept and the pose worked out once, at the next — the same pose, a fifth of the work. (Not its first one, nor a
     // ragdoll, whose fall is worked out step by step.) Returns false then: whoever touches up the bones after the update
     // (a zombie's lurch, a remote player's aim) must not, or the touches would pile up pose after pose
-    if (STYLE.plastilina && !SM.tick && this._posed && !this.rag && SM.items.has(this.object)) { this._smDt = (this._smDt || 0) + dt; return false; }
+    if (STYLE.plastilina && !SM.tick && this._posed && !this.rag && SM.held(this.object)) { this._smDt = (this._smDt || 0) + dt; return false; }
     if (this._smDt) { dt += this._smDt; this._smDt = 0; }
     this._posed = true; this.poseN++;
     this.t += dt;

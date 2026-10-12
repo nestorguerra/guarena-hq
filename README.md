@@ -48,10 +48,11 @@ La **Plastilina** es Guareña como una película de stop motion de plastilina (c
 - La iglesia y los edificios de piedra, con piedras de plastilina metidas en una masa más blanda.
 - Cielo de decorado con nubes de algodón, humo de algodón, luz de estudio cálida con sombras suaves y, como en una
   maqueta fotografiada, el fondo lejano apenas suave.
-- **Stop motion**, siempre en la Plastilina: personas, perros y coches posan 12 veces por segundo (el agua, el viento y
-  el humo también); en cada pose la superficie de los muñecos «hierve» un milímetro o dos y quedan un poco distintos,
-  como recolocados a mano. La cámara, tu personaje (su pose también, en cada fotograma: corre fluido) y tu coche van
-  fluidos, para jugar igual que siempre.
+- **Stop motion**, siempre en la Plastilina: personas, perros y coches posan 12 veces por segundo, y tu personaje
+  también (el agua, el viento y el humo, igual); en cada pose la superficie de los muñecos «hierve» un milímetro o dos y
+  quedan un poco distintos, como recolocados a mano. La cámara va fluida, a 60, y te sigue igual que siempre: el
+  muñeco a doses y la cámara a unos, como en *Spider-Verse*. En coche, en bici, nadando o en primera persona, tu
+  personaje va fluido.
 - Como las imágenes de referencia del usuario, medido superficie a superficie (`tools/refcompare.js`):
   - cámara de maqueta a la altura de la calle;
   - paredes crema alisadas a mano;

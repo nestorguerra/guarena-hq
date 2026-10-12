@@ -333,3 +333,31 @@ toda la parte del código que no se esté utilizando».
     coches y la pose).
   - `runlab` recto, como en `docs/carrera.md`: pie apoyado 0,56 m/s, puntas que patinan 0 %, 60 poses por segundo.
   - Rendimiento igual: las medidas de este equipo varían más entre dos cargas que entre las dos versiones.
+
+## 13. Menos desenfoque y un stop motion que se nota (12 de octubre de 2026, Guareña HQ)
+
+Petición del usuario: «vamos a mejorar más la calidad del estilo de plastilina… Primero el fondo no lo desenfoques
+tanto, debe estar un poco menos desenfocado y debe notarse la sensación de stop motion».
+
+- **El fondo, menos desenfocado** (`PLASTILINA.lens`): el máximo baja de 0,34 % a 0,2 % de la altura de la imagen y
+  empieza más lejos (de 2,2 a 2,8 veces la distancia a tu personaje; lo más blando, a 14 en vez de 10). Lo que queda
+  justo bajo el objetivo se ablanda menos (`near`, de 0,55 a 0,3). El final de la calle, la torre y las nubes se leen
+  ahora con sus piedras y ventanas, y conservan un poco de suavidad lejana. Comparación: `capturas/plastilina_fondo_antes_ahora.jpg`
+  y, de cerca, `capturas/plastilina_fondo_de_cerca.jpg` (no van al repositorio).
+- **Tu personaje, un muñeco más**: hasta ahora solo los vecinos, los perros y los coches posaban 12 veces por segundo;
+  tu personaje, que es lo que más se mira, se movía tan fluido como la cámara, y el stop motion apenas se notaba. Ahora
+  también posa a 12 por segundo, sus huesos y su sitio (con la mano del animador y el hervor de la plastilina, también
+  en el héroe), mientras la cámara lo sigue fluida a 60: «el muñeco a doses, la cámara a unos», como en Spider-Verse.
+  El control y la cámara responden igual que antes; lo que va a saltos es el muñeco delante de ella.
+  - Se dibuja fluido donde una pose sostenida se despegaría de lo que lo lleva o se vería demasiado de cerca: en
+    coche o en bici, de pasajero, nadando, escondido y en primera persona (`SM.add(…, { fluid })`, `SM.held`).
+  - Si aparece de golpe en otro sitio (una puerta, volver a casa), se posa al momento allí: un muñeco que se ha
+    movido más de 1,5 m desde su pose es un corte (`StopMotion.hold`).
+  - Álex (el héroe, con captura de movimiento): sus retoques después de moverse (los pies clavados al suelo, la
+    cadera girada hacia donde va, la cabeza derecha: `afterMove`) se hacen solo en cada pose nueva. Hechos en cada
+    fotograma sobre la pose sostenida, se acumulaban entre una pose y otra.
+- **Comprobado** en Chrome sin ventana y sin sonido: el juego a 60 imágenes por segundo, la cámara cambia en todas y
+  tu personaje 12,3 veces por segundo, quieto, andando (1,45 m/s) y corriendo (6,7 m/s), con Annie y con Álex; en
+  coche y en primera persona, fluido; al bajar del coche, otra vez a 12; tras un salto de sitio, dibujado ya en el
+  nuevo; la entrada al juego, en Plastilina y en Realista, sin errores.
+  Vídeo: `capturas/plastilina_stopmotion_antes_ahora.mp4`.

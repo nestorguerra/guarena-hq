@@ -12,7 +12,6 @@
 import * as THREE from 'three';
 import { Character, palette, PUPPET } from './characters.js';
 import { STYLE } from './style.js';
-import { STEADY_BOIL } from './plastilina.js';
 import { parseHero } from './herodata.js';
 import { parseMoves, MotionDB, MotionPlayer } from './heromotion.js';
 import { loadAssetBytes } from './assets.js';
@@ -201,7 +200,6 @@ export class Hero extends Character {
     this.heroGeos = [gb, gh]; this.heroRegs = [reg.slice(0, h0), reg.slice(h0, N)];
     this.paint();
     this.mat = this.statue ? this.factory.bronze : this.factory.material(this.desc);
-    if (STYLE.plastilina && !this.statue && !this.mat.userData.u.uClayBoil) { this.mat.userData.u.uClayBoil = STEADY_BOIL; this.mat.needsUpdate = true; } // (the protagonist's clay holds still: no boil)
     if (!this.statue) {
       const u = this.mat.userData.u;
       u.uNeckY.value = -10; // (no sculpted neck to fade into)
@@ -294,8 +292,11 @@ export class Hero extends Character {
     if (!this.mp) this.mp = new MotionPlayer(HD.db);
     const B = this.bones;
     // the procedural character (still, no stride: its idle, bases, actions, jump, face, hands, hair) — its result is
-    // on the bones; keep it per bone to layer the capture under it
-    super.update(dt, 0, { ...opts, turn: 0, fidget: false });
+    // on the bones; keep it per bone to layer the capture under it. (Claymation: between two poses it is held, and so is
+    // the capture: its time kept for the next pose)
+    this.heldNow = super.update(dt, 0, { ...opts, turn: 0, fidget: false }) === false;
+    if (this.heldNow) { this._heldDt = (this._heldDt || 0) + dt; return false; }
+    if (this._heldDt) { dt += this._heldDt; this._heldDt = 0; }
     if (this.rag || this.gu) return; // (the ragdoll and getting up are the procedural character's alone)
     const proc = this._proc || (this._proc = {}), procHips = this._procHips || (this._procHips = new THREE.Vector3());
     for (const n of HD.db.bones) (proc[n] || (proc[n] = new THREE.Quaternion())).copy(B[n].quaternion);
@@ -375,7 +376,9 @@ export class Hero extends Character {
   //    taken again at once, the foot would jump from where it was held to where the capture has it
   //  - eased in and out with a smoothstep (no kink in the foot's speed where the lock starts or ends)
   afterMove() {
-    if (!this.ready || !this.mp || this.rag || this.gu || !HD) return;
+    // (claymation: only on a new pose — between two, the bones are the pose held, feet locked as they were; touched up
+    // again, frame after frame, the hips' turn and drop and the neck's would pile up)
+    if (!this.ready || !this.mp || this.rag || this.gu || !HD || this.heldNow) return;
     const B = this.bones, dt = this.dt || 1 / 60, w = this.lockW || 0;
     const mk = () => ({ on: false, w: 0, pos: new THREE.Vector3(), armed: false, was: false, h: 0 });
     const L = this.locks || (this.locks = { L: mk(), R: mk() });

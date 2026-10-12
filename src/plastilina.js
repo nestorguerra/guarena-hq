@@ -6,9 +6,9 @@
 //    from the hands that shaped it, thumbprints with their ridges, spatula cuts, a speck of lint here and there, the
 //    colour never quite even, a soft waxy sheen, light that wraps a little into the shadow (warm, as clay is); the sets
 //    keep their marks, the puppets are retouched at every pose (the «boil»)
-//  - stop motion (StopMotion), always on: 12 poses a second for the puppets — their bones and their place — while the
-//    camera, the player and the game itself run on as always (as in Kirby and the Rainbow Curse or Spider-Verse: the
-//    figures «on twos», the camera «on ones»), and no motion blur
+//  - stop motion (StopMotion), always on: 12 poses a second for the puppets — the protagonist too, their bones and
+//    their place — while the camera and the game itself run on as always (as in Kirby and the Rainbow Curse or
+//    Spider-Verse: the figures «on twos», the camera «on ones»), and no motion blur
 // What every film and game studied taught (Aardman, The LEGO Movie, Kirby, The Neverhood…) is in the plan.
 import * as THREE from 'three';
 
@@ -17,9 +17,11 @@ export const PLASTILINA = {
   // the last grade: clay colours are pure, the studio fills the shadows a little, the lens darkens its corners a touch
   grade: { sat: 1.1, warm: 0.045, contrast: 1.1, lift: 0.025, vignette: 0.16, tint: [1.0, 0.955, 0.95] }, // (richer and rosier, as the user's pictures)
   flicker: 0.014, // the studio lamps' little flicker from one pose to the next (the frames of a stop-motion film never match)
-  // the lens: how soft the far background goes at most (a fraction of the picture's height) and from how far behind the
-  // subject it starts and is at its softest (× the subject's distance). Only a little: the user asked for it gentler
-  lens: { blur: 0.0034, from: 2.2, to: 10 }, // (the user's reference pictures: a macro lens on a miniature, the far end of a street soft)
+  // the lens: how soft the far background goes at most (a fraction of the picture's height), from how far behind the
+  // subject it starts and is at its softest (× the subject's distance), and how soft what is right under the lens goes
+  // (a share of the most). Only a little: the user asked twice for less (2026-10-05, and 2026-10-12: «el fondo no lo
+  // desenfoques tanto»: was 0.0034, from 2.2, to 10, near 0.55)
+  lens: { blur: 0.002, from: 2.8, to: 14, near: 0.3 },
   boilMM: 0.002, // how far a puppet's surface boils from one pose to the next (metres)
   // the animator's hand: a puppet put back each pose is never exactly where it was (metres, radians)
   jitter: { pos: 0.003, yaw: 0.006 },
@@ -427,7 +429,7 @@ function pillow(g) {
 // anything nearer stay sharp (no band, no blurred foreground: the game must read as clearly as ever). Two passes
 // (across, then down); the pixels round a sharp thing do not take its colour.
 export const ClayLens = {
-  defines: { TAPS: 5, LENS_FROM: PLASTILINA.lens.from.toFixed(2), LENS_TO: PLASTILINA.lens.to.toFixed(2) },
+  defines: { TAPS: 5, LENS_FROM: PLASTILINA.lens.from.toFixed(2), LENS_TO: PLASTILINA.lens.to.toFixed(2), LENS_NEAR: PLASTILINA.lens.near.toFixed(2) },
   uniforms: {
     tDiffuse: { value: null }, tDepth: { value: null }, uDir: { value: new THREE.Vector2(1, 0) }, uRes: { value: new THREE.Vector2(1280, 720) },
     uNear: { value: 0.25 }, uFar: { value: 4200 }, uFocus: { value: 6 }, uFocusUV: { value: new THREE.Vector2(0.5, 0.5) }, uMaxR: { value: 4 },
@@ -439,7 +441,7 @@ export const ClayLens = {
     float viewZ(float d) { float z = d * 2.0 - 1.0; return 2.0 * uNear * uFar / (uFar + uNear - z * (uFar - uNear)); }
     // (a macro lens on a miniature: what lies far behind the subject softens, and so does what is right under the lens —
     // the bottom of the picture a little, as in the user's pictures)
-    float coc(vec2 uv, float F) { float z = viewZ(texture2D(tDepth, uv).x); return max(smoothstep(F * LENS_FROM, F * LENS_TO, z), (1.0 - smoothstep(F * 0.28, F * 0.55, z)) * 0.55); }
+    float coc(vec2 uv, float F) { float z = viewZ(texture2D(tDepth, uv).x); return max(smoothstep(F * LENS_FROM, F * LENS_TO, z), (1.0 - smoothstep(F * 0.28, F * 0.55, z)) * LENS_NEAR); }
     void main() {
       float F = uFocus > 0.0 ? uFocus : viewZ(texture2D(tDepth, uFocusUV).x);
       F = clamp(F, 1.5, 60.0);
@@ -464,18 +466,23 @@ export const ClayLens = {
 // The puppets keep each pose for 1/12 s: every frame the game moves them as always (so nothing it computes changes);
 // before the picture is drawn, those that are not due a new pose are put back as they were at the last one, and
 // after it they get their live state again. A puppet is a node tree (a character's group with its bones, a dog…).
+// The protagonist is one too (since 2026-10-12: «debe notarse la sensación de stop motion»; before, only the others
+// were, and the figure you watch all the time moved as smoothly as the camera): the camera follows where they really
+// are, so it — and the game's feel in your hands — stays fluid, and the puppet steps along in front of it.
 export class StopMotion {
   constructor(fps = PLASTILINA.fps) {
     this.dt = 1 / fps;
     this.acc = 0;
     this.tick = true;
-    this.items = new Map(); // root -> { nodes, held, live, jit, n, char, heldN }
+    this.items = new Map(); // root -> { nodes, held, live, jit, n, char, heldN, fluid }
     this.ticks = 0;
   }
-  // (char: a person — characters.js —, whose poseN counts the times its bones were posed)
-  add(root, char = null) { this.items.set(root, { nodes: null, held: null, live: null, jit: null, n: -1, char, heldN: -1 }); }
-  // (the protagonist is taken off: it is posed every frame and drawn where it is, as fluid as the camera that follows it)
+  // (char: a person — characters.js —, whose poseN counts the times its bones were posed; opts.fluid: while it says so,
+  // the puppet is drawn as it is and posed every frame — the protagonist in a car, swimming, seen through their own eyes)
+  add(root, char = null, opts = null) { this.items.set(root, { nodes: null, held: null, live: null, jit: null, n: -1, char, heldN: -1, fluid: (opts && opts.fluid) || null }); }
   remove(root) { this.items.delete(root); }
+  // is this puppet held between poses (and so only posed at them)?
+  held(root) { const it = this.items.get(root); return !!it && !(it.fluid && it.fluid()); }
   // once a frame, with the frame's real time: is this frame a new pose?
   advance(dt) {
     this.acc += dt;
@@ -526,11 +533,15 @@ export class StopMotion {
     this.swapped = false;
     const J = PLASTILINA.jitter;
     for (const [root, it] of this.items) {
-      if (!root.parent || !root.visible) { it.held = null; continue; }
+      if (!root.parent || !root.visible || (it.fluid && it.fluid())) { it.held = null; continue; }
       // (the node list is gathered again when the tree changes: a hat put on, a level of detail swapped)
       let count = 0; root.traverse(() => count++);
       if (!it.nodes || count !== it.n) { it.skels = []; it.nodes = this.nodesOf(root, it.skels); it.n = count; it.held = null; }
-      const newPose = this.tick || !it.held, ch = it.char;
+      const ch = it.char;
+      let newPose = this.tick || !it.held;
+      // (put somewhere else since its pose — through a door, back home —: a cut, a new pose at once, not a frame or two
+      // left behind where it was)
+      if (!newPose && it.nodes[0] === root) { const a = it.held, P = root.position; if (Math.abs(P.x - a[0]) + Math.abs(P.y - a[1]) + Math.abs(P.z - a[2]) > 1.5) newPose = true; }
       if (newPose) {
         it.held = StopMotion.capture(it.nodes, it.held);
         it.heldN = ch ? ch.poseN : -1;
@@ -573,5 +584,3 @@ export const SM = new StopMotion();
     if (this._smHeld) this._smDone = this._smPose;
   };
 }
-// the protagonist's clay does not boil: its own, still copy of the boil uniform (characters.js / hero.js)
-export const STEADY_BOIL = { value: { x: 0, y: 0 } };
