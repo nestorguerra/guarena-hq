@@ -172,7 +172,8 @@ export class Weather {
   update(dtReal, game) {
     const dt = clamp(dtReal, 0, 0.1);
     const st = this.status;
-    const useIt = this.data && (st === 'live' || st === 'stale') && game.mode !== 'zombis'; // (the zombie night keeps its own dusk)
+    const useIt = this.data && !this.hold && (st === 'live' || st === 'stale') && game.mode !== 'zombis'; // (the zombie night keeps its own dusk; the way in, the drone's fair morning)
+    if (this.hold) this.fresh = false; // (after it, the real sky rolls in rather than snapping)
     const T = useIt ? this.data.w : NEUTRAL;
     const N = this.now;
     // (a reading there when the game starts is put up at once; one that comes later rolls in)

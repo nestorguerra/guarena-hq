@@ -176,7 +176,7 @@ export class Input {
   get shift() { return this.down('ShiftLeft') || this.down('ShiftRight'); }
   get radioNext() { return this.hit('KeyR') || (!this.phoneOpen && this.gpPressed(14)) || this.touch.pressed.has('radio'); }
   get map() { return this.hit('KeyM') || this.gpPressed(8) || this.touch.pressed.has('map'); }
-  get pause() { return this.hit('Escape') || this.hit('KeyP') || this.gpPressed(9) || this.touch.pressed.has('pause'); }
+  get pause() { return this.hit('Escape') || this.hit('KeyP') || this.hit('KeyX') || this.gpPressed(9) || this.touch.pressed.has('pause'); } // (X: the settings)
   get camToggle() { return this.hit('KeyV') || (!this.phoneOpen && this.gpPressed(13)); }
   get phone() { return this.hit('Tab') || (!this.phoneOpen && this.gpPressed(12)) || this.touch.pressed.has('phone'); }
   get lights() { return this.hit('KeyL'); }

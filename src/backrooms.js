@@ -1,5 +1,6 @@
-// Level 0 of the Backrooms, «The Lobby»: the easter egg behind the yellow door on the stage of the theatre of the Casa
-// de la Cultura (venues.js teatro, Interiors.noclip). The internet's legend — a photograph taken in 2002 in an empty
+// Level 0 of the Backrooms, «The Lobby»: the easter egg behind the sacristy door of Santa María, beside the high altar
+// (church.js, Interiors.noclip; until 2026-10-11 it was a yellow door on the stage of the theatre of the Casa de la
+// Cultura). The internet's legend — a photograph taken in 2002 in an empty
 // shop in Oshkosh (Wisconsin), posted in a 4chan thread in 2019 («If you're not careful and you noclip out of reality
 // in the wrong areas, you'll end up in the Backrooms…»), and the wiki that grew out of it: an endless maze of empty
 // rooms — mono-yellow wallpaper with a chevron print, old damp beige carpet, a drop ceiling of mineral-fibre tiles with
@@ -38,7 +39,7 @@ const mod = (a) => ((a % N) + N) % N;
 const ROOMS = [
   ['J', 0, 0, 39, 1],                          // the corridor with no end (east–west, round the plan's edge)
   ['K', 0, 2, 1, 39],                          // and its brother (north–south)
-  ['A', 3, 3, 9, 8],                           // where you come in, by the yellow door
+  ['A', 3, 3, 9, 8],                           // where you come in, by the sacristy's door
   ['B', 11, 2, 16, 2], ['B', 10, 3, 16, 8],
   ['C', 17, 2, 39, 13],                        // the hall of pillars
   ['D', 3, 9, 4, 22],                          // a corridor that ends at a wall
@@ -892,7 +893,7 @@ function buildChairs(G) {
   }
 }
 // a door: its frame, its leaf with two raised panels, its knob. Built for the Backrooms (shut, its colour times the
-// light where it stands) and for the theatre (venues.js: the yellow one, with its own lamps). Faces +z, sill at y 0
+// light where it stands). Faces +z, sill at y 0
 export function doorMesh(o = {}) {
   const w = o.w || 0.9, h = o.h || 2.04, g = new THREE.Group();
   const paint = o.paint || new THREE.MeshStandardMaterial({ color: o.color || 0xd4a72c, roughness: 0.55 });
@@ -965,21 +966,21 @@ export function buildBackrooms(origin = INTERIOR_ORIGIN) {
       group.add(m);
     }
   }
-  // the doors (the yellow one back to the theatre; a small one up a wall; two that do not open), the colour of each
+  // the doors (the sacristy's, dark wood, back to the church; a small one up a wall; two that do not open), the colour of each
   // times the light where it stands
   const inter = [];
   for (const [x, z, a, kind, sill, hh, w] of DOORS) {
     // (its light as the wall's there, facing the way it faces; the hemisphere light gives its share back itself)
     const lit = shade('wall', x + Math.sin(a) * 0.1, sill + hh * 0.5, z + Math.cos(a) * 0.1, Math.sin(a), 0, Math.cos(a)), k = ((lit[0] + lit[1] + lit[2]) / 3) * hemiK(0);
     const tint = (c) => new THREE.Color(c).multiplyScalar(k);
-    const d = mergeByMaterial(doorMesh({ w, h: hh, paint: new THREE.MeshStandardMaterial({ color: tint(kind === 'exit' ? 0xd4a72c : 0xc9b98a), roughness: 0.55 }), frameMat: new THREE.MeshStandardMaterial({ color: tint(kind === 'exit' ? 0x3a2a1a : 0xb8a678), roughness: 0.6 }), knobMat: new THREE.MeshStandardMaterial({ color: tint(0xc8a050), roughness: 0.3, metalness: STYLE.plastilina ? 0 : 0.7 }) }));
+    const d = mergeByMaterial(doorMesh({ w, h: hh, paint: new THREE.MeshStandardMaterial({ color: tint(kind === 'exit' ? 0x5a3c24 : 0xc9b98a), roughness: 0.55 }), frameMat: new THREE.MeshStandardMaterial({ color: tint(kind === 'exit' ? 0x2e2016 : 0xb8a678), roughness: 0.6 }), knobMat: new THREE.MeshStandardMaterial({ color: tint(0xc8a050), roughness: 0.3, metalness: STYLE.plastilina ? 0 : 0.7 }) }));
     for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
       const c = i === 0 && j === 0 ? d : d.clone();
       c.position.set(ox + x + i * P + Math.sin(a) * (HALF + 0.02), sill, oz + z + j * P + Math.cos(a) * (HALF + 0.02)); c.rotation.y = a;
       group.add(c);
     }
     const ix = ox + x + Math.sin(a) * 0.7, iz = oz + z + Math.cos(a) * 0.7;
-    if (kind === 'exit') inter.push({ type: 'backrooms_out', x: ix, z: iz, r: 1.2, label: 'Volver por la puerta amarilla <small>(al teatro)</small>' });
+    if (kind === 'exit') inter.push({ type: 'backrooms_out', x: ix, z: iz, r: 1.2, label: 'Volver por la puerta de madera <small>(a la sacristía de Santa María)</small>' });
     else if (kind === 'shut') inter.push({ type: 'info', x: ix, z: iz, r: 1.1, label: 'Abrir la puerta', text: 'No se abre. Ni siquiera gira el pomo. Al otro lado se oye el mismo zumbido.' });
   }
   inter.push({ type: 'info', x: ox + 16.5 * C + 0.4, z: oz + 15.5 * C, r: 1.0, label: 'Mirar por la rendija', text: 'Por la rendija se ve otra sala igual, con la misma luz. No cabes.' });

@@ -1,4 +1,5 @@
-// Boot, menus (title flyover, character select with live 3D preview in the Plaza de España), pause & settings.
+// Boot, the way in (no menus: the drone's picture of the town, the flight down to Annie — src/intro.js), the settings
+// (X), the character select with its live 3D preview in the Plaza de España, multiplayer.
 import * as THREE from 'three';
 import { Game, QUALITY } from './game.js';
 import { PLAYER_PRESETS, SKIN, HAIR, CLOTH } from './characters.js';
@@ -13,6 +14,13 @@ import { safeStorage, readSave } from './util.js';
 import { applyClayPalette } from './textures.js';
 import { installClayChunks, installPillowBoxes } from './plastilina.js';
 import { STYLE, setStyle, LOOKS } from './style.js';
+import { INTRO, introPlan, coverFov, IntroFlight, protagonist, buildAround, nearAt } from './intro.js';
+import { mhTexReady } from './characters.js';
+
+// 388 Pueblos: the page this game is the way into (and back to, «Volver a la página web» in the settings). Inside its
+// iframe (?desde=388) the page itself is underneath: it is told to close the game, and it takes you back where you were.
+const WEB_URL = 'https://pueblos388.onrender.com/guarena.html';
+const EMBEDDED = (() => { try { return window.parent !== window && new URLSearchParams(location.search).get('desde') === '388'; } catch (e) { return false; } })();
 
 const $ = (id) => document.getElementById(id);
 const ui = {
@@ -71,7 +79,16 @@ function refreshSavedCharacter() {
 async function boot(hot = {}) {
   const store = safeStorage();
   try { audio = safeAudio(new GameAudio()); } catch (e) { console.warn(e); audio = safeAudio({ stationName: 'Radio Apagada' }); }
-  const raw = await loadMapData();
+  // inside 388 Pueblos: nothing heavy until its camera has come down to the drone's view and said so (index.html);
+  // the map is fetched meanwhile (the network does not stall the page), read once building starts
+  const mapNet = document.getElementById('mapdata') ? null : fetch('data/map.json').catch(() => null);
+  if (window.guarenaBuild) {
+    await Promise.race([window.guarenaBuild, new Promise((r) => setTimeout(r, 20000))]);
+    // (and not before the picture is drifting: its CSS transition must be under way before the town's building takes
+    // the page's thread — then it glides on by itself)
+    await new Promise((r) => { if (window.guarenaDrift) r(); else { window.guarenaOnDrift = r; setTimeout(r, 1500); } });
+  }
+  const raw = await (async () => { try { const r = mapNet && await mapNet; if (r && r.ok) return await r.json(); } catch (e) { /* (read it the usual way) */ } return loadMapData(); })();
   const q = defaultQuality(store);
   // the look (Plastilina unless the player chose the photographic one): it has to be set before anything is built
   let style = null;
@@ -80,6 +97,8 @@ async function boot(hot = {}) {
   setStyle(style);
   // (claymation, before anything is made: the façades' warm palette, clay on every lit surface, soft boxes)
   if (STYLE.plastilina) { applyClayPalette(); installClayChunks(); installPillowBoxes(); }
+  // no menus on the way in: the drone's picture of the town (index.html put it up) drifts closer while it is built
+  const intro = !hot.resume ? introPicture() : null;
   game = new Game({ canvas: ui.canvas, ui, raw, quality: q, audio });
   refreshSavedCharacter();
   ui.onPause = () => openPause();
@@ -91,19 +110,128 @@ async function boot(hot = {}) {
   if (window.claude?.hot?.snapshot) window.claude.hot.snapshot(() => game.snapshot());
   window.game = game;
   $('loading').hidden = true;
-  showMenu();
+  if (intro) await beginIntro(intro);
+  else if (!(hot.preset && hot.resume)) { previewDesc = protagonist(game.save); startGame(); }
   let last = performance.now();
   const loop = (now) => {
     const dt = Math.min(0.1, (now - last) / 1000);
     last = now;
     try {
-      if (mode === 'play') game.frame(dt);
+      if (mode === 'play') { game.frame(dt); if (flight) introTick(dt); }
       else menuFrame(dt);
     } catch (e) { console.error(e); }
     requestAnimationFrame(loop);
   };
   requestAnimationFrame(loop);
   if (hot.preset && hot.resume) { previewDesc = hot.preset; startGame(); }
+}
+
+// ------------------------------------------------------------ the way in: the drone's picture, then the flight
+// the painted view of the town covers the screen and drifts slowly closer (a CSS transition: smooth even while the
+// page is busy building the town)
+function introPicture() {
+  const box = $('intro'), img = $('introImg');
+  if (!box || !img) return null;
+  if (!box.hidden) return { box, img }; // (the page's own script has already put it up and set it drifting)
+  return null;
+}
+function pictureScale(img) {
+  const m = getComputedStyle(img).transform;
+  const a = m && m !== 'none' ? parseFloat(m.slice(m.indexOf('(') + 1)) : 1;
+  return Number.isFinite(a) && a > 0 ? a : 1;
+}
+const tell = (what) => { if (window.guarenaTell) window.guarenaTell(what); };
+let flight = null, introBits = null;
+async function beginIntro(pic) {
+  const g = game, cam = g.camera;
+  const plan = introPlan(g);
+  g.sky.hour = INTRO.hour;
+  if (g.weather) g.weather.hold = true; // (the picture's own fair morning; the town's real sky rolls in once landed)
+  // Annie already at her door, the game started behind the picture (its HUD hidden until the flight has landed)
+  g.pendingMode = 'normal'; setModeSel('normal');
+  g.start(protagonist(g.save), { at: { x: plan.P.x, z: plan.P.z, heading: plan.heading }, quiet: true });
+  g.state = 'intro';
+  g.introFocus = plan.P.clone(); // (the town's detail round her door, as painted in the picture: game.js)
+  if (g.weapons && g.weapons.cur !== 'punos') { g.weapons.select('punos'); if (g.weapons.syncModel && g.player.char) g.weapons.syncModel(g.player.char); } // (empty-handed at her door; the rest stays in her bag)
+  $('hud').hidden = true;
+  const T = (window.guarenaIntroTimes = { start: Math.round(performance.now()) }); // (how long each wait took: for the test tools)
+  // her own figure built, its skin and eyes painted, before the drone comes down to her (the picture drifts on meanwhile)
+  for (let t = 0; t < 15000 && !(g.player.char && g.player.char.ready); t += 50) await new Promise((r) => setTimeout(r, 50));
+  T.figure = Math.round(performance.now());
+  await Promise.race([mhTexReady(), new Promise((r) => setTimeout(r, 5000))]);
+  T.skin = Math.round(performance.now());
+  await buildAround(g, plan.P); // (her street and round it, built through behind the picture: nothing put up on the way down)
+  T.street = Math.round(performance.now());
+  // where the game's own camera will be: the end of the flight (its springs settled behind her)
+  for (let i = 0; i < 90; i++) g.cam.update(1 / 30, g.input);
+  const endPos = cam.position.clone(), endLook = g.cam.target.clone(), endFov = cam.fov;
+  // (inside 388 Pueblos: not before the page has faded into the picture)
+  if (window.guarenaHold) await Promise.race([window.guarenaHold, new Promise((r) => setTimeout(r, 90000))]);
+  // the live camera exactly as the picture now shows, the picture frozen there: from the drone, its lens drawn in s
+  // times (the picture grows about its middle — a narrower lens from the same place; moving closer would shift the
+  // near roofs against the far ones and the two would not match through the fade)
+  const s = pictureScale(pic.img), near0 = cam.near;
+  pic.img.style.transition = 'none'; pic.img.style.transform = `scale(${s})`;
+  const fv = THREE.MathUtils.degToRad(coverFov(innerWidth / Math.max(1, innerHeight)));
+  cam.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(fv / 2) / s));
+  cam.position.copy(plan.D0); cam.lookAt(plan.T); cam.near = nearAt(plan.D0.y, cam.near); cam.updateProjectionMatrix();
+  // a few frames behind the picture: the town around the drone streamed in, the shaders warm
+  for (let i = 0; i < 4; i++) { g.sky.update(0.016, cam.position, false, cam); g.world._lodT = 0; g.world.update(0.016, g.sky.night, g.introFocus); g.chars.updateLods(cam.position, true); g.render(); await new Promise((r) => setTimeout(r, 0)); }
+  T.flight = Math.round(performance.now());
+  flight = new IntroFlight(plan, cam.position, cam.fov, endPos, endLook, endFov, g.map);
+  flight.near0 = near0; // (the game's own near plane, given back on landing)
+  g.cam.cinematic = { flight };
+  introBits = { pic, t: 0 };
+  pic.box.classList.add('out'); // (the picture fades into the live view)
+  tell('live');
+  mode = 'play';
+  // the first touch or key wakes the sound (browsers keep it asleep until then; inside 388 Pueblos it may wake at once)
+  audio.unlock();
+  const wake = () => { audio.unlock(); removeEventListener('pointerdown', wake); removeEventListener('keydown', wake); };
+  addEventListener('pointerdown', wake); addEventListener('keydown', wake);
+}
+// (for the test tools, whose hidden page gets no animation frames: step the way in by hand)
+window.guarenaIntro = { step: (dt) => { if (mode === 'play') { game.frame(dt); if (flight) introTick(dt); } }, get flying() { return !!flight; } };
+function introTick(dt) {
+  if (introBits) { introBits.t += dt; if (introBits.t > 1.2) { introBits.pic.box.hidden = true; introBits = null; } }
+  if (!flight.done) return;
+  // landed: you are playing
+  const g = game;
+  flight = null;
+  g.cam.cinematic = null;
+  g.state = 'play';
+  g.introFocus = null;
+  if (g.weather) g.weather.hold = false;
+  if (introBits) { introBits.pic.box.hidden = true; introBits = null; }
+  const hud = $('hud'); hud.classList.add('llega'); hud.hidden = false; // (it comes up softly)
+  requestAnimationFrame(() => requestAnimationFrame(() => hud.classList.remove('llega')));
+  ui.touch.classList.add('playing');
+  g.input.wantLock = true;
+  tell('play');
+  g.welcome();
+  announcePerk(g.player.char.desc || protagonist(g.save));
+  // arriving with a friend's invitation (a link ending in #sala-XXXXX): into their room
+  if (g.net.invited && !g.net.connected) { g.net.invited = false; g.state = 'paused'; g.input.exitLock(); openMulti(); }
+}
+
+// ------------------------------------------------------------ back to 388 Pueblos (the settings' last button)
+function backToWeb() {
+  try { game.persist(); } catch (e) { /* storage unavailable */ }
+  if (EMBEDDED) {
+    // the page underneath closes the game and takes you back up to where its camera was
+    try { window.parent.postMessage({ type: 'guarena:salir' }, '*'); } catch (e) { /* ignore */ }
+    return;
+  }
+  location.href = WEB_URL;
+}
+// back from a screen opened from the settings (characters, online): the settings again, over the paused game
+function reopenSettings() {
+  for (const id of ['menu', 'select', 'mp']) $(id).hidden = true;
+  removePreview();
+  if (!game.player.char) { previewDesc = protagonist(game.save); startGame(); return; }
+  $('hud').hidden = false;
+  game.state = 'play'; mode = 'play';
+  openPause();
 }
 
 // ------------------------------------------------------------ title menu with flyover
@@ -490,12 +618,12 @@ function openPause() {
 }
 // the pause box doubles as the menu's Controls / Settings page: there «Volver» goes back to the menu
 let pauseLike = false;
-const PAUSE_ONLY = ['pMap', 'pChars', 'pCancel', 'pOnline', 'pMenu'];
+const PAUSE_ONLY = ['pMap', 'pChars', 'pCancel', 'pOnline', 'pWeb'];
 function resume() {
   if (pauseLike) {
     pauseLike = false;
-    $('pResume').textContent = 'Continuar';
-    $('pTitle').textContent = 'Pausa';
+    $('pResume').textContent = 'Seguir jugando';
+    $('pTitle').textContent = 'Ajustes';
     for (const id of PAUSE_ONLY) $(id).hidden = false;
     $('pCancel').hidden = !game.missions.active; $('pOnline').hidden = game.net.active;
     $('pause').hidden = true;
@@ -506,6 +634,7 @@ function resume() {
   game.state = 'play';
   mode = 'play';
   audio.pauseAll(false);
+  game.input.pressed.clear(); // (the key that closed it — X, Esc, P — must not open it again on the next frame)
   game.input.requestLock();
 }
 function showPanel(kind) {
@@ -517,7 +646,8 @@ function showPanel(kind) {
       const done = m.done.has(d.id), open = !d.requires || m.done.has(d.requires);
       return `<div><span>${d.letter} · ${d.title}</span><span class="${done ? 'ok' : open ? '' : 'lock'}">${done ? 'Superada' : open ? d.giver.name : 'Bloqueada'}</span></div>`;
     }).join('');
-    P.innerHTML = `<h3>Tu Guareña</h3>
+    P.innerHTML = `<h3>Ajustes</h3>${settingsHtml()}
+      <h3 style="margin-top:16px">Tu Guareña</h3>
       <div class="stats">
         <div class="stat"><b>${Math.round(g.player.money).toLocaleString('es-ES')} €</b><span>Dinero</span></div>
         <div class="stat"><b>${m.done.size}/${m.defs.length}</b><span>Misiones</span></div>
@@ -525,7 +655,6 @@ function showPanel(kind) {
         <div class="stat"><b>${g.sky.timeString}</b><span>Hora</span></div>
       </div>
       <h3>Misiones</h3><div class="missionList">${rows}</div>
-      <h3 style="margin-top:16px">Ajustes</h3>${settingsHtml()}
       <h3 style="margin-top:16px">Controles</h3>${controlsHtml()}`;
     bindSettings();
   }
@@ -534,6 +663,7 @@ function settingsHtml() {
   const q = game.qKey;
   const times = [['Mañana', 10], ['Tarde', 17], ['Atardecer', 19.9], ['Noche', 23]];
   return `
+    <div class="setting"><span>Modo de juego <small style="opacity:.6" id="sModeDesc">${MODE_DESC[game.mode === 'zombis' ? 'zombis' : 'normal']}</small></span><span class="seg" id="sMode"><button data-mode="normal" class="${game.mode !== 'zombis' ? 'on' : ''}">Normal</button><button data-mode="zombis" class="${game.mode === 'zombis' ? 'on' : ''}">Zombis</button></span></div>
     <div class="setting"><span>Calidad gráfica <small style="opacity:.6">(se aplica al recargar)</small></span><span class="seg" id="sQ">${Object.entries(QUALITY).map(([k, v]) => `<button data-q="${k}" class="${k === q ? 'on' : ''}">${v.name}</button>`).join('')}</span></div>
     <div class="setting"><span>Estética <small style="opacity:.6">(se aplica al recargar)</small></span><span class="seg" id="sLook">${LOOKS.map(([id, n]) => `<button data-look="${id}" class="${STYLE.name === id ? 'on' : ''}">${n}</button>`).join('')}</span></div>
     <div class="setting"><span>Resolución <small style="opacity:.6">(automática: baja un poco solo si el juego va a tirones)</small></span><span class="seg" id="sR"><button data-r="auto" class="${game.save.dynRes !== false ? 'on' : ''}">Automática</button><button data-r="fija" class="${game.save.dynRes === false ? 'on' : ''}">Fija</button></span></div>
@@ -557,6 +687,13 @@ function offerReload(segId, needed) {
   $(segId).after(rl);
 }
 function bindSettings() {
+  document.querySelectorAll('#sMode button').forEach((b) => (b.onclick = () => {
+    const m = b.dataset.mode;
+    pickIn('sMode', b);
+    $('sModeDesc').textContent = MODE_DESC[m];
+    setModeSel(m);
+    if (game.mode !== m) { game.setMode(m); resume(); } // (straight into it)
+  }));
   document.querySelectorAll('#sQ button').forEach((b) => (b.onclick = () => {
     game.setQuality(b.dataset.q);
     pickIn('sQ', b);
@@ -736,7 +873,7 @@ function swapCharacter(d) {
   if (game.net.active) game.net.profile(mpName(), d);
 }
 function applyInGame(d) {
-  game.save.custom = d; game.persist();
+  game.save.custom = d; game.save.pick = d.id || 'custom'; game.persist(); // (chosen here: the next way in brings this one)
   removePreview();
   swapCharacter(d);
   $('select').hidden = true; $('hud').hidden = false;
@@ -760,10 +897,10 @@ function wire() {
   const click = (id, fn) => $(id).addEventListener('click', () => { audio.unlock(); audio.sfx('ui_click'); fn(); });
   document.querySelectorAll('#modeSeg button').forEach((b) => b.addEventListener('click', () => { audio.unlock(); audio.sfx('ui_select'); setModeSel(b.dataset.mode); }));
   setModeSel(game.save.modePref || 'normal');
-  ui.onMenu = () => { $('hEnd').hidden = true; game.state = 'paused'; game.persist(); showMenu(); };
+  ui.onMenu = () => { $('hEnd').hidden = true; game.persist(); game.revive(); reopenSettings(); };
   click('bPlay', () => { if (game.save.custom) { previewDesc = { ...game.save.custom }; startGame(); } else openSelect(); });
   click('bMulti', openMulti);
-  click('mpBack', () => { game.net.leave(); showMenu(); });
+  click('mpBack', () => { game.net.leave(); reopenSettings(); });
   click('mpReady', () => { const net = game.net; if (net.online && !net.connected) { if (!net.connecting) net.connect(mpName(), mpDesc()).then(renderMulti); renderMulti(); return; } const playing = [...net.players.values()].some((p) => p.playing); net.setReady(net.online || playing ? true : !net.ready); });
   click('mpCopyRoom', () => copyText(game.net.inviteLink(), $('mpCopyRoom')));
   click('mpPrivate', () => game.net.switchRoom(newRoomCode(), mpName(), mpDesc()).then(renderMulti));
@@ -785,7 +922,7 @@ function wire() {
   click('bBack', () => {
     if (selReturn === 'mp') { selReturn = null; $('bStart').textContent = '¡A Guareña!'; removePreview(); openMulti(); }
     else if (selReturn === 'game') { selReturn = null; $('bStart').onclick = null; removePreview(); $('select').hidden = true; $('hud').hidden = false; game.state = 'play'; mode = 'play'; audio.pauseAll(false); game.input.requestLock(); }
-    else showMenu();
+    else reopenSettings();
   });
   $('tabM').onclick = () => { selGender = 'm'; selIdx = 0; custom = {}; audio.sfx('ui_select'); renderCards(); updatePreview(); };
   $('tabF').onclick = () => { selGender = 'f'; selIdx = 0; custom = {}; audio.sfx('ui_select'); renderCards(); updatePreview(); };
@@ -795,10 +932,10 @@ function wire() {
   click('pMap', () => { $('pause').hidden = true; game.state = 'map'; mode = 'play'; audio.pauseAll(false); game.hud.toggleMap(true); });
   click('pChars', () => { $('pause').hidden = true; game.state = 'paused'; openSelectInGame(); });
   click('pCancel', () => { game.missions.cancel(); resume(); });
-  click('pMenu', () => { $('pause').hidden = true; game.state = 'paused'; game.persist(); leaveMultiToMenu(); showMenu(); });
+  click('pWeb', () => { leaveMultiToMenu(); backToWeb(); });
   click('mClose', () => { game.hud.toggleMap(false); game.state = 'play'; game.input.requestLock(); });
   addEventListener('keydown', (e) => {
-    if ((mode === 'paused' || pauseLike) && (e.code === 'Escape' || (e.code === 'KeyP' && !pauseLike)) && !$('pause').hidden) { e.preventDefault(); resume(); }
+    if ((mode === 'paused' || pauseLike) && (e.code === 'Escape' || ((e.code === 'KeyP' || e.code === 'KeyX') && !pauseLike)) && !$('pause').hidden) { e.preventDefault(); resume(); }
   });
   document.addEventListener('visibilitychange', () => { if (document.hidden && mode === 'play' && game.state === 'play') openPause(); if (document.hidden) savePos(); });
   // closing the tab: keep the last seconds of play too (the autosave runs every 10 s)

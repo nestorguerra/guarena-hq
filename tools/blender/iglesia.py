@@ -408,6 +408,36 @@ def reuv(ob):
             else: l[uv].uv = (p.x / t, p.z / t)
     bm.to_mesh(me); bm.free()
 
+def mechinales():
+    """the putlog holes: rows of small square holes up the west front, the tower's west face and the north-west block's,
+    where the scaffolds' putlogs went in (phase 5a: the photo shows them dark, a hand across, in rows). A quarter of
+    them are missing, filled in; none where the portal and the oculi are. One cutter for them all"""
+    import random
+    rng = random.Random(23)
+    O1, O2 = SPEC['oculus'], SPEC['oculus2']
+    (xa, za), (xb, zb) = RING[4], RING[5]
+    faces = [(west_x, -4.4, 5.6),                                               # the front itself
+             (lambda z: SPEC['sw_corner'][0], 7.0, 12.6),                       # the tower's west face
+             (lambda z: xa + (xb - xa) * (z - za) / (zb - za), -8.8, -5.5)]     # the north-west block's (inside its band)
+    holes = []
+    for fx, z0, z1 in faces:
+        for r in range(13):
+            y = 2.5 + 1.45 * r + rng.uniform(-0.06, 0.06)
+            z = z0 + rng.uniform(0, 0.6)
+            while z < z1:
+                ok = rng.random() > 0.25
+                if abs(z) < 2.6 and y < 8.8: ok = False                                  # the portal
+                if math.hypot(z - O1['z'], y - O1['y']) < O1['r'] + 0.8: ok = False      # the great oculus
+                if math.hypot(z - O2['z'], y - O2['y']) < O2['r'] + 0.6: ok = False      # the small one
+                if ok: holes.append(wall_prism('c', [(-0.08, 0), (0.08, 0), (0.08, 0.16), (-0.08, 0.16)], fx(z), z, -1.0, 0.0, y, 0.25, -0.2, 'hueco'))
+                z += 1.75 + rng.uniform(-0.2, 0.2)
+    bpy.ops.object.select_all(action='DESELECT')
+    for h in holes: h.select_set(True)
+    bpy.context.view_layer.objects.active = holes[0]
+    bpy.ops.object.join()
+    print(f'mechinales: {len(holes)}')
+    return holes[0]
+
 def build_detail():
     H = SPEC['cornice']; C0 = H - 0.75  # (the cornice moulding: 0,75 m under the top)
     wa, wb = SPEC['walls']; Bt = SPEC['butt']; Hd = Bt['head']; W = SPEC['window']
@@ -444,6 +474,7 @@ def build_detail():
     for O, r_in in ((O1, 1.72), (O2, 0.72)):
         cutters.append(disc('c', west_x(O['z']), O['y'], O['z'], -1.0, 0.0, r_in, 0.3, -1.0, 'silleria'))
     cut(nave, *cutters)
+    cut(nave, mechinales())
     # ---- the windows: surround, sill, the relief under it, glass and bars at the back of the reveal
     for tag, x, z, nx, nz, y0 in win:
         fr = wall_prism(f'recercado_{tag}', arch_pts(W['w'] + 0.56, W['h'] + 0.28), x, z, nx, nz, y0 - 0.02, -0.02, 0.07, 'silleria')
@@ -673,6 +704,12 @@ def merge():
     them) and the buttresses (the game gives them colliders) are marked by name in the JSON beside the model"""
     keep = ('campana_',)
     marks = {'contrafuertes': [], 'nidos': [], 'campanas': [], 'portadaOeste': {'escala': SPEC['west_portal']['scale']}}
+    # where the water runs down the walls (the weathering layer, hiper.js, phase 5a): under the cornice, the gargoyles and
+    # the windows' sills; the long green stain of the photo's north wall hangs from the first gargoyle
+    Gg, W = SPEC['gargoyles'], SPEC['window']
+    marks['desgaste'] = {'cornisa': SPEC['cornice'] - 0.75, 'gargolas': {'x0': Gg['x0'], 'paso': Gg['step'], 'n': Gg['n'], 'y': Gg['y']},
+                         'ventanas': [[x, y] for x, y in zip(W['xs'], W['sills'])], 'anchoVentana': W['w'],
+                         'churreteNorte': Gg['x0'] - 0.2, 'muroNorte': RING[7][1]}
     for ob in COL.objects:
         if ob.type != 'MESH': continue
         bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]

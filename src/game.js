@@ -360,6 +360,10 @@ export class Game {
     this.persist();
     if (this.fm) this.fm.stop(); else this.audio.radioOn(false);
     this.setMode(this.pendingMode || 'normal');
+    if (!opts.quiet) this.welcome(); // (after the way in from the drone, once it has landed: main.js)
+  }
+  // the first hints: the extras after a minute; how to move and where the first mission is
+  welcome() {
     setTimeout(() => {
       if (this.state === 'play' && this.time > 20 && this.mode === 'normal') this.hint('extras', 'Además de las misiones: hay <b>armas</b> escondidas por el pueblo (puntos amarillos del radar), una <b style="color:#ff8a70">armería</b> junto a la Cooperativa, <b>bares</b> para reponer salud y trabajos de <b>taxista</b> y de <b>patrulla</b> (súbete a un taxi o a un coche de policía y ' + (this.input.device === 'touch' ? 'toca el aviso' : 'pulsa ' + this.input.key('E', 15)) + ').', 12);
     }, 60000);
@@ -367,7 +371,7 @@ export class Game {
       if (!this.missions.done.size && this.mode === 'normal') {
         const dev = this.input.device;
         const move = dev === 'touch' ? 'El joystick te mueve y arrastrando a la derecha miras. ' : dev === 'pad' ? `El stick izquierdo te mueve, el derecho mira y ${this.input.key('', 0)} corre. ` : '<kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> para andar, el ratón mira y <kbd>Shift</kbd> corre. ';
-        this.hud.help(this.gx('Bienvenido', 'Bienvenida') + ' a <b>Guareña</b>. ' + move + 'Acércate a la marca <b style="color:#f4c430">amarilla</b> de la plaza para tu primera misión. ' + this.input.key('M', 8, 'Mapa') + ' abre el mapa.', 12);
+        this.hud.help(this.gx('Bienvenido', 'Bienvenida') + ' a <b>Guareña</b>. ' + move + 'Acércate a la marca <b style="color:#f4c430">amarilla</b> de la plaza para tu primera misión. ' + this.input.key('M', 8, 'Mapa') + ' abre el mapa y ' + this.input.key('X', 9, 'II') + ' los ajustes.', 12);
       }
     }, 1500);
   }
@@ -610,7 +614,7 @@ export class Game {
       this.render();
       input.endFrame();
       return;
-    }
+    } else if (this.state === 'intro') this.introStep(dt);
     if (this.state === 'play' && dtReal > 0 && dtReal < 0.1) this.adaptResolution(dtReal);
     if (playing) {
       // time of day
@@ -698,11 +702,31 @@ export class Game {
     // inside a house the town is still seen through its windows: stream it around the real building
     const wv = this.interior && this.windowView && this.windowView.active ? this.windowView : null;
     if (wv) wv.sync();
-    this.world.update(dt, night, wv ? wv.eye : this.camera.position);
+    // (the way in: the town's detail streamed round her door the whole way down — as in the drone's picture —, not
+    // round the flying camera, so that nothing pops in on the way)
+    this.world.update(dt, night, wv ? wv.eye : this.state === 'intro' && this.introFocus ? this.introFocus : this.camera.position);
     this.chars.updateLods(this.camera.position, this.q.shadows > 0, wv ? wv.eye : null);
     this.render();
     input.endFrame();
     this.workMs = performance.now() - tWork;
+  }
+
+  // the way in (src/intro.js, main.js): the camera flies down from the drone's view to the protagonist at her door while
+  // the town goes on living — its traffic, its neighbours, the wind, pose by pose in claymation; nothing answers the keys
+  // until it has landed (the camera's cinematic carries the flight)
+  introStep(dt) {
+    this.shaderT = (this.shaderT || 0) + dt;
+    shared.uTime.value = STYLE.plastilina ? SM.time(this.shaderT) : this.shaderT;
+    const p = this.player;
+    this.fleet.streamParked(p.pos.x, p.pos.z);
+    this.traffic.update(dt);
+    this.fleet.update(dt, this.sky.night);
+    this.traffic.afterPhysics(dt);
+    this.peds.update(dt);
+    if (p.char) { p.syncChar(); p.char.update(dt, 0, {}); } // (standing at her door, where the flight will find her)
+    if (STYLE.plastilina) { this.fxAcc = (this.fxAcc || 0) + dt; if (SM.tick) { this.effects.update(this.fxAcc); this.fxAcc = 0; } }
+    else this.effects.update(dt);
+    this.cam.update(dt, this.input);
   }
 
   // dynamic resolution, gently: only a sustained slowdown (not a hiccup while the town streams in) lowers the internal
@@ -797,16 +821,20 @@ export class Game {
     }
     for (const t of this.lens) { const U = t.uniforms; U.uFocus.value = focus; U.uFocusUV.value.set(0.5, 0.5); U.uNear.value = cam.near; U.uFar.value = cam.far; }
   }
+  // the bloom for this moment — the night's lamps glow, the day's whites do not: each frame (render), and for the photo
+  // tools that draw through renderView with render off
+  updateBloom() {
+    if (!this.bloom) return;
+    const night = this.sky ? this.sky.night : 0;
+    this.bloom.strength = lerp(0.05, 0.6, night);
+    this.bloom.threshold = lerp(1.8, 0.85, night);
+    this.bloom.radius = lerp(0.3, 0.6, night);
+    if (STYLE.plastilina) { this.bloom.strength = lerp(0.14, 0.6, night); this.bloom.threshold = lerp(0.95, 0.85, night); this.bloom.radius = lerp(0.75, 0.6, night); } // (claymation: the soft halation of a photographed set)
+    const ib = this.interior && this.interior.bloom; // (an interior with a glow of its own: the Backrooms' tubes)
+    if (ib) { this.bloom.strength = ib.strength; this.bloom.threshold = ib.threshold; this.bloom.radius = ib.radius; }
+  }
   render() {
-    if (this.bloom) {
-      const night = this.sky ? this.sky.night : 0;
-      this.bloom.strength = lerp(0.05, 0.6, night);
-      this.bloom.threshold = lerp(1.8, 0.85, night);
-      this.bloom.radius = lerp(0.3, 0.6, night);
-      if (STYLE.plastilina) { this.bloom.strength = lerp(0.14, 0.6, night); this.bloom.threshold = lerp(0.95, 0.85, night); this.bloom.radius = lerp(0.75, 0.6, night); } // (claymation: the soft halation of a photographed set)
-      const ib = this.interior && this.interior.bloom; // (an interior with a glow of its own: the Backrooms' tubes)
-      if (ib) { this.bloom.strength = ib.strength; this.bloom.threshold = ib.threshold; this.bloom.radius = ib.radius; }
-    }
+    this.updateBloom();
     // claymation: the puppets not due a new pose are drawn as they were at the last one; at each pose the lamps flicker
     // a hair
     if (STYLE.plastilina) {

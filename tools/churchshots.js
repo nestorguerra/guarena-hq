@@ -43,11 +43,54 @@ export async function shoot(tag = '', { hours = [10.5], W = 720, H = 900, only =
         cam.fov = fov; cam.position.set(O.x + e[0], e[1], O.z + e[2]); cam.lookAt(O.x + t[0], t[1], O.z + t[2]); cam.updateProjectionMatrix(); cam.updateMatrixWorld();
         g.sky.update(0, cam.position, true);
         g.interiors.dimSky();
+        if (g.updateBloom) g.updateBloom(); // (the bloom of this hour: render(), which sets it, is off while shooting)
         const keep = g.camera; g.camera = cam;
         try { g.renderView(cam); } finally { g.camera = keep; }
         const nm = `ch_${name}_${tag}${hours.length > 1 ? '_' + String(hour).replace('.', 'h') : ''}`;
         await post(nm);
         out.push(nm);
+      }
+    }
+  } finally { g.render = keepR; g.resize(); }
+  return out;
+}
+
+// the carved images one by one (hiperinterior.js puts them in church.js's places, h.imagenes): from the floor before
+// each, as a visitor sees it, and close by its head (a look at the face and the neck)
+export async function shootImages(tag = '', { hour = 10.5, W = 600, H = 800 } = {}) {
+  const g = G(), I = g.interiors;
+  if (!g.interior || !g.interior.church) {
+    const d = I.doors.find((q) => q.church === 'oeste');
+    g.player.spawnAt(d.x, d.z, 0);
+    await I.enter(d, { mode: 'visit', spot: 'entrada', silent: true });
+  }
+  const h = g.interior;
+  const keepR = g.render; g.render = () => {};
+  size(W, H);
+  const cam = new THREE.PerspectiveCamera(30, W / H, 0.05, 400);
+  const out = [];
+  try {
+    g.sky.hour = hour;
+    for (let i = 0; i < 3; i++) { g.state = 'play'; g.frame(1 / 30); }
+    for (const q of h.imagenes || []) {
+      const fx = Math.sin(q.ry), fz = Math.cos(q.ry);   // (the way it faces)
+      // (its head: the top of its glass eyes, where the carving stands — or, the old carving, 78 % of its height)
+      let head = q.y + q.h * 0.78;
+      h.group.traverse((o) => {
+        if (o.userData.imagen !== q.kind) return;
+        const bb = new THREE.Box3();
+        o.traverse((m) => { if (m.isMesh && [].concat(m.material).some((mt) => mt && mt.name === 'ojo')) bb.expandByObject(m); });
+        if (!bb.isEmpty()) head = bb.max.y - 0.01;
+      });
+      for (const [nm, d, ey, fov, ty] of [['pie', 4.2, 1.7, 30, q.y + q.h * 0.5], ['cerca', 1.3, head - 0.05, 32, head - 0.12]]) {
+        cam.fov = fov; cam.position.set(q.x + fx * d, ey, q.z + fz * d); cam.lookAt(q.x, ty, q.z); cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+        g.sky.update(0, cam.position, true);
+        g.interiors.dimSky();
+        if (g.updateBloom) g.updateBloom();
+        const keep = g.camera; g.camera = cam;
+        try { g.renderView(cam); } finally { g.camera = keep; }
+        const n = `im_${q.kind}_${nm}_${tag}`;
+        await post(n); out.push(n);
       }
     }
   } finally { g.render = keepR; g.resize(); }

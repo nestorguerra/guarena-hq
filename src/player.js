@@ -1023,6 +1023,7 @@ export class CameraRig {
   }
   updateCinematic(dt) {
     const c = this.cinematic;
+    if (c.flight) { c.flight.update(dt, this.camera); return; } // (the way in: src/intro.js)
     c.t += dt;
     const u = clamp(c.t / c.dur, 0, 1);
     const e = u * u * (3 - 2 * u);

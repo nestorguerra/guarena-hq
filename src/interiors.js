@@ -15,6 +15,7 @@ import { loadTexture } from './assets.js';
 import { buildShop } from './shops.js';
 import { ITEMS, lc } from './items.js';
 import { buildChurch, updateBeams, lightCandle, ChurchLife } from './church.js';
+import { attachInterior } from './hiperinterior.js';
 import { massTime, weekday } from './npcmind.js';
 import { buildVenue, VenueLife, setVenueDesc } from './venues.js';
 setDescMaker(randomDesc);
@@ -854,6 +855,7 @@ export class Interiors {
     this.savedCollider = g.map.collider;
     g.map.collider = h.collider;
     g.interior = h;
+    if (h.church) attachInterior(h, g); // (the Realista look: Santa María inside in high definition, hiperinterior.js)
     if (g.windowView) g.windowView.attach(h, door, this.savedCollider); // its windows look onto the real street
     const at = h.spots[spot] || h.spots.entrada;
     if (at.h !== undefined) { p.spawnAt(at.x, at.z, at.h); g.cam.yaw = at.h + Math.PI; g.cam.pitch = h.church ? 0.12 : -0.05; }
@@ -870,7 +872,7 @@ export class Interiors {
     this.venueLife = h.cast ? new VenueLife(g, h) : null;
     if (h.onEnter) setTimeout(() => { if (this.house === h) h.onEnter(g); }, 900);
     if (banner && h.venue && door && door.name && g.hud.banner) g.hud.banner(door.name, door.sub || '', 'title');
-    if (h.church) {
+    if (h.church && spot !== 'backrooms') { // (back from the Backrooms, by the sacristy door: no lobby to have pushed through)
       g.hud.banner && g.hud.banner('Santa María', 'Iglesia parroquial · s. XVI', 'title');
       // you have just pushed through the lobby: its padded leaves swing back behind you; the great door shuts beyond
       const key = spot === 'sur' ? 'sur' : 'oeste', c = (h.cancels || []).find((q) => q.key === key);
@@ -922,7 +924,7 @@ export class Interiors {
     if (this.house.unlook) this.house.unlook(g);
     if (this.brHum) { g.audio.loopAt('brdoor', { on: false }); this.brHum = false; }
     this.root.remove(this.house.group);
-    this.house.group.traverse((o) => { if (o.geometry) o.geometry.dispose(); });
+    this.house.group.traverse((o) => { if (o.geometry && !o.userData.shared) o.geometry.dispose(); }); // (not the church's model in high definition: it is kept for the next visit)
     this.house = null;
     if (this.savedCollider) g.map.collider = this.savedCollider;
     this.savedCollider = null;
@@ -1083,9 +1085,9 @@ export class Interiors {
     if (this.house.look) this.house.look(g); // (the Backrooms: their own light)
   }
 
-  // the theatre's yellow door and back (backrooms.js): through it, a long fade, the static and the thump of falling out of
-  // the world, and the Backrooms; back the same way to the stage, in front of the door. (The theatre's street door is
-  // kept: it is still the way out of the theatre)
+  // the church's sacristy door, beside the high altar, and back (backrooms.js; until 2026-10-11 it was a yellow door on
+  // the theatre's stage): through it, a long fade, the static and the thump of falling out of the world, and the
+  // Backrooms; back the same way to the place you left, in front of the door (its house's spots.backrooms)
   async noclip(on) {
     const g = this.game;
     if (this.entering || this.noclipping) return;
@@ -1094,10 +1096,10 @@ export class Interiors {
       g.audio.sfx('noclip', { vol: on ? 1 : 0.6 });
       await this.fade(true, on ? 900 : 600);
       if (on) {
-        if (this.current && this.current.venue === 'teatro') this.theatreDoor = this.current;
+        if (this.current && this.house && this.house.spots && this.house.spots.backrooms) this.backroomsFrom = this.current;
         await this.enter({ venue: 'backrooms', name: 'Nivel 0', sub: '«The Lobby» · los Backrooms', seed: 1 }, { silent: true, mode: 'visit' });
       } else {
-        const d = this.theatreDoor || this.doors.find((q) => q.venue === 'teatro');
+        const d = this.backroomsFrom || this.doors.find((q) => q.church === 'oeste');
         await this.enter(d, { silent: true, mode: 'visit', spot: 'backrooms', banner: false });
       }
     } finally { this.noclipping = false; }

@@ -38,6 +38,14 @@ kbd.pad { border-radius: 1em; min-width: 1.5em; text-align: center; display: inl
 button { font: inherit; color: inherit; cursor: pointer; }
 button:focus-visible, .card:focus-visible { outline: 3px solid var(--trigo); outline-offset: 3px; }
 
+#hud.llega { opacity: 0; }
+#hud { transition: opacity 0.9s ease; }
+/* ---------------- the way in: the drone's picture of Guareña (src/intro.js; painted by tools/intro.js) */
+#intro { z-index: 25; background: var(--intro-bg, #c27e58); overflow: hidden; transition: opacity 1.1s ease; }
+#intro.out { opacity: 0; pointer-events: none; }
+#introImg { position: absolute; opacity: 0; transform-origin: 50% 50%; will-change: transform; user-select: none; -webkit-user-drag: none; }
+#introImg.on { opacity: 1; }
+
 /* ---------------- loading */
 #loading { background: radial-gradient(120% 90% at 20% 110%, #3a1f12 0%, #13161c 55%, #0b0d11 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 0 clamp(16px, 6vw, 80px) max(48px, env(safe-area-inset-bottom)); }
 .brand { font-family: var(--display); line-height: 0.86; letter-spacing: 0.01em; text-transform: uppercase; }
@@ -404,6 +412,9 @@ body.hiding::after { content: ''; position: fixed; inset: 0; z-index: 11; pointe
 .pauseBox { width: min(920px, 100%); display: grid; grid-template-columns: minmax(200px, 280px) 1fr; gap: 28px; align-items: start; }
 .pauseBox h2 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 5vw, 64px); margin: 0 0 12px; text-transform: uppercase; line-height: 0.95; }
 .pauseBox .menuList button { font-size: clamp(22px, 3vw, 30px); }
+/* (the way back to 388 Pueblos: set apart, smaller, on one line) */
+.pauseBox .menuList #pWeb { margin-top: 14px; font-size: clamp(15px, 1.7vw, 19px); letter-spacing: 0.08em; white-space: nowrap; text-align: left; color: rgba(251,250,246,0.62); }
+.pauseBox .menuList #pWeb::before { content: '← '; }
 .panel { background: var(--panel); border-radius: 14px; padding: 18px 20px; max-height: 76vh; overflow-y: auto; }
 .panel h3 { font-family: var(--cond); font-weight: 800; font-size: 16px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--trigo); margin: 4px 0 10px; }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 14px; }
@@ -670,6 +681,70 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
   </div>
 </div>
 
+<div id="intro" class="screen" hidden><img id="introImg" alt=""></div>
+<script>(function () {
+  // the look, before anything shows (Plastilina unless the player chose the photographic one; ?estilo= for this visit
+  // only): the drone's picture of Guareña in that look covers the screen and starts drifting closer at once (a CSS
+  // transition, smooth while the page loads and builds the town). main.js and src/intro.js take over from it.
+  var look = 'plastilina';
+  try { var sv = JSON.parse(localStorage.getItem('guarena_hq_save') || localStorage.getItem('guarena_evo_save') || localStorage.getItem('guarena_save') || '{}'); if (sv.style === 'real') look = 'real'; } catch (e) { /* ignore */ }
+  try { var u = new URLSearchParams(location.search).get('estilo'); if (u) look = u === 'real' ? 'real' : 'plastilina'; } catch (e) { /* (?estilo=: this visit only) */ }
+  document.body.dataset.look = look;
+  var box = document.getElementById('intro'), img = document.getElementById('introImg');
+  box.hidden = false;
+  if (look === 'real') box.style.setProperty('--intro-bg', '#785c4a');
+  img.src = look === 'real' ? 'assets/intro_real.jpg' : 'assets/intro.jpg';
+  function fit() { var vw = innerWidth, vh = innerHeight, k = Math.max(vw / 1920, vh / 1080); img.style.width = 1920 * k + 'px'; img.style.height = 1080 * k + 'px'; img.style.left = (vw - 1920 * k) / 2 + 'px'; img.style.top = (vh - 1080 * k) / 2 + 'px'; }
+  fit(); addEventListener('resize', fit);
+  // inside 388 Pueblos (?desde=388, in its iframe) the page zooms down to this very view first. Meanwhile the picture is
+  // up and still, and the town is not built: that heavy work would stall the page's camera on its way down (the two
+  // share a process in many browsers). At its word ('guarena:go', with the moment on the page's clock: however late this
+  // page hears it, the picture drifts from where it should be) the picture starts drifting — a CSS transition, smooth
+  // whatever the page is doing — and the town is built behind it (main.js: guarenaBuild); the flight down to Annie
+  // waits until the page has faded into the picture ('guarena:shown')
+  function tell(what) { try { if (window.parent !== window) window.parent.postMessage({ type: 'guarena:' + what }, '*'); } catch (e) { /* ignore */ } }
+  window.guarenaTell = tell;
+  var embedded = false;
+  try { embedded = window.parent !== window && new URLSearchParams(location.search).get('desde') === '388'; } catch (e) { /* ignore */ }
+  var loaded = false, wanted = !embedded, started = false, since = 0;
+  function frames(n, fn, ms) { var done = false, once = function () { if (!done) { done = true; fn(); } }; (function f(k) { requestAnimationFrame(function () { if (k > 1) f(k - 1); else once(); }); })(n); setTimeout(once, ms); }
+  function go() {
+    if (started) return;
+    started = true;
+    img.classList.add('on');
+    // (a page that is not being drawn, an iframe still hidden: no frames come, so a timer too)
+    frames(2, function () {
+      var late = since ? Math.max(0, Math.min(25000, Date.now() - since)) : 0;
+      getComputedStyle(img).transform; // (from where it is now)
+      img.style.transition = 'transform 26s cubic-bezier(0.25, 0.55, 0.35, 1) ' + -late + 'ms, opacity 0.8s'; img.style.transform = 'scale(1.34)';
+      getComputedStyle(img).transform; // (and from now)
+      window.guarenaDrift = true; if (window.guarenaOnDrift) window.guarenaOnDrift(); // (main.js may start its heavy work now)
+      if (embedded) frames(2, function () { tell('picture'); }, 400); else tell('picture');
+    }, 150);
+  }
+  function onLoad() {
+    loaded = true;
+    if (embedded) img.classList.add('on'); // (painted now, so it is there whenever the page fades into it)
+    if (wanted) go(); else tell('ready');
+  }
+  if (embedded) {
+    var shown, build;
+    window.guarenaHold = new Promise(function (r) { shown = r; });
+    window.guarenaBuild = new Promise(function (r) { build = r; });
+    addEventListener('message', function (e) {
+      if (e.source !== window.parent || !e.data) return;
+      if (e.data.type === 'guarena:go' || e.data.type === 'guarena:shown') {
+        if (!since && typeof e.data.t === 'number') since = e.data.t;
+        wanted = true;
+        if (loaded) go();
+        build();
+      }
+      if (e.data.type === 'guarena:shown') shown();
+    });
+  }
+  if (img.complete && img.naturalWidth) onLoad(); else img.addEventListener('load', onLoad);
+})();</script>
+
 <div id="loading" class="screen">
   <div class="brand"><span class="big">Guareña</span><span class="sub"><i></i>HQ · Vegas Altas · Extremadura</span></div>
   <div id="loadBar"><b></b></div>
@@ -770,14 +845,14 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
 <div id="pause" class="screen overlay" hidden>
   <div class="pauseBox">
     <div>
-      <h2 id="pTitle">Pausa</h2>
+      <h2 id="pTitle">Ajustes</h2>
       <div class="menuList">
-        <button class="primary" id="pResume">Continuar</button>
+        <button class="primary" id="pResume">Seguir jugando</button>
         <button id="pMap">Mapa</button>
         <button id="pChars">Cambiar personaje</button>
         <button id="pCancel">Abandonar misión</button>
         <button id="pOnline">Jugar online</button>
-        <button id="pMenu">Menú principal</button>
+        <button id="pWeb">Volver a la página web</button>
       </div>
     </div>
     <div class="panel" id="pPanel"></div>

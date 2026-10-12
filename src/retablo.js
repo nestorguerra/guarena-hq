@@ -89,7 +89,7 @@ export function buildRetablo(k, { P, xb, OX, OZ, add, B, statue, alpha = 0.55 })
     const pts = archPts(0, 0, w, h);
     const g = new THREE.ShapeGeometry(shapeOf(pts), 16);
     { const uv = g.attributes.uv, p = g.attributes.position; for (let i = 0; i < p.count; i++) uv.setXY(i, (p.getX(i) + w / 2) / w, p.getY(i) / h); }
-    mesh(pl, g, new THREE.MeshStandardMaterial({ map: paintingTexture(kind, { w: tw, h: th, seed: Math.floor(r() * 1e5) }), roughness: 0.55 }), u, v, 0.05);
+    mesh(pl, g, new THREE.MeshStandardMaterial({ map: paintingTexture(kind, { w: tw, h: th, seed: Math.floor(r() * 1e5) }), roughness: 0.55 }), u, v, 0.05).userData.painting = kind; // (its subject: hiperinterior.js lays the real canvas on it)
     // the frame: a moulded band round it, beads on both its edges
     const outer = archPts(0, -0.1, w + 0.2, h + 0.2), frame = shapeOf(outer); frame.holes.push(shapeOf(pts.slice().reverse()));
     put(pl, k.goldPlain, new THREE.ExtrudeGeometry(frame, { depth: 0.05, bevelEnabled: true, bevelThickness: 0.025, bevelSize: 0.025, bevelSegments: 2, curveSegments: 12 }), u, v, 0.03);
@@ -106,7 +106,7 @@ export function buildRetablo(k, { P, xb, OX, OZ, add, B, statue, alpha = 0.55 })
   // a niche: a round-headed hollow (its back lined), gilded reveals, a shell at its head
   const nicheAt = (pl, u, v, w, h, back, shell = true) => {
     const R2 = w / 2, d = 0.42;
-    mesh(pl, new THREE.ShapeGeometry(shapeOf(archPts(0, 0, w, h)), 16), back, u, v, -0.38);
+    mesh(pl, new THREE.ShapeGeometry(shapeOf(archPts(0, 0, w, h)), 16), back, u, v, -0.38).userData.hd = 'retablo'; // (the high-definition retablo has its own)
     for (const sx of [-1, 1]) box(pl, k.goldPlain, 0.04, h - R2, d, u + sx * (R2 + 0.02), v, -0.38 + d / 2);
     put(pl, k.goldPlain, inward(new THREE.CylinderGeometry(R2, R2, d, 20, 1, true, -Math.PI / 2, Math.PI).rotateX(-Math.PI / 2)), u, v + h - R2, -0.38 + d / 2);
     if (shell) for (let i = 0; i < 13; i++) { const a = (i / 12) * Math.PI, rib = new THREE.CylinderGeometry(0.035, 0.012, R2 * 0.95, 6); rib.translate(0, R2 * 0.475, 0); rib.rotateZ(a - Math.PI / 2); put(pl, k.gold, rib, u, v + h - R2, -0.34 + 0.05 * Math.sin(a)); }
@@ -172,7 +172,7 @@ export function buildRetablo(k, { P, xb, OX, OZ, add, B, statue, alpha = 0.55 })
   const docs = [['agustin', L, -WING / 2], ['ambrosio', C, -(UC + UH) / 2], ['jeronimo', C, (UC + UH) / 2], ['gregorio', R, WING / 2]];
   for (const [kind, pl, u] of docs) {
     const w = 0.78, h = 0.78;
-    mesh(pl, new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: paintingTexture(kind, { w: 256, h: 256, seed: 3 }), roughness: 0.55 }), u, 1.43, 0.02);
+    mesh(pl, new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: paintingTexture(kind, { w: 256, h: 256, seed: 3 }), roughness: 0.55 }), u, 1.43, 0.02).userData.painting = kind;
     const fr = new THREE.Shape(); fr.moveTo(-w / 2 - 0.12, -h / 2 - 0.1); fr.lineTo(w / 2 + 0.12, -h / 2 - 0.1); fr.lineTo(w / 2 + 0.12, h / 2 + 0.02); fr.lineTo(w / 2 + 0.18, h / 2 + 0.02); fr.lineTo(w / 2 + 0.18, h / 2 + 0.12); fr.lineTo(-w / 2 - 0.18, h / 2 + 0.12); fr.lineTo(-w / 2 - 0.18, h / 2 + 0.02); fr.lineTo(-w / 2 - 0.12, h / 2 + 0.02); fr.closePath();
     const hole = new THREE.Path(); hole.moveTo(-w / 2, -h / 2); hole.lineTo(-w / 2, h / 2); hole.lineTo(w / 2, h / 2); hole.lineTo(w / 2, -h / 2); hole.closePath(); fr.holes.push(hole);
     put(pl, k.goldPlain, new THREE.ExtrudeGeometry(fr, { depth: 0.04, bevelEnabled: true, bevelThickness: 0.02, bevelSize: 0.02, bevelSegments: 1 }), u, 1.43, 0.0);
@@ -209,7 +209,7 @@ export function buildRetablo(k, { P, xb, OX, OZ, add, B, statue, alpha = 0.55 })
   // top: the Crucifixion, in an eared frame
   {
     const t = TIERS[2], w = 2.0, h = t.h - 0.5, v = t.v0 + 0.25;
-    mesh(C, new THREE.PlaneGeometry(w, h).translate(0, h / 2, 0), new THREE.MeshStandardMaterial({ map: paintingTexture('crucifixion', { w: 384, h: 352, seed: 2 }), roughness: 0.55 }), 0, v, 0.04);
+    mesh(C, new THREE.PlaneGeometry(w, h).translate(0, h / 2, 0), new THREE.MeshStandardMaterial({ map: paintingTexture('crucifixion', { w: 384, h: 352, seed: 2 }), roughness: 0.55 }), 0, v, 0.04).userData.painting = 'crucifixion';
     const fr = new THREE.Shape(), ow = w / 2 + 0.14;
     fr.moveTo(-ow, -0.12); fr.lineTo(ow, -0.12); fr.lineTo(ow, h - 0.2); fr.lineTo(ow + 0.1, h - 0.2); fr.lineTo(ow + 0.1, h + 0.14); fr.lineTo(-ow - 0.1, h + 0.14); fr.lineTo(-ow - 0.1, h - 0.2); fr.lineTo(-ow, h - 0.2); fr.closePath();
     const hole = new THREE.Path(); hole.moveTo(-w / 2, 0); hole.lineTo(-w / 2, h); hole.lineTo(w / 2, h); hole.lineTo(w / 2, 0); hole.closePath(); fr.holes.push(hole);
@@ -221,7 +221,7 @@ export function buildRetablo(k, { P, xb, OX, OZ, add, B, statue, alpha = 0.55 })
     const v = RETABLO.top - 0.02, aw = 2.3, ah = 1.7;
     box(C, k.gold, aw, ah, 0.12, 0, v, -0.02);
     for (const sx of [-1, 1]) { box(C, k.goldPlain, 0.2, ah, 0.3, sx * (aw / 2 - 0.1), v, 0.14); }
-    { const disc = new THREE.CircleGeometry(0.55, 28); mesh(C, disc, new THREE.MeshStandardMaterial({ color: 0xfff1c8, emissive: 0xffd88a, emissiveIntensity: 0.5, roughness: 0.4 }), 0, v + ah * 0.52, 0.06); }
+    { const disc = new THREE.CircleGeometry(0.55, 28); mesh(C, disc, new THREE.MeshStandardMaterial({ color: 0xfff1c8, emissive: 0xffd88a, emissiveIntensity: 0.5, roughness: 0.4 }), 0, v + ah * 0.52, 0.06).userData.hd = 'retablo'; }
     for (let i = 0; i < 24; i++) { const a = (i / 24) * Math.PI * 2, L2 = 0.3 + (i % 2) * 0.18, ray = new THREE.BoxGeometry(0.03, L2, 0.02); ray.translate(0, 0.55 + L2 / 2, 0); ray.rotateZ(a); put(C, k.goldPlain, ray, 0, v + ah * 0.52, 0.07); }
     { const dove = new THREE.SphereGeometry(0.12, 12, 8); dove.scale(1.4, 0.7, 0.6); put(C, k.white, dove, 0, v + ah * 0.52, 0.14); for (const sx of [-1, 1]) { const wg = new THREE.SphereGeometry(0.2, 10, 6); wg.scale(1, 0.32, 0.18); wg.rotateZ(sx * 0.35); put(C, k.white, wg, sx * 0.2, v + ah * 0.52 + 0.06, 0.12); } }
     // the scrolls down to the inner streets' cornice

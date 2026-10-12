@@ -1,11 +1,12 @@
-# Los Backrooms bajo el teatro: Nivel 0, «The Lobby»
+# Los Backrooms tras la sacristía: Nivel 0, «The Lobby»
 
 Estado: primera versión de prueba en la versión Evolución (9 de octubre de 2026). Lo pidió el usuario: un submundo
 bajo tierra en Guareña, los Backrooms, «mundos de color crema, con salas infinitas una detrás de otra, con pasillos que
 no llegan a ningún lado, los objetos repetidos y las estructuras distorsionadas algunas veces; geometrías raras,
-liminales y difíciles de entender». Se entra como un *easter egg*: en el teatro, por una puerta. Para las pruebas, la
-puerta se marca con un color distinto. Al menos diez salas, muy realistas, con muy buenas texturas, en Plastilina y en
-Realista: el primer nivel, «The Lobby».
+liminales y difíciles de entender». Se entra como un *easter egg*. Al principio era por una puerta del teatro, marcada
+de amarillo para las pruebas. **En Guareña HQ, desde el 11 de octubre de 2026, se entra por la puerta de la sacristía de
+Santa María, junto al altar mayor**: lo pidió el usuario. Al menos diez salas, muy realistas, con muy buenas texturas,
+en Plastilina y en Realista: el primer nivel, «The Lobby».
 
 ## Qué son
 
@@ -34,17 +35,19 @@ Lo que lo hace reconocible, sacado de la foto, la wiki y las películas (*The Ba
 
 ## Cómo se entra
 
-En la **Casa de la Cultura** (Teatro, Escuela Municipal de Teatro), por su puerta de la calle (*Entrar: Casa de la
-Cultura*):
-1. Cruza el patio de butacas y sube al escenario por las escaleras de los lados.
-2. Al fondo, a la izquierda, hay una **puerta pintada de amarillo mostaza**. Bajo ella se cuela una raya de luz fría y,
-   cerca, se oye el zumbido de unos fluorescentes que en el teatro no hay.
-3. *Abrir la puerta amarilla*: un fundido largo, la estática y el golpe sordo de caerse de la realidad, y estás dentro.
-   El cartel dice «Nivel 0 · «The Lobby» · los Backrooms».
+En la **iglesia de Santa María** (se entra por la puerta de los pies o por la del Mediodía):
+1. Sube al presbiterio, los cinco escalones ante el altar mayor.
+2. A la derecha del retablo, en el lado de la Epístola, está la **puerta de la sacristía**, de madera oscura. Bajo ella
+   se cuela una raya de luz fría y, cerca, se oye el zumbido de unos fluorescentes que en una sacristía no hay.
+3. *Abrir la puerta de la sacristía*: un fundido largo, la estática y el golpe sordo de caerse de la realidad, y estás
+   dentro. El cartel dice «Nivel 0 · «The Lobby» · los Backrooms».
 
-Llegas mirando hacia dentro de la primera sala, con la puerta amarilla a la espalda. *Volver por la puerta amarilla*
-te deja en el escenario, delante de la puerta. Desde el teatro se sale a la calle como siempre. Dentro se juega en
-primera persona, como en las películas.
+Llegas mirando hacia dentro de la primera sala, con la puerta a la espalda; en los Backrooms es la misma puerta de
+madera. *Volver por la puerta de madera* te deja en el presbiterio, delante de la sacristía y de espaldas a ella. De la
+iglesia se sale a la calle como siempre. Dentro se juega en primera persona, como en las películas.
+
+*Antes (hasta el 11 de octubre de 2026, y en la versión Evolución):* se entraba por una puerta pintada de amarillo
+mostaza al fondo del escenario del teatro de la Casa de la Cultura.
 
 ## El plano: salas que no se acaban
 
@@ -60,7 +63,7 @@ El nivel es un plano de **40 × 40 celdas de 1,2 m (48 m de lado)** que da la vu
 
 | | Qué tiene |
 |---|---|
-| **A** | Donde se llega, con la puerta amarilla. Desde ella se ve, por dos puertas seguidas, el salón de pilares. |
+| **A** | Donde se llega, con la puerta de la sacristía (de madera). Desde ella se ve, por dos puertas seguidas, el salón de pilares. |
 | **B** | Una sala en L que da al pasillo sin fin. |
 | **C** | El salón de pilares: 27 × 14 m, tabiques sueltos. Uno de los pilares **no llega al suelo**: se queda a 30 cm. |
 | **D** | Un pasillo de 17 m que acaba contra una pared. |
@@ -152,7 +155,7 @@ Encima va la arcilla del juego, con sus huellas.
   chasca cada vez que vuelve a encenderse.
 - **La música**: la de fondo («Liminal») se calla dentro. Aquí la música es el zumbido. Vuelve al salir.
 - **Los pasos**: sobre la moqueta mojada suenan sordos, con un leve chapoteo.
-- **La puerta del teatro**: en el escenario, cerca de ella, se oye el zumbido amortiguado.
+- **La puerta de la sacristía**: en el presbiterio, cerca de ella, se oye el zumbido amortiguado.
 
 ## Medidas
 

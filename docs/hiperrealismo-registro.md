@@ -576,3 +576,464 @@ torre, «muy parecida a la foto». Mis arreglos menores están hechos.
   2. Los lados de 3 cm del rebaje de la cartela salen como una línea negra de 1–2 px: son más estrechos que un téxel.
   3. Las juntas de la sillería cruzan el marco y el óvalo de la cartela.
   4. Opcional: el mapa del cielo propio para el vidrio, sin la banda de fachadas.
+
+## 2026-10-11 · el usuario: desgaste, el interior y los Backrooms en la iglesia
+
+- «Sigo sin verlo hiperrealista.» Pide una capa nueva en la plaza y en la iglesia, con desgaste, suciedad e
+  irregularidades al azar en el suelo y en las paredes.
+- Pide también que el interior mejore muchísimo, «como en Unreal o Unity». Elige «Luz de motor, en el juego»: la luz de
+  un motor de gama alta, pero dentro del juego del navegador.
+- Y que los Backrooms no estén en el teatro, sino en la iglesia, «en una de las puertas al lado del altar».
+- Acepta descargar cinco texturas de Poly Haven (CC0) para el suelo de la fase 5b: asphalt_04, asphalt_02,
+  checkered_pavement_tiles, brown_mud_dry y concrete_floor_01.
+
+## 2026-10-11 · los Backrooms, a la puerta de la sacristía (el que construye)
+
+- La puerta de la sacristía, junto al altar mayor (lado de la Epístola), lleva ahora a los Backrooms. Tiene una raya de
+  luz fría por debajo y el zumbido de los tubos.
+- Al volver, se sale delante de esa misma puerta, en el presbiterio y de espaldas a ella.
+- El teatro pierde su puerta amarilla.
+- Probado sin sonido en el Chrome sin ventana: el aviso «Abrir la puerta de la sacristía», la entrada, la salida y la
+  vuelta a la iglesia, sin errores.
+
+## 2026-10-11 · fase 5a, primera vuelta (el que construye)
+
+- **La capa de desgaste** está en el sombreado de la piedra (`src/hiper.js`) y se calcula en el marco de la iglesia:
+  - churretes desde la cornisa, bajo las ocho gárgolas de cada lado, desde los extremos de los alféizares y el largo del
+    muro norte;
+  - el pie sucio y húmedo;
+  - desconchones claros en la mampostería;
+  - liquen en lo que mira arriba;
+  - una ondulación de pocos centímetros.
+
+  Dónde van las gárgolas y los ventanales sale de `iglesia.json` («desgaste»).
+- **Los mechinales:** 96 agujeros de 16 cm en filas cada 1,45 m, en la fachada de los pies y la torre, cortados en el
+  modelo.
+- **Los parches de la foto no cambian:** al sol, 154 → 153; en sombra, 52 → 51.
+- **Rendimiento:** 59 fps (p95: 16,8 ms).
+
+## 2026-10-11 · revisión de la fase 5a (el revisor): NO APROBADO
+
+- **El veredicto:** lo pedido está y casi todo en su sitio, pero la mitad del desgaste parece pintado encima. Antes de
+  afinarlo hay que rehacer la mampostería, que es lo que más separa la iglesia de la foto.
+- **Criterio a criterio:**
+  - **El churrete largo del norte:** está en su sitio, pero sale como una línea fina, ondulada y casi negra, de 15–25 cm
+    (parece una grieta o un cable). En la foto es una banda recta y difusa, gris verdosa y de poco contraste: unos
+    0,3 m de ancho bajo la gárgola y 0,7 m abajo.
+  - **Bajo las gárgolas:** de largo están bien.
+  - **Desde la cornisa:** la foto no tiene ninguno. En el juego salen como barrotes verticales regulares.
+  - **El pie:** vale. En la foto es más gris, no más oscuro, con manchas blanquecinas de cal.
+  - **Desconchones: no.** Son manchones gris blanquecino de 1–2 m con borde nítido, por encima de las piedras. En la
+    foto lo claro va piedra a piedra (piedras crema y grises, mortero de cal), a 10–30 cm.
+  - **Mechinales:** de lejos se leen como en la foto. De cerca son cuadrados de negro puro, perfectos e iguales. En la
+    foto son pardo oscuro, irregulares, de 10–16 cm, y algunos están medio rellenos.
+  - **La ondulación:** no se ve en ninguna vista.
+  - **Parches y rendimiento:** se cumplen.
+- **Lo que más pesa:**
+  1. **La mampostería:**
+     - la masa dorada es un mosaico de polígonos con juntas finas, y en la foto el mortero está enrasado, del mismo
+       tono, sin juntas a la vista;
+     - las piedras oscuras son esquirlas de aristas rectas, gris pizarra, con halo y repartidas por igual. En la foto
+       son cantos redondeados, pardo rojizo oscuro (≈44, 18, 4 en sombra), de 8–30 cm, sin halo y en racimos;
+     - y todo es plano.
+  2. **La luz del pueblo:** 153 frente a 194 de la foto. La decide el usuario.
+  3. **El desgaste de ahora:** los manchones, los barrotes y los negros.
+  4. **La geometría, demasiado perfecta.** Falta además el pararrayos de cobre de la esquina noroeste.
+  5. **La portada oeste antigua**, pixelada.
+  6. **Los alrededores** (fase 5b).
+- **Arreglos pedidos:**
+  1. Rehacer la mampostería en `texturas.py` y medir la piedra oscura: ≈13 % en el norte y ≈4 % en los pies.
+  2. Quitar los manchones: piedras sueltas más claras y cal blanquecina solo abajo, en el norte, hasta unos 3 m.
+  3. Los churretes:
+     - el largo, recto, de 0,3 a 0,8 m, gris verdoso, oscureciendo un 25–35 % (ahora, un 64 %);
+     - los de cornisa, fuera, o uno o dos cortos por muro;
+     - los de gárgola, más suaves.
+  4. Los mechinales, con caras de piedra; de 12–20 cm, irregulares, algunos medio rellenos.
+  5. El pie, más gris que oscuro.
+  6. Capturas, parches y fps nuevos.
+- **Siguen ahí:** los cañones de las gárgolas negros en sombra y las líneas de 1 px de la cartela.
+
+## 2026-10-11 · el usuario: el interior en alta definición
+
+- Pide: «Haz la iglesia por dentro de muy alta definición, todo, esculturas, santos, cuadros, bancos, decoraciones,
+  velas, flores... todo con el máximo detalle y realismo como si fuera el GTA V, usa Unreal para hacerlo posible.»
+- Se le explica que Unreal no puede ir dentro del juego del navegador. Elige:
+  - **En el juego web:** Blender con escaneos y luz horneada, dentro del juego;
+  - **Escaneos reales:** texturas y modelos libres (Poly Haven, ambientCG, Smithsonian), Megascans de Fab con su
+    cuenta de Epic si hacen falta, e imaginería española escaneada con licencia libre, con su crédito. Cada descarga se
+    le pide antes;
+  - **Cuadros reales de dominio público:** Zurbarán, Murillo, Morales…, con su crédito.
+- Los arreglos de la fase 5a y el suelo de la 5b quedan en pausa: se hace antes el interior (fase 6, en
+  `docs/hiperrealismo.md`).
+
+## 2026-10-12 · el usuario: las descargas y el suelo
+
+- Aprueba bajar tres texturas CC0 (48 MB, en `.cache`):
+  - de ambientCG, «Granite002A» y «Plaster003»;
+  - de Poly Haven, «Large Floor Tiles 02».
+
+  Sumas MD5 y zip comprobados.
+- El suelo de Santa María es de **losas de granito gris** (lo dice el usuario).
+
+## 2026-10-12 · fase 6a, primera vuelta (el que construye)
+
+- **El modelo** (`tools/blender/interior.py`) se hace con las medidas de `church.js`:
+  - los muros macizos con sus huecos cortados: puertas, ventanales abocinados y óculo;
+  - pilares y capillas, con su bóveda apuntada y su arco apuntado moldurado;
+  - las columnas jónicas enteras: pedestal moldurado, basa ática, fuste con éntasis y 24 estrías, equino con ovas, dos
+    volutas en espiral, ábaco e imposta;
+  - los arcos fajones moldurados;
+  - bóvedas de terceletes con nervios de perfil de bocel y claves talladas y doradas; en el tramo del presbiterio, la
+    estrella de la foto;
+  - el arco triunfal, con el intradós de casetones;
+  - la media naranja, con 60 casetones de dos escalones y su roseta;
+  - el coro sobre el sotocoro estrellado, con la balaustrada torneada;
+  - el zócalo de sillería y los marcos de las dos puertas pequeñas.
+- **Dos medidas cambian** respecto a `church.js`, y lo que se pisa no cambia:
+  - los ventanales de la nave suben a los lunetos (la luz entre 14,6 y 18,4 m, como en la foto de fuera); antes
+    cruzaban la imposta;
+  - el óculo baja a 10 m, como en la foto.
+- **El greybox,** comparado con el interior de antes desde las vistas de `tools/churchshots.js`: encaja con los
+  bancos, el retablo y las puertas.
+- **Las texturas** (`tools/blender/texturas_interior.py`):
+  - el encalado, de «Plaster003», blanqueado a cal;
+  - el granito gris claro, mate y labrado, de «Granite002A»;
+  - las losas del suelo a hiladas, cada una con su trozo de granito y el desgaste de «Large Floor Tiles 02»;
+  - una vidriera emplomada.
+- **La luz,** horneada en Cycles con la GPU y el quitarruido OIDN:
+  - el cielo, por los ventanales, con portales de luz en ellos;
+  - el rebote del sol a cinco horas;
+  - las lámparas.
+- **El juego** (`src/hiperinterior.js`):
+  - carga el modelo aparte, solo en Realista;
+  - esconde la arquitectura de `church.js`;
+  - mezcla los mapas según la hora, el cielo y las lámparas, y adapta la exposición como una cámara;
+  - el sol directo va en tiempo real;
+  - lo horneado no recibe la luz ambiente ni las puntuales;
+  - las juntas de tambores, dovelas y sillares se dibujan en el sombreado;
+  - los reflejos salen de una foto en cubo del propio interior.
+- **Problemas encontrados y arreglados:**
+  1. **El atlas de luz se aprovechaba en un 6 %:** casi 12.000 islas, y sus márgenes se lo comían. Se quitaron 54.000
+     caras que nadie ve (por rayos desde 7.300 puntos del aire de la iglesia), el margen quedó en 2,5 px y la
+     resolución es mayor abajo que en las bóvedas. Ahora se aprovecha un 50 %.
+  2. **Al apartar las caras ocultas con operadores,** la selección que venía de antes se llevaba también las visibles:
+     el suelo desaparecía entero. Ahora se hace con bmesh.
+  3. **Todo salía negro:** el `interior.json` de un horneado anterior, con el formato viejo, daba NaN.
+  4. **Manchas en bóvedas y casetones:** la escala de cada mapa la ponía la luz de los derrames, cien veces la de la
+     nave, y los 8 bits no alcanzaban para la penumbra. Ahora la escala no pasa de 24 veces la mediana.
+  5. **Una raya de sol en los rincones de las capillas:** sin sus caras exteriores, los muros eran láminas para el mapa
+     de sombras. Las caras ocultas van ahora al juego como «sombra», una malla que solo da la sombra del sol.
+  6. **Columnas rayadas:** a 12 cm por píxel, el mapa no puede dibujar estrías de 17 cm. El horneado final va a
+     3072 px, unos 4 cm.
+- **Rendimiento dentro:** 57,7 fps (con el interior antiguo, 59,9); p95 de 16,8 ms.
+
+## 2026-10-12 · fase 6a, segunda vuelta (el que construye)
+
+Con el horneado final (3072 px, 1024 muestras) la iglesia salía mucho más limpia, pero quedaban tres problemas:
+1. **Las columnas, rayadas.** Las estrías (de 17 cm) salían en franjas irregulares porque el mapa las muestreaba mal.
+   - El fuste se hornea ahora como un cilindro liso: con su propio desenvolvimiento y las normales del cilindro.
+   - La sombra de cada estría la pone el sombreado del juego, desde la UV del fuste.
+   - Queda regular y nítida.
+2. **Los casetones, manchados.** La media naranja y el arco triunfal se partían en islas diminutas.
+   - Cada uno tiene ahora su proyección, de una pieza: la media naranja, de área igual (sinusoidal); el intradós del
+     arco, desenrollado.
+   - Sus fondos se oscurecen con una oclusión por vértice, según la profundidad de cada escalón: el material
+     «casetón», con su COLOR_0.
+3. **Los muebles sin la luz horneada.** El retablo de una capilla brillaba igual que en la nave.
+   - Se hornean además 5.296 sondas de luz, una rejilla cada 1,5 m por el aire de la iglesia. Cada sonda es un cubito
+     cuyas seis caras guardan la luz que les llega de su lado (un «ambient cube»).
+   - Van en `luz/sondas.bin`, de 1 MB.
+   - En el juego, los muebles, las puertas y los cuadros de `church.js` toman de ellas su luz ambiente, mezclada a cada
+     hora como los mapas. Dejan de recibir las luces puntuales, que ya están en las sondas.
+- **El horneado final:**
+  - mapas de 3072 px (cielo y lámparas) y de 2048 px (sol);
+  - 1024 muestras;
+  - los muebles del juego dan su sombra;
+  - unos 11 minutos con la GPU.
+
+  Lo que se descarga aparte pesa 20 MB: el modelo, 5,3; las texturas, 8,0; la luz y las sondas, 6,7.
+- **Retoques:**
+  - de noche, la vista no se adapta del todo: el nivel baja al 62 %, con las bóvedas en penumbra y la luz de las arañas;
+  - el oro, el latón y la plata de los muebles reflejan la foto en cubo del propio interior, y no el entorno pintado de
+    `church.js`, que los hacía brillar en la penumbra de las capillas.
+- **Rendimiento:**
+  - el Chrome sin ventana va a 30 Hz desde la madrugada (también con el interior antiguo), así que los fps de ahora no
+    sirven para comparar;
+  - midiendo el coste de cada fotograma esperando a la GPU, el interior nuevo y el antiguo cuestan lo mismo: 2,5 y
+    2,6 ms de mediana;
+  - la mezcla de las sondas se rehacía 15 veces por segundo (5,5 ms cada una). Ahora va a lo sumo una vez por segundo,
+    solo si la luz cambia, y repartida en seis fotogramas de 1 ms.
+
+## 2026-10-12 · revisión de la fase 6a (el revisor): NO APROBADO
+
+- **El veredicto:** la arquitectura está completa y en su sitio. La luz entra, rebota, se mueve con la hora, y la noche
+  funciona. Pero dos criterios no se cumplen:
+  - el horneado de día tiene costuras, manchas y fugas de sol;
+  - la media naranja no se parece a la foto: sale casi negra.
+- **Criterio a criterio:**
+  - **Proporciones frente a `church.js`:** sí. El órgano tapa ahora media vista del óculo, que ha bajado a 10 m (para la 6b).
+  - **Parecido con la foto:** las formas, sí. El tono y los materiales, no:
+
+    | Medida | Juego | Foto |
+    |---|---|---|
+    | Media naranja (brillo mediano) | 34–42 | 134 |
+    | Muros del ábside | 101–114 | 169 |
+    | Media naranja ÷ muro | 0,33 | 0,79 |
+    | Color de los muros | sepia (127, 111, 92) | gris neutro frío (169, 169, 172) |
+
+    - En la foto, los muros del ábside son de sillería de granito, no de cal.
+    - No enseña ventanas junto al retablo: la luz llega por los bordes, junto a las columnas.
+    - La estrella del presbiterio es una red de nervios curvos en rombos, con 8–12 claves; en el modelo, un anillo.
+  - **La luz:**
+    - entra y rebota, los rincones quedan en penumbra sin ser negros, las manchas de sol se mueven con la hora y de
+      noche alumbran las arañas: sí;
+    - **sin ruido, manchas ni costuras: no.** Salen:
+      - escalones y dientes de sierra en los plementos;
+      - rectángulos y manchas nubladas en las enjutas;
+      - bloques pixelados en la moldura del arco triunfal y en la imposta;
+      - **fugas de sol:** líneas de puntos blancos en un meridiano y en el pie de la media naranja, y en el borde alto
+        del arco triunfal, por rendijas de la malla «sombra»;
+      - motitas color cielo donde los nervios y el arco se juntan con los plementos.
+    - La noche apenas es más oscura que el día.
+  - **Materiales:**
+    - los sillares van dibujados de 0,90 × 0,45 m, y la tabla pide ≈0,60 × 0,40;
+    - el granito, de cerca, parece una encimera.
+  - **Rendimiento:** sin verificar con la versión final; hay que medir a 60 Hz.
+  - **Peso:** sí, 20 MB.
+  - **Sondas de los muebles:** encajan a medias. El oro refleja el cubo tomado en el centro de la nave y brilla en los
+    rincones oscuros.
+- **Lo que más pesa, por orden:**
+  1. los muebles y las lámparas de `church.js` (6b y 6c);
+  2. el horneado: costuras, dientes de sierra, manchas y fugas;
+  3. el tono: sepia y apagado, con la media naranja casi negra;
+  4. todo demasiado limpio y perfecto: sin humedad, hollín, desgaste ni grietas; aristas vivas;
+  5. los materiales: granito de encimera, cal sin variación, losas demasiado iguales;
+  6. los haces de polvo, planos de bordes duros;
+  7. las vidrieras, una rejilla demasiado regular.
+- **Arreglos pedidos:**
+  1. **Un horneado limpio:**
+     - mapas sin compresión por bloques (sin pérdida, o KTX2);
+     - en bóvedas y arcos, al menos la densidad de los muros;
+     - costuras escondidas bajo nervios y aristas, con 4–8 px de margen;
+     - más muestras, o el quitarruido con sus pases de albedo y normales.
+  2. **Cerrar las fugas:**
+     - una «sombra» estanca y plementos metidos bajo los nervios;
+     - buscar fugas con el sol a cada hora.
+  3. **La media naranja como en la foto:**
+     - casetones de cal o de piedra clara;
+     - la oclusión por vértice solo para lo que el mapa no ve;
+     - meta: ≈0,8 del muro del ábside.
+  4. **El ábside:** de sillería de granito claro, y revisar sus ventanas con la foto.
+  5. **La luz del cielo,** neutra o algo fría.
+  6. **Reflejos según la luz de cada sitio:** una sonda por capilla, o el especular atenuado con la sonda.
+  7. **Haces de polvo:** menos y de bordes suaves.
+  8. **Menores:**
+     - sillares de 0,60 × 0,40;
+     - granito más claro y menos moteado;
+     - la estrella en rombos;
+     - una noche más oscura;
+     - el órgano fuera del óculo (6b);
+     - fps medidos a 60 Hz.
+
+## 2026-10-12 · fase 6a, tercera vuelta (el que construye)
+
+Los arreglos del revisor, por su orden:
+1. **Un horneado limpio:**
+   - **Una isla por pieza:** cada pieza curva lleva su propio desenvolvimiento, de una sola isla, con la costura en su
+     cara escondida:
+     - los barridos (molduras, nervios, arcos, archivoltas), por su perfil y su largo;
+     - los torneados, alrededor de su eje;
+     - las superficies (plementos, sotocoro, capillas, media naranja), por la longitud de sus filas y columnas.
+
+     Las islas bajan de casi 12.000 a unas 7.000, casi todas de los detalles pequeños.
+   - **Densidad pareja:** la misma en todo, también en bóvedas y arcos: ≈4,3 cm por píxel. Márgenes de 4 px y relleno
+     de 8.
+   - **Quitarruido guiado** por las normales del atlas, horneadas aparte.
+   - **WebP sin pérdida** (calidad 100, comprobado: error 0) en vez de JPEG.
+   - **Más muestras:** 2048.
+2. **Las fugas:**
+   - una carcasa estanca alrededor de la cabecera, de la coronación del muro al tejado (por ahí entraba el sol sobre la
+     media naranja);
+   - los plementos entran 18 cm en los muros y bajo los arcos;
+   - la media naranja, con un borde que se mete en el muro y en el arco triunfal.
+3. **La media naranja:**
+   - los casetones son de cal, y sus fondos de una cal algo más gris, como los centros oscuros de la foto;
+   - sin la oclusión por vértice, que oscurecía dos veces.
+4. **El ábside:** de sillería de granito claro, con sus hiladas siguiendo la curva. Sus dos ventanas pasan a los lados,
+   junto a las columnas del arco.
+5. **El color:**
+   - la luz del cielo, neutra y algo fría (0,95; 0,98; 1);
+   - la cal, neutra (0,76; 0,77; 0,78);
+   - el granito, gris claro y neutro (0,56), con el moteado a la mitad.
+6. **Los reflejos:**
+   - lo horneado se había quedado sin ellos: el parche quitaba el trozo de three que los pone. Ahora los recupera;
+   - se escalan con la luz de cada superficie (la horneada, o la de las sondas en los muebles), frente a la del sitio
+     de la foto en cubo. Así el oro de un rincón oscuro no brilla;
+   - la luz difusa del mapa de reflejos ya no se suma a la horneada ni a la de las sondas.
+7. **Los haces de sol:** ahora son volúmenes. Cada píxel sigue su rayo a través del haz en seis pasos, con un perfil
+   suave hasta el borde, la entrada y la caída, y el polvo moviéndose.
+8. **Menores:**
+   - sillares dibujados de 0,60 × 0,40 m;
+   - la estrella del presbiterio, con sus combados en rombo y 13 claves;
+   - la noche, al 45 %.
+
+## 2026-10-12 · fase 6a, tercera vuelta: lo que salió al comprobarla (el que construye)
+
+- **Rendimiento:** dentro, a 60 fps de día y de noche, con el interior nuevo y con el antiguo (bucle real del juego,
+  Chrome sin ventana a 60 Hz). Cada fotograma, esperando a la GPU: 2,3–2,9 ms el nuevo frente a 5,7 ms el antiguo,
+  de noche. Al entrar hay un parón de ≈1,5 s (montar la iglesia de `church.js`), igual con los dos interiores. Los
+  41,9 y 50,6 fps medidos antes de noche eran de una pestaña recién abierta, no del interior.
+- **«No carga» en las pruebas:** el servidor de desarrollo cortaba conexiones (`net::ERR_CONNECTION_RESET`) cuando el
+  navegador pedía todos los módulos a la vez: la cola de espera de Python es de 5. `tools/devserver.py` la sube a 128.
+- **Las lámparas alumbraban dos veces.** El parche que apaga en tiempo real los puntos y focos de `church.js` sobre lo
+  horneado (su luz ya está en el horneado) no hacía nada: se aplicaba antes de que three expanda sus `#include`, y el
+  texto que buscaba no estaba aún. Las arañas (14 cada una, también de día) y los focos del retablo (60) se sumaban,
+  cálidos, a la luz horneada: de ahí el tono sepia que vio el revisor. Ahora se cambia el trozo de three ya expandido,
+  en la arquitectura y en los muebles de las sondas.
+  - **Consecuencias:** sin esa luz de más todo quedó neutro pero más apagado. La exposición del «ojo» sube de 0,62 a
+    1,15, y la luz ambiente de la gente baja de noche como la horneada.
+  - **El color de las lámparas,** uno solo para mapas y sondas: ≈3000 K, el de las arañas de `church.js`. Antes, el de
+    los mapas iba aparte, más frío, y a las sondas no llegaba.
+  - **El ojo también se adapta al color:** deshace en parte el color de la luz que domina (cielo, sol y lámparas, por
+    su parte en la mediana), un 70 % de día y un 21 % de noche, como un balance de blancos. Así la cal se ve blanca
+    bajo el sol de la mañana, y de noche las lámparas siguen cálidas. El tono cálido que quedaba de día venía del sol
+    rebotado, no de las lámparas.
+- **Las medidas no eran repetibles,** por dos cosas que ya están corregidas:
+  - **El tiempo en directo:** el juego lee las nubes reales de Guareña, que cambian entre tandas. Ahora las pruebas
+    usan el tiempo propio del juego (el de claude.ai, parcialmente nuboso).
+  - **El «bloom» de las capturas:** `tools/churchshots.js` apaga `render()` mientras fotografía, y el bloom se quedaba
+    con el de la hora a la que arrancó el juego. A veces era el de noche, que deja un velo sobre la cal. El bloom pasa
+    a `game.updateBloom()`, y las capturas lo ponen para su hora.
+- **La media naranja,** medida así (11 h, las mismas regiones, sin ventanas ni retablo):
+  - cúpula 73 (73, 73, 73);
+  - muros del ábside 100 (101, 100, 96) y 76 (77, 76, 73);
+  - cociente 0,83 (foto: 0,79).
+
+  El fondo de los casetones vuelve a 0xa9abb0.
+- **La noche:** plementos de la nave a 66 de noche frente a 137 de día, cálidos (73, 65, 56).
+- **Quedan dos cosas, que van a un horneado nuevo:**
+  - **Manchas** del tamaño de una mano en columnas y rincones, que desaparecen al quitar el término del sol: son ruido
+    del sol rebotado. Esa luz sale de pocas manchas de sol, pequeñas y muy brillantes, y un camino las encuentra
+    pocas veces. El sol se hornea con 4 veces las muestras (8192; `--muestras-sol`).
+  - **Vetas** en los marcos de los casetones (cúpula y arco triunfal). Su textura iba proyectada cara a cara, y el eje
+    cambiaba de una cara pequeña a la siguiente. Ahora siguen el mismo desenvolvimiento que su luz, en metros.
+
+## 2026-10-12 · el usuario: santos, cuadros y muebles
+
+- A la pregunta «¿Qué echas en falta?» (tras decir «falta algo»), el usuario contestó **«Santos, cuadros y muebles»**:
+  lo que pidió al principio y aún son los de `church.js`. El documento tiene ya el plan de la 6b (muebles) y de la 6c
+  (santos, cuadros y vida).
+- **Aprobó la descarga** de las cinco texturas CC0 de Poly Haven para los muebles: «Dark Wood», «Velour Velvet»,
+  «Quatrefoil Jacquard Fabric», «Rough Linen» y «Marble 01». Son 2K en JPG (color, normales y rugosidad/AO), 15
+  archivos y 41 MB, en `.cache/polyhaven/muebles_6b`.
+- **El horneado de la 6a** queda en luz difusa pura. Las manchas que no se iban con más muestras no eran ruido, sino
+  cáusticas: las manchas de sol del suelo, que tenía brillo especular en el horneado, se reflejaban en columnas, arcos
+  y casetones. Los motores hornean solo lo difuso y dejan el brillo a los reflejos del juego, y así se hace ya: sin
+  capa especular, ni cáusticas ni rebotes especulares en Cycles.
+
+## 2026-10-12 · fase 6b, primera vuelta: los muebles en Blender (el que construye)
+
+- **El método:** `tools/blender/muebles.py` hace cada mueble con las medidas y el sitio de `church.js`. `interior.py
+  --muebles-hd [grupos]` lo mete en el modelo: se hornea con la arquitectura y sale en `interior.glb`. Su
+  `interior.json` lista los grupos que trae (`muebles`). En el juego, `church.js` da a los muebles de cada grupo
+  claves de material propias (`h.furn`), y `hiperinterior.js` esconde los del grupo que el modelo trae: sus
+  colisiones, asientos, velas y la misa siguen siendo los de siempre.
+- **Los grupos hechos:**
+  - **bancos:** 48 bancos de roble teñido, con testeros en voluta (el del pasillo con su cuarterón tallado),
+    respaldo de cuarterones inclinado 7°, pasamanos, repisa de misales con ménsulas, travesaño, pata central y
+    reclinatorio de terciopelo granate;
+  - **retablo mayor:** la composición de `retablo.js` en tres planos, con molduras de verdad:
+    - columnas de tercio bajo tallado, fuste estriado y capitel de hojas con volutas;
+    - cornisas con arquitrabe, friso tallado y dentellones, quebradas sobre las columnas;
+    - marcos de medio punto con cartela y querubines, y las hornacinas del expositor (terciopelo) y de la Virgen
+      (azul estrellado), con venera;
+    - el sagrario y el expositor de plata, el resplandor;
+    - el ático con la paloma en su gloria, las volutas, el frontón partido, el globo y la cruz;
+    - copetes, remates y pináculos.
+
+    Los cuadros y la Virgen siguen siendo los de `church.js` (6c);
+  - **órgano:** caja de cuarterones, consola de dos teclados con su banqueta, tres castillos de tubos en V con su
+    boca, cresterías talladas, cornisas y remates. Va al norte del de `church.js` (centro a −5,3 m), fuera del
+    óculo, como pidió el revisor;
+  - **colaterales:** los cinco retablos de capilla, con:
+    - altar de piedra con tableros y mantel de lino;
+    - banco, cuatro columnas salomónicas (fuste en cinco vueltas, con su parra en lo hondo);
+    - hornacina con venera, los marcos de sus dos cuadros con querubines;
+    - ático con marco y volutas, copete y remate;
+  - **presbiterio:** altar de mármol con tableros moldurados y mantel de lino, ambón de madera de atril inclinado y
+    las tres sillas (la presidencial con brazos y copete);
+  - **púlpito:** copa de granito moldurada sobre su columna, tornavoz con corona tallada y remate, respaldo, y
+    escalera de hierro con zancas, balaustres y pasamanos;
+  - **confesionarios:** caja con zócalo y cornisa, media puerta con celosía y cortina, reclinatorios con rejilla,
+    copete y remate;
+  - **bautismo:** pila gallonada sobre balaustre, tapa de madera con cruz; el marco del cuadro; la reja con barrotes
+    de lanza, travesaños y volutas;
+  - **menores:** las tres pilas de agua bendita en venera, el cepillo con flejes de hierro sobre su poste, y los
+    marcos y cruces de las 14 estaciones.
+- **Materiales nuevos** (`texturas_interior.py`):
+  - madera de nogal medio, de «Dark Wood»;
+  - terciopelo granate, de «Velour Velvet»;
+  - lino blanco, de «Rough Linen»;
+  - propios: pan de oro bruñido (pliegos de 8 cm y bol rojo donde se gastó), talla dorada (más gastada, con el fondo
+    picado), plata, azul estrellado, blanco, mármol blanco de vetas grises y hierro.
+- **El quitarruido, por islas.** La guía de islas se hornea en la CPU: en la GPU, Cycles se caía compilando para Metal.
+  Una prueba rápida con mapas de 1024 y 512 px dejó todo a cero; no era un fallo: con 13.500 islas, los márgenes de
+  4 px no caben en mapas tan pequeños. Las pruebas, a tamaño real y con pocas muestras.
+- **Peso:** con todos los grupos, el modelo pasa de 4,8 a 11,6 MB (unas 3.000 piezas, 406.000 caras); la talla
+  dorada es lo que más pesa.
+
+## 2026-10-12 · el usuario: los cuadros y los santos
+
+- **Aprobó descargar 25 cuadros** de dominio público de Wikimedia Commons («Sí, los 25»): JPG de 1024 px de ancho,
+  12,2 MB, en `.cache/commons/cuadros_6c`, con su ficha en `.cache/commons/cuadros_6c_fuentes.json`.
+  - Se descartaron las fotos con licencia CC BY-SA del fotógrafo y se eligieron versiones marcadas como dominio
+    público.
+  - **Retablo mayor:** el Apostolado de El Greco (Museo del Greco, Toledo), los 12 apóstoles; la Crucifixión con la
+    Virgen y San Juan, de El Greco y taller; los cuatro Doctores de Zurbarán (San Jerónimo, San Ambrosio, San
+    Gregorio; San Agustín, atribuido).
+  - **Capillas:** el Bautismo de Cristo de Murillo (catedral de Sevilla); el Milagro del pozo (San Isidro) de
+    Alonso Cano; Santa Ana y la Virgen y San Roque, de Murillo; y de Zurbarán Santa Isabel de Portugal, San
+    Francisco en meditación, San Antonio de Padua con el Niño y Santa Lucía.
+- **Los santos, tallados en Blender** («Talladas en Blender»): figuras propias de imaginería, con cuerpos de
+  MakeHuman, ropajes y policromía, sin descargas.
+
+## 2026-10-12 · el usuario: las imágenes sin cuello
+
+- **Lo que dijo:** «Parece que las imágenes las esculturas no tienen cuello parece que la cabeza está metida en los
+  hombros por favor, asegúrate que todas las esculturas tengan cuello».
+- **Por qué pasaba (dos causas):**
+  - **Las tres Vírgenes.** Sus rasgos de mujer salen de los objetivos de MakeHuman de una mujer entera (el archivo de
+    cabezas del juego, `assets/mh/head.bin.gz`), más baja que el hombre cuyo cuerpo llevan debajo. Sobre ese cuerpo
+    bajaban la cabeza y el cuello entre 13 y 15 cm, dentro de los hombros.
+    - Arreglo: de esos objetivos se toma solo la forma de la cara. Se miden desde la base del cráneo, enteros en la
+      cabeza y desvaneciéndose por el cuello, de la barbilla a su raíz. El cuello del cuerpo sostiene la cabeza donde
+      iba.
+  - **Todas.** La túnica salía de la malla «tights» de MakeHuman, un mono entero que sube por el cuello y la nuca
+    hasta el cráneo, como una capucha.
+    - Arreglo: un escote redondo en la raíz del cuello, bajo delante (en el hueco del esternón), donde el cuello se
+      junta con los hombros a los lados y en la séptima vértebra detrás.
+    - El borde va suavizado a lo largo del corte, y la tela se ciñe allí al cuello, como un dobladillo.
+- **Lo que se ajustó a la vez:**
+  - **El velo:** medido sobre la cabeza (la coronilla, y los lados hasta la barbilla) y abierto bajo la barbilla, para
+    que se vea el cuello.
+  - **El pelo:**
+    - las Vírgenes llevan pelo con raya en medio bajo el velo; antes asomaban calvas;
+    - el pelo y las barbas de los hombres crecen de la piel, sin el borde de casco, y van en mechones tallados.
+  - **El Cristo:** el cuello 2,5 cm más largo y la cabeza algo menos caída.
+  - **El Niño de San José:** más abajo y a un lado, para que no tape la cara ni el cuello del santo.
+  - **El corazón del Sagrado Corazón:** encima del pecho (estaba dentro de la túnica), con su corona de espinas, sus
+    llamas y su cruz.
+  - **El puñal de la Dolorosa:** la hoja clavada y el puño de plata fuera.
+  - **Los ojos de vidrio:** en el juego llevan ya su iris y su pupila (textura propia, «ojo»).
+  - **Las imágenes antiguas:** las piezas de metal (aureolas, coronas, puñal, vara) tienen claves propias y se
+    esconden enteras cuando entran las nuevas. Antes quedaban el puñal viejo, cruzando a la Dolorosa, y una segunda
+    aureola sobre San José.
+- **Comprobado:** en Blender, de frente y de tres cuartos, y en el juego, desde el suelo y de cerca. Las seis tienen
+  cuello.
+  - Capturas: `.snaps/im_<imagen>_pie_cuello2.jpg` y `.snaps/im_<imagen>_cerca_cuello2.jpg`.
+  - El antes y el ahora: `.snaps/cuello_antes_ahora.jpg`.
+- **Queda (6c):**
+  - la Dolorosa y el Sagrado Corazón se ven muy oscuros en sus capillas (el luto, en una capilla en penumbra: hará
+    falta la luz de sus velas o un foco);
+  - la policromía (estofado y encarnaciones), la corona de espinas del Cristo y la cara del Niño, que es de adulto.
+

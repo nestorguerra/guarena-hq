@@ -17,6 +17,7 @@ import { STYLE } from './style.js';
 import { clayRepaint } from './plastilina.js';
 import { buildLandmarks } from './landmarks.js';
 import { hiperIglesia } from './hiper.js';
+import { loadInterior } from './hiperinterior.js';
 import { Reservoir } from './pantano.js';
 import { buildTrafficSigns } from './signs.js';
 import { measuredGaps, resolveMeasured, buildMeasuredDetails, measuredLamps } from './fachadas.js';
@@ -68,6 +69,8 @@ export class World {
     this.landmarks = buildLandmarks(this, map);
     // (Guareña HQ: the church of Santa María made hyperreal in the Realista look — hiper.js, docs/hiperrealismo.md)
     this.hiper = await hiperIglesia(this.landmarks, { aniso: q.aniso }).catch((e) => { console.warn('[hiper]', e); return null; });
+    // (and its inside, fetched in the background once the town is up: it is not inside the page — hiperinterior.js)
+    if (this.hiper) setTimeout(() => loadInterior(), 12000);
     const skipPart = (p) => this.landmarks.claims(p.c[0], p.c[1]);
     // the street fronts the Catastro leaves open where the town has houses (src/infill.js)
     // (the houses the photographs show where the Catastro has none — calle Malfeitos, fachadas.js — before the town's

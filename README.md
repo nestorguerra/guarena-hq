@@ -212,7 +212,13 @@ menú).
 ## Jugar
 
 - **En el navegador:** https://nestorguerra.github.io/guarena-hq/ (la Evolución sigue en https://nestorguerra.github.io/guarena-evolucion/ y la versión fija en https://nestorguerra.github.io/guarena/)
-- **Multijugador online, sin servidor:** en esa misma página, *Multijugador* (o *Pausa › Jugar online*). Entras en
+- **Sin menús:** se entra directamente, en Plastilina. Mientras el pueblo se construye, una foto de Guareña tomada
+  desde un dron se va acercando; después la cámara baja volando hasta Annie, en su puerta de la calle Malfeitos, y
+  ya estás jugando. Desde la web de 388 Pueblos (https://pueblos388.onrender.com/, *Jugar en Guareña*) la cámara de
+  la web baja hasta esa misma foto y se funde con el juego sin salir de la página. Detalle en docs/entrada.md.
+- **Los ajustes, con X** (o *Esc*, o el botón II en el móvil): modo de juego (normal o zombis), calidad, estética,
+  tiempo, música, mapa, cambiar de personaje, jugar online y *Volver a la página web*.
+- **Multijugador online, sin servidor:** en esa misma página, *Jugar online* en los ajustes (X). Entras en
   la sala pública: ves por la calle a todos los que estén jugando online en ese momento, con su nombre encima, en el
   radar y en el mapa, y podéis hablar por el chat (T). Con *Crear sala privada* tienes un enlace propio
   (`…/guarena-hq/#sala-XXXXX`) que solo conoce quien tú se lo mandes. Ver [Cómo funciona el online](#cómo-funciona-el-online).

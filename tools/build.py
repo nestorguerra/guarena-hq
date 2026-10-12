@@ -149,15 +149,25 @@ def main():
     src_assets = os.path.join(ROOT, 'assets')
     asset_files = sorted(os.path.relpath(os.path.join(d, f), src_assets).replace(os.sep, '/')
                          for d, _, fs in os.walk(src_assets) for f in fs if f != 'meta.json' and f != 'rig.json' and not f.startswith('.'))  # (hero/rig.json: for the tools only)
+    # what is fetched only when wanted (Santa María inside in high definition, src/hiperinterior.js): never inside the
+    # page — it would weigh tens of MB more —, always beside it, in dist/assets (the published copy carries it there; a
+    # page that cannot fetch it keeps the old church). The drone's pictures of the way in too (src/intro.js): the page
+    # asks for them by name in its first lines, so that one shows at once, long before the page itself has arrived
+    LAZY = ('hq/interior/', 'intro.jpg', 'intro_real.jpg')
+    lazy = [rel for rel in asset_files if rel.startswith(LAZY)]
+    asset_files = [rel for rel in asset_files if not rel.startswith(LAZY)]
     for sub in ('data', 'assets'):
         if os.path.isdir(os.path.join(dist, sub)): shutil.rmtree(os.path.join(dist, sub))
     os.makedirs(dist, exist_ok=True)
     data = read(os.path.join(ROOT, 'data', 'map.json'))
+    for rel in lazy:
+        os.makedirs(os.path.dirname(os.path.join(dist, 'assets', rel)), exist_ok=True)
+        shutil.copyfile(os.path.join(src_assets, rel), os.path.join(dist, 'assets', rel))
     if split:
         os.makedirs(os.path.join(dist, 'data'))
         with open(os.path.join(dist, 'data', 'map.json'), 'w', encoding='utf-8') as f:
             f.write(data)
-        shutil.copytree(src_assets, os.path.join(dist, 'assets'), ignore=shutil.ignore_patterns('meta.json', '.*'))
+        shutil.copytree(src_assets, os.path.join(dist, 'assets'), ignore=shutil.ignore_patterns('meta.json', '.*'), dirs_exist_ok=True)
     else:
         # the artifact host fails to serve versions with attached files, so everything travels inside the page
         assert '</script' not in data
@@ -193,6 +203,7 @@ def main():
         print('wrote', os.path.join(mp, 'guarena.html'))
     kb_assets = sum(os.path.getsize(os.path.join(src_assets, rel)) for rel in asset_files) // 1024
     print('assets:', len(asset_files), 'files,', kb_assets, 'KB', 'next to the page' if split else 'embedded')
+    if lazy: print('assets aparte (dist/assets, se descargan al pedirlos):', len(lazy), 'files,', sum(os.path.getsize(os.path.join(src_assets, rel)) for rel in lazy) // 1024, 'KB')
     print('modules:', [o[0] for o in order])
     print('externals:', {k: sorted(v) for k, v in externals.items()})
     print('wrote', fn, round(os.path.getsize(fn) / 1024), 'KB')

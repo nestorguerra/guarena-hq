@@ -29,5 +29,9 @@ class H(http.server.SimpleHTTPRequestHandler):
         self.send_response(200); self.end_headers(); self.wfile.write(b'ok')
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 8917
 socketserver.TCPServer.allow_reuse_address = True
+# (the browser asks for the game's modules all at once: with Python's default queue of 5 waiting connections the
+# rest were reset — net::ERR_CONNECTION_RESET — and the game never loaded)
+socketserver.ThreadingTCPServer.request_queue_size = 128
+socketserver.ThreadingTCPServer.daemon_threads = True
 with socketserver.ThreadingTCPServer(('127.0.0.1', port), H) as s:
     s.serve_forever()
