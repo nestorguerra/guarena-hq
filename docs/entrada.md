@@ -52,8 +52,13 @@ justo cuando acabe la carga:
   (medido: las calles y las casas se llevan casi todo el tiempo, los últimos pasos son rápidos).
 - **La velocidad, sin tirones.** Cada corrección cambia la velocidad poco a poco (1,5 s); en los dos últimos segundos
   previstos ya no se corrige: mejor quedarse algo corto o pasarse de `MAX` que frenar para clavarlo, porque frenar se
-  lee como pararse. Si la carga se alarga, el zoom sigue más despacio, pero nunca por debajo del 3 % por segundo
-  (`RLATE`, que aún se ve moverse) hasta 3,2, y de ahí, más lento, hasta `CAP` = 3,6.
+  lee como pararse. Si la carga se alarga, el zoom sigue más despacio, pero nunca por debajo del 2 % por segundo
+  (`RLATE`, lento pero aún se ve moverse) hasta 3,2, y de ahí, más lento, hasta `CAP` = 3,6.
+- **Si la página aún no ha llegado.** Si la construcción debía empezar (al acabar el fundido, o al cargar la página
+  fuera de la web) y 3 s después (6 s fuera) no ha empezado, el zoom va al 2 % por segundo y guarda el resto del
+  camino para cuando empiece. En la web publicada, la primera vez, la página llegó una vez 27 s tarde: el zoom
+  se arrastraba al 1 % por segundo, y con solo un mínimo llegaba al tope antes de que se construyera el pueblo y se
+  quedaba quieto.
 - **Una sola animación.** Las dos fotos van en una caja (`#introZoom`) que acerca una única animación (Web Animations,
   logarítmica de 1 a `CAP`) que corre en el hilo de la pantalla, haga lo que haga la página. Las correcciones solo
   cambian su velocidad, y dónde va el zoom se lleva con el reloj (`M`), poniendo a juego el inicio de la animación.
@@ -65,9 +70,9 @@ justo cuando acabe la carga:
     con `updatePlaybackRate` en ese momento, la hacía saltar atrás un poco.
 
 Medido en Chrome (Mac), entrando desde la web: la foto se acerca sin pausas a ≈0,075 por segundo (logarítmico) de
-principio a fin de la carga, y el relevo a la cámara en vivo no cambia la velocidad. Con la línea limitada a 3 MB/s
-(la página tarda 6 s más en llegar) frena poco a poco hasta ≈0,028 por segundo y llega a su sitio al empezar el
-vuelo.
+principio a fin de la carga, y el relevo a la cámara en vivo no cambia la velocidad. Con la línea limitada a 1 MB/s
+(la página tarda casi medio minuto en llegar; el vuelo empieza a los 41 s) frena poco a poco hasta 0,02 por segundo,
+sigue así sin pararse y arranca el vuelo pasado `MAX` (3,0).
 
 ## Desde 388 Pueblos
 

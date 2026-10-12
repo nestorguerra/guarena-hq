@@ -725,10 +725,11 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
   // and after it is still behind for a frame or two: a speed changed from there made it jump back —, and each change of
   // speed sets the animation's start to match, by the clock too. The live camera takes over from wherever it has got
   // to, at its speed (guarenaZoom.handover), and the picture goes on with it as it fades out.
-  var Z = { max: 2.6, cap: 3.6, close: 1.8, N: 600, a: null, r: 0, t0: 0, end: 0, p: 0, ti: 0, timer: 0, done: false, log: [], hold: 0, at: 0, q: 0 };
-  // (u: the zoom's way, 0…1, logarithmic; speeds in u a second: late, never under RLATE — 3 % a second, still plainly
-  // moving — until ULATE, then down to RMIN on the way to CAP)
-  var LC = Math.log(Z.cap), UMAX = Math.log(Z.max) / LC, RMIN = 0.012 / LC, RLATE = 0.03 / LC, ULATE = Math.log(3.2) / LC;
+  var Z = { max: 2.6, cap: 3.6, close: 1.8, N: 600, a: null, r: 0, t0: 0, end: 0, p: 0, ti: 0, timer: 0, done: false, log: [], hold: 0, at: 0, q: 0, due: 0 };
+  // (u: the zoom's way, 0…1, logarithmic; speeds in u a second: never under RLATE — 2 % a second, slow but still
+  // moving — until ULATE, then down to RMIN on the way to CAP. The building due to begin and not begun GRACE ms
+  // later — the page still on its way down the wire —: RLATE meanwhile, the rest of the way kept for when it does)
+  var LC = Math.log(Z.cap), UMAX = Math.log(Z.max) / LC, RMIN = 0.01 / LC, RLATE = 0.02 / LC, ULATE = Math.log(3.2) / LC, GRACE = embedded ? 3000 : 6000;
   img2.style.transform = 'scale(' + (1 / Z.close).toFixed(5) + ')';
   // how much of the load's time has gone by when it says it is this far (measured: the town's pieces are not built at
   // an even pace — the streets and the houses take most of it, the last steps are quick): [progress, share of the time]
@@ -764,13 +765,15 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
     if (Math.exp(LC * u) >= Z.close * 1.03 && img2.complete && img2.naturalWidth) img2.classList.add('on');
     if (now < Z.hold) return; // (through the fade, at the speed it was handed)
     if (!Z.ti) Z.end = Math.max(Z.end, now + prior * 1000); // (the building has not begun: it takes its time from when it does)
-    var left = (Z.end - now) / 1000;
+    var left = (Z.end - now) / 1000, waiting = !Z.ti && now - Z.due > GRACE;
     // the speed that gets it to MAX just as the load is expected to end — until its last two seconds: then it keeps the
     // speed it has (and may end a little short of MAX, or past it: better than slowing down to meet it, which reads as
-    // stopping); past MAX with the load still going, on at the speed it had, easing off slowly, but not under RLATE.
-    // Every change eased in over a second or two, never in a jump
-    var r = left > 2 && u < UMAX ? (UMAX - u) / left : u < UMAX ? Z.r : Math.max(u < ULATE ? RLATE : 0, Z.r * Math.exp(-dt / 6));
-    speed(Math.max(RMIN, Z.r + (r - Z.r) * (1 - Math.exp(-dt / 1.5))));
+    // stopping); past MAX with the load still going, on at the speed it had, easing off slowly. Never under RLATE: a
+    // page still on its way down the wire (27 s once, live) had it creeping in at 1 % a second, as good as still, and
+    // with a floor alone it reached CAP before the town was built, and stood. Every change eased in over a second or
+    // two, never in a jump
+    var r = waiting ? RLATE : left > 2 && u < UMAX ? (UMAX - u) / left : u < UMAX ? Z.r : Z.r * Math.exp(-dt / 6);
+    speed(Math.max(u < ULATE ? RLATE : RMIN, Z.r + (r - Z.r) * (1 - Math.exp(-dt / 1.5))));
     if (Z.log.length < 400) Z.log.push([Math.round(now), +Math.exp(LC * u).toFixed(3), +left.toFixed(2), Z.p, +(Z.r * LC).toFixed(4)]);
   }
   function begin(s0, r0, hold) {
@@ -781,6 +784,7 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
     var take = s0 > 1 && s0 < Z.max && r0 > 0, pre = take ? Math.min(prior / 2, Math.log(s0) / r0) : 0;
     Z.t0 = performance.now() - pre * 1000; Z.end = Z.t0 + prior * 1000;
     if (take) Z.hold = performance.now() + hold * 1000;
+    Z.due = take ? Z.hold : performance.now(); // (when the building should begin: after the fade, or at once)
     img.classList.add('on');
     run(take ? Math.log(s0) / LC : 0, take ? r0 / LC : UMAX / (prior + 2));
     // (a page that is not being drawn, an iframe still hidden: no frames come, so a timer too)
