@@ -50,7 +50,8 @@ export class World {
       if (typeof location !== 'undefined' && /[?&]debug\b/.test(location.search)) console.log(`[world] ${lPrev}: ${(t - tPrev).toFixed(0)} ms`);
       tPrev = t; lPrev = label;
       progress && progress(label, frac);
-      await new Promise((r) => setTimeout(r, 0));
+      // (a frame drawn before the next step: what the page changed meanwhile — the zoom of the way in — is put up)
+      await new Promise((r) => { let done = false; const go = () => { if (!done) { done = true; r(); } }; requestAnimationFrame(() => setTimeout(go, 0)); setTimeout(go, 80); });
     };
 
     await step('Encalando fachadas…', 0.08);

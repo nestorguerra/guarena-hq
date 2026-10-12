@@ -103,7 +103,12 @@ async function boot(hot = {}) {
   refreshSavedCharacter();
   ui.onPause = () => openPause();
   const bar = document.querySelector('#loadBar b'), txt = $('loadText');
-  await game.init((label, f) => { bar.style.width = Math.round(f * 100) + '%'; txt.textContent = label; });
+  const loadLog = (window.guarenaLoadLog = [[Math.round(performance.now()), 'inicio', 0]]); // (for the test tools: how the load went)
+  await game.init((label, f) => {
+    bar.style.width = Math.round(f * 100) + '%'; txt.textContent = label;
+    loadLog.push([Math.round(performance.now()), label, +f.toFixed(3)]);
+    if (window.guarenaZoom) window.guarenaZoom.to(0.05 + f * 0.85); // (the picture's zoom follows the load: index.html)
+  });
   if (hot.money !== undefined) game.player.money = hot.money;
   if (hot.hour !== undefined) game.sky.hour = hot.hour;
   if (hot.pos) game.save.pos = hot.pos;
@@ -127,10 +132,10 @@ async function boot(hot = {}) {
 }
 
 // ------------------------------------------------------------ the way in: the drone's picture, then the flight
-// the painted view of the town covers the screen and drifts slowly closer (a CSS transition: smooth even while the
-// page is busy building the town)
+// the painted view of the town covers the screen and zooms slowly closer, in time with the load (index.html: an
+// animation on the screen's own thread, smooth even while the page is busy building the town)
 function introPicture() {
-  const box = $('intro'), img = $('introImg');
+  const box = $('intro'), img = $('introZoom') || $('introImg');
   if (!box || !img) return null;
   if (!box.hidden) return { box, img }; // (the page's own script has already put it up and set it drifting)
   return null;
@@ -158,37 +163,49 @@ async function beginIntro(pic) {
   // her own figure built, its skin and eyes painted, before the drone comes down to her (the picture drifts on meanwhile)
   for (let t = 0; t < 15000 && !(g.player.char && g.player.char.ready); t += 50) await new Promise((r) => setTimeout(r, 50));
   T.figure = Math.round(performance.now());
+  const zoomTo = (p) => { if (window.guarenaZoom) window.guarenaZoom.to(p); };
+  zoomTo(0.92);
   await Promise.race([mhTexReady(), new Promise((r) => setTimeout(r, 5000))]);
   T.skin = Math.round(performance.now());
+  zoomTo(0.95);
   await buildAround(g, plan.P); // (her street and round it, built through behind the picture: nothing put up on the way down)
   T.street = Math.round(performance.now());
+  zoomTo(0.99);
   // where the game's own camera will be: the end of the flight (its springs settled behind her)
   for (let i = 0; i < 90; i++) g.cam.update(1 / 30, g.input);
   const endPos = cam.position.clone(), endLook = g.cam.target.clone(), endFov = cam.fov;
   // (inside 388 Pueblos: not before the page has faded into the picture)
   if (window.guarenaHold) await Promise.race([window.guarenaHold, new Promise((r) => setTimeout(r, 90000))]);
-  // the live camera exactly as the picture now shows, the picture frozen there: from the drone, its lens drawn in s
-  // times (the picture grows about its middle — a narrower lens from the same place; moving closer would shift the
-  // near roofs against the far ones and the two would not match through the fade)
-  const s = pictureScale(pic.img), near0 = cam.near;
-  pic.img.style.transition = 'none'; pic.img.style.transform = `scale(${s})`;
-  const fv = THREE.MathUtils.degToRad(coverFov(innerWidth / Math.max(1, innerHeight)));
-  cam.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(fv / 2) / s));
-  cam.position.copy(plan.D0); cam.lookAt(plan.T); cam.near = nearAt(plan.D0.y, cam.near); cam.updateProjectionMatrix();
-  // a few frames behind the picture: the town around the drone streamed in, the shaders warm
-  for (let i = 0; i < 4; i++) { g.sky.update(0.016, cam.position, false, cam); g.world._lodT = 0; g.world.update(0.016, g.sky.night, g.introFocus); g.chars.updateLods(cam.position, true); g.render(); await new Promise((r) => setTimeout(r, 0)); }
+  // the live camera as the picture shows: from the drone, its lens drawn in s times (the picture grows about its middle
+  // — a narrower lens from the same place; moving closer would shift the near roofs against the far ones and the two
+  // would not match through the fade)
+  if (window.guarenaZoom) window.guarenaZoom.done(); // (loaded: the zoom remembers how long it took)
+  const near0 = cam.near, fv = THREE.MathUtils.degToRad(coverFov(innerWidth / Math.max(1, innerHeight)));
+  const lens = (s) => { cam.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(fv / 2) / s)); cam.updateProjectionMatrix(); };
+  const scale = () => (window.guarenaZoom ? window.guarenaZoom.now() : pictureScale(pic.img));
+  cam.position.copy(plan.D0); cam.lookAt(plan.T); cam.near = nearAt(plan.D0.y, cam.near);
+  // the sound woken now, behind the picture (building it takes a while: not in the flight's first frames); the first
+  // touch or key wakes it if the browser keeps it asleep until then (inside 388 Pueblos it may wake at once)
+  audio.unlock();
+  const wake = () => { audio.unlock(); removeEventListener('pointerdown', wake); removeEventListener('keydown', wake); };
+  addEventListener('pointerdown', wake); addEventListener('keydown', wake);
+  // a few frames behind the picture, which zooms on meanwhile: the town around the drone streamed in, the shaders warm,
+  // its traffic and its people set going (their first steps are the slow ones: not in the flight's first frames)
+  for (let i = 0; i < 6; i++) { lens(scale()); g.introStep(1 / 60, false); g.sky.update(0.016, cam.position, false, cam); g.world._lodT = 0; g.world.update(0.016, g.sky.night, g.introFocus); g.chars.updateLods(cam.position, true); g.render(); await new Promise((r) => setTimeout(r, 0)); }
+  // the hand-over, without a stop: the picture goes on zooming as it fades, at the speed it had, and the live lens with
+  // it, the very same way (IntroFlight), until the flight has got going
+  let z = { s: scale(), r: 0 };
+  if (window.guarenaZoom) z = window.guarenaZoom.handover();
+  else { pic.img.style.transition = 'none'; pic.img.style.transform = `scale(${z.s})`; }
+  lens(z.s);
   T.flight = Math.round(performance.now());
-  flight = new IntroFlight(plan, cam.position, cam.fov, endPos, endLook, endFov, g.map);
+  flight = new IntroFlight(plan, cam.position, cam.fov, endPos, endLook, endFov, g.map, { ...z, fv });
   flight.near0 = near0; // (the game's own near plane, given back on landing)
   g.cam.cinematic = { flight };
   introBits = { pic, t: 0 };
   pic.box.classList.add('out'); // (the picture fades into the live view)
   tell('live');
   mode = 'play';
-  // the first touch or key wakes the sound (browsers keep it asleep until then; inside 388 Pueblos it may wake at once)
-  audio.unlock();
-  const wake = () => { audio.unlock(); removeEventListener('pointerdown', wake); removeEventListener('keydown', wake); };
-  addEventListener('pointerdown', wake); addEventListener('keydown', wake);
 }
 // (for the test tools, whose hidden page gets no animation frames: step the way in by hand)
 window.guarenaIntro = { step: (dt) => { if (mode === 'play') { game.frame(dt); if (flight) introTick(dt); } }, get flying() { return !!flight; } };

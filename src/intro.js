@@ -1,14 +1,15 @@
 // The way into the game, without menus: while the town is still being built, a drone's view of Guareña painted from
 // exactly this camera (assets/intro.jpg in Plastilina, assets/intro_real.jpg in Realista; tools/intro.js paints them)
-// drifts slowly closer; when the town is ready the live view takes over from the same point and flies on down to Annie,
-// at her door in calle Malfeitos, and ends in the camera behind her: you are playing.
+// zooms slowly closer, in time with the load (index.html: guarenaZoom); when the town is ready the live view takes over
+// from the same point, zooming on, and flies on down to Annie, at her door in calle Malfeitos, and ends in the camera
+// behind her: you are playing.
 // 388 Pueblos (pueblos388.onrender.com) flies its own camera down to this same view first and fades into it: the
 // camera, the field of view and the hour are the ones its page knows (web/js/jugar.js there), so they stay as they are.
 import * as THREE from 'three';
 import { polySample, polyNearest } from './util.js';
 import { PLAYER_PRESETS } from './characters.js';
 
-export const INTRO = { fov: 48, aspect: 16 / 9, zoomMax: 1.34, zoomTime: 26, flight: 9, hour: 10.6 };
+export const INTRO = { fov: 48, aspect: 16 / 9, flight: 9, hour: 10.6 };
 // the drone's camera and where it looks (game metres): the view 388 Pueblos flies its own camera down to (its
 // web/js/jugar.js, DRONE and TARGET) — pinned here, so that nothing changed in the town (the tower's landmark, say)
 // moves the picture away from the page's last frame
@@ -91,6 +92,15 @@ export function coverFov(aspect) {
 }
 
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+// the picture's zoom, carried on by the live lens: at its speed while the picture fades out (ZOOM[0] seconds), then
+// dying away (by ZOOM[1]) as the flight gets going — how far it has gone in t seconds, in seconds at the full speed
+const ZOOM = [1.1, 2.7];
+function zoomed(t) {
+  const [a, b] = ZOOM;
+  if (t <= a) return t;
+  const u = Math.min(t, b) - a;
+  return a + 0.5 * u + ((b - a) / (2 * Math.PI)) * Math.sin((Math.PI * u) / (b - a));
+}
 // (a centripetal Catmull–Rom between p1 and p2: through its points, without loops or overshoots)
 function catmull(p0, p1, p2, p3, u, out) {
   const d = (a, b) => Math.max(1e-3, Math.sqrt(a.distanceTo(b)));
@@ -103,10 +113,13 @@ function catmull(p0, p1, p2, p3, u, out) {
 // the flight: from the drone (where the picture was when the town was ready) down to the game's own camera behind her.
 // It goes through two points over the middle of her street — high above its roofs well behind her, then down between
 // its houses just under the eaves — so that it comes down the street's own canyon and brushes no roof or balcony; its
-// speed eased along the length of the way (slow off, slow in)
+// speed eased along the length of the way (slow off, slow in). It sets off from rest, but the view never stands still:
+// the lens goes on with the picture's zoom (zoom: {s, r, fv} — its scale, its speed per second (logarithmic: the
+// picture grows e^r times a second), the picture's field of view in radians), the two the same image while the picture
+// fades out, the zoom dying away as the flight picks up
 export class IntroFlight {
-  constructor(plan, from, fromFov, to, toLook, toFov, map = null) {
-    this.plan = plan; this.t = 0;
+  constructor(plan, from, fromFov, to, toLook, toFov, map = null, zoom = null) {
+    this.plan = plan; this.t = 0; this.zoom = zoom && zoom.r > 0 && zoom.fv > 0 ? zoom : null;
     const tmp = {};
     const centre = (back, h) => {
       const b = to.clone().addScaledVector(plan.dir, -back);
@@ -149,7 +162,13 @@ export class IntroFlight {
     const l = this._l.copy(this.l0).lerp(this.l1, lk);
     cam.position.copy(p);
     cam.lookAt(l);
-    cam.fov = this.f0 + (this.f1 - this.f0) * k;
+    // (it sets off with the zoom's narrow lens and opens it late, as the camera comes down: the view keeps closing in)
+    let f0 = this.f0;
+    if (this.zoom) {
+      const z = this.zoom, s = z.s * Math.exp(z.r * zoomed(this.t * INTRO.flight));
+      f0 = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(z.fv / 2) / s));
+    }
+    cam.fov = f0 + (this.f1 - f0) * k * k;
     cam.updateProjectionMatrix();
   }
 }

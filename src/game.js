@@ -262,12 +262,15 @@ export class Game {
     this.resize();
     // warm up shaders
     progress('Encendiendo el motor…', 0.97);
+    await tick();
     this.camera.position.set(-60, 30, 140); this.camera.lookAt(-60, 0, 0);
     this.sky.update(0, new THREE.Vector3(-60, 0, 60), true);
-    try { r.compile(this.scene, this.camera); } catch (e) { /* ignore */ }
+    // (the shaders compiled in parallel where the browser can: the page is not held up the second and a half it took)
+    try { if (r.compileAsync) await r.compileAsync(this.scene, this.camera); else r.compile(this.scene, this.camera); } catch (e) { /* ignore */ }
     this.render();
     this.hourPrev = Math.floor(this.sky.hour * 4);
     progress('Vistiendo a los vecinos…', 0.99);
+    await tick();
     // (the player's own character, whichever it is: it used to wait — up to 7 s on a first visit — for the sculpted body
     // of the hero's preset, which the hero does not wear, queued behind the neighbours')
     const pc = this.player.char;
@@ -714,7 +717,7 @@ export class Game {
   // the way in (src/intro.js, main.js): the camera flies down from the drone's view to the protagonist at her door while
   // the town goes on living — its traffic, its neighbours, the wind, pose by pose in claymation; nothing answers the keys
   // until it has landed (the camera's cinematic carries the flight)
-  introStep(dt) {
+  introStep(dt, withCam = true) {
     this.shaderT = (this.shaderT || 0) + dt;
     shared.uTime.value = STYLE.plastilina ? SM.time(this.shaderT) : this.shaderT;
     const p = this.player;
@@ -726,7 +729,7 @@ export class Game {
     if (p.char) { p.syncChar(); p.char.update(dt, 0, {}); } // (standing at her door, where the flight will find her)
     if (STYLE.plastilina) { this.fxAcc = (this.fxAcc || 0) + dt; if (SM.tick) { this.effects.update(this.fxAcc); this.fxAcc = 0; } }
     else this.effects.update(dt);
-    this.cam.update(dt, this.input);
+    if (withCam) this.cam.update(dt, this.input);
   }
 
   // dynamic resolution, gently: only a sustained slowdown (not a hiccup while the town streams in) lowers the internal
@@ -910,4 +913,6 @@ export class Game {
   }
 }
 
-const tick = () => new Promise((r) => setTimeout(r, 0));
+// a pause in the loading long enough for the page to draw a frame: what was just changed on it (the zoom of the way
+// in, a bar) is committed before the next heavy step takes the thread (a bare setTimeout often ran before any frame)
+const tick = () => new Promise((r) => { let done = false; const go = () => { if (!done) { done = true; r(); } }; requestAnimationFrame(() => setTimeout(go, 0)); setTimeout(go, 80); });

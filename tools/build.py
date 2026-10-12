@@ -153,7 +153,7 @@ def main():
     # page — it would weigh tens of MB more —, always beside it, in dist/assets (the published copy carries it there; a
     # page that cannot fetch it keeps the old church). The drone's pictures of the way in too (src/intro.js): the page
     # asks for them by name in its first lines, so that one shows at once, long before the page itself has arrived
-    LAZY = ('hq/interior/', 'intro.jpg', 'intro_real.jpg')
+    LAZY = ('hq/interior/', 'intro.jpg', 'intro_real.jpg', 'intro_cerca.jpg', 'intro_real_cerca.jpg')
     lazy = [rel for rel in asset_files if rel.startswith(LAZY)]
     asset_files = [rel for rel in asset_files if not rel.startswith(LAZY)]
     for sub in ('data', 'assets'):
