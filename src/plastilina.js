@@ -1,32 +1,24 @@
-// «Plastilina» — Guareña as a claymation film (Ajustes › Estética › Plastilina, the default look; the plan and its
+// «Plastilina» — Guareña as a claymation set (Ajustes › Estética › Plastilina, the default look; the plan and its
 // passes in docs/plastilina.md). A studio set — the façades' warm palette (textures.js applyClayPalette), a painted sky
 // with cotton clouds and studio lamps (sky.js), contact shadows (STUDIO_AO) and the film's grade (ClayGrade) — where
-// every lit thing is modelling clay and the people, cars and animals are puppets animated pose by pose:
+// every lit thing is modelling clay, the people, cars and animals puppets of it:
 //  - the clay (installClayChunks): through three.js's own shader chunks, so every standard material takes it — lumps
 //    from the hands that shaped it, thumbprints with their ridges, spatula cuts, a speck of lint here and there, the
-//    colour never quite even, a soft waxy sheen, light that wraps a little into the shadow (warm, as clay is); the sets
-//    keep their marks, the puppets are retouched at every pose (the «boil»)
-//  - stop motion (StopMotion), always on: 12 poses a second for the puppets — the protagonist too, their bones and
-//    their place — while the camera and the game itself run on as always (as in Kirby and the Rainbow Curse or
-//    Spider-Verse: the figures «on twos», the camera «on ones»), and no motion blur
+//    colour never quite even, a soft waxy sheen, light that wraps a little into the shadow (warm, as clay is)
+//  - everything moves as fluidly as in the Realista. (It had stop motion — 12 poses a second, the surface «boiling»
+//    at each, the animator's hand, the lamps flickering — until 2026-10-12: «no me gusta cómo se mueve el personaje,
+//    da demasiados saltos… necesito que sea más fluido el movimiento del personaje y del entorno»)
 // What every film and game studied taught (Aardman, The LEGO Movie, Kirby, The Neverhood…) is in the plan.
 import * as THREE from 'three';
 
 export const PLASTILINA = {
-  fps: 12, // poses per second (animation «on twos»)
   // the last grade: clay colours are pure, the studio fills the shadows a little, the lens darkens its corners a touch
   grade: { sat: 1.1, warm: 0.045, contrast: 1.1, lift: 0.025, vignette: 0.16, tint: [1.0, 0.955, 0.95] }, // (richer and rosier, as the user's pictures)
-  flicker: 0.014, // the studio lamps' little flicker from one pose to the next (the frames of a stop-motion film never match)
   // the lens: how soft the far background goes at most (a fraction of the picture's height), from how far behind the
   // subject it starts and is at its softest (× the subject's distance), and how soft what is right under the lens goes
   // (a share of the most). Only a little: the user asked twice for less (2026-10-05, and 2026-10-12: «el fondo no lo
   // desenfoques tanto»: was 0.0034, from 2.2, to 10, near 0.55)
   lens: { blur: 0.002, from: 2.8, to: 14, near: 0.3 },
-  boilMM: 0.002, // how far a puppet's surface boils from one pose to the next (metres)
-  // the animator's hand: a puppet put back each pose is never exactly where it was (metres, radians)
-  jitter: { pos: 0.003, yaw: 0.006 },
-  // the clay of the sets (metres): lumps, prints, cuts, lint; the puppets take theirs at their own scale (CLAY_SCALE)
-  boil: null, // the shared uniform (installClayChunks): moved at every pose, for the puppets only
 };
 
 // contact shadows: ambient occlusion where things meet — the foot of a wall, under eaves and balconies, round pots and
@@ -199,39 +191,19 @@ function makeClayDetail(S = 1024) {
 // into view —, stalling the frame for half a second to two seconds. Its clones are itself: one texture, one upload.
 export function installClayChunks() {
   const C = THREE.ShaderChunk;
-  const boil = { value: { x: 0, y: 0 } };
   const detail = makeClayDetail(1024);
   detail.clone = () => detail;
   PLASTILINA.detail = detail;
-  for (const lib of ['standard', 'physical']) { THREE.ShaderLib[lib].uniforms.uClayBoil = boil; THREE.ShaderLib[lib].uniforms.uClayTex = { value: detail }; }
-  PLASTILINA.boil = boil.value;
+  for (const lib of ['standard', 'physical']) THREE.ShaderLib[lib].uniforms.uClayTex = { value: detail };
   C.common += `
 #ifdef STANDARD
 varying vec3 vClayP; varying vec3 vClayN;
 #endif
 `;
   // (the pattern sits on each thing's own shape — its vertices before skinning — so it travels with the cars and people)
-  // A puppet's surface also «boils»: between two frames the animator's fingers have been on it, so its skin never sits
-  // quite where it sat — every pose its outline shifts by a millimetre or two, a few centimetres at a time
   C.begin_vertex += `
 #ifdef STANDARD
 vClayP = position; vClayN = objectNormal;
-#if defined(CLAY_PUPPET) && !defined(CLAY_NO_BOIL)
-{
-  vec3 bq = position * 26.0 + vec3(uClayBoil.x, uClayBoil.y, uClayBoil.x - uClayBoil.y) * 5.3, bi = floor(bq), bf = fract(bq);
-  bf = bf * bf * (3.0 - 2.0 * bf);
-  #define CLAY_VH(o) fract(sin(dot(bi + o, vec3(127.1, 311.7, 74.7))) * 43758.5453)
-  float bn = mix(mix(mix(CLAY_VH(vec3(0, 0, 0)), CLAY_VH(vec3(1, 0, 0)), bf.x), mix(CLAY_VH(vec3(0, 1, 0)), CLAY_VH(vec3(1, 1, 0)), bf.x), bf.y),
-                 mix(mix(CLAY_VH(vec3(0, 0, 1)), CLAY_VH(vec3(1, 0, 1)), bf.x), mix(CLAY_VH(vec3(0, 1, 1)), CLAY_VH(vec3(1, 1, 1)), bf.x), bf.y), bf.z);
-  #undef CLAY_VH
-  transformed += objectNormal * (bn - 0.5) * ${PLASTILINA.boilMM.toFixed(4)};
-}
-#endif
-#endif
-`;
-  C.common += `
-#if defined(STANDARD) && defined(CLAY_PUPPET)
-uniform vec2 uClayBoil;
 #endif
 `;
   C.bumpmap_pars_fragment += `
@@ -244,9 +216,6 @@ uniform vec2 uClayBoil;
 #endif
 #ifndef CLAY_TONE
 #define CLAY_TONE 1.0
-#endif
-#ifndef CLAY_PUPPET
-uniform vec2 uClayBoil;
 #endif
 // the modelled surface (clayDetailData): which kind (CLAY_SET: 0 a wall, 1 a road, 2 smoothed, 3 pores), the tile's size in
 // metres, how deep its relief goes (metres) and how dark its hollows
@@ -353,9 +322,6 @@ vec3 clayPerturb(vec3 surf_pos, vec3 surf_norm, vec2 dHdxy, float faceDirection)
 #ifdef STANDARD
 {
   vec3 cp = vClayP * CLAY_SCALE;
-#ifdef CLAY_PUPPET
-  cp += vec3(uClayBoil.x, uClayBoil.y, uClayBoil.x * 0.7) * 0.012; // (a puppet: retouched at every pose — the boil)
-#endif
   vec2 dl = vec2(length(dFdx(vClayP)), length(dFdy(vClayP))) * CLAY_SCALE;
   vec3 cl = clayAt(cp, max(dl.x, dl.y));
   // the modelled surface: its relief in metres (the kind's own, and the pores), in light and in its hollows
@@ -460,127 +426,3 @@ export const ClayLens = {
       gl_FragColor = acc / ws;
     }`,
 };
-
-// ---------------------------------------------------------------- stop motion
-// (one for the whole game: the characters, the dogs and the cars register with it as they are made)
-// The puppets keep each pose for 1/12 s: every frame the game moves them as always (so nothing it computes changes);
-// before the picture is drawn, those that are not due a new pose are put back as they were at the last one, and
-// after it they get their live state again. A puppet is a node tree (a character's group with its bones, a dog…).
-// The protagonist is one too (since 2026-10-12: «debe notarse la sensación de stop motion»; before, only the others
-// were, and the figure you watch all the time moved as smoothly as the camera): the camera follows where they really
-// are, so it — and the game's feel in your hands — stays fluid, and the puppet steps along in front of it.
-export class StopMotion {
-  constructor(fps = PLASTILINA.fps) {
-    this.dt = 1 / fps;
-    this.acc = 0;
-    this.tick = true;
-    this.items = new Map(); // root -> { nodes, held, live, jit, n, char, heldN, fluid }
-    this.ticks = 0;
-  }
-  // (char: a person — characters.js —, whose poseN counts the times its bones were posed; opts.fluid: while it says so,
-  // the puppet is drawn as it is and posed every frame — the protagonist in a car, swimming, seen through their own eyes)
-  add(root, char = null, opts = null) { this.items.set(root, { nodes: null, held: null, live: null, jit: null, n: -1, char, heldN: -1, fluid: (opts && opts.fluid) || null }); }
-  remove(root) { this.items.delete(root); }
-  // is this puppet held between poses (and so only posed at them)?
-  held(root) { const it = this.items.get(root); return !!it && !(it.fluid && it.fluid()); }
-  // once a frame, with the frame's real time: is this frame a new pose?
-  advance(dt) {
-    this.acc += dt;
-    this.tick = this.acc >= this.dt;
-    if (this.tick) {
-      this.acc = Math.min(this.acc - this.dt, this.dt);
-      this.ticks++;
-      if (PLASTILINA.boil) { PLASTILINA.boil.x = Math.random() * 2 - 1; PLASTILINA.boil.y = Math.random() * 2 - 1; }
-    }
-    return this.tick;
-  }
-  // the time the shaders see (trees in the wind, water, clouds): it too moves pose by pose
-  time(t) { return Math.floor(t / this.dt) * this.dt; }
-  nodesOf(root, skels) {
-    const list = [];
-    root.traverse((o) => { if (o.matrixAutoUpdate !== false) list.push(o); if (o.isSkinnedMesh && o.skeleton && !skels.includes(o.skeleton)) skels.push(o.skeleton); });
-    return list;
-  }
-  static capture(nodes, arr, n = nodes.length) {
-    const a = arr && arr.length === n * 10 ? arr : new Float32Array(n * 10);
-    for (let i = 0; i < n; i++) {
-      const o = nodes[i], k = i * 10;
-      a[k] = o.position.x; a[k + 1] = o.position.y; a[k + 2] = o.position.z;
-      a[k + 3] = o.quaternion.x; a[k + 4] = o.quaternion.y; a[k + 5] = o.quaternion.z; a[k + 6] = o.quaternion.w;
-      a[k + 7] = o.scale.x; a[k + 8] = o.scale.y; a[k + 9] = o.scale.z;
-    }
-    return a;
-  }
-  // (the quaternions written straight into their fields: through set() each one would also work its Euler angles out
-  // again — two matrices per bone, twice a frame, for every puppet in town. Nothing reads the angles while the picture
-  // is drawn, and release() puts the live quaternions back exactly as they were, so the angles still match them)
-  static apply(nodes, a, n = nodes.length) {
-    for (let i = 0; i < n; i++) {
-      const o = nodes[i], k = i * 10, q = o.quaternion;
-      o.position.set(a[k], a[k + 1], a[k + 2]);
-      q._x = a[k + 3]; q._y = a[k + 4]; q._z = a[k + 5]; q._w = a[k + 6];
-      o.scale.set(a[k + 7], a[k + 8], a[k + 9]);
-    }
-  }
-  // before drawing: the puppets not due a new pose go back to their last one — and every puppet sits where the
-  // animator's hand put it this pose: a few millimetres and a fraction of a degree off (PLASTILINA.jitter).
-  // A puppet held on its last pose has the same bones as when that pose was drawn: its skeleton is not worked out and
-  // sent to the GPU again (Skeleton.update below), only at its new poses — 12 times a second, not 60
-  // A person is only posed at the poses (Character.update): between two of them their bones are those of the pose
-  // held, and only their place differs — the game moves them on every frame. Then only the root is swapped, not the
-  // thirty bones (rootOnly); everything else (a ragdoll, a dog, a person posed in between) is swapped whole.
-  hold() {
-    this.swapped = false;
-    const J = PLASTILINA.jitter;
-    for (const [root, it] of this.items) {
-      if (!root.parent || !root.visible || (it.fluid && it.fluid())) { it.held = null; continue; }
-      // (the node list is gathered again when the tree changes: a hat put on, a level of detail swapped)
-      let count = 0; root.traverse(() => count++);
-      if (!it.nodes || count !== it.n) { it.skels = []; it.nodes = this.nodesOf(root, it.skels); it.n = count; it.held = null; }
-      const ch = it.char;
-      let newPose = this.tick || !it.held;
-      // (put somewhere else since its pose — through a door, back home —: a cut, a new pose at once, not a frame or two
-      // left behind where it was)
-      if (!newPose && it.nodes[0] === root) { const a = it.held, P = root.position; if (Math.abs(P.x - a[0]) + Math.abs(P.y - a[1]) + Math.abs(P.z - a[2]) > 1.5) newPose = true; }
-      if (newPose) {
-        it.held = StopMotion.capture(it.nodes, it.held);
-        it.heldN = ch ? ch.poseN : -1;
-        it.jit = [(Math.random() - 0.5) * 2 * J.pos, (Math.random() - 0.5) * 2 * J.pos, (Math.random() - 0.5) * 2 * J.yaw];
-        it.pose = (it.pose || 0) + 1;
-      }
-      it.rootOnly = it.nodes[0] === root && (newPose || (ch && !ch.rag && ch.poseN === it.heldN));
-      if (it.rootOnly) {
-        it.liveRoot = StopMotion.capture(it.nodes, it.liveRoot, 1);
-        if (!newPose) StopMotion.apply(it.nodes, it.held, 1);
-      } else {
-        it.live = StopMotion.capture(it.nodes, it.live);
-        if (!newPose) StopMotion.apply(it.nodes, it.held);
-      }
-      for (const s of it.skels) { s._smPose = it.pose; s._smHeld = true; }
-      if (it.jit && it.nodes[0] === root) { root.position.x += it.jit[0]; root.position.z += it.jit[1]; root.rotateY(it.jit[2]); } // (put back after the picture: release)
-      it.swapped = true; this.swapped = true;
-    }
-  }
-  // after drawing: the live state again, for the game to carry on from (the root's angles too: the jitter turned it)
-  release() {
-    if (!this.swapped) return;
-    for (const [root, it] of this.items) if (it.swapped) {
-      if (it.rootOnly) StopMotion.apply(it.nodes, it.liveRoot, 1); else StopMotion.apply(it.nodes, it.live);
-      if (it.nodes[0] === root) root.rotation.setFromQuaternion(root.quaternion, undefined, false);
-      for (const s of it.skels) s._smHeld = false;
-      it.swapped = false;
-    }
-    this.swapped = false;
-  }
-}
-
-export const SM = new StopMotion();
-// (a held puppet's skeleton: its bones as they were when this pose was last worked out — the bone texture keeps them)
-{
-  const update = THREE.Skeleton.prototype.update;
-  THREE.Skeleton.prototype.update = function () {
-    if (this._smHeld && this._smDone === this._smPose) return;
-    update.call(this);
-    if (this._smHeld) this._smDone = this._smPose;
-  };
-}

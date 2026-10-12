@@ -4,8 +4,6 @@ import { Vehicle, VehicleRenderer, MODELS, PARKED_MIX, makeTmp, obbContact, reso
 import { polySample, hash1, clamp, mulberry32 } from './util.js';
 import { parkingBays } from './ground.js';
 import { PERK } from './perks.js';
-import { STYLE } from './style.js';
-import { SM } from './plastilina.js';
 
 export class Fleet {
   constructor(game) {
@@ -245,11 +243,7 @@ export class Fleet {
       const key = front * 100 + rear * 10 + extra;
       if (key !== v._lightKey || v.siren) { rend.setLights(v, front, rear, extra); v._lightKey = key; }
     }
-    // (claymation: the cars go pose by pose — only the one you drive keeps up with the camera between poses. A frame
-    // that gave out or took back slots sends them all: a car just come, or moved into a freed slot, would otherwise show
-    // what was last sent for its slot until the next pose — wheels without their body, a body somewhere else)
-    if (STYLE.plastilina && !SM.tick && !rend.changed) rend.flushOnly(this.game.player && this.game.player.vehicle);
-    else rend.flush();
+    rend.flush();
   }
 
   onImpact(v, imp, px, pz, other) {

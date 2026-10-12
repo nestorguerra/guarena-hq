@@ -6,7 +6,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
-import { PLASTILINA, SM, ClayLens, ClayGrade, STUDIO_AO } from './plastilina.js';
+import { PLASTILINA, ClayLens, ClayGrade, STUDIO_AO } from './plastilina.js';
 import { STYLE } from './style.js';
 import { Chant } from './chant.js';
 import { MapData } from './mapdata.js';
@@ -569,7 +569,6 @@ export class Game {
   frame(dtReal) {
     const tWork = performance.now(); // (how long this frame's own work takes: see adaptResolution)
     const input = this.input;
-    if (STYLE.plastilina) SM.advance(dtReal); // (stop motion: is this frame a new pose?)
     input.poll();
     const dt = Math.min(0.05, dtReal) * this.timeScale;
     this.time = (this.time || 0) + dt;
@@ -633,7 +632,7 @@ export class Game {
         else if (qh % 4 === 2 && !inChurch) this.audio.bells(0);
       }
       this.shaderT = (this.shaderT || 0) + dt;
-      shared.uTime.value = STYLE.plastilina ? SM.time(this.shaderT) : this.shaderT; // (claymation: the wind and the water pose by pose too)
+      shared.uTime.value = this.shaderT;
       const p = this.player;
       // inside Santa María, Gregorian chant far off in the stone (softer while mass is said)
       if (!this.chant) this.chant = new Chant(this.audio);
@@ -680,8 +679,7 @@ export class Game {
       if (this.fm) this.fm.update(dt);
       if (this.mode === 'normal' && !this.interior) { this.merendero.update(dt); this.mercadillo.update(dt); }
       if (this.zombieSys.active) this.zombieSys.update(dt);
-      if (STYLE.plastilina) { this.fxAcc = (this.fxAcc || 0) + dt; if (SM.tick) { this.effects.update(this.fxAcc); this.fxAcc = 0; } } // (smoke and sparks pose by pose)
-      else this.effects.update(dt);
+      this.effects.update(dt);
       this.weapons.tracers.update(dt);
       this.cam.update(dt, input);
       this.viewModel.update(dt);
@@ -719,7 +717,7 @@ export class Game {
   // until it has landed (the camera's cinematic carries the flight)
   introStep(dt, withCam = true) {
     this.shaderT = (this.shaderT || 0) + dt;
-    shared.uTime.value = STYLE.plastilina ? SM.time(this.shaderT) : this.shaderT;
+    shared.uTime.value = this.shaderT;
     const p = this.player;
     this.fleet.streamParked(p.pos.x, p.pos.z);
     this.traffic.update(dt);
@@ -727,8 +725,7 @@ export class Game {
     this.traffic.afterPhysics(dt);
     this.peds.update(dt);
     if (p.char) { p.syncChar(); p.char.update(dt, 0, {}); } // (standing at her door, where the flight will find her)
-    if (STYLE.plastilina) { this.fxAcc = (this.fxAcc || 0) + dt; if (SM.tick) { this.effects.update(this.fxAcc); this.fxAcc = 0; } }
-    else this.effects.update(dt);
+    this.effects.update(dt);
     if (withCam) this.cam.update(dt, this.input);
   }
 
@@ -838,17 +835,10 @@ export class Game {
   }
   render() {
     this.updateBloom();
-    // claymation: the puppets not due a new pose are drawn as they were at the last one; at each pose the lamps flicker
-    // a hair
-    if (STYLE.plastilina) {
-      if (this.grade && SM.tick) this.grade.uniforms.uGain.value = 1 + (Math.random() - 0.5) * PLASTILINA.flicker;
-      if (this.grade && this.gtao) this.grade.uniforms.uAO.value = this.gtao.enabled ? STUDIO_AO.blend : 0; // (the contact shadows, laid on by the grade)
-      SM.hold();
-    }
+    if (STYLE.plastilina && this.grade && this.gtao) this.grade.uniforms.uAO.value = this.gtao.enabled ? STUDIO_AO.blend : 0; // (the contact shadows, laid on by the grade)
     const wv = this.interior && this.windowView && this.windowView.render(); // the street, drawn for the windows
     this.renderView(this.camera);
     if (wv) this.windowView.after();
-    if (STYLE.plastilina) SM.release();
     // first-person gun on top
     if (this.viewModel && this.state === 'play') this.viewModel.render(this.renderer);
   }

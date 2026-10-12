@@ -327,8 +327,8 @@ export class Zombies {
       if (cd < (z.giant ? 150 : 50) || z.animAcc > 0.1) {
         // (a giant's legs are three times as long: its stride is a person's at a third of its speed)
         const walkSp = z.state === 'walk' || z.state === 'lunge' || z.state === 'charge' ? z.speed * (z.runner ? 1 : 1.4) / z.S : 0;
-        const posed = z.char.update(z.animAcc, walkSp, {});
-        if (posed !== false && !z.char.rag) { if (z.giant && z.alive) this.poseGiant(z); else this.pose(z, z.animAcc, d); }
+        z.char.update(z.animAcc, walkSp, {});
+        if (!z.char.rag) { if (z.giant && z.alive) this.poseGiant(z); else this.pose(z, z.animAcc, d); }
         z.animAcc = 0;
       }
       if (z.state === 'walk' || z.state === 'lunge' || z.state === 'rise' || (z.giant && z.alive)) { o.position.set(z.x, z.y || 0, z.z); o.rotation.set(z.rootPitch || 0, z.heading, z.rootRoll || 0); }

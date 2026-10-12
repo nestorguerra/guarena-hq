@@ -833,14 +833,6 @@ export class VehicleRenderer {
     for (const st in this.wheelSets) for (const w of [this.wheelSets[st].tyre, this.wheelSets[st].rim]) { w.instanceMatrix.clearUpdateRanges(); w.instanceMatrix.needsUpdate = true; }
     this.changed = false;
   }
-  // only one car's matrices to the GPU (the others keep their last pose: claymation)
-  flushOnly(v) {
-    if (!v || v.slot < 0) return;
-    const m = this.models[v.model];
-    for (const p in m.meshes) { const a = m.meshes[p].instanceMatrix; a.clearUpdateRanges(); a.addUpdateRange(v.slot * 16, 16); a.needsUpdate = true; }
-    const ws = this.wheelSets[m.wheel];
-    if (ws && v.wheelSlot >= 0) for (const w of [ws.tyre, ws.rim]) { const a = w.instanceMatrix; a.clearUpdateRanges(); a.addUpdateRange(v.wheelSlot * 64, 64); a.needsUpdate = true; }
-  }
   info(model) { return this.models[model].geo; }
 }
 

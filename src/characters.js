@@ -9,7 +9,6 @@ import { loadAssetBytes, loadAssetImage } from './assets.js';
 import { clamp, lerp, smoothstep, TAU } from './util.js';
 import { GAIT, samp, gaitBody, FACES, FACE_KEYS, GETUP_BACK, GETUP_FRONT } from './motion.js';
 import { Ragdoll } from './ragdoll.js';
-import { SM } from './plastilina.js';
 
 import { SKIN as SKIN0, HAIR as HAIR0, CLOTH as CLOTH0, randomShape, colorize, normalize } from './looks.js';
 export const SKIN = SKIN0;
@@ -769,7 +768,7 @@ function makeCharMaterial(uniforms) {
   m.userData.u = uniforms;
   m.onBeforeCompile = (sh) => {
     for (const k in uniforms) sh.uniforms[k] = uniforms[k];
-    sh.vertexShader = (STYLE.plastilina ? '#define CLAY_PUPPET\n' : '') + sh.vertexShader // (claymation: its surface boils, plastilina.js)
+    sh.vertexShader = sh.vertexShader
       .replace('#include <common>', '#include <common>' + CHAR_VS_HEAD)
       .replace('#include <color_vertex>', `#include <color_vertex>
   vColor.rgb = pow(vColor.rgb, vec3(2.2));
@@ -1644,7 +1643,6 @@ export class Character {
     this.spec = this.makeSpec ? this.makeSpec(desc, factory) : factory.spec(desc); // (a subclass may build its own: the hero)
     this.key = this.spec.key;
     this.object = new THREE.Group();
-    if (STYLE.plastilina && !statue) SM.add(this.object, this); // (claymation: a puppet, posed 12 times a second)
     const byName = {}, list = [];
     for (const b of this.rigBones ? this.rigBones() : factory.B.rig(this.spec)) {
       const o = new THREE.Bone();
@@ -1655,7 +1653,6 @@ export class Character {
       list.push(o);
     }
     hideBones(this.object);
-    this.poseN = 0; // (counts the times the bones are posed: the stop motion knows a puppet whose bones have not moved)
     this.bones = byName;
     this.boneList = list;
     this.rest = Object.fromEntries(list.map((b) => [b.name, b.position.clone()]));
@@ -1693,7 +1690,6 @@ export class Character {
   attach(shape) {
     if (this.disposed) return;
     this.shape = shape;
-    this.poseN++;
     // the bones' rest offsets as the shape was built (a MakeHuman head puts the eyes, lids and brows over its own eyeballs)
     for (const b of shape.bones) { const o = this.bones[b.name]; if (o) { o.position.fromArray(b.off); if (this.rest[b.name]) this.rest[b.name].copy(o.position); } }
     this.skeleton = new THREE.Skeleton(this.boneList, shape.inverses);
@@ -1734,7 +1730,6 @@ export class Character {
     if (this.disposed) return;
     this.disposed = true;
     this.factory.live.delete(this);
-    SM.remove(this.object);
     if (this.meshes) {
       for (const m of this.meshes) this.object.remove(m);
       this.factory.releaseGeometry(this.key, this.geos);
@@ -1792,7 +1787,7 @@ export class Character {
     from.get('hips').premultiply(turn);
     const c = Math.cos(-heading), sn = Math.sin(-heading), ox = pel.x - x, oz = pel.z - z;
     const fromP = new THREE.Vector3(ox * c + oz * sn, pel.y - fy, -ox * sn + oz * c);
-    this.rag = null; this.poseN++;
+    this.rag = null;
     this.gu = { t: 0, K, from, fromP, up };
     this.object.position.set(x, fy, z); this.object.rotation.set(0, heading, 0);
     return { x, z, heading };
@@ -1836,7 +1831,7 @@ export class Character {
       put('thigh' + sd, qt); put('shin' + sd, qs); put('foot' + sd, qf);
     }
   }
-  endRagdoll() { this.rag = null; this.poseN++; for (const b of this.boneList) b.quaternion.identity(); for (const n in this.rest) this.bones[n].position.copy(this.rest[n]); }
+  endRagdoll() { this.rag = null; for (const b of this.boneList) b.quaternion.identity(); for (const n in this.rest) this.bones[n].position.copy(this.rest[n]); }
   // the rest of the body while the ragdoll has it: eyes shut (or half shut, dazed), the mouth fallen open, hands loose
   ragPose() {
     const B = this.bones, rag = this.rag;
@@ -1865,13 +1860,6 @@ export class Character {
   // opts: grounded, vy (vertical speed), turn (turn rate), crouch, fidget (idle fidgets allowed), lookYaw, talking,
   // moveDir (direction of travel relative to facing: 0 ahead, ±π/2 sideways, π backwards), forceFidget
   update(dt, speed, opts = {}) {
-    // claymation: a puppet is only seen at the stop motion's poses (12 a second, SM): between two of them its time is
-    // kept and the pose worked out once, at the next — the same pose, a fifth of the work. (Not its first one, nor a
-    // ragdoll, whose fall is worked out step by step.) Returns false then: whoever touches up the bones after the update
-    // (a zombie's lurch, a remote player's aim) must not, or the touches would pile up pose after pose
-    if (STYLE.plastilina && !SM.tick && this._posed && !this.rag && SM.held(this.object)) { this._smDt = (this._smDt || 0) + dt; return false; }
-    if (this._smDt) { dt += this._smDt; this._smDt = 0; }
-    this._posed = true; this.poseN++;
     this.t += dt;
     const B = this.bones;
     if (this.rag) { this.rag.step(dt); this.ragPose(); return; }

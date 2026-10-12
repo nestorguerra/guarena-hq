@@ -72,7 +72,6 @@ export function square() {
 
 export async function run(tag = 'a', { script = 'zigzag', seconds = 6, fps = 60, W = 960, H = 540, hour = 11, record = true, stills = 8, where = null, stillAt = null } = {}) {
   const g = G(), p = g.player, inp = g.input, S = typeof script === 'function' ? script : SCRIPTS[script];
-  const P = await import('/src/plastilina.js');
   for (const id of ['pause', 'menu']) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
   const S0 = S(0);
   const sp = where || (S0.open ? square() : spot());
@@ -115,7 +114,7 @@ export async function run(tag = 'a', { script = 'zigzag', seconds = 6, fps = 60,
       log.push({
         t, cam: c.position.toArray(), camQ: c.quaternion.toArray(), camD: c.position.distanceTo(g.cam.target), shake: g.cam.shakeAmt, yaw: g.cam.yaw, pos: p.pos.toArray(), sp: Math.hypot(p.vel.x, p.vel.z),
         toeL: shown.toeL.toArray(), toeR: shown.toeR.toArray(), cL: mp ? mp.contactL : false, cR: mp ? mp.contactR : false,
-        sx: (v.x * 0.5 + 0.5) * W, sy: (0.5 - v.y * 0.5) * H, pose: shown.pose, tick: P.SM.tick, lp: p.lean ? p.lean.p.x : 0, lr: p.lean ? p.lean.r.x : 0,
+        sx: (v.x * 0.5 + 0.5) * W, sy: (0.5 - v.y * 0.5) * H, pose: shown.pose, lp: p.lean ? p.lean.p.x : 0, lr: p.lean ? p.lean.r.x : 0,
       });
       const wantStill = stills && i >= (stillAt ?? n / 2) && i < (stillAt ?? n / 2) + stills;
       if (record || wantStill) ctx.drawImage(r.domElement, 0, 0, r.domElement.width, r.domElement.height, 0, 0, W, H);

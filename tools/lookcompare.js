@@ -234,7 +234,6 @@ export async function closeups(tag = 'a', { W = 640, H = 400, hour = 14 } = {}) 
 const sleepExact = (ms) => new Promise((r) => { const t0 = performance.now(); const ch = new MessageChannel(); ch.port1.onmessage = () => (performance.now() - t0 >= ms ? r() : ch.port2.postMessage(0)); ch.port2.postMessage(0); });
 export async function walkVideo(tag = 'a', { W = 960, H = 600, fps = 12, seconds = 3.96, hour = 14, view = 1, origStep = 0.55, origDt = 0.11, record = true, spot = null } = {}) {
   const g = G(), p = g.player, map = g.map, list = await views(), v = spot ? { x: spot[0], z: spot[1], h: spot[2] } : list[view], tmp = {};
-  const P = await import('/src/plastilina.js');
   for (const id of ['pause', 'menu']) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
   const e = v.street ? map.edges.find((q) => q.name === v.street) : null;
   const s0 = e ? Math.min(18, e.len * 0.2) : 0, n = Math.round(seconds * fps), speed = origStep / origDt;
@@ -252,11 +251,7 @@ export async function walkVideo(tag = 'a', { W = 960, H = 600, fps = 12, seconds
     g.cam.yaw = h + Math.PI + Math.sin(phase) * 0.25; g.cam.pitch = -0.08;
     g.sky.hour = hour;
     for (let k = 0; k < 2; k++) { if (g.state !== 'play') g.state = 'play'; g.frame(1 / (2 * fps)); }
-    // (each video frame is a pose: hold nothing back — but each puppet where the animator's hand put it)
-    P.SM.tick = true;
-    P.SM.hold();
     renderInto(ctx, 0, 0, g.camera.position.toArray(), g.cam.target.toArray(), g.camera.fov, W, H);
-    P.SM.release();
     frames.push(await createImageBitmap(cv));
     await fetch('/__snap?name=vid_' + tag + '_' + String(i).padStart(2, '0'), { method: 'POST', body: cv.toDataURL('image/jpeg', 0.88) });
   }
@@ -280,7 +275,7 @@ export async function walkVideo(tag = 'a', { W = 960, H = 600, fps = 12, seconds
 // a close look at a puppet for a few seconds, standing (its boil, the hand's jitter, its blinks), at 12 poses a second →
 // .snaps/vid_<tag>.jpg (an MP4) like walkVideo
 export async function faceVideo(tag = 'cara', { W = 720, H = 720, fps = 12, seconds = 4, hour = 11, dist = 0.55, side = 0.22 } = {}) {
-  const g = G(), p = g.player, P = await import('/src/plastilina.js');
+  const g = G(), p = g.player;
   for (const id of ['pause', 'menu']) { const el = document.getElementById(id); if (el) el.style.display = 'none'; }
   const SPOT = { x: -346.5, z: 49.4 };
   p.spawnAt(SPOT.x, SPOT.z, 0); g.sky.hour = hour; step(40);
@@ -293,9 +288,7 @@ export async function faceVideo(tag = 'cara', { W = 720, H = 720, fps = 12, seco
     const ec = eL.add(eR).multiplyScalar(0.5), fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(ch.object.getWorldQuaternion(new THREE.Quaternion())); fwd.y = 0; fwd.normalize();
     const rt = new THREE.Vector3(fwd.z, 0, -fwd.x), c0 = ec.clone(); c0.y -= 0.04;
     if (i === 0) { faceVideo.cam = [c0.x + fwd.x * dist + rt.x * side, c0.y + 0.03, c0.z + fwd.z * dist + rt.z * side]; faceVideo.look = c0.toArray(); }
-    P.SM.tick = true; P.SM.hold();
     renderInto(ctx, 0, 0, faceVideo.cam, faceVideo.look, 30, W, H);
-    P.SM.release();
     frames.push(await createImageBitmap(cv));
   }
   g.resize();

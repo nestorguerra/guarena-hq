@@ -4,7 +4,6 @@
 // twelve times a second, like everything on the set; in the photographic town, fine streaks blurred by their speed.
 import * as THREE from 'three';
 import { STYLE } from './style.js';
-import { SM } from './plastilina.js';
 
 const MAX = { alta: 9000, media: 6000, baja: 3500 };
 const BOX = new THREE.Vector3(40, 24, 40); // (m round the camera: x, y, z)
@@ -81,7 +80,7 @@ export class Rain {
     this.mesh.visible = true;
     this.mesh.geometry.instanceCount = Math.round(this.max * Math.pow(Math.min(1, k), 0.85));
     U.uCam.value.copy(camera.position);
-    U.uTime.value = clay ? SM.time(this.t) : this.t; // (the claymation's rain poses with the set)
+    U.uTime.value = this.t;
     U.uSnow.value = snow ? 1 : 0;
     U.uFall.value = snow ? 1.2 : 7.5 + 2 * k;
     U.uLen.value = snow ? (clay ? 0.07 : 0.045) : clay ? 0.32 : 0.45 + 0.35 * k;

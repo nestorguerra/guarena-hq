@@ -361,3 +361,21 @@ tanto, debe estar un poco menos desenfocado y debe notarse la sensación de stop
   coche y en primera persona, fluido; al bajar del coche, otra vez a 12; tras un salto de sitio, dibujado ya en el
   nuevo; la entrada al juego, en Plastilina y en Realista, sin errores.
   Vídeo: `capturas/plastilina_stopmotion_antes_ahora.mp4`.
+
+## 14. Sin stop motion: todo fluido (12 de octubre de 2026, Guareña HQ)
+
+Petición del usuario, después de probar la pasada anterior: «no me gusta cómo se mueve el personaje. Da demasiados
+saltos. El stop motion este no me gusta cómo queda. Necesito que sea más fluido el movimiento del personaje y del
+entorno».
+
+- **Fuera el stop motion**, entero: tu personaje, la gente, los perros, los coches, el agua de las piscinas, el viento
+  en los árboles, la lluvia, el humo y las chispas se mueven en cada fotograma, como en la Realista. Fuera también lo
+  que lo acompañaba: el «hervor» de la superficie de los muñecos en cada pose, la mano del animador (unos milímetros
+  de más en cada pose) y el parpadeo de los focos del estudio. La plastilina se queda: el material, las formas
+  blandas, los muñecos, el cielo de decorado, la luz y el objetivo (el fondo, algo suave).
+- **Código**: se quitaron `StopMotion`/`SM` (`plastilina.js`) y todo lo que lo usaba (personajes, héroe, jugador,
+  perros, tráfico —`flushOnly`—, gente, agua, lluvia, efectos, el parpadeo de la gradación, las herramientas de vídeo).
+- **Comprobado**: tu personaje cambia de pose 60 veces por segundo (quieto, andando y corriendo), sin errores. El
+  rendimiento, igual: a 1440×900 (escala 1,5), andando por el casco antiguo 48,5 imágenes por segundo frente a 46,2 con
+  el stop motion, y girando en la Plaza 45,2 frente a 47,9 — diferencias dentro de lo que varía entre dos cargas.
+

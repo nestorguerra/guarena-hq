@@ -1,7 +1,6 @@
 // Player controller (on foot & driving, entering/exiting & carjacking, melee) and the third-person camera rig.
 import * as THREE from 'three';
 import { STYLE } from './style.js';
-import { SM } from './plastilina.js';
 import { clamp, lerp, damp, dampAngle, wrapAngle, smoothstep, polyNearest, polySample } from './util.js';
 import { springCharacter, springAngle, springDamper } from './springs.js';
 import { PERK, setPerk, applyFitness } from './perks.js';
@@ -32,10 +31,6 @@ export class Player {
   setCharacter(ch) {
     if (this.char) { this.game.scene.remove(this.char.object); this.char.dispose(); }
     this.char = ch;
-    // (claymation: a puppet like everyone else, 12 poses a second, the camera that follows it as fluid as ever; drawn as
-    // it is wherever a held pose would come apart from what carries it, or be seen from too close: in a car or on a
-    // bike, swimming, hidden, through their own eyes)
-    if (STYLE.plastilina) SM.add(ch.object, ch, { fluid: () => this.mode === 'car' || this.mode === 'passenger' || this.mode === 'swim' || this.mode === 'hidden' || !!(this.game.cam && this.game.cam.fp) });
     this.applyPerks();
     this.game.scene.add(ch.object);
     ch.object.traverse((o) => { if (o.isMesh) o.castShadow = true; });
