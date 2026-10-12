@@ -42,14 +42,18 @@ a la cámara del juego.
 `index.html` (`guarenaZoom`) acerca la foto desde 1 hasta `MAX` = 2,6 (la calle de Annie de cerca) y procura llegar
 justo cuando acabe la carga:
 
-- **Cuánto tardará.** Al principio, lo que tardó la última vez en este aparato (`localStorage`:
-  `guarena_hq_carga_388` dentro de 388 Pueblos, `guarena_hq_carga` fuera; si no hay, 12 s y 18 s). Según avanza, la
-  carga dice por dónde va (`main.js`: `guarenaZoom.to`) y se corrige: `CURVE` dice qué parte del tiempo ha pasado
-  cuando la carga dice que va por tal punto (medido: las calles y las casas se llevan casi todo el tiempo, los últimos
-  pasos son rápidos).
+- **Cuánto tardará.** Lo que tardó la última vez en este aparato **la construcción**, contada desde que empieza
+  (`localStorage`: `guarena_hq_obra_388` dentro de 388 Pueblos, `guarena_hq_obra` fuera; si no hay, 10 s y 12 s).
+  Contada desde que empieza porque la página del juego pesa 27 MB y, la primera vez, puede seguir llegando por la red
+  cuando la web ya se ha fundido con la foto: mientras no empieza a construir, el plan se va corriendo con el reloj y el
+  zoom avanza despacio sin gastar el recorrido (en la web publicada, la primera vez, el zoom llegaba a su sitio a mitad
+  de la carga y luego se arrastraba al 1 % por segundo). Según avanza, la carga dice por dónde va (`main.js`:
+  `guarenaZoom.to`) y se corrige: `CURVE` dice qué parte del tiempo ha pasado cuando la carga dice que va por tal punto
+  (medido: las calles y las casas se llevan casi todo el tiempo, los últimos pasos son rápidos).
 - **La velocidad, sin tirones.** Cada corrección cambia la velocidad poco a poco (1,5 s); en los dos últimos segundos
   previstos ya no se corrige: mejor quedarse algo corto o pasarse de `MAX` que frenar para clavarlo, porque frenar se
-  lee como pararse. Si la carga se alarga, el zoom sigue, cada vez más despacio, sin pararse nunca (hasta `CAP` = 3,6).
+  lee como pararse. Si la carga se alarga, el zoom sigue más despacio, pero nunca por debajo del 3 % por segundo
+  (`RLATE`, que aún se ve moverse) hasta 3,2, y de ahí, más lento, hasta `CAP` = 3,6.
 - **Una sola animación.** Las dos fotos van en una caja (`#introZoom`) que acerca una única animación (Web Animations,
   logarítmica de 1 a `CAP`) que corre en el hilo de la pantalla, haga lo que haga la página. Las correcciones solo
   cambian su velocidad, y dónde va el zoom se lleva con el reloj (`M`), poniendo a juego el inicio de la animación.
@@ -61,7 +65,9 @@ justo cuando acabe la carga:
     con `updatePlaybackRate` en ese momento, la hacía saltar atrás un poco.
 
 Medido en Chrome (Mac), entrando desde la web: la foto se acerca sin pausas a ≈0,075 por segundo (logarítmico) de
-principio a fin de la carga, y el relevo a la cámara en vivo no cambia la velocidad.
+principio a fin de la carga, y el relevo a la cámara en vivo no cambia la velocidad. Con la línea limitada a 3 MB/s
+(la página tarda 6 s más en llegar) frena poco a poco hasta ≈0,028 por segundo y llega a su sitio al empezar el
+vuelo.
 
 ## Desde 388 Pueblos
 
