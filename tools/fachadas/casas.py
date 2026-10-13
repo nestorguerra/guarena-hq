@@ -17,7 +17,7 @@ for f in sorted(os.listdir(SRC)):
         o = {}
         if ok(h.get('wall_hex')): o['wall'] = ok(h['wall_hex'])
         sp = (h.get('special') or '') or None
-        if sp in ('ladrillo', 'piedra', 'chapado', 'tapia'): o['special'] = sp
+        if sp in ('ladrillo', 'piedra', 'chapado', 'tapia', 'capilla'): o['special'] = sp
         p = h.get('plinth') or {}
         k = (p.get('kind') or '').split()[0].lower() if p.get('kind') else None
         if k in KINDS: o['plinth'] = {'kind': k, 'col': ok(p.get('hex')) or '#9a958e', 'h': round(float(p.get('height_m') or 0.9), 2)}
@@ -35,7 +35,13 @@ for f in sorted(os.listdir(SRC)):
         if b in out and rank[b] >= r: continue
         if b not in out: n += 1
         out[b] = o; rank[b] = r
-js = ["// The houses of the old town seen one by one in the user's Google Maps captures (2026-10-12): for each, which building",
+# touched up by hand, after looking (kept through every regeneration): the hermitage of the Plaza Vieja, a chapel — blind
+# whitewashed walls, its baroque portal and its bell-gable its own (landmarks.js ermitaPlazaVieja), one tall storey
+MANUAL = {1260: {'special': 'capilla', 'floors': 2}}
+for b, o in MANUAL.items():
+    if b not in out: n += 1
+    out[b] = {**out.get(b, {}), **o}
+js = ["// The houses of the town seen one by one in the user's Google Maps captures (2026-10-12/13): for each, which building",
       "// of the map it is and what it looks like — written by tools/fachadas/casas.py from the per-house notes (calles.js).",
       "// Nothing of the captures is in it: colours sampled and features read, as numbers and words.",
       'export const CASAS = {']

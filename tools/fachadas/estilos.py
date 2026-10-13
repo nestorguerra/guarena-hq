@@ -26,10 +26,18 @@ def number(txt, lo, hi, d):
     vals = [v for v in vals if lo <= v <= hi]
     return sum(vals) / len(vals) if vals else d
 SPECIES = (('naranj', 'naranjo'), ('morera', 'morera'), ('plátano', 'platano'), ('platano', 'platano'), ('palmera', 'palmera'), ('olivo', 'olivo'))
+# the centre's streets and squares (the first 26 of the captures): their gaps between houses are corrals and lots
+# closed by whitewashed walls (tapias.js)
+CENTRO = {'Calle Atrás', 'Calle Bronca', 'Calle Castillejos', 'Calle Cañadilla', 'Calle Cuatro Esquinas', 'Calle Derecha',
+          'Calle Doctor Lozano', 'Calle Don Manuel Dorado', 'Calle Estacada', 'Calle Eugenio Frutos', 'Calle Fuentes',
+          'Calle Grande', 'Calle Herreros', 'Calle Hornillos', 'Calle Malfeitos', 'Calle Pajares', 'Calle Pozo Dulce',
+          'Calle Pozo Pajares', 'Calle Túnel', 'Calle de Don Juan Durán', 'Calle de Santa María', 'Calle de la Cuesta',
+          'Plaza Vieja', 'Plaza de España', 'Plaza de Santa María', 'Plaza de los Castillejos'}
 # touched up by hand, after looking (kept through every regeneration)
 MANUAL = {
     # (setts only on its west stretch, Plaza la Parada–Malfeitos; asphalt beyond)
-    'Calle Estacada': {'road': 'asfalto', 'arboles': None, 'tramos': [{'x': 20, 'z': -74, 'r': 90, 'road': 'adoquin', 'col': '#b5aea4'},
+    'Calle Estacada': {'road': 'asfalto', 'arboles': None, 'tramos': [{'x': 118, 'z': -76, 'r': 7, 'lado': 'S', 'acera': {'col': '#efebe5', 'pat': 2}},  # (the SE corner with Malfeitos: white tiles, red bands)
+                                                                  {'x': 20, 'z': -74, 'r': 90, 'road': 'adoquin', 'col': '#b5aea4'},
                                                                   {'x': 371, 'z': -75, 'r': 70, 'arboles': {'kind': 'platano', 'every': 8}}]},  # (plane trees only at its Don Benito end)
     # (granite setts from the Plaza de España; its south stretch and the little square by the market one level of light
     # concrete setts, no kerbs)
@@ -47,6 +55,22 @@ MANUAL = {
     # (its garden: bare dusty earth, light-crowned trees — chinaberries, here mulberries — wooden benches, a slab path; no
     # lawn, no ball hedges, no palms)
     'Plaza Ramón y Cajal': {'parque': {'x': 498, 'z': -185, 'r': 30, 'suelo': 'albero', 'escala': 1.1, 'especies': [['morera', 0.85], ['platano', 0.15]]}},
+    # (its little park: an oval of lawn with orange trees in fruit, an olive, two young fan palms and one big dense tree
+    # in the middle — not albero with tall palms and oleanders)
+    'Plaza Vieja': {'parque': {'x': -150, 'z': 156, 'r': 14, 'suelo': 'cesped', 'col': '#8f9160', 'escala': 0.9, 'especies': [['naranjo', 0.55], ['olivo', 0.15], ['washingtonia', 0.2, 0.3], ['morera', 0.1]]}},  # (the palms young, 2 m)
+    # (its south branch, towards Herreros — a street of its own in the map, named so in calles.js NOMBRES — very light
+    # asphalt, almost concrete, with pavements; the rest one level of slabs)
+    'Calle Eugenio Frutos': {'tramos': [{'x': -17, 'z': 125, 'r': 22, 'road': 'asfalto', 'col': '#d2cdc2'}]},
+    # (at the corner of the Cuatro Esquinas, a stretch of salmon-red tiles on its south pavement)
+    'Calle de la Cuesta': {'tramos': [{'x': -130, 'z': -25, 'r': 8, 'lado': 'S', 'acera': {'col': '#d8a89c', 'pat': 0}}]},
+    # (its boulevard: further up from the church, a pedestrian median of light concrete setts, ~3 m, kerbed, with young
+    # trees and wooden benches, down the middle of the wide carriageway the map has beside it — no name, 18 m)
+    'Calle Castillejos': {'mediana': None, 'bulevar': {'pts': [[-67.3, -115.3], [-71.5, -114.0], [-74.3, -112.8], [-77.1, -111.8], [-79.9, -110.6], [-81.2, -108.0], [-82.5, -105.3], [-84.1, -102.8], [-85.6, -100.2], [-87.1, -97.6], [-88.6, -95.0], [-90.0, -92.3], [-91.3, -89.6], [-92.7, -86.9], [-94.0, -84.3], [-95.5, -81.7], [-97.0, -79.1], [-99.3, -73.1]],
+                                                      'desde': 9, 'hasta': 49, 'ancho': 3.0, 'col': '#c9c5bd', 'arbol': 'morera', 'cada': 8, 'escala': 0.65, 'bancos': True}},
+    # (its orange trees round the square, and a big magnolia)
+    'Plaza de España': {'arboles': {'kind': 'naranjo', 'every': 9}},
+    # (Santa María's atrium — atrio.js lays it as a pedestrian area: its two pines are its own, no ring of orange trees)
+    'Atrio de Santa María': {'arboles': None},
     # (the market's own square, as the Plaza de Abastos: open paving, no grove — the map names it apart)
     'Mercado de Abastos': {'arboles': None},
     # (slabs on its north stretch, granite setts on the south one)
@@ -177,6 +201,7 @@ for f in sorted(os.listdir(SRC)):
         w = (float(m.group(1).replace(',', '.')) + float((m.group(2) or m.group(1)).replace(',', '.'))) / 2 if m else 6.5
         st['adosados'] = {'w': round(min(12, max(4, w)), 2)}
     name = d.get('street') or f[:-5]
+    if name in CENTRO: st['tapias'] = True
     st.update(MANUAL.get(name, {}))
     out[name] = st
 # (the touches for places without a profile of their own: the market's square, say)

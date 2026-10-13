@@ -24,6 +24,7 @@ import { buildTrafficSigns } from './signs.js';
 import { measuredGaps, resolveMeasured, buildMeasuredDetails, measuredLamps } from './fachadas.js';
 import { weldParts, fillCracks } from './solidez.js';
 import { layKerbs } from './kerbs.js';
+import { buildTapias } from './tapias.js';
 import { MALFEITOS } from './malfeitos.js';
 import { mulberry32, hash1, pointInRing, ringArea, ringBounds, polySample, polyNearest, clamp } from './util.js';
 
@@ -171,6 +172,8 @@ void main(){
     map.collider.buildSegments();
     // the kerbs along the houses as they stand: a pavement to walk on wherever the street has room (kerbs.js)
     this.kerbs = timed('bordillos', () => layKerbs(map));
+    // the yard walls the map leaves out between the old town's houses (tapias.js): after the kerbs, which find the gaps
+    this.tapias = timed('tapias', () => buildTapias(this, map));
 
     // ---------------- ground
     await step('Arando los campos de las Vegas…', 0.5);

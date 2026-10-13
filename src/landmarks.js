@@ -2,15 +2,16 @@
 // Iglesia de Santa María (tower 32 m), Ayuntamiento (Plaza de España), Iglesia de San Gregorio, Ermita de San Isidro,
 // gas station, cooperative tanks, stadium La Noria, Guardia Civil, Centro de Salud, entry signs, plaza furniture.
 import * as THREE from 'three';
-import { stoneCanvas, flagCanvas, textCanvas } from './textures.js';
+import { stoneCanvas, flagCanvas, textCanvas, FLOOR_H } from './textures.js';
 import { orientedRect, ringArea, ringCentroid, pointInRing, mulberry32, clamp } from './util.js';
 import { shared, makeNightGlowMaterial } from './materials.js';
 import { makeFurnitureGeometries } from './props.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { westPortal, southPortal, northPortal } from './churchdoors.js';
-import { fountain, plazaDetails, updateWater, cultura, mercadoFront, corbacho, pabellonFront, entranceLetters, meridaRoad, avenida } from './townplus.js';
+import { fountain, plazaDetails, updateWater, cultura, mercadoFront, corbacho, pabellonFront, entranceLetters, meridaRoad, avenida, bulevar } from './townplus.js';
 import { buildSchools } from './schools.js';
 import { STYLES as CALLES } from './calles.js';
+import { atrio } from './atrio.js';
 import { buildPools } from './pools.js';
 import { STYLE } from './style.js';
 
@@ -269,10 +270,12 @@ class Landmarks {
   build() {
     const o = this.map.raw.origin;
     this.church(toLocal(38.8601623, -6.104399, o));
+    atrio(this); // (its atrium, on the south side: atrio.js)
     this.ayuntamiento(toLocal(38.85952, -6.10286, o));
     this.sanGregorio(toLocal(38.8593944, -6.0999634, o));
     this.ermita(toLocal(38.8484523, -6.0775261, o));
     this.mercado(toLocal(38.85949, -6.10063, o));
+    this.ermitaPlazaVieja();
     this.plaza();
     fountain(this); plazaDetails(this);
     cultura(this);
@@ -282,6 +285,7 @@ class Landmarks {
     avenida(this);
     // (and the medians of the streets whose captures show one: calles.js mediana)
     for (const [name, st] of Object.entries(CALLES)) if (st.mediana) avenida(this, name, st.mediana);
+    for (const st of Object.values(CALLES)) if (st.bulevar) bulevar(this, st.bulevar);
     entranceLetters(this);
     meridaRoad(this);
     this.gasStation();
@@ -350,11 +354,59 @@ class Landmarks {
     mk(pole, this.mat.white, tables);
   }
 
+  // ================================================================ the hermitage of the Plaza Vieja
+  // As the user's captures show it (2026-10-13): a whitewashed single nave, building 1260 (calles_casas.js keeps its
+  // walls blind and one tall storey), its baroque portal of granite facing the park to the west — a round arch on
+  // pilasters, an entablature and a curved crown with its niche — and at its south end, by the corner of the Calle
+  // Fuentes, a bell-gable with its bell and an iron cross.
+  ermitaPlazaVieja() {
+    const b = this.map.buildings[1260];
+    if (!b) return;
+    const r = b.ring, n = r.length / 2, park = [-150, 156], ccw = ringArea(r) > 0, M = this.mat;
+    let best = null;
+    for (let i = 0; i < n; i++) {
+      const j = (i + 1) % n, ax = r[i * 2], az = r[i * 2 + 1], bx = r[j * 2], bz = r[j * 2 + 1], L = Math.hypot(bx - ax, bz - az);
+      if (L < 4) continue;
+      let nx = (bz - az) / L, nz = -(bx - ax) / L;
+      if (!ccw) { nx = -nx; nz = -nz; }
+      const mx = (ax + bx) / 2, mz = (az + bz) / 2, tx = park[0] - mx, tz = park[1] - mz, tl = Math.hypot(tx, tz) || 1;
+      const score = ((nx * tx + nz * tz) / tl) * L; // (the front that looks onto the park, the longer the better)
+      if (!best || score > best.score) best = { score, ax, az, bx, bz, L, nx, nz, mx, mz };
+    }
+    if (!best) return;
+    const { L, nx, nz, mx, mz } = best;
+    const g = this.frame(mx, mz, nz, -nx); // (local x along the front, z out of it)
+    // the portal
+    const door = new THREE.Mesh(archPanel(1.5, 2.9), M.wood); door.position.set(0, 0, 0.03); g.add(door);
+    for (const s of [-1, 1]) this.put(g, sbox(0.42, 3.3, 0.22, 1), M.sillar, s * 1.05, 1.65, 0.11);
+    const arch = new THREE.Mesh(archRing(0.75, 0.28, 0.22), M.sillar); arch.position.set(0, 2.15, 0.11); g.add(arch);
+    this.put(g, sbox(2.75, 0.32, 0.3, 1), M.sillar, 0, 3.46, 0.15);
+    this.put(g, sbox(1.7, 1.0, 0.24, 1), M.sillar, 0, 4.12, 0.12);
+    const crown = new THREE.Mesh(archPanel(1.7, 0.85), M.sillar); crown.position.set(0, 4.62, 0.24); g.add(crown);
+    const crownRim = new THREE.Mesh(archRing(0.85, 0.16, 0.26), M.sillar); crownRim.position.set(0, 4.62, 0.12); g.add(crownRim);
+    const niche = new THREE.Mesh(archPanel(0.45, 0.8), M.dark); niche.position.set(0, 3.72, 0.25); g.add(niche);
+    // the bell-gable, at the front's south end
+    const ua = [nz, -nx], la = (best.ax - mx) * ua[0] + (best.az - mz) * ua[1], lb = (best.bx - mx) * ua[0] + (best.bz - mz) * ua[1];
+    const sEnd = best.az > best.bz ? la : lb, x = sEnd - Math.sign(sEnd) * 1.3, H = 2 * FLOOR_H;
+    this.put(g, sbox(1.9, 2.6, 0.5, 1.5), M.cal, x, H + 1.3, -0.25);
+    this.put(g, sbox(2.0, 0.12, 0.6, 1), M.sillar, x, H + 2.66, -0.25);
+    const open = new THREE.Mesh(archPanel(0.75, 1.2), M.dark); open.position.set(x, H + 0.8, 0.01); g.add(open);
+    const bell = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.3, 0.45, 10, 1, true), M.bronze); bell.position.set(x, H + 1.45, -0.25); g.add(bell);
+    this.put(g, sbox(0.08, 0.9, 0.08), M.iron, x, H + 3.17, -0.25);
+    this.put(g, sbox(0.45, 0.08, 0.08), M.iron, x, H + 3.32, -0.25);
+    this.poi.ermitaPlazaVieja = { x: mx + nx * 2, z: mz + nz * 2 };
+  }
+
   // ================================================================ orange trees around the plazas
   plazaTrees() {
     const extra = this.world.extraTrees || (this.world.extraTrees = []);
     for (const a of this.map.areas) {
       if (!(a.kind === 'highway:pedestrian' || a.kind === 'place:square' || a.kind === 'amenity:marketplace')) continue;
+      // (a square seen in its captures has the trees they show: calles.js — the atrium of Santa María its two pines, the
+      // Plaza de Abastos none)
+      const cs = CALLES[a.name];
+      if (cs && !cs.arboles) continue;
+      const kind = (cs && cs.arboles.kind) || 'naranjo';
       const r = a.ring;
       const n = r.length / 2;
       for (let i = 0; i < n; i++) {
@@ -366,7 +418,10 @@ class Landmarks {
         for (let s = 4; s < L - 3; s += 9) {
           const x = ax + ((bx - ax) * s) / L + ix * 2.2, z = az + ((bz - az) * s) / L + iz * 2.2;
           if (!pointInRing(x, z, r) || this.map.buildingAt(x, z)) continue;
-          extra.push({ kind: 'naranjo', x, z, s: 1 });
+          // (none before the town hall: its arcade looks onto the bars' terraces, as its photograph shows)
+          const af = this.poi.ayto && this.poi.ayto.front;
+          if (af && Math.abs((x - af.mx) * af.ux + (z - af.mz) * af.uz) < af.half && ((x - af.mx) * this.poi.ayto.nx + (z - af.mz) * this.poi.ayto.nz) < 10) continue;
+          extra.push({ kind, x, z, s: 1 });
         }
       }
     }
@@ -643,55 +698,74 @@ class Landmarks {
     f.position.set(mx + nx * 0.02, 0, mz + nz * 0.02);
     f.rotation.y = Math.atan2(nx, nz); // local +z = outward normal, local +x = ? (right)
     this.root.add(f);
-    const FW = Math.min(L - 1, 16);
-    // ground floor arcade: 3 round arches between double Tuscan pilasters
-    const aw = 3.1, ah = 5.0;
-    for (let k = -1; k <= 1; k++) {
-      const cx = k * (aw + 1.3);
+    // its front as its photograph shows it (2026-10-13): seven bays, symmetrical about the clock — below, three round
+    // arches of the arcade (soportal) alternating with four square-headed openings framed in granite, one on each pier
+    // and one at each end; above, a balcony running across the three middle bays, a blind recessed panel with a lantern
+    // over each side arch and a balcony of its own at each end; a heavy moulded cornice, a parapet with a granite ball
+    // over each bay (two at the corners), and in the middle an attic with the clock between volutes, crowned by a
+    // broken curved pediment and a pinnacle, a flame-urn either side
+    const FW = Math.min(L - 0.6, 23);
+    const k = FW / 23, A = 6.7 * k, P = 3.35 * k, E = 10.05 * k; // (bay centres: arches 0, ±A; piers ±P; ends ±E)
+    const aw = 3.3 * k, ah = 5.0;
+    for (const cx of [-A, 0, A]) {
       const pnl = new THREE.Mesh(archPanel(aw, ah), M.dark); pnl.position.set(cx, 0, 0.02); f.add(pnl);
       const ring = new THREE.Mesh(archRing(aw / 2, 0.35, 0.5), M.sillar); ring.position.set(cx, ah - aw / 2, 0.25); f.add(ring);
+      const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.42, 0.28), M.iron); lamp.position.set(cx, ah - aw / 2 - 0.55, 0.3); f.add(lamp);
     }
-    for (let k = -2; k <= 1; k++) {
-      const px = (k + 0.5) * (aw + 1.3);
-      for (const d of [-0.32, 0.32]) {
-        const pil = new THREE.Mesh(sbox(0.42, 5.6, 0.45, 1.2), M.sillar); pil.position.set(px + d, 2.8, 0.25); f.add(pil);
-      }
+    // Tuscan pilasters either side of each arch, and the square-headed openings between them and at the ends
+    for (const cx of [-A, 0, A]) for (const sd of [-1, 1]) f.add(at(new THREE.Mesh(sbox(0.45, 5.6, 0.45, 1.2), M.sillar), cx + sd * (aw / 2 + 0.28), 2.8, 0.25));
+    for (const cx of [-E, -P, P, E]) {
+      const op = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.3), M.dark); op.position.set(cx, 1.15 + 0.3, 0.03); f.add(op);
+      for (const sd of [-1, 1]) f.add(at(new THREE.Mesh(sbox(0.22, 2.6, 0.2, 1), M.sillar), cx + sd * 0.66, 1.6, 0.1));
+      f.add(at(new THREE.Mesh(sbox(1.55, 0.25, 0.22, 1), M.sillar), cx, 2.95, 0.11));
     }
+    f.add(at(new THREE.Mesh(sbox(FW, 0.35, 0.6, 1.6), M.sillar), 0, 0.17, 0.3)); // (the granite step along the arcade)
     f.add(at(new THREE.Mesh(sbox(FW, 0.6, 0.7, 1.6), M.sillar), 0, 5.9, 0.3));
-    // upper floor: 5 openings, central 3 with a balcony
-    for (let k = -2; k <= 2; k++) {
-      const cx = k * 2.9;
-      const op = new THREE.Mesh(new THREE.PlaneGeometry(1.35, 2.6), M.glass); op.position.set(cx, 7.9, 0.03); f.add(op);
-      const fr = new THREE.Mesh(sbox(1.8, 0.35, 0.3, 1), M.sillar); fr.position.set(cx, 9.4, 0.15); f.add(fr);
-      const sh = new THREE.Mesh(new THREE.PlaneGeometry(0.62, 2.5), M.wood);
-      for (const s of [-1, 1]) { const m = sh.clone(); m.position.set(cx + s * 0.99, 7.9, 0.04); f.add(m); }
+    // upper floor
+    const door = (cx) => {
+      const op = new THREE.Mesh(new THREE.PlaneGeometry(1.3, 2.6), M.glass); op.position.set(cx, 7.9, 0.03); f.add(op);
+      const sh = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 2.55), M.wood);
+      for (const sd of [-1, 1]) { const m = sh.clone(); m.position.set(cx + sd * 0.96, 7.9, 0.04); f.add(m); }
+      f.add(at(new THREE.Mesh(sbox(1.9, 0.3, 0.3, 1), M.sillar), cx, 9.35, 0.15)); // (its moulded hood)
+    };
+    const railing = (cx, w) => {
+      f.add(at(new THREE.Mesh(sbox(w, 0.25, 1.0, 1), M.sillar), cx, 6.55, 0.5));
+      for (let x = -w / 2 + 0.05; x <= w / 2 - 0.04; x += 0.2) f.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.03, 1.0, 0.03), M.iron), cx + x, 7.15, 0.95));
+      f.add(at(new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, 0.06), M.iron), cx, 7.65, 0.95));
+    };
+    for (const cx of [-P, 0, P]) door(cx);
+    railing(0, 2 * P + 2.2);
+    for (const cx of [-E, E]) { door(cx); railing(cx, 2.0); }
+    for (const cx of [-A, A]) {
+      const pan = new THREE.Mesh(sbox(1.9, 2.6, 0.12, 1), M.sillar); pan.position.set(cx, 7.9, -0.04); f.add(pan); // (the blind panel, set in)
+      const lan = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.4, 0.26), M.iron); lan.position.set(cx, 9.0, 0.45); f.add(lan);
+      f.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.45), M.iron), cx, 9.25, 0.22));
     }
-    const balc = new THREE.Mesh(sbox(8.6, 0.25, 1.1, 1), M.sillar); balc.position.set(0, 6.55, 0.55); f.add(balc);
-    for (let i = 0; i <= 43; i++) {
-      const bar = new THREE.Mesh(new THREE.BoxGeometry(0.03, 1.0, 0.03), M.iron); bar.position.set(-4.3 + i * 0.2, 7.15, 1.05); f.add(bar);
-    }
-    const rail = new THREE.Mesh(new THREE.BoxGeometry(8.6, 0.06, 0.06), M.iron); rail.position.set(0, 7.65, 1.05); f.add(rail);
-    // cornice + parapet with stone balls
+    // cornice and parapet, a ball over each bay and two at each corner
     f.add(at(new THREE.Mesh(sbox(FW + 0.8, 0.7, 1.2, 1.6), M.sillar), 0, Hb - 0.2, 0.35));
-    for (let i = 0; i < 9; i++) {
-      const px = -FW / 2 + 0.5 + (i * (FW - 1)) / 8;
-      f.add(at(new THREE.Mesh(sbox(0.5, 0.9, 0.5, 1), M.sillar), px, Hb + 0.6, 0.3));
-      f.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.3, 10, 8), M.sillar), px, Hb + 1.35, 0.3));
+    f.add(at(new THREE.Mesh(sbox(FW, 0.75, 0.45, 1.6), M.sillar), 0, Hb + 0.52, 0.2));
+    for (const cx of [-E, -A, -P, P, A, E, -FW / 2 + 0.3, FW / 2 - 0.3]) {
+      f.add(at(new THREE.Mesh(sbox(0.55, 0.9, 0.55, 1), M.sillar), cx, Hb + 0.6, 0.3));
+      f.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.27, 10, 8), M.sillar), cx, Hb + 1.32, 0.3));
     }
-    // pediment with coat of arms
-    const pedG = gableEnd(7.0, 1.9, 1.6);
-    f.add(at(new THREE.Mesh(pedG, M.sillar), 0, Hb + 0.15, 0.95));
-    const arms = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.5), new THREE.MeshStandardMaterial({ map: canvasTex(stoneCanvas('escudo', 256)), transparent: true, roughness: 0.6 }));
-    arms.position.set(0, Hb + 0.85, 0.98); f.add(arms);
-    // bell-gable (espadaña) with clock
-    const esp = new THREE.Mesh(sbox(3.2, 3.6, 0.6, 1.6), M.sillar); esp.position.set(0, Hb + 3.4, -0.2); f.add(esp);
-    const hole = new THREE.Mesh(archPanel(1.3, 1.9), M.dark); hole.position.set(0, Hb + 3.1, 0.12); f.add(hole);
-    const bell = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.4, 0.6, 10, 1, true), M.bronze); bell.position.set(0, Hb + 4.1, -0.2); f.add(bell);
-    const topC = new THREE.Mesh(gableEnd(3.2, 1.0, 1.6), M.sillar); topC.position.set(0, Hb + 5.2, 0.11); f.add(topC);
-    const clock = new THREE.Mesh(new THREE.CircleGeometry(0.85, 24), new THREE.MeshStandardMaterial({ map: canvasTex(stoneCanvas('reloj', 256)), roughness: 0.4 }));
-    clock.position.set(0, Hb + 1.95, 1.0); f.add(clock);
-    const hh = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.45, 0.02), M.iron); hh.geometry.translate(0, 0.2, 0); hh.position.set(0, Hb + 1.95, 1.03); f.add(hh);
-    const mh = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.68, 0.02), M.iron); mh.geometry.translate(0, 0.32, 0); mh.position.set(0, Hb + 1.95, 1.04); f.add(mh);
+    // the coat of arms over the middle window, crowned, under the clock
+    const arms = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 1.4), new THREE.MeshStandardMaterial({ map: canvasTex(stoneCanvas('escudo', 256)), transparent: true, roughness: 0.6 }));
+    arms.position.set(0, Hb - 1.05, 0.98); f.add(arms);
+    // the attic with the clock: between two volutes, a broken curved pediment and its pinnacle; a flame-urn either side
+    f.add(at(new THREE.Mesh(sbox(3.0, 2.9, 0.7, 1.6), M.sillar), 0, Hb + 1.45 + 0.9, 0.15));
+    for (const sd of [-1, 1]) {
+      const vol = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 0.75, 0.6, 14, 1, false, sd > 0 ? 0 : Math.PI / 2, Math.PI / 2), M.sillar);
+      vol.rotation.x = Math.PI / 2; vol.position.set(sd * 1.5, Hb + 0.9, 0.15); f.add(vol);
+      const half = new THREE.Mesh(archRing(1.1, 0.24, 0.7, 10), M.sillar); half.position.set(sd * 0.22, Hb + 3.4, 0.15); half.scale.set(1, 0.75, 1); f.add(half);
+      f.add(at(new THREE.Mesh(sbox(0.5, 0.7, 0.5, 1), M.sillar), sd * 2.2, Hb + 1.25, 0.2));
+      const urn = new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.9, 8), M.sillar); urn.position.set(sd * 2.2, Hb + 2.05, 0.2); f.add(urn);
+    }
+    const pin = new THREE.Mesh(new THREE.ConeGeometry(0.2, 1.2, 8), M.sillar); pin.position.set(0, Hb + 4.55, 0.15); f.add(pin);
+    f.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.16, 8, 6), M.sillar), 0, Hb + 5.2, 0.15));
+    const clock = new THREE.Mesh(new THREE.CircleGeometry(0.55, 24), new THREE.MeshStandardMaterial({ map: canvasTex(stoneCanvas('reloj', 256)), roughness: 0.4 }));
+    clock.position.set(0, Hb + 2.45, 0.51); f.add(clock);
+    const hh = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.3, 0.02), M.iron); hh.geometry.translate(0, 0.13, 0); hh.position.set(0, Hb + 2.45, 0.53); f.add(hh);
+    const mh = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.45, 0.02), M.iron); mh.geometry.translate(0, 0.21, 0); mh.position.set(0, Hb + 2.45, 0.54); f.add(mh);
     this.animated.push({ kind: 'clock', hh, mh });
     // flags on the balcony: Spain, Extremadura, EU
     ['es', 'ex', 'eu'].forEach((k, i) => {
@@ -705,8 +779,8 @@ class Landmarks {
       this.flags.push({ mesh: flag, base: fg.attributes.position.array.slice(), phase: i });
     });
     // sign
-    const s = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 1.4), new THREE.MeshStandardMaterial({ map: canvasTex(aytoPlaque()), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(-FW / 2 + 1.5, 3.4, 0.05); f.add(s);
-    this.poi.ayto = { x: mx + nx * 4, z: mz + nz * 4, nx, nz };
+    const s = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.9), new THREE.MeshStandardMaterial({ map: canvasTex(aytoPlaque()), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(-E, 4.1, 0.05); f.add(s); // (over the end opening)
+    this.poi.ayto = { x: mx + nx * 4, z: mz + nz * 4, nx, nz, front: { mx, mz, ux: -nz, uz: nx, half: FW / 2 + 1 } };
     // in under the arcade by the middle arch (venues.js: the hall, the stairs, the Salón de Plenos)
     (this.poi.venues || (this.poi.venues = [])).push({ kind: 'ayto', name: 'Ayuntamiento de Guareña', sub: 'Casa Consistorial · Plaza de España', x: mx + nx * 1.3, z: mz + nz * 1.3, fx: mx - nx * 3, fz: mz - nz * 3, seed: 9 });
   }

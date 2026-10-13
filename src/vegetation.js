@@ -50,7 +50,7 @@ export function plantTown(world, G, F, q) {
 
   // ---------------- the town first (what the player sees from the street), then the countryside out to the cap
   // plaza orange trees and other hand-placed trees from the landmarks module
-  for (const t of world.extraTrees || []) if (free(t.x, t.z, t.pad ?? 0.8)) T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, { s: t.s || 1, check: false });
+  for (const t of world.extraTrees || []) if (t.onRoad ? !map.buildingAt(t.x, t.z) : free(t.x, t.z, t.pad ?? 0.8)) T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, { s: t.s || 1, check: false }); // (onRoad: a boulevard's median, on the carriageway the map has as one)
   // street trees: one species (and one age) along a whole street, evenly spaced on the pavement, clear of doors (a
   // street seen in its captures: its own, or a stretch's — calles_estilos.js arboles, tramos)
   const treesOf = (cs, e) => {
@@ -107,6 +107,9 @@ export function plantTown(world, G, F, q) {
       for (let s = 3; s < L - 3; s += 6) {
         const x = r[i] + ux * s - uz * 3 * inward, z = r[i + 1] + uz * s + ux * 3 * inward;
         if (!pointInRing(x, z, r) || !free(x, z, 0.8)) continue;
+        // (none before the town hall: its arcade looks onto the bars' terraces — landmarks.js poi.ayto)
+        const ay = world.landmarks && world.landmarks.poi.ayto, af = ay && ay.front;
+        if (af && Math.abs((x - af.mx) * af.ux + (z - af.mz) * af.uz) < af.half && (x - af.mx) * ay.nx + (z - af.mz) * ay.nz < 10) continue;
         if (T('naranjo', x, z, { s: 0.95 + rnd() * 0.1, tk: 0.6 })) world.streetTrees.push({ x, z, dx: ux, dz: uz });
       }
       if (area > 900 && rnd() < 0.5) { const x = r[i] - uz * 4 * inward + ux * 4, z = r[i + 1] + ux * 4 * inward + uz * 4; if (pointInRing(x, z, r) && free(x, z, 1)) T('palmera', x, z, { s: 0.9 + rnd() * 0.2 }); }
@@ -118,15 +121,16 @@ export function plantTown(world, G, F, q) {
     const small = area < 1500;
     // (a garden seen in the captures: its own trees, in their shares — calles.js parque)
     const own = parkOf((x0 + x1) / 2, (z0 + z1) / 2), oT = own && own.especies ? own.especies.reduce((t, e) => t + e[1], 0) : 0;
-    const pick = (r) => { let x = r * oT; for (const [sp, w] of own.especies) { x -= w; if (x <= 0) return sp; } return own.especies[0][0]; };
+    const pick = (r) => { let x = r * oT; for (const e of own.especies) { x -= e[1]; if (x <= 0) return e; } return own.especies[0]; };
     const n = Math.min(220, Math.max(3, area / (small ? 60 : 85)));
     for (let i = 0; i < n * 3 && (counts._park = (counts._park || 0)) < 99999; i++) {
       const x = x0 + rnd() * (x1 - x0), z = z0 + rnd() * (z1 - z0);
       if (!pointInRing(x, z, a.ring) || !free(x, z, 1.5)) continue;
       const r = rnd();
-      const sp = oT ? pick(r) : small ? (r < 0.5 ? 'naranjo' : r < 0.7 ? 'palmera' : r < 0.85 ? 'morera' : 'adelfa')
+      const pe = oT ? pick(r) : null; // ([species, share, its own size — a young palm, say])
+      const sp = pe ? pe[0] : small ? (r < 0.5 ? 'naranjo' : r < 0.7 ? 'palmera' : r < 0.85 ? 'morera' : 'adelfa')
         : (r < 0.26 ? 'platano' : r < 0.44 ? 'pino' : r < 0.56 ? 'morera' : r < 0.66 ? 'naranjo' : r < 0.74 ? 'palmera' : r < 0.78 ? 'washingtonia' : r < 0.84 ? 'cipres' : r < 0.9 ? 'encina' : 'adelfa');
-      T(sp, x, z, { s: (0.85 + rnd() * 0.3) * ((own && own.escala) || 1) });
+      T(sp, x, z, { s: (0.85 + rnd() * 0.3) * ((pe && pe[2]) || (own && own.escala) || 1) });
     }
     // the hedge round a park's edge (with its gaps where the paths come in)
     const rg = a.ring;

@@ -653,7 +653,7 @@ export function meridaRoad(L) {
 // ---------------------------------------------------------------- the Avenida de la Constitución as a boulevard
 // Where its two carriageways run side by side, the strip between them gets bitter oranges (palms where it is wide),
 // oleanders where it is narrow, double street lamps every thirty metres; benches where there is room to sit
-function doubleLamp() {
+export function doubleLamp() {
   const parts = [], heads = [];
   const post = new THREE.CylinderGeometry(0.08, 0.14, 7.6, 10); post.translate(0, 3.8, 0); parts.push(post);
   const base = new THREE.CylinderGeometry(0.22, 0.26, 0.7, 10); base.translate(0, 0.35, 0); parts.push(base);
@@ -664,6 +664,26 @@ function doubleLamp() {
     const gl = new THREE.BoxGeometry(0.6, 0.04, 0.28); gl.translate(s * 1.55, 7.36, 0); heads.push(gl);
   }
   return { iron: merged(parts), glow: merged(heads) };
+}
+// a boulevard's median, where the captures show one on a carriageway the map has as one (calles.js bulevar; its strip
+// of setts and kerbs: ground.js): its young trees and its wooden benches
+export function bulevar(L, bv) {
+  const extra = L.world.extraTrees || (L.world.extraTrees = []), P = [], cum = [0];
+  for (const [x, z] of bv.pts) { if (P.length) cum.push(cum[cum.length - 1] + Math.hypot(x - P[P.length - 2], z - P[P.length - 1])); P.push(x, z); }
+  const s0 = (bv.desde || 0) + 2, s1 = (bv.hasta ?? cum[cum.length - 1]) - 2, t = {};
+  let k = 0;
+  for (let s = s0; s <= s1; s += bv.cada || 8, k++) {
+    polySample(P, cum, s, t);
+    extra.push({ kind: bv.arbol || 'morera', x: t.x, z: t.z, s: bv.escala || 0.7, onRoad: true });
+    if (bv.bancos && k % 2 === 1 && s + 3 < s1) {
+      polySample(P, cum, s + 3.2, t);
+      const bench = benchGeo(), iron = new THREE.MeshStandardMaterial({ color: 0x1e2a24, roughness: 0.55, metalness: 0.5 }), wood = new THREE.MeshStandardMaterial({ color: 0x8a5a34, roughness: 0.7 });
+      const a = Math.atan2(t.dx, t.dz) + Math.PI / 2;
+      for (const [geo, mat] of [[bench.iron, iron], [bench.wood, wood]]) { const m = new THREE.Mesh(geo, mat); m.position.set(t.x, 0.12, t.z); m.rotation.y = a; m.castShadow = true; L.root.add(m); }
+      L.circle(t.x, t.z, 0.6, 1);
+      L.world.spawnSpots.push({ kind: 'bench', x: t.x, z: t.z, ang: a });
+    }
+  }
 }
 // the median of a dual carriageway: its trees, its double lamp posts, its benches — the Avenida de la Constitución's
 // by default; a street seen in its captures with its own (calles.js mediana: { arbol, cada, escala, farolas, bancos })

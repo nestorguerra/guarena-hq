@@ -2,6 +2,7 @@
 import { polyCum, polySample, polyNearest, ringArea, ringCentroid, clamp, pointInRing } from './util.js';
 import { StaticCollider, PolyIndex } from './collision.js';
 import { kerbAt } from './kerbs.js';
+import { NOMBRES } from './calles.js';
 
 // a point surely inside a ring (its centroid, unless the outline bends round it: then on the way to a corner)
 function innerPoint(r) {
@@ -67,6 +68,7 @@ export class MapData {
       if (ed.w < 5.2 && ed.speed > 6.5) ed.speed = 6.5;
       return ed;
     });
+    for (const [id, nm] of Object.entries(NOMBRES)) { const e = this.edges[id]; if (e && !e.name) e.name = nm; } // (calles.js: the names the map leaves out)
     for (const e of this.edges) {
       if (e.len < 0.5) continue;
       this.nodes[e.a].edges.push(e.id);

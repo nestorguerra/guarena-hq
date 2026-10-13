@@ -1,7 +1,7 @@
 // Ground surfaces: countryside field patchwork, OSM land use areas, roads (asphalt / dirt), sidewalks, curbs, markings.
 import * as THREE from 'three';
 import { GROUND, GROUND_SCALE, asphaltBase, aceraMean, pavingMean } from './textures.js';
-import { offsetPolyline, mulberry32, hash1, hash2, ringArea, pointInRing, polySample, clamp, orientedRect } from './util.js';
+import { offsetPolyline, mulberry32, hash1, hash2, ringArea, pointInRing, polySample, polyCum, clamp, orientedRect } from './util.js';
 import { STYLE } from './style.js';
 import { CLAY_ROAD } from './plastilina.js';
 import { STYLES as CALLES, parkOf } from './calles.js';
@@ -258,7 +258,7 @@ function areaStyle(a) {
     case 'leisure:park': {
       // (a garden seen in the captures: its own ground — calles.js parque)
       const c = ringCentroidXZ(a.ring), own = parkOf(c[0], c[1]);
-      if (own && own.suelo) return { layer: own.suelo === 'albero' ? GROUND.albero : GROUND.cesped, tint: [1, 1, 1], level: 2, park: true };
+      if (own && own.suelo) return { layer: own.suelo === 'albero' ? GROUND.albero : GROUND.cesped, tint: own.col ? tintFrom(own.col, own.suelo === 'albero' ? '#d8b574' : '#4f7d33', 1) : [1, 1, 1], level: 2, park: true }; // (its colour as seen: a lawn gone olive in the summer, say)
       return area > 1500 ? { layer: GROUND.cesped, tint: [0.95, 1, 0.92], level: 2, park: true } : { layer: GROUND.albero, tint: [1, 1, 1], level: 2, park: true };
     }
     case 'leisure:playground': return { layer: GROUND.albero, tint: [1, 0.9, 0.85], level: 3 };
@@ -515,6 +515,24 @@ export function buildGround(map, materials, opts = {}) {
         for (let i = 0; i < flags.length; i++) flags[i] = curbRamp(inner[i * 2], inner[i * 2 + 1], ramps);
         trimStrip(inner, outer, e, map, (a, b, idx) => curbs.curbStrip(a, b, idx.map((k) => cum[k]), idx.map((k) => flags[k]), 0, GROUND.bordillo, [1, 1, 1]));
       }
+    }
+  }
+  // the boulevards' medians, where the captures show one on a carriageway the map has as one (calles.js bulevar): a
+  // raised strip of light concrete setts down its middle, kerbed both sides — its trees and benches: townplus.js
+  for (const st of Object.values(CALLES)) {
+    const bv = st.bulevar;
+    if (!bv) continue;
+    const P = densify(bv.pts.flat(), 1.2), cum = polyCum(P), n = P.length / 2;
+    let i0 = 0, i1 = n - 1;
+    while (i0 < n - 1 && cum[i0] < (bv.desde || 0)) i0++;
+    while (i1 > i0 && cum[i1] > (bv.hasta ?? cum[n - 1])) i1--;
+    const Q = P.slice(i0 * 2, (i1 + 1) * 2), qc = Array.from(cum.slice(i0, i1 + 1));
+    if (Q.length < 4) continue;
+    const hw = (bv.ancho || 3) / 2, tint = bv.col ? tintFrom(bv.col, pavingMean('adoquin'), 0.9) : W;
+    levels[6].roadStrip(offsetPolyline(Q, hw), offsetPolyline(Q, -hw), qc, hw, 0.012, GROUND.adoquin, tint, 0.05);
+    for (const sd of [1, -1]) {
+      const inner = offsetPolyline(Q, sd * hw), outer = offsetPolyline(Q, sd * (hw - KW()));
+      curbs.curbStrip(inner, outer, qc, new Float32Array(qc.length), 0, GROUND.bordillo, [1, 1, 1]);
     }
   }
   for (const [nid, info] of nodeLayer) {

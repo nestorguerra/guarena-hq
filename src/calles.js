@@ -124,6 +124,9 @@ export function parkOf(x, z) {
   for (const k in STYLES) { const p = STYLES[k].parque; if (p && Math.hypot(x - p.x, z - p.z) < p.r) return p; }
   return null;
 }
+// the names the map leaves out: a stretch of street with none, which its captures show to be part of a named one
+// (mapdata.js gives it the name: its style, its signs) — by its index in data/map.json
+export const NOMBRES = { 365: 'Calle Eugenio Frutos' }; // (its south branch, towards Herreros: view 60)
 // the paint seen on a building in the captures, whatever it is (a shed's too: buildings.js)
 export function seenWall(bid) { return (CASAS[bid] && CASAS[bid].wall) || null; }
 // and its storeys, as many as are seen (the Catastro's count is now and then one too many or too few)
@@ -134,6 +137,7 @@ function ownStyle(street, bid, base) {
   if (h.wall) o.wall = h.wall;
   if (h.special === 'ladrillo' || h.special === 'piedra') o.kind = h.special;
   else if (h.special === 'tapia') { o.tapia = true; o.kind = 'trad_ocre'; }
+  else if (h.special === 'capilla') { o.capilla = true; o.kind = 'trad_ocre'; }
   else if (h.special === 'chapado') o.kind = 'renovada';
   else if (h.wall && (o.kind === 'ladrillo' || o.kind === 'piedra')) o.kind = 'renovada'; // (painted, as seen — not the bare brick or stone its street's draw gave it)
   if (h.plinth) o.plinth = h.plinth.kind === 'ninguno' ? 'none' : { kind: h.plinth.kind, col: h.plinth.col, h: h.plinth.h };

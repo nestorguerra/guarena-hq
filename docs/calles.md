@@ -105,19 +105,37 @@ tiraba a melocotón y naranja: la cal salía salmón. Desde el 12 de octubre:
 - La iglesia: mampostería de granito gris pardo y sillares grises, con su mortero de cal gris (`clayStones`), no cantos
   ocres y naranjas en un lecho crema.
 
+## Lo que quedaba del centro (13 de octubre)
+
+- **El atrio de Santa María** (`src/atrio.js`): la plataforma enlosada de granito al sur de la iglesia, del muro sur a la
+  acera de la Cuesta y de la calle de Santa María a la escalinata del lado este; su muro de contención color arena con
+  albardilla de granito, la verja de forja con aspas entre pilares de granito, la cruz de granito sobre su pedestal de
+  tres gradas, las farolas de fundición de dos brazos y sus dos pinos. Medido en el sistema de la iglesia (`churchFrame`)
+  con la ortofoto del PNOA y las calles del mapa.
+- **Plaza Vieja**: su parque como es (`parque`: césped seco, naranjos, un olivo, palmitos jóvenes y un árbol grande) y
+  la ermita del lado este (edificio 1260: muros ciegos encalados, una planta alta; `landmarks.js` `ermitaPlazaVieja`: su
+  portada barroca de granito mirando al parque y la espadaña con campana y cruz junto a la esquina de Fuentes).
+- **El bulevar de Castillejos** (`bulevar`): la mediana peatonal de adoquín de hormigón claro con bordillo, árboles
+  jóvenes y bancos, por el eje de la calzada ancha sin nombre que el mapa tiene a su lado (`ground.js`, `townplus.js`).
+- **Las tapias** (`src/tapias.js`): los huecos de 2,5 a 30 m entre dos casas de las calles del centro, cerrados con su
+  tapia encalada, zócalo gris y portón; y las siete tapias largas que las capturas enseñan donde el mapa no tiene nada
+  (`tools/fachadas/tapias.py` → `src/calles_tapias.js`: la de piedra de la Cuesta, la de ladrillo de Hornillos, el muro
+  alto ocre de Fuentes, las de Pozo Dulce y Pozo Pajares…).
+- **El Ayuntamiento** como en su foto: siete ejes (tres arcos del soportal y cuatro vanos adintelados de granito), el
+  balcón corrido en los tres centrales, recuadros ciegos con farol sobre los arcos laterales, un balcón en cada extremo,
+  la cornisa con una bola sobre cada eje y el ático del reloj con volutas, frontón partido, pináculo y flameros (sin la
+  espadaña con campana, que no tiene); sin naranjos delante, donde están las terrazas.
+- **El ramal sur de Eugenio Frutos** (sin nombre en el mapa: `calles.js` `NOMBRES`), de asfalto casi blanco con
+  aceras; las esquinas de baldosa roja de la Estacada con Malfeitos y de la Cuesta frente a Cuatro Esquinas.
+- Las arboledas que el juego ponía en todas las plazas, solo donde las capturas las muestran (la Plaza de España sí).
+
 ## Pendiente
 
-- Las esquinas de baldosa roja de otras calles; el ramal sur de Eugenio Frutos.
-- En Realista el asfalto sigue saliendo oscuro (su textura fotográfica apenas toma el color medido).
-- Las plazas: el parque de Plaza Vieja (césped ovalado con naranjos, un olivo, palmitos y un banco; la ermita del lado
-  este), el atrio de Santa María (plataforma con muro, verja, escalinata y cruz), el bulevar de Castillejos y los
-  aparcamientos.
-- El Ayuntamiento como es (siete ejes, soportal, ático con reloj).
-- Cámaras de varias vistas que caen dentro de un edificio: el Catastro y las calles del mapa no casan del todo ahí.
-- Las calles nuevas de la carpeta (85 carpetas, 292 vistas): **el Este, hecho** (23 calles y plazas, 13-10-2026: sus
-  perfiles, 410 casas en todo el pueblo, 121 cámaras recolocadas); Norte, Sur y Oeste por hacer, con las mismas
-  instrucciones (`AMPLIACION.md`: perfil y casas en un solo paso, en grupos de 4–5 calles).
-- Lo que el estilo de una calle aún no sabe dibujar (visto en el Este): soportales bajo los bloques (Gerardo Diego),
-  naves con cubierta de chapa roja, setos altos de arizónica, vallas de barrotes entre pilares, la cal desconchada de
-  las casas de labor, las medianas de las calles que el mapa tiene como una sola calzada, y anchos de calle que el mapa
-  da mal (Camino del Gamero: 10–11 m reales, 5,5 en el juego).
+- Las calles de las zonas Norte (21), Sur (11) y Oeste (4), con las mismas instrucciones (`AMPLIACION.md`: perfil y
+  casas en un solo paso, en grupos de 4–5 calles).
+- Lo que el estilo de una calle aún no sabe dibujar: soportales bajo los bloques (Gerardo Diego), naves con cubierta
+  de chapa roja, setos altos de arizónica, vallas de barrotes entre pilares, la cal desconchada de las casas de labor,
+  las medianas de las calles que el mapa tiene como una sola calzada (Don Benito, Alberquilla), anchos de calle que el
+  mapa da mal (Camino del Gamero: 10–11 m reales, 5,5 en el juego) y los nombres que el mapa da cambiados (la rama sur
+  de la Cuesta se llama Bronca; el tramo de la vista 17, Nueva).
+- En Realista el asfalto medido ya toma su color; la textura fotográfica de los demás sigue oscura.

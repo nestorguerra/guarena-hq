@@ -104,7 +104,9 @@ export function planPart(part, info, runs, H, forcedDoors) {
     }
     const gp = (info.calle && info.calle.garage != null ? info.calle.garage : GARAGE_P[style]) ?? 0.1; // (its street's share, calles.js)
     const tapia = !!(info.calle && info.calle.tapia); // (a yard wall seen in the captures: blind, with its gate)
+    const capilla = !!(info.calle && info.calle.capilla); // (a chapel: blind walls, its portal its own — landmarks.js)
     for (const g of ground) {
+      if (capilla) { set(g.r, g.b, 0, CT.BLANK_G); continue; }
       if (tapia) { set(g.r, g.b, 0, doors.has(g) && g.r.L / g.r.uTot > 2.6 ? CT.GARAGE : CT.BLANK_G); continue; }
       if (doors.has(g)) { set(g.r, g.b, 0, CT.DOOR); continue; }
       const h = rnd();
@@ -115,7 +117,7 @@ export function planPart(part, info, runs, H, forcedDoors) {
   const bp = (info.calle && info.calle.balc != null ? info.calle.balc : BALC_P[style]) ?? 0.25;
   for (const g of ground) {
     for (let f = 1; f < nF; f++) {
-      if (info.calle && info.calle.tapia) { set(g.r, g.b, f, CT.BLANK_U); continue; }
+      if (info.calle && (info.calle.tapia || info.calle.capilla)) { set(g.r, g.b, f, CT.BLANK_U); continue; }
       const below = g.r.cells.get(g.b * 64 + f - 1);
       const h = rnd();
       const t = (below === CT.DOOR && h < 0.55) || (below === CT.BALC && h < 0.6) || (below !== CT.DOOR && h < bp) ? CT.BALC : h > 0.96 ? CT.BLANK_U : CT.WIN_U;

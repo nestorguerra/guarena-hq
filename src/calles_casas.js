@@ -1,4 +1,4 @@
-// The houses of the old town seen one by one in the user's Google Maps captures (2026-10-12): for each, which building
+// The houses of the town seen one by one in the user's Google Maps captures (2026-10-12/13): for each, which building
 // of the map it is and what it looks like — written by tools/fachadas/casas.py from the per-house notes (calles.js).
 // Nothing of the captures is in it: colours sampled and features read, as numbers and words.
 export const CASAS = {
@@ -78,7 +78,7 @@ export const CASAS = {
   1220: {"wall": "#c47a68", "plinth": {"kind": "piedra", "col": "#79715f", "h": 1.1}, "surround": {"kind": "pintado", "col": "#e0b47b"}, "reja": true, "buche": false, "balc": true, "pretil": true, "floors": 3, "door": "#4f443b", "shutters": "#f2f2ee", "frames": "#f2f2ee"},
   1232: {"wall": "#c27d6b", "plinth": {"kind": "ninguno", "col": "#c27d6b", "h": 0.9}, "surround": {"kind": "pintado", "col": "#efe9df"}, "reja": true, "buche": false, "balc": true, "floors": 2},
   1259: {"wall": "#eeebe3", "plinth": {"kind": "pintado", "col": "#9e9f9b", "h": 1.0}, "surround": {"kind": "piedra", "col": "#a5a7ab"}, "reja": true, "buche": false, "balc": true, "floors": 2, "door": "#6b4a32"},
-  1260: {"wall": "#eeebe3", "plinth": {"kind": "pintado", "col": "#c2c3be", "h": 1.1}, "surround": {"kind": "piedra", "col": "#7a6c62"}, "reja": false, "balc": false, "floors": 1, "door": "#3e3530"},
+  1260: {"wall": "#eeebe3", "plinth": {"kind": "pintado", "col": "#c2c3be", "h": 1.1}, "surround": {"kind": "piedra", "col": "#7a6c62"}, "reja": false, "balc": false, "floors": 2, "door": "#3e3530", "special": "capilla"},
   1261: {"wall": "#efebe4", "plinth": {"kind": "pintado", "col": "#97948e", "h": 0.9}, "surround": {"kind": "pintado", "col": "#f4f2ec"}, "reja": true, "buche": false, "balc": true, "floors": 2, "door": "#5a4535", "shutters": "#f2f0ea", "frames": "#f2f0ea"},
   1262: {"wall": "#efebe0", "plinth": {"kind": "ninguno", "col": "#efebe0", "h": 0.9}, "surround": {"kind": "ninguno", "col": "#efebe0"}, "reja": false, "balc": false, "floors": 1},
   1263: {"wall": "#e8dcc2", "surround": {"kind": "pintado", "col": "#f2f0ea"}, "floors": 2},
