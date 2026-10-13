@@ -1,7 +1,21 @@
 // Decodes the compact map (OSM + Catastro) into runtime structures: road graph, building data, areas, POIs.
-import { polyCum, polySample, polyNearest, ringArea, ringCentroid, clamp } from './util.js';
+import { polyCum, polySample, polyNearest, ringArea, ringCentroid, clamp, pointInRing } from './util.js';
 import { StaticCollider, PolyIndex } from './collision.js';
 import { kerbAt } from './kerbs.js';
+
+// a point surely inside a ring (its centroid, unless the outline bends round it: then on the way to a corner)
+function innerPoint(r) {
+  let cx = 0, cz = 0;
+  const n = r.length / 2;
+  for (let i = 0; i < r.length; i += 2) { cx += r[i]; cz += r[i + 1]; }
+  cx /= n; cz /= n;
+  if (pointInRing(cx, cz, r)) return [cx, cz];
+  for (const t of [0.25, 0.5, 0.75, 0.9]) for (let i = 0; i < r.length; i += 2) {
+    const x = r[i] + (cx - r[i]) * t, z = r[i + 1] + (cz - r[i + 1]) * t;
+    if (pointInRing(x, z, r)) return [x, z];
+  }
+  return [cx, cz];
+}
 
 const DRIVE_CLASSES = new Set(['primary', 'primary_link', 'secondary', 'tertiary', 'tertiary_link', 'unclassified', 'residential', 'living_street', 'service', 'track']);
 const WALK_ONLY = new Set(['pedestrian', 'footway', 'path', 'steps', 'cycleway']);
@@ -366,6 +380,19 @@ export class MapData {
     this.collider = new StaticCollider(x0 - 400, z0 - 400, x1 + 400, z1 + 400, 8);
     this.bIndex = new PolyIndex(x0 - 400, z0 - 400, x1 + 400, z1 + 400, 16);
     for (const b of this.buildings) this.bIndex.add(b.ring, b);
+    // a part goes with the outline it stands in. The Catastro gives a building's parts to the building as a whole, and
+    // the map to its first outline: a building of several separate outlines — a row of terraced houses registered as
+    // one, the blocks of a promotion — had all its parts drawn as its first outline, with its paint, its style and
+    // none of what was seen of the others in the captures (calles.js keys them by outline). A quarter of the parts.
+    this.relinked = 0;
+    for (const p of this.parts) {
+      if (p.b < 0) continue;
+      const [x, z] = innerPoint(p.ring), own = this.buildings[p.b];
+      if (own && pointInRing(x, z, own.ring)) continue;
+      const q = this.bIndex.find(x, z);
+      if (q && q.data && q.data.id !== p.b) { p.b = q.data.id; this.relinked++; }
+    }
+    for (const p of this.parts) if (p.b >= 0) { const b = this.buildings[p.b]; if (!(b.floors >= p.floors)) b.floors = p.floors; }
   }
   buildingAt(x, z) { const p = this.bIndex.find(x, z); return p ? p.data : null; }
   // the outlines changed (solidez.js welds them): the index again

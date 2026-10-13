@@ -5,6 +5,7 @@ import { arrayTexture, makeBuildingMaterial, makeGroundMaterial, makeNightGlowMa
 import { FacadeDetails, CT } from './facades.js';
 import { PLAYER_PRESETS } from './characters.js';
 import { buildStreetLife } from './streetlife.js';
+import { STYLES as CALLES } from './calles.js';
 import { buildBuildings, buildAOGeometry } from './buildings.js';
 import { infillGaps, placeStreetShops } from './infill.js';
 import { loadTextureArray, loadTexture, DETAIL_LAYERS, DETAIL_SIZE, GROUND_DETAIL, GROUND_DETAIL_SIZE } from './assets.js';
@@ -107,7 +108,7 @@ export class World {
     // the houses modelled from photographs, front by front (fachadas.js; calle Malfeitos: malfeitos.js)
     this.measured = resolveMeasured(map, MALFEITOS, gaps);
     if (this.measured.warn.length) console.warn('[fachadas]', this.measured.warn.join('; '));
-    const bb = buildBuildings(map, { skipPart, onBuilding: (b) => !this.landmarks.claimsBuilding(b), overrides: this.landmarks.overrides, facade, measured: this.measured });
+    const bb = buildBuildings(map, { skipPart, onBuilding: (b) => !this.landmarks.claimsBuilding(b), overrides: this.landmarks.overrides, facade, measured: this.measured, church: this.landmarks.poi.churchTower });
     for (const g of bb.geometries) {
       const m = new THREE.Mesh(g, this.bMat);
       m.castShadow = true; m.receiveShadow = true;
@@ -126,7 +127,7 @@ export class World {
     for (const o of facade.ground) {
       if (o.type !== CT.DOOR) continue;
       const old = o.style === 'trad_verde' || o.style === 'trad_ocre' || o.style === 'piedra';
-      this.facadeDoors.push({ x: o.x + o.nx * 0.75, z: o.z + o.nz * 0.75, wx: o.x, wz: o.z, nx: o.nx, nz: o.nz, bid: o.bid, old, measured: !!o.measured });
+      this.facadeDoors.push({ x: o.x + o.nx * 0.75, z: o.z + o.nz * 0.75, wx: o.x, wz: o.z, nx: o.nx, nz: o.nz, bid: o.bid, old, measured: !!o.measured, calle: o.calle || null });
     }
     // streamed chunks of 3D facade details, also used for every static street prop (so it exists on low quality too)
     this.trimMat = makeTrimMaterial();
@@ -173,10 +174,9 @@ void main(){
 
     // ---------------- ground
     await step('Arando los campos de las Vegas…', 0.5);
-    // (claymation: the streets round Santa María cobbled — the square of the user's third picture)
-    const ch = this.landmarks.poi;
-    const cobbles = STYLE.plastilina && ch.churchNorth && ch.churchTower ? [(ch.churchNorth.x + ch.churchTower.x + ch.churchSouth.x) / 3, (ch.churchNorth.z + ch.churchTower.z + ch.churchSouth.z) / 3, 85] : null;
-    const G = buildGround(map, null, { garages: this.facadeGround.filter((o) => o.type === CT.GARAGE), cobbles });
+    // (the claymation cobbled every street round the church, after the user's third picture, until 2026-10-13: they are
+    // asphalt there, as the captures show — calles.js has each street's own)
+    const G = buildGround(map, null, { garages: this.facadeGround.filter((o) => o.type === CT.GARAGE) });
     this.groundData = G;
     // CC0 photo-scanned ground (asphalt, concrete, dry earth, gravel, grass) + the zone map for the imperfections
     const gS = q.photo || (q.texSize >= 512 ? 512 : 256);
@@ -375,23 +375,26 @@ void main(){
       const inTown = map.inTown(e.pts[0], e.pts[1]) || map.inTown(e.pts[e.pts.length - 2], e.pts[e.pts.length - 1]);
       if (!inTown && e.cls !== 'primary') continue;
       if (this.measured && this.measured.lampEdges.has(e.name)) continue; // (a measured street: its own lanterns, below)
-      const spacing = (e.facade && e.facade < 14 ? 24 : 30) * (STYLE.plastilina ? 0.65 : 1); // (claymation: a lantern every few houses, as in the user's pictures)
+      // (the old town's streets as their captures show them, calles.js: wrought-iron lanterns on the fronts as far apart
+      // as there, up at the first floor, and never a lamp post; elsewhere — claymation — a lantern every few houses)
+      const cs = CALLES[e.name], posts = !!(cs && cs.lamps && cs.lamps.kind === 'columna'); // (lamp posts on the pavement, where its captures show them)
+      const spacing = cs && cs.lamps && cs.lamps.every ? cs.lamps.every : (e.facade && e.facade < 14 ? 24 : 30) * (STYLE.plastilina ? 0.65 : 1);
       let side = hash1(e.id) < 0.5 ? 1 : -1;
       for (let s = 8; s < e.len - 4; s += spacing) {
         polySample(e.pts, e.cum, s, tmp);
         side = -side;
         const nx = -tmp.dz * side, nz = tmp.dx * side;
         const hw = map.kerbAt(e, s, side); // (the kerb as laid along the houses, kerbs.js)
-        const w = inTown ? wallAt(tmp.x + nx * hw, tmp.z + nz * hw, nx, nz) : null;
+        const w = inTown && !posts ? wallAt(tmp.x + nx * hw, tmp.z + nz * hw, nx, nz) : null;
         if (w) {
           const r = w.r, ang = Math.atan2(r.nx, r.nz); // lantern arm along the wall normal, out over the pavement
           // under the eaves of a single-storey house; between ground floor and first floor on taller ones
-          const y = r.H > 5.4 ? 2.85 : Math.max(2.45, Math.min(2.85, r.H - 0.5));
+          const y = cs ? (r.H > 5.4 ? Math.min(4.1, r.H - 1.2) : Math.max(2.45, Math.min(2.85, r.H - 0.5))) : r.H > 5.4 ? 2.85 : Math.max(2.45, Math.min(2.85, r.H - 0.5));
           const x = w.x + r.nx * 0.012, z = w.z + r.nz * 0.012;
           lampsWall.add(x, y, z, ang); lampsWallL.add(x, y, z, ang);
           lampPts.push(x + r.nx * 0.62, y - 0.36, z + r.nz * 0.62);
           this.lampLog.wall++;
-        } else {
+        } else if (cs && !posts) { this.lampLog.skipped++; continue; } else {
           const d = hw + (e.sw > 0 ? 0.62 : 0.7);
           const x = tmp.x + nx * d, z = tmp.z + nz * d;
           if (blocked(x, z, e)) { this.lampLog.skipped++; continue; }

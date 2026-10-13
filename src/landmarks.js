@@ -10,6 +10,7 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { westPortal, southPortal, northPortal } from './churchdoors.js';
 import { fountain, plazaDetails, updateWater, cultura, mercadoFront, corbacho, pabellonFront, entranceLetters, meridaRoad, avenida } from './townplus.js';
 import { buildSchools } from './schools.js';
+import { STYLES as CALLES } from './calles.js';
 import { buildPools } from './pools.js';
 import { STYLE } from './style.js';
 
@@ -279,6 +280,8 @@ class Landmarks {
     corbacho(this);
     pabellonFront(this);
     avenida(this);
+    // (and the medians of the streets whose captures show one: calles.js mediana)
+    for (const [name, st] of Object.entries(CALLES)) if (st.mediana) avenida(this, name, st.mediana);
     entranceLetters(this);
     meridaRoad(this);
     this.gasStation();

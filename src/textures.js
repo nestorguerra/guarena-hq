@@ -97,16 +97,16 @@ export const STYLE_DEF = {
   piedra: { wall: 'stone', zocalo: 'stone', zocH: 0.4, wood: '#4e3421', frame: '#4e3421', reja: true, persiana: '#d0c8b8', door: 'wood', doorCol: '#4a2e1a', garage: '#4a2e1a' },
 };
 
-// the claymation's façades: a warm palette over the same kinds of house — ivory and cream whitewash, toasted-ochre
-// plinths, deep green or dark wood doors and shutters; brick, stone, sheds and the modern blocks keep what they are.
-// Applied once, before the town is painted (main.js boot), so the 3D details of the fronts (facades.js) take the same
-// colours
+// the claymation's façades over the same kinds of house: since 2026-10-12 the real town's colours — white lime, grey
+// and dark plinths, the carpentry's greens and browns — (they were cream walls and toasted-ochre plinths, after the
+// user's first retouched reference pictures); brick, stone, sheds and the modern blocks keep what they are. Applied
+// once, before the town is painted (main.js boot), so the 3D details of the fronts (facades.js) take the same colours
 const CLAY_FACADES = {
-  trad_verde: { wall: '#f0e5cd', zocalo: '#bb7d44', wood: '#354d3d', frame: '#354d3d', persiana: '#e6dcc4', doorCol: '#354d3d', garage: '#e6dcc6' },
-  trad_ocre: { wall: '#f2e8d4', zocalo: '#bb7d44', wood: '#5a3a24', frame: '#4a3020', persiana: '#dcd0b8', doorCol: '#4e3220', garage: '#5a3a24' },
-  renovada: { wall: '#ece2cc', wood: '#d8d2c4', frame: '#e6dfd0', persiana: '#ece4d4', doorCol: '#6e5034', garage: '#e8e0d0' },
-  color: { zocalo: '#bf9258', persiana: '#e8dcc6', doorCol: '#5a3a24' },
-  moderna: { wall: '#e6ded0', zocalo: '#6a6560', persiana: '#8a8580' },
+  trad_verde: { wall: '#f4f2ec', zocalo: '#8f8c86', wood: '#35503f', frame: '#35503f', persiana: '#e8e4da', doorCol: '#3a4f3c', garage: '#e6e2d8' },
+  trad_ocre: { wall: '#f4f1ea', zocalo: '#a4875f', wood: '#5a3a24', frame: '#4a3020', persiana: '#ddd6c6', doorCol: '#4e3220', garage: '#5a3a24' },
+  renovada: { wall: '#f1efea', wood: '#d8d6d0', frame: '#e8e7e2', persiana: '#eeebe4', doorCol: '#6e5034', garage: '#e8e6e0' },
+  color: { zocalo: '#9a948a', persiana: '#ebe5d8', doorCol: '#5a3a24' },
+  moderna: { wall: '#e8e6e1', zocalo: '#5f5d5a', persiana: '#8a8784' },
 };
 export function applyClayPalette() { for (const [k, v] of Object.entries(CLAY_FACADES)) Object.assign(STYLE_DEF[k], v); }
 
@@ -668,6 +668,13 @@ export function buildFacadeArray(S) {
 
 // ================================================================ GROUND
 // Layers of the ground texture array + metres per repeat
+// the asphalt's own grey, as painted below: a street whose asphalt was measured in its captures is tinted from it to
+// its colour (ground.js, calles_estilos.js roadCol)
+export const asphaltBase = (name) => (name === 'asphalt' ? (STYLE.plastilina ? '#7b7976' : '#7c7a76') : (STYLE.plastilina ? '#706e6a' : '#696866'));
+// and the pavement tiles' mean colour, the same way (a street's measured pavement is tinted from it), and the setts'
+// and the slabs' as they are drawn (the claymation's in the ground material) — a street of them tinted to its colour
+export const aceraMean = () => (STYLE.plastilina ? '#bdb5a8' : '#c5baa5');
+export const pavingMean = (kind) => (kind === 'adoquin' ? (STYLE.plastilina ? '#7c7a78' : '#8a8378') : (STYLE.plastilina ? '#a19f9c' : '#b5ad9e'));
 export const GROUND = {
   asphalt: 0, asphalt2: 1, acera: 2, plaza: 3, tierra: 4, albero: 5, cesped: 6, hierbaseca: 7,
   rastrojo: 8, arado: 9, cultivo: 10, olivar: 11, hormigon: 12, grava: 13, pista: 14, adoquin: 15,
@@ -683,9 +690,9 @@ function drawGroundLayer(name, S, seed) {
   switch (name) {
     case 'asphalt':
     case 'asphalt2': {
-      const PL = STYLE.plastilina; // (claymation: a warm, faintly pink grey clay, as in the user's pictures — no light specks)
-      base(name === 'asphalt' ? (PL ? '#7b716c' : '#7c7a76') : (PL ? '#746a65' : '#696866'));
-      speckle(ctx, S, rnd, S * S * (PL ? 0.1 : 0.22), PL ? ['#5d5450', '#665c57', '#4f4744'] : ['#5f5d59', '#8e8b85', '#9c9892', '#55534f', '#857d74'], 0.6, 1.6, 0.6);
+      const PL = STYLE.plastilina; // (claymation: the asphalt's grey as it is, in clay — no light specks)
+      base(asphaltBase(name));
+      speckle(ctx, S, rnd, S * S * (PL ? 0.1 : 0.22), PL ? ['#5b5956', '#64625e', '#4e4c49'] : ['#5f5d59', '#8e8b85', '#9c9892', '#55534f', '#857d74'], 0.6, 1.6, 0.6);
       grain(ctx, S, seed, 0.12, 5, 3);
       if (name === 'asphalt') {
         // patches & cracks
@@ -706,12 +713,14 @@ function drawGroundLayer(name, S, seed) {
     }
     case 'acera': {
       // Spanish pavement tiles: 30 cm squares with 4-pastilla relief (2.4 m -> 8 tiles)
-      const PL = STYLE.plastilina; // (claymation: sand-coloured pavements)
-      base(PL ? '#a8916a' : '#a79c8a');
+      // (claymation: the grey tiles of the old town's pavements, the colour measured in its captures — #c3bbab in the
+      // middle of 26 streets; they were sand-coloured until 2026-10-12)
+      const PL = STYLE.plastilina;
+      base(PL ? '#9c968c' : '#a79c8a');
       const n = 8, w = S / n;
       for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) {
         const v = 0.9 + rnd() * 0.14;
-        ctx.fillStyle = PL ? `rgb(${Math.floor(220 * v)},${Math.floor(200 * v)},${Math.floor(162 * v)})` : `rgb(${Math.floor(206 * v)},${Math.floor(194 * v)},${Math.floor(172 * v)})`;
+        ctx.fillStyle = PL ? `rgb(${Math.floor(198 * v)},${Math.floor(189 * v)},${Math.floor(174 * v)})` : `rgb(${Math.floor(206 * v)},${Math.floor(194 * v)},${Math.floor(172 * v)})`;
         ctx.fillRect(i * w + 1.5, j * w + 1.5, w - 3, w - 3);
         const q = w / 2;
         for (let a = 0; a < 2; a++) for (let b = 0; b < 2; b++) {
@@ -1018,7 +1027,9 @@ export function textCanvas(txt, { w = 512, h = 128, bg = null, fg = '#fff', font
 // claymation: the church's stones as pieces of clay pressed into a bed of softer clay — round-cornered, each its own flat
 // colour, lighter where the thumb rounded its top and darker under, a soft groove round each; no speckle, no grain
 function clayStones(ctx, S, rnd, ash, hx) {
-  ctx.fillStyle = ash ? '#a89c86' : '#ddd0b4'; // (2026-10-05: a pale bed of mortar between warm stones, as in the pictures)
+  // (the bed of lime mortar, weathered grey-beige — 2026-10-13, after the captures: it was pale cream, for the user's
+  // first pictures)
+  ctx.fillStyle = ash ? '#a39a8a' : '#b8af9f';
   ctx.fillRect(0, 0, S, S);
   if (hx) { hx.fillStyle = '#202020'; hx.fillRect(0, 0, S, S); } // (its relief: each stone a bulge, the bed sunk between)
   const rows = ash ? 5 : 7, rh = S / rows;
@@ -1026,11 +1037,12 @@ function clayStones(ctx, S, rnd, ash, hx) {
     let x = ash ? (r % 2 ? -S / 5 : 0) : -rnd() * rh;
     while (x < S) {
       const w = ash ? S * (0.26 + rnd() * 0.16) : rh * (1 + rnd() * 0.9);
-      // (each stone its own colour, as the pictures' church: ochre, cream, orange, a brown, a grey-beige)
-      const v = ash ? 0.88 + rnd() * 0.14 : 0.82 + rnd() * 0.2, kc = rnd();
-      const b = (ash ? [196, 186, 164] : kc < 0.4 ? [200, 150, 98] : kc < 0.62 ? [214, 188, 148] : kc < 0.8 ? [194, 128, 80] : kc < 0.92 ? [166, 118, 86] : [176, 156, 126]).map((k) => k * v);
+      // (each stone its own colour, as Santa María's in the captures: grey-brown granite, some warmer with iron, a few
+      // dark — they were ochre, cream and orange, for the user's first pictures, until 2026-10-13)
+      const v = ash ? 0.88 + rnd() * 0.14 : 0.84 + rnd() * 0.2, kc = rnd();
+      const b = (ash ? [180, 172, 156] : kc < 0.38 ? [150, 138, 120] : kc < 0.62 ? [168, 155, 134] : kc < 0.8 ? [158, 130, 100] : kc < 0.92 ? [132, 120, 104] : [112, 103, 92]).map((k) => k * v);
       const pad = S * (ash ? 0.012 : 0.01 + rnd() * 0.012), ww = w - 2 * pad, hh = rh - 2 * pad - (ash ? 0 : rnd() * rh * 0.12);
-      const y0 = r * rh + pad, rad = Math.min(ww, hh) * (ash ? 0.2 : 0.38 + rnd() * 0.1);
+      const y0 = r * rh + pad, rad = Math.min(ww, hh) * (ash ? 0.16 : 0.22 + rnd() * 0.1); // (squarish blocks, as the masonry is, softened)
       for (const ox of [0, -S, S]) {
         const x0 = x + pad + ox;
         if (x0 > S || x0 + ww < 0) continue;

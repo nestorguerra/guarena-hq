@@ -13,13 +13,21 @@ import * as THREE from 'three';
 
 export const PLASTILINA = {
   // the last grade: clay colours are pure, the studio fills the shadows a little, the lens darkens its corners a touch
-  grade: { sat: 1.1, warm: 0.045, contrast: 1.1, lift: 0.025, vignette: 0.16, tint: [1.0, 0.955, 0.95] }, // (richer and rosier, as the user's pictures)
+  grade: { sat: 1.04, warm: 0.012, contrast: 1.06, lift: 0.02, vignette: 0.12, tint: [1.0, 1.0, 1.0] }, // (a day's colours since 2026-10-12: it was richer and rosier, as the user's first retouched pictures)
   // the lens: how soft the far background goes at most (a fraction of the picture's height), from how far behind the
   // subject it starts and is at its softest (× the subject's distance), and how soft what is right under the lens goes
   // (a share of the most). Only a little: the user asked twice for less (2026-10-05, and 2026-10-12: «el fondo no lo
   // desenfoques tanto»: was 0.0034, from 2.2, to 10, near 0.55)
   lens: { blur: 0.002, from: 2.8, to: 14, near: 0.3 },
 };
+
+// the studio's light on the walls' clay (materials.js, CLAY; fachadas.js clayWall for the paint of the details): a dark
+// wall's colour times the first, a light one's times the second — neutral, so the whitewash stays white and every
+// colour the one measured in the captures; a light wall held back more, so the lime keeps its grain under the lamps
+export const CLAY_WALL = [[0.86, 0.84, 0.82], [0.6, 0.585, 0.565]];
+// the clay road's grey lifted by this much (materials.js), neutral; a street's measured asphalt is tinted with it in
+// mind (ground.js)
+export const CLAY_ROAD = 1.2;
 
 // contact shadows: ambient occlusion where things meet — the foot of a wall, under eaves and balconies, round pots and
 // people (three.js GTAOPass on the scene's own depth: game.js)

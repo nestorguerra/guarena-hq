@@ -665,9 +665,12 @@ function doubleLamp() {
   }
   return { iron: merged(parts), glow: merged(heads) };
 }
-export function avenida(L) {
+// the median of a dual carriageway: its trees, its double lamp posts, its benches — the Avenida de la Constitución's
+// by default; a street seen in its captures with its own (calles.js mediana: { arbol, cada, escala, farolas, bancos })
+export function avenida(L, name = 'Avenida de la Constitución', own = null) {
   const map = L.map, extra = L.world.extraTrees || (L.world.extraTrees = []);
-  const av = map.edges.filter((e) => e.name === 'Avenida de la Constitución' && e.drive);
+  const av = map.edges.filter((e) => e.name === name && e.drive);
+  const every = own ? Math.max(1, Math.round((own.cada || 8) / 3)) : 3;
   const seen = new Set(), lampAt = [], benches = [];
   let n = 0;
   for (const e of av) {
@@ -685,6 +688,12 @@ export function avenida(L) {
       seen.add(key);
       if (map.buildingAt(mx, mz) || map.roadAt(mx, mz, 0.3)) continue;
       n++;
+      if (own) {
+        if (n % every === 0) extra.push({ kind: own.arbol || 'morera', x: mx, z: mz, s: own.escala || 0.8, pad: Math.max(0.2, Math.min(0.8, mw / 2 - 0.5)) }); // (a narrow median's trees close to the kerbs, as they stand)
+        if (own.farolas && n % 10 === 5 && mw >= 1.6) lampAt.push([mx, mz, Math.atan2(p.dx, p.dz)]);
+        if (own.bancos && mw >= 2.4 && n % 9 === 4) benches.push([mx + p.dz * 0.8, mz - p.dx * 0.8, Math.atan2(-p.dz, p.dx)]);
+        continue;
+      }
       if (n % 3 === 0) extra.push({ kind: mw >= 4 ? (n % 12 === 0 ? 'palmera' : 'naranjo') : 'adelfa', x: mx, z: mz, s: mw >= 4 ? 0.95 : 0.8 });
       if (n % 10 === 5 && mw >= 1.6) lampAt.push([mx, mz, Math.atan2(p.dx, p.dz)]);
       if (mw >= 5.5 && n % 13 === 8) benches.push([mx + p.dz * 1.2, mz - p.dx * 1.2, Math.atan2(-p.dz, p.dx)]);
@@ -710,5 +719,5 @@ export function avenida(L) {
       L.world.spawnSpots.push({ kind: 'bench', x, z, ang: a });
     }
   }
-  L.poi.avenida = { trees: Math.floor(n / 3), lamps: lampAt.length };
+  if (!own) L.poi.avenida = { trees: Math.floor(n / 3), lamps: lampAt.length };
 }

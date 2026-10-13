@@ -273,8 +273,8 @@ const E_CORREOS = {
 const E_OCRE = { // the ochre house of the white surrounds: its doors in white frames, two windows behind black grilles,
   // four balconies upstairs under moulded heads, a tiled roof
   id: 'casa ocre de los recercados', side: 'E', s0: 85.5, s1: 96.4, H: 7.2, roof: 'tile',
-  wall: '#e7c39b',
-  paint: [{ x0: 0, x1: 10.9, y0: 0, y1: 0.7, col: '#d6ae84' }],
+  wall: '#cfb090', // (measured again on the old town's captures, 2026-10-12: it was #e7c39b, too strong)
+  paint: [{ x0: 0, x1: 10.9, y0: 0, y1: 0.7, col: '#bfa07c' }],
   relief: [
     { k: 'band', x0: 0, x1: 10.9, y0: 3.5, y1: 3.65, d: 0.03, col: '#f7f3ea' },
     { k: 'cornice', x0: 0, x1: 10.9, y: 6.85, prof: [[0.1, 0.05], [0.12, 0.12]], col: '#f7f3ea' },
@@ -420,7 +420,7 @@ const W9 = { // nº 9 — pale yellow, its arched door in a granite frame, two w
   ],
 };
 
-const OCHRE_7 = '#dba862';
+const OCHRE_7 = '#d6b89e'; // (a muted camel, measured again on the captures, 2026-10-12: it was #dba862)
 const W7 = { // nº 7 — white with ochre frames: arched windows behind grilles, its arched door in an ochre frame, a long
   // balcony between two windows upstairs, an ochre cornice
   id: 'nº 7', side: 'W', s0: 33.8, s1: 43.6, H: 7.35, roof: 'flat', parapet: 0,
@@ -478,8 +478,8 @@ const W_LADRILLO = { // the brick block (1977): cream slab edges, windows with b
 const W_FISIO = { // the house of the physiotherapy centre: three floors, ochre with a dark red ground floor and a white band;
   // white frames round the windows, small balconies on the top floor, its sign, a lantern; to the north a lower wing
   id: 'casa de la fisioterapia', side: 'W', s0: 61.0, s1: 81.1, H: 9.6, roof: 'tile', heights: [{ x0: 15.71, x1: 20.1, H: 6.6, roof: 'tile' }],
-  wall: '#ebc57f',
-  paint: [{ x0: 0, x1: 20.1, y0: 0, y1: 3.37, col: '#8e3434' }],
+  wall: '#f1efe9', // (white above, its ground floor an almagra red: measured again on the captures, 2026-10-12 — it was ochre over a burgundy)
+  paint: [{ x0: 0, x1: 20.1, y0: 0, y1: 3.37, col: '#a8574a' }],
   relief: [
     { k: 'band', x0: 0, x1: 20.1, y0: 3.37, y1: 3.52, d: 0.04, col: '#f4f1ea' },
     { k: 'cornice', x0: 0, x1: 15.71, y: 9.35, prof: [[0.12, 0.05], [0.12, 0.12]], col: '#f2ede2' },
@@ -571,7 +571,7 @@ const W_AMARILLA = { // the yellow corner house at the south end: a granite plin
 const W_HUECO_A = { // between the brick block and the physiotherapy house: one storey of the same dark red, a brown roller
   // garage door and a white door; on its roof a terrace with a white balustrade, a pergola, an ochre floor behind
   id: 'casa del garaje rojo', side: 'W', s0: 56.9, s1: 61.0, H: 3.45, roof: 'flat', parapet: 0,
-  wall: '#8e3434', sideCol: '#e9c27a',
+  wall: '#a8574a', sideCol: '#e9c27a',
   relief: [{ k: 'band', x0: 0, x1: 4.1, y0: 3.3, y1: 3.45, d: 0.06, col: '#f4f1ea' }],
   open: [
     { k: 'gar', x0: 0.55, x1: 2.7, y1: 2.55, d: 0.14, leaf: { kind: 'roller', col: '#8a6a4c', guide: '#6d5640' } },

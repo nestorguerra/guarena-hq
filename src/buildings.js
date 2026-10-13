@@ -1,21 +1,28 @@
 // Extrudes Catastro building parts into textured Extremaduran houses: facades, party walls, hip/tile/flat roofs.
 import * as THREE from 'three';
-import { FACADE_STYLES, FACADE_LAYERS_PER_STYLE, ROOF_BASE, BAY_W, FLOOR_H } from './textures.js';
+import { FACADE_STYLES, FACADE_LAYERS_PER_STYLE, ROOF_BASE, BAY_W, FLOOR_H, STYLE_DEF } from './textures.js';
 import { ringArea, orientedRect, hash1, mulberry32, pointInRing, ringBounds, polyNearest } from './util.js';
 import { PolyIndex } from './collision.js';
 // (the look — plastilina / real — as LOOK: STYLE here is the façade styles' layers)
 import { STYLE as LOOK } from './style.js';
 import { planPart, holeRect, recessDepth, styleHasHoles, CT } from './facades.js';
 import { matchRun, emitMeasuredRun, lin } from './fachadas.js';
+import { streetsOf, houseStyle, seenWall, seenFloors, STYLES as CALLES } from './calles.js';
 
 const STYLE = Object.fromEntries(FACADE_STYLES.map((s, i) => [s, i * FACADE_LAYERS_PER_STYLE]));
 const ROOF = { teja: ROOF_BASE + 0, azotea: ROOF_BASE + 1, chapa: ROOF_BASE + 2, uralita: ROOF_BASE + 3 };
 const SHOP_KINDS = /^(shop:|amenity:(bar|cafe|bank|pharmacy|restaurant|fast_food|pub|post_office|driving_school|dentist|clinic|library|casino)|office:|craft:)/;
 
 const NORECT = [0, 0, 0, 0];
+// a house's own plinth (calles.js: its street's style), for the shader: its colour (linear) and its kind × 10 plus its
+// height in metres (kinds: 1 painted, 2 granite, 3 rough stone, 4 glazed tiles, 5 cement, 6 none — the wall to the
+// ground); all zero: the plinth of its façade kind (textures.js)
+export const ZOC_KINDS = { pintado: 1, granito: 2, piedra: 3, azulejo: 4, cemento: 5, ninguno: 6 };
+const ZOC0 = [0, 0, 0, 0];
 class Chunk {
   constructor() {
-    this.pos = []; this.nor = []; this.uv = []; this.tex = []; this.tint = []; this.idx = []; this.rect = []; this.wall = [];
+    this.pos = []; this.nor = []; this.uv = []; this.tex = []; this.tint = []; this.idx = []; this.rect = []; this.wall = []; this.zoc = [];
+    this.zocNow = ZOC0; // (the plinth of the house being laid: every vertex takes it)
     this.edge = LOOK.plastilina ? [] : null; // (claymation: where each wall runs to its corners, to round them in the shader)
   }
   get vcount() { return this.pos.length / 3; }
@@ -32,6 +39,7 @@ class Chunk {
       if (nrm) { const q = k === 1 || k === 2 ? nrm[1] : nrm[0]; this.nor.push(q[0], q[1], q[2]); } else this.nor.push(nx, ny, nz);
       this.tex.push(tex[0], tex[1], tex[2], tex[3]); this.tint.push(tint[0] * m, tint[1] * m, tint[2] * m);
       this.rect.push(rect[0], rect[1], rect[2], rect[3]); this.wall.push(wallH);
+      const z = this.zocNow; this.zoc.push(z[0], z[1], z[2], z[3]);
     }
     this.uv.push(u0, v0, u1, v0, u1, v1, u0, v1);
     // orient triangles so their geometric normal agrees with the requested one
@@ -44,7 +52,8 @@ class Chunk {
     const i = this.vcount;
     if (this.edge) this.edge.push(0, 0, 0, 0, 0, 0);
     this.pos.push(a[0], a[1], a[2], b[0], b[1], b[2], c[0], c[1], c[2]);
-    for (let k = 0; k < 3; k++) { this.nor.push(n[0], n[1], n[2]); this.tex.push(tex[0], tex[1], tex[2], tex[3]); this.tint.push(tint[0], tint[1], tint[2]); this.rect.push(0, 0, 0, 0); this.wall.push(0); }
+    const z = this.zocNow;
+    for (let k = 0; k < 3; k++) { this.nor.push(n[0], n[1], n[2]); this.tex.push(tex[0], tex[1], tex[2], tex[3]); this.tint.push(tint[0], tint[1], tint[2]); this.rect.push(0, 0, 0, 0); this.wall.push(0); this.zoc.push(z[0], z[1], z[2], z[3]); }
     this.uv.push(uva[0], uva[1], uvb[0], uvb[1], uvc[0], uvc[1]);
     const e1x = b[0] - a[0], e1y = b[1] - a[1], e1z = b[2] - a[2], e2x = c[0] - a[0], e2y = c[1] - a[1], e2z = c[2] - a[2];
     const gx = e1y * e2z - e1z * e2y, gy = e1z * e2x - e1x * e2z, gz = e1x * e2y - e1y * e2x;
@@ -62,6 +71,7 @@ class Chunk {
     for (let i = 0; i < r8.length; i++) r8[i] = Math.round(Math.min(1, Math.max(0, this.rect[i])) * 255);
     g.setAttribute('aRect', new THREE.BufferAttribute(r8, 4, true));
     g.setAttribute('aWallH', new THREE.Float32BufferAttribute(this.wall, 1));
+    g.setAttribute('aZoc', new THREE.Float32BufferAttribute(this.zoc, 4));
     if (this.edge) g.setAttribute('aEdge', new THREE.Float32BufferAttribute(this.edge, 2));
     g.setIndex(this.vcount > 65535 ? new THREE.Uint32BufferAttribute(this.idx, 1) : new THREE.Uint16BufferAttribute(this.idx, 1));
     g.computeBoundingSphere();
@@ -72,10 +82,11 @@ class Chunk {
 
 const WHITES = [[1, 1, 1], [0.99, 0.985, 0.97], [0.985, 0.98, 0.99], [1, 0.975, 0.94], [0.97, 0.965, 0.95]];
 const COLORS = [[0.97, 0.9, 0.76], [0.95, 0.84, 0.6], [0.95, 0.78, 0.66], [0.9, 0.74, 0.52], [0.97, 0.92, 0.68], [0.86, 0.9, 0.8], [0.84, 0.89, 0.92], [0.96, 0.87, 0.8]];
-// the claymation's: whitewash that is ivory and cream, never blue-white; the coloured houses in warm earths (cream,
-// light ochre, pale terracotta, straw)
-const WHITES_CLAY = [[1, 1, 1], [1, 0.985, 0.96], [0.985, 0.97, 0.94], [1, 0.98, 0.95], [0.97, 0.955, 0.93]];
-const COLORS_CLAY = [[0.89, 0.82, 0.71], [0.94, 0.9, 0.8], [0.93, 0.8, 0.58], [0.9, 0.74, 0.63], [0.93, 0.87, 0.69], [0.96, 0.88, 0.66], [0.97, 0.94, 0.88], [0.95, 0.83, 0.72]];
+// the claymation's: since 2026-10-12 the real town's — whitewash that is white, a little warm; the coloured houses in
+// the creams, ochres and pale salmons of the old town's captures (they were peach and straw, after the user's first
+// retouched reference pictures)
+const WHITES_CLAY = [[1, 1, 1], [1, 0.99, 0.975], [0.99, 0.985, 0.97], [1, 0.995, 0.98], [0.98, 0.975, 0.96]];
+const COLORS_CLAY = [[0.95, 0.9, 0.8], [0.93, 0.85, 0.7], [0.96, 0.92, 0.78], [0.94, 0.86, 0.78], [0.9, 0.88, 0.84], [0.96, 0.93, 0.86], [0.92, 0.82, 0.66], [0.97, 0.95, 0.9]];
 
 function chooseStyle(b, rnd) {
   const y = b.year || 1960;
@@ -312,7 +323,7 @@ function triangulate(ring, holes) {
 
 // facade: { holes: bool, forcedDoors: [{x, z}], openings: [], runs: [] } — real openings + records for the 3D details
 // measured: the houses modelled from photographs (fachadas.js resolveMeasured): their fronts, part heights and roofs
-export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuilding = null, overrides = null, facade = null, measured = null } = {}) {
+export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuilding = null, overrides = null, facade = null, measured = null, church = null } = {}) {
   const chunks = new Map();
   const chunkOf = (x, z) => {
     const k = Math.floor(x / chunkSize) + ':' + Math.floor(z / chunkSize);
@@ -323,9 +334,10 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
   const ao = []; // ground AO strips: x,z pairs of quads
   // ---- per-building attributes
   const shopPoi = map.pois.filter((p) => SHOP_KINDS.test(p.kind));
+  const streets = streetsOf(map, church); // (the street each building looks onto: its style, calles.js)
   const bInfo = map.buildings.map((b) => {
     const rnd = mulberry32((b.id * 2654435761) >>> 0);
-    const style = chooseStyle(b, rnd);
+    let style = chooseStyle(b, rnd);
     let tint;
     const PL = LOOK.plastilina, CO = PL ? COLORS_CLAY : COLORS, WH = PL ? WHITES_CLAY : WHITES;
     if (style === 'color') tint = CO[Math.floor(rnd() * CO.length)];
@@ -336,6 +348,34 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
     // (the claymation's roofs: fired clay, terracotta)
     const roofTint = PL ? [rt * 0.98, rt * (0.84 + rnd() * 0.06), rt * (0.76 + rnd() * 0.08)] : [rt, rt * (0.95 + rnd() * 0.08), rt * (0.9 + rnd() * 0.12)];
     const info = { style, tint, roofTint, seed: rnd(), shop: b.use === 4 ? 1 : 0, rnd, pitch: 0.42 + rnd() * 0.16, minFloors: 0 };
+    // a house on one of the old town's streets as they really are (calles.js): its kind, its paint and its plinth from
+    // its street's style — the paint exactly the hex measured, over its kind's own painted wall
+    const hs = style !== 'nave' ? houseStyle(streets[b.id], b.id) : null;
+    // a shed seen in the captures: its colour at least (the newer quarters' are of cream or white block, not grey sheet)
+    const sw = style === 'nave' && seenWall(b.id);
+    if (sw) { const w = lin(sw), s0 = lin('#c9cdce'); info.tint = [0, 1, 2].map((k) => Math.min(3, w[k] / s0[k])); }
+    if (hs) {
+      if (hs.kind && STYLE_DEF[hs.kind]) info.style = hs.kind;
+      // (bare brick and stone fronts in their own colour too — the old town's brick red, the newer quarters' buff and
+      // ochre: tinted from the painted brick's and ashlar's own, textures.js paintWall)
+      const base = STYLE_DEF[info.style].wall, own = base === 'brick' ? '#9a5839' : base === 'stone' ? '#b9ad98' : base;
+      if (hs.wall && own && own[0] === '#') { const w = lin(hs.wall), s0 = lin(own); info.tint = [0, 1, 2].map((k) => Math.min(5, w[k] / s0[k])); }
+      // (and no shop fronts just because the Catastro registers the ground floor as commercial: in the old town's
+      // captures there are few shops; only a shop the map knows by name gets its front, below)
+      info.shop = 0;
+      if (hs.plinth === 'none') info.zoc = [0, 0, 0, ZOC_KINDS.ninguno * 10 + 0.01];
+      else if (hs.plinth && ZOC_KINDS[hs.plinth.kind]) { const z = lin(hs.plinth.col || '#9a958e'); info.zoc = [z[0], z[1], z[2], ZOC_KINDS[hs.plinth.kind] * 10 + Math.min(3, Math.max(0.1, hs.plinth.h || 0.9))]; }
+      info.calle = hs;
+      // a row of terraced houses (adosados) that the map has as one long building: each house of it its own paint and
+      // plinth from its street's (calles.js adosados — the newer quarters' promotions of the 70s to the 2000s), the
+      // first the one seen, if it was
+      const S = CALLES[streets[b.id]];
+      if (S && S.adosados && (b.floors || 2) <= 3 && base && base[0] === '#') {
+        const s0 = lin(base), paints = (S.walls || []).filter((w) => !w[2]).map((w) => lin(w[0]).map((v, k) => Math.min(5, v / s0[k])));
+        const zocs = (S.plinth || []).map((z) => (z.kind && ZOC_KINDS[z.kind] ? [...lin(z.col || '#9a958e'), ZOC_KINDS[z.kind] * 10 + Math.min(3, Math.max(0.1, z.h || 0.9))] : [0, 0, 0, ZOC_KINDS.ninguno * 10 + 0.01]));
+        if (paints.length > 1) info.hilera = { w: S.adosados.w || 6.5, paints, zocs, first: [info.tint, info.zoc || null] };
+      }
+    }
     const ov = overrides && overrides.get(b.id);
     if (ov) Object.assign(info, ov);
     // a measured house: its walls take the paint of its front (sides and back too)
@@ -350,10 +390,14 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
   // ---- part heights
   const partIndex = new PolyIndex(map.bounds.x0 - 400, map.bounds.z0 - 400, map.bounds.x1 + 400, map.bounds.z1 + 400, 16);
   const parts = [];
+  // (a house seen in the captures stands as many storeys as are seen there: its tallest parts so, the rest no taller)
+  const topF = new Float32Array(map.buildings.length);
+  for (const p of map.parts) if (p.b >= 0) topF[p.b] = Math.max(topF[p.b], p.floors);
   for (const p of map.parts) {
     if (skipPart && skipPart(p)) continue;
-    const bi = p.b >= 0 ? bInfo[p.b] : null;
-    let H = Math.max(p.floors, bi ? bi.minFloors : 0) * FLOOR_H;
+    const bi = p.b >= 0 ? bInfo[p.b] : null, sf = p.b >= 0 ? seenFloors(p.b) : 0;
+    const fl = sf ? (p.floors >= topF[p.b] ? sf : Math.min(p.floors, sf)) : p.floors;
+    let H = Math.max(fl, bi ? bi.minFloors : 0) * FLOOR_H;
     if (bi && bi.style === 'nave') {
       const big = Math.sqrt(p.area);
       H = Math.max(H, 4.2 + Math.min(4, big * 0.12) + (hash1(p.id) - 0.5));
@@ -410,6 +454,7 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
   for (const p of parts) {
     const info = p.info;
     const c = chunkOf(p.c[0], p.c[1]);
+    c.zocNow = info.zoc || ZOC0;
     const H = p.H;
     const rings = [p.ring].concat(p.holes || []);
     // (claymation: the walls follow the outline with its corners rounded, as a clay model's — the roof keeps the true
@@ -463,7 +508,7 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
     if (!p.filler) planPart(p, info, runs, H, facade && facade.forcedDoors); // (a filler: plain wall, no doors)
     for (const run of runs) tris += emitRun(c, run, p, info, H, facade);
     // ---------------- roof
-    tris += buildRoof(c, p, info, H);
+    tris += buildRoof(c, p, info, H, runs);
     if (p.b < 0 || kept[p.b]) {
       const hc = Math.max(H + 1.5, (p.top || H) + 0.4);
       map.collider.addRing(p.ring, hc, p.b);
@@ -477,7 +522,7 @@ export function buildBuildings(map, { chunkSize = 220, skipPart = null, onBuildi
         facade.runs.push({
           ax: run.ax + run.dx * run.t0, az: run.az + run.dz * run.t0, bx: run.ax + run.dx * run.t1, bz: run.az + run.dz * run.t1,
           nx: run.nx, nz: run.nz, H, pitched: p.roofKind === 'hip' || p.roofKind === 'lip', shopEnds,
-          style: info.style, tint: info.tint, bid: p.b, pid: p.id, seed: info.seed, measured: !!run.mf,
+          style: info.style, tint: info.tint, bid: p.b, pid: p.id, seed: info.seed, measured: !!run.mf, calle: info.calle || null,
         });
       }
     }
@@ -516,9 +561,20 @@ function emitRun(c, run, p, info, H, facade) {
     c.quad(x0, ya, z0, x1, ya, z1, x1, yb, z1, x0, yb, z0, nx, 0, nz, ua, ya / FLOOR_H, ub, yb / FLOOR_H, [layer, 0, info.seed, 0], info.tint, rect, H, null, run.code ? [(ua / uTot) * run.L, (ub / uTot) * run.L, run.code] : null, run.nrmAt ? [run.nrmAt(ua / uTot), run.nrmAt(ub / uTot)] : null);
     tris += 2;
   };
+  // (a row of terraced houses, the map's one building: each house's own paint and plinth, a whole number of bays wide)
+  const row = info.hilera && run.street && run.L >= 14 ? info.hilera : null, hb = row ? Math.max(1, Math.round(row.w / (run.L / uTot))) : 0;
+  const tint0 = info.tint, zoc0 = c.zocNow;
   for (let b = Math.floor(u0 + 1e-6); b < u1 - 1e-6; b++) {
     const ua = Math.max(u0, b), ub = Math.min(u1, b + 1);
     if (ub - ua < 1e-4) continue;
+    if (row) {
+      const k = Math.floor(b / hb), h = (x) => { const v = Math.sin(x) * 43758.5453; return v - Math.floor(v); };
+      if (k === 0) { info.tint = tint0; c.zocNow = zoc0; }
+      else {
+        info.tint = row.paints[Math.floor(h(k * 12.9898 + info.seed * 78.233 + run.ax * 0.071) * row.paints.length)];
+        if (row.zocs.length) c.zocNow = row.zocs[Math.floor(h(k * 7.233 + info.seed * 31.7 + run.az * 0.053) * row.zocs.length)];
+      }
+    }
     const complete = uTot >= 1 && ua - b < 1e-4 && b + 1 - ub < 1e-4;
     for (let f = 0; f < nF; f++) {
       const ya = f * FLOOR_H, yb = ya + FLOOR_H;
@@ -531,18 +587,19 @@ function emitRun(c, run, p, info, H, facade) {
         const bw = run.L / uTot;
         const rr = rect || [0.3, 0, 0.7, 0.74];
         const [wx, wz] = at(b + (rr[0] + rr[2]) / 2);
-        facade.ground.push({ x: wx, z: wz, nx, nz, r: ((rr[2] - rr[0]) * bw) / 2 + 0.35, type, bid: p.b, style: info.style });
+        facade.ground.push({ x: wx, z: wz, nx, nz, r: ((rr[2] - rr[0]) * bw) / 2 + 0.35, type, bid: p.b, style: info.style, calle: info.calle || null });
       }
       // (claymation: the ground-floor windows too, for the pots set out under them — the user's pictures)
       if (LOOK.plastilina && f === 0 && facade && type === CT.WIN_G && info.style !== 'nave') {
         const bw = run.L / uTot, rr = rect || [0.3, 0.3, 0.7, 0.8], [wx, wz] = at(b + (rr[0] + rr[2]) / 2);
-        (facade.groundWin || (facade.groundWin = [])).push({ x: wx, z: wz, nx, nz, w: (rr[2] - rr[0]) * bw });
+        (facade.groundWin || (facade.groundWin = [])).push({ x: wx, z: wz, nx, nz, w: (rr[2] - rr[0]) * bw, calle: info.calle || null });
       }
       if (!holes || !rect) { piece(ua, ub, ya, yb, sBase + type, rect || NORECT); continue; }
       tris += emitHoleCell(c, run, at, piece, b, f, type, rect, p, info, sBase, H, nF, facade);
     }
     if (H - nF * FLOOR_H > 0.02) piece(ua, ub, nF * FLOOR_H, H, sBase + CT.BLANK_U, NORECT);
   }
+  info.tint = tint0; c.zocNow = zoc0;
   return tris;
 }
 
@@ -581,7 +638,7 @@ function emitHoleCell(c, run, at, piece, b, f, type, rect, p, info, sBase, H, nF
     facade.openings.push({
       ox, oz, oy: ya, tx, tz, nx, nz, bw, b, f, type, style: info.style,
       x0: rx0 * bw, y0: ry0 * FLOOR_H, x1: rx1 * bw, y1: ry1 * FLOOR_H, D,
-      seed: info.seed, tint: T, pid: p.id, bid: p.b, H, floors: nF,
+      seed: info.seed, tint: T, pid: p.id, bid: p.b, H, floors: nF, calle: info.calle || null,
     });
   }
   return 18;
@@ -608,8 +665,11 @@ function nearestBuilding(map, x, z, r) {
   return best;
 }
 
-function buildRoof(c, p, info, H) {
+function buildRoof(c, p, info, H, runs = null) {
   const rnd = info.rnd;
+  // a front parapet (pretil) before the tiled roof, on its street's houses that have one (calles.js): from the street the
+  // white parapet and its coping, not the row of tile ends; the roof's eaves drawn in, behind it
+  const pretil = !!(info.calle && info.calle.pretil) && runs && runs.some((q) => q.exposed && q.ri === 0);
   const nave = info.style === 'nave';
   const r = cleanRing(p.ring);
   const area = p.area;
@@ -625,7 +685,7 @@ function buildRoof(c, p, info, H) {
     let ux = Math.cos(ang), uz = Math.sin(ang);
     if (hd > hw) { const t = hw; hw = hd; hd = t; const tx = ux; ux = -uz; uz = tx; }
     const vx = -uz, vz = ux;
-    const e = nave ? 0.15 : 0.24;
+    const e = nave ? 0.15 : pretil ? 0.03 : 0.24;
     const A = hw + e, B = hd + e;
     const tanP = nave ? 0.2 : info.pitch;
     const rh = Math.min(B * tanP, nave ? 1.6 : 3.2);
@@ -679,7 +739,8 @@ function buildRoof(c, p, info, H) {
       tris += 2;
     };
     const outward = (a, b) => { const ex = b[0] - a[0], ez = b[2] - a[2]; const mx = (a[0] + b[0]) / 2 - cx, mz = (a[2] + b[2]) / 2 - cz; return ez * mx - ex * mz > 0 ? [a, b] : [b, a]; };
-    for (const [a, b] of gable ? [[c1, c2], [c3, c4]] : [[c1, c2], [c2, c3], [c3, c4], [c4, c1]]) { const [p0, p1] = outward(a, b); tileEdge(p0, p1); }
+    if (!pretil) for (const [a, b] of gable ? [[c1, c2], [c3, c4]] : [[c1, c2], [c2, c3], [c3, c4], [c4, c1]]) { const [p0, p1] = outward(a, b); tileEdge(p0, p1); }
+    if (pretil) tris += frontParapets(c, info, H, runs, 0.55 + rnd() * 0.35);
     // chimney (chimenea) on a share of the houses, rising from one slope
     if (!nave && rnd() < 0.42 && B > 2) {
       const ca = (rnd() - 0.5) * rl * 1.4, cb = -B * (0.35 + rnd() * 0.25);
@@ -752,6 +813,26 @@ function buildRoof(c, p, info, H) {
   return tris;
 }
 
+// the parapet along a house's street fronts (its outer ring's exposed runs), from the top of the wall up h: both faces in
+// the wall's paint, a coping on top (albardilla) a little proud of the wall, as on the flat roofs
+function frontParapets(c, info, H, runs, h) {
+  const tp = [STYLE[info.style], 2, info.seed, 0], cap = [info.tint[0] * 0.92, info.tint[1] * 0.92, info.tint[2] * 0.9];
+  let tris = 0;
+  for (const q of runs) {
+    if (!q.exposed || q.ri !== 0 || (q.t1 - q.t0) * q.L < 0.5) continue;
+    const ax = q.ax + q.dx * q.t0, az = q.az + q.dz * q.t0, bx = q.ax + q.dx * q.t1, bz = q.az + q.dz * q.t1;
+    const ex = bx - ax, ez = bz - az, L = Math.hypot(ex, ez);
+    const nx = q.nx, nz = q.nz, y0 = H - 0.05, y1 = H + h;
+    c.quad(ax, y0, az, bx, y0, bz, bx, y1, bz, ax, y1, az, nx, 0, nz, 0, y0 / FLOOR_H, L / BAY_W, y1 / FLOOR_H, tp, info.tint);
+    c.quad(bx - nx * 0.18, y0, bz - nz * 0.18, ax - nx * 0.18, y0, az - nz * 0.18, ax - nx * 0.18, y1, az - nz * 0.18, bx - nx * 0.18, y1, bz - nz * 0.18, -nx, 0, -nz, 0, y0 / FLOOR_H, L / BAY_W, y1 / FLOOR_H, tp, info.tint);
+    const o1 = 0.05, o2 = 0.23, gx = (ex / L) * 0.02, gz = (ez / L) * 0.02, yc = y1;
+    c.quad(ax + nx * o1 - gx, yc + 0.05, az + nz * o1 - gz, bx + nx * o1 + gx, yc + 0.05, bz + nz * o1 + gz, bx - nx * o2 + gx, yc + 0.05, bz - nz * o2 + gz, ax - nx * o2 - gx, yc + 0.05, az - nz * o2 - gz, 0, 1, 0, 0, yc / FLOOR_H, L / BAY_W, yc / FLOOR_H + 0.05, tp, cap);
+    c.quad(ax + nx * o1 - gx, yc - 0.03, az + nz * o1 - gz, bx + nx * o1 + gx, yc - 0.03, bz + nz * o1 + gz, bx + nx * o1 + gx, yc + 0.05, bz + nz * o1 + gz, ax + nx * o1 - gx, yc + 0.05, az + nz * o1 - gz, nx, 0, nz, 0, yc / FLOOR_H, L / BAY_W, yc / FLOOR_H + 0.02, tp, cap);
+    tris += 8;
+  }
+  return tris;
+}
+
 // small whitewashed chimney with a tiled cap
 function chimney(c, x, z, ux, uz, y0, y1, info) {
   const w = 0.32, vx = -uz, vz = ux;
@@ -792,6 +873,7 @@ function flatCap(c, ring, holes, y, layer, info, tint) {
     c.tint.push(tint[0], tint[1], tint[2]);
     c.rect.push(0, 0, 0, 0);
     c.wall.push(0);
+    c.zoc.push(0, 0, 0, 0);
     if (c.edge) c.edge.push(0, 0);
   }
   for (const f of t.faces) {

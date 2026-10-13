@@ -102,17 +102,20 @@ export function planPart(part, info, runs, H, forcedDoors) {
         doors.add(c.g); want--;
       }
     }
-    const gp = GARAGE_P[style] ?? 0.1;
+    const gp = (info.calle && info.calle.garage != null ? info.calle.garage : GARAGE_P[style]) ?? 0.1; // (its street's share, calles.js)
+    const tapia = !!(info.calle && info.calle.tapia); // (a yard wall seen in the captures: blind, with its gate)
     for (const g of ground) {
+      if (tapia) { set(g.r, g.b, 0, doors.has(g) && g.r.L / g.r.uTot > 2.6 ? CT.GARAGE : CT.BLANK_G); continue; }
       if (doors.has(g)) { set(g.r, g.b, 0, CT.DOOR); continue; }
       const h = rnd();
       const bw = g.r.L / g.r.uTot;
       set(g.r, g.b, 0, h < gp && bw > 2.6 ? CT.GARAGE : h > 0.95 ? CT.BLANK_G : CT.WIN_G);
     }
   }
-  const bp = BALC_P[style] ?? 0.25;
+  const bp = (info.calle && info.calle.balc != null ? info.calle.balc : BALC_P[style]) ?? 0.25;
   for (const g of ground) {
     for (let f = 1; f < nF; f++) {
+      if (info.calle && info.calle.tapia) { set(g.r, g.b, f, CT.BLANK_U); continue; }
       const below = g.r.cells.get(g.b * 64 + f - 1);
       const h = rnd();
       const t = (below === CT.DOOR && h < 0.55) || (below === CT.BALC && h < 0.6) || (below !== CT.DOOR && h < bp) ? CT.BALC : h > 0.96 ? CT.BLANK_U : CT.WIN_U;
@@ -307,10 +310,9 @@ export const C = {
   glassDk: hexC('#27323c'), brass: hexC('#b08d3c'), metal: hexC('#8e9295'), metalDk: hexC('#6d7175'), pipe: hexC('#9fa3a6'),
   ac: hexC('#ecece8'), acDk: hexC('#3a3c3e'), plate: hexC('#f4f6f8'), tileBlue: hexC('#2f5aa0'), vadoRed: hexC('#c8202a'), vadoBlue: hexC('#2d56a8'),
   meter: hexC('#c9c9c2'), slabUnder: hexC('#cfc9bd'),
-  sandstone: hexC('#d6c3a0'), sandSill: hexC('#e2d4b6'), // the claymation's warm stone
 };
 const RECERCADO = ['#d9a441', '#c9b27a', '#8d97a3', '#4f6fa8', '#b8793f'];
-const RECERCADO_CLAY = ['#cfae78', '#c49a62', '#b8793f', '#d8c39a', '#c9b27a']; // the claymation's: warm ochres and sand
+const RECERCADO_CLAY = ['#ffffff', '#d9c08f', '#c9a46a', '#e8e2d4', '#b9b4aa']; // the claymation's: the real town's whites, ochres and greys
 const CURTAINS = ['#2f7a45', '#b8342c', '#d8b23a', '#3e5f9a', '#6b4a2e', '#e8e4d8'];
 const AWNING = ['#1d6e3e', '#b02a2a', '#1f4f8a', '#c77a12', '#6b4a2e', '#2a2a2a'];
 const FASCIA = ['#1f3b5a', '#7a1f1f', '#23472c', '#3b3b3b', '#8a5a1c', '#5a2d5f', '#e8e4dc'];
@@ -339,18 +341,18 @@ function buildingStyle(o) {
   if (o.style === 'renovada' || o.style === 'ladrillo') bs.alu = true;
   bs.rejaCol = trad || o.style === 'piedra' ? (r() < 0.72 ? C.iron : r() < 0.5 ? C.ironWhite : C.ironGreen) : (r() < 0.8 ? C.iron : C.ironWhite);
   bs.reja = !!S.reja && r() < 0.85;
-  // (claymation: as in the user's pictures, the old houses' windows behind fat black grilles, pots on every other sill)
-  if (LOOK.plastilina && (trad || o.style === 'piedra' || o.style === 'color' || o.style === 'renovada')) { bs.reja = r() < 0.92; bs.rejaCol = r() < 0.88 ? C.iron : bs.rejaCol; }
+  r(); r(); // (the claymation drew two more here: its grilles on nearly every window, as in the user's first pictures — gone
+  // since 2026-10-12 for the real streets' look; drawn still, so every house keeps the rest of its choices)
   bs.buche = (trad || o.style === 'piedra') && r() < 0.3;
   bs.sill = o.style === 'piedra' ? C.granite : o.style === 'ladrillo' ? hexC('#9b9a95') : o.style === 'moderna' ? hexC('#c9c9c6') : trad && r() < 0.3 ? C.terracotta : C.marble;
   bs.sillPat = o.style === 'piedra' || o.style === 'ladrillo' ? PAT.GRANITE : 0;
-  // (claymation: wide, proud door surrounds of warm sandstone on most old houses)
+  // the granite surrounds of the old houses' doors (the claymation's were sandstone on most, as in the user's first
+  // pictures, until 2026-10-12)
   const PL = LOOK.plastilina;
-  bs.surround = o.style === 'piedra' || ((trad || o.style === 'renovada' || (PL && o.style === 'color')) && r() < (PL ? 0.8 : 0.55));
-  bs.stone = PL && o.style !== 'piedra' ? C.sandstone : C.granite;
-  if (PL && bs.sill === C.marble) bs.sill = C.sandSill;
+  bs.surround = o.style === 'piedra' || ((trad || o.style === 'renovada') && r() < 0.55);
+  bs.stone = C.granite;
   bs.recercado = !bs.surround && (trad || o.style === 'color') && r() < 0.35 ? hexC(pickR(r, PL ? RECERCADO_CLAY : RECERCADO)) : null;
-  bs.pots = (trad || o.style === 'renovada' || o.style === 'color' || o.style === 'piedra') ? (LOOK.plastilina ? 0.88 : 0.45) : (LOOK.plastilina ? 0.6 : 0.12); // (claymation: geraniums on most sills, as in the user's pictures)
+  bs.pots = (trad || o.style === 'renovada' || o.style === 'color' || o.style === 'piedra') ? 0.45 : 0.12;
   bs.shutters = trad || o.style === 'piedra';
   bs.curtain = hexC(pickR(r, CURTAINS));
   bs.pipe = r() < 0.6 ? C.pipe : r() < 0.5 ? hexC('#e8e8e4') : hexC('#a65a3a');
@@ -361,6 +363,25 @@ function buildingStyle(o) {
   bs.cornice = o.style === 'renovada' || o.style === 'color' || o.style === 'ladrillo';
   const pv = r();
   if (pv < 0.2) bs.pers = hexC('#f1efe9'); else if (pv < 0.3) bs.pers = hexC('#8a8d90'); else if (pv < 0.36) bs.pers = hexC('#6b4a2e');
+  // a house on one of the old town's streets as they really are (calles.js): what its street's captures show — the
+  // grilles, the surrounds, the carpentry's colours, the pots — over the kind's own choices (and no claymation
+  // exaggeration: the stone of its door surround the real granite grey)
+  const cs = o.calle;
+  if (cs) {
+    if (cs.reja != null) bs.reja = cs.reja;
+    if (cs.rejaCol) bs.rejaCol = hexC(cs.rejaCol);
+    if (cs.buche != null) bs.buche = cs.buche;
+    if (cs.surround !== undefined) { // (the street's: painted round the openings, or the door's of granite)
+      const stone = cs.surroundKind === 'piedra';
+      bs.surround = stone && !!cs.surround;
+      bs.recercado = !stone && cs.surround ? hexC(cs.surround) : null;
+    }
+    if (cs.frames) { bs.frame = hexC(cs.frames); bs.alu = !!cs.alu; }
+    if (cs.shutters) bs.pers = hexC(cs.shutters);
+    if (cs.door) bs.doorCol = hexC(cs.door);
+    if (cs.wood) bs.wood = hexC(cs.wood);
+    if (cs.pots != null) bs.pots = cs.pots;
+  }
   bsCache.set(key, bs);
   return bs;
 }

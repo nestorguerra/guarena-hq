@@ -1,5 +1,5 @@
 // The look of the game, chosen before anything is built (Ajustes › Estética; it takes a restart to change):
-//  - 'plastilina' (the default): Guareña as a stop-motion claymation film — src/plastilina.js;
+//  - 'plastilina' (the default): Guareña modelled in clay, as real as clay allows — src/plastilina.js;
 //  - 'real': the photographic town.
 // Read by the textures, materials, sky, trees and characters while they are made.
 export const STYLE = { name: 'plastilina', plastilina: true };

@@ -37,17 +37,20 @@ const KEYS_CLAY = [
   { a: -0.08, zen: 0x1a2a58, hor: 0x4a3c58, warm: 0x8a5a50, gnd: 0x1a1816, sun: 0x5a3020 },
   { a: 0.0, zen: 0x2f4f96, hor: 0xe09a68, warm: 0xff9a50, gnd: 0x5a4a3c, sun: 0xff8a40 },
   { a: 0.12, zen: 0x3570c0, hor: 0xeac49a, warm: 0xffc078, gnd: 0x9a8668, sun: 0xffc98a },
-  { a: 0.35, zen: 0x5aa7cc, hor: 0x7bb8d2, warm: 0xd2dcd8, gnd: 0xbfa880, sun: 0xffe2b8 },
-  { a: 1.0, zen: 0x57a5cb, hor: 0x78b6d1, warm: 0xcedad8, gnd: 0xc4ad87, sun: 0xffeccf },
+  { a: 0.35, zen: 0x5aa7cc, hor: 0x7bb8d2, warm: 0xd2dcd8, gnd: 0xb6ae9e, sun: 0xfff0dc },
+  { a: 1.0, zen: 0x57a5cb, hor: 0x78b6d1, warm: 0xcedad8, gnd: 0xbab2a2, sun: 0xfff6ea },
 ];
 const _ca = new THREE.Color(), _cb = new THREE.Color();
 const NIGHT_FILL = new THREE.Color(0.27, 0.33, 0.47), NIGHT_GND = new THREE.Color(0.11, 0.1, 0.09);
 const WHITE = new THREE.Color(1, 1, 1);
-// claymation: the studio's lamps and fills (warm: no blue in the shade)
+// claymation: the studio's lamps and fills — a day's light since 2026-10-12 («que el estilo plastilina quede muy
+// realista», with the real streets' captures beside it): a sun a touch warm, the shade lit by the sky (a hint of its
+// blue), the pavement's bounce a neutral sand. (They were all warm, a golden studio, as in the user's first retouched
+// reference pictures: the whitewash came out peach)
 const CLAY = {
-  sun: new THREE.Color(1, 0.97, 0.9), key: new THREE.Color(1.0, 0.89, 0.74), fill: new THREE.Color(0.98, 0.94, 0.88),
-  studio: new THREE.Color(1.0, 0.91, 0.8), ground: new THREE.Color(0.88, 0.76, 0.58), bounce: new THREE.Color(1.0, 0.84, 0.64),
-  air: new THREE.Color(0.93, 0.88, 0.8), walls: new THREE.Color(0.96, 0.89, 0.76),
+  sun: new THREE.Color(1, 0.98, 0.95), key: new THREE.Color(1.0, 0.96, 0.9), fill: new THREE.Color(0.93, 0.94, 0.96),
+  studio: new THREE.Color(0.95, 0.96, 0.98), ground: new THREE.Color(0.8, 0.77, 0.72), bounce: new THREE.Color(0.98, 0.94, 0.88),
+  air: new THREE.Color(0.88, 0.9, 0.93), walls: new THREE.Color(0.92, 0.9, 0.86),
 };
 const REAL = { fill: new THREE.Color(0.86, 0.84, 0.8), walls: new THREE.Color(0.9, 0.84, 0.72), haze: new THREE.Color(0.8, 0.77, 0.72) };
 const _c = new THREE.Color(), _sunCol = new THREE.Color();
@@ -542,9 +545,9 @@ export class SkySystem {
         this.envHaze.material.color.copy(U.uHor.value).lerp(REAL.haze, 0.6).multiplyScalar(0.25 + 0.75 * day).lerp(_c.setRGB(0.6, 0.62, 0.66).multiplyScalar(0.2 + 0.8 * day), ov);
         this.envHaze.material.opacity = 0.38 * day + 0.3 * ov * day;
       } else { // (claymation: the studio round the set reflects warm — its walls, its lamps — never the painted blue)
-        this.envGround.material.color.setRGB(0.6, 0.5, 0.42);
+        this.envGround.material.color.setRGB(0.55, 0.53, 0.5);
         this.envBand.material.color.copy(U.uHor.value).multiplyScalar(0.3).lerp(_c.copy(CLAY.walls).multiply(U.uSunCol.value), sunK * 0.95);
-        this.envHaze.material.color.setRGB(0.93, 0.83, 0.7).multiplyScalar(0.3 + 0.7 * day).lerp(_c.setRGB(0.72, 0.72, 0.76).multiplyScalar(0.25 + 0.75 * day), ov * 0.8);
+        this.envHaze.material.color.setRGB(0.86, 0.87, 0.88).multiplyScalar(0.3 + 0.7 * day).lerp(_c.setRGB(0.72, 0.72, 0.76).multiplyScalar(0.25 + 0.75 * day), ov * 0.8);
         this.envHaze.material.opacity = 0.62 * day;
       }
       const rt = this.pmrem.fromScene(this.envScene, 0, 0.1, 400);

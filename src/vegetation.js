@@ -4,6 +4,7 @@
 // the town (one species along a whole street, trees kept clear of doors, bitter oranges round the squares, mixed
 // parks with palms and hedges, cypresses in the cemetery, fruit trees and palms in the yards inside the blocks).
 import { mulberry32, hash1, hash2, pointInRing, ringArea, ringBounds, polySample } from './util.js';
+import { STYLES as CALLES, parkOf } from './calles.js';
 
 // a little colour of its own for each tree (brighter or darker, a touch warmer or cooler)
 function tintOf(rnd, k = 1) { const b = 1 + (rnd() - 0.5) * 0.2 * k, h = (rnd() - 0.5) * 0.1 * k; return [b * (1 + h), b, b * (1 - h * 0.6)]; }
@@ -49,8 +50,16 @@ export function plantTown(world, G, F, q) {
 
   // ---------------- the town first (what the player sees from the street), then the countryside out to the cap
   // plaza orange trees and other hand-placed trees from the landmarks module
-  for (const t of world.extraTrees || []) if (free(t.x, t.z, 0.8)) T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, { s: t.s || 1, check: false });
-  // street trees: one species (and one age) along a whole street, evenly spaced on the pavement, clear of doors
+  for (const t of world.extraTrees || []) if (free(t.x, t.z, t.pad ?? 0.8)) T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, { s: t.s || 1, check: false });
+  // street trees: one species (and one age) along a whole street, evenly spaced on the pavement, clear of doors (a
+  // street seen in its captures: its own, or a stretch's — calles_estilos.js arboles, tramos)
+  const treesOf = (cs, e) => {
+    if (cs.tramos) {
+      const m = polySample(e.pts, e.cum, e.len / 2, {});
+      for (const t of cs.tramos) if (t.arboles && Math.hypot(m.x - t.x, m.z - t.z) < t.r) return t.arboles;
+    }
+    return cs.arboles || null;
+  };
   world.streetTrees = world.streetTrees || [];
   const streetSpecies = (e) => {
     const h = hash1((e.name ? [...e.name].reduce((a, c) => a * 31 + c.charCodeAt(0), 7) : e.id) * 0.618);
@@ -58,20 +67,25 @@ export function plantTown(world, G, F, q) {
     return h < 0.5 ? 'naranjo' : h < 0.78 ? 'morera' : 'platano';
   };
   for (const e of map.edges) {
-    if (!e.drive || e.dirt || e.facade < 13 || e.len < 20) continue;
-    if (!['primary', 'tertiary', 'residential', 'unclassified', 'secondary'].includes(e.cls)) continue;
-    const sp = streetSpecies(e), step = sp === 'naranjo' ? 6.5 : sp === 'morera' ? 7.5 : 9;
-    const size = (sp === 'platano' ? (e.cls === 'primary' ? 0.85 : 0.7) : 0.9) * (0.92 + hash1(e.id * 1.7) * 0.16); // (the street's trees are all of an age)
+    // (a street seen in its captures, calles.js, has trees only where they show them: their species, as far apart)
+    const cs = CALLES[e.name], own = cs && treesOf(cs, e);
+    if (cs && !own) continue;
+    if (!e.drive || e.dirt || (!own && e.facade < 13) || e.len < 20) continue;
+    if (!own && !['primary', 'tertiary', 'residential', 'unclassified', 'secondary'].includes(e.cls)) continue;
+    const sp = own ? own.kind : streetSpecies(e), step = own && own.every ? own.every : sp === 'naranjo' ? 6.5 : sp === 'morera' ? 7.5 : 9;
+    const size = (sp === 'platano' ? (e.cls === 'primary' ? 0.85 : 0.7) : 0.9) * (0.92 + hash1(e.id * 1.7) * 0.16) * ((own && own.escala) || 1); // (the street's trees are all of an age: young ones where its captures show them so)
     const stint = tintOf(mulberry32(e.id + 7), 0.6);
     for (let s = step * 0.6; s < e.len - step * 0.6; s += step) {
       for (const side of [1, -1]) {
         // (a tree in its pit only where the pavement there leaves room to walk past it: 1.8 m or more)
         const pav = map.pavementAt(e, s, side);
-        if (pav != null && pav < 1.8) continue;
+        if (pav != null && pav < (own ? 1.2 : 1.8)) continue;
         const off = map.kerbAt(e, s, side) + (pav != null ? Math.min(1.1, Math.max(0.7, pav * 0.38)) : Math.max(0.9, e.sw * 0.55)); // (from the kerb as laid, kerbs.js)
         const p = polySample(e.pts, e.cum, s, {});
         const x = p.x - p.dz * off * side, z = p.z + p.dx * off * side;
-        if (!free(x, z, 0.6) || nearDoor(x, z, 1.2)) continue;
+        // (a street's own trees stand in their pits behind the kerb as laid — its nominal width does not hold them off —
+        // and may come nearer a door, as they do there)
+        if ((own ? map.buildingAt(x, z) : !free(x, z, 0.6)) || nearDoor(x, z, own ? 0.8 : 1.2)) continue;
         if (hash2(Math.floor(x), Math.floor(z)) < 0.1) continue; // (a gap here and there: one died, one was never planted)
         const t = T(sp, x, z, { s: size * (0.95 + rnd() * 0.1), tint: stint.map((v) => v * (0.96 + rnd() * 0.08)) });
         if (t) world.streetTrees.push({ x, z, dx: p.dx, dz: p.dz });
@@ -82,6 +96,10 @@ export function plantTown(world, G, F, q) {
   for (const a of map.areas.filter((a) => a.kind === 'place:square' || a.kind === 'highway:pedestrian' || a.kind === 'amenity:marketplace')) {
     const r = a.ring, area = Math.abs(ringArea(r));
     if (area < 150) continue;
+    // (a square seen in its captures has the trees they show, and only those: calles.js — the Plaza de Abastos is open
+    // paving with planters, not a grove)
+    const cs = CALLES[a.name];
+    if (cs && !cs.arboles) continue;
     for (let i = 0; i < r.length; i += 2) {
       const j = (i + 2) % r.length, L = Math.hypot(r[j] - r[i], r[j + 1] - r[i + 1]);
       const ux = (r[j] - r[i]) / (L || 1), uz = (r[j + 1] - r[i + 1]) / (L || 1);
@@ -98,14 +116,17 @@ export function plantTown(world, G, F, q) {
   for (const a of G.parkPlots) {
     const [x0, z0, x1, z1] = ringBounds(a.ring), area = Math.abs(ringArea(a.ring));
     const small = area < 1500;
+    // (a garden seen in the captures: its own trees, in their shares — calles.js parque)
+    const own = parkOf((x0 + x1) / 2, (z0 + z1) / 2), oT = own && own.especies ? own.especies.reduce((t, e) => t + e[1], 0) : 0;
+    const pick = (r) => { let x = r * oT; for (const [sp, w] of own.especies) { x -= w; if (x <= 0) return sp; } return own.especies[0][0]; };
     const n = Math.min(220, Math.max(3, area / (small ? 60 : 85)));
     for (let i = 0; i < n * 3 && (counts._park = (counts._park || 0)) < 99999; i++) {
       const x = x0 + rnd() * (x1 - x0), z = z0 + rnd() * (z1 - z0);
       if (!pointInRing(x, z, a.ring) || !free(x, z, 1.5)) continue;
       const r = rnd();
-      const sp = small ? (r < 0.5 ? 'naranjo' : r < 0.7 ? 'palmera' : r < 0.85 ? 'morera' : 'adelfa')
+      const sp = oT ? pick(r) : small ? (r < 0.5 ? 'naranjo' : r < 0.7 ? 'palmera' : r < 0.85 ? 'morera' : 'adelfa')
         : (r < 0.26 ? 'platano' : r < 0.44 ? 'pino' : r < 0.56 ? 'morera' : r < 0.66 ? 'naranjo' : r < 0.74 ? 'palmera' : r < 0.78 ? 'washingtonia' : r < 0.84 ? 'cipres' : r < 0.9 ? 'encina' : 'adelfa');
-      T(sp, x, z, { s: 0.85 + rnd() * 0.3 });
+      T(sp, x, z, { s: (0.85 + rnd() * 0.3) * ((own && own.escala) || 1) });
     }
     // the hedge round a park's edge (with its gaps where the paths come in)
     const rg = a.ring;

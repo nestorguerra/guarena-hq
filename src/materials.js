@@ -1,6 +1,8 @@
 // Shared materials & shader patches (texture arrays for facades and ground, wind for trees, night lighting).
 import * as THREE from 'three';
 import { STYLE } from './style.js';
+import { CLAY_WALL, CLAY_ROAD } from './plastilina.js';
+const CLAY_WALL_DARK = CLAY_WALL[0].map((v) => v.toFixed(3)).join(', '), CLAY_WALL_LIGHT = CLAY_WALL[1].map((v) => v.toFixed(3)).join(', ');
 
 export const shared = {
   uNight: { value: 0 },      // 0 day .. 1 full night
@@ -58,7 +60,9 @@ export function arrayTexture(data, size, layers, { srgb = true, aniso = 8 } = {}
 // detail = { alb, nrm, mean[], size[], on, normals }
 export function makeBuildingMaterial(facadeTex, detail = null) {
   const m = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.92, metalness: 0.0, side: THREE.DoubleSide });
-  if (STYLE.plastilina) m.defines = { CLAY: '', CLAY_RELIEF: '1.6', CLAY_TONE: '1.8', CLAY_SET: '0', CLAY_TILE: '2.4', CLAY_AMP: '0.062', CLAY_CAV: '0.12' }; // (a set: worked hard by hand; its marks in the colour too, for the shade and the whitewash)
+  // (a set worked by hand, its marks in the colour too — gentler since 2026-10-12, as smooth as the old town's render in
+  // its captures: they were 1.6 / 1.8 / 0.062)
+  if (STYLE.plastilina) m.defines = { CLAY: '', CLAY_RELIEF: '1.0', CLAY_TONE: '1.15', CLAY_SET: '0', CLAY_TILE: '2.4', CLAY_AMP: '0.038', CLAY_CAV: '0.12' };
   const dOn = detail && detail.on ? 1 : 0;
   const nOn = detail && detail.on && detail.normals ? 1 : 0;
   const dummy = new THREE.DataArrayTexture(new Uint8Array([128, 128, 255, 255]), 1, 1, 1);
@@ -81,14 +85,14 @@ export function makeBuildingMaterial(facadeTex, detail = null) {
     sh.uniforms.uZocStone = { value: [0, 0, 1, 0, 0, 0, 0, 1] };
     sh.vertexShader = sh.vertexShader
       .replace('#include <common>', `#include <common>
-attribute vec4 aTex; attribute vec3 aTint; attribute vec2 aUv; attribute vec4 aRect; attribute float aWallH;
+attribute vec4 aTex; attribute vec3 aTint; attribute vec2 aUv; attribute vec4 aRect; attribute float aWallH; attribute vec4 aZoc;
 varying vec4 vTex; varying vec3 vTint; varying vec2 vUvF; varying float vWY; varying vec3 vWPos; varying vec3 vWNrm;
-varying vec4 vRect; varying float vWallH;
+varying vec4 vRect; varying float vWallH; varying vec4 vZoc;
 #ifdef CLAY
 attribute vec2 aEdge; varying vec2 vEdge;
 #endif`)
       .replace('#include <begin_vertex>', `#include <begin_vertex>
-vTex = aTex; vTint = aTint; vUvF = aUv; vWY = position.y; vRect = aRect; vWallH = aWallH;
+vTex = aTex; vTint = aTint; vUvF = aUv; vWY = position.y; vRect = aRect; vWallH = aWallH; vZoc = aZoc;
 #ifdef CLAY
 vEdge = aEdge;
 #endif
@@ -102,10 +106,11 @@ uniform float uDetMean[8]; uniform float uDetSize[8]; uniform float uWinDark; un
 uniform float uZocH[8]; uniform float uZocStone[8];
 ${LAMPS_GLSL}
 varying vec4 vTex; varying vec3 vTint; varying vec2 vUvF; varying float vWY; varying vec3 vWPos; varying vec3 vWNrm;
-varying vec4 vRect; varying float vWallH;
+varying vec4 vRect; varying float vWallH; varying vec4 vZoc;
 #ifdef CLAY
 varying vec2 vEdge;
 #endif
+float gZocH;
 float gGlass; float gLit; float gDetK; vec2 gDetUV; float gDetL; float gRoom; vec3 gRoomCol; float gEmK; float gEave;
 ${HASH}
 mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
@@ -208,8 +213,51 @@ mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
       gDetK = wm * nk; gDetL = dl; gDetUV = uv;
     }
   }
+  // ---- a house's own plinth (its street's style, calles.js — vZoc: the colour, and its kind × 10 plus its height): it
+  // takes the place of its façade kind's painted one; round the holes (vRect) the opening's own frame and leaf stay
+  float zk = floor(vZoc.w / 10.0 + 1e-3), zh = vZoc.w - zk * 10.0;
+  bool zOwn = zk > 0.5 && !isRoof && fl < 0.5 && !fillQ && gGlass < 0.5 && layer < 63.5;
+  gZocH = -1.0;
+  if (zOwn) {
+    vec2 c0 = fract(vUvF + 1e-4);
+    float y = c0.y * 3.1;
+    bool inHole = vRect.z > vRect.x + 0.01 && c0.x > vRect.x - 0.03 && c0.x < vRect.z + 0.03 && c0.y > vRect.y - 0.02 && c0.y < vRect.w + 0.02;
+    int st8 = int(floor(layer / 8.0 + 0.001));
+    bool kindPlinth = y < uZocH[st8] + 0.02 && wallMask < 0.5 && !inHole;
+    if (zk > 5.5) { if (kindPlinth) col = vTint * 0.96; } // (no plinth: the wall's paint to the ground)
+    else if (!inHole && y < zh && (wallMask > 0.5 || kindPlinth)) {
+      vec3 wz = normalize(vWNrm);
+      vec2 wuv = vec2(dot(vWPos.xz, vec2(-wz.z, wz.x)), vWPos.y);
+      vec3 zc = vZoc.rgb;
+      if (zk > 1.5 && zk < 3.5) { // granite slabs, or rough stone: the stone scan, in the plinth's own colour
+        vec2 guv = wuv / uDetSize[3];
+        vec3 gr = texture(uDet, vec3(guv, 3.0)).rgb;
+        float g = dot(gr, vec3(0.3333)) / max(uDetMean[3], 0.05);
+        col = zc * clamp(zk > 2.5 ? g * g : mix(1.0, g, 0.75), 0.45, 1.6);
+        if (zk < 2.5) { // (granite: slabs of 0.6 × 0.4 m, their joints)
+          vec2 sl = vec2(wuv.x / 0.6 + floor(wuv.y / 0.4) * 0.5, wuv.y / 0.4);
+          vec2 jf = abs(fract(sl) - 0.5);
+          col *= 1.0 - 0.28 * smoothstep(0.485, 0.5, max(jf.x, jf.y));
+        }
+        gDetK = uDetOn; gDetL = 3.0; gDetUV = guv;
+      } else if (zk > 3.5 && zk < 4.5) { // glazed tiles, 20 × 20 cm, a shade apart each, their white joints
+        vec2 tu = wuv / 0.2, ti = floor(tu), tf = fract(tu);
+        float v = gHash3(vec3(ti, 7.0));
+        col = zc * (0.92 + 0.16 * v);
+        float jn = 1.0 - smoothstep(0.02, 0.045, min(min(tf.x, 1.0 - tf.x), min(tf.y, 1.0 - tf.y)));
+        col = mix(col, vec3(0.78, 0.77, 0.74), jn * 0.8);
+      } else { // painted, or bare cement: the plaster's grain in its colour (cement coarser)
+        vec2 puv = wuv / uDetSize[1];
+        vec3 pz = texture(uDet, vec3(puv, 1.0)).rgb;
+        col = zc * clamp(dot(pz, vec3(0.3333)) / max(uDetMean[1], 0.05), zk > 4.5 ? 0.72 : 0.85, zk > 4.5 ? 1.25 : 1.12);
+        gDetK = 0.5 * uDetOn; gDetL = 1.0; gDetUV = puv;
+      }
+      col *= mix(0.86, 1.0, smoothstep(0.0, 0.03, zh - y)); // (its top edge's shade)
+      gZocH = zh;
+    } else if (kindPlinth) col = vTint * 0.96; // (above it, where the kind's own plinth was: the wall)
+  }
   // ---- zócalo (plinth): photo-scanned granite on stone plinths, plaster grain on painted ones, with their normal maps
-  if (!isRoof && uDetOn > 0.5 && fl < 0.5 && !fillQ && gGlass < 0.5 && wallMask < 0.5 && layer < 63.5) {
+  if (!zOwn && !isRoof && uDetOn > 0.5 && fl < 0.5 && !fillQ && gGlass < 0.5 && wallMask < 0.5 && layer < 63.5) {
     int st8 = int(floor(layer / 8.0 + 0.001));
     if (fract(vUvF.y + 1e-4) < uZocH[st8] / 3.1) {
       vec3 wz = normalize(vWNrm);
@@ -310,9 +358,10 @@ mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
   col *= mix(0.62, 1.0, smoothstep(0.0, 1.6, vWY));
   diffuseColor.rgb *= col;
   #ifdef CLAY
-  // (claymation: the whitewash is cream-coloured clay, warm as in the user's pictures — the lime itself a peach cream,
-  // measured against them; coloured bands and doors keep the lighter warm cast)
-  if (!isRoof) diffuseColor.rgb *= mix(vec3(0.93, 0.83, 0.72), vec3(0.6, 0.49, 0.47), smoothstep(0.35, 0.7, dot(col, vec3(0.2126, 0.7152, 0.0722))));
+  // (claymation: the studio's light on clay — the lighter a wall, the more it is held back, so the whitewash keeps its
+  // grain under the lamps. Neutral since 2026-10-12: it used to turn the lime into a peach cream, matched to the
+  // user's first, retouched reference pictures; the real streets — their captures — are white lime and creams)
+  if (!isRoof) diffuseColor.rgb *= mix(vec3(${CLAY_WALL_DARK}), vec3(${CLAY_WALL_LIGHT}), smoothstep(0.35, 0.7, dot(col, vec3(0.2126, 0.7152, 0.0722))));
   #endif
   float isShop = lt > 6.5 ? 1.0 : 0.0;
   float litChance = isShop > 0.5 ? 0.7 : uNightLit;
@@ -353,7 +402,7 @@ if (uDetNOn > 0.5 && gDetK > 0.01) {
       if (inX && db > 0.0 && vRect.y > 0.01) nB.y += pow(1.0 - smoothstep(0.0, 0.13, db), 1.5) * 0.9;
     }
     if (floor(vUvF.y + 1e-4) < 0.5 && vTex.x < 63.5) { // the top of the plinth: a strip of clay laid on, its edge rounded
-      float dz = uZocH[int(floor(vTex.x / 8.0 + 0.001))] - fract(vUvF.y + 1e-4) * 3.1;
+      float dz = (gZocH > 0.0 ? gZocH : uZocH[int(floor(vTex.x / 8.0 + 0.001))]) - fract(vUvF.y + 1e-4) * 3.1;
       if (dz > 0.0) nB.y += pow(1.0 - smoothstep(0.0, 0.055, dz), 1.5) * 0.75;
     }
     normal = normalize(normal + mat3(viewMatrix) * (normalize(nB) - nW));
@@ -584,6 +633,9 @@ ${GROUND_GLSL}`)
       bool lumOnly = false;
       if (lumOnly) col *= mix(1.0, clamp(dot(d, vec3(0.3333)) / mn, 0.62, 1.38), 0.85);
       else if (mode > 1.5) col = mix(col, col * d / mn, 0.7);
+      // (a street whose asphalt was measured in its captures — its tint not white, ground.js roadCol — keeps its colour,
+      // the photo giving it only its grain; the others take the photo's own grey)
+      else if (mode > 0.5 && layer < 1.5 && dot(abs(vTint - 1.0), vec3(1.0)) > 0.03) col = mix(col, col * d / mn, 0.85);
       else if (mode > 0.5) col = mix(col, d * vTint * (layer > 0.5 && layer < 1.5 ? vec3(0.86) : layer > 6.5 && layer < 7.5 ? vec3(1.1, 1.0, 0.82) : vec3(1.0)), 0.85);
       else col *= mix(1.0, clamp(dot(d, vec3(0.3333)) / mn, 0.72, 1.28), 0.5);
       gGDetK = mode > 0.5 ? 0.9 : 0.35; gGDetL = float(dl); gGDetUV = duv;
@@ -736,11 +788,29 @@ ${GROUND_GLSL}`)
   }
   // ---- sidewalk tiles (30 cm, on the texture grid): replaced, cracked, stained and chewing gum; yards away from streets
   if (layer > 1.5 && layer < 2.5) {
-    float clSq = 0.0; // (claymation: how much of a square this is — cobbles, not a yard)
     vec2 tp = wp / 0.3;
     vec2 tid = floor(tp), tf = fract(tp);
     float th = gHash2(tid + 0.37);
     float zd = clamp(age * 0.85 + (gNoise(wp * 0.045) - 0.5) * 0.7, 0.0, 1.0);
+    // a street's own pavement, kerb to front (ground.js paveStrip; calles.js: as in its captures): plain (pat 0), its
+    // colour in the tint; or hydraulic tiles of 20 cm, white (the tint, as it is) and red — 1 a diagonal chequer, 2 two
+    // rows of red and white squares along the kerb, 3 red with a chain of white diamonds, 4 all red
+    float pat = vLoc.z > 0.01 ? floor(vLoc.w) : -1.0;
+    if (pat > 0.5) {
+      vec2 q = vLoc.xy / 0.2;
+      if (pat < 1.5) q = vec2(q.x + q.y, q.x - q.y) * 0.70710678; // (the chequer laid on the diagonal)
+      vec2 id = floor(q), f = fract(q);
+      float red = pat < 1.5 ? mod(id.x + id.y, 2.0)
+        : pat < 2.5 ? step(id.y, 1.5) * mod(id.x + id.y, 2.0)
+        : pat < 3.5 ? step(0.34, abs(f.x - 0.5) + abs(f.y - 0.5)) : 1.0;
+      vec3 white = vTint, rojo = vec3(0.479, 0.205, 0.141) * (0.9 + 0.1 * dot(vTint, vec3(0.3333)));
+      col = mix(white, rojo, red) * (0.93 + 0.1 * gHash2(id + 3.3));
+      vec2 ef = min(f, 1.0 - f) * 0.2;
+      float seam = 1.0 - smoothstep(0.002, 0.006 + fwidth(vLoc.x) * 0.5, min(ef.x, ef.y));
+      col *= 1.0 - 0.3 * seam * fine;
+      gGH -= 0.002 * seam;
+      th = 0.5; // (no 30 cm tiles replaced or cracked: these are their own)
+    }
     if (th < 0.05 + zd * 0.05) col *= gHash2(tid + 3.1) < 0.5 ? vec3(1.09, 1.07, 1.03) : vec3(0.86, 0.85, 0.83);
     if (th > 0.95 - zd * 0.08 && fine > 0.0) {
       float a = gHash2(tid + 5.7) * 6.2832;
@@ -752,23 +822,15 @@ ${GROUND_GLSL}`)
     float st = gNoise(wp * 1.3 + 11.0);
     col *= 1.0 - 0.18 * smoothstep(0.72, 0.85, st) * (0.4 + zd);
     #ifdef CLAY_RELIEF
-    { // claymation: each tile a slab of clay pressed down — its edges rounded, a dark gap round it, each its own shade;
-      // away from the street (a square, the space before the church) the ground is laid with rounded cobbles instead
-      // (slabs of 45 cm, a little irregular, the colour of sand — the user's pictures)
+    if (pat < 0.5) { // claymation: each tile a slab of clay pressed down — its edges rounded, a dark gap round it, each its
+      // own shade (45 cm, a little irregular). The open ground away from the fronts is what it is in the town — tiles,
+      // and the yards' earth below — no longer the dark round cobbles of the first pictures (gone 2026-10-13: no square
+      // of Guareña is laid so)
       vec2 sp = wp / 0.45 + vec2(gNoise(wp * 1.7), gNoise(wp * 1.7 + 4.0)) * 0.08;
       vec2 sid = floor(sp), sf = fract(sp);
       vec2 ef = min(sf, 1.0 - sf); float e = min(ef.x, ef.y) * 0.45;
-      float sq = smoothstep(4.8, 6.8, fld.a * 20.0 + (gNoise(wp * 0.3) - 0.5) * 1.6); clSq = sq; // (well away from any front: a square)
-      gGH += 0.009 * smoothstep(0.0, 0.05, e) * (1.0 - sq);
-      col *= mix(vec3(1.0), vec3(1.11, 0.97, 0.97) * mix(0.58, 1.0, smoothstep(0.003, 0.014, e)) * (0.9 + 0.18 * gHash2(sid + 8.8)), 1.0 - sq);
-      if (sq > 0.0) {
-        vec2 cq = wp / 0.36 + vec2(gNoise(wp * 0.8), gNoise(wp * 0.8 + 7.0)) * 0.6;
-        vec2 cv = gVor(cq);
-        float bulge = 1.0 - pow(1.0 - smoothstep(0.0, 0.5, cv.x), 2.0);
-        vec3 stone = vec3(0.15, 0.138, 0.155) * (0.82 + 0.3 * cv.y) * (0.92 + 0.16 * gNoise(wp * 3.0));
-        col = mix(col, mix(vec3(0.06, 0.052, 0.05), stone, smoothstep(0.035, 0.08, cv.x)) * mix(0.8, 1.0, bulge), sq);
-        gGH += 0.026 * bulge * sq;
-      }
+      gGH += 0.009 * smoothstep(0.0, 0.05, e);
+      col *= mix(0.58, 1.0, smoothstep(0.003, 0.014, e)) * (0.9 + 0.18 * gHash2(sid + 8.8)); // (grey as the town's: no pink cast)
     }
     #endif
     vec2 gcell = floor(wp * 2.6);
@@ -778,9 +840,11 @@ ${GROUND_GLSL}`)
       float gr = 0.012 + 0.02 * gHash2(gcell + 4.2);
       col *= 1.0 - 0.45 * (1.0 - smoothstep(gr, gr + 0.004 + fwidth(length(wp - gcen)), length(wp - gcen))) * fine;
     }
-    // yards and empty lots, well away from the streets: dry earth, gravel, old concrete, dry grass
+    // yards and empty lots inside the blocks, well away from the streets: dry earth, gravel, old concrete, dry grass
+    // (the open ground by a street — a square, the space before the church, a wide crossing — is paved, as it is: it
+    // was earth from 8 m off a street until 2026-10-13, hidden in the claymation under its round cobbles)
     float facD = fld.a * 20.0;
-    float yard = smoothstep(4.5, 8.5, roadD + (gNoise(wp * 0.23) - 0.5) * 4.0) * smoothstep(3.0, 5.5, facD) * (1.0 - clSq);
+    float yard = smoothstep(12.0, 18.0, roadD + (gNoise(wp * 0.23) - 0.5) * 4.0) * smoothstep(3.0, 5.5, facD);
     if (yard > 0.0) {
       float zn = gNoise(wp * 0.06 + 3.0);
       vec3 ycol;
@@ -869,27 +933,51 @@ ${GROUND_GLSL}`)
   #ifdef CLAY_RELIEF
   // claymation: the road's clay smoothed by hand in patches — lighter and darker smears half a metre to two across;
   // its crumbs and pits on the road only (slabs and kerbs are smoother pieces)
-  if (layer < 1.5) col *= (0.84 + 0.2 * gNoise(wp * 0.55 + 3.3) + 0.12 * gNoise(wp * 1.7 + 9.1)) * vec3(1.18, 1.24, 1.5); // (a pinkish grey under the warm studio light, as in the pictures — not brown)
+  if (layer < 1.5) col *= (0.84 + 0.2 * gNoise(wp * 0.55 + 3.3) + 0.12 * gNoise(wp * 1.7 + 9.1)) * ${CLAY_ROAD.toFixed(3)}; // (the grey of the town's asphalt in its captures, neutral: a street measured is tinted to its own colour, ground.js; it was a pinkish grey, for the user's first retouched pictures, until 2026-10-12)
   gClayCavK = layer < 1.5 ? 1.0 : 0.3;
   if (gGRough < 0.0) gGRough = 0.8; // (the ground's clay is matt: no sheen of the low sun washing it white)
-  if ((layer > 2.5 && layer < 3.5) || (layer > 14.5 && layer < 15.5)) {
-    // claymation: the squares paved with rounded clay cobbles (the user's pictures) — each its own warm grey, swelling
-    // from a sandy joint
-    vec2 cq = wp / 0.24 + vec2(gNoise(wp * 0.8), gNoise(wp * 0.8 + 7.0)) * 0.6; // (stones of a palm and a half, as the pictures' squares)
-    vec2 cv = gVor(cq);
-    float bulge = 1.0 - pow(1.0 - smoothstep(0.0, 0.5, cv.x), 2.0);
-    vec3 stone = vec3(0.15, 0.138, 0.155) * (0.82 + 0.3 * cv.y) * (0.92 + 0.16 * gNoise(wp * 3.0)); // (warm grey stones under the light, darker joints: the pictures)
-    col = mix(vec3(0.095, 0.085, 0.085), stone, smoothstep(0.025, 0.065, cv.x)) * mix(0.87, 1.0, bulge);
-    gGH += 0.026 * bulge;
+  if (layer > 14.5 && layer < 15.5 && vLoc.z > 0.5) {
+    // the streets of granite setts (adoquín) as the old town's captures show them: grey setts of 20 × 11 cm in rows
+    // across the street, every other row half a sett on, each its own grey, dark joints — along the road's own frame
+    vec2 q = vec2(vLoc.x / 0.2, vLoc.y / 0.11);
+    q.x += mod(floor(q.y), 2.0) * 0.5;
+    vec2 cell = floor(q), f = fract(q);
+    float e = min(min(f.x, 1.0 - f.x) * 0.2, min(f.y, 1.0 - f.y) * 0.11); // (metres to the nearest joint)
+    vec3 stone = vec3(0.2, 0.196, 0.19) * vTint * (0.78 + 0.36 * gHash2(cell)) * (0.92 + 0.16 * gNoise(wp * 4.0)); // (in the street's own grey, as measured: the tint)
+    col = mix(vec3(0.07, 0.068, 0.065) * vTint, stone, smoothstep(0.004, 0.012, e));
+    gGH += 0.012 * smoothstep(0.0, 0.03, e);
+  } else if (layer > 2.5 && layer < 3.5 && vLoc.z > 0.5) {
+    // the old town's single-level streets of slabs (calles.js 'losa'): light grey granite slabs of 60 × 40 cm, laid
+    // across the street, every other row half a slab on, thin joints
+    vec2 q = vec2(vLoc.x / 0.6, vLoc.y / 0.4);
+    q.x += mod(floor(q.y), 2.0) * 0.5;
+    vec2 cell = floor(q), f = fract(q);
+    float e = min(min(f.x, 1.0 - f.x) * 0.6, min(f.y, 1.0 - f.y) * 0.4);
+    vec3 slab = vec3(0.36, 0.35, 0.335) * vTint * (0.88 + 0.2 * gHash2(cell)) * (0.94 + 0.12 * gNoise(wp * 2.5));
+    col = mix(slab * 0.55, slab, smoothstep(0.003, 0.01, e));
+  } else if (layer > 2.5 && layer < 3.5) {
+    // claymation: the squares as the town lays them — light granite slabs of 60 × 40 cm in rows, every other row half a
+    // slab on, thin joints (the squares of round dark cobbles of the first pictures are gone: 2026-10-13)
+    vec2 q = wp / vec2(0.6, 0.4);
+    q.x += mod(floor(q.y), 2.0) * 0.5;
+    vec2 cell = floor(q), f = fract(q);
+    float e = min(min(f.x, 1.0 - f.x) * 0.6, min(f.y, 1.0 - f.y) * 0.4);
+    vec3 slab = vec3(0.42, 0.405, 0.38) * vTint * (0.88 + 0.2 * gHash2(cell)) * (0.94 + 0.12 * gNoise(wp * 2.5));
+    col = mix(slab * 0.55, slab, smoothstep(0.003, 0.01, e));
+  } else if (layer > 14.5 && layer < 15.5) {
+    // (where setts meet, outside any street's frame — a crossing's middle: the same setts, laid along the world)
+    vec2 q = wp / vec2(0.2, 0.11);
+    q.x += mod(floor(q.y), 2.0) * 0.5;
+    vec2 cell = floor(q), f = fract(q);
+    float e = min(min(f.x, 1.0 - f.x) * 0.2, min(f.y, 1.0 - f.y) * 0.11);
+    vec3 stone = vec3(0.2, 0.196, 0.19) * vTint * (0.78 + 0.36 * gHash2(cell)) * (0.92 + 0.16 * gNoise(wp * 4.0));
+    col = mix(vec3(0.07, 0.068, 0.065) * vTint, stone, smoothstep(0.004, 0.012, e));
+    gGH += 0.012 * smoothstep(0.0, 0.03, e);
   }
   if (layer > 4.5 && layer < 5.5) {
-    // claymation: the sanded squares and gardens (albero) laid with big flags of sandstone clay, soft joints between —
-    // the third picture's square
-    vec2 aq = wp / 0.75 + vec2(gNoise(wp * 0.9), gNoise(wp * 0.9 + 5.0)) * 0.35;
-    vec2 av = gVor(aq);
-    vec3 flag = vec3(0.84, 0.64, 0.42) * (0.88 + 0.22 * av.y) * (0.94 + 0.12 * gNoise(wp * 2.3));
-    col = mix(vec3(0.42, 0.34, 0.24), flag, smoothstep(0.02, 0.07, av.x));
-    gGH += 0.014 * smoothstep(0.0, 0.25, av.x);
+    // claymation: the parks' and playgrounds' albero as it is — packed yellow sand, raked and trodden unevenly (the
+    // big sandstone flags of the first pictures are gone: 2026-10-13)
+    col *= 0.9 + 0.14 * gNoise(wp * 0.6 + 2.0) + 0.06 * gNoise(wp * 4.0);
   }
   #endif
   // macro variation

@@ -9,6 +9,7 @@ import { CT, PAT, frameRect, persiana, flowerPot, awning, acUnit, laundry } from
 import { FACADE_STYLES, FACADE_LAYERS_PER_STYLE } from './textures.js';
 import { STYLE as LOOK } from './style.js';
 import { clamp, mulberry32, ringArea, ringCentroid } from './util.js';
+import { CLAY_WALL } from './plastilina.js';
 
 const LAYER = Object.fromEntries(FACADE_STYLES.map((s, i) => [s, i * FACADE_LAYERS_PER_STYLE]));
 // what a wall is made of → the painted layer it starts from (white for paint: its colour is then the tint)
@@ -35,8 +36,8 @@ export const vc = (hex, k = 1) => toBytes(lin(hex), k);
 // surround and the band of wall it frames stay one colour
 function clayWall(l) {
   const lum = l[0] * 0.2126 + l[1] * 0.7152 + l[2] * 0.0722;
-  const t = clamp((lum - 0.35) / 0.35, 0, 1), s = t * t * (3 - 2 * t);
-  return [l[0] * (0.93 + (0.6 - 0.93) * s), l[1] * (0.83 + (0.49 - 0.83) * s), l[2] * (0.72 + (0.47 - 0.72) * s)];
+  const t = clamp((lum - 0.35) / 0.35, 0, 1), s = t * t * (3 - 2 * t), D = CLAY_WALL[0], L = CLAY_WALL[1];
+  return [l[0] * (D[0] + (L[0] - D[0]) * s), l[1] * (D[1] + (L[1] - D[1]) * s), l[2] * (D[2] + (L[2] - D[2]) * s)];
 }
 export const paintC = (hex, k = 1) => toBytes(LOOK.plastilina ? clayWall(lin(hex)) : lin(hex), k);
 
