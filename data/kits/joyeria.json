@@ -1,0 +1,838 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Joyería-relojería y óptica",
+ "nota": "La joyería-relojería y óptica de un pueblo de las Vegas Altas, con luz cálida y alfombra: mostradores de cristal con anillos, relojes y collares, la vitrina de isla, vitrinas de pared con relojes y perfumes, la pared de monturas de gafas con su espejo y la mesita para probárselas, la consola con bandejas de terciopelo, detrás del mostrador el banco del relojero con su lámpara y su lupa, la caja fuerte y las vitrinas de joyas, y una trastienda con cajas. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.7,
+   6.9
+  ],
+  "fondo": [
+   10.8,
+   12.3
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "zm": "D-4.7",
+  "zb": "D-1.9"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f0e8da",
+ "suelo": "rock_tile_floor",
+ "suelo_color": "#c6beb0",
+ "puntos": {
+  "dependiente": [
+   "W/2-0.6",
+   "zm+0.8"
+  ],
+  "mostrador": [
+   "W/2-0.6",
+   "zm-0.75"
+  ]
+ },
+ "pedir": "Pagar en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "W/2",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "mostrador",
+   "publica": false,
+   "rect": [
+    "W/2-3.6",
+    "zm-0.35",
+    "W/2",
+    "zm+0.35"
+   ]
+  },
+  {
+   "id": "taller",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zm+0.37",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "W/2-3.6",
+    "zm-0.9",
+    "W/2",
+    "zm-0.36"
+   ],
+   "nota": "la cola delante del mostrador: sin muebles"
+  },
+  {
+   "rect": [
+    "-W/2",
+    "zm-0.9",
+    "W/2-3.6",
+    "zm+0.9"
+   ],
+   "nota": "el paso del personal entre la sala y el taller"
+  },
+  {
+   "rect": [
+    "W/2-1.05",
+    "zm+0.35",
+    "W/2-0.15",
+    "zm+1.25"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "vitrina_mostrador_relojes",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "W/2-3.6",
+    "W/2-2.4"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "vitrina_mostrador_anillos",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "W/2-2.4",
+    "W/2-1.2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "mostrador_caja_joyeria",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "W/2-1.2",
+    "W/2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_caja_joyeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_caja_joyeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "balanza_precision",
+   "en": [
+    "mostrador_caja_joyeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "jy_lupa_y_pinzas",
+    "jy_cojin_alianzas",
+    "jy_estuches_joyas",
+    "pila_bolsas_papel",
+    "tarjetero",
+    "bolsa_papel_grande"
+   ],
+   "en": [
+    "mostrador_caja_joyeria"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "techo",
+   "obj": "foco_empotrable",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "obj": "rotulo_joyeria",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "contra_pared",
+   "variantes": [
+    "vitrina_pared_joyas",
+    "vitrina_pared_relojes"
+   ],
+   "pared": "N",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "contra_pared",
+   "obj": "banco_relojero",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "sobre",
+   "variantes": [
+    "jy_lupa_y_pinzas",
+    "lampara_escritorio"
+   ],
+   "en": [
+    "banco_relojero"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "obj": "cartel_arreglos",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "esquina",
+   "obj": "taburete_relojero",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "contra_pared",
+   "obj": "caja_fuerte_pequena",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "variantes": [
+    "reloj_pared",
+    "calendario_pared"
+   ],
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "techo",
+   "obj": "plafon_cristal_calido",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "jy_estuches_joyas",
+    "caja_carton",
+    "jy_bandeja_relojes",
+    "jy_bandeja_anillos"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "caja_carton",
+   "pared": "W",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "torre_cajas_bazar",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "reloj_pendulo_pie",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "plafon_cristal_calido",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "variantes": [
+    "vitrina_pared_relojes",
+    "vitrina_perfumes"
+   ],
+   "pared": "E",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "reloj",
+    "perfume"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "consola_joyeria",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "expositor_gafas_mostrador",
+    "jy_busto_collares",
+    "jy_expositor_pendientes",
+    "jy_cojin_alianzas",
+    "jy_bandeja_relojes",
+    "jy_estuches_joyas",
+    "jy_bandeja_anillos"
+   ],
+   "en": [
+    "consola_joyeria"
+   ],
+   "cantidad": [
+    0,
+    4
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "pared_gafas_a",
+    "pared_gafas_b"
+   ],
+   "pared": "W",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "gafas"
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_optica",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "mesa_optica",
+   "sillas": {
+    "variantes": [
+     "silla_cliente_joyeria"
+    ],
+    "n": [
+     2,
+     2
+    ]
+   },
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "espejo_optica_mesa",
+    "expositor_gafas_mostrador"
+   ],
+   "en": [
+    "mesa_optica"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "vitrina_isla_joyas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "vitrina_isla_relojes",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "vitrina_mostrador_collares",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "maniqui_busto_joyas",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expositor_gafas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "gafas"
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_joyeria_a",
+    "cuadro_joyeria_b"
+   ],
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "espejo_pared_grande",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "alfombra_burdeos",
+    "alfombra_verde"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "plafon_cristal_calido",
+   "por_m2": [
+    0.1,
+    0.13
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   2800,
+   3200
+  ],
+  "dia": {
+   "intensidad": 0.8
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 10:00-14:00,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "un reloj abierto sobre el banco del relojero",
+   "una bandeja de anillos recién sacada",
+   "la lupa sobre el mostrador",
+   "las gafas de prueba junto al espejo"
+  ],
+  "cerrado": "reja bajada, las vitrinas iluminadas"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Joyeriabaena.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Joyeriabaena.jpg",
+   "autor": "No machine-readable author provided. Jjerez~commonswiki assumed (based on copyright claims).",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "A jewellery shop in Naran Bazar.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:A_jewellery_shop_in_Naran_Bazar.jpg",
+   "autor": "acedreza",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK Central 畢打行 Pedder Building art jewellery shop interior Dec-2010.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_Central_%E7%95%A2%E6%89%93%E8%A1%8C_Pedder_Building_art_jewellery_shop_interior_Dec-2010.jpg",
+   "autor": "ExpatoLiza",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior of Lawrence Moore Jewelers, Seattle, 1910 (MOHAI 12976).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Lawrence_Moore_Jewelers,_Seattle,_1910_(MOHAI_12976).jpg",
+   "autor": "Unknown authorUnknown author",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "MOKO MTR Jewellery Shops 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MOKO_MTR_Jewellery_Shops_2015.jpg",
+   "autor": "Wpcpey",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "XinHui 新會碧桂園 Country Garden 大潤發 RT-Mart interior Jewellery shop.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:XinHui_%E6%96%B0%E6%9C%83%E7%A2%A7%E6%A1%82%E5%9C%92_Country_Garden_%E5%A4%A7%E6%BD%A4%E7%99%BC_RT-Mart_interior_Jewellery_shop.JPG",
+   "autor": "Sanwuisusp",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "HK 上水 Sheung Shui 上水廣場 Landmark North mall shop Jewellery November 2021 SS2 06.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_%E4%B8%8A%E6%B0%B4_Sheung_Shui_%E4%B8%8A%E6%B0%B4%E5%BB%A3%E5%A0%B4_Landmark_North_mall_shop_Jewellery_November_2021_SS2_06.jpg",
+   "autor": "Faimeim Tahimo 800",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK Chai Wan 新翠花園商場 New Jade Shopping Arcade 05 interior shop Ma Belle Jewellery Co 卡萊美 ColourMix.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_Chai_Wan_%E6%96%B0%E7%BF%A0%E8%8A%B1%E5%9C%92%E5%95%86%E5%A0%B4_New_Jade_Shopping_Arcade_05_interior_shop_Ma_Belle_Jewellery_Co_%E5%8D%A1%E8%90%8A%E7%BE%8E_ColourMix.JPG",
+   "autor": "MarkCWLui",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "HK TST Nathan Road 六福珠寶 Luk Fook Jewellery shop interior visitors.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_TST_Nathan_Road_%E5%85%AD%E7%A6%8F%E7%8F%A0%E5%AF%B6_Luk_Fook_Jewellery_shop_interior_visitors.JPG",
+   "autor": "Boryunee",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "HK 葵芳 Kwai Fong 新都會廣場 MetroPlaza shopping mall shop Lukfook Jewellery January 2022 Px3 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_%E8%91%B5%E8%8A%B3_Kwai_Fong_%E6%96%B0%E9%83%BD%E6%9C%83%E5%BB%A3%E5%A0%B4_MetroPlaza_shopping_mall_shop_Lukfook_Jewellery_January_2022_Px3_01.jpg",
+   "autor": "Luvoedai GOAEFUOOKA",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK 葵芳 Kwai Fong 新都會廣場 MetroPlaza shopping mall shop Lukfook Jewellery goldsmith window display January 2022 Px3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_%E8%91%B5%E8%8A%B3_Kwai_Fong_%E6%96%B0%E9%83%BD%E6%9C%83%E5%BB%A3%E5%A0%B4_MetroPlaza_shopping_mall_shop_Lukfook_Jewellery_goldsmith_window_display_January_2022_Px3.jpg",
+   "autor": "Luvoedai GOAEFUOOKA",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Joan The Wad Shop Polperro.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Joan_The_Wad_Shop_Polperro.jpg",
+   "autor": "Joan The wad Polperro",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

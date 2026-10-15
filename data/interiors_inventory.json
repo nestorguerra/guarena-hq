@@ -2,17 +2,16 @@
  "version": 1,
  "resumen": {
   "interiores": 128,
-  "puertas": 104,
-  "accesibles": 104,
+  "puertas": 125,
+  "accesibles": 125,
   "por_estado": {
-   "completo": 61,
-   "basico": 43,
-   "vacio": 24
+   "completo": 100,
+   "basico": 25,
+   "vacio": 3
   },
   "por_tipologia": {
    "alimentacion": {
-    "completo": 6,
-    "basico": 3
+    "completo": 9
    },
    "bar": {
     "completo": 15
@@ -24,7 +23,7 @@
     "completo": 1
    },
    "oficina": {
-    "vacio": 1
+    "vacio": 2
    },
    "restaurante": {
     "basico": 1
@@ -33,9 +32,9 @@
     "completo": 9
    },
    "tienda_especializada": {
-    "completo": 28,
-    "basico": 16,
-    "vacio": 23
+    "completo": 64,
+    "basico": 1,
+    "vacio": 1
    },
    "vivienda": {
     "basico": 23
@@ -45,7 +44,7 @@
  "errores": [],
  "interiors": [
   {
-   "interior_id": "tienda:bar:301",
+   "interior_id": "tienda:bar:844",
    "puerta": {
     "x": -48.71,
     "z": -105.58
@@ -55,14 +54,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar",
-   "superficie_m2": 81.9,
+   "superficie_m2": 103,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:farmacia:318",
+   "interior_id": "tienda:farmacia:861",
    "puerta": {
     "x": -66.29,
     "z": -161.76
@@ -72,14 +71,14 @@
    "osm": "amenity:pharmacy",
    "tipologia": "tienda_especializada",
    "nombre": "Farmacia",
-   "superficie_m2": 73.3,
+   "superficie_m2": 56.7,
    "accesible": true,
    "estado": "completo",
    "kit": "farmacia",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:super:335",
+   "interior_id": "tienda:super:878",
    "puerta": {
     "x": 504.84,
     "z": 127.21
@@ -89,14 +88,14 @@
    "osm": "shop:supermarket",
    "tipologia": "alimentacion",
    "nombre": "Supermercado",
-   "superficie_m2": 156.2,
+   "superficie_m2": 169.8,
    "accesible": true,
    "estado": "completo",
    "kit": "supermercado",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:restaurante:352",
+   "interior_id": "tienda:restaurante:895",
    "puerta": {
     "x": 26.28,
     "z": -403.7
@@ -106,14 +105,14 @@
    "osm": "amenity:fast_food",
    "tipologia": "tienda_especializada",
    "nombre": "Casa de comidas",
-   "superficie_m2": 118.8,
+   "superficie_m2": 126.7,
    "accesible": true,
    "estado": "completo",
    "kit": "restaurante",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:super:370",
+   "interior_id": "tienda:super:929",
    "puerta": {
     "x": 298.41,
     "z": -22.05
@@ -123,14 +122,14 @@
    "osm": "shop:supermarket",
    "tipologia": "alimentacion",
    "nombre": "Supermercado La Espiga",
-   "superficie_m2": 178.2,
+   "superficie_m2": 142.3,
    "accesible": true,
    "estado": "completo",
    "kit": "supermercado",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:387",
+   "interior_id": "tienda:bar:963",
    "puerta": {
     "x": -45.95,
     "z": -503.61
@@ -140,14 +139,14 @@
    "osm": "amenity:pub",
    "tipologia": "bar",
    "nombre": "Bar El Cruce",
-   "superficie_m2": 110.9,
+   "superficie_m2": 88.7,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:405",
+   "interior_id": "tienda:bar:980",
    "puerta": {
     "x": -229.09,
     "z": -457.13
@@ -157,14 +156,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar La Parada",
-   "superficie_m2": 104.5,
+   "superficie_m2": 82.1,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:farmacia:421",
+   "interior_id": "tienda:farmacia:997",
    "puerta": {
     "x": 472.18,
     "z": -76.68
@@ -174,14 +173,14 @@
    "osm": "amenity:pharmacy",
    "tipologia": "tienda_especializada",
    "nombre": "Farmacia del Centro",
-   "superficie_m2": 65,
+   "superficie_m2": 61.2,
    "accesible": true,
    "estado": "completo",
    "kit": "farmacia",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:440",
+   "interior_id": "tienda:bar:1031",
    "puerta": {
     "x": 697.13,
     "z": -220.12
@@ -191,14 +190,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Mesón El Jamón",
-   "superficie_m2": 88.2,
+   "superficie_m2": 114.8,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:super:456",
+   "interior_id": "tienda:super:1048",
    "puerta": {
     "x": 180.15,
     "z": 114.24
@@ -208,14 +207,14 @@
    "osm": "shop:supermarket",
    "tipologia": "alimentacion",
    "nombre": "Supermercado El Trigal",
-   "superficie_m2": 163.4,
+   "superficie_m2": 147.9,
    "accesible": true,
    "estado": "completo",
    "kit": "supermercado",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:475",
+   "interior_id": "tienda:bar:1065",
    "puerta": {
     "x": -53.91,
     "z": -493.25
@@ -225,14 +224,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar Los Arcos",
-   "superficie_m2": 91.3,
+   "superficie_m2": 108.4,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:488",
+   "interior_id": "tienda:oficina:1082",
    "puerta": {
     "x": 113.31,
     "z": -145.15
@@ -242,14 +241,14 @@
    "osm": "amenity:post_office",
    "tipologia": "tienda_especializada",
    "nombre": "Oficina",
-   "superficie_m2": 97.2,
+   "superficie_m2": 90.7,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:510",
+   "interior_id": "tienda:bar:1099",
    "puerta": {
     "x": 43.26,
     "z": -406.55
@@ -259,14 +258,14 @@
    "osm": "amenity:pub",
    "tipologia": "bar",
    "nombre": "Bar El Rincón",
-   "superficie_m2": 90.7,
+   "superficie_m2": 92.9,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:528",
+   "interior_id": "tienda:bar:1116",
    "puerta": {
     "x": -206.92,
     "z": -324.24
@@ -276,14 +275,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Taberna La Bota",
-   "superficie_m2": 117.5,
+   "superficie_m2": 102.1,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:546",
+   "interior_id": "tienda:bar:1133",
    "puerta": {
     "x": 36.92,
     "z": -423.47
@@ -293,14 +292,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar La Fuente",
-   "superficie_m2": 98.3,
+   "superficie_m2": 85.7,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:564",
+   "interior_id": "tienda:bar:1150",
    "puerta": {
     "x": 169.42,
     "z": 110.75
@@ -310,14 +309,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar El Paseo",
-   "superficie_m2": 91.8,
+   "superficie_m2": 97.2,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:582",
+   "interior_id": "tienda:bar:2340",
    "puerta": {
     "x": 388.47,
     "z": 385
@@ -327,14 +326,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Mesón La Encina",
-   "superficie_m2": 85.1,
+   "superficie_m2": 93.2,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:591",
+   "interior_id": "tienda:oficina:2357",
    "puerta": {
     "x": -96.58,
     "z": 325.82
@@ -344,14 +343,14 @@
    "osm": "office:company",
    "tipologia": "tienda_especializada",
    "nombre": "Empresa",
-   "superficie_m2": 94.5,
+   "superficie_m2": 93.6,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:617",
+   "interior_id": "tienda:bar:2374",
    "puerta": {
     "x": -325,
     "z": -408.41
@@ -361,14 +360,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar El Pilar",
-   "superficie_m2": 105.8,
+   "superficie_m2": 78.7,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:635",
+   "interior_id": "tienda:bar:2391",
    "puerta": {
     "x": -318.9,
     "z": -422.5
@@ -378,14 +377,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar Las Eras",
-   "superficie_m2": 63.4,
+   "superficie_m2": 69.3,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:cafeteria:641",
+   "interior_id": "tienda:cafeteria:2425",
    "puerta": {
     "x": 409.97,
     "z": -113.1
@@ -395,14 +394,14 @@
    "osm": "amenity:cafe",
    "tipologia": "cafeteria",
    "nombre": "Cafetería",
-   "superficie_m2": 92.2,
+   "superficie_m2": 100.6,
    "accesible": true,
    "estado": "completo",
    "kit": "cafeteria",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:banco:658",
+   "interior_id": "tienda:banco:2442",
    "puerta": {
     "x": 122.55,
     "z": 78.11
@@ -412,14 +411,14 @@
    "osm": "amenity:bank",
    "tipologia": "tienda_especializada",
    "nombre": "Banco",
-   "superficie_m2": 96.6,
+   "superficie_m2": 93.2,
    "accesible": true,
    "estado": "completo",
    "kit": "banco",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:banco:676",
+   "interior_id": "tienda:banco:2459",
    "puerta": {
     "x": 162.07,
     "z": 108.59
@@ -429,14 +428,14 @@
    "osm": "amenity:bank",
    "tipologia": "tienda_especializada",
    "nombre": "Banco del Valle",
-   "superficie_m2": 83.3,
+   "superficie_m2": 94.5,
    "accesible": true,
    "estado": "completo",
    "kit": "banco",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:banco:694",
+   "interior_id": "tienda:banco:2476",
    "puerta": {
     "x": 88.03,
     "z": 78.63
@@ -446,14 +445,31 @@
    "osm": "amenity:bank",
    "tipologia": "tienda_especializada",
    "nombre": "Banco La Encina",
-   "superficie_m2": 99.2,
+   "superficie_m2": 91.3,
    "accesible": true,
    "estado": "completo",
    "kit": "banco",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:709",
+   "interior_id": "tienda:joyeria:2493",
+   "puerta": {
+    "x": 72.58,
+    "z": 75.76
+   },
+   "building_id": 3202,
+   "poi_id": 129,
+   "osm": "shop:optician",
+   "tipologia": "tienda_especializada",
+   "nombre": "Óptica",
+   "superficie_m2": 84.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:2510",
    "puerta": {
     "x": 105,
     "z": 84.19
@@ -463,14 +479,31 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Moda y Complementos",
-   "superficie_m2": 72.5,
+   "superficie_m2": 72,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:electro:726",
+   "interior_id": "tienda:joyeria:2527",
+   "puerta": {
+    "x": 95.46,
+    "z": 69.6
+   },
+   "building_id": 3272,
+   "poi_id": 131,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 77.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:electro:2544",
    "puerta": {
     "x": 68.98,
     "z": 51.35
@@ -480,14 +513,14 @@
    "osm": "shop:appliance",
    "tipologia": "tienda_especializada",
    "nombre": "Electrodomésticos",
-   "superficie_m2": 89.4,
+   "superficie_m2": 70.4,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "electro",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:banco:746",
+   "interior_id": "tienda:banco:2561",
    "puerta": {
     "x": 83.68,
     "z": 62.95
@@ -497,14 +530,31 @@
    "osm": "amenity:bank",
    "tipologia": "tienda_especializada",
    "nombre": "Banco Campo Verde",
-   "superficie_m2": 92.2,
+   "superficie_m2": 97.2,
    "accesible": true,
    "estado": "completo",
    "kit": "banco",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:761",
+   "interior_id": "tienda:joyeria:2578",
+   "puerta": {
+    "x": 77.27,
+    "z": 56.65
+   },
+   "building_id": 3273,
+   "poi_id": 134,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 66.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:2595",
    "puerta": {
     "x": 26.14,
     "z": 47.83
@@ -514,14 +564,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Modas La Plaza",
-   "superficie_m2": 79.6,
+   "superficie_m2": 76.5,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:banco:781",
+   "interior_id": "tienda:banco:2612",
    "puerta": {
     "x": 20.24,
     "z": 35.85
@@ -531,207 +581,20 @@
    "osm": "amenity:bank",
    "tipologia": "tienda_especializada",
    "nombre": "Caja La Dehesa",
-   "superficie_m2": 86.6,
+   "superficie_m2": 103.3,
    "accesible": true,
    "estado": "completo",
    "kit": "banco",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:796",
+   "interior_id": "tienda:oficina:2629",
    "puerta": {
     "x": 28.4,
     "z": 38.43
    },
    "building_id": 3260,
    "poi_id": 137,
-   "osm": "office:insurance",
-   "tipologia": "tienda_especializada",
-   "nombre": "Seguros",
-   "superficie_m2": 87.8,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "oficina",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:banco:816",
-   "puerta": {
-    "x": 17.99,
-    "z": 44.18
-   },
-   "building_id": 3197,
-   "poi_id": 138,
-   "osm": "amenity:bank",
-   "tipologia": "tienda_especializada",
-   "nombre": "Banco Horizonte",
-   "superficie_m2": 97.2,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "banco",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:bar:840",
-   "puerta": {
-    "x": 7.54,
-    "z": 40.39
-   },
-   "building_id": 3196,
-   "poi_id": 139,
-   "osm": "amenity:bar",
-   "tipologia": "bar",
-   "nombre": "Taberna El Tonel",
-   "superficie_m2": 94,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "bar",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:bar:858",
-   "puerta": {
-    "x": -49.81,
-    "z": 24.48
-   },
-   "building_id": 3056,
-   "poi_id": 143,
-   "osm": "amenity:casino",
-   "tipologia": "bar",
-   "nombre": "Bar La Dehesa",
-   "superficie_m2": 87.1,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "bar",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:farmacia:864",
-   "puerta": {
-    "x": -56,
-    "z": 58.3
-   },
-   "building_id": 3060,
-   "poi_id": 144,
-   "osm": "amenity:pharmacy",
-   "tipologia": "tienda_especializada",
-   "nombre": "Farmacia de la Plaza",
-   "superficie_m2": 54,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "farmacia",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:ferreteria:879",
-   "puerta": {
-    "x": -51.14,
-    "z": 63.75
-   },
-   "building_id": 3011,
-   "poi_id": 145,
-   "osm": "shop:hardware",
-   "tipologia": "tienda_especializada",
-   "nombre": "Ferretería",
-   "superficie_m2": 79.2,
-   "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
-  },
-  {
-   "interior_id": "tienda:cafeteria:897",
-   "puerta": {
-    "x": -82.76,
-    "z": 10.62
-   },
-   "building_id": 3054,
-   "poi_id": 146,
-   "osm": "amenity:cafe",
-   "tipologia": "cafeteria",
-   "nombre": "Cafetería La Espiga",
-   "superficie_m2": 82.1,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "cafeteria",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:super:916",
-   "puerta": {
-    "x": -209.11,
-    "z": -128.99
-   },
-   "building_id": 2980,
-   "poi_id": 148,
-   "osm": "shop:supermarket",
-   "tipologia": "alimentacion",
-   "nombre": "Alimentación La Vega",
-   "superficie_m2": 169.9,
-   "accesible": true,
-   "estado": "completo",
-   "kit": "supermercado",
-   "constructor": "locales.js (kit)"
-  },
-  {
-   "interior_id": "tienda:informatica:930",
-   "puerta": {
-    "x": 455.84,
-    "z": -69.98
-   },
-   "building_id": 2290,
-   "poi_id": 154,
-   "osm": "shop:computer",
-   "tipologia": "tienda_especializada",
-   "nombre": "Informática y Móviles",
-   "superficie_m2": 80.8,
-   "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
-  },
-  {
-   "interior_id": "tienda:fruteria:947",
-   "puerta": {
-    "x": 442.93,
-    "z": -27.89
-   },
-   "building_id": 2177,
-   "poi_id": 155,
-   "osm": "shop:greengrocer",
-   "tipologia": "alimentacion",
-   "nombre": "Frutería",
-   "superficie_m2": 100.3,
-   "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
-  },
-  {
-   "interior_id": "tienda:informatica:965",
-   "puerta": {
-    "x": 122.36,
-    "z": 0.46
-   },
-   "building_id": 3232,
-   "poi_id": 159,
-   "osm": "shop:computer",
-   "tipologia": "tienda_especializada",
-   "nombre": "Informática El Enchufe",
-   "superficie_m2": 77,
-   "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
-  },
-  {
-   "interior_id": "tienda:oficina:984",
-   "puerta": {
-    "x": 123.65,
-    "z": 16.7
-   },
-   "building_id": 3269,
-   "poi_id": 161,
    "osm": "office:insurance",
    "tipologia": "tienda_especializada",
    "nombre": "Seguros",
@@ -742,7 +605,381 @@
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bazar:998",
+   "interior_id": "tienda:banco:2646",
+   "puerta": {
+    "x": 17.99,
+    "z": 44.18
+   },
+   "building_id": 3197,
+   "poi_id": 138,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco Horizonte",
+   "superficie_m2": 104.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2663",
+   "puerta": {
+    "x": 7.54,
+    "z": 40.39
+   },
+   "building_id": 3196,
+   "poi_id": 139,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Taberna El Tonel",
+   "superficie_m2": 86.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2680",
+   "puerta": {
+    "x": 6.83,
+    "z": 31
+   },
+   "building_id": 3258,
+   "poi_id": 140,
+   "osm": "shop:lottery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Administración de lotería",
+   "superficie_m2": 58.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2714",
+   "puerta": {
+    "x": -50.78,
+    "z": 31.94
+   },
+   "building_id": 3057,
+   "poi_id": 142,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 67.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2731",
+   "puerta": {
+    "x": -49.81,
+    "z": 24.48
+   },
+   "building_id": 3056,
+   "poi_id": 143,
+   "osm": "amenity:casino",
+   "tipologia": "bar",
+   "nombre": "Bar La Dehesa",
+   "superficie_m2": 88.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:farmacia:2748",
+   "puerta": {
+    "x": -56,
+    "z": 58.3
+   },
+   "building_id": 3060,
+   "poi_id": 144,
+   "osm": "amenity:pharmacy",
+   "tipologia": "tienda_especializada",
+   "nombre": "Farmacia de la Plaza",
+   "superficie_m2": 67.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "farmacia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ferreteria:2765",
+   "puerta": {
+    "x": -51.14,
+    "z": 63.75
+   },
+   "building_id": 3011,
+   "poi_id": 145,
+   "osm": "shop:hardware",
+   "tipologia": "tienda_especializada",
+   "nombre": "Ferretería",
+   "superficie_m2": 92.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ferreteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:cafeteria:2782",
+   "puerta": {
+    "x": -82.76,
+    "z": 10.62
+   },
+   "building_id": 3054,
+   "poi_id": 146,
+   "osm": "amenity:cafe",
+   "tipologia": "cafeteria",
+   "nombre": "Cafetería La Espiga",
+   "superficie_m2": 95.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "cafeteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:2816",
+   "puerta": {
+    "x": -209.11,
+    "z": -128.99
+   },
+   "building_id": 2980,
+   "poi_id": 148,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Alimentación La Vega",
+   "superficie_m2": 181.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2833",
+   "puerta": {
+    "x": 810.07,
+    "z": -7.4
+   },
+   "building_id": 1859,
+   "poi_id": 149,
+   "osm": "craft:glaziery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Cristalería",
+   "superficie_m2": 107,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2850",
+   "puerta": {
+    "x": 594.38,
+    "z": -67.12
+   },
+   "building_id": 2728,
+   "poi_id": 150,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 117.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2867",
+   "puerta": {
+    "x": 742.72,
+    "z": -205.94
+   },
+   "building_id": 1720,
+   "poi_id": 151,
+   "osm": "shop:car_parts",
+   "tipologia": "tienda_especializada",
+   "nombre": "Recambios",
+   "superficie_m2": 110.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2884",
+   "puerta": {
+    "x": 689.07,
+    "z": -179.23
+   },
+   "building_id": 1718,
+   "poi_id": 152,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 131.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2901",
+   "puerta": {
+    "x": 581.94,
+    "z": -94.96
+   },
+   "building_id": 2730,
+   "poi_id": 153,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 122.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:informatica:2918",
+   "puerta": {
+    "x": 455.84,
+    "z": -69.98
+   },
+   "building_id": 2290,
+   "poi_id": 154,
+   "osm": "shop:computer",
+   "tipologia": "tienda_especializada",
+   "nombre": "Informática y Móviles",
+   "superficie_m2": 63,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "informatica",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:fruteria:2935",
+   "puerta": {
+    "x": 442.93,
+    "z": -27.89
+   },
+   "building_id": 2177,
+   "poi_id": 155,
+   "osm": "shop:greengrocer",
+   "tipologia": "alimentacion",
+   "nombre": "Frutería",
+   "superficie_m2": 83.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "fruteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:2952",
+   "puerta": {
+    "x": 174.7,
+    "z": -14.92
+   },
+   "building_id": 3472,
+   "poi_id": 156,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 55.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:2969",
+   "puerta": {
+    "x": 121.92,
+    "z": -55.64
+   },
+   "building_id": 3226,
+   "poi_id": 157,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 54.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2986",
+   "puerta": {
+    "x": 128.91,
+    "z": -0.13
+   },
+   "building_id": 3230,
+   "poi_id": 158,
+   "osm": "shop:lottery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Administración de lotería",
+   "superficie_m2": 71.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:informatica:3003",
+   "puerta": {
+    "x": 122.36,
+    "z": 0.46
+   },
+   "building_id": 3232,
+   "poi_id": 159,
+   "osm": "shop:computer",
+   "tipologia": "tienda_especializada",
+   "nombre": "Informática El Enchufe",
+   "superficie_m2": 68,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "informatica",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:3020",
+   "puerta": {
+    "x": 123.71,
+    "z": 11.82
+   },
+   "building_id": 3269,
+   "poi_id": 160,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 72.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:joyeria:3054",
+   "puerta": {
+    "x": 123.65,
+    "z": 26.5
+   },
+   "building_id": 3269,
+   "poi_id": 162,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 75.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3071",
    "puerta": {
     "x": 129.75,
     "z": 19
@@ -752,14 +989,14 @@
    "osm": "shop:variety_store",
    "tipologia": "tienda_especializada",
    "nombre": "Bazar",
-   "superficie_m2": 100.3,
+   "superficie_m2": 84.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1017",
+   "interior_id": "tienda:ropa:3088",
    "puerta": {
     "x": 135.29,
     "z": 56.07
@@ -769,14 +1006,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Boutique El Paseo",
-   "superficie_m2": 61.4,
+   "superficie_m2": 78.7,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:1036",
+   "interior_id": "tienda:oficina:3105",
    "puerta": {
     "x": 140.49,
     "z": 65.74
@@ -786,14 +1023,14 @@
    "osm": "amenity:dentist",
    "tipologia": "tienda_especializada",
    "nombre": "Clínica dental",
-   "superficie_m2": 95.9,
+   "superficie_m2": 91.3,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bazar:1050",
+   "interior_id": "tienda:bazar:3122",
    "puerta": {
     "x": 150.23,
     "z": 103.22
@@ -803,14 +1040,14 @@
    "osm": "shop:variety_store",
    "tipologia": "tienda_especializada",
    "nombre": "Bazar Todo a Cien",
-   "superficie_m2": 89.4,
+   "superficie_m2": 106.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:jugueteria:1066",
+   "interior_id": "tienda:jugueteria:3139",
    "puerta": {
     "x": 163.03,
     "z": 103.05
@@ -820,14 +1057,14 @@
    "osm": "shop:toys",
    "tipologia": "tienda_especializada",
    "nombre": "Juguetería",
-   "superficie_m2": 79.2,
+   "superficie_m2": 77.2,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "jugueteria",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1086",
+   "interior_id": "tienda:ropa:3156",
    "puerta": {
     "x": 188.24,
     "z": 55.61
@@ -837,14 +1074,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Calzados El Pilar",
-   "superficie_m2": 72.5,
+   "superficie_m2": 69.7,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:flores:1100",
+   "interior_id": "tienda:flores:3173",
    "puerta": {
     "x": 192.54,
     "z": 117.49
@@ -854,14 +1091,14 @@
    "osm": "shop:florist",
    "tipologia": "tienda_especializada",
    "nombre": "Floristería",
-   "superficie_m2": 89.4,
+   "superficie_m2": 68.4,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "floristeria",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:panaderia:1117",
+   "interior_id": "tienda:panaderia:3190",
    "puerta": {
     "x": 190.72,
     "z": 36.1
@@ -871,14 +1108,31 @@
    "osm": "shop:confectionery",
    "tipologia": "alimentacion",
    "nombre": "Panadería y Confitería",
-   "superficie_m2": 93.7,
+   "superficie_m2": 69.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "panaderia",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:1139",
+   "interior_id": "tienda:peluqueria:3207",
+   "puerta": {
+    "x": 186.6,
+    "z": 47.42
+   },
+   "building_id": 3409,
+   "poi_id": 171,
+   "osm": "shop:hairdresser",
+   "tipologia": "tienda_especializada",
+   "nombre": "Peluquería",
+   "superficie_m2": 76.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:3224",
    "puerta": {
     "x": 185.54,
     "z": 42.4
@@ -888,14 +1142,14 @@
    "osm": "amenity:driving_school",
    "tipologia": "tienda_especializada",
    "nombre": "Autoescuela",
-   "superficie_m2": 95.9,
+   "superficie_m2": 93.6,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bar:1165",
+   "interior_id": "tienda:bar:3241",
    "puerta": {
     "x": 183.21,
     "z": 29.54
@@ -905,14 +1159,14 @@
    "osm": "amenity:bar",
    "tipologia": "bar",
    "nombre": "Bar El Chato",
-   "superficie_m2": 90.7,
+   "superficie_m2": 78.7,
    "accesible": true,
    "estado": "completo",
    "kit": "bar",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:1174",
+   "interior_id": "tienda:oficina:3258",
    "puerta": {
     "x": 214.92,
     "z": 30.13
@@ -929,7 +1183,7 @@
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1189",
+   "interior_id": "tienda:ropa:3275",
    "puerta": {
     "x": 223.61,
     "z": 112.44
@@ -939,14 +1193,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Tejidos La Fuente",
-   "superficie_m2": 76.5,
+   "superficie_m2": 75.3,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1207",
+   "interior_id": "tienda:ropa:3292",
    "puerta": {
     "x": 209.84,
     "z": 122.85
@@ -956,14 +1210,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Moda Joven La Vega",
-   "superficie_m2": 72.5,
+   "superficie_m2": 77.8,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1225",
+   "interior_id": "tienda:ropa:3309",
    "puerta": {
     "x": 203.44,
     "z": 121.09
@@ -973,14 +1227,14 @@
    "osm": "shop:clothes",
    "tipologia": "tienda_especializada",
    "nombre": "Zapatería Las Eras",
-   "superficie_m2": 86.6,
+   "superficie_m2": 65.3,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1243",
+   "interior_id": "tienda:ropa:3326",
    "puerta": {
     "x": 256.69,
     "z": 137.02
@@ -990,14 +1244,14 @@
    "osm": "shop:shoes",
    "tipologia": "tienda_especializada",
    "nombre": "Modas El Arco",
-   "superficie_m2": 72.5,
+   "superficie_m2": 84.2,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bazar:1255",
+   "interior_id": "tienda:bazar:3343",
    "puerta": {
     "x": 284.57,
     "z": 143.34
@@ -1007,14 +1261,14 @@
    "osm": "shop:variety_store",
    "tipologia": "tienda_especializada",
    "nombre": "Bazar El Chollo",
-   "superficie_m2": 89.4,
+   "superficie_m2": 79.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bazar:1273",
+   "interior_id": "tienda:bazar:3360",
    "puerta": {
     "x": 302.31,
     "z": 147.92
@@ -1024,14 +1278,14 @@
    "osm": "shop:variety_store",
    "tipologia": "tienda_especializada",
    "nombre": "Bazar La Estrella",
-   "superficie_m2": 85.1,
+   "superficie_m2": 85.5,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:muebles:1287",
+   "interior_id": "tienda:muebles:3377",
    "puerta": {
     "x": 317.54,
     "z": 143.21
@@ -1041,14 +1295,14 @@
    "osm": "shop:furniture",
    "tipologia": "tienda_especializada",
    "nombre": "Muebles y Decoración",
-   "superficie_m2": 115.2,
+   "superficie_m2": 98.3,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "muebles",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:muebles:1305",
+   "interior_id": "tienda:muebles:3394",
    "puerta": {
     "x": 335.99,
     "z": 157.88
@@ -1058,14 +1312,14 @@
    "osm": "shop:furniture",
    "tipologia": "tienda_especializada",
    "nombre": "Muebles y Decoración La Vega",
-   "superficie_m2": 115.2,
+   "superficie_m2": 95.8,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "muebles",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:super:1325",
+   "interior_id": "tienda:super:3411",
    "puerta": {
     "x": 377.23,
     "z": 158.3
@@ -1075,14 +1329,48 @@
    "osm": "shop:supermarket",
    "tipologia": "alimentacion",
    "nombre": "Supermercado Las Eras",
-   "superficie_m2": 182.7,
+   "superficie_m2": 154.4,
    "accesible": true,
    "estado": "completo",
    "kit": "supermercado",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:panaderia:1339",
+   "interior_id": "tienda:peluqueria:3428",
+   "puerta": {
+    "x": 673.21,
+    "z": 10.61
+   },
+   "building_id": 1691,
+   "poi_id": 184,
+   "osm": "shop:beauty",
+   "tipologia": "tienda_especializada",
+   "nombre": "Centro de estética",
+   "superficie_m2": 58.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:3462",
+   "puerta": {
+    "x": 684.99,
+    "z": 239.44
+   },
+   "building_id": 305,
+   "poi_id": 186,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 53,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:panaderia:3479",
    "puerta": {
     "x": 734.98,
     "z": 263.02
@@ -1092,14 +1380,14 @@
    "osm": "shop:bakery",
    "tipologia": "alimentacion",
    "nombre": "Panadería y Confitería",
-   "superficie_m2": 80.7,
+   "superficie_m2": 68.3,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "panaderia",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:ropa:1363",
+   "interior_id": "tienda:ropa:3513",
    "puerta": {
     "x": 44.09,
     "z": -257.68
@@ -1109,14 +1397,31 @@
    "osm": "shop:shoes",
    "tipologia": "tienda_especializada",
    "nombre": "Complementos La Encina",
-   "superficie_m2": 88.9,
+   "superficie_m2": 74.5,
    "accesible": true,
    "estado": "completo",
    "kit": "ropa",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:super:1377",
+   "interior_id": "tienda:estanco:3530",
+   "puerta": {
+    "x": 28.98,
+    "z": -282.49
+   },
+   "building_id": 4337,
+   "poi_id": 190,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 58.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:3547",
    "puerta": {
     "x": 111.9,
     "z": -200.79
@@ -1126,14 +1431,14 @@
    "osm": "shop:supermarket",
    "tipologia": "alimentacion",
    "nombre": "Autoservicio El Cruce",
-   "superficie_m2": 153,
+   "superficie_m2": 181.4,
    "accesible": true,
    "estado": "completo",
    "kit": "supermercado",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:1396",
+   "interior_id": "tienda:oficina:3564",
    "puerta": {
     "x": -85.73,
     "z": -80.42
@@ -1143,14 +1448,14 @@
    "osm": "amenity:driving_school",
    "tipologia": "tienda_especializada",
    "nombre": "Autoescuela",
-   "superficie_m2": 98.3,
+   "superficie_m2": 95.9,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:libreria:1406",
+   "interior_id": "tienda:libreria:3581",
    "puerta": {
     "x": -55.59,
     "z": -76.19
@@ -1160,14 +1465,14 @@
    "osm": "shop:books",
    "tipologia": "tienda_especializada",
    "nombre": "Librería y Papelería",
-   "superficie_m2": 85.1,
+   "superficie_m2": 84.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "libreria",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:libreria:1424",
+   "interior_id": "tienda:libreria:3598",
    "puerta": {
     "x": -24.14,
     "z": -32.05
@@ -1177,14 +1482,48 @@
    "osm": "shop:books",
    "tipologia": "tienda_especializada",
    "nombre": "Librería El Tintero",
-   "superficie_m2": 83.2,
+   "superficie_m2": 71.3,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "libreria",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:bazar:1444",
+   "interior_id": "tienda:peluqueria:3615",
+   "puerta": {
+    "x": -162.61,
+    "z": -320.84
+   },
+   "building_id": 4054,
+   "poi_id": 195,
+   "osm": "shop:beauty",
+   "tipologia": "tienda_especializada",
+   "nombre": "Centro de estética",
+   "superficie_m2": 69.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:3632",
+   "puerta": {
+    "x": -163.08,
+    "z": -498.99
+   },
+   "building_id": 4124,
+   "poi_id": 196,
+   "osm": "shop:kiosk",
+   "tipologia": "tienda_especializada",
+   "nombre": "Quiosco",
+   "superficie_m2": 59.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3972",
    "puerta": {
     "x": 221.45,
     "z": -367.28
@@ -1194,14 +1533,14 @@
    "osm": "shop:variety_store",
    "tipologia": "tienda_especializada",
    "nombre": "Bazar El Paseo",
-   "superficie_m2": 86.5,
+   "superficie_m2": 79.9,
    "accesible": true,
-   "estado": "basico",
-   "kit": null,
-   "constructor": "shops.js (a mano)"
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:oficina:1465",
+   "interior_id": "tienda:oficina:4448",
    "puerta": {
     "x": 499.7,
     "z": -143.05
@@ -1211,14 +1550,31 @@
    "osm": "amenity:clinic",
    "tipologia": "tienda_especializada",
    "nombre": "Oficina",
-   "superficie_m2": 90,
+   "superficie_m2": 87.8,
    "accesible": true,
    "estado": "completo",
    "kit": "oficina",
    "constructor": "locales.js (kit)"
   },
   {
-   "interior_id": "tienda:kebab:1474",
+   "interior_id": "tienda:taller:4703",
+   "puerta": {
+    "x": 1001.15,
+    "z": 139.76
+   },
+   "building_id": 4644,
+   "poi_id": 259,
+   "osm": "shop:trade",
+   "tipologia": "tienda_especializada",
+   "nombre": "Almacén",
+   "superficie_m2": 121,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:kebab:4839",
    "puerta": {
     "x": 21.92,
     "z": -130.28
@@ -1228,14 +1584,14 @@
    "osm": "amenity:fast_food",
    "tipologia": "restaurante",
    "nombre": "Kevab Guareña",
-   "superficie_m2": 83.2,
+   "superficie_m2": 85.1,
    "accesible": true,
    "estado": "basico",
    "kit": null,
    "constructor": "shops.js (a mano)"
   },
   {
-   "interior_id": "tienda:gimnasio:1491",
+   "interior_id": "tienda:gimnasio:4856",
    "puerta": {
     "x": 58.77,
     "z": -137.62
@@ -1245,7 +1601,7 @@
    "osm": "leisure:fitness_centre",
    "tipologia": "gimnasio",
    "nombre": "Gimnasio",
-   "superficie_m2": 132.5,
+   "superficie_m2": 135.4,
    "accesible": true,
    "estado": "completo",
    "kit": "gimnasio",
@@ -1459,13 +1815,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:3244",
@@ -1482,13 +1842,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:1594",
@@ -1505,13 +1869,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:1689",
@@ -1528,13 +1896,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:2132",
@@ -1551,13 +1923,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:1639",
@@ -1574,13 +1950,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 4 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 4
   },
   {
    "interior_id": "vivienda:5157",
@@ -1597,13 +1977,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:3627",
@@ -1620,13 +2004,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 5 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 5
   },
   {
    "interior_id": "vivienda:2606",
@@ -1643,13 +2031,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:4007",
@@ -1666,13 +2058,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:4204",
@@ -1689,13 +2085,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:2268",
@@ -1712,13 +2112,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:4216",
@@ -1735,13 +2139,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:4473",
@@ -1758,13 +2166,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 5 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 5
   },
   {
    "interior_id": "vivienda:2720",
@@ -1781,13 +2193,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 4 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 4
   },
   {
    "interior_id": "vivienda:3981",
@@ -1804,13 +2220,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:3429",
@@ -1827,13 +2247,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 7 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 7
   },
   {
    "interior_id": "vivienda:2728",
@@ -1850,13 +2274,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 4 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 4
   },
   {
    "interior_id": "vivienda:1679",
@@ -1873,13 +2301,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:5045",
@@ -1896,13 +2328,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:2162",
@@ -1919,13 +2355,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "vivienda:4685",
@@ -1942,69 +2382,17 @@
    "accesible": true,
    "estado": "basico",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "houses.js: 1 de 6 estancias por kit",
    "estancias": [
     "salon",
     "cocina",
     "dormitorio",
     "bano"
-   ]
-  },
-  {
-   "interior_id": "local:129",
-   "puerta": null,
-   "building_id": 3202,
-   "poi_id": 129,
-   "osm": "shop:optician",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:131",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 131,
-   "osm": "shop:jewelry",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:134",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 134,
-   "osm": "shop:jewelry",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:140",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 140,
-   "osm": "shop:lottery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
+   ],
+   "estancias_kit": [
+    "vivienda_salon"
+   ],
+   "estancias_total": 6
   },
   {
    "interior_id": "local:141",
@@ -2012,20 +2400,6 @@
    "building_id": 3071,
    "poi_id": 141,
    "osm": "craft:brewery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:142",
-   "puerta": null,
-   "building_id": 3057,
-   "poi_id": 142,
-   "osm": "shop:tobacco",
    "tipologia": "tienda_especializada",
    "nombre": null,
    "superficie_m2": null,
@@ -2049,236 +2423,12 @@
    "constructor": null
   },
   {
-   "interior_id": "local:149",
+   "interior_id": "local:161",
    "puerta": null,
    "building_id": null,
-   "poi_id": 149,
-   "osm": "craft:glaziery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:150",
-   "puerta": null,
-   "building_id": 2728,
-   "poi_id": 150,
-   "osm": "shop:car_repair",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:151",
-   "puerta": null,
-   "building_id": 1720,
-   "poi_id": 151,
-   "osm": "shop:car_parts",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:152",
-   "puerta": null,
-   "building_id": 1718,
-   "poi_id": 152,
-   "osm": "shop:car_repair",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:153",
-   "puerta": null,
-   "building_id": 2730,
-   "poi_id": 153,
-   "osm": "shop:car_repair",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:156",
-   "puerta": null,
-   "building_id": 3472,
-   "poi_id": 156,
-   "osm": "shop:perfumery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:157",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 157,
-   "osm": "shop:perfumery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:158",
-   "puerta": null,
-   "building_id": 3230,
-   "poi_id": 158,
-   "osm": "shop:lottery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:160",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 160,
-   "osm": "shop:tobacco",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:162",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 162,
-   "osm": "shop:jewelry",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:171",
-   "puerta": null,
-   "building_id": 3409,
-   "poi_id": 171,
-   "osm": "shop:hairdresser",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:184",
-   "puerta": null,
-   "building_id": 1691,
-   "poi_id": 184,
-   "osm": "shop:beauty",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:186",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 186,
-   "osm": "shop:perfumery",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:190",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 190,
-   "osm": "shop:tobacco",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:195",
-   "puerta": null,
-   "building_id": 4054,
-   "poi_id": 195,
-   "osm": "shop:beauty",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:196",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 196,
-   "osm": "shop:kiosk",
-   "tipologia": "tienda_especializada",
-   "nombre": null,
-   "superficie_m2": null,
-   "accesible": false,
-   "estado": "vacio",
-   "kit": null,
-   "constructor": null
-  },
-  {
-   "interior_id": "local:259",
-   "puerta": null,
-   "building_id": null,
-   "poi_id": 259,
-   "osm": "shop:trade",
-   "tipologia": "tienda_especializada",
+   "poi_id": 161,
+   "osm": "office:insurance",
+   "tipologia": "oficina",
    "nombre": null,
    "superficie_m2": null,
    "accesible": false,

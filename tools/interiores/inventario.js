@@ -33,7 +33,14 @@ const SINGULAR = { ayto: 'Ayuntamiento', teatro: 'Teatro', mercado: 'Mercado de 
 const area = (h) => (h && h.bounds ? +((h.bounds.x1 - h.bounds.x0) * (h.bounds.z1 - h.bounds.z0)).toFixed(1) : null);
 const tirar = (h) => { if (h && h.group) h.group.traverse((o) => { if (o.isMesh) { o.geometry.dispose(); } }); };
 function construye(fn) {
-  try { const h = fn(); const a = area(h); const extra = h && h.local ? { semilla_kit: h.local.seed, kit: h.local.kit } : {}; tirar(h); return { ok: !!h, superficie_m2: a, ...extra }; } catch (e) { return { ok: false, error: String(e && e.message || e).slice(0, 200) }; }
+  try {
+    const h = fn(), a = area(h);
+    const extra = h && h.local ? { semilla_kit: h.local.seed, kit: h.local.kit } : {};
+    // (a house: its rooms furnished from a kit, out of those that are not corridors)
+    if (h && h.estancias && h.rooms) { const salas = h.rooms.filter((q) => q.type !== 'pasillo' && q.type !== 'hall'); extra.estancias_kit = h.estancias.map((e) => e.kit); extra.estancias_total = salas.length; }
+    tirar(h);
+    return { ok: !!h, superficie_m2: a, ...extra };
+  } catch (e) { return { ok: false, error: String(e && e.message || e).slice(0, 200) }; }
 }
 
 export async function inventario() {
@@ -61,8 +68,11 @@ export async function inventario() {
     else { id = `vivienda:${d.seed}`; tip = 'vivienda'; b = construye(() => buildHouse('casa', d.seed, ORIGIN)); }
     if (tip === 'vivienda') extra.estancias = ['salon', 'cocina', 'dormitorio', 'bano'];
     if (!b.ok) errores.push(`${id}: la puerta lleva a un interior que no se construye (${b.error})`);
+    if (b.estancias_kit) { extra.estancias_kit = b.estancias_kit; extra.estancias_total = b.estancias_total; }
+    const porKit = b.estancias_kit && b.estancias_kit.length === b.estancias_total; // (every room of the house from its kit)
     out.push({ interior_id: id, puerta: { x: +d.x.toFixed(2), z: +d.z.toFixed(2) }, building_id: edificio(d.fx ?? d.x, d.fz ?? d.z), poi_id: null, osm: null,
-      tipologia: tip, nombre, superficie_m2: b.superficie_m2, accesible: true, estado: b.ok ? (tip === 'singular' ? 'completo' : 'basico') : 'vacio', kit: null, constructor: tip === 'singular' ? 'a mano (pieza única)' : 'interiors.js / houses.js (a mano)', ...extra });
+      tipologia: tip, nombre, superficie_m2: b.superficie_m2, accesible: true, estado: b.ok ? (tip === 'singular' || porKit ? 'completo' : 'basico') : 'vacio', kit: null,
+      constructor: tip === 'singular' ? 'a mano (pieza única)' : b.estancias_kit ? `houses.js: ${b.estancias_kit.length} de ${b.estancias_total} estancias por kit` : 'interiors.js / houses.js (a mano)', ...extra });
   }
   // ---- the businesses of the map with no door yet
   map.pois.forEach((p, i) => {

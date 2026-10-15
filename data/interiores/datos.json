@@ -1,5 +1,5 @@
 {
- "objetos": 1313,
+ "objetos": 1668,
  "kits": {
   "banco": {
    "tipologia": "sucursal_bancaria",
@@ -13,6 +13,13 @@
    "objetos_distintos": 89,
    "minimo": 60,
    "moodboard": 12,
+   "zonas": 8
+  },
+  "bazar": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 89,
+   "minimo": 40,
+   "moodboard": 11,
    "zonas": 8
   },
   "cafeteria": {
@@ -29,12 +36,33 @@
    "moodboard": 12,
    "zonas": 11
   },
+  "estanco": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 62,
+   "minimo": 40,
+   "moodboard": 13,
+   "zonas": 7
+  },
   "farmacia": {
    "tipologia": "farmacia",
    "objetos_distintos": 87,
    "minimo": 40,
    "moodboard": 12,
    "zonas": 7
+  },
+  "ferreteria": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 84,
+   "minimo": 40,
+   "moodboard": 12,
+   "zonas": 6
+  },
+  "floristeria": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 72,
+   "minimo": 40,
+   "moodboard": 12,
+   "zonas": 6
   },
   "fruteria": {
    "tipologia": "alimentacion",
@@ -56,6 +84,27 @@
    "minimo": 40,
    "moodboard": 12,
    "zonas": 10
+  },
+  "joyeria": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 59,
+   "minimo": 40,
+   "moodboard": 12,
+   "zonas": 5
+  },
+  "jugueteria": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 72,
+   "minimo": 40,
+   "moodboard": 12,
+   "zonas": 9
+  },
+  "libreria": {
+   "tipologia": "tienda_especializada",
+   "objetos_distintos": 85,
+   "minimo": 40,
+   "moodboard": 12,
+   "zonas": 9
   },
   "muebles": {
    "tipologia": "tienda_especializada",
