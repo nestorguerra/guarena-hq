@@ -11,8 +11,10 @@ import { TEXTURAS as TEX_COMERCIO } from './texturas/comercio.js';
 import { TEXTURAS as TEX_SERVICIOS } from './texturas/servicios.js';
 import { TEXTURAS as TEX_TIENDAS_A } from './texturas/tiendas_a.js';
 import { TEXTURAS as TEX_TIENDAS_B } from './texturas/tiendas_b.js';
+import { TEXTURAS as TEX_VIVIENDA_A } from './texturas/vivienda_a.js';
+import { TEXTURAS as TEX_VIVIENDA_B } from './texturas/vivienda_b.js';
 
-const TEX_FAMILIAS = { ...TEX_COMERCIO, ...TEX_SERVICIOS, ...TEX_TIENDAS_A, ...TEX_TIENDAS_B };
+const TEX_FAMILIAS = { ...TEX_COMERCIO, ...TEX_SERVICIOS, ...TEX_TIENDAS_A, ...TEX_TIENDAS_B, ...TEX_VIVIENDA_A, ...TEX_VIVIENDA_B };
 
 const DEG = Math.PI / 180;
 const FAMILIA = { metal: 'metal', cristal: 'cristal' };

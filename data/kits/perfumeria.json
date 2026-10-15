@@ -1,0 +1,813 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Perfumería y centro de belleza",
+ "nota": "La perfumería de un pueblo de las Vegas Altas: el mostrador de vitrina con la caja a la derecha y, a su espalda, la pared de perfumes con luz cálida; a la izquierda, estantes de cosmética; en medio, mesas con probadores; al fondo, el tocador de maquillaje y la cabina de estética tras un tabique. Marcas inventadas. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.4,
+   6.9
+  ],
+  "fondo": [
+   8.7,
+   10.5
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xb": "W/2-1.6",
+  "zb0": "1.8",
+  "zb1": "5.4",
+  "zc": "D-3.3",
+  "xk": "W/2-2.6"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f3eee6",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#d8d0c4",
+ "puntos": {
+  "dependiente": [
+   "xb+0.8",
+   "(zb0+zb1)/2"
+  ],
+  "mostrador": [
+   "xb-0.9",
+   "(zb0+zb1)/2"
+  ]
+ },
+ "pedir": "Pedir en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.5"
+   ]
+  },
+  {
+   "id": "pared_w",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "1.5",
+    "-W/2+0.5",
+    "zc"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2+0.5",
+    "1.5",
+    "xb-1.3",
+    "zc"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xb-0.3",
+    "zb0",
+    "xb+0.3",
+    "zb1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xb-1.3",
+    "zb0",
+    "xb-0.33",
+    "zb1"
+   ]
+  },
+  {
+   "id": "trasbarra",
+   "publica": false,
+   "rect": [
+    "xb+0.33",
+    "zb0",
+    "W/2",
+    "zb1"
+   ]
+  },
+  {
+   "id": "maquillaje",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "zc",
+    "-W/2+2.4",
+    "D"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": true,
+   "rect": [
+    "-W/2+2.4",
+    "zc",
+    "xk",
+    "D"
+   ]
+  },
+  {
+   "id": "cabina",
+   "publica": false,
+   "rect": [
+    "xk",
+    "zc",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xk",
+    "zc"
+   ],
+   "a": [
+    "xk",
+    "D"
+   ],
+   "puerta": [
+    0.6,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xk",
+    "zc"
+   ],
+   "a": [
+    "W/2",
+    "zc"
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xb-1.3",
+    "zb0",
+    "xb-0.3",
+    "zb1"
+   ],
+   "nota": "el sitio para pedir en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "per_mostrador_vitrina_negro",
+   "eje": "z",
+   "linea": [
+    "xb",
+    "zb0",
+    "zb1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "per_perfumes_escaparate",
+   "en": [
+    "per_mostrador_vitrina_negro"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "perfume"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "per_mostrador_vitrina_negro"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "per_mostrador_vitrina_negro"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "per_cesto_regalo",
+    "per_bolsas_regalo",
+    "per_tarjetero_fidelidad",
+    "per_probador_papel"
+   ],
+   "en": [
+    "per_mostrador_vitrina_negro"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "per_perfume_azahar",
+    "per_perfume_oud",
+    "per_perfume_rosa_mayo",
+    "per_perfume_vainilla"
+   ],
+   "en": [
+    "per_mostrador_vitrina_negro"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "vende": "perfume"
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "contra_pared",
+   "obj": "per_estanteria_luz",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "sobre",
+   "variantes": [
+    "per_perfume_azahar",
+    "per_perfume_jazmin",
+    "per_perfume_rosa_mayo",
+    "per_perfume_lavanda",
+    "per_perfume_sandalo",
+    "per_perfume_ambar",
+    "per_perfume_citrus",
+    "per_perfume_brisa_marina",
+    "per_perfume_vainilla",
+    "per_perfume_noche_verano",
+    "per_perfume_madera_noble",
+    "per_perfume_almendro",
+    "per_perfume_higuera",
+    "per_perfume_romero",
+    "per_perfume_pino",
+    "per_perfume_caramelo",
+    "per_perfume_violeta",
+    "per_perfume_cuero",
+    "per_perfume_ninos",
+    "per_perfume_oud"
+   ],
+   "en": [
+    "per_estanteria_luz"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "perfume"
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "suelo_libre",
+   "obj": "silla_cajera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "techo",
+   "obj": "carril_focos",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_w",
+   "regla": "contra_pared",
+   "obj": "per_estanteria_luz",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "sobre",
+   "variantes": [
+    "per_cosm_pintalabios_rojos",
+    "per_cosm_pintalabios_nude",
+    "per_cosm_esmaltes_rojos",
+    "per_cosm_esmaltes_pastel",
+    "per_cosm_mascara_pestanas",
+    "per_cosm_base_maquillaje",
+    "per_cosm_polvos_compactos",
+    "per_cosm_paleta_sombras",
+    "per_cosm_brochas",
+    "per_cosm_crema_facial",
+    "per_cosm_serum",
+    "per_cosm_crema_manos",
+    "per_cosm_leche_corporal",
+    "per_cosm_gel_ducha",
+    "per_cosm_jabones",
+    "per_cosm_sales_bano",
+    "per_cosm_protector_solar",
+    "per_cosm_desmaquillante",
+    "per_cosm_agua_perfumada",
+    "per_perfume_vainilla",
+    "per_perfume_noche_verano",
+    "per_perfume_madera_noble",
+    "per_perfume_almendro",
+    "per_perfume_higuera",
+    "per_perfume_romero",
+    "per_perfume_pino",
+    "per_perfume_caramelo",
+    "per_perfume_violeta",
+    "per_perfume_cuero",
+    "per_perfume_ninos",
+    "per_perfume_oud"
+   ],
+   "en": [
+    "per_estanteria_luz"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "pared",
+   "obj": "per_cartel_belleza",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "per_mesa_expositora_negra",
+    "per_mesa_expositora_crema"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "per_perfume_azahar",
+    "per_perfume_jazmin",
+    "per_perfume_rosa_mayo",
+    "per_perfume_lavanda",
+    "per_perfume_sandalo",
+    "per_perfume_ambar",
+    "per_perfume_citrus",
+    "per_perfume_brisa_marina",
+    "per_perfume_vainilla",
+    "per_perfume_noche_verano",
+    "per_probador_papel"
+   ],
+   "en": [
+    "per_mesa_expositora_negra",
+    "per_mesa_expositora_crema"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ],
+   "obligatorio": true,
+   "vende": "perfume"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "per_torre_tester",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "per_cosm_pintalabios_rojos",
+    "per_cosm_pintalabios_nude",
+    "per_cosm_esmaltes_rojos",
+    "per_cosm_esmaltes_pastel",
+    "per_cosm_mascara_pestanas",
+    "per_cosm_base_maquillaje",
+    "per_cosm_polvos_compactos",
+    "per_cosm_paleta_sombras",
+    "per_cosm_brochas",
+    "per_cosm_crema_facial",
+    "per_cosm_serum",
+    "per_cosm_crema_manos"
+   ],
+   "en": [
+    "per_torre_tester"
+   ],
+   "relleno": [
+    0.7,
+    0.95
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "maquillaje",
+   "regla": "contra_pared",
+   "obj": "per_tocador_maquillaje",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "maquillaje",
+   "regla": "sobre",
+   "variantes": [
+    "per_cosm_pintalabios_rojos",
+    "per_cosm_pintalabios_nude",
+    "per_cosm_esmaltes_rojos",
+    "per_cosm_esmaltes_pastel",
+    "per_cosm_mascara_pestanas",
+    "per_cosm_base_maquillaje",
+    "per_cosm_polvos_compactos",
+    "per_cosm_paleta_sombras",
+    "per_cosm_brochas",
+    "per_probador_papel"
+   ],
+   "en": [
+    "per_tocador_maquillaje"
+   ],
+   "por_soporte": [
+    3,
+    5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "maquillaje",
+   "regla": "pared",
+   "obj": "per_rotulo",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "maquillaje",
+   "regla": "pared",
+   "obj": "per_pizarra_tratamientos",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "per_cartel_perfume",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "obj": "per_taburete_maquillaje",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cabina",
+   "regla": "contra_pared",
+   "obj": "per_camilla_estetica",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cabina",
+   "regla": "sobre",
+   "variantes": [
+    "pel_toallas_dobladas",
+    "per_bolsas_regalo"
+   ],
+   "en": [
+    "per_camilla_estetica"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cabina",
+   "regla": "suelo_libre",
+   "variantes": [
+    "per_carrito_estetica",
+    "per_lampara_lupa",
+    "per_vaporizador_facial"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "cabina",
+   "regla": "sobre",
+   "variantes": [
+    "per_cosm_crema_facial",
+    "per_cosm_serum",
+    "per_cosm_desmaquillante",
+    "per_cosm_crema_manos"
+   ],
+   "en": [
+    "per_carrito_estetica"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ]
+  },
+  {
+   "zona": "cabina",
+   "regla": "esquina",
+   "obj": "per_taburete_estetica",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cabina",
+   "regla": "pared",
+   "obj": "per_estante_cabina",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cabina",
+   "regla": "pared",
+   "obj": "pel_calentador_toallas",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cabina",
+   "regla": "esquina",
+   "obj": "planta_pequena",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.12,
+    0.15
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3500,
+   3900
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 10:00-13:45,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "un probador con la tira de papel",
+   "bolsas de regalo junto a la caja",
+   "una clienta en el tocador",
+   "olor a jazmín"
+  ],
+  "cerrado": "reja bajada, las vitrinas encendidas"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Museo del Perfume de Barcelona.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Museo_del_Perfume_de_Barcelona.JPG",
+   "autor": "Xrius",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Drogerie Rüdel am Alten Markt 11 (Kiel 56.695).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Drogerie_R%C3%BCdel_am_Alten_Markt_11_(Kiel_56.695).jpg",
+   "autor": "Magnussen, Friedrich (1914-1987)",
+   "licencia": "CC BY-SA 3.0 de"
+  },
+  {
+   "titulo": "Parfuemerie Akzente Filiale Michelstadt 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Parfuemerie_Akzente_Filiale_Michelstadt_2015.jpg",
+   "autor": "Parfuemerie Akzente GmbH/Parfumdreams.de",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Perfume shop Rosette 1941 (5526C; JOKAHBL3C B93-2).tif",
+   "url": "https://commons.wikimedia.org/wiki/File:Perfume_shop_Rosette_1941_(5526C;_JOKAHBL3C_B93-2).tif",
+   "autor": "Hugo Sundström",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Silja Europa - 20220704 - 09 - Perfumes.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Silja_Europa_-_20220704_-_09_-_Perfumes.jpg",
+   "autor": "AleWi",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Silja Europa - 20220705 - 10 - Perfume & Fashion.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Silja_Europa_-_20220705_-_10_-_Perfume_%26_Fashion.jpg",
+   "autor": "AleWi",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "MS Galaxy Perfumes.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MS_Galaxy_Perfumes.jpg",
+   "autor": "Canukki",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Cosmetic Boutique, Baltic Princess - 20250507 - 11.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Cosmetic_Boutique,_Baltic_Princess_-_20250507_-_11.jpg",
+   "autor": "AleWi",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Kosmetika vendejo en Voyage.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kosmetika_vendejo_en_Voyage.jpg",
+   "autor": "RG72",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Kosmetika vendejo en aĉetcentro Kristall (Tjumeno) 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kosmetika_vendejo_en_a%C4%89etcentro_Kristall_(Tjumeno)_01.jpg",
+   "autor": "RG72",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Kosmetika vendejo en aĉetcentro Kristall (Tjumeno) 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kosmetika_vendejo_en_a%C4%89etcentro_Kristall_(Tjumeno)_02.jpg",
+   "autor": "RG72",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Kosmetika vendejo en Voyage - 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kosmetika_vendejo_en_Voyage_-_2.jpg",
+   "autor": "RG72",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

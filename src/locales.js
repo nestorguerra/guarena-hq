@@ -151,10 +151,10 @@ export function amueblar(kit, seed = 1, ctx = null) {
     },
     fila(e, Z) {
       const [fijo, a, b] = e.linea.map(ev), ry = MIRA[e.mira || '+z'];
-      for (let c = a; c <= b + 1e-6; c += e.cada) {
-        const [x, z] = origen(e.obj, e.eje === 'z' ? fijo : c, e.eje === 'z' ? c : fijo, ry);
-        const it = { obj: e.obj, x, y: 0, z, ry };
-        if (libre(volumen(it)) && !cierra([it])) poner(e.obj, Z.id, 'fila', x, 0, z, ry);
+      for (let c = a, k = 0; c <= b + 1e-6; c += e.cada, k++) {
+        const obj = variante(e, k), [x, z] = origen(obj, e.eje === 'z' ? fijo : c, e.eje === 'z' ? c : fijo, ry);
+        const it = { obj, x, y: 0, z, ry };
+        if (libre(volumen(it)) && !cierra([it])) poner(obj, Z.id, 'fila', x, 0, z, ry);
       }
     },
     contra_pared(e, Z) {

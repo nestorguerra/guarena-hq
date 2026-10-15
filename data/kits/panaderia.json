@@ -1,0 +1,945 @@
+{
+ "tipologia": "alimentacion",
+ "nombre": "Panadería y pastelería",
+ "nota": "La panadería-pastelería de un pueblo de las Vegas Altas: el mostrador de cristal con la bollería y las tartas, tras él las estanterías del pan y el mueble de la caja con la cortadora; a la izquierda, los dulces típicos (perrunillas, magdalenas, roscos), una mesa de panes y un rincón para tomar café; al fondo, tras un tabique, el obrador con el horno, la amasadora y la laminadora. Luz cálida. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.0,
+   7.5
+  ],
+  "fondo": [
+   9.3,
+   11.4
+  ],
+  "alto": 3.1
+ },
+ "variables": {
+  "xc": "W/2-2.0",
+  "z0": "1.8",
+  "zo": "D-3.2",
+  "z1": "zo-0.6"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f4ead6",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#d6c6a8",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.95",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.4"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "tras",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "1.5",
+    "W/2",
+    "zo"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.4",
+    "xc-1.4",
+    "zo"
+   ]
+  },
+  {
+   "id": "obrador",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zo",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces_sala",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "xc-0.3",
+    "zo"
+   ]
+  },
+  {
+   "id": "luces_barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "0",
+    "W/2",
+    "zo"
+   ]
+  },
+  {
+   "id": "luces_obrador",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zo",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zo"
+   ],
+   "a": [
+    "W/2",
+    "zo"
+   ],
+   "puerta": [
+    "W-1.5",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pedir en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "pan_vitrina_modulo",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pan_bocadillos",
+   "en": [
+    "pan_vitrina_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "bocadillo"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "pan_tarta_queso",
+    "pan_tarta_chocolate",
+    "pan_tarta_manzana",
+    "pan_tarta_santiago",
+    "pan_tarta_fresas",
+    "pan_tarta_tres_chocolates",
+    "pan_tarta_limon",
+    "pan_tarta_cumple",
+    "pan_brazo_gitano",
+    "pan_roscon_reyes",
+    "pan_flan_pastelero",
+    "pan_empanada"
+   ],
+   "en": [
+    "pan_vitrina_modulo"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "pan_bol_croissant",
+    "pan_bol_croissant_almendra",
+    "pan_bol_napolitana",
+    "pan_bol_napolitana_crema",
+    "pan_bol_palmera",
+    "pan_bol_palmera_choco",
+    "pan_bol_ensaimada",
+    "pan_bol_donut_rosa",
+    "pan_bol_donut_choco",
+    "pan_bol_donut_azucar",
+    "pan_bol_magdalena",
+    "pan_bol_muffin_choco",
+    "pan_bol_cana_crema",
+    "pan_bol_eclair",
+    "pan_bol_milhojas",
+    "pan_bol_tartaletas",
+    "pan_bol_bocados_hojaldre",
+    "pan_bol_torrijas",
+    "pan_bol_pestinos",
+    "pan_bol_rosquillas"
+   ],
+   "en": [
+    "pan_vitrina_modulo"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tras",
+   "regla": "contra_pared",
+   "obj": "pan_mueble_trasero",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "obj": "pan_cortadora_pan",
+   "en": [
+    "pan_mueble_trasero"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "pan_mueble_trasero"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "variantes": [
+    "cafetera_industrial",
+    "molinillo",
+    "pan_cinta_envolver",
+    "pan_caja_tarta",
+    "datafono",
+    "bote_propinas",
+    "pila_bolsas_papel"
+   ],
+   "en": [
+    "pan_mueble_trasero"
+   ],
+   "cantidad": [
+    3,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "contra_pared",
+   "obj": "pan_estanteria_pan",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "variantes": [
+    "pan_pan_barra_pueblo",
+    "pan_pan_barra_integral",
+    "pan_pan_barra_candeal",
+    "pan_pan_barra_centeno",
+    "pan_pan_barra_semillas",
+    "pan_pan_baguette",
+    "pan_pan_hogaza_lena",
+    "pan_pan_hogaza_centeno",
+    "pan_pan_hogaza_integral",
+    "pan_pan_hogaza_pasas",
+    "pan_pan_rosca",
+    "pan_pan_mollete",
+    "pan_pan_pistolas",
+    "pan_pan_chapata",
+    "pan_pan_pan_molde",
+    "pan_pan_pan_leche",
+    "pan_pan_picos",
+    "pan_pan_colines",
+    "pan_pan_reganas",
+    "pan_pan_pan_rallado",
+    "pan_pan_tortas_aceite"
+   ],
+   "en": [
+    "pan_estanteria_pan"
+   ],
+   "relleno": [
+    0.9,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "pared",
+   "obj": "pan_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "pan_estante_dulces",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pan_dulce_perrunillas",
+    "pan_dulce_magdalenas_bolsa",
+    "pan_dulce_roscos_anis",
+    "pan_dulce_roscos_vino",
+    "pan_dulce_mantecados",
+    "pan_dulce_polvorones",
+    "pan_dulce_turron",
+    "pan_dulce_dulce_leche",
+    "pan_dulce_sequillos",
+    "pan_dulce_bollas_aceite",
+    "pan_dulce_floretas",
+    "pan_dulce_cabello_angel",
+    "pan_dulce_bizcochos_borrachos",
+    "pan_dulce_mazapan"
+   ],
+   "en": [
+    "pan_estante_dulces"
+   ],
+   "relleno": [
+    0.85,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "perrunillas",
+    "magdalenas"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "pan_estante_pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pan_dulce_chocolate_tableta",
+    "pan_dulce_bombones",
+    "prod_agua_15",
+    "prod_agua_gas",
+    "pan_cafe_paquete"
+   ],
+   "en": [
+    "pan_estante_pared"
+   ],
+   "relleno": [
+    0.8,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "chocolate",
+    "agua"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "pan_pizarra_precios",
+    "pan_cartel_pan",
+    "pan_cartel_tarta",
+    "pan_pala_horno_pared",
+    "pan_cesta_colgante"
+   ],
+   "pared": "N",
+   "cantidad": [
+    2,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "pan_cartel_tarta",
+    "pan_cesta_colgante",
+    "pan_cartel_pan"
+   ],
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tras",
+   "regla": "pared",
+   "variantes": [
+    "pan_pala_horno_pared",
+    "pan_cesta_colgante"
+   ],
+   "pared": "N",
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "pan_mesa_pan",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pan_pan_hogaza_lena",
+    "pan_pan_hogaza_centeno",
+    "pan_pan_hogaza_integral",
+    "pan_pan_hogaza_pasas",
+    "pan_pan_rosca",
+    "pan_pan_mollete",
+    "pan_pan_pistolas",
+    "pan_pan_chapata",
+    "pan_pan_pan_molde",
+    "pan_pan_pan_leche",
+    "pan_pan_picos",
+    "pan_pan_colines",
+    "pan_pan_reganas",
+    "pan_pan_pan_rallado",
+    "pan_pan_tortas_aceite",
+    "pan_dulce_roscos_vino"
+   ],
+   "en": [
+    "pan_mesa_pan"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "obligatorio": true,
+   "vende": "pan"
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "mesa_redonda",
+   "variantes": [
+    "mesa_redonda",
+    "mesa_cuadrada"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_bistro",
+     "silla_madera"
+    ],
+    "n": [
+     2,
+     3
+    ]
+   },
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "servilletero",
+    "azucarero"
+   ],
+   "en": [
+    "mesa_redonda",
+    "mesa_cuadrada"
+   ],
+   "por_soporte": 1
+  },
+  {
+   "zona": "sala",
+   "regla": "vida",
+   "variantes": [
+    "taza_cafe",
+    "plato_cafe",
+    "plato_tostada",
+    "vaso_agua",
+    "periodico",
+    "servilleta_arrugada"
+   ],
+   "en": [
+    "mesa_redonda",
+    "mesa_cuadrada"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "revistero",
+   "pared": "S",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "obrador",
+   "regla": "contra_pared",
+   "obj": "pan_horno_rotativo",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "contra_pared",
+   "obj": "pan_amasadora",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "contra_pared",
+   "obj": "pan_camara_fermentacion",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "contra_pared",
+   "obj": "fregadero_acero",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "contra_pared",
+   "obj": "pan_estante_moldes",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "obrador",
+   "regla": "suelo_libre",
+   "obj": "pan_laminadora",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pan_mesa_obrador",
+    "mesa_acero"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "sobre",
+   "variantes": [
+    "pan_batidora",
+    "pan_horno_sobremesa",
+    "pan_cubeta_masa",
+    "tabla_cortar",
+    "balanza_precision"
+   ],
+   "en": [
+    "pan_mesa_obrador",
+    "mesa_acero"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pan_carro_bandejas",
+    "pan_carro_bandejas_vacio"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pan_pila_harina",
+    "pan_saco_harina",
+    "pan_cubeta_masa"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "obrador",
+   "regla": "pared",
+   "obj": "pan_pala_obrador",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "obrador",
+   "regla": "esquina",
+   "variantes": [
+    "fregona_cubo",
+    "escoba",
+    "papelera"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces_sala",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.1,
+    0.13
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_barra",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "por_m": [
+    0.35,
+    0.45
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_obrador",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   5,
+   9
+  ],
+  "temperatura_k": [
+   2900,
+   3200
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 07:00-14:00,17:00-20:30; Su 07:30-14:00",
+  "vida": [
+   "pan recién hecho",
+   "una bandeja de perrunillas",
+   "un café con una magdalena",
+   "la cola del mostrador"
+  ],
+  "cerrado": "persiana bajada, el horno aún caliente",
+  "clientela": {
+   "maximo": 3,
+   "horas": [
+    [
+     7,
+     10,
+     0.45
+    ],
+    [
+     10,
+     14,
+     0.4
+    ],
+    [
+     17,
+     20,
+     0.35
+    ]
+   ],
+   "frases": [
+    "Ponme una barra y un par de molletes, que vienen los nietos.",
+    "Estas perrunillas huelen igual que las de mi abuela.",
+    "Un café con leche y una magdalena, por favor.",
+    "Hoy el pan sale calentito, ¿eh?",
+    "Guárdame un roscón para el sábado.",
+    "Qué buena pinta tienen las tartas de hoy."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 80,
+ "moodboard": [
+  {
+   "titulo": "Interior de la Panaderia Fiol.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_la_Panaderia_Fiol.jpg",
+   "autor": "Fullet",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior del horno de la panadería de Tronchón - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_del_horno_de_la_panader%C3%ADa_de_Tronch%C3%B3n_-_panoramio.jpg",
+   "autor": "jnerin",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Panadería Santa Fe (9127597643).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Panader%C3%ADa_Santa_Fe_(9127597643).jpg",
+   "autor": "Juanedc from Zaragoza, España",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Panadería alemana.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Panader%C3%ADa_alemana.jpg",
+   "autor": "Inderkrieg",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "-2020-01-30 Inside Bread Source Bakery and café, Red Lion Street, Aylsham.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:-2020-01-30_Inside_Bread_Source_Bakery_and_caf%C3%A9,_Red_Lion_Street,_Aylsham.JPG",
+   "autor": "Kolforn (Kolforn)\nI'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wik",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bakery sales counter in Paris.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bakery_sales_counter_in_Paris.jpg",
+   "autor": "THOR",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Bäckerladen, 2009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:B%C3%A4ckerladen,_2009.jpg",
+   "autor": "fiverlocker",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Dutch Maid Bakery offerings.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dutch_Maid_Bakery_offerings.jpg",
+   "autor": "Ke4roh",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Food for sale on the counter of Bee May Bakery 2026-09-29.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Food_for_sale_on_the_counter_of_Bee_May_Bakery_2026-09-29.jpg",
+   "autor": "Andy Li",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Food for sale on the counter of Jacob's Bakery + Cafe 2025-10-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Food_for_sale_on_the_counter_of_Jacob%27s_Bakery_%2B_Cafe_2025-10-08.jpg",
+   "autor": "Andy Li",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior Counter and Signage of Bagels & Pastries Shop, Chatham.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_Counter_and_Signage_of_Bagels_%26_Pastries_Shop,_Chatham.jpg",
+   "autor": "OathOn",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Purchasing bread in a Lithuanian bakery.8d19617v.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Purchasing_bread_in_a_Lithuanian_bakery.8d19617v.jpg",
+   "autor": "Marjory Collins",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "De dulce (6181167145).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:De_dulce_(6181167145).jpg",
+   "autor": "Raúl Hernández González from Aranda de Duero, Spain",
+   "licencia": "CC BY 2.0"
+  }
+ ]
+}

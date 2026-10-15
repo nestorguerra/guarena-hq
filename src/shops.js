@@ -546,7 +546,9 @@ export class Shops {
       const T = SHOP_TYPES[type];
       // (an office is called what it is: the insurance office, the driving school, the dentist's)
       const title = p.title || (type === 'oficina' || T.porTipo ? GENERICOS_TIPO[p.kind] || T.title : n === 1 ? T.title : (NAMES[type] && NAMES[type][(n - 2) % NAMES[type].length]) || T.title);
-      this.add({ ...door, type, title, name: T.name, seed: 300 + this.list.length * 17 + n, poi: map.pois.indexOf(p) });
+      // (its seed by its point of the map, not by its place in the list: the same shop inside whatever others open)
+      const poi = map.pois.indexOf(p);
+      this.add({ ...door, type, title, name: T.name, seed: 300 + poi * 17, poi });
     }
     // the gun shop: the building by the Cooperativa where the old sign stood
     const gs = activities.gunShop;

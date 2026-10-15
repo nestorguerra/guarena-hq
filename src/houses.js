@@ -1061,7 +1061,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
       if (deBotin.has(i)) {
         const g = construir([it]); B.extra.push(g);
-        const li = lootItem(deBotin.get(i), null, cxz[0], y, cxz[1], 0, { mesh: g, r: 0.95 });
+        const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95 }); // (its storey by the floor it is on, not by how high it hangs)
         if (li && li.def.crack) li.label = 'Forzar la caja fuerte';
         return;
       }
