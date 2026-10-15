@@ -330,9 +330,9 @@ class Landmarks {
     const byColor = umbrellaMats.map(() => []);
     const noTerrace = SIN_TERRAZA.map((r) => ({ r, bb: ringBounds(r) }));
     for (const b of bars) {
-      // (the Café/Bar El Parque on the EX-338: its capture — view 288, May 2024 — shows its pavement bare, shop fronts under awnings
+      // (the café-bar on the EX-338 by the park: its capture — view 288, May 2024 — shows its pavement bare, shop fronts under awnings
       // and no table, chair or sunshade: it keeps its place on the map but puts none out)
-      if (/El Parque$/.test(b.name)) continue;
+      if ([[-326.4, -409.2], [-229.3, -457.1]].some(([px, pz]) => Math.hypot(b.x - px, b.z - pz) < 4)) continue; // (the two café-bars by the parks: located, not named — a published copy carries no business's name)
       // walk from the bar towards the nearest street/plaza to find open ground
       const q = map.nearestEdge(b.x, b.z, 30, (e) => !e.dirt);
       if (!q) continue;
@@ -1275,9 +1275,9 @@ class Landmarks {
     this.poi.plaza = { x: cx, z: cz };
   }
 
-  // ================================================================ Gas station (Sangar, Ctra. de Don Benito)
+  // ================================================================ Gas station (Ctra. de Don Benito)
   gasStation() {
-    const p = this.map.pois.find((p) => p.kind === 'amenity:fuel' && /Sangar/.test(p.name));
+    const p = this.map.pois.find((p) => p.kind === 'amenity:fuel' && Math.hypot(p.x - 186.2, p.z + 380.8) < 15); // (the one by the town, by its place: a published copy carries no business's name)
     if (!p) return;
     const q = this.map.nearestEdge(p.x, p.z, 40, (e) => e.drive && e.cls === 'primary');
     if (!q) return;

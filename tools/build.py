@@ -160,6 +160,11 @@ def main():
         if os.path.isdir(os.path.join(dist, sub)): shutil.rmtree(os.path.join(dist, sub))
     os.makedirs(dist, exist_ok=True)
     data = read(os.path.join(ROOT, 'data', 'map.json'))
+    # (a published copy carries no business's name: the map's shops, bars and banks their kind's generic —
+    # tools/rotulos/rotulos.py, data/rotulos/marcas.json; the game never shows them, and the page must not hold them)
+    sys.path.insert(0, os.path.join(ROOT, 'tools', 'rotulos'))
+    from rotulos import sanear_mapa
+    data = sanear_mapa(data)
     for rel in lazy:
         os.makedirs(os.path.dirname(os.path.join(dist, 'assets', rel)), exist_ok=True)
         shutil.copyfile(os.path.join(src_assets, rel), os.path.join(dist, 'assets', rel))

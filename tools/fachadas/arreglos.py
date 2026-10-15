@@ -448,7 +448,9 @@ for f in files:
                 qx, qz, ux, uz, nx, nz, w, sw, fw = along(v, side, float(it['en']))
                 o = wall_at(qx, qz, nx, nz, w, sw, fw) + 0.01
                 if LAT[0] is not None: o = 0.0
-                out['PLACAS_CALLE'].append([round(qx + nx * o, 2), round(qz + nz * o, 2), round(-nx, 3), round(-nz, 3), str(it.get('texto') or '')[:40], HEX(it.get('fondo')) or '#f4f1ea', HEX(it.get('letra')) or '#1f3f7a'])  # (texto '': a plate whose words do not read)
+                # (no plate without words — backlog R-06: one whose words do not read in its capture takes its street's name)
+                if not str(it.get('texto') or '').strip(): raise ValueError('placa sin texto: pon el nombre de su calle')
+                out['PLACAS_CALLE'].append([round(qx + nx * o, 2), round(qz + nz * o, 2), round(-nx, 3), round(-nz, 3), str(it.get('texto'))[:40], HEX(it.get('fondo')) or '#f4f1ea', HEX(it.get('letra')) or '#1f3f7a'])
             elif k == 'escalones':
                 h, n = float(it['alto']), int(it.get('peldanos', 1))
                 if not (0.08 <= h <= 2 and 1 <= n <= 10): raise ValueError('alto 0.08–2, peldanos 1–10')

@@ -80,7 +80,7 @@ export class Fleet {
     }
     // motorbikes at the kerb and bicycles against the walls (placed with the street life): rideable
     for (const t of (this.game.world && this.game.world.twoWheelSpots) || []) this.spots.push({ x: t.x, z: t.z, heading: t.heading, model: t.model, color: typeof t.color === 'number' ? '#' + t.color.toString(16).padStart(6, '0') : t.color, vehicle: null, taken: false, twoWheel: true });
-    // vehicles placed by the landmarks (the new tractors on Agrícola Corbacho's forecourt)
+    // vehicles placed by the landmarks (the new tractors on the tractor dealer's forecourt)
     for (const t of (this.game.world && this.game.world.landmarks && this.game.world.landmarks.vehicleSpots) || []) if (MODELS[t.model]) this.spots.push({ x: t.x, z: t.z, heading: t.heading, model: t.model, color: t.color, vehicle: null, taken: false, display: true });
     // parking lots: cars in their painted bays, nose in (about three in four taken)
     for (const b of parkingBays(map)) {

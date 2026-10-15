@@ -4,6 +4,8 @@
 #   python3 tools/fachadas/casas.py <casas dir>
 import json, os, re, sys
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, os.path.join(REPO, 'tools', 'rotulos'))
+from rotulos import entidad_de  # (a sign that names a brand or a business: its entity, never its real name here)
 SRC = sys.argv[1]
 ok = lambda h: h if isinstance(h, str) and re.fullmatch(r'#[0-9a-fA-F]{6}', h) else None
 KINDS = {'granito', 'piedra', 'azulejo', 'cemento', 'pintado', 'ninguno'}
@@ -67,6 +69,10 @@ for f in sorted(os.listdir(SRC)):
         if isinstance(ro, dict) and (ok(ro.get('fondo')) or ro.get('texto')):
             o['rotulo'] = {'texto': str(ro.get('texto') or '')[:28], 'fondo': ok(ro.get('fondo')) or '#2b4f7a', 'letra': ok(ro.get('letra')) or '#ffffff',
                            'donde': 'banderola' if ro.get('donde') == 'banderola' else 'fachada'}
+            # (the name of a brand or a business, as the captures read it: its entity and its public name — the game
+            # shows the real one only in a local copy, src/rotulos.js; data/rotulos/marcas.json)
+            ent = entidad_de(o['rotulo']['texto'])
+            if ent: o['rotulo']['poi'] = ent['id']; o['rotulo']['texto'] = ent['publico'] if ent.get('autorizacion') != 'si' else ent['real'][0]
             if isinstance(ro.get('pos'), (int, float)) and 0 <= ro['pos'] <= 1: o['rotulo']['pos'] = round(float(ro['pos']), 3)  # (along its front: 0 its left end, 1 its right)
         # (and the last round's, 14-oct night: its front moved where the Catastro has it out of place, its awnings' colour,
         # a glazed bay, a pergola on its roof, a lattice of pierced blocks, no laundry out, a painted panel)

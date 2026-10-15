@@ -29,6 +29,9 @@ jobs:
           GUARENA_MP_URL: ${{ vars.GUARENA_MP_URL }}
         run: |
           python3 tools/build.py
+          # (épica R del backlog: ninguna marca ni comercio real en la copia publicada y ningún texto de marcador;
+          # si aparece alguno, no se publica)
+          python3 tools/rotulos/rotulos.py validar dist/test.html
           mkdir -p _site
           cp dist/test.html _site/index.html
           # (lo que el juego descarga aparte, al pedirlo: Santa María por dentro en alta definición)

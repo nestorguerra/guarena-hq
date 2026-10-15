@@ -439,6 +439,9 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
 .mapUi { position: absolute; left: max(16px, env(safe-area-inset-left)); top: max(16px, env(safe-area-inset-top)); background: var(--panel); border-radius: 12px; padding: 14px 16px; max-width: min(300px, 70vw); pointer-events: auto; }
 .mapUi h2 { margin: 0 0 6px; font-family: var(--display); font-weight: 400; font-size: 34px; text-transform: uppercase; line-height: 1; }
 .mapUi p { margin: 4px 0; font-size: 13px; line-height: 1.45; color: rgba(251,250,246,0.75); }
+/* (R-11: the map's own credit to OpenStreetMap, always in sight while it is open) */
+.mapAttr { position: absolute; right: max(12px, env(safe-area-inset-right)); bottom: max(10px, env(safe-area-inset-bottom)); margin: 0; padding: 4px 8px; border-radius: 6px; background: rgba(20,22,24,0.72); color: rgba(251,250,246,0.85); font-size: 11px; pointer-events: auto; max-width: 70vw; }
+.mapAttr a { color: #9fd0ff; }
 .legend { display: grid; grid-template-columns: 16px 1fr; gap: 6px 8px; align-items: center; margin-top: 10px; font-size: 13px; }
 .legend i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #1a1a1a; display: block; }
 .mapClose { position: absolute; right: max(16px, env(safe-area-inset-right)); top: max(16px, env(safe-area-inset-top)); }
@@ -997,6 +1000,7 @@ input[type=range] { width: 150px; accent-color: var(--trigo); }
       <i style="background:#fff"></i><span>Tú</span>
     </div>
   </div>
+  <p class="mapAttr" id="mapAttr">Callejero © colaboradores de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · openstreetmap.org/copyright · Edificios: Catastro</p>
   <button class="btn ghost mapClose" id="mClose">Cerrar<span class="kbHint"> (M)</span></button>
   <div class="attrib">© OpenStreetMap · Catastro</div>
 </div>

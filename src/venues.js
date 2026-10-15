@@ -1,6 +1,6 @@
 // The public buildings of Guareña you can walk into (besides Santa María: church.js): the Ayuntamiento with its
 // Salón de Plenos, the theatre of the Casa de la Cultura, the Mercado de Abastos, the Pabellón La Encina, the workshop
-// and showroom of Agrícola Corbacho, the church of San Gregorio. buildVenue(kind) makes the inside (venuekit.js);
+// and showroom of the tractor dealer, the church of San Gregorio. buildVenue(kind) makes the inside (venuekit.js);
 // VenueLife puts the people in it: who works there, who comes, what they say.
 import * as THREE from 'three';
 import { INTERIOR_ORIGIN, boxGeo, planeGeo, std, texMat } from './housekit.js';
@@ -12,6 +12,7 @@ import { statue } from './statues.js';
 import { goldEnv, goldTexture } from './church.js';
 import { calTexture } from './churchtex.js';
 import { buildBackrooms } from './backrooms.js';
+import { rotulo } from './rotulos.js';
 
 export function buildVenue(kind, seed = 1, origin = INTERIOR_ORIGIN) {
   const make = { ayto: ayuntamiento, teatro, mercado, pabellon, corbacho, sangregorio, backrooms: (o) => buildBackrooms(o) }[kind];
@@ -490,7 +491,7 @@ function pabellon(origin, seed) {
   h.onEnter = (g) => { if (train(g.sky.hour)) { g.audio.sfx('whistle', { vol: 0.5 }); g.hud.subtitle('Pabellón La Encina', 'Entrenamiento de fútbol sala. En las gradas, padres y algún abuelo que no se pierde uno.'); setTimeout(() => g.hud.subtitle(null), 5000); } };
   return h;
 }
-// ================================================================ Agrícola Corbacho (Ctra. de Don Benito, 16)
+// ================================================================ The tractor dealer (Ctra. de Don Benito, 16; its name: src/rotulos.js)
 // The showroom (two new tractors on the polished floor, the parts counter, the racks of filters and belts, the posters)
 // and, through the wide opening at the back, the workshop: a tractor up on stands with its bonnet open, another waiting
 // for its wheel, the bench and the tool board, the drums of oil, the compressor, the hoist. Whoever plays Adri has a
@@ -559,8 +560,8 @@ function corbacho(origin, seed) {
   K.ceiling(wallW, -hw, ZW, hw, D, H, 4);
   for (let i = 0; i < 4; i++) K.add(steel, boxGeo(W, 0.3, 0.2, 1), 0, H - 0.4, ZW + 1.5 + i * 3); // the workshop's steel trusses
   // ---- the big sign over the opening (our own lettering) and the posters
-  K.picture(canvasTexture('corb_sign', 1024, 200, (x, w, hh) => { x.fillStyle = '#2f7a2e'; x.fillRect(0, 0, w, hh); x.fillStyle = '#f2c230'; x.fillRect(0, hh - 30, w, 12); x.fillStyle = '#ffffff'; x.textAlign = 'center'; x.textBaseline = 'middle'; const fit = (t, px, face) => { let s2 = px; x.font = face(s2); while (x.measureText(t).width > w - 60 && s2 > 16) { s2 -= 2; x.font = face(s2); } }; fit('AGRÍCOLA CORBACHO', 92, (s2) => `bold ${s2}px "Arial Black", Arial, sans-serif`); x.fillText('AGRÍCOLA CORBACHO', w / 2, 82); fit('TRACTORES · TALLER · RECAMBIOS · GUAREÑA', 32, (s2) => `bold ${s2}px Arial`); x.fillStyle = '#e8f2dc'; x.fillText('TRACTORES · TALLER · RECAMBIOS · GUAREÑA', w / 2, 146); }), 0, 5.0, ZW - 0.09, Math.PI, 7.5, 1.45, null);
-  const poster = (key, title, sub, bg) => canvasTexture('cp:' + key, 256, 360, (x, w, hh) => { x.fillStyle = bg; x.fillRect(0, 0, w, hh); x.fillStyle = '#f2c230'; x.fillRect(0, 0, w, 28); x.fillStyle = '#ffffff'; x.textAlign = 'center'; x.font = 'bold 30px Arial'; title.split('\n').forEach((t, i) => x.fillText(t, w / 2, 90 + i * 36)); x.font = '18px Arial'; sub.split('\n').forEach((t, i) => x.fillText(t, w / 2, 210 + i * 26)); x.font = 'bold 14px Arial'; x.fillText('AGRÍCOLA CORBACHO', w / 2, hh - 16); });
+  K.picture(canvasTexture('corb_sign', 1024, 200, (x, w, hh) => { x.fillStyle = '#2f7a2e'; x.fillRect(0, 0, w, hh); x.fillStyle = '#f2c230'; x.fillRect(0, hh - 30, w, 12); x.fillStyle = '#ffffff'; x.textAlign = 'center'; x.textBaseline = 'middle'; const fit = (t, px, face) => { let s2 = px; x.font = face(s2); while (x.measureText(t).width > w - 60 && s2 > 16) { s2 -= 2; x.font = face(s2); } }; fit(rotulo('corbacho'), 92, (s2) => `bold ${s2}px "Arial Black", Arial, sans-serif`); x.fillText(rotulo('corbacho'), w / 2, 82); fit('TRACTORES · TALLER · RECAMBIOS · GUAREÑA', 32, (s2) => `bold ${s2}px Arial`); x.fillStyle = '#e8f2dc'; x.fillText('TRACTORES · TALLER · RECAMBIOS · GUAREÑA', w / 2, 146); }), 0, 5.0, ZW - 0.09, Math.PI, 7.5, 1.45, null);
+  const poster = (key, title, sub, bg) => canvasTexture('cp:' + key, 256, 360, (x, w, hh) => { x.fillStyle = bg; x.fillRect(0, 0, w, hh); x.fillStyle = '#f2c230'; x.fillRect(0, 0, w, 28); x.fillStyle = '#ffffff'; x.textAlign = 'center'; x.font = 'bold 30px Arial'; title.split('\n').forEach((t, i) => x.fillText(t, w / 2, 90 + i * 36)); x.font = '18px Arial'; sub.split('\n').forEach((t, i) => x.fillText(t, w / 2, 210 + i * 26)); x.font = 'bold 14px Arial'; x.fillText(rotulo('corbacho'), w / 2, hh - 16); });
   K.picture(poster('nuevos', 'TRACTORES\nNUEVOS Y\nDE OCASIÓN', 'Financiación\na tu medida', '#2f7a2e'), -hw + 0.09, 1.9, 4.0, Math.PI / 2, 0.9, 1.26);
   K.picture(poster('taller', 'TALLER\nOFICIAL', 'Revisiones · Averías\nPreparación ITV', '#24602a'), -hw + 0.09, 1.9, 7.0, Math.PI / 2, 0.9, 1.26);
   K.picture(poster('riego', 'CAMPAÑA\nDEL TOMATE', 'Pon a punto tu\ntractor antes de julio', '#b8562a'), hw - 0.09, 1.9, 10.2, -Math.PI / 2, 0.9, 1.26);
@@ -614,7 +615,7 @@ function corbacho(origin, seed) {
   // whoever plays Adri is expected here
   h.onEnter = (g) => {
     const adri = g.save && g.save.preset === 'adri';
-    g.hud.subtitle('Agrícola Corbacho', adri ? '¡Hombre, Adri! Tu tractor está listo: pide las llaves en el mostrador y te lo sacamos a la puerta del taller.' : 'Buenas. Pase, pase: tractores, taller y recambios. Si necesita un tractor para el día, pregunte en el mostrador.');
+    g.hud.subtitle(rotulo('corbacho', 'n'), adri ? '¡Hombre, Adri! Tu tractor está listo: pide las llaves en el mostrador y te lo sacamos a la puerta del taller.' : 'Buenas. Pase, pase: tractores, taller y recambios. Si necesita un tractor para el día, pregunte en el mostrador.');
     setTimeout(() => g.hud.subtitle(null), 6000);
   };
   return h;

@@ -1,12 +1,13 @@
 // More of Guareña, built on what the map knows of it: the fountain of the Plaza de España (where OSM puts it) and the
 // plaza round it; the municipal pool; the Pabellón La Encina; the fronts of the Mercado de Abastos, the Casa de la
-// Cultura (its theatre) and Agrícola Corbacho on the Carretera de Don Benito, with the palms along that road; the
+// Cultura (its theatre) and the tractor dealer on the Carretera de Don Benito, with the palms along that road; the
 // Avenida de la Constitución as a boulevard; the town's name in big letters where the road from Mérida comes in.
 // Each part is a function of the Landmarks builder (L): L.add / L.put / L.circle / L.poi / L.mat / L.map.
 import * as THREE from 'three';
 import { mergeGeometries, mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
 import { pointInRing, ringCentroid, mulberry32, clamp, polySample } from './util.js';
 import { flagCanvas } from './textures.js';
+import { rotulo } from './rotulos.js';
 
 const llTo = (map, lat, lon) => { const o = map.raw.origin, R = 6378137, KX = Math.cos((o[0] * Math.PI) / 180) * R * Math.PI / 180, KZ = R * Math.PI / 180; return [(lon - o[1]) * KX, -(lat - o[0]) * KZ]; };
 function norm(g) {
@@ -291,7 +292,7 @@ export function mercadoFront(L, x, z) {
   });
 }
 
-// ---------------------------------------------------------------- Agrícola Corbacho (Ctra. de Don Benito, 16)
+// ---------------------------------------------------------------- The tractor dealer (Ctra. de Don Benito, 16; its name: src/rotulos.js)
 // The tractor dealer's showroom and workshop behind the service road: the name across the front (our own lettering, a
 // tractor drawn beside it), the showroom glass, the workshop's roller door, a pole sign by the road and new tractors out
 // on the forecourt; the palms along the Carretera de Don Benito from the Parque San Ginés to its door
@@ -308,7 +309,8 @@ function corbachoSign() {
   x.beginPath(); x.arc(62, 128, 22, 0, 6.283); x.stroke(); x.beginPath(); x.arc(62, 128, 6, 0, 6.283); x.fill();
   x.fillStyle = '#ffffff'; x.textBaseline = 'middle';
   const fit = (txt, px, maxW, face) => { let s = px; x.font = face(s); while (x.measureText(txt).width > maxW && s > 16) { s -= 2; x.font = face(s); } };
-  fit('AGRÍCOLA CORBACHO', 92, 1024 - 196 - 28, (s) => `bold ${s}px "Arial Black", Arial, sans-serif`); x.fillText('AGRÍCOLA CORBACHO', 196, 84);
+  const nombre = rotulo('corbacho');
+  fit(nombre, 92, 1024 - 196 - 28, (s) => `bold ${s}px "Arial Black", Arial, sans-serif`); x.fillText(nombre, 196, 84);
   fit('TRACTORES  ·  TALLER  ·  RECAMBIOS', 34, 1024 - 200 - 28, (s) => `bold ${s}px Arial, sans-serif`); x.fillStyle = '#e8f2dc'; x.fillText('TRACTORES  ·  TALLER  ·  RECAMBIOS', 200, 146);
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
   return t;
@@ -316,7 +318,7 @@ function corbachoSign() {
 export function corbacho(L) {
   const signTex = corbachoSign();
   const res = venueFront(L, {
-    kind: 'corbacho', name: 'Agrícola Corbacho', sub: 'Tractores · Taller · Recambios', x: 640, z: -226, door: [645, -250], seed: 41,
+    kind: 'corbacho', name: rotulo('corbacho', 'n'), sub: 'Tractores · Taller · Recambios', x: 640, z: -226, door: [645, -250], seed: 41,
     glassDoor: true, doorW: 2.4, doorH: 2.8, frameMat: new THREE.MeshStandardMaterial({ color: 0x2f7a2e, roughness: 0.5 }),
     override: { minFloors: 2 },
     extra: (g) => {
@@ -356,7 +358,7 @@ export function corbacho(L) {
   L.poi.corbacho = { x: res.v.x, z: res.v.z, yard: { x: yx, z: yz, heading: along + Math.PI } };
   palmRoad(L, res);
 }
-// the palms of the Carretera de Don Benito: both sides, from the Parque San Ginés to Agrícola Corbacho
+// the palms of the Carretera de Don Benito: both sides, from the Parque San Ginés to the tractor dealer
 function palmRoad(L, res) {
   const map = L.map, extra = L.world.extraTrees || (L.world.extraTrees = []);
   const park = map.areas.find((a) => a.name === 'Parque San Ginés');

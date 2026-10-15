@@ -11,6 +11,7 @@ let GameAudio;
 try { ({ GameAudio } = await import('./audio.js')); } catch (e) { console.warn('audio.js unavailable, using silent audio', e); }
 if (typeof GameAudio !== 'function') ({ GameAudio } = await import('./audio_stub.js'));
 import { safeStorage, readSave } from './util.js';
+import { cargarReales } from './rotulos.js';
 import { applyClayPalette } from './textures.js';
 import { installClayChunks, installPillowBoxes } from './plastilina.js';
 import { STYLE, setStyle, LOOKS } from './style.js';
@@ -99,6 +100,7 @@ async function boot(hot = {}) {
   if (STYLE.plastilina) { applyClayPalette(); installClayChunks(); installPillowBoxes(); }
   // no menus on the way in: the drone's picture of the town (index.html put it up) drifts closer while it is built
   const intro = !hot.resume ? introPicture() : null;
+  await cargarReales(); // (the signs' real names, only in a local copy: src/rotulos.js)
   game = new Game({ canvas: ui.canvas, ui, raw, quality: q, audio });
   refreshSavedCharacter();
   ui.onPause = () => openPause();

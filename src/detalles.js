@@ -10,6 +10,7 @@ import { STYLES } from './calles.js';
 import { SILOS, DEPOSITOS, TERRAZAS, CABLES, BANDERINES, POSTES, ESPEJOS, MASTILES, PLACAS_CALLE, CARTELES, ESCALONES, PLAZAS_AZULES, TAPAS, MARCAS, BANDAS, SEMAFOROS, BAJANTES, SIERRAS } from './calles_arreglos.js';
 import { mulberry32 } from './util.js';
 import { CASAS } from './calles_casas.js';
+import { rotulo, registrar } from './rotulos.js';
 
 const at = (g, x, y, z) => { g.translate(x, y, z); return g; };
 // a geometry turned to face (fx, fz) — its +z towards it — and set at (x, y, z)
@@ -124,10 +125,12 @@ export function buildDetalles(world, map) {
     const P = (a, o) => [r.ax + tx * a + nx * o, r.az + tz * a + nz * o];
     // the shop's sign: a panel 6 cm proud over its ground floor, as wide as its words want; or on a bracket at its end
     if (cs.rotulo) {
-      const ro = cs.rotulo, k = signs.length;
+      // (a brand's or a business's: its name for this copy of the game — src/rotulos.js)
+      const ro = cs.rotulo.poi ? { ...cs.rotulo, texto: rotulo(cs.rotulo.poi) || cs.rotulo.texto } : cs.rotulo, k = signs.length;
       if (ro.donde === 'banderola') {
         const a = typeof ro.pos === 'number' ? Math.max(0.5, Math.min(L - 0.5, (1 - ro.pos) * L)) : Math.max(0.5, L - 0.9), [x, z] = P(a, 0.55), y0 = Math.min(2.7, r.H - 0.75); // (pos as on the front's sign; else at its left end)
         signs.push({ ...ro, k, quads: [[x, y0, z, tx, tz, 0.72, 0.52], [x, y0, z, -tx, -tz, 0.72, 0.52]] });
+        registrar({ id: 'casa:' + bid, tipo: 'banderola', texto: ro.texto, poi: ro.poi || null, bid, x, y: y0 + 0.26, z, nx: tx, nz: tz, caras: 2, w: 0.72, h: 0.52 });
         solid.push(place(paint(new THREE.BoxGeometry(0.72, 0.52, 0.04), ro.fondo), x, y0 + 0.26, z, tx, tz));
         const [bx, bz] = P(a, 0.5); // (its iron bracket from the wall)
         solid.push(place(paint(new THREE.BoxGeometry(0.03, 0.03, 1.0), '#2a2a2a'), bx, y0 + 0.56, bz, nx, nz));
@@ -137,6 +140,7 @@ export function buildDetalles(world, map) {
         const pos = typeof ro.pos === 'number' ? Math.max(0, Math.min(1, ro.pos)) : 0.5, cxm = Math.max(w / 2 + 0.1, Math.min(L - w / 2 - 0.1, (1 - pos) * L));
         const y0 = r.H >= 4.6 ? 2.5 : Math.max(2.1, r.H - 0.75), [x, z] = P(cxm, 0.03);
         signs.push({ ...ro, k, quads: [[x, y0, z, nx, nz, w, h, true]] });
+        registrar({ id: 'casa:' + bid, tipo: 'fachada', texto: ro.texto, poi: ro.poi || null, bid, x, y: y0 + h / 2, z, nx, nz, caras: 1, w, h });
         solid.push(place(paint(new THREE.BoxGeometry(w + 0.04, h + 0.04, 0.05), ro.fondo), x, y0 + h / 2, z, nx, nz));
       }
       stats.rotulos++;
@@ -373,6 +377,7 @@ export function buildDetalles(world, map) {
   for (const [x, z, nx, nz, texto, fondo, letra] of PLACAS_CALLE) {
     const w = texto ? Math.min(1.7, Math.max(0.6, 0.075 * texto.length + 0.3)) : 0.7, h = 0.3, k = signs.length;
     signs.push({ texto: texto.toUpperCase(), fondo, letra, k, quads: [[x, 2.75, z, nx, nz, w, h, true]] });
+    registrar({ id: `placa:${x.toFixed(1)},${z.toFixed(1)}`, tipo: 'placa', texto: texto.toUpperCase(), poi: null, x, y: 2.75 + h / 2, z, nx, nz, caras: 1, w, h });
     solid.push(place(paint(new THREE.BoxGeometry(w + 0.03, h + 0.03, 0.03), fondo), x, 2.75 + h / 2, z, nx, nz));
   }
   // billboards: a panel on two grey legs (on its foot at the ground if it stands low), its face as seen
@@ -382,7 +387,10 @@ export function buildDetalles(world, map) {
     const onWall = !!(map.buildingAt(x - fx * 0.5, z - fz * 0.5) || map.buildingAt(x - fx * 1.2, z - fz * 1.2));
     if (y0 > 0.3 && !onWall) for (const sgn of [-1, 1]) { solid.push(at(paint(new THREE.CylinderGeometry(0.06, 0.07, y0 + h * 0.5, 6), '#8a8e90'), x + tx * sgn * w * 0.35 - fx * 0.12, (y0 + h * 0.5) / 2, z + tz * sgn * w * 0.35 - fz * 0.12)); map.collider.addCircle(x + tx * sgn * w * 0.35, z + tz * sgn * w * 0.35, 0.1, y0 + h, -5); }
     solid.push(place(paint(new THREE.BoxGeometry(w, h, 0.12), colr), x, y0 + h / 2, z, fx, fz));
-    if (texto) { const k = signs.length; signs.push({ texto, fondo: colr, letra, k, quads: [[x + fx * 0.04, y0, z + fz * 0.04, fx, fz, w, h, true]] }); }
+    if (texto) {
+      const k = signs.length; signs.push({ texto, fondo: colr, letra, k, quads: [[x + fx * 0.04, y0, z + fz * 0.04, fx, fz, w, h, true]] });
+      registrar({ id: `cartel:${x.toFixed(1)},${z.toFixed(1)}`, tipo: 'cartel', texto, poi: null, x, y: y0 + h / 2, z, nx: fx, nz: fz, caras: 1, w, h });
+    }
     stats.carteles = (stats.carteles || 0) + 1;
   }
   // ---- into the scene: the solid pieces one mesh (the street furniture's material), the wires lines, the signs lettered
