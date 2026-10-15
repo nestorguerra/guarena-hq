@@ -1,0 +1,13 @@
+{
+ "version": 1,
+ "nota": "Revisión visual de cada kit (backlog técnico, I-05): dos revisores puntúan de 1 a 5 las cinco dimensiones comparando la ficha (data/interiores/fichas) con el moodboard del kit. Aprobado: media ≥ 4 y ninguna dimensión < 3 en ambos revisores. Los fallos abren un ticket y el kit vuelve a I-04. Se rellena a mano (o desde tools/interiores/panel.html, que genera la entrada).",
+ "rubrica": {
+  "densidad": "¿Tiene la cantidad de cosas de un local de verdad, sin huecos ni amontonamientos?",
+  "coherencia": "¿Todo lo que hay es propio de esta tipología, y nada propio falta?",
+  "iluminacion": "¿La luz es la de un local así, sin zonas negras ni quemadas?",
+  "variedad": "¿Las semillas dan locales distintos y creíbles, no copias?",
+  "lectura_funcional": "¿Se entiende dónde se entra, se pide, se espera, se paga y por dónde pasa el personal?"
+ },
+ "umbral": { "media": 4, "minimo": 3, "revisores": 2 },
+ "revisiones": []
+}

@@ -1223,6 +1223,7 @@ export class Interiors {
     let best = null, bd = Infinity;
     for (const it of h.inter) {
       if (Math.abs(p.pos.y - (it.y || 0)) > 1.5) continue; // other storey
+      if (it.seat && (it.seat.ocupado || it.seat.taken)) continue; // (somebody is sitting there)
       const d = Math.hypot(it.x - p.pos.x, it.z - p.pos.z);
       if (d < it.r && d < bd) { bd = d; best = it; }
     }
@@ -1272,6 +1273,7 @@ export class Interiors {
       case 'pila': return { label: best.label, run: () => { g.hud.notify('Mojas los dedos en el agua bendita y te santiguas.', 'info', 3); g.audio.sfx('pickup', { vol: 0.2 }); } };
       case 'cepillo': return { label: best.label, run: () => { if (g.player.money < 1) { g.hud.notify('No llevas ni un euro suelto.', 'info', 2.5); return; } g.player.money -= 1; g.audio.sfx('money', { vol: 0.5 }); g.hud.notify('Echas un euro en el cepillo. Las monedas suenan en la caja de madera.', 'ok', 3); } };
       case 'vela': return best.stand.free.length ? { label: best.label, run: () => { if (g.player.money < 0.5) { g.hud.notify('No llevas suelto para la vela.', 'info', 2.5); return; } g.player.money -= 0.5; lightCandle(this.house, best.stand); g.audio.sfx('ui_click', { vol: 0.3 }); g.hud.notify('Enciendes una vela y le pides algo en silencio.', 'ok', 3.5); } } : { label: 'Ya no caben más velas', info: true };
+      case 'asiento': return { label: best.label, run: () => g.seats && g.seats.sit(best.seat) };
       case 'banco': return { label: best.label, run: () => { g.player.sitOn({ x: best.sx, z: best.sz, y: best.sy || 0, h: best.h ?? Math.PI / 2, kind: 'banco' }); if (h.church) g.hud.notify('Te sientas en el banco. El silencio de la iglesia, el eco de algún paso…', 'info', 3.5); } };
       case 'tiro': return { label: best.label, run: () => {
         const ok = Math.random() < (best.kind === 'gol' ? 0.72 : 0.45);

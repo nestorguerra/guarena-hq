@@ -1,0 +1,203 @@
+{
+ "nota": "Masas plausibles por categoría de objeto, en kg (backlog X-02), y la clase que da la masa (X-01): PICKUP < 5 kg, CARRY 5–25, PUSH 25–80, PUSH_HEAVY 80–400, FIXED > 400 o anclado. Un objeto fuera de su rango o con una clase que no corresponde a su masa necesita motivo en el catálogo.",
+ "clases": {
+  "PICKUP": [
+   0,
+   5
+  ],
+  "CARRY": [
+   5,
+   25
+  ],
+  "PUSH": [
+   25,
+   80
+  ],
+  "PUSH_HEAVY": [
+   80,
+   400
+  ],
+  "FIXED": [
+   400,
+   1000000
+  ]
+ },
+ "categorias": {
+  "vajilla": [
+   0.05,
+   1.5
+  ],
+  "cubiertos": [
+   0.01,
+   0.3
+  ],
+  "botella": [
+   0.2,
+   2.5
+  ],
+  "lata": [
+   0.02,
+   0.5
+  ],
+  "alimento": [
+   0.02,
+   12
+  ],
+  "papel": [
+   0.01,
+   1.5
+  ],
+  "pequeño_electrodomestico": [
+   0.5,
+   18
+  ],
+  "electrodomestico": [
+   15,
+   120
+  ],
+  "maquina_hosteleria": [
+   8,
+   90
+  ],
+  "maquina_expendedora": [
+   60,
+   350
+  ],
+  "silla": [
+   2,
+   9
+  ],
+  "taburete": [
+   3,
+   9
+  ],
+  "mesa": [
+   8,
+   45
+  ],
+  "sofa": [
+   25,
+   90
+  ],
+  "banco": [
+   15,
+   120
+  ],
+  "estanteria": [
+   10,
+   120
+  ],
+  "mueble": [
+   3,
+   150
+  ],
+  "mostrador": [
+   80,
+   900
+  ],
+  "barra": [
+   300,
+   2000
+  ],
+  "nevera": [
+   40,
+   160
+  ],
+  "vitrina": [
+   8,
+   120
+  ],
+  "lampara": [
+   0.3,
+   8
+  ],
+  "cuadro": [
+   0.3,
+   6
+  ],
+  "espejo": [
+   1,
+   15
+  ],
+  "planta": [
+   0.5,
+   30
+  ],
+  "papelera": [
+   0.5,
+   6
+  ],
+  "perchero": [
+   2,
+   10
+  ],
+  "sanitario": [
+   12,
+   60
+  ],
+  "textil": [
+   0.1,
+   6
+  ],
+  "caja": [
+   0.3,
+   25
+  ],
+  "barril": [
+   10,
+   70
+  ],
+  "limpieza": [
+   0.3,
+   4
+  ],
+  "pantalla": [
+   3,
+   25
+  ],
+  "reloj": [
+   0.3,
+   3
+  ],
+  "decoracion": [
+   0.05,
+   10
+  ],
+  "ropa": [
+   0.1,
+   2
+  ],
+  "maquina_gimnasio": [
+   60,
+   300
+  ],
+  "pesas": [
+   0.5,
+   40
+  ],
+  "farmacia_producto": [
+   0.02,
+   1.5
+  ],
+  "cajero": [
+   400,
+   1200
+  ],
+  "caja_fuerte": [
+   200,
+   2000
+  ],
+  "oficina": [
+   0.05,
+   30
+  ],
+  "informatica": [
+   0.3,
+   12
+  ],
+  "recipiente": [
+   0.1,
+   30
+  ]
+ }
+}

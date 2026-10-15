@@ -1,0 +1,4477 @@
+{
+ "kit": "restaurante",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 1,
+   "W": 9.3,
+   "D": 13.2,
+   "guardias": 37,
+   "objetos": 181,
+   "distintos": 80,
+   "hash": "bdeedef9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 47
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 4,
+     "densidad": 0.112,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 19
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 6
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 4
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 2
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 3
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.116,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 12
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 2
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 0
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 3
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 0
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 0
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 1
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.23,
+     "libre_m2": 4.23
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.31,
+     "libre_m2": 0.31
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 17.2,
+     "libre_m2": 17.2
+    },
+    "comedor2": {
+     "alcanzable_m2": 6.93,
+     "libre_m2": 6.93
+    },
+    "aseo": {
+     "alcanzable_m2": 1.05,
+     "libre_m2": 1.05
+    },
+    "cocina": {
+     "alcanzable_m2": 14.45,
+     "libre_m2": 14.45
+    }
+   },
+   "luz": {
+    "entrada": 0.109,
+    "frente_barra": 0.239,
+    "comedor": 0.205,
+    "comedor2": 0.216,
+    "aseo": 0.356
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 29432,
+   "mallas": 34,
+   "luces": 9,
+   "determinista": true
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 2,
+   "W": 9,
+   "D": 12.3,
+   "guardias": 39,
+   "objetos": 183,
+   "distintos": 84,
+   "hash": "64485f77",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 5
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 48
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 3,
+     "densidad": 0.105,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 16
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 4
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 5
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 2
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.121,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 8
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 3
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 1
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 2
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 0
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 6
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 0
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.68,
+     "libre_m2": 3.68
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.34,
+     "libre_m2": 0.34
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 14.86,
+     "libre_m2": 14.86
+    },
+    "comedor2": {
+     "alcanzable_m2": 5.4,
+     "libre_m2": 5.4
+    },
+    "aseo": {
+     "alcanzable_m2": 1.14,
+     "libre_m2": 1.14
+    },
+    "cocina": {
+     "alcanzable_m2": 13.38,
+     "libre_m2": 13.38
+    }
+   },
+   "luz": {
+    "entrada": 0.086,
+    "frente_barra": 0.223,
+    "comedor": 0.18,
+    "comedor2": 0.194,
+    "aseo": 0.317
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 31020,
+   "mallas": 33,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.995
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 3,
+   "W": 9,
+   "D": 12,
+   "guardias": 42,
+   "objetos": 179,
+   "distintos": 79,
+   "hash": "8e71c59e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 7
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 0
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 50
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 3,
+     "densidad": 0.111,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 16
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.121,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 12
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 3
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 1
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 2
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 0
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 0
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 0
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 3
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 1
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.05,
+     "libre_m2": 4.05
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 12.62,
+     "libre_m2": 12.62
+    },
+    "comedor2": {
+     "alcanzable_m2": 5.02,
+     "libre_m2": 5.02
+    },
+    "aseo": {
+     "alcanzable_m2": 1.11,
+     "libre_m2": 1.11
+    },
+    "cocina": {
+     "alcanzable_m2": 14.28,
+     "libre_m2": 14.28
+    }
+   },
+   "luz": {
+    "entrada": 0.089,
+    "frente_barra": 0.232,
+    "comedor": 0.192,
+    "comedor2": 0.196,
+    "aseo": 0.323
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 30414,
+   "mallas": 34,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 4,
+   "W": 8.700000000000001,
+   "D": 13.8,
+   "guardias": 42,
+   "objetos": 188,
+   "distintos": 78,
+   "hash": "31d4e91",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 0
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 49
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 4,
+     "densidad": 0.113,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 20
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 7
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 2
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 4
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.127,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 12
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 4
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 1
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 3
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 0
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 0
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 1
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.61,
+     "libre_m2": 3.61
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.36,
+     "libre_m2": 0.36
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 14.94,
+     "libre_m2": 14.94
+    },
+    "comedor2": {
+     "alcanzable_m2": 4.27,
+     "libre_m2": 4.27
+    },
+    "aseo": {
+     "alcanzable_m2": 1.05,
+     "libre_m2": 1.05
+    },
+    "cocina": {
+     "alcanzable_m2": 14.22,
+     "libre_m2": 14.22
+    }
+   },
+   "luz": {
+    "entrada": 0.112,
+    "frente_barra": 0.24,
+    "comedor": 0.194,
+    "comedor2": 0.162,
+    "aseo": 0.354
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 31284,
+   "mallas": 33,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 5,
+   "W": 9.3,
+   "D": 13.5,
+   "guardias": 48,
+   "objetos": 193,
+   "distintos": 92,
+   "hash": "2818ead5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 44
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 3,
+     "densidad": 0.08,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 15
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 3
+    },
+    {
+     "entrada": 40,
+     "mesas": 3,
+     "densidad": 0.174,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 13
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 1
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 1
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 3
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 5
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 3
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 0
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.94,
+     "libre_m2": 3.94
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.45,
+     "libre_m2": 0.45
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 21.73,
+     "libre_m2": 21.73
+    },
+    "comedor2": {
+     "alcanzable_m2": 3.53,
+     "libre_m2": 3.53
+    },
+    "aseo": {
+     "alcanzable_m2": 1.04,
+     "libre_m2": 1.04
+    },
+    "cocina": {
+     "alcanzable_m2": 12.04,
+     "libre_m2": 12.04
+    }
+   },
+   "luz": {
+    "entrada": 0.106,
+    "frente_barra": 0.233,
+    "comedor": 0.192,
+    "comedor2": 0.215,
+    "aseo": 0.35
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 30774,
+   "mallas": 35,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.865
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 6,
+   "W": 8.4,
+   "D": 13.2,
+   "guardias": 43,
+   "objetos": 193,
+   "distintos": 91,
+   "hash": "1ad1617a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 8
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 47
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 4,
+     "densidad": 0.132,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 20
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 8
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 3
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 3
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.133,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 8
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 2
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 1
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 0
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 3
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 1
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 0
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 5
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 1
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.31,
+     "libre_m2": 3.31
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.34,
+     "libre_m2": 0.34
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 12.43,
+     "libre_m2": 12.43
+    },
+    "comedor2": {
+     "alcanzable_m2": 3.39,
+     "libre_m2": 3.39
+    },
+    "aseo": {
+     "alcanzable_m2": 1.13,
+     "libre_m2": 1.13
+    },
+    "cocina": {
+     "alcanzable_m2": 11.48,
+     "libre_m2": 11.48
+    }
+   },
+   "luz": {
+    "entrada": 0.115,
+    "frente_barra": 0.261,
+    "comedor": 0.24,
+    "comedor2": 0.213,
+    "aseo": 0.373
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 33130,
+   "mallas": 34,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 7,
+   "W": 8.700000000000001,
+   "D": 12,
+   "guardias": 46,
+   "objetos": 192,
+   "distintos": 88,
+   "hash": "1dd6257f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 5
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 52
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 3,
+     "densidad": 0.117,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 16
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.127,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 10
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 4
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 1
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 0
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 4
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 7
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 0
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.15,
+     "libre_m2": 3.15
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.29,
+     "libre_m2": 0.29
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 9.79,
+     "libre_m2": 9.79
+    },
+    "comedor2": {
+     "alcanzable_m2": 5.88,
+     "libre_m2": 5.88
+    },
+    "aseo": {
+     "alcanzable_m2": 1.19,
+     "libre_m2": 1.19
+    },
+    "cocina": {
+     "alcanzable_m2": 12.29,
+     "libre_m2": 12.75
+    }
+   },
+   "luz": {
+    "entrada": 0.097,
+    "frente_barra": 0.24,
+    "comedor": 0.193,
+    "comedor2": 0.171,
+    "aseo": 0.328
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 30522,
+   "mallas": 35,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 8,
+   "W": 9,
+   "D": 13.5,
+   "guardias": 44,
+   "objetos": 202,
+   "distintos": 80,
+   "hash": "b42dc9cd",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 49
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 4,
+     "densidad": 0.113,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 23
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 7
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 40,
+     "mesas": 3,
+     "densidad": 0.182,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 16
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 1
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 1
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 1
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 2
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 0
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 0
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 3
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 1
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.36,
+     "libre_m2": 3.36
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.38,
+     "libre_m2": 0.38
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.68,
+     "libre_m2": 0.68
+    },
+    "comedor": {
+     "alcanzable_m2": 16.81,
+     "libre_m2": 16.81
+    },
+    "comedor2": {
+     "alcanzable_m2": 2.22,
+     "libre_m2": 2.22
+    },
+    "aseo": {
+     "alcanzable_m2": 1.05,
+     "libre_m2": 1.05
+    },
+    "cocina": {
+     "alcanzable_m2": 12.17,
+     "libre_m2": 12.17
+    }
+   },
+   "luz": {
+    "entrada": 0.077,
+    "frente_barra": 0.185,
+    "comedor": 0.139,
+    "comedor2": 0.187,
+    "aseo": 0.309
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 31738,
+   "mallas": 35,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 9,
+   "W": 8.700000000000001,
+   "D": 12,
+   "guardias": 39,
+   "objetos": 172,
+   "distintos": 78,
+   "hash": "2e650ce0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 5
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 47
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 3,
+     "densidad": 0.117,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 17
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 3
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.127,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 9
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 4
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 2
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 0
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 0
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 2
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 1
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 0
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 0
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 0
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.56,
+     "libre_m2": 3.56
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.35,
+     "libre_m2": 0.35
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 10.67,
+     "libre_m2": 10.67
+    },
+    "comedor2": {
+     "alcanzable_m2": 4.56,
+     "libre_m2": 4.56
+    },
+    "aseo": {
+     "alcanzable_m2": 1.07,
+     "libre_m2": 1.07
+    },
+    "cocina": {
+     "alcanzable_m2": 13.65,
+     "libre_m2": 13.65
+    }
+   },
+   "luz": {
+    "entrada": 0.097,
+    "frente_barra": 0.24,
+    "comedor": 0.193,
+    "comedor2": 0.171,
+    "aseo": 0.328
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 29518,
+   "mallas": 34,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "restaurante",
+   "tipologia": "restaurante",
+   "seed": 10,
+   "W": 8.700000000000001,
+   "D": 12.6,
+   "guardias": 38,
+   "objetos": 195,
+   "distintos": 80,
+   "hash": "70e2a723",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "barra_modulo",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "caja_registradora",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vitrina_tapas",
+     "n": 0
+    },
+    {
+     "entrada": 3,
+     "obj": "tirador_cerveza",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "servilletero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "palillero",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "bote_propinas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "jamonero",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "plato_tortilla|cuenco_aceitunas|plato_ja",
+     "n": 6
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "nevera_bebidas",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "mueble_trasbarra",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "botellero_pared",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "cafetera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "tostadora|exprimidor|microondas",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "botella_whisky|botella_ron|botella_gineb",
+     "n": 52
+    },
+    {
+     "entrada": 17,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "jamon_colgado",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "caballete_menu",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "paraguero",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "mesas": 4,
+     "densidad": 0.139,
+     "rango": [
+      0.1,
+      0.15
+     ]
+    },
+    {
+     "entrada": 25,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 21
+    },
+    {
+     "entrada": 26,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 5
+    },
+    {
+     "entrada": 29,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 3
+    },
+    {
+     "entrada": 30,
+     "obj": "aparador_comedor",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "plato_llano|copa_vino|botella_vino_tinto",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "rotulo_restaurante",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "pizarra_menu_pared",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "cuadro_paisaje|cuadro_foto_antigua|carte",
+     "n": 2
+    },
+    {
+     "entrada": 35,
+     "obj": "cabeza_ciervo",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "lampara_aplique",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_colgante",
+     "n": 3
+    },
+    {
+     "entrada": 40,
+     "mesas": 2,
+     "densidad": 0.127,
+     "rango": [
+      0.1,
+      0.16
+     ]
+    },
+    {
+     "entrada": 41,
+     "obj": "cubiertos_servicio|plato_llano|copa_vino",
+     "n": 11
+    },
+    {
+     "entrada": 42,
+     "obj": "cesta_pan",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "botella_vino_tinto|botella_vino_blanco|b",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "salero_pimentero|aceitera_vinagrera|flor",
+     "n": 2
+    },
+    {
+     "entrada": 45,
+     "obj": "plato_hondo|plato_postre|plato_tortilla|",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "lampara_colgante",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "escobilla",
+     "n": 0
+    },
+    {
+     "entrada": 49,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "espejo_aseo",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "dispensador_jabon",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "secamanos",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "portarrollos",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 55,
+     "obj": "lampara_colgante",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "cocina_fuegos",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "campana_extractora",
+     "n": 1
+    },
+    {
+     "entrada": 58,
+     "obj": "olla_grande|cazuela_barro|sarten_grande|",
+     "n": 1
+    },
+    {
+     "entrada": 59,
+     "obj": "fregadero_acero",
+     "n": 1
+    },
+    {
+     "entrada": 60,
+     "obj": "nevera_industrial",
+     "n": 1
+    },
+    {
+     "entrada": 61,
+     "obj": "arcon_congelador",
+     "n": 1
+    },
+    {
+     "entrada": 62,
+     "obj": "lavavajillas",
+     "n": 0
+    },
+    {
+     "entrada": 63,
+     "obj": "mesa_acero",
+     "n": 0
+    },
+    {
+     "entrada": 64,
+     "obj": "mesa_acero",
+     "n": 1
+    },
+    {
+     "entrada": 65,
+     "obj": "freidora|plancha_cocina|tabla_cortar|gar",
+     "n": 3
+    },
+    {
+     "entrada": 66,
+     "obj": "tabla_cortar|caja_verduras|garrafa_aceit",
+     "n": 0
+    },
+    {
+     "entrada": 67,
+     "obj": "estante_ollas",
+     "n": 0
+    },
+    {
+     "entrada": 68,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 69,
+     "obj": "caja_carton|caja_vasos|garrafa_aceite|sa",
+     "n": 6
+    },
+    {
+     "entrada": 70,
+     "obj": "caja_verduras|saco_patatas|carro_servici",
+     "n": 2
+    },
+    {
+     "entrada": 71,
+     "obj": "cubo_basura_pedal",
+     "n": 0
+    },
+    {
+     "entrada": 72,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 73,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 74,
+     "obj": "lampara_colgante",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.8,
+     "libre_m2": 3.8
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.42,
+     "libre_m2": 0.42
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "comedor": {
+     "alcanzable_m2": 11.81,
+     "libre_m2": 11.81
+    },
+    "comedor2": {
+     "alcanzable_m2": 4.52,
+     "libre_m2": 4.52
+    },
+    "aseo": {
+     "alcanzable_m2": 1.04,
+     "libre_m2": 1.04
+    },
+    "cocina": {
+     "alcanzable_m2": 13.32,
+     "libre_m2": 13.32
+    }
+   },
+   "luz": {
+    "entrada": 0.127,
+    "frente_barra": 0.274,
+    "comedor": 0.259,
+    "comedor2": 0.168,
+    "aseo": 0.383
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 31512,
+   "mallas": 33,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

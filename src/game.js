@@ -788,7 +788,8 @@ export class Game {
       a.horn(false);
     }
     const wx = this.sky.wx, wet = Math.max(wx.rain, wx.snow * 0.3, wx.storm * 0.5);
-    a.setAmbient({ hour: this.sky.hour, town: this.map.inTown(p.pos.x, p.pos.z) ? 1 : 0.25, indoor: this.interior ? (this.interior.church ? 1 : 0.65) : 0, wet });
+    const gente = this.interior && this.interior.kind === 'local' && this.interiors.venueLife ? this.interiors.venueLife.people.length : 0; // (a bar's customers: their chatter)
+    a.setAmbient({ hour: this.sky.hour, town: this.map.inTown(p.pos.x, p.pos.z) ? 1 : 0.25, indoor: this.interior ? (this.interior.church ? 1 : 0.65) : 0, wet, crowd: Math.min(1, gente / 6) });
     if (a.setRain) a.setRain(Math.max(wx.rain, wx.snow * 0.15) * (this.interior ? 0.55 : 1), !!this.interior); // (the rain, heard muffled from indoors)
     const fu = this.world.landmarks.poi.fuente; // the fountain's water, all the time (not heard from inside anywhere)
     if (fu && a.ready) a.loopAt('fuente', { x: fu.x, z: fu.z, kind: 'fuente', vol: 0.55, ref: 5, max: 60, on: !this.interior });

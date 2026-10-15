@@ -1,0 +1,1010 @@
+{
+ "tipologia": "oficina",
+ "nombre": "Oficina (seguros, gestoría)",
+ "nota": "La oficina de una aseguradora o gestoría de pueblo: sillas de espera bajo la ventana, el mostrador de recepción a la derecha con su archivador, detrás los escritorios con ordenador y una silla de visita delante, el archivo con estanterías de archivadores y la fotocopiadora contra la pared del fondo izquierdo, la sala de reuniones con su mesa al fondo derecho, el dispensador de agua, plantas, diplomas y el cartel de la compañía. La puerta de la calle en z = 0, el fondo en z = D.",
+ "superficie": {
+  "ancho": [
+   6.9,
+   8.1
+  ],
+  "fondo": [
+   11.7,
+   12.9
+  ],
+  "alto": 2.9
+ },
+ "variables": {
+  "zr": "3.0",
+  "xr": "W/2-3.6",
+  "zrm": "D-3.4",
+  "xm": "W/2-3.0"
+ },
+ "paso_libre": 0.9,
+ "pared": "#efece4",
+ "suelo": "long_white_tiles",
+ "suelo_color": "#d4cfc4",
+ "puntos": {
+  "dependiente": [
+   "W/2-1.8",
+   "zr+0.9"
+  ]
+ },
+ "zonas": [
+  {
+   "id": "espera",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "-0.95",
+    "1.6"
+   ]
+  },
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-0.95",
+    "0",
+    "W/2",
+    "1.6"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.6",
+    "W/2",
+    "zr-0.55"
+   ]
+  },
+  {
+   "id": "mostrador",
+   "publica": false,
+   "rect": [
+    "xr",
+    "zr-0.55",
+    "W/2",
+    "zr+0.55"
+   ]
+  },
+  {
+   "id": "tras_mostrador",
+   "publica": false,
+   "rect": [
+    "xr",
+    "zr+0.6",
+    "W/2",
+    "zr+1.5"
+   ]
+  },
+  {
+   "id": "despachos",
+   "publica": true,
+   "rect": [
+    "-W/2+1.7",
+    "5.5",
+    "W/2",
+    "zrm-0.1"
+   ]
+  },
+  {
+   "id": "despachos2",
+   "publica": true,
+   "rect": [
+    "-W/2+1.7",
+    "zrm",
+    "xm",
+    "D"
+   ]
+  },
+  {
+   "id": "archivo",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "4.1",
+    "-W/2+1.1",
+    "D"
+   ]
+  },
+  {
+   "id": "reunion",
+   "publica": true,
+   "rect": [
+    "xm",
+    "zrm",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xm",
+    "zrm"
+   ],
+   "a": [
+    "xm",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "xm",
+    "zrm"
+   ],
+   "a": [
+    "W/2",
+    "zrm"
+   ],
+   "puerta": [
+    0.5,
+    1.0
+   ]
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "mostrador_recepcion_modulo",
+   "eje": "x",
+   "linea": [
+    "zr",
+    "xr",
+    "W/2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "bote_caramelos",
+    "tarjetero_visitas",
+    "folletos_pila",
+    "bloc_notas"
+   ],
+   "en": [
+    "mostrador_recepcion_modulo"
+   ],
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_recepcion_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_mostrador",
+   "regla": "contra_pared",
+   "obj": "archivador_metalico",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "impresora_sobremesa",
+    "caja_archivo",
+    "planta_pequena"
+   ],
+   "en": [
+    "archivador_metalico"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_mostrador",
+   "regla": "fila",
+   "obj": "silla_oficina",
+   "eje": "x",
+   "linea": [
+    "zr+0.95",
+    "xr+0.6",
+    "W/2-0.6"
+   ],
+   "cada": 1.2,
+   "mira": "-z"
+  },
+  {
+   "zona": "tras_mostrador",
+   "regla": "esquina",
+   "obj": "papelera_reciclaje",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_mostrador",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "contra_pared",
+   "obj": "silla_espera_fila",
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "suelo_libre",
+   "obj": "mesa_baja",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "vida",
+   "variantes": [
+    "revista",
+    "periodico",
+    "bote_caramelos"
+   ],
+   "en": [
+    "mesa_baja"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "perchero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "paraguero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "techo",
+   "obj": "foco_empotrable",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "dispensador_agua",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_horario_oficina",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_aseguradora",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "tablon_corcho",
+    "diploma_enmarcado"
+   ],
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "esquina",
+   "obj": "sillon_espera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "regleta_led_techo",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "despachos",
+   "regla": "conjunto",
+   "variantes": [
+    "puesto_oficina",
+    "puesto_gerencia"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_visita"
+    ],
+    "n": [
+     1,
+     1
+    ],
+    "lados": [
+     "-z"
+    ]
+   },
+   "cantidad": [
+    1,
+    2
+   ],
+   "giro": [
+    0,
+    180
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos2",
+   "regla": "conjunto",
+   "obj": "puesto_oficina",
+   "sillas": {
+    "variantes": [
+     "silla_visita"
+    ],
+    "n": [
+     1,
+     1
+    ],
+    "lados": [
+     "-z"
+    ]
+   },
+   "cantidad": [
+    1,
+    1
+   ],
+   "giro": [
+    0,
+    180
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos",
+   "regla": "conjunto",
+   "variantes": [
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_oficina"
+    ],
+    "n": [
+     2,
+     2
+    ],
+    "lados": [
+     "+z",
+     "-z"
+    ]
+   },
+   "cantidad": [
+    0,
+    1
+   ],
+   "giro": [
+    0,
+    180
+   ]
+  },
+  {
+   "zona": "despachos",
+   "regla": "sobre",
+   "variantes": [
+    "monitor_pc",
+    "monitor_pc_encendido"
+   ],
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos",
+   "regla": "sobre",
+   "obj": "teclado",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos",
+   "regla": "sobre",
+   "obj": "raton_pc",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "fraccion": [
+    0.7,
+    1.0
+   ]
+  },
+  {
+   "zona": "despachos",
+   "regla": "sobre",
+   "obj": "telefono_fijo",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 1
+  },
+  {
+   "zona": "despachos",
+   "regla": "vida",
+   "variantes": [
+    "bloc_notas",
+    "taza_cafe",
+    "portalapices",
+    "calculadora",
+    "lampara_escritorio",
+    "bandeja_documentos",
+    "pila_carpetas",
+    "tarjetero_visitas",
+    "cuaderno_citas",
+    "grapadora",
+    "sello_tampon",
+    "portatil",
+    "bote_caramelos",
+    "planta_pequena"
+   ],
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ]
+  },
+  {
+   "zona": "despachos2",
+   "regla": "sobre",
+   "variantes": [
+    "monitor_pc_encendido",
+    "teclado",
+    "telefono_fijo",
+    "raton_pc"
+   ],
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 4
+  },
+  {
+   "zona": "despachos",
+   "regla": "techo",
+   "obj": "panel_led",
+   "por_m2": [
+    0.12,
+    0.16
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos2",
+   "regla": "pared",
+   "variantes": [
+    "diploma_enmarcado",
+    "tablon_corcho"
+   ],
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "despachos2",
+   "regla": "pared",
+   "obj": "aire_acondicionado",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "despachos2",
+   "regla": "pared",
+   "obj": "calendario_pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "despachos2",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "despachos2",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "archivo",
+   "regla": "contra_pared",
+   "obj": "estanteria_archivadores",
+   "pared": "W",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "archivo",
+   "regla": "sobre",
+   "variantes": [
+    "archivador_azul",
+    "archivador_rojo",
+    "archivador_verde",
+    "archivador_negro",
+    "archivador_amarillo"
+   ],
+   "en": [
+    "estanteria_archivadores"
+   ],
+   "relleno": [
+    0.7,
+    0.92
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "archivo",
+   "regla": "contra_pared",
+   "obj": "fotocopiadora",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "archivo",
+   "regla": "contra_pared",
+   "obj": "archivador_metalico",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "archivo",
+   "regla": "contra_pared",
+   "obj": "armario_oficina",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "archivo",
+   "regla": "sobre",
+   "variantes": [
+    "caja_archivo",
+    "impresora_sobremesa",
+    "pila_carpetas"
+   ],
+   "en": [
+    "archivador_metalico"
+   ],
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "archivo",
+   "regla": "contra_pared",
+   "obj": "trituradora_papel",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "archivo",
+   "regla": "techo",
+   "obj": "regleta_led_techo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reunion",
+   "regla": "conjunto",
+   "obj": "mesa_reunion",
+   "sillas": {
+    "variantes": [
+     "silla_oficina",
+     "silla_visita"
+    ],
+    "n": [
+     4,
+     4
+    ]
+   },
+   "cantidad": [
+    1,
+    1
+   ],
+   "giro": [
+    90
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reunion",
+   "regla": "sobre",
+   "variantes": [
+    "portatil",
+    "bloc_notas",
+    "taza_cafe",
+    "pila_carpetas",
+    "bote_caramelos"
+   ],
+   "en": [
+    "mesa_reunion"
+   ],
+   "cantidad": [
+    3,
+    5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reunion",
+   "regla": "pared",
+   "obj": "pizarra_blanca",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reunion",
+   "regla": "pared",
+   "obj": "cartel_aseguradora",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "reunion",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "reunion",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "reunion",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   6,
+   9
+  ],
+  "temperatura_k": [
+   4000,
+   5000
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "oficina",
+  "horario_defecto": "Mo-Fr 09:00-14:00,16:30-19:00",
+  "vida": [
+   "la fotocopiadora",
+   "carpetas por archivar",
+   "el teléfono sonando",
+   "el dispensador de agua"
+  ],
+  "cerrado": "persiana bajada y la luz del fondo encendida",
+  "clientela": {
+   "maximo": 3,
+   "horas": [
+    [
+     9,
+     11,
+     0.4
+    ],
+    [
+     11,
+     14,
+     0.5
+    ],
+    [
+     16.5,
+     19,
+     0.4
+    ]
+   ],
+   "frases": [
+    "Vengo por lo de la declaración de la renta.",
+    "Me han dicho que traiga el recibo del seguro.",
+    "¿Esto es para el coche o para la casa?",
+    "Siempre hay que traer una fotocopia más."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "029 Oficina de Correus Central de Terrassa, pl. Mossèn Jacint Verdaguer 16, interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:029_Oficina_de_Correus_Central_de_Terrassa,_pl._Moss%C3%A8n_Jacint_Verdaguer_16,_interior.jpg",
+   "autor": "Enric",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of The SCO Group offices Florham Park NJ December 2008.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_The_SCO_Group_offices_Florham_Park_NJ_December_2008.jpg",
+   "autor": "Jonathan Schilling",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of a Caldera International office Murray Hill NJ June 2002.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Caldera_International_office_Murray_Hill_NJ_June_2002.jpg",
+   "autor": "Jonathan Schilling",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior oficina información Saucedilla.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_oficina_informaci%C3%B3n_Saucedilla.jpg",
+   "autor": "Lito Encinas",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Office desks.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Office_desks.jpg",
+   "autor": "Linktech Australia",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Office desks overview.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Office_desks_overview.jpg",
+   "autor": "Linktech Australia",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Office setup (1387856074).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Office_setup_(1387856074).jpg",
+   "autor": "Håkan Dahlström from Malmö, Sweden",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Oficina Reprogir (interior).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Oficina_Reprogir_(interior).jpg",
+   "autor": "Reprogir",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Oficina de Información Tursitica de Valladolid 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Oficina_de_Informaci%C3%B3n_Tursitica_de_Valladolid_02.jpg",
+   "autor": "MiguelAlanCS",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "SALT D'AIGUA INTERIOR CAL MOLINER (OFICINA TURISME BANYOLES) - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:SALT_D%27AIGUA_INTERIOR_CAL_MOLINER_(OFICINA_TURISME_BANYOLES)_-_panoramio.jpg",
+   "autor": "klimmanet",
+   "licencia": "CC BY 3.0"
+  }
+ ]
+}

@@ -1237,6 +1237,7 @@ export class GameAudio {
     if (o.town !== undefined) this._amb.town = clamp(num(o.town, this._amb.town), 0, 1);
     if (o.indoor !== undefined) this._amb.indoor = clamp(num(o.indoor, 0), 0, 1);
     if (o.wet !== undefined) this._amb.wet = clamp(num(o.wet, 0), 0, 1); // (in the rain the crickets, cicadas and birds go quiet)
+    if (o.crowd !== undefined) this._amb.crowd = clamp(num(o.crowd, 0), 0, 1); // (inside a bar or a shop: its customers' chatter)
   }
   setChurchPos(x, z) { this._church = { x: num(x), z: num(z) }; }
 
@@ -1828,7 +1829,7 @@ const SFX_META = {
 // dogs and scops owls are scheduled as sparse positional events around the listener.
 
 class Ambient {
-  constructor(A) { this.A = A; this.k = null; this.timers = { bird: 2, swift: 6, dog: 18, owl: 12 }; }
+  constructor(A) { this.A = A; this.k = null; this.timers = { bird: 2, swift: 6, dog: 18, owl: 12, clink: 3 }; }
 
   _build(t) {
     const A = this.A, k = (this.k = new Kit(A.ctx));
@@ -1846,10 +1847,12 @@ class Ambient {
     const act = clamp(0.12 + 0.55 * day + 0.45 * bump(h, 20, 1.6) + 0.2 * bump(h, 12, 2.5), 0, 1); // evening paseo peak
     // indoors the street is muffled (in a house) or gone (in the church: only its own silence)
     const ind = num(A._amb.indoor, 0), out = 1 - ind, dry = 1 - 0.85 * num(A._amb.wet, 0);
-    glide(this.murmur.gain, town * act * 0.55 * out, t, 0.8);
+    const crowd = num(A._amb.crowd, 0); // (the customers inside: the same murmur, near)
+    glide(this.murmur.gain, town * act * 0.55 * out + crowd * 0.3, t, 0.8);
     glide(this.traffic.gain, (0.25 + 0.45 * town) * act * 0.5 * out, t, 0.8);
     glide(this.crickets.gain, night * (0.35 + 0.65 * (1 - town)) * 0.7 * out * dry, t, 1.5);
     glide(this.cicadas.gain, day * bump(h, 15.5, 2.3) * (1 - 0.85 * town) * 0.35 * out * dry, t, 1.5);
+    if (!A._paused && crowd > 0.05 && (this.timers.clink -= dt * crowd) < 0) { this.timers.clink = rnd(2.5, 8); this.clink(); }
     if (A._paused || ind > 0.5) return; // (no birds, swifts, dogs or owls inside)
     const ev = this.timers;
     const birds = day * (0.5 + 0.5 * (1 - town)) * (1 + 1.5 * bump(h, 7.8, 1)) * dry; // dawn chorus
@@ -1858,6 +1861,16 @@ class Ambient {
     if ((ev.swift -= dt * swifts) < 0) { ev.swift = rnd(4, 12); this.swifts(); }
     if ((ev.owl -= dt * night * (1 - 0.6 * town)) < 0) { ev.owl = rnd(20, 45); this.owl(); }
     if ((ev.dog -= dt * (0.25 + 0.35 * (1 - town))) < 0) { ev.dog = rnd(25, 70); this.dog(); }
+  }
+
+  // A glass or a cup set down on a counter somewhere in the room: two short bright pings.
+  clink() {
+    const v = this._around(2, 7, rnd(0.12, 0.25), 0.3), k = v.k, t = this.A.ctx.currentTime + 0.02;
+    for (let i = 0, n = 1 + Math.floor(Math.random() * 2); i < n; i++) {
+      const tt = t + i * rnd(0.06, 0.14), f0 = rnd(2400, 4200), o = k.osc('sine', f0, tt, tt + 0.4), o2 = k.osc('sine', f0 * 2.71, tt, tt + 0.25), g = k.gain(0);
+      g.gain.setValueAtTime(0, tt); g.gain.linearRampToValueAtTime(0.25, tt + 0.003); g.gain.setTargetAtTime(0, tt + 0.01, 0.07);
+      chain(o, g, v.out); chain(o2, g);
+    }
   }
 
   // Voice placed at a random bearing and distance around the listener.

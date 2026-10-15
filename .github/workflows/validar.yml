@@ -1,9 +1,14 @@
-# Validadores del backlog técnico (épica R) en cada pull request y cada noche.
+# Validadores del backlog técnico (épicas R e I) en cada pull request y cada noche.
 # - validate_signs: ninguna marca real ni texto de marcador en la copia publicable (R-07, V-02); las entidades de los
 #   rótulos cumplen su esquema y el 100 % de los rótulos tiene entidad o es genérico con motivo (R-02, R-04).
 # - La lectura con OCR (R-09, tools/rotulos/legibilidad.py) y el inventario (R-01) necesitan el juego en un navegador
 #   y el OCR de macOS: se ejecutan en local y su resultado (data/rotulos/*.json) va en el pull request.
-name: Validar rótulos
+# - validate_interiors: los objetos y los kits cumplen sus esquemas, masas y mínimos (I-02, X-01, X-02); los datos que
+#   lee el juego están al día; y cada kit, montado con cinco semillas, pasa el validador de I-04 (obligatorios, nada
+#   flotando ni metido en otra cosa, paso libre de 0,9 m, luz, presupuesto V-03, determinismo y variación de I-03), en
+#   un Chrome sin ventana y sin sonido. El inventario de puertas (I-01) necesita el juego entero: se toma en local
+#   (tools/interiores/inventario.py) y data/interiors_inventory.json va en el pull request.
+name: Validar rótulos e interiores
 
 on:
   pull_request:
@@ -38,3 +43,21 @@ jobs:
           print('rótulos', c['rotulos'], '· con entidad', c['rotulos_con_entidad'], '· genéricos', c['rotulos_genericos'], '· confianza', c['confianza'])
           print('legibilidad (última medida en local): día', l['dia'], '% · noche', l['noche'], '%')
           PY
+  validate_interiors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Objetos y kits (I-02, X-01, X-02)
+        run: python3 tools/interiores/datos.py
+      - name: Los datos del juego, al día con los objetos y los kits
+        run: git diff --exit-code src/interiores_datos.js
+      - name: Servidor de desarrollo y Chrome sin ventana (siempre sin sonido)
+        run: |
+          python3 tools/devserver.py 8920 &
+          google-chrome --headless=new --mute-audio --remote-debugging-port=9333 --user-data-dir=/tmp/chrome-ci --no-first-run about:blank &
+          for i in $(seq 1 40); do curl -sf http://localhost:9333/json/version >/dev/null && curl -sf http://localhost:8920/tools/interiores/validar.html >/dev/null && break; sleep 1; done
+      - name: Interiores, cinco semillas por kit (I-03, I-04, V-03)
+        run: python3 tools/interiores/validar.py --semillas 1,2,3,4,5
