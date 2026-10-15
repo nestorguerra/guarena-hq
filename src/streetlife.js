@@ -16,8 +16,9 @@ import { mulberry32, hash1, polySample, pointInRing, ringBounds, ringArea } from
 import { makeNightGlowMaterial } from './materials.js';
 import { groundPot } from './facades.js';
 import { STYLE } from './style.js';
-import { SIN_PLACAS, SIN_TERRAZA, SIN_BUZON } from './calles_arreglos.js';
+import { SIN_PLACAS, SIN_TERRAZA, SIN_BUZON, PLACAS_CALLE } from './calles_arreglos.js';
 import { CASAS } from './calles_casas.js';
+import { registrar } from './rotulos.js';
 
 const at = (g, x, y, z) => { g.translate(x, y, z); return g; };
 function merged(list) {
@@ -612,6 +613,11 @@ export function buildStreetLife(world, map, q) {
 
 // ------------------------------------------------------------------ ceramic street-name tiles at the corners
 // White glazed tiles with blue lettering and border, one atlas for every street name of the town.
+// a street's name on its plate: the kind of way on its own line, small (Calle, Avenida…), the rest large
+function plateParts(name) {
+  const t = plateText(name), m = t.match(/^(CALLE|AVDA\.|PLAZA|TRVA\.|CTRA\.|CAMINO|PASEO|RONDA|PASAJE|CALLEJÓN)\s+(.*)$/);
+  return m ? [m[1], m[2]] : ['', t];
+}
 function plateText(name) {
   let t = name.trim();
   t = t.replace(/^Avenida\b/i, 'Avda.').replace(/^Carretera\b/i, 'Ctra.').replace(/^Travesía\b/i, 'Trva.');
@@ -621,35 +627,61 @@ function buildStreetPlates(world, map) {
   const noPlate = SIN_PLACAS.map((r) => ({ r, bb: ringBounds(r) }));
   const names = [];
   const index = new Map();
-  const edges = map.edges.filter((e) => e.name && (e.drive || e.walk) && !e.blocked && e.len > 14 && map.inTown(e.pts[0], e.pts[1]));
+  const edges = map.edges.filter((e) => e.name && (e.drive || e.walk) && !e.blocked && e.len > 3 && map.inTown(e.pts[0], e.pts[1]));
   for (const e of edges) if (!index.has(e.name)) { index.set(e.name, names.length); names.push(e.name); }
   if (!names.length) return 0;
-  const TW = 320, TH = 80, COLS = 6;
-  const rows = Math.ceil(Math.min(names.length, 150) / COLS);
+  // the town's plates, as its captures show them (views 3, 67, 201): white glazed tiles in a blue border, the kind of way
+  // small on top — CALLE, AVDA., PLAZA… — and its name below in large capitals, on one line or two (backlog R-09: the
+  // name's letters ~8 cm high, to read from across a street; they were 4 cm, in one line with the kind)
+  const TW = 384, TH = 192, COLS = 5;
+  const rows = Math.ceil(Math.min(names.length, 300) / COLS);
   const cv = document.createElement('canvas');
   cv.width = 2048; cv.height = Math.max(128, Math.pow(2, Math.ceil(Math.log2(rows * TH))));
   const x = cv.getContext('2d');
   x.fillStyle = '#e9e6dc'; x.fillRect(0, 0, cv.width, cv.height);
-  const blue = '#1f4394';
+  const blue = '#1a3c8f';
   names.forEach((n, i) => {
-    if (i >= 150) return;
+    if (i >= 300) return;
     const cx = (i % COLS) * TW, cy = Math.floor(i / COLS) * TH;
     const g = x.createLinearGradient(cx, cy, cx, cy + TH);
-    g.addColorStop(0, '#fbfaf5'); g.addColorStop(1, '#ebe8dd');
+    g.addColorStop(0, '#ecebe4'); g.addColorStop(1, '#e2dfd5'); // (glazed white a touch under full: in the noon sun it burnt out round the letters)
     x.fillStyle = g; x.fillRect(cx + 2, cy + 2, TW - 4, TH - 4);
-    // tile joints (three tiles side by side), border and corner dots
-    x.strokeStyle = 'rgba(120,115,100,0.35)'; x.lineWidth = 1.5;
-    for (const k of [1, 2]) { x.beginPath(); x.moveTo(cx + (TW * k) / 3, cy + 3); x.lineTo(cx + (TW * k) / 3, cy + TH - 3); x.stroke(); }
-    x.strokeStyle = blue; x.lineWidth = 5; x.strokeRect(cx + 7, cy + 7, TW - 14, TH - 14);
-    x.lineWidth = 1.5; x.strokeRect(cx + 13, cy + 13, TW - 26, TH - 26);
+    // tile joints (two tiles side by side), border and corner dots
+    x.strokeStyle = 'rgba(120,115,100,0.3)'; x.lineWidth = 1.5;
+    x.beginPath(); x.moveTo(cx + TW / 2, cy + 3); x.lineTo(cx + TW / 2, cy + TH - 3); x.stroke();
+    x.strokeStyle = blue; x.lineWidth = 8; x.strokeRect(cx + 9, cy + 9, TW - 18, TH - 18);
+    x.lineWidth = 2; x.strokeRect(cx + 20, cy + 20, TW - 40, TH - 40);
     x.fillStyle = blue;
-    for (const [dx, dy] of [[16, 16], [TW - 16, 16], [16, TH - 16], [TW - 16, TH - 16]]) { x.beginPath(); x.arc(cx + dx, cy + dy, 3.2, 0, Math.PI * 2); x.fill(); }
-    const txt = plateText(n);
-    let fs = 30;
-    x.font = `bold ${fs}px Georgia, 'Times New Roman', serif`;
-    while (x.measureText(txt).width > TW - 44 && fs > 12) { fs -= 1; x.font = `bold ${fs}px Georgia, 'Times New Roman', serif`; }
+    for (const [dx, dy] of [[24, 24], [TW - 24, 24], [24, TH - 24], [TW - 24, TH - 24]]) { x.beginPath(); x.arc(cx + dx, cy + dy, 4, 0, Math.PI * 2); x.fill(); }
+    const [kind, name] = plateParts(n);
     x.textAlign = 'center'; x.textBaseline = 'middle';
-    x.fillText(txt, cx + TW / 2, cy + TH / 2 + 1);
+    x.fillStyle = '#0b2160';
+    x.font = `bold 30px Arial, Helvetica, sans-serif`;
+    x.fillText(kind, cx + TW / 2, cy + 42);
+    // its name in one line if it fits large, else two or three (by words, the lines as even as they come)
+    const face = (fs) => `bold ${fs}px "Arial Narrow", Arial, Helvetica, sans-serif`, maxW = TW - 56;
+    const words = name.split(' ');
+    const split = (k) => { // (the words in k lines, the longest as short as can be)
+      let best = null;
+      const rec = (i, left, acc) => {
+        if (left === 1) { const l = [...acc, words.slice(i).join(' ')]; const w = Math.max(...l.map((t) => x.measureText(t).width)); if (!best || w < best[0]) best = [w, l]; return; }
+        for (let j = i + 1; j <= words.length - left + 1; j++) rec(j, left - 1, [...acc, words.slice(i, j).join(' ')]);
+      };
+      rec(0, Math.min(k, words.length), []);
+      return best[1];
+    };
+    let lines = [name], fs = 0;
+    for (const k of [1, 2, 3]) {
+      if (k > words.length) break;
+      const l = split(k), cap = [72, 50, 36][k - 1];
+      x.font = face(cap);
+      const w = Math.max(...l.map((t) => x.measureText(t).width)), f = Math.floor(Math.min(cap, (cap * maxW) / w));
+      if (f > fs + 1) { fs = f; lines = l; }
+    }
+    x.font = face(fs);
+    const lh = fs * 1.02, top = cy + 62, room = TH - 30 - 62; // (the name between the kind's line and the lower border)
+    const y0 = top + (room - lh * lines.length) / 2 + lh / 2;
+    lines.forEach((t, k) => x.fillText(t, cx + TW / 2, y0 + k * lh));
   });
   const tex = new THREE.CanvasTexture(cv);
   tex.colorSpace = THREE.SRGBColorSpace;
@@ -657,44 +689,97 @@ function buildStreetPlates(world, map) {
   tex.generateMipmaps = true;
   tex.minFilter = THREE.LinearMipmapLinearFilter;
   const pos = [], nor = [], uv = [], idx = [];
+  // every crossing of the town has the plate of each street that meets there (backlog R-10): a node where two named
+  // streets or more meet, each of them a plate a few metres in from it — on the first wall within 7 m of the kerb, on
+  // either side; where neither side has one (an open corner, a lot), on a short post at the kerb. Other junctions too,
+  // where a street's stretch begins. (None where the captures show the corner bare: calles_arreglos.js SIN_PLACAS)
+  const shopGrid = new Map();
+  for (const o of world.facadeOpenings || []) if (o.type === 7) { const k = Math.floor(o.ox / 20) + ':' + Math.floor(o.oz / 20); if (!shopGrid.has(k)) shopGrid.set(k, []); shopGrid.get(k).push(o); }
+  const shopsNear = (x0, z0) => { const out = [], i = Math.floor(x0 / 20), j = Math.floor(z0 / 20); for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) out.push(...(shopGrid.get((i + a) + ':' + (j + b)) || [])); return out; };
+  // (what a plate must keep clear of on its wall: the downpipes at the ends of the fronts — facades.js buildRun —, the
+  // plates the captures placed — calles_arreglos.js PLACAS_CALLE —; within half a plate and a hand of either)
+  const clear = [];
+  for (const r of world.facadeRuns || []) clear.push([r.ax, r.az], [r.bx, r.bz]);
+  for (const q of PLACAS_CALLE) clear.push([q[0], q[1], Math.min(1.7, Math.max(0.6, 0.075 * (q[4] || '').length + 0.3)) / 2]); // (a measured plate: as wide as its words — detalles.js)
+  { const L = world.lampPoints || []; for (let i = 0; i < L.length; i += 3) if (L[i + 1] > 2 && L[i + 1] < 5) clear.push([L[i], L[i + 2]]); } // (and the wall lanterns: one stood in front of a plate)
+  const clearGrid = new Map();
+  for (const [x0, z0, r1] of clear) { const k = Math.floor(x0 / 10) + ':' + Math.floor(z0 / 10); if (!clearGrid.has(k)) clearGrid.set(k, []); clearGrid.get(k).push([x0, z0, r1 || 0]); }
+  const crowded = (x0, z0, r0) => { const i = Math.floor(x0 / 10), j = Math.floor(z0 / 10); for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) for (const [x1, z1, r1] of clearGrid.get((i + a) + ':' + (j + b)) || []) if (Math.hypot(x1 - x0, z1 - z0) < r0 + r1) return true; return false; };
   const placed = [];
   const tmp = {};
-  const W = 0.66, H = 0.165;
-  for (const e of edges) {
-    const i = index.get(e.name);
-    if (i >= 150) continue;
-    const u0 = ((i % COLS) * TW + 3) / cv.width, u1 = ((i % COLS) * TW + TW - 3) / cv.width;
-    const v1 = 1 - (Math.floor(i / COLS) * TH + 3) / cv.height, v0 = 1 - (Math.floor(i / COLS) * TH + TH - 3) / cv.height;
-    for (const end of [0, 1]) {
-      const s = end === 0 ? Math.min(7, e.len * 0.3) : Math.max(e.len - 7, e.len * 0.7);
-      polySample(e.pts, e.cum, s, tmp);
-      for (const side of [1, -1]) {
-        if (hash1(e.id * 4 + end * 2 + (side > 0 ? 1 : 0)) > 0.6) continue;
-        const nx = -tmp.dz * side, nz = tmp.dx * side;
-        const hw = map.kerbAt(e, s, side);
-        const t = map.collider.raycast(tmp.x + nx * hw, tmp.z + nz * hw, tmp.x + nx * (hw + 7), tmp.z + nz * (hw + 7), 3.2, 3.2);
-        if (t >= 1) continue;
-        const d = hw + 7 * t - 0.03;
-        const px = tmp.x + nx * d, pz = tmp.z + nz * d;
-        if (placed.some((q) => Math.hypot(q[0] - px, q[1] - pz) < 4)) continue;
-        if (noPlate.some((o) => px > o.bb[0] && px < o.bb[2] && pz > o.bb[1] && pz < o.bb[3] && pointInRing(px, pz, o.r))) continue; // (none where the captures show none: calles_arreglos.js)
-        placed.push([px, pz]);
-        // the plate faces the street (-n), its width runs along the street direction
-        const fx = -nx, fz = -nz, ax = tmp.dx, az = tmp.dz;
-        const y0 = 2.75, y1 = y0 + H;
-        const k = pos.length / 3;
-        const L = (a) => [px + ax * a, pz + az * a];
-        const [x0, z0] = L(-W / 2), [x1, z1] = L(W / 2);
-        // make sure the text reads left-to-right when seen from the street
-        const flip = (ax * fz - az * fx) < 0;
-        const [xa, za, xb, zb] = flip ? [x1, z1, x0, z0] : [x0, z0, x1, z1];
-        pos.push(xa, y0, za, xb, y0, zb, xb, y1, zb, xa, y1, za);
-        for (let q = 0; q < 4; q++) nor.push(fx, 0, fz);
-        uv.push(u0, v0, u1, v0, u1, v1, u0, v1);
-        // wind the quad towards the street: face normal of (a, b, c) is cross(b - a, up) = (-e1z, 0, e1x)
-        const e1x = xb - xa, e1z = zb - za;
-        if (-e1z * fx + e1x * fz >= 0) idx.push(k, k + 1, k + 2, k, k + 2, k + 3); else idx.push(k, k + 2, k + 1, k, k + 3, k + 2);
+  const W = 0.86, H = 0.43; // (backlog R-09/R-10: read at 10 m — the name's capitals 7–9 cm high)
+  const posts = [];
+  const atNode = new Map();
+  for (const e of edges) for (const nid of [e.a, e.b]) { if (!atNode.has(nid)) atNode.set(nid, []); atNode.get(nid).push(e); }
+  for (const [nid, es] of [...atNode].sort((p, q) => p[0] - q[0])) {
+    const node = map.nodes[nid];
+    if (!node || node.degree < 2) continue;
+    const crossing = new Set(es.map((e) => e.name)).size >= 2;
+    for (const name of [...new Set(es.map((e) => e.name))]) {
+      const i = index.get(name);
+      if (i >= 300) continue;
+      const u0 = ((i % COLS) * TW + 3) / cv.width, u1 = ((i % COLS) * TW + TW - 3) / cv.width;
+      const v1 = 1 - (Math.floor(i / COLS) * TH + 3) / cv.height, v0 = 1 - (Math.floor(i / COLS) * TH + TH - 3) / cv.height;
+      // (its stretches that meet the node: the plate on the first that has a wall at hand, else on a post on the first)
+      let spot = null;
+      for (const e of es.filter((q) => q.name === name)) {
+        const s0 = e.a === nid ? Math.min(7, e.len * 0.3) : Math.max(e.len - 7, e.len * 0.7);
+        polySample(e.pts, e.cum, s0, tmp);
+        const first = hash1(e.id * 4 + (e.a === nid ? 0 : 2)) > 0.5 ? 1 : -1;
+        for (const side of [first, -first]) {
+          const nx = -tmp.dz * side, nz = tmp.dx * side;
+          const hw = map.kerbAt(e, s0, side);
+          const t = map.collider.raycast(tmp.x + nx * hw, tmp.z + nz * hw, tmp.x + nx * (hw + 7), tmp.z + nz * (hw + 7), 3.2, 3.2);
+          let wall = t < 1, d = wall ? hw + 7 * t - 0.03 : hw + 0.45, along = 0, wx = tmp.dx, wz = tmp.dz;
+          const hit = (a) => { const bx = tmp.x + tmp.dx * a, bz = tmp.z + tmp.dz * a, u = map.collider.raycast(bx + nx * hw, bz + nz * hw, bx + nx * (hw + 7), bz + nz * (hw + 7), 3.2, 3.2); return u < 1 && Math.abs(hw + 7 * u - 0.03 - d) < 0.35 ? [bx + nx * (hw + 7 * u), bz + nz * (hw + 7 * u)] : null; };
+          if (wall) {
+            // (the wall under its whole width — at a corner the plate is slid along it —, turned along the wall itself, not
+            // the street — a front a little askew cut into its edge —; and not over a shop's sign band: slid off it too)
+            along = [0, 0.5, -0.5, 1, -1, 1.6, -1.6].find((a) => {
+              const L = hit(a - W / 2 - 0.05), R = hit(a + W / 2 + 0.05);
+              if (!L || !R) return false;
+              // (both on one wall running with the street, not on the two faces of a corner — it came out edge on)
+              const lw = Math.hypot(R[0] - L[0], R[1] - L[1]) || 1;
+              if (Math.abs(((R[0] - L[0]) * tmp.dx + (R[1] - L[1]) * tmp.dz) / lw) < 0.82) return false;
+              const cxp = tmp.x + nx * d + tmp.dx * a, czp = tmp.z + nz * d + tmp.dz * a;
+              if (crowded(cxp, czp, W / 2 + 0.15)) return false;
+              return !shopsNear(cxp, czp).some((o) => { const u = (cxp - o.ox) * o.tx + (czp - o.oz) * o.tz; return Math.abs((cxp - o.ox) * o.nx + (czp - o.oz) * o.nz) < 0.6 && u > -W / 2 - 0.2 && u < o.bw + W / 2 + 0.2; });
+            });
+            if (along === undefined) { wall = false; along = 0; d = hw + 0.45; }
+            else { const L = hit(along - W / 2 - 0.05), R = hit(along + W / 2 + 0.05), l = Math.hypot(R[0] - L[0], R[1] - L[1]) || 1; wx = (R[0] - L[0]) / l; wz = (R[1] - L[1]) / l; }
+          }
+          let px = tmp.x + nx * d + tmp.dx * along, pz = tmp.z + nz * d + tmp.dz * along;
+          if (wall) { const mx = (hit(along - W / 2 - 0.05)[0] + hit(along + W / 2 + 0.05)[0]) / 2, mz = (hit(along - W / 2 - 0.05)[1] + hit(along + W / 2 + 0.05)[1]) / 2; px = mx - nx * 0.03; pz = mz - nz * 0.03; }
+          // (its normal square to the wall, outwards as n — the plate faces the street, -n)
+          let pnx = nx, pnz = nz;
+          if (wall) { pnx = -wz; pnz = wx; if (pnx * nx + pnz * nz < 0) { pnx = -pnx; pnz = -pnz; } }
+          const c = { px, pz, nx: pnx, nz: pnz, ax: wx, az: wz, wall };
+          if (wall) { spot = c; break; }
+          if (!spot) spot = c;
+        }
+        if (spot && (spot.skip || spot.wall)) break;
       }
+      if (!spot || spot.skip) continue;
+      if (!crossing && !spot.wall) continue; // (a post only where a crossing needs it)
+      const { px, pz, nx, nz, ax, az, wall } = spot;
+      placed.push([px, pz, name]);
+      // the plate faces the street (-n), its width runs along the street direction
+      const fx = -nx, fz = -nz;
+      const y0 = wall ? 2.55 : 1.95, y1 = y0 + H;
+      const k = pos.length / 3;
+      const L = (a) => [px + ax * a, pz + az * a];
+      const [x0, z0] = L(-W / 2), [x1, z1] = L(W / 2);
+      // make sure the text reads left-to-right when seen from the street
+      const flip = (ax * fz - az * fx) < 0;
+      const [xa, za, xb, zb] = flip ? [x1, z1, x0, z0] : [x0, z0, x1, z1];
+      pos.push(xa, y0, za, xb, y0, zb, xb, y1, zb, xa, y1, za);
+      for (let q = 0; q < 4; q++) nor.push(fx, 0, fz);
+      uv.push(u0, v0, u1, v0, u1, v1, u0, v1);
+      // wind the quad towards the street: face normal of (a, b, c) is cross(b - a, up) = (-e1z, 0, e1x)
+      const e1x = xb - xa, e1z = zb - za;
+      if (-e1z * fx + e1x * fz >= 0) idx.push(k, k + 1, k + 2, k, k + 2, k + 3); else idx.push(k, k + 2, k + 1, k, k + 3, k + 2);
+      if (!wall) posts.push([px - fx * 0.03, pz - fz * 0.03, y1 + 0.05]);
+      registrar({ id: `placa_calle:${nid}:${name}`, tipo: 'placa_calle', texto: plateText(name), calle: name, nodo: nid, cruce: crossing, soporte: wall ? 'pared' : 'poste', x: px, y: (y0 + y1) / 2, z: pz, nx: fx, nz: fz, caras: 1, w: W, h: H });
     }
   }
   if (!pos.length) return 0;
@@ -704,9 +789,18 @@ function buildStreetPlates(world, map) {
   g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
   g.setIndex(idx);
   g.computeBoundingSphere();
-  const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.32, metalness: 0, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 }));
+  // (at night as the street lamps light them: a little of their own light — world.js, backlog R-09)
+  const pmat = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.62, metalness: 0, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 });
+  (world.signMats || (world.signMats = [])).push([pmat, 0.6]);
+  const m = new THREE.Mesh(g, pmat);
   m.receiveShadow = true;
   m.matrixAutoUpdate = false;
   world.root.add(m);
+  // (the posts of the plates on open corners: a grey tube from the pavement to just over the plate)
+  if (posts.length) {
+    const pm = new THREE.Mesh(mergeGeometries(posts.map(([x, z, h]) => paint(new THREE.CylinderGeometry(0.03, 0.03, h, 6).translate(x, h / 2, z), '#7d8286')), false), world.furnMat || new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.6 }));
+    pm.castShadow = true; pm.matrixAutoUpdate = false; world.root.add(pm);
+    for (const [x, z] of posts) map.collider.addCircle(x, z, 0.06, 2.5, -5);
+  }
   return placed.length;
 }

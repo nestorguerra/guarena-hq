@@ -28,6 +28,7 @@ import { buildTapias } from './tapias.js';
 import { FAROLAS, CONTENEDORES, SIN_CONTENEDORES, BANCOS, BOLARDOS, ACERAS, SIN_RELLENO, SIN_FAROLAS, RELLENOS, CASAS_NUEVAS, SIN_POSTES, SIN_BANCOS } from './calles_arreglos.js';
 import { CASAS } from './calles_casas.js';
 import { buildDetalles } from './detalles.js';
+import { buildShopSigns } from './rotulos_tiendas.js';
 import { baculoLamp } from './townplus.js';
 import { MALFEITOS } from './malfeitos.js';
 import { mulberry32, hash1, pointInRing, ringArea, ringBounds, ringCentroid, polySample, polyNearest, clamp } from './util.js';
@@ -151,6 +152,7 @@ export class World {
     this.stats = { buildingTris: bb.tris };
     this.aoLines = bb.ao;
     this.facadeRuns = facade.runs || [];
+    this.facadeOpenings = facade.openings || []; // (the shops' sign bands: rotulos_tiendas.js)
     shared.uNearDist.value = 0;
     // every planned front door / garage / shop front on the street facades (with or without real holes)
     this.facadeGround = facade.ground;
@@ -602,6 +604,7 @@ void main(){
     // the wiring, signs, aerials and letter boxes of the fronts, the silos, water towers, wires across and bars' terraces the
     // captures show (detalles.js)
     try { this.detalles = buildDetalles(this, map); } catch (e) { console.warn('detalles', e); }
+    try { this.stats.tiendas = buildShopSigns(this, map, this.facadeOpenings || []); } catch (e) { console.warn('rótulos de tiendas', e); }
     // and the weeds, grass and scrub invading pavements, kerbs, tree pits and yards (groundfx.js)
     placeGroundLife(this, map, this.groundField, (this.groundRelief && this.groundRelief.weedSpots) || []);
   }
@@ -702,6 +705,8 @@ void main(){
     }
     if (this.glowMat) this.glowMat.opacity = clamp(night * 1.2, 0, 1);
     if (this.poolMat) this.poolMat.opacity = clamp(night * 0.85, 0, 0.85);
+    // (the signs lit after dusk — backlog R-09: the shops' and businesses' own, the street plates by the lamps)
+    if (this.signMats) for (const [m, k] of this.signMats) m.emissiveIntensity = clamp(night, 0, 1) * k;
     this.landmarks && this.landmarks.update(dt, night);
   }
 }

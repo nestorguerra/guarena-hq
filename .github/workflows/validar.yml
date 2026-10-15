@@ -1,0 +1,40 @@
+# Validadores del backlog técnico (épica R) en cada pull request y cada noche.
+# - validate_signs: ninguna marca real ni texto de marcador en la copia publicable (R-07, V-02); las entidades de los
+#   rótulos cumplen su esquema y el 100 % de los rótulos tiene entidad o es genérico con motivo (R-02, R-04).
+# - La lectura con OCR (R-09, tools/rotulos/legibilidad.py) y el inventario (R-01) necesitan el juego en un navegador
+#   y el OCR de macOS: se ejecutan en local y su resultado (data/rotulos/*.json) va en el pull request.
+name: Validar rótulos
+
+on:
+  pull_request:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate_signs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Empaquetar el juego
+        run: python3 tools/build.py
+      - name: Marcas y marcadores en la copia publicable (R-07, V-02)
+        run: python3 tools/rotulos/rotulos.py validar dist/test.html
+      - name: Entidades y emparejamiento (R-02, R-04)
+        run: python3 tools/rotulos/entidades.py
+      - name: Informe
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          c = json.load(open('data/rotulos/cobertura.json'))
+          l = json.load(open('data/rotulos/legibilidad.json'))
+          print('rótulos', c['rotulos'], '· con entidad', c['rotulos_con_entidad'], '· genéricos', c['rotulos_genericos'], '· confianza', c['confianza'])
+          print('legibilidad (última medida en local): día', l['dia'], '% · noche', l['noche'], '%')
+          PY

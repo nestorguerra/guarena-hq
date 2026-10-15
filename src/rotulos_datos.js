@@ -10,6 +10,7 @@ export const ROTULOS = {
   "corbacho": {"r": "AGRÍCOLA LA VEGA", "n": "Agrícola la Vega"},
   "dia": {"r": "DÍAZ", "n": "Díaz"},
   "drogueria-paredecor": {"r": "DROGUERÍA", "n": "Droguería"},
+  "modas-gallego": {"r": "MODAS", "n": "Modas"},
   "pelayo": {"r": "PELAGIO SEGUROS", "n": "Pelagio Seguros"},
   "pinturas-carmona": {"r": "PINTURAS", "n": "Pinturas"},
   "r-rodriguez": {"r": "TALLER", "n": "Taller"},
@@ -17,3 +18,5 @@ export const ROTULOS = {
   "sin-carnet": {"r": "COCHES SIN CARNET", "n": "Coches Sin Carnet"},
   "tabu": {"r": "BAR", "n": "Bar"},
 };
+// the generic of each kind of the map's businesses (a shop with no name, a sign with no entity)
+export const GENERICOS_TIPO = {"shop:supermarket": "Supermercado", "shop:convenience": "Tienda", "shop:clothes": "Tienda de ropa", "shop:shoes": "Zapatería", "shop:jewelry": "Joyería", "shop:optician": "Óptica", "shop:perfumery": "Perfumería", "shop:beauty": "Centro de estética", "shop:hairdresser": "Peluquería", "shop:books": "Librería", "shop:florist": "Floristería", "shop:furniture": "Tienda de muebles", "shop:appliance": "Electrodomésticos", "shop:computer": "Informática", "shop:car_parts": "Recambios", "shop:car_repair": "Taller", "shop:hardware": "Ferretería", "shop:trade": "Almacén", "shop:variety_store": "Bazar", "shop:tobacco": "Estanco", "shop:lottery": "Administración de lotería", "shop:kiosk": "Quiosco", "shop:toys": "Juguetería", "shop:greengrocer": "Frutería", "shop:confectionery": "Confitería", "shop:bakery": "Panadería", "shop:butcher": "Carnicería", "amenity:bank": "Banco", "amenity:bar": "Bar", "amenity:pub": "Pub", "amenity:cafe": "Cafetería", "amenity:restaurant": "Restaurante", "amenity:fast_food": "Comida rápida", "amenity:fuel": "Gasolinera", "amenity:pharmacy": "Farmacia", "amenity:dentist": "Clínica dental", "amenity:driving_school": "Autoescuela", "amenity:car_wash": "Lavadero", "amenity:language_school": "Academia", "amenity:casino": "Casino", "office:company": "Empresa", "office:insurance": "Seguros", "craft:glaziery": "Cristalería", "man_made:works": "Fábrica", "tourism:hotel": "Hotel"};

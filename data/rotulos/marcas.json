@@ -2,31 +2,287 @@
   "version": 1,
   "nota": "Registro de marcas y nombres de comercios (backlog técnico, épica R, R-07). Cada entidad que el juego rotula con su nombre real tiene aquí su nombre público: la parodia de una marca (nunca su logotipo) o un genérico para un comercio local o un nombre de persona. La versión publicada solo lleva el nombre público; el real, solo la copia local (data/rotulos/reales.local.json, fuera del repositorio). Ninguna marca está autorizada. tools/rotulos/rotulos.py genera src/rotulos_datos.js y comprueba la versión publicada.",
   "entidades": [
-    {"id": "dia", "tipo": "marca", "categoria": "alimentación", "autorizacion": "no", "real": ["DIA", "La Plaza de DIA", "Supermercado Día"], "publico": "DÍAZ", "modo": "parodia", "fuente": "levantamiento_propio", "vista": 168},
-    {"id": "santander", "tipo": "marca", "categoria": "banco", "autorizacion": "no", "real": ["SANTANDER", "Banco Santander"], "publico": "SANTANDRÉS", "modo": "parodia", "fuente": "levantamiento_propio", "vista": 83},
-    {"id": "caja-extremadura", "tipo": "marca", "categoria": "banco", "autorizacion": "no", "real": ["CAJA DE EXTREMADURA"], "publico": "CAJA DE LA DEHESA", "modo": "parodia", "fuente": "levantamiento_propio", "vista": 65},
-    {"id": "pelayo", "tipo": "marca", "categoria": "oficina", "autorizacion": "no", "real": ["PELAYO"], "publico": "PELAGIO SEGUROS", "modo": "parodia", "fuente": "levantamiento_propio", "vista": 228},
-    {"id": "barrau", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["BARRAU"], "publico": "MODA", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 241},
-    {"id": "tabu", "tipo": "comercio_local", "categoria": "bar", "autorizacion": "no", "real": ["TABÚ", "Tabú"], "publico": "BAR", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 125},
-    {"id": "pinturas-carmona", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["PINTURAS CARMONA", "Pinturas Carmona"], "publico": "PINTURAS", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 79},
-    {"id": "auto-recambios-marana", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["AUTO RECAMBIOS MARAÑA"], "publico": "AUTO RECAMBIOS", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 211},
-    {"id": "centro-medico-guadamez", "tipo": "comercio_local", "categoria": "otro", "autorizacion": "no", "real": ["CENTRO MÉDICO GUADÁMEZ"], "publico": "CENTRO MÉDICO", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 138},
-    {"id": "drogueria-paredecor", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["DROGUERÍA PAREDECOR"], "publico": "DROGUERÍA", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 182},
-    {"id": "r-rodriguez", "tipo": "persona", "categoria": "tienda", "autorizacion": "no", "real": ["R. RODRIGUEZ"], "publico": "TALLER", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 252, "motivo": "nombre de una persona"},
-    {"id": "sin-carnet", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["Nº1 DEL SIN CARNET"], "publico": "COCHES SIN CARNET", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 219},
-    {"id": "centro-de-la", "tipo": "comercio_local", "categoria": "otro", "autorizacion": "no", "real": ["CENTRO DE LA"], "publico": "OFICINAS", "modo": "genérico", "fuente": "levantamiento_propio", "vista": 214, "motivo": "el nombre sale cortado en la captura: no se lee entero"},
-    {"id": "corbacho", "tipo": "comercio_local", "categoria": "tienda", "autorizacion": "no", "real": ["AGRÍCOLA CORBACHO", "Agrícola Corbacho"], "publico": "AGRÍCOLA LA VEGA", "modo": "genérico", "fuente": "levantamiento_propio"}
+    {
+      "id": "dia",
+      "tipo": "marca",
+      "categoria": "alimentación",
+      "autorizacion": "no",
+      "real": [
+        "DIA",
+        "La Plaza de DIA",
+        "Supermercado Día"
+      ],
+      "publico": "DÍAZ",
+      "modo": "parodia",
+      "fuente": "levantamiento_propio",
+      "vista": 168
+    },
+    {
+      "id": "santander",
+      "tipo": "marca",
+      "categoria": "banco",
+      "autorizacion": "no",
+      "real": [
+        "SANTANDER",
+        "Banco Santander"
+      ],
+      "publico": "SANTANDRÉS",
+      "modo": "parodia",
+      "fuente": "levantamiento_propio",
+      "vista": 83
+    },
+    {
+      "id": "caja-extremadura",
+      "tipo": "marca",
+      "categoria": "banco",
+      "autorizacion": "no",
+      "real": [
+        "CAJA DE EXTREMADURA"
+      ],
+      "publico": "CAJA DE LA DEHESA",
+      "modo": "parodia",
+      "fuente": "levantamiento_propio",
+      "vista": 65
+    },
+    {
+      "id": "pelayo",
+      "tipo": "marca",
+      "categoria": "oficina",
+      "autorizacion": "no",
+      "real": [
+        "PELAYO"
+      ],
+      "publico": "PELAGIO SEGUROS",
+      "modo": "parodia",
+      "fuente": "levantamiento_propio",
+      "vista": 228
+    },
+    {
+      "id": "barrau",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "BARRAU"
+      ],
+      "publico": "MODA",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 241
+    },
+    {
+      "id": "tabu",
+      "tipo": "comercio_local",
+      "categoria": "bar",
+      "autorizacion": "no",
+      "real": [
+        "TABÚ",
+        "Tabú"
+      ],
+      "publico": "BAR",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 125
+    },
+    {
+      "id": "pinturas-carmona",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "PINTURAS CARMONA",
+        "Pinturas Carmona"
+      ],
+      "publico": "PINTURAS",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 79
+    },
+    {
+      "id": "auto-recambios-marana",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "AUTO RECAMBIOS MARAÑA"
+      ],
+      "publico": "AUTO RECAMBIOS",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 211
+    },
+    {
+      "id": "centro-medico-guadamez",
+      "tipo": "comercio_local",
+      "categoria": "otro",
+      "autorizacion": "no",
+      "real": [
+        "CENTRO MÉDICO GUADÁMEZ"
+      ],
+      "publico": "CENTRO MÉDICO",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 138
+    },
+    {
+      "id": "drogueria-paredecor",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "DROGUERÍA PAREDECOR"
+      ],
+      "publico": "DROGUERÍA",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 182
+    },
+    {
+      "id": "r-rodriguez",
+      "tipo": "persona",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "R. RODRIGUEZ"
+      ],
+      "publico": "TALLER",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 252,
+      "motivo": "nombre de una persona"
+    },
+    {
+      "id": "sin-carnet",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "Nº1 DEL SIN CARNET"
+      ],
+      "publico": "COCHES SIN CARNET",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 219
+    },
+    {
+      "id": "centro-de-la",
+      "tipo": "comercio_local",
+      "categoria": "otro",
+      "autorizacion": "no",
+      "real": [
+        "CENTRO DE LA"
+      ],
+      "publico": "OFICINAS",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 214,
+      "motivo": "el nombre sale cortado en la captura: no se lee entero"
+    },
+    {
+      "id": "corbacho",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "AGRÍCOLA CORBACHO",
+        "Agrícola Corbacho"
+      ],
+      "publico": "AGRÍCOLA LA VEGA",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio"
+    },
+    {
+      "id": "modas-gallego",
+      "tipo": "comercio_local",
+      "categoria": "tienda",
+      "autorizacion": "no",
+      "real": [
+        "MODAS GALLEGO",
+        "Miguel Felipe Gallego"
+      ],
+      "publico": "MODAS",
+      "modo": "genérico",
+      "fuente": "levantamiento_propio",
+      "vista": 67,
+      "motivo": "OpenStreetMap lo da con el nombre de una persona; el rótulo dice «MODAS GALLEGO HOGAR» (R-05)"
+    }
   ],
   "genericos_por_tipo": {
-    "shop:supermarket": "Supermercado", "shop:convenience": "Tienda", "shop:clothes": "Tienda de ropa", "shop:shoes": "Zapatería", "shop:jewelry": "Joyería", "shop:optician": "Óptica",
-    "shop:perfumery": "Perfumería", "shop:beauty": "Centro de estética", "shop:hairdresser": "Peluquería", "shop:books": "Librería", "shop:florist": "Floristería", "shop:furniture": "Tienda de muebles",
-    "shop:appliance": "Electrodomésticos", "shop:computer": "Informática", "shop:car_parts": "Recambios", "shop:car_repair": "Taller", "shop:hardware": "Ferretería", "shop:trade": "Almacén",
-    "shop:variety_store": "Bazar", "shop:tobacco": "Estanco", "shop:lottery": "Administración de lotería", "shop:kiosk": "Quiosco", "shop:toys": "Juguetería", "shop:greengrocer": "Frutería",
-    "shop:confectionery": "Confitería", "shop:bakery": "Panadería", "shop:butcher": "Carnicería",
-    "amenity:bank": "Banco", "amenity:bar": "Bar", "amenity:pub": "Pub", "amenity:cafe": "Cafetería", "amenity:restaurant": "Restaurante", "amenity:fast_food": "Comida rápida",
-    "amenity:fuel": "Gasolinera", "amenity:pharmacy": "Farmacia", "amenity:dentist": "Clínica dental", "amenity:driving_school": "Autoescuela", "amenity:car_wash": "Lavadero",
-    "amenity:language_school": "Academia", "amenity:casino": "Casino", "office:company": "Empresa", "office:insurance": "Seguros", "craft:glaziery": "Cristalería",
-    "man_made:works": "Fábrica", "tourism:hotel": "Hotel"
+    "shop:supermarket": "Supermercado",
+    "shop:convenience": "Tienda",
+    "shop:clothes": "Tienda de ropa",
+    "shop:shoes": "Zapatería",
+    "shop:jewelry": "Joyería",
+    "shop:optician": "Óptica",
+    "shop:perfumery": "Perfumería",
+    "shop:beauty": "Centro de estética",
+    "shop:hairdresser": "Peluquería",
+    "shop:books": "Librería",
+    "shop:florist": "Floristería",
+    "shop:furniture": "Tienda de muebles",
+    "shop:appliance": "Electrodomésticos",
+    "shop:computer": "Informática",
+    "shop:car_parts": "Recambios",
+    "shop:car_repair": "Taller",
+    "shop:hardware": "Ferretería",
+    "shop:trade": "Almacén",
+    "shop:variety_store": "Bazar",
+    "shop:tobacco": "Estanco",
+    "shop:lottery": "Administración de lotería",
+    "shop:kiosk": "Quiosco",
+    "shop:toys": "Juguetería",
+    "shop:greengrocer": "Frutería",
+    "shop:confectionery": "Confitería",
+    "shop:bakery": "Panadería",
+    "shop:butcher": "Carnicería",
+    "amenity:bank": "Banco",
+    "amenity:bar": "Bar",
+    "amenity:pub": "Pub",
+    "amenity:cafe": "Cafetería",
+    "amenity:restaurant": "Restaurante",
+    "amenity:fast_food": "Comida rápida",
+    "amenity:fuel": "Gasolinera",
+    "amenity:pharmacy": "Farmacia",
+    "amenity:dentist": "Clínica dental",
+    "amenity:driving_school": "Autoescuela",
+    "amenity:car_wash": "Lavadero",
+    "amenity:language_school": "Academia",
+    "amenity:casino": "Casino",
+    "office:company": "Empresa",
+    "office:insurance": "Seguros",
+    "craft:glaziery": "Cristalería",
+    "man_made:works": "Fábrica",
+    "tourism:hotel": "Hotel"
   },
-  "publicos": ["amenity:townhall", "amenity:school", "amenity:college", "amenity:clinic", "amenity:library", "amenity:place_of_worship", "amenity:marketplace", "amenity:bus_station", "amenity:post_office", "amenity:taxi", "amenity:social_facility", "amenity:toilets", "amenity:parking", "amenity:charging_station", "amenity:drinking_water", "building:public", "building:yes", "office:yes", "leisure:park", "leisure:pitch", "leisure:sports_centre", "leisure:swimming_pool", "landuse:cemetery", "landuse:industrial", "landuse:military", "natural:water", "place:square", "place:locality", "highway:pedestrian"]
+  "publicos": [
+    "amenity:townhall",
+    "amenity:school",
+    "amenity:college",
+    "amenity:clinic",
+    "amenity:library",
+    "amenity:place_of_worship",
+    "amenity:marketplace",
+    "amenity:bus_station",
+    "amenity:post_office",
+    "amenity:taxi",
+    "amenity:social_facility",
+    "amenity:toilets",
+    "amenity:parking",
+    "amenity:charging_station",
+    "amenity:drinking_water",
+    "building:public",
+    "building:yes",
+    "office:yes",
+    "leisure:park",
+    "leisure:pitch",
+    "leisure:sports_centre",
+    "leisure:swimming_pool",
+    "landuse:cemetery",
+    "landuse:industrial",
+    "landuse:military",
+    "natural:water",
+    "place:square",
+    "place:locality",
+    "highway:pedestrian"
+  ]
 }

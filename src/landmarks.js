@@ -15,6 +15,7 @@ import { STYLES as CALLES } from './calles.js';
 import { atrio } from './atrio.js';
 import { buildPools } from './pools.js';
 import { STYLE } from './style.js';
+import { marcar } from './rotulos.js';
 
 const toLocal = (lat, lon, origin) => {
   const R = 6378137, KX = Math.cos((origin[0] * Math.PI) / 180) * R * Math.PI / 180, KZ = R * Math.PI / 180;
@@ -1035,7 +1036,7 @@ class Landmarks {
       this.flags.push({ mesh: flag, base: fg.attributes.position.array.slice(), phase: i });
     });
     // sign
-    const s = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.9), new THREE.MeshStandardMaterial({ map: canvasTex(aytoPlaque()), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(-E, 4.1, 0.05); f.add(s); // (over the end opening)
+    const s = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.9), new THREE.MeshStandardMaterial({ map: canvasTex(aytoPlaque()), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(-E, 4.1, 0.05); f.add(marcar(s, { id: 'ayuntamiento', tipo: 'placa_informativa', texto: 'AYUNTAMIENTO', poi: 'inst:ayuntamiento' })); // (over the end opening)
     this.poi.ayto = { x: mx + nx * 4, z: mz + nz * 4, nx, nz, front: { mx, mz, ux: -nz, uz: nx, half: FW / 2 + 1 } };
     // in through its own door, at the back of the arcade (venues.js: the hall, the stairs, the Salón de Plenos)
     const dIn = W(0, -D + 1.2), dBack = W(0, -D - 3);
@@ -1115,7 +1116,7 @@ class Landmarks {
     const totem = new THREE.Group();
     const tt = new THREE.Mesh(sbox(1.2, 2.4, 0.25, 1), new THREE.MeshStandardMaterial({ color: 0x2b2a28, roughness: 0.6 }));
     tt.position.y = 1.2; totem.add(tt);
-    const label = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.0), new THREE.MeshStandardMaterial({ map: canvasTex(this.tartesoCanvas()), roughness: 0.6 }));
+    const label = marcar(new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.0), new THREE.MeshStandardMaterial({ map: canvasTex(this.tartesoCanvas()), roughness: 0.6 })), { id: 'tarteso', tipo: 'placa_informativa', texto: 'TARTESO', poi: 'inst:tarteso' });
     label.position.set(0, 1.3, 0.13); totem.add(label);
     const tp = new THREE.Vector3(fx - 6, 0, W + 2.5).applyMatrix4(g.matrixWorld);
     totem.position.set(tp.x, 0, tp.z);
@@ -1309,7 +1310,7 @@ class Landmarks {
     }
     const tot = new THREE.Mesh(sbox(0.5, 6, 1.8, 1), new THREE.MeshStandardMaterial({ color: 0xd4202c, roughness: 0.5 })); tot.position.set(-6, 3, 9); g.add(tot);
     const tl = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.5), new THREE.MeshStandardMaterial({ map: canvasTex(textCanvas('GASOLINERA', { w: 512, h: 512, bg: '#d4202c', fg: '#ffffff', font: 'bold 70px Arial' })) }));
-    tl.position.set(-5.74, 4.8, 9); tl.rotation.y = Math.PI / 2; g.add(tl);
+    tl.position.set(-5.74, 4.8, 9); tl.rotation.y = Math.PI / 2; g.add(marcar(tl, { id: 'gasolinera', tipo: 'monolito', texto: 'GASOLINERA' }));
     g.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
     this.poi.gasolinera = { x: cx, z: cz };
   }
@@ -1401,9 +1402,9 @@ class Landmarks {
     let px = x, pz = z;
     for (let k = 0; k < 30 && this.map.buildingAt(px, pz); k++) { px = x + Math.cos(k) * (2 + k); pz = z + Math.sin(k) * (2 + k); }
     const g = new THREE.Group();
-    const post = new THREE.Mesh(sbox(0.25, 2.8, 0.25), this.mat.steel); post.position.y = 1.4; g.add(post);
+    const post = new THREE.Mesh(sbox(0.25, 2.2, 0.25), this.mat.steel); post.position.y = 1.1; g.add(post); // (up to the board's foot: it stood in front of its words)
     const board = new THREE.Mesh(new THREE.PlaneGeometry(2.8, 0.8), new THREE.MeshStandardMaterial({ map: canvasTex(textCanvas(txt, { w: 700, h: 200, bg, fg, font: 'bold 64px Arial' })), side: THREE.DoubleSide, roughness: 0.5 }));
-    board.position.y = 2.6; g.add(board);
+    board.position.y = 2.6; g.add(marcar(board, { id: 'totem:' + txt, tipo: 'monolito', texto: txt, caras: 2 }));
     g.position.set(px, 0, pz);
     const q = this.map.nearestEdge(px, pz, 60, (e) => e.drive);
     if (q) g.rotation.y = Math.atan2(q.x - px, q.z - pz);

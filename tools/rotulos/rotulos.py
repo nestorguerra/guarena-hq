@@ -29,13 +29,16 @@ def generar():
             pub[e['id']] = {'r': e['real'][0], 'n': e['real'][-1] if e['real'][-1] != e['real'][0] else titulo(e['real'][0])}
             continue
         pub[e['id']] = {'r': e['publico'], 'n': titulo(e['publico'])}
-        real[e['id']] = {'r': e['real'][0], 'n': e['real'][-1] if e['real'][-1] != e['real'][0] else titulo(e['real'][0])}
+        # (as it is said: the sign's own words in title case — not an OpenStreetMap alias, a person's name in one case)
+        real[e['id']] = {'r': e['real'][0], 'n': titulo(e['real'][0]), 'alias': e['real']}
     js = ["// The names on the signs, as the published game shows them (tools/rotulos/rotulos.py from data/rotulos/marcas.json):",
           "// a parody of a brand, a generic for a local business. r: as the sign reads, n: as it is said. Nothing else here:",
           "// a local copy of the game puts the real ones over these (src/rotulos.js, data/rotulos/reales.local.json).",
           'export const ROTULOS = {']
     for k in sorted(pub): js.append(f'  {json.dumps(k)}: {json.dumps(pub[k], ensure_ascii=False)},')
     js.append('};')
+    js.append("// the generic of each kind of the map's businesses (a shop with no name, a sign with no entity)")
+    js.append('export const GENERICOS_TIPO = ' + json.dumps(GEN, ensure_ascii=False) + ';')
     open(os.path.join(ROOT, 'src', 'rotulos_datos.js'), 'w', encoding='utf-8').write('\n'.join(js) + '\n')
     with open(os.path.join(ROOT, 'data', 'rotulos', 'reales.local.json'), 'w', encoding='utf-8') as f:
         json.dump(real, f, ensure_ascii=False, indent=1)

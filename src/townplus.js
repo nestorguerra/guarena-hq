@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import { mergeGeometries, mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
 import { pointInRing, ringCentroid, mulberry32, clamp, polySample } from './util.js';
 import { flagCanvas } from './textures.js';
-import { rotulo } from './rotulos.js';
+import { rotulo, marcar } from './rotulos.js';
 
 const llTo = (map, lat, lon) => { const o = map.raw.origin, R = 6378137, KX = Math.cos((o[0] * Math.PI) / 180) * R * Math.PI / 180, KZ = R * Math.PI / 180; return [(lon - o[1]) * KX, -(lat - o[0]) * KZ]; };
 function norm(g) {
@@ -230,7 +230,7 @@ export function venueFront(L, o) {
   if (o.sign) {
     const tex = new THREE.CanvasTexture(textCanvasOf(o.sign, o.signBg || '#f2ede2', o.signFg || '#2a2a2a', o.signFont)); tex.colorSpace = THREE.SRGBColorSpace;
     const sw = o.signW || 4.2, sh = o.signH || 0.7;
-    g.add(place(new THREE.Mesh(new THREE.PlaneGeometry(sw, sh), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.6 })), 0, o.signY || 3.4, 0.08));
+    g.add(place(marcar(new THREE.Mesh(new THREE.PlaneGeometry(sw, sh), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.6 })), { id: 'local:' + o.kind, tipo: 'fachada', texto: o.sign, poi: o.poi || 'inst:' + o.kind }), 0, o.signY || 3.4, 0.08));
   }
   if (o.extra) o.extra(g, { nx, nz, fx, fz });
   g.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
@@ -322,7 +322,7 @@ export function corbacho(L) {
     glassDoor: true, doorW: 2.4, doorH: 2.8, frameMat: new THREE.MeshStandardMaterial({ color: 0x2f7a2e, roughness: 0.5 }),
     override: { minFloors: 2 },
     extra: (g) => {
-      const sign = new THREE.Mesh(new THREE.PlaneGeometry(10.5, 2.05), new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.5, emissive: 0xffffff, emissiveMap: signTex, emissiveIntensity: 0.12 }));
+      const sign = marcar(new THREE.Mesh(new THREE.PlaneGeometry(10.5, 2.05), new THREE.MeshStandardMaterial({ map: signTex, roughness: 0.5, emissive: 0xffffff, emissiveMap: signTex, emissiveIntensity: 0.12 })), { id: 'concesionario', tipo: 'fachada', texto: rotulo('corbacho'), poi: 'corbacho' });
       sign.position.set(0, 4.6, 0.09); g.add(sign);
       const band = new THREE.Mesh(new THREE.BoxGeometry(11, 0.25, 0.12), new THREE.MeshStandardMaterial({ color: 0x24602a, roughness: 0.5 })); band.position.set(0, 3.45, 0.06); g.add(band);
       // the showroom glass either side of the door, the workshop's roller door at one end

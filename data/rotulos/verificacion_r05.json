@@ -1,0 +1,119 @@
+{
+ "version": 1,
+ "fecha": "2026-10-15",
+ "revisor": "Claude (capturas de la auditoría, solo referencia; sin API de Google)",
+ "cola": {
+  "media": 26,
+  "muestra_alta_10%": 59,
+  "con_captura_que_los_ve": 13
+ },
+ "muestra_alta_comprobable": 4,
+ "muestra_alta_coincide": 1,
+ "conclusion": "Sin cerrar: las 292 capturas solo ven 13 de los 85 rótulos de la cola (casi todas las placas de calle quedan fuera de plano), y de los 4 comprobables de la muestra de confianza alta coincide 1: por debajo del 95 %, el criterio pide revisar el 100 % — hace falta un revisor con Street View o fotos de campo.",
+ "revisados": [
+  {
+   "sign_id": "0f3299e6-bc2b-5710-a112-f27b0a25b397",
+   "texto_juego": "TALLER",
+   "cola": "media",
+   "vista": 214,
+   "resultado": "no_visible",
+   "nota": "la nave se ve, pero en ese punto no hay rótulo legible"
+  },
+  {
+   "sign_id": "b42b8fb1-7e71-5d58-98bb-cc3d7d75ca1b",
+   "texto_juego": "FARMACIA",
+   "cola": "media",
+   "vista": 28,
+   "resultado": "coincide",
+   "nota": "FARMACIA en la pared, como en el juego"
+  },
+  {
+   "sign_id": "5c70b77e-6437-5dc3-8d0e-1a4905f512c2",
+   "texto_juego": "CALLE VICENTE ALEIXANDRE",
+   "cola": "muestra_alta",
+   "vista": 211,
+   "resultado": "no_visible",
+   "nota": ""
+  },
+  {
+   "sign_id": "531d5027-d465-5319-b231-3242869d3c52",
+   "texto_juego": "CALLE GRANDE",
+   "cola": "muestra_alta",
+   "vista": 67,
+   "resultado": "no_visible",
+   "nota": ""
+  },
+  {
+   "sign_id": "64c9317c-ab91-5e57-b66d-3e1453b6517c",
+   "texto_juego": "CALLE TÚNEL",
+   "cola": "muestra_alta",
+   "vista": 3,
+   "resultado": "no_legible",
+   "nota": "hay placa en la esquina, no se lee su texto"
+  },
+  {
+   "sign_id": "1a29ca14-4e35-5309-8b3c-c2978c8d8689",
+   "texto_juego": "CALLE ALBERQUILLA",
+   "cola": "muestra_alta",
+   "vista": 178,
+   "resultado": "no_visible",
+   "nota": ""
+  },
+  {
+   "sign_id": "66e84891-1dd5-5c57-b832-555a8c37c7ea",
+   "texto_juego": "CALLE JUAN RAMÓN JIMÉNEZ",
+   "cola": "muestra_alta",
+   "vista": 201,
+   "resultado": "coincide",
+   "nota": "CALLE JUAN RAMÓN JIMÉNEZ en la placa del pilar"
+  },
+  {
+   "sign_id": "08d8b515-0e19-5392-9a83-655308b1dc02",
+   "texto_juego": "BAZAR",
+   "cola": "muestra_alta",
+   "vista": 227,
+   "resultado": "difiere",
+   "nota": "la captura no muestra comercio ahí: el juego pone un bajo de tienda genérico"
+  },
+  {
+   "sign_id": "477cb8d5-c0c0-5fcf-bea9-dd1a107c6352",
+   "texto_juego": "CALLE GRANDE",
+   "cola": "muestra_alta",
+   "vista": 67,
+   "resultado": "difiere",
+   "nota": "la captura lee «MODAS GALLEGO HOGAR»; OpenStreetMap da el nombre de una persona: corregido al nombre del rótulo (registro: modas-gallego)"
+  },
+  {
+   "sign_id": "18d854ef-f818-5c58-92b0-252935a2ff86",
+   "texto_juego": "CALLE HERREROS",
+   "cola": "muestra_alta",
+   "vista": 60,
+   "resultado": "no_visible",
+   "nota": ""
+  },
+  {
+   "sign_id": "55a91e06-6577-5927-8605-c082d6f63e57",
+   "texto_juego": "CALLE SAN GREGORIO",
+   "cola": "muestra_alta",
+   "vista": 225,
+   "resultado": "difiere",
+   "nota": "la captura (abril de 2009) lee «Café Bar Churrería Amalia»; OpenStreetMap (2026) «Cafetería - Bar Parras», más reciente: se mantiene"
+  },
+  {
+   "sign_id": "8740cb08-6ab8-59ca-9b53-e6d050c7d74d",
+   "texto_juego": "TIENDA DE ROPA",
+   "cola": "muestra_alta",
+   "vista": 243,
+   "resultado": "no_legible",
+   "nota": ""
+  },
+  {
+   "sign_id": "e2e3b9c8-4bfb-50ab-89f1-44d58409f489",
+   "texto_juego": "REGALOS",
+   "cola": "muestra_alta",
+   "vista": 2,
+   "resultado": "no_legible",
+   "nota": ""
+  }
+ ]
+}

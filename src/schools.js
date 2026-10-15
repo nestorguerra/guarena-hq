@@ -9,6 +9,7 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { pointInRing, polyNearest, ringBounds } from './util.js';
 import { SIN_VALLA_COLEGIO } from './calles_arreglos.js';
 import { flagCanvas } from './textures.js';
+import { marcar } from './rotulos.js';
 
 const NAMES = [[/San Gregorio Educ/i, 'CEIP San Gregorio', 'Educación Infantil'], [/C\.?P\.? San Gregorio/i, 'CEIP San Gregorio', 'Guareña'],
   [/Eugenio Frutos/i, 'IES Eugenio Frutos', 'Guareña'], [/Dolores/i, 'Colegio Ntra. Sra. de los Dolores', 'Guareña'], [/San Gin[ée]s/i, 'Escuela Infantil San Ginés', 'Guareña']];
@@ -104,7 +105,7 @@ export function buildSchools(L) {
           if (map.buildingAt(x, z)) {
             const ry = Math.atan2(-dx, -dz);
             const m = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 0.42), new THREE.MeshStandardMaterial({ map: signTexture(name, sub), roughness: 0.6 }));
-            m.position.set(x - dx / l * 0.08, 2.7, z - dz / l * 0.08); m.rotation.y = ry; L.root.add(m);
+            m.position.set(x - dx / l * 0.08, 2.7, z - dz / l * 0.08); m.rotation.y = ry; L.root.add(marcar(m, { id: 'colegio:' + name, tipo: 'placa_informativa', texto: name.toUpperCase(), poi: 'inst:' + name }));
             out.push({ name, plaque: [x, z] });
             break;
           }
@@ -168,7 +169,7 @@ export function buildSchools(L) {
       }
       // the name over the gate
       const sg = new THREE.Mesh(new THREE.PlaneGeometry(4.4, 0.78), new THREE.MeshStandardMaterial({ map: signTexture(name, sub), roughness: 0.6, side: THREE.DoubleSide }));
-      sg.position.set(gate.x, 3.05, gate.z); sg.rotation.y = Math.atan2(-nx, -nz); L.root.add(sg);
+      sg.position.set(gate.x, 3.05, gate.z); sg.rotation.y = Math.atan2(-nx, -nz); L.root.add(marcar(sg, { id: 'colegio_puerta:' + name, tipo: 'placa_informativa', texto: name.toUpperCase(), poi: 'inst:' + name, caras: 2 }));
       G.posts.push(at(new THREE.BoxGeometry(4.6, 0.12, 0.12), gate.x, 2.62, gate.z, ry));
       // the three flags just inside
       ['es', 'ex', 'eu'].forEach((k, i) => {

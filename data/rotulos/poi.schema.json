@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "data/rotulos/poi.schema.json",
+  "title": "Entidad que nombra un rótulo (backlog técnico, R-02)",
+  "type": "object",
+  "required": ["poi_id", "nombre_visible", "categoria", "fuente", "fecha_verificacion", "verificador", "modo_rotulacion", "nombre_parodia", "nombre_publico", "atribucion", "evidencias"],
+  "properties": {
+    "poi_id": {"type": "string", "pattern": "^(osm:(node|way|relation)/\\d+|lev:[a-z0-9-]+|inst:.+|via:.+)$"},
+    "nombre_visible": {"type": "string", "minLength": 1},
+    "categoria": {"enum": ["tienda", "alimentación", "restaurante", "bar", "cafetería", "banco", "gimnasio", "farmacia", "oficina", "institución", "otro"]},
+    "fuente": {"type": "string", "pattern": "^(osm:(node|way|relation)/\\d+|levantamiento_propio)$"},
+    "fecha_verificacion": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "verificador": {"type": "string", "minLength": 1},
+    "modo_rotulacion": {"enum": ["real", "parodia", "genérico"]},
+    "nombre_parodia": {"type": ["string", "null"]},
+    "nombre_publico": {"type": "string", "minLength": 1},
+    "atribucion": {"type": ["string", "null"]},
+    "evidencias": {"type": "array", "items": {"type": "string"}},
+    "tipo_osm": {"type": "string"},
+    "horario": {"type": ["string", "null"]},
+    "lat": {"type": "number"},
+    "lon": {"type": "number"}
+  },
+  "additionalProperties": false
+}

@@ -7,6 +7,7 @@
 import * as THREE from 'three';
 import { mergeGeometries, mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
 import { orientedRect, pointInRing, mulberry32 } from './util.js';
+import { marcar } from './rotulos.js';
 
 const VS = `
 varying vec2 vUv; varying vec3 vW;
@@ -262,7 +263,7 @@ export function buildPools(L) {
     let ex = -Infinity, ez = 0; for (let i = 0; i < b.ring.length; i += 2) if (b.ring[i] > ex) { ex = b.ring[i]; ez = b.ring[i + 1]; }
     const t = canvasTex(1024, 160, (x, w, h) => { x.fillStyle = '#1f5fa8'; x.fillRect(0, 0, w, h); x.fillStyle = '#ffffff'; x.font = 'bold 96px Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('PISCINA MUNICIPAL', w / 2, h / 2 + 4); x.strokeStyle = '#ffffff'; x.lineWidth = 6; x.strokeRect(10, 10, w - 20, h - 20); }, false);
     const s = new THREE.Mesh(new THREE.PlaneGeometry(4.8, 0.75), new THREE.MeshStandardMaterial({ map: t, roughness: 0.6 }));
-    s.position.set(ex + 0.06, 3.1, ez); s.rotation.y = Math.PI / 2; L.root.add(s);
+    s.position.set(ex + 0.06, 3.1, ez); s.rotation.y = Math.PI / 2; L.root.add(marcar(s, { id: 'piscina', tipo: 'fachada', texto: 'PISCINA MUNICIPAL', poi: 'inst:piscina' }));
   }
   if (big) L.poi.piscina = { x: big.toW(0, 0).x, z: big.toW(0, 0).z };
 }

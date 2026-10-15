@@ -138,10 +138,10 @@ export function buildDetalles(world, map) {
         const w = Math.min(L * 0.85, Math.max(1.4, 0.3 * (ro.texto || '').length + 0.9), 6.5), h = 0.5;
         // (where along its front as seen: pos 0 its left end, 1 its right — from the street; the middle if not said)
         const pos = typeof ro.pos === 'number' ? Math.max(0, Math.min(1, ro.pos)) : 0.5, cxm = Math.max(w / 2 + 0.1, Math.min(L - w / 2 - 0.1, (1 - pos) * L));
-        const y0 = r.H >= 4.6 ? 2.5 : Math.max(2.1, r.H - 0.75), [x, z] = P(cxm, 0.03);
+        const y0 = r.H >= 4.6 ? 2.5 : Math.max(2.1, r.H - 0.75), [x, z] = P(cxm, 0.2); // (a light box 20 cm deep: flat on the wall, the shutter boxes of its shop fronts — 17 cm — hid it)
         signs.push({ ...ro, k, quads: [[x, y0, z, nx, nz, w, h, true]] });
         registrar({ id: 'casa:' + bid, tipo: 'fachada', texto: ro.texto, poi: ro.poi || null, bid, x, y: y0 + h / 2, z, nx, nz, caras: 1, w, h });
-        solid.push(place(paint(new THREE.BoxGeometry(w + 0.04, h + 0.04, 0.05), ro.fondo), x, y0 + h / 2, z, nx, nz));
+        solid.push(place(paint(new THREE.BoxGeometry(w + 0.04, h + 0.04, 0.2), ro.fondo), x - nx * 0.1, y0 + h / 2, z - nz * 0.1, nx, nz));
       }
       stats.rotulos++;
     }
@@ -424,7 +424,10 @@ export function buildDetalles(world, map) {
     g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
     g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3));
     g.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
-    const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.45, side: THREE.FrontSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 }));
+    // (lit after dusk, as the shops' signs are: world.js — backlog R-09)
+    const sm = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.45, side: THREE.FrontSide, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 });
+    (world.signMats || (world.signMats = [])).push([sm, 0.55]);
+    const m = new THREE.Mesh(g, sm);
     m.receiveShadow = true; m.matrixAutoUpdate = false;
     root.add(m);
   }

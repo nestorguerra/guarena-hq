@@ -341,6 +341,8 @@ const LAUNDRY = ['#f2f2ee', '#e2574c', '#4a7fc0', '#f2c230', '#7fbf6a', '#f08aa8
 
 // per-building choices (consistent for all openings of a house)
 const bsCache = new Map();
+// the colour of a shop front's sign band (buildShop): for the words put on it — src/rotulos_tiendas.js
+export function fasciaHex(o) { return '#' + buildingStyle(o).fascia.map((v) => v.toString(16).padStart(2, '0')).join(''); }
 function buildingStyle(o) {
   const key = o.bid >= 0 ? 'b' + o.bid : 'p' + o.pid;
   let bs = bsCache.get(key);
