@@ -1,0 +1,5862 @@
+{
+ "version": 1,
+ "familia": "vivienda",
+ "categorias": {
+  "sillon": [
+   4,
+   40
+  ],
+  "mesita": [
+   2,
+   15
+  ],
+  "televisor": [
+   4,
+   45
+  ],
+  "instrumento": [
+   1,
+   320
+  ],
+  "obra": [
+   100,
+   3000
+  ]
+ },
+ "objetos": [
+  {
+   "id": "sofa_tres_plazas",
+   "nombre": "Sofá de tres plazas",
+   "categoria": "sofa",
+   "clase": "PUSH",
+   "masa": 55,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      2.0,
+      0.12,
+      0.84
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      2.0,
+      0.3,
+      0.84
+     ],
+     "p": [
+      0,
+      0.27,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.6400000000000001,
+      0.06,
+      0.62
+     ],
+     "p": [
+      0,
+      0.45,
+      0.08
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      2.0,
+      0.46,
+      0.2
+     ],
+     "p": [
+      0,
+      0.65,
+      -0.32
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.18,
+      0.26,
+      0.84
+     ],
+     "p": [
+      -0.91,
+      0.55,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.18,
+      0.26,
+      0.84
+     ],
+     "p": [
+      0.91,
+      0.55,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5066666666666667,
+      0.34,
+      0.12
+     ],
+     "p": [
+      -0.5466666666666666,
+      0.66,
+      -0.17
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5066666666666667,
+      0.34,
+      0.12
+     ],
+     "p": [
+      -1.1102230246251565e-16,
+      0.66,
+      -0.17
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5066666666666667,
+      0.34,
+      0.12
+     ],
+     "p": [
+      0.5466666666666669,
+      0.66,
+      -0.17
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    }
+   ],
+   "rol": "sofa",
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      -0.5466666666666666,
+      0.45,
+      0.12
+     ],
+     "h": 0.45,
+     "anim": "sofa"
+    },
+    {
+     "p": [
+      -1.1102230246251565e-16,
+      0.45,
+      0.12
+     ],
+     "h": 0.45,
+     "anim": "sofa"
+    },
+    {
+     "p": [
+      0.5466666666666669,
+      0.45,
+      0.12
+     ],
+     "h": 0.45,
+     "anim": "sofa"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.48,
+     "margen": 0.2
+    }
+   ],
+   "nota": "el sofá: la gente de la casa se sienta aquí a ver la tele"
+  },
+  {
+   "id": "sofa_dos_plazas",
+   "nombre": "Sofá de dos plazas",
+   "categoria": "sofa",
+   "clase": "PUSH",
+   "masa": 40,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.5,
+      0.12,
+      0.84
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.5,
+      0.3,
+      0.84
+     ],
+     "p": [
+      0,
+      0.27,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.1400000000000001,
+      0.06,
+      0.62
+     ],
+     "p": [
+      0,
+      0.45,
+      0.08
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.5,
+      0.46,
+      0.2
+     ],
+     "p": [
+      0,
+      0.65,
+      -0.32
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.18,
+      0.26,
+      0.84
+     ],
+     "p": [
+      -0.66,
+      0.55,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.18,
+      0.26,
+      0.84
+     ],
+     "p": [
+      0.66,
+      0.55,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.53,
+      0.34,
+      0.12
+     ],
+     "p": [
+      -0.28500000000000003,
+      0.66,
+      -0.17
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.53,
+      0.34,
+      0.12
+     ],
+     "p": [
+      0.28500000000000003,
+      0.66,
+      -0.17
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    }
+   ],
+   "rol": "sofa",
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      -0.28500000000000003,
+      0.45,
+      0.12
+     ],
+     "h": 0.45,
+     "anim": "sofa"
+    },
+    {
+     "p": [
+      0.28500000000000003,
+      0.45,
+      0.12
+     ],
+     "h": 0.45,
+     "anim": "sofa"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.48,
+     "margen": 0.2
+    }
+   ],
+   "nota": "el sofá: la gente de la casa se sienta aquí a ver la tele"
+  },
+  {
+   "id": "sillon_orejero",
+   "nombre": "Sillón orejero",
+   "categoria": "sillon",
+   "clase": "CARRY",
+   "masa": 22,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      -0.34,
+      0.06,
+      -0.34
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      -0.34,
+      0.06,
+      0.34
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      0.34,
+      0.06,
+      -0.34
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      0.34,
+      0.06,
+      0.34
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.78,
+      0.3,
+      0.78
+     ],
+     "p": [
+      0,
+      0.27,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.75,
+      0.16
+     ],
+     "p": [
+      0,
+      0.79,
+      -0.3
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.14,
+      0.32,
+      0.7
+     ],
+     "p": [
+      -0.32,
+      0.58,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.14,
+      0.32,
+      0.7
+     ],
+     "p": [
+      0.32,
+      0.58,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.12,
+      0.3,
+      0.2
+     ],
+     "p": [
+      -0.3,
+      1.0,
+      -0.22
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.12,
+      0.3,
+      0.2
+     ],
+     "p": [
+      0.3,
+      1.0,
+      -0.22
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    }
+   ],
+   "rol": "sillon",
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.43,
+      0.08
+     ],
+     "h": 0.43,
+     "anim": "sofa"
+    }
+   ],
+   "nota": "el de la abuela, junto a la ventana"
+  },
+  {
+   "id": "sillon_moderno",
+   "nombre": "Sillón tapizado",
+   "categoria": "sillon",
+   "clase": "CARRY",
+   "masa": 16,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.14,
+      0.03
+     ],
+     "p": [
+      -0.32,
+      0.07,
+      -0.32
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.14,
+      0.03
+     ],
+     "p": [
+      -0.32,
+      0.07,
+      0.32
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.14,
+      0.03
+     ],
+     "p": [
+      0.32,
+      0.07,
+      -0.32
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.14,
+      0.03
+     ],
+     "p": [
+      0.32,
+      0.07,
+      0.32
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.74,
+      0.26,
+      0.74
+     ],
+     "p": [
+      0,
+      0.27,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.74,
+      0.42,
+      0.14
+     ],
+     "p": [
+      0,
+      0.61,
+      -0.3
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.1,
+      0.2,
+      0.68
+     ],
+     "p": [
+      -0.32,
+      0.5,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.1,
+      0.2,
+      0.68
+     ],
+     "p": [
+      0.32,
+      0.5,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela"
+    }
+   ],
+   "rol": "sillon",
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.42,
+      0.06
+     ],
+     "h": 0.42,
+     "anim": "sofa"
+    }
+   ]
+  },
+  {
+   "id": "silla_comedor",
+   "nombre": "Silla de comedor",
+   "categoria": "silla",
+   "clase": "CARRY",
+   "masa": 5,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.44,
+      0.035
+     ],
+     "p": [
+      -0.16999999999999998,
+      0.22,
+      -0.16999999999999998
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.44,
+      0.035
+     ],
+     "p": [
+      -0.16999999999999998,
+      0.22,
+      0.16999999999999998
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.44,
+      0.035
+     ],
+     "p": [
+      0.16999999999999998,
+      0.22,
+      -0.16999999999999998
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.44,
+      0.035
+     ],
+     "p": [
+      0.16999999999999998,
+      0.22,
+      0.16999999999999998
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.44,
+      0.04,
+      0.44
+     ],
+     "p": [
+      0,
+      0.46,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.03,
+      0.4
+     ],
+     "p": [
+      0,
+      0.495,
+      0
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "tinte": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.5,
+      0.035
+     ],
+     "p": [
+      -0.2,
+      0.73,
+      -0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.035,
+      0.5,
+      0.035
+     ],
+     "p": [
+      0.2,
+      0.73,
+      -0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.42,
+      0.14,
+      0.025
+     ],
+     "p": [
+      0,
+      0.88,
+      -0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "rol": "silla",
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.5,
+      0.02
+     ],
+     "h": 0.5,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "puff",
+   "nombre": "Puf",
+   "categoria": "sillon",
+   "clase": "CARRY",
+   "masa": 8,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.26,
+      0.26,
+      0.4
+     ],
+     "p": [
+      0,
+      0.2,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela",
+     "seg": 14
+    }
+   ],
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.4,
+      0
+     ],
+     "h": 0.4,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "mesa_centro",
+   "nombre": "Mesa de centro",
+   "categoria": "mesa",
+   "clase": "CARRY",
+   "masa": 14,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.4,
+      0.04
+     ],
+     "p": [
+      -0.45,
+      0.2,
+      -0.22500000000000003
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.4,
+      0.04
+     ],
+     "p": [
+      -0.45,
+      0.2,
+      0.22500000000000003
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.4,
+      0.04
+     ],
+     "p": [
+      0.45,
+      0.2,
+      -0.22500000000000003
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.4,
+      0.04
+     ],
+     "p": [
+      0.45,
+      0.2,
+      0.22500000000000003
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.04,
+      0.55
+     ],
+     "p": [
+      0,
+      0.42,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.9,
+      0.02,
+      0.45
+     ],
+     "p": [
+      0,
+      0.12,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "rol": "mesa",
+   "superficies": [
+    {
+     "y": 0.44,
+     "margen": 0.04
+    }
+   ]
+  },
+  {
+   "id": "mesa_centro_cristal",
+   "nombre": "Mesa de centro de cristal",
+   "categoria": "mesa",
+   "clase": "CARRY",
+   "masa": 18,
+   "material": "cristal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.4,
+      0.03
+     ],
+     "p": [
+      -0.5,
+      0.2,
+      -0.25
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.4,
+      0.03
+     ],
+     "p": [
+      -0.5,
+      0.2,
+      0.25
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.4,
+      0.03
+     ],
+     "p": [
+      0.5,
+      0.2,
+      -0.25
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.4,
+      0.03
+     ],
+     "p": [
+      0.5,
+      0.2,
+      0.25
+     ],
+     "c": "#a8acb0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.1,
+      0.02,
+      0.6
+     ],
+     "p": [
+      0,
+      0.41,
+      0
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    }
+   ],
+   "rol": "mesa",
+   "superficies": [
+    {
+     "y": 0.42,
+     "margen": 0.04
+    }
+   ]
+  },
+  {
+   "id": "mesa_camilla",
+   "nombre": "Mesa camilla con faldas",
+   "categoria": "mesa",
+   "clase": "CARRY",
+   "masa": 16,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.55,
+      0.62,
+      0.72
+     ],
+     "p": [
+      0,
+      0.36,
+      0
+     ],
+     "c": "#7a3a34",
+     "m": "tela",
+     "tinte": "tela",
+     "seg": 20
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.56,
+      0.56,
+      0.03
+     ],
+     "p": [
+      0,
+      0.735,
+      0
+     ],
+     "c": "#efece4",
+     "m": "tela",
+     "seg": 20
+    }
+   ],
+   "rol": "mesa",
+   "superficies": [
+    {
+     "y": 0.75,
+     "margen": 0.06
+    }
+   ],
+   "nota": "con el brasero debajo, como en las casas de antes"
+  },
+  {
+   "id": "mesita_auxiliar",
+   "nombre": "Mesita auxiliar",
+   "categoria": "mesita",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.55,
+      0.03
+     ],
+     "p": [
+      -0.175,
+      0.275,
+      -0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.55,
+      0.03
+     ],
+     "p": [
+      -0.175,
+      0.275,
+      0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.55,
+      0.03
+     ],
+     "p": [
+      0.175,
+      0.275,
+      -0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.55,
+      0.03
+     ],
+     "p": [
+      0.175,
+      0.275,
+      0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.45,
+      0.03,
+      0.45
+     ],
+     "p": [
+      0,
+      0.565,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.58,
+     "margen": 0.03
+    }
+   ]
+  },
+  {
+   "id": "mueble_tv",
+   "nombre": "Mueble de la tele",
+   "categoria": "mueble",
+   "clase": "PUSH",
+   "masa": 35,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.6,
+      0.48,
+      0.45
+     ],
+     "p": [
+      0,
+      0.24,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.6,
+      0.02,
+      0.46
+     ],
+     "p": [
+      0,
+      0.49,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.3,
+      0.01
+     ],
+     "p": [
+      -0.4,
+      0.24,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.3,
+      0.01
+     ],
+     "p": [
+      0.4,
+      0.24,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.5,
+     "margen": 0.03
+    }
+   ]
+  },
+  {
+   "id": "mueble_tv_pequeno",
+   "nombre": "Mesa de la tele",
+   "categoria": "mueble",
+   "clase": "CARRY",
+   "masa": 18,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.55,
+      0.04
+     ],
+     "p": [
+      -0.45,
+      0.275,
+      -0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.55,
+      0.04
+     ],
+     "p": [
+      -0.45,
+      0.275,
+      0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.55,
+      0.04
+     ],
+     "p": [
+      0.45,
+      0.275,
+      -0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.55,
+      0.04
+     ],
+     "p": [
+      0.45,
+      0.275,
+      0.2
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.03,
+      0.5
+     ],
+     "p": [
+      0,
+      0.565,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.92,
+      0.02,
+      0.44
+     ],
+     "p": [
+      0,
+      0.15,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.58,
+     "margen": 0.03
+    }
+   ]
+  },
+  {
+   "id": "televisor_plano",
+   "nombre": "Televisor de pantalla plana",
+   "categoria": "televisor",
+   "clase": "CARRY",
+   "masa": 12,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.32,
+      0.02,
+      0.2
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.08,
+      0.04
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.24,
+      0.72,
+      0.05
+     ],
+     "p": [
+      0,
+      0.46,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.18,
+      0.66,
+      0.006
+     ],
+     "p": [
+      0,
+      0.46,
+      0.028
+     ],
+     "c": "#262a30",
+     "m": "cristal",
+     "aparte": true
+    }
+   ],
+   "rol": "tv",
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "televisor_tubo",
+   "nombre": "Televisor de tubo",
+   "categoria": "televisor",
+   "clase": "PUSH",
+   "masa": 28,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.62,
+      0.5,
+      0.4
+     ],
+     "p": [
+      0,
+      0.25,
+      0
+     ],
+     "c": "#3a3632",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.44,
+      0.34,
+      0.008
+     ],
+     "p": [
+      -0.05,
+      0.27,
+      0.202
+     ],
+     "c": "#262a30",
+     "m": "cristal",
+     "aparte": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.09,
+      0.26,
+      0.01
+     ],
+     "p": [
+      0.23,
+      0.27,
+      0.202
+     ],
+     "c": "#2e2c2a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.35
+     ],
+     "p": [
+      -0.1,
+      0.7,
+      0
+     ],
+     "c": "#a8acb0",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      30
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.35
+     ],
+     "p": [
+      0.1,
+      0.7,
+      0
+     ],
+     "c": "#a8acb0",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      -30
+     ]
+    }
+   ],
+   "rol": "tv",
+   "modificadores": [
+    "USE"
+   ],
+   "nota": "con su antena de cuernos"
+  },
+  {
+   "id": "consola_videojuegos",
+   "nombre": "Videoconsola",
+   "categoria": "informatica",
+   "clase": "PICKUP",
+   "masa": 3,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.07,
+      0.24
+     ],
+     "p": [
+      0,
+      0.035,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.14,
+      0.04,
+      0.09
+     ],
+     "p": [
+      0.28,
+      0.02,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "mando_tele",
+   "nombre": "Mando de la tele",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "PICKUP",
+   "masa": 0.6,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.05,
+      0.022,
+      0.17
+     ],
+     "p": [
+      0,
+      0.011,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    }
+   ],
+   "motivo_clase": "un mando: PICKUP aunque su categoría pesa más"
+  },
+  {
+   "id": "radio_antigua",
+   "nombre": "Radio antigua",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "PICKUP",
+   "masa": 3,
+   "material": "madera",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.36,
+      0.22,
+      0.16
+     ],
+     "p": [
+      0,
+      0.11,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.12,
+      0.005
+     ],
+     "p": [
+      -0.06,
+      0.12,
+      0.081
+     ],
+     "c": "#d8c8a0",
+     "m": "tela"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.02,
+      0.02,
+      0.01
+     ],
+     "p": [
+      0.12,
+      0.1,
+      0.085
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aparador",
+   "nombre": "Aparador",
+   "categoria": "mueble",
+   "clase": "PUSH",
+   "masa": 60,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      -0.75,
+      0.06,
+      -0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      -0.75,
+      0.06,
+      0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      0.75,
+      0.06,
+      -0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.12,
+      0.04
+     ],
+     "p": [
+      0.75,
+      0.06,
+      0.175
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.6,
+      0.7,
+      0.45
+     ],
+     "p": [
+      0,
+      0.47,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.62,
+      0.03,
+      0.47
+     ],
+     "p": [
+      0,
+      0.835,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.18,
+      0.01
+     ],
+     "p": [
+      -0.52,
+      0.7,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.18,
+      0.01
+     ],
+     "p": [
+      0,
+      0.7,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.18,
+      0.01
+     ],
+     "p": [
+      0.52,
+      0.7,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.4,
+      0.01
+     ],
+     "p": [
+      -0.52,
+      0.36,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.4,
+      0.01
+     ],
+     "p": [
+      0,
+      0.36,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.48,
+      0.4,
+      0.01
+     ],
+     "p": [
+      0.52,
+      0.36,
+      0.226
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.02
+     ],
+     "p": [
+      -0.52,
+      0.7,
+      0.235
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.02
+     ],
+     "p": [
+      0,
+      0.7,
+      0.235
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.02
+     ],
+     "p": [
+      0.52,
+      0.7,
+      0.235
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    }
+   ],
+   "rol": "comoda",
+   "superficies": [
+    {
+     "y": 0.85,
+     "margen": 0.03
+    }
+   ],
+   "nota": "los cajones con los papeles, la plata y lo que haya"
+  },
+  {
+   "id": "vitrina_salon",
+   "nombre": "Vitrina con la vajilla buena",
+   "categoria": "estanteria",
+   "clase": "PUSH",
+   "masa": 70,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.1,
+      0.8,
+      0.42
+     ],
+     "p": [
+      0,
+      0.4,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.1,
+      1.1,
+      0.04
+     ],
+     "p": [
+      0,
+      1.35,
+      -0.19
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.1,
+      0.42
+     ],
+     "p": [
+      -0.53,
+      1.35,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.1,
+      0.42
+     ],
+     "p": [
+      0.53,
+      1.35,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.1,
+      0.06,
+      0.44
+     ],
+     "p": [
+      0,
+      1.93,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.02,
+      0.02,
+      0.36
+     ],
+     "p": [
+      0,
+      1.32,
+      0
+     ],
+     "c": "#b8916a",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.02,
+      1.04,
+      0.01
+     ],
+     "p": [
+      0,
+      1.35,
+      0.205
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      -0.3,
+      0.95,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      -0.3,
+      1.45,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      0,
+      0.95,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      0,
+      1.45,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      0.3,
+      0.95,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.012
+     ],
+     "p": [
+      0.3,
+      1.45,
+      -0.12
+     ],
+     "c": "#efece4",
+     "m": "ceramica",
+     "r": [
+      80,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.025,
+      0.1
+     ],
+     "p": [
+      -0.36,
+      1.38,
+      0.06
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.025,
+      0.1
+     ],
+     "p": [
+      -0.24,
+      1.38,
+      0.06
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.025,
+      0.1
+     ],
+     "p": [
+      0.24,
+      1.38,
+      0.06
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.025,
+      0.1
+     ],
+     "p": [
+      0.36,
+      1.38,
+      0.06
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    }
+   ],
+   "nota": "los platos de la boda y las copas que no se usan nunca"
+  },
+  {
+   "id": "estanteria_libros",
+   "nombre": "Estantería de libros",
+   "categoria": "estanteria",
+   "clase": "PUSH",
+   "masa": 38,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.9,
+      1.9,
+      0.02
+     ],
+     "p": [
+      0,
+      0.95,
+      -0.15
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      1.9,
+      0.32
+     ],
+     "p": [
+      -0.435,
+      0.95,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      1.9,
+      0.32
+     ],
+     "p": [
+      0.435,
+      0.95,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.9,
+      0.03,
+      0.32
+     ],
+     "p": [
+      0,
+      1.885,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8400000000000001,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.03,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8400000000000001,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.41,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8400000000000001,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.79,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8400000000000001,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.17,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8400000000000001,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.55,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "rol": "libros",
+   "superficies": [
+    {
+     "y": 0.04,
+     "fondo": 0.28
+    },
+    {
+     "y": 0.42,
+     "fondo": 0.28
+    },
+    {
+     "y": 0.8,
+     "fondo": 0.28
+    },
+    {
+     "y": 1.18,
+     "fondo": 0.28
+    },
+    {
+     "y": 1.56,
+     "fondo": 0.28
+    }
+   ]
+  },
+  {
+   "id": "estanteria_libros_ancha",
+   "nombre": "Librería",
+   "categoria": "estanteria",
+   "clase": "PUSH",
+   "masa": 55,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      1.9,
+      0.02
+     ],
+     "p": [
+      0,
+      0.95,
+      -0.15
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      1.9,
+      0.32
+     ],
+     "p": [
+      -0.6849999999999999,
+      0.95,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      1.9,
+      0.32
+     ],
+     "p": [
+      0.6849999999999999,
+      0.95,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      0.03,
+      0.32
+     ],
+     "p": [
+      0,
+      1.885,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3399999999999999,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.03,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3399999999999999,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.41,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3399999999999999,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.79,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3399999999999999,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.17,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3399999999999999,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.55,
+      0.005
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    }
+   ],
+   "rol": "libros",
+   "superficies": [
+    {
+     "y": 0.04,
+     "fondo": 0.28
+    },
+    {
+     "y": 0.42,
+     "fondo": 0.28
+    },
+    {
+     "y": 0.8,
+     "fondo": 0.28
+    },
+    {
+     "y": 1.18,
+     "fondo": 0.28
+    },
+    {
+     "y": 1.56,
+     "fondo": 0.28
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_a",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.2,
+      0.17
+     ],
+     "p": [
+      -0.1075,
+      0.1,
+      0
+     ],
+     "c": "#7a2a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.2,
+      0.2
+     ],
+     "p": [
+      -0.0755,
+      0.1,
+      0
+     ],
+     "c": "#2a3a5a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.2,
+      0.17
+     ],
+     "p": [
+      -0.03549999999999999,
+      0.1,
+      0
+     ],
+     "c": "#3a5a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.2,
+      0.2
+     ],
+     "p": [
+      0.0005000000000000109,
+      0.1,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.2,
+      0.17
+     ],
+     "p": [
+      0.032500000000000015,
+      0.1,
+      0
+     ],
+     "c": "#5a3a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.2,
+      0.2
+     ],
+     "p": [
+      0.07250000000000002,
+      0.1,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.2,
+      0.17
+     ],
+     "p": [
+      0.10850000000000003,
+      0.1,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_b",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.275,
+      0.17
+     ],
+     "p": [
+      -0.1035,
+      0.1375,
+      0
+     ],
+     "c": "#2a3a5a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.275,
+      0.2
+     ],
+     "p": [
+      -0.06349999999999999,
+      0.1375,
+      0
+     ],
+     "c": "#3a5a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.275,
+      0.17
+     ],
+     "p": [
+      -0.027499999999999986,
+      0.1375,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.275,
+      0.2
+     ],
+     "p": [
+      0.004500000000000014,
+      0.1375,
+      0
+     ],
+     "c": "#5a3a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.275,
+      0.17
+     ],
+     "p": [
+      0.04450000000000002,
+      0.1375,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.275,
+      0.2
+     ],
+     "p": [
+      0.08050000000000002,
+      0.1375,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.275,
+      0.17
+     ],
+     "p": [
+      0.11250000000000002,
+      0.1375,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_c",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.225,
+      0.17
+     ],
+     "p": [
+      -0.09949999999999999,
+      0.1125,
+      0
+     ],
+     "c": "#3a5a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.225,
+      0.2
+     ],
+     "p": [
+      -0.06349999999999999,
+      0.1125,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.225,
+      0.17
+     ],
+     "p": [
+      -0.031499999999999986,
+      0.1125,
+      0
+     ],
+     "c": "#5a3a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.225,
+      0.2
+     ],
+     "p": [
+      0.008500000000000018,
+      0.1125,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.225,
+      0.17
+     ],
+     "p": [
+      0.044500000000000026,
+      0.1125,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.225,
+      0.2
+     ],
+     "p": [
+      0.07650000000000003,
+      0.1125,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.225,
+      0.17
+     ],
+     "p": [
+      0.11650000000000003,
+      0.1125,
+      0
+     ],
+     "c": "#8a6a3a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_d",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.30000000000000004,
+      0.17
+     ],
+     "p": [
+      -0.1075,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.30000000000000004,
+      0.2
+     ],
+     "p": [
+      -0.0755,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#5a3a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.30000000000000004,
+      0.17
+     ],
+     "p": [
+      -0.03549999999999999,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.30000000000000004,
+      0.2
+     ],
+     "p": [
+      0.0005000000000000109,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.30000000000000004,
+      0.17
+     ],
+     "p": [
+      0.032500000000000015,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.30000000000000004,
+      0.2
+     ],
+     "p": [
+      0.07250000000000002,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#8a6a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.30000000000000004,
+      0.17
+     ],
+     "p": [
+      0.10850000000000003,
+      0.15000000000000002,
+      0
+     ],
+     "c": "#3a6a7a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_e",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.25,
+      0.17
+     ],
+     "p": [
+      -0.1035,
+      0.125,
+      0
+     ],
+     "c": "#5a3a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.25,
+      0.2
+     ],
+     "p": [
+      -0.06349999999999999,
+      0.125,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.25,
+      0.17
+     ],
+     "p": [
+      -0.027499999999999986,
+      0.125,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.25,
+      0.2
+     ],
+     "p": [
+      0.004500000000000014,
+      0.125,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.25,
+      0.17
+     ],
+     "p": [
+      0.04450000000000002,
+      0.125,
+      0
+     ],
+     "c": "#8a6a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.25,
+      0.2
+     ],
+     "p": [
+      0.08050000000000002,
+      0.125,
+      0
+     ],
+     "c": "#3a6a7a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.25,
+      0.17
+     ],
+     "p": [
+      0.11250000000000002,
+      0.125,
+      0
+     ],
+     "c": "#7a2a2a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "hilera_libros_f",
+   "nombre": "Libros en fila",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.2,
+      0.17
+     ],
+     "p": [
+      -0.09949999999999999,
+      0.1,
+      0
+     ],
+     "c": "#e8e0c8",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.2,
+      0.2
+     ],
+     "p": [
+      -0.06349999999999999,
+      0.1,
+      0
+     ],
+     "c": "#4a2a4a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.2,
+      0.17
+     ],
+     "p": [
+      -0.031499999999999986,
+      0.1,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.2,
+      0.2
+     ],
+     "p": [
+      0.008500000000000018,
+      0.1,
+      0
+     ],
+     "c": "#8a6a3a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.2,
+      0.17
+     ],
+     "p": [
+      0.044500000000000026,
+      0.1,
+      0
+     ],
+     "c": "#3a6a7a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.033,
+      0.2,
+      0.2
+     ],
+     "p": [
+      0.07650000000000003,
+      0.1,
+      0
+     ],
+     "c": "#7a2a2a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.041,
+      0.2,
+      0.17
+     ],
+     "p": [
+      0.11650000000000003,
+      0.1,
+      0
+     ],
+     "c": "#2a3a5a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "libro_tumbado",
+   "nombre": "Libros apilados",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 1.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.24,
+      0.03,
+      0.17
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#2a3a5a",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.22,
+      0.03,
+      0.16
+     ],
+     "p": [
+      0,
+      0.045,
+      0
+     ],
+     "c": "#7a2a2a",
+     "m": "papel",
+     "r": [
+      0,
+      8,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.025,
+      0.15
+     ],
+     "p": [
+      0,
+      0.0725,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "papel",
+     "r": [
+      0,
+      -5,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lampara_pie",
+   "nombre": "Lámpara de pie",
+   "categoria": "lampara",
+   "clase": "PICKUP",
+   "masa": 4,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.16,
+      0.18,
+      0.03
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "seg": 16
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      1.4
+     ],
+     "p": [
+      0,
+      0.72,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.22,
+      0.28
+     ],
+     "p": [
+      0,
+      1.5,
+      0
+     ],
+     "c": "#efe4c8",
+     "m": "tela",
+     "seg": 16
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.05
+     ],
+     "p": [
+      0,
+      1.42,
+      0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    }
+   ]
+  },
+  {
+   "id": "lampara_mesa",
+   "nombre": "Lámpara de mesa",
+   "categoria": "lampara",
+   "clase": "PICKUP",
+   "masa": 1.8,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.09,
+      0.22
+     ],
+     "p": [
+      0,
+      0.11,
+      0
+     ],
+     "c": "#c8b8a0",
+     "m": "ceramica",
+     "seg": 14
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.006,
+      0.006,
+      0.1
+     ],
+     "p": [
+      0,
+      0.27,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.15,
+      0.18
+     ],
+     "p": [
+      0,
+      0.39,
+      0
+     ],
+     "c": "#efe4c8",
+     "m": "tela",
+     "seg": 16
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0,
+      0.33,
+      0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    }
+   ]
+  },
+  {
+   "id": "lampara_techo_salon",
+   "nombre": "Lámpara de techo",
+   "categoria": "lampara",
+   "clase": "FIXED",
+   "masa": 2.5,
+   "material": "cristal",
+   "soporte": "techo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.45
+     ],
+     "p": [
+      0,
+      -0.225,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.06,
+      0.06,
+      0.04
+     ],
+     "p": [
+      0,
+      -0.02,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.2
+     ],
+     "p": [
+      0,
+      -0.62,
+      0
+     ],
+     "c": "#f2ead8",
+     "m": "cristal",
+     "s": [
+      1,
+      0.6,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.05
+     ],
+     "p": [
+      0,
+      -0.58,
+      0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "lampara_arana",
+   "nombre": "Lámpara de araña",
+   "categoria": "lampara",
+   "clase": "FIXED",
+   "masa": 6,
+   "material": "cristal",
+   "soporte": "techo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.4
+     ],
+     "p": [
+      0,
+      -0.2,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.05,
+      0.08,
+      0.14
+     ],
+     "p": [
+      0,
+      -0.47,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      0.3
+     ],
+     "p": [
+      0.14,
+      -0.55,
+      0.0
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      0.3
+     ],
+     "p": [
+      -0.14,
+      -0.55,
+      0.0
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.28,
+      -0.5,
+      0.0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      -0.28,
+      -0.5,
+      0.0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.0,
+      -0.5,
+      0.28
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.0,
+      -0.5,
+      -0.28
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.015,
+      0.08
+     ],
+     "p": [
+      0.22,
+      -0.68,
+      0.0
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.015,
+      0.08
+     ],
+     "p": [
+      -0.22,
+      -0.68,
+      0.0
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.015,
+      0.08
+     ],
+     "p": [
+      0.0,
+      -0.68,
+      0.22
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.015,
+      0.08
+     ],
+     "p": [
+      0.0,
+      -0.68,
+      -0.22
+     ],
+     "c": "#c8dce2",
+     "m": "cristal"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "espejo_salon",
+   "nombre": "Espejo con marco",
+   "categoria": "espejo",
+   "clase": "CARRY",
+   "masa": 7,
+   "material": "cristal",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.95,
+      0.03
+     ],
+     "p": [
+      0,
+      1.6,
+      0.015
+     ],
+     "c": "#c8a860",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.85,
+      0.006
+     ],
+     "p": [
+      0,
+      1.6,
+      0.033
+     ],
+     "c": "#c8d2d6",
+     "m": "metal"
+    }
+   ],
+   "rol": "espejo"
+  },
+  {
+   "id": "cuadro_virgen",
+   "nombre": "Estampa de la Virgen",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 1.2,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.46,
+      0.56,
+      0.02
+     ],
+     "p": [
+      0,
+      1.65,
+      0.01
+     ],
+     "c": "#c8a860",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.42,
+      0.52
+     ],
+     "p": [
+      0,
+      1.65,
+      0.021
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "virgen"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cuadro_oleo",
+   "nombre": "Cuadro al óleo",
+   "categoria": "cuadro",
+   "clase": "CARRY",
+   "masa": 5,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.82,
+      0.62,
+      0.035
+     ],
+     "p": [
+      0,
+      1.65,
+      0.0175
+     ],
+     "c": "#8a6a30",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.74,
+      0.54
+     ],
+     "p": [
+      0,
+      1.65,
+      0.036
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "paisaje"
+     }
+    }
+   ],
+   "nota": "el bueno: puede valer un dinero"
+  },
+  {
+   "id": "poster_enmarcado",
+   "nombre": "Póster enmarcado",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 1,
+   "material": "papel",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.52,
+      0.72,
+      0.015
+     ],
+     "p": [
+      0,
+      1.6,
+      0.0075
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.48,
+      0.68
+     ],
+     "p": [
+      0,
+      1.6,
+      0.016
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "cartel_fiesta"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fotos_familia",
+   "nombre": "Fotos de la familia",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 1,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.26,
+      0.015
+     ],
+     "p": [
+      -0.24,
+      1.56,
+      0.0075
+     ],
+     "c": "#c8a860",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.26,
+      0.015
+     ],
+     "p": [
+      0,
+      1.46,
+      0.0075
+     ],
+     "c": "#c8a860",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.26,
+      0.015
+     ],
+     "p": [
+      0.24,
+      1.58,
+      0.0075
+     ],
+     "c": "#c8a860",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.17,
+      0.22
+     ],
+     "p": [
+      -0.24,
+      1.56,
+      0.016
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "foto"
+     }
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.17,
+      0.22
+     ],
+     "p": [
+      0,
+      1.46,
+      0.016
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "foto"
+     }
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.17,
+      0.22
+     ],
+     "p": [
+      0.24,
+      1.58,
+      0.016
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "foto"
+     }
+    }
+   ],
+   "nota": "la boda, la comunión y el nieto en la mili"
+  },
+  {
+   "id": "plato_pared",
+   "nombre": "Platos de cerámica colgados",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2,
+   "material": "ceramica",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.13,
+      0.015
+     ],
+     "p": [
+      -0.3,
+      1.85,
+      0.008
+     ],
+     "c": "#2a5a8a",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ],
+     "seg": 20
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.13,
+      0.015
+     ],
+     "p": [
+      0,
+      1.85,
+      0.008
+     ],
+     "c": "#c8a040",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ],
+     "seg": 20
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.13,
+      0.015
+     ],
+     "p": [
+      0.3,
+      1.85,
+      0.008
+     ],
+     "c": "#3a7a5a",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ],
+     "seg": 20
+    }
+   ],
+   "nota": "de Talavera, recuerdo de un viaje"
+  },
+  {
+   "id": "chimenea",
+   "nombre": "Chimenea de leña",
+   "categoria": "obra",
+   "clase": "FIXED",
+   "masa": 600,
+   "material": "piedra",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.3,
+      0.12,
+      0.5
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#9a9088",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      1.0,
+      0.5
+     ],
+     "p": [
+      -0.55,
+      0.5,
+      0
+     ],
+     "c": "#c8beb2",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      1.0,
+      0.5
+     ],
+     "p": [
+      0.55,
+      0.5,
+      0
+     ],
+     "c": "#c8beb2",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      0.14,
+      0.56
+     ],
+     "p": [
+      0,
+      1.07,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera",
+     "tinte": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.9,
+      0.8,
+      0.06
+     ],
+     "p": [
+      0,
+      0.52,
+      -0.22
+     ],
+     "c": "#3a3634",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.06,
+      0.08
+     ],
+     "p": [
+      0,
+      0.16,
+      0.0
+     ],
+     "c": "#5a3a20",
+     "m": "madera",
+     "r": [
+      0,
+      20,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.06,
+      0.08
+     ],
+     "p": [
+      0,
+      0.2,
+      0.02
+     ],
+     "c": "#4a3018",
+     "m": "madera",
+     "r": [
+      0,
+      -15,
+      0
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.12
+     ],
+     "p": [
+      0,
+      0.2,
+      0
+     ],
+     "c": "#e87a2a",
+     "m": "comida",
+     "luz": true,
+     "s": [
+      1.6,
+      0.5,
+      0.8
+     ]
+    }
+   ],
+   "rol": "chimenea",
+   "motivo_fijo": "estructural",
+   "superficies": [
+    {
+     "y": 1.14,
+     "margen": 0.04
+    }
+   ],
+   "nota": "la lumbre de las noches de invierno"
+  },
+  {
+   "id": "piano_pared",
+   "nombre": "Piano de pared",
+   "categoria": "instrumento",
+   "clase": "PUSH_HEAVY",
+   "masa": 210,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.45,
+      1.2,
+      0.55
+     ],
+     "p": [
+      0,
+      0.6,
+      -0.05
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.45,
+      0.06,
+      0.62
+     ],
+     "p": [
+      0,
+      0.72,
+      0.01
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.3,
+      0.03,
+      0.15
+     ],
+     "p": [
+      0,
+      0.735,
+      0.2
+     ],
+     "c": "#efece4",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.6,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.5499999999999999,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.44999999999999996,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.39999999999999997,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.35,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.24999999999999994,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.19999999999999996,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.09999999999999998,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      -0.04999999999999993,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      1.1102230246251565e-16,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.10000000000000009,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.15000000000000002,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.2500000000000001,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.30000000000000004,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.3500000000000001,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.45000000000000007,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.5000000000000001,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.018,
+      0.09
+     ],
+     "p": [
+      0.6000000000000002,
+      0.755,
+      0.18
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.66,
+      0.06
+     ],
+     "p": [
+      -0.65,
+      0.33,
+      0.22
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.66,
+      0.06
+     ],
+     "p": [
+      0.65,
+      0.33,
+      0.22
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    }
+   ],
+   "rol": "piano",
+   "modificadores": [
+    "USE"
+   ],
+   "superficies": [
+    {
+     "y": 1.2,
+     "margen": 0.05
+    }
+   ]
+  },
+  {
+   "id": "banqueta_piano",
+   "nombre": "Banqueta del piano",
+   "categoria": "sillon",
+   "clase": "CARRY",
+   "masa": 9,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.46,
+      0.04
+     ],
+     "p": [
+      -0.25,
+      0.23,
+      -0.12000000000000001
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.46,
+      0.04
+     ],
+     "p": [
+      -0.25,
+      0.23,
+      0.12000000000000001
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.46,
+      0.04
+     ],
+     "p": [
+      0.25,
+      0.23,
+      -0.12000000000000001
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.46,
+      0.04
+     ],
+     "p": [
+      0.25,
+      0.23,
+      0.12000000000000001
+     ],
+     "c": "#2c2622",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.06,
+      0.34
+     ],
+     "p": [
+      0,
+      0.49,
+      0
+     ],
+     "c": "#2a2a2e",
+     "m": "tela"
+    }
+   ],
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.52,
+      0
+     ],
+     "h": 0.52,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "guitarra_soporte",
+   "nombre": "Guitarra en su soporte",
+   "categoria": "instrumento",
+   "clase": "PICKUP",
+   "masa": 3.5,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      0.5
+     ],
+     "p": [
+      0,
+      0.25,
+      -0.08
+     ],
+     "c": "#2c2c2e",
+     "m": "metal",
+     "r": [
+      -15,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.19
+     ],
+     "p": [
+      0,
+      0.32,
+      0
+     ],
+     "c": "#b8783a",
+     "m": "madera",
+     "s": [
+      1,
+      1.15,
+      0.28
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.15
+     ],
+     "p": [
+      0,
+      0.6,
+      0
+     ],
+     "c": "#b8783a",
+     "m": "madera",
+     "s": [
+      1,
+      1.05,
+      0.28
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.05,
+      0.52,
+      0.03
+     ],
+     "p": [
+      0,
+      0.95,
+      0.01
+     ],
+     "c": "#3a2418",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.14,
+      0.04
+     ],
+     "p": [
+      0,
+      1.27,
+      0.01
+     ],
+     "c": "#3a2418",
+     "m": "madera"
+    }
+   ],
+   "rol": "guitarra",
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "frutero",
+   "nombre": "Frutero con fruta",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 1.5,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.15,
+      0.08,
+      0.07
+     ],
+     "p": [
+      0,
+      0.035,
+      0
+     ],
+     "c": "#e8dcc4",
+     "m": "ceramica",
+     "seg": 16
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.04
+     ],
+     "p": [
+      -0.05,
+      0.08,
+      0.02
+     ],
+     "c": "#d8302a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.04
+     ],
+     "p": [
+      0.05,
+      0.08,
+      -0.02
+     ],
+     "c": "#e8a020",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.038
+     ],
+     "p": [
+      0,
+      0.09,
+      0.05
+     ],
+     "c": "#9ab83a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.02,
+      0.12,
+      -0.04
+     ],
+     "c": "#d8302a",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "jarron_flores",
+   "nombre": "Jarrón con flores",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 1.6,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.06,
+      0.08,
+      0.24
+     ],
+     "p": [
+      0,
+      0.12,
+      0
+     ],
+     "c": "#3a5a8a",
+     "m": "ceramica",
+     "seg": 14
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      -0.04,
+      0.34,
+      0
+     ],
+     "c": "#d8263a",
+     "m": "tela"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.04,
+      0.36,
+      0.02
+     ],
+     "c": "#f2d230",
+     "m": "tela"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0,
+      0.32,
+      -0.04
+     ],
+     "c": "#e87aa4",
+     "m": "tela"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.035
+     ],
+     "p": [
+      0.02,
+      0.39,
+      0.04
+     ],
+     "c": "#f4f2ec",
+     "m": "tela"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.12
+     ],
+     "p": [
+      0,
+      0.28,
+      0
+     ],
+     "c": "#3a7a35",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "figura_porcelana",
+   "nombre": "Figura de porcelana",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 0.6,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.05,
+      0.02
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#efece4",
+     "m": "ceramica"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.05,
+      0.16
+     ],
+     "p": [
+      0,
+      0.1,
+      0
+     ],
+     "c": "#d8e0ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.025
+     ],
+     "p": [
+      0,
+      0.2,
+      0
+     ],
+     "c": "#efece4",
+     "m": "ceramica"
+    }
+   ],
+   "nota": "la bailarina de la abuela"
+  },
+  {
+   "id": "figura_toro",
+   "nombre": "Figura de un toro",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 0.9,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.16,
+      0.06,
+      0.06
+     ],
+     "p": [
+      0,
+      0.07,
+      0
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.05,
+      0.05,
+      0.05
+     ],
+     "p": [
+      0.09,
+      0.09,
+      0
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.05,
+      0.012
+     ],
+     "p": [
+      -0.06,
+      0.025,
+      -0.02
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.05,
+      0.012
+     ],
+     "p": [
+      -0.06,
+      0.025,
+      0.02
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.05,
+      0.012
+     ],
+     "p": [
+      0.06,
+      0.025,
+      -0.02
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.05,
+      0.012
+     ],
+     "p": [
+      0.06,
+      0.025,
+      0.02
+     ],
+     "c": "#3a3230",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "portarretratos",
+   "nombre": "Portarretratos",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 0.4,
+   "material": "madera",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.15,
+      0.2,
+      0.015
+     ],
+     "p": [
+      0,
+      0.1,
+      0.0
+     ],
+     "c": "#c8a860",
+     "m": "madera",
+     "r": [
+      -12,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.12,
+      0.16
+     ],
+     "p": [
+      0,
+      0.1,
+      0.012
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "foto"
+     },
+     "r": [
+      -12,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cenicero",
+   "nombre": "Cenicero de cristal",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 0.5,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.06,
+      0.03
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#c8dce2",
+     "m": "cristal",
+     "seg": 14
+    }
+   ]
+  },
+  {
+   "id": "tapete_ganchillo",
+   "nombre": "Tapete de ganchillo",
+   "categoria": "textil",
+   "clase": "PICKUP",
+   "masa": 0.1,
+   "material": "tela",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.2,
+      0.2,
+      0.003
+     ],
+     "p": [
+      0,
+      0.0015,
+      0
+     ],
+     "c": "#f4f0e4",
+     "m": "tela",
+     "seg": 20
+    }
+   ],
+   "nota": "hecho a mano, sobre la mesa y bajo el jarrón"
+  },
+  {
+   "id": "reloj_sobremesa",
+   "nombre": "Reloj de sobremesa",
+   "categoria": "reloj",
+   "clase": "PICKUP",
+   "masa": 1.2,
+   "material": "madera",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.26,
+      0.09
+     ],
+     "p": [
+      0,
+      0.13,
+      0
+     ],
+     "c": "#6a4630",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.07,
+      0.006
+     ],
+     "p": [
+      0,
+      0.16,
+      0.046
+     ],
+     "c": "#f4efe0",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "manta_doblada",
+   "nombre": "Manta doblada",
+   "categoria": "textil",
+   "clase": "PICKUP",
+   "masa": 1.2,
+   "material": "tela",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.42,
+      0.08,
+      0.32
+     ],
+     "p": [
+      0,
+      0.04,
+      0
+     ],
+     "c": "#a8603a",
+     "m": "tela",
+     "tinte": "tela"
+    }
+   ]
+  },
+  {
+   "id": "cojin_suelto",
+   "nombre": "Cojín",
+   "categoria": "textil",
+   "clase": "PICKUP",
+   "masa": 0.5,
+   "material": "tela",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.14,
+      0.38
+     ],
+     "p": [
+      0,
+      0.07,
+      0
+     ],
+     "c": "#8a6a4a",
+     "m": "tela",
+     "tinte": "tela",
+     "r": [
+      0,
+      12,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "telefono_casa",
+   "nombre": "Teléfono de casa",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "PICKUP",
+   "masa": 0.8,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.07,
+      0.22
+     ],
+     "p": [
+      0,
+      0.035,
+      0
+     ],
+     "c": "#e8e2d4",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.05,
+      0.06
+     ],
+     "p": [
+      0,
+      0.095,
+      -0.04
+     ],
+     "c": "#e8e2d4",
+     "m": "plastico"
+    }
+   ],
+   "rol": "telefono"
+  },
+  {
+   "id": "velas",
+   "nombre": "Velas",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 0.5,
+   "material": "comida",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.025,
+      0.2
+     ],
+     "p": [
+      -0.04,
+      0.1,
+      0
+     ],
+     "c": "#f4ecd8",
+     "m": "comida"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.025,
+      0.14
+     ],
+     "p": [
+      0.04,
+      0.07,
+      0
+     ],
+     "c": "#f4ecd8",
+     "m": "comida"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.07,
+      0.015
+     ],
+     "p": [
+      0,
+      0.0075,
+      0
+     ],
+     "c": "#c8a860",
+     "m": "metal",
+     "seg": 14
+    }
+   ]
+  },
+  {
+   "id": "alfombra_salon",
+   "nombre": "Alfombra",
+   "categoria": "textil",
+   "clase": "PICKUP",
+   "masa": 4,
+   "material": "tela",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      2.0,
+      0.003,
+      1.4
+     ],
+     "p": [
+      0,
+      0.0015,
+      0
+     ],
+     "c": "#7a2a2a",
+     "m": "tela"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.8,
+      0.004,
+      1.2
+     ],
+     "p": [
+      0,
+      0.002,
+      0
+     ],
+     "c": "#b8784a",
+     "m": "tela",
+     "tinte": "tela"
+    }
+   ],
+   "motivo_clase": "enrollada se lleva en brazos, pero pesa poco"
+  },
+  {
+   "id": "planta_maceta_salon",
+   "nombre": "Costilla de Adán en maceta",
+   "categoria": "planta",
+   "clase": "CARRY",
+   "masa": 9,
+   "material": "ceramica",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.2,
+      0.15,
+      0.34
+     ],
+     "p": [
+      0,
+      0.17,
+      0
+     ],
+     "c": "#b5552e",
+     "m": "ceramica",
+     "seg": 14
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.18
+     ],
+     "p": [
+      -0.1,
+      0.72,
+      0
+     ],
+     "c": "#3f7a35",
+     "m": "comida",
+     "s": [
+      1.2,
+      0.6,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.18
+     ],
+     "p": [
+      0.12,
+      0.62,
+      0.06
+     ],
+     "c": "#3f7a35",
+     "m": "comida",
+     "s": [
+      1.2,
+      0.6,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.18
+     ],
+     "p": [
+      0,
+      0.87,
+      -0.1
+     ],
+     "c": "#3f7a35",
+     "m": "comida",
+     "s": [
+      1.2,
+      0.6,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.18
+     ],
+     "p": [
+      0.05,
+      0.97,
+      0.1
+     ],
+     "c": "#3f7a35",
+     "m": "comida",
+     "s": [
+      1.2,
+      0.6,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cartera",
+   "nombre": "Cartera",
+   "categoria": "textil",
+   "clase": "PICKUP",
+   "masa": 0.2,
+   "material": "tela",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.11,
+      0.025,
+      0.09
+     ],
+     "p": [
+      0,
+      0.0125,
+      0
+     ],
+     "c": "#4a3020",
+     "m": "tela"
+    }
+   ]
+  },
+  {
+   "id": "movil",
+   "nombre": "Teléfono móvil",
+   "categoria": "informatica",
+   "clase": "PICKUP",
+   "masa": 0.3,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.08,
+      0.012,
+      0.15
+     ],
+     "p": [
+      0,
+      0.006,
+      0
+     ],
+     "c": "#2c2c2e",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.001,
+      0.13
+     ],
+     "p": [
+      0,
+      0.0125,
+      0
+     ],
+     "c": "#2a3a4a",
+     "m": "cristal"
+    }
+   ]
+  }
+ ]
+}

@@ -7,6 +7,10 @@ import * as THREE from 'three';
 import { StaticCollider } from './collision.js';
 import { mulberry32, hash1 } from './util.js';
 import { INTERIOR_ORIGIN, WALL_H, boxGeo, planeGeo, cylGeo, pictureTexture, rugTexture, HouseBuilder, std, texMat, ringSegs } from './housekit.js';
+import { amueblar, encaja } from './locales.js';
+import { KITS, OBJETOS } from './interiores_datos.js';
+import { caja, construir } from './objetos.js';
+import { rot } from './interiores_geo.js';
 
 // ---------------------------------------------------------------- who lives here
 export const PROFILES = {
@@ -1013,6 +1017,91 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     },
   };
 
+  // ---- a room furnished from the kit of its kind (technical backlog, epic I: data/kits/vivienda_*.json, src/locales.js),
+  // for this household: the room's size, from its door, round its doors and windows; what the household has to take
+  // goes where the kit says (or back to the pool); the pieces with a part in the life of the house (rol) become its
+  // seats, beds, tables, telly, kitchen, wardrobe, drawers… A kind with no kit yet keeps the hand-made furniture.
+  const KIT_ESTANCIA = { salon: 'salon', comedor: 'comedor', cocina: 'cocina', bano: 'bano', dorm: 'dormitorio', dorm2: 'dormitorio', ninos: 'ninos', dormJoven: 'joven', estudio: 'estudio', despacho: 'despacho', musica: 'musica', trofeos: 'trofeos', taller: prof.id === 'artista' ? 'pintura' : 'taller', costura: 'costura', despensa: 'despensa', trastero: 'trastero' };
+  const MADERAS = { dark: '#5e3b22', pale: '#c8a37a', white: '#e8e4dc', walnut: '#6a4630' };
+  const paleta = { tela: S.fabric.map((c) => '#' + c.toString(16).padStart(6, '0')), madera: MADERAS[S.wood] || '#6a4630' };
+  const enCasa = [], pendientes = [], estancias = []; // (the pieces laid out, built together at the end; what needs their meshes; each room's layout, for the validator)
+  const amueblarEstancia = (rm) => {
+    const kid = KIT_ESTANCIA[rm.type] && 'vivienda_' + KIT_ESTANCIA[rm.type];
+    if (!kid || !KITS[kid]) return false;
+    const yl = rm.lv ? F2 : 0, f = WALLF, W = rm.w - 2 * f, Dd = rm.d - 2 * f, ox = rm.cx, oz = rm.z0 + f; // (kit frame → house: x + ox, z + oz)
+    // clear: in front of every door (its swing and a step), the windows (nothing tall or hung there), what the house keeps
+    const libres = [];
+    for (const o of rm.open) {
+      const fondo = o.door ? 1.0 : 0.38, ancho = (o.b - o.a) / 2 + (o.door ? 0.15 : 0.05), y0 = o.door ? 0 : 0.92;
+      if (o.side === 's' || o.side === 'n') libres.push({ cx: (o.a + o.b) / 2 - ox, cz: o.side === 's' ? fondo / 2 : Dd - fondo / 2, hw: ancho, hd: fondo / 2, a: 0, y0, y1: 2.4 });
+      else libres.push({ cx: o.side === 'w' ? -W / 2 + fondo / 2 : W / 2 - fondo / 2, cz: (o.a + o.b) / 2 - oz, hw: fondo / 2, hd: ancho, a: 0, y0, y1: 2.4 });
+    }
+    for (const bx of rm.boxes) libres.push({ cx: (bx[0] + bx[2]) / 2 - ox, cz: (bx[1] + bx[3]) / 2 - oz, hw: (bx[2] - bx[0]) / 2, hd: (bx[3] - bx[1]) / 2, a: 0, y0: 0, y1: 3 });
+    // where one comes in: a step inside its first door
+    const d0 = rm.open.find((o) => o.door), m = d0 ? (d0.a + d0.b) / 2 : 0;
+    const inicio = !d0 ? { x: 0, z: Dd / 2 } : d0.side === 's' ? { x: m - ox, z: 0.5 } : d0.side === 'n' ? { x: m - ox, z: Dd - 0.5 } : d0.side === 'w' ? { x: -W / 2 + 0.5, z: m - oz } : { x: W / 2 - 0.5, z: m - oz };
+    const tomados = [];
+    const filtro = (e) => {
+      if (!encaja(e.perfil, prof.id) || !encaja(e.estilo, prof.style)) return false;
+      if (e.botin) { if (!takeLoot(e.botin)) return false; tomados.push(e); }
+      return true;
+    };
+    let A;
+    try { A = amueblar(kid, (prof.seed * 131 + rooms.indexOf(rm) * 17 + 5) >>> 0, { W, D: Dd, H: rm.lv ? H2 : WALL_H, inicio, libres, filtro }); } catch (err) { for (const e of tomados) lootPool.push(e.botin); return false; }
+    const P = A.P, K = A.K;
+    estancias.push({ kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
+      colocados: P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: p.x, y: p.y || 0, z: p.z, ry: p.ry, sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v })) });
+    // the loot: the first piece of each such entry; one the room had no room for goes back to the pool
+    const deBotin = new Map();
+    for (const e of tomados) { const ei = K.objetos.indexOf(e), i = P.findIndex((p) => p.e === ei); if (i < 0) lootPool.push(e.botin); else deBotin.set(i, e.botin); }
+    P.forEach((p, i) => {
+      const o = OBJETOS[p.obj], b = caja(p.obj), hx = ox + p.x, hz = oz + p.z, y = yl + (p.y || 0);
+      const L = (lx, lz) => { const [a, c] = rot(lx, lz, p.ry); return [hx + a, hz + c]; }; // (a point of the piece, in the house)
+      const cxz = L((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2), frente = L((b.x0 + b.x1) / 2, b.z1 + 0.5);
+      const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
+      if (deBotin.has(i)) {
+        const g = construir([it]); B.extra.push(g);
+        const li = lootItem(deBotin.get(i), null, cxz[0], y, cxz[1], 0, { mesh: g, r: 0.95 });
+        if (li && li.def.crack) li.label = 'Forzar la caja fuerte';
+        return;
+      }
+      enCasa.push(it);
+      // what you walk into, and the floor the people of the house keep off
+      if (p.sop == null && p.regla !== 'pared' && p.regla !== 'techo' && o.clase !== 'PICKUP' && b.h >= 0.3) {
+        foot(rm, b.w, b.d, cxz[0], cxz[1], p.ry, Math.min(b.h, 2.2));
+        const ex = Math.abs(b.w / 2 * Math.cos(p.ry)) + Math.abs(b.d / 2 * Math.sin(p.ry)), ez = Math.abs(b.w / 2 * Math.sin(p.ry)) + Math.abs(b.d / 2 * Math.cos(p.ry));
+        rm.boxes.push([cxz[0] - ex, cxz[1] - ez, cxz[0] + ex, cxz[1] + ez]);
+      }
+      // its part in the life of the house
+      const asientos = (o.asientos || []).map((a) => { const q = L(a.p[0], a.p[2]); return { x: cx0 + q[0], z: cz0 + q[1], y: yl, h: p.ry, rm }; });
+      const top = o.superficies ? Math.max(...o.superficies.map((q) => q.y)) : 0;
+      switch (o.rol) {
+        case 'sofa': for (const st of asientos) pieces.seat.push(st); pieces.sofa.push({ x: cxz[0], z: cxz[1], ry: p.ry, y: yl, seat: asientos[Math.floor(asientos.length / 2)], rm }); break;
+        case 'sillon': for (const st of asientos) pieces.seat.push(st); break;
+        case 'silla': for (const st of asientos) pieces.seat.push({ ...st, chair: true }); break;
+        case 'mesa': pieces.table.push({ x: cxz[0], z: cxz[1], y: y + top, rm }); break;
+        case 'cama': case 'cama_doble': {
+          const head = L((b.x0 + b.x1) / 2, b.z0 + 0.55), side = L(b.x1 + 0.45, (b.z0 + b.z1) / 2), dbl = o.rol === 'cama_doble';
+          pieces.bed.push({ x: cx0 + head[0], z: cz0 + head[1], hx: cx0 + cxz[0], hz: cz0 + cxz[1], y: yl, ry: p.ry, rm, double: dbl, side: { x: cx0 + side[0], z: cz0 + side[1] } });
+          if (dbl && takeLoot('colchon')) lootItem('colchon', null, side[0], yl, side[1], 0, { r: 1.0 });
+          break;
+        }
+        case 'tv': pendientes.push({ i: enCasa.length - 1, fn: (mesh) => { pieces.tv.push({ x: cxz[0], z: cxz[1], ry: p.ry, y: yl, mesh, rm }); B.interact({ type: 'tv', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Encender la tele', mesh }); } }); break;
+        case 'cocina': pieces.kitchen.push({ x: cx0 + frente[0], z: cz0 + frente[1], y: yl, ry: p.ry, rm }); B.interact({ type: 'eat', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Picar algo de la cocina' }); break;
+        case 'nevera': B.interact({ type: 'fridge', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Abrir la nevera' }); break;
+        case 'armario': B.interact({ type: 'hide', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Esconderse en el armario', hx: cxz[0], hz: cxz[1], ry: p.ry }); break;
+        case 'comoda': B.interact({ type: 'drawer', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Registrar los cajones' }); break;
+        case 'espejo': B.interact({ type: 'mirror', x: frente[0], z: frente[1], y: yl, r: 0.6, label: 'Mirarse al espejo' }); break;
+        case 'piano': B.interact({ type: 'piano', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Tocar el piano' }); break;
+        case 'guitarra': B.interact({ type: 'guitar', x: cxz[0], z: cxz[1], y: yl, r: 0.9, label: 'Tocar la guitarra' }); break;
+        case 'libros': B.interact({ type: 'read', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Hojear un libro' }); break;
+        case 'telefono': B.interact({ type: 'phone', x: frente[0], z: frente[1], y: yl, r: 0.7, label: 'Coger el teléfono' }); break;
+        case 'chimenea': if (prof.id === 'cazador' || prof.style === 'rustico') { const q = L(0, 0.15); const l = B.light(q[0], yl + 0.4, q[1], 0xff9a50, 3, 5); l.userData.fire = true; B.extra[B.extra.length - 1].visible = false; } break;
+      }
+    });
+    return true;
+  };
+
   // ---- each room, by what it is and who lives here
   const old = prof.id === 'abuela' || prof.id === 'matrimonio';
   for (const rm of rooms) {
@@ -1028,7 +1117,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
-    switch (rm.type) {
+    if (!amueblarEstancia(rm)) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }
         else { F.tv(rm); F.sofa(rm, ['s', 'n', 'w', 'e'].sort(() => r() - 0.5), Math.floor(r() * 3)); F.coffeeTable(rm); if (prof.id === 'cazador' || S.beams) F.chimney(rm); F.armchair(rm); F.shelf(rm); if (prof.id === 'musico') F.piano(rm); }
@@ -1055,6 +1144,12 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const area = rm.w * rm.d;
     lampAt(rm.cx, rm.cz, y + (rm.lv ? H2 : WALL_H), area);
     if (S.beams && !rm.lv) for (let k = 0.6; k < rm.d; k += 1.1) B.add(M.wood, boxGeo(rm.w, 0.14, 0.12, 1), rm.cx, WALL_H - 0.07, rm.z0 + k);
+  }
+  // the rooms furnished from their kits: built together (a mesh per material); the tellies get their screens
+  if (enCasa.length) {
+    const g = construir(enCasa);
+    B.extra.push(g);
+    for (const q of pendientes) { const a = g.userData.aparte.find((x) => x.i === q.i); if (a) q.fn(a.mesh); }
   }
   // a wallet or a phone left on a table, whatever is still in the pool
   for (const id of lootPool.splice(0)) {
@@ -1153,6 +1248,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   out.pieces = pieces;
   out.loot = loot;
   out.profile = prof;
+  out.estancias = estancias;
   out.winMat = winMat;
   out.spots.entrada = { x: ox + doorX, z: oz + 1.2 };
   out.spots.floor = Object.fromEntries(rooms.map((q) => [q.id, { x: nodes[roomNode.get(q)].x, z: nodes[roomNode.get(q)].z }]));

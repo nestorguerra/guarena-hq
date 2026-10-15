@@ -86,7 +86,8 @@ function pase(g, n, d, v, zz) {
   for (let q = 0; q < n; q++) { while (zz[k + 1] < q) k++; d[q] = (q - v[k]) * (q - v[k]) + g[v[k]]; }
 }
 
-// where a body `ancho` m wide can stand and walk to from the street door (puertaX, z = 0): a grid of `S` m over the room
+// where a body `ancho` m wide can stand and walk to from the street door (puertaX, z = 0; or a point { x, z }, a room's
+// own door): a grid of `S` m over the room
 // { W, D, zonas, tabiques } (its walls' faces at its edges), with the parts laid out [{ cx, cz, hw, hd, a, y0, y1 }];
 // → { nx, nz, S, free, reach, zonas: { id: { alcanzable, libre, … } } }. A body stands where nothing is nearer than half
 // its width (the exact distance, by a distance transform: cheap enough to ask after every piece the layout puts down).
@@ -120,8 +121,15 @@ export function mapaPaso(room, piezas, S = 0.05, ancho = 0.9, puertaX = 0) {
   const R = Math.round(ancho / 2 / S), R2 = R * R, free = new Uint8Array(N);
   for (let k = R; k < nz - R; k++) for (let i = R; i < nx - R; i++) if (f[k * nx + i] >= R2) free[k * nx + i] = 1;
   const reach = new Uint8Array(N), q = [];
-  const di0 = Math.floor((puertaX + W / 2) / S);
-  for (let k = R; k < nz && !q.length; k++) for (let dd = 0; dd < 30 && !q.length; dd++) for (const i of [di0 + dd, di0 - dd]) if (i >= 0 && i < nx && free[k * nx + i]) { q.push(k * nx + i); reach[k * nx + i] = 1; break; }
+  if (typeof puertaX === 'object') { // (a room of a house: from the free cell nearest the point one comes in by)
+    const { x, z } = puertaX;
+    let best = -1, bd = Infinity;
+    for (let c = 0; c < N; c++) { if (!free[c]) continue; const d = Math.hypot(-W / 2 + ((c % nx) + 0.5) * S - x, (((c / nx) | 0) + 0.5) * S - z); if (d < bd) { bd = d; best = c; } }
+    if (best >= 0 && bd < 1.6) { q.push(best); reach[best] = 1; }
+  } else {
+    const di0 = Math.floor((puertaX + W / 2) / S);
+    for (let k = R; k < nz && !q.length; k++) for (let dd = 0; dd < 30 && !q.length; dd++) for (const i of [di0 + dd, di0 - dd]) if (i >= 0 && i < nx && free[k * nx + i]) { q.push(k * nx + i); reach[k * nx + i] = 1; break; }
+  }
   while (q.length) {
     const c = q.pop(), i = c % nx, k = (c / nx) | 0;
     if (i > 0 && free[c - 1] && !reach[c - 1]) { reach[c - 1] = 1; q.push(c - 1); }

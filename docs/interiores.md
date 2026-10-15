@@ -108,6 +108,41 @@ la carta).
 - Al menos 40 objetos distintos (tiendas, farmacia, banco, oficina), 60 (hostelería, vivienda) u 80 (gimnasio,
   alimentación), y un moodboard de 10 fotos reales de Wikimedia Commons con autor y licencia.
 
+## Las casas de los vecinos (vivienda por estancia)
+
+Las casas (`src/houses.js`) conservan su plano —de pasillo, estrecha con pasillo lateral o de dos plantas—, su estilo
+(antiguo, rústico, moderno, alegre, joven, lujo, bohemio) y su vecino (abuela, matrimonio, familia, estudiante, cazador,
+músico, rico, agricultor, artista). Cada habitación, salvo pasillos y vestíbulos, se amuebla con el kit de su clase,
+`data/kits/vivienda_<estancia>.json` (salon, comedor, cocina, bano, dormitorio, ninos, joven, estudio, despacho, musica,
+trofeos, pintura, taller, costura, despensa, trastero), con el tamaño de la habitación, desde la puerta por la que se
+entra, dejando libre el giro de sus puertas y sin nada alto ni colgado delante de sus ventanas. Una clase sin kit todavía
+se amuebla como antes, a mano. Referencia: `vivienda_salon` (`tools/interiores/kits_vivienda.py`,
+`tools/interiores/catalogo_vivienda.py`).
+
+- **Una sola zona**, `estancia`, toda la habitación: el kit no sabe dónde caen la puerta ni las ventanas. Por eso las
+  reglas de pared admiten `pared: "*"` (cualquiera de las cuatro) y hay dos reglas de relación: `enfrente` (contra la
+  pared de enfrente de la de `de`: el sofá frente a la tele; si no cabe, contra otra) y `entre` (entre `a` y `b`, mirando
+  como `b`: la mesa de centro, la alfombra; si no cabe, donde quepa).
+- **Para quién**: `perfil: [...]` y `estilo: [...]` (o `["!abuela", ...]` para excluir) ponen una entrada solo en esas
+  casas. `botin: "<id>"` (de `LOOT` en `src/houses.js`: joyero, colchon, cartera, reloj, consola, portatil, hucha, movil,
+  guitarra, altavoz, vinilos, rifle, jamon, prismaticos, cajaFuerte, cuadro, lata, garrafa) solo se pone si el vecino tiene
+  esa cosa, y la primera pieza que pone es el botín (su propia malla, que desaparece al cogerlo). Si no cabe, el botín
+  vuelve al montón y la casa lo deja en una mesa. Las entradas con botín, `cantidad: [0, 1]`.
+- **El papel de cada mueble** (`rol` en el objeto) es lo que usa la vida de la casa: `sofa`, `sillon` y `silla` (sus
+  `asientos` son sitios donde se sienta la gente), `mesa`, `cama` y `cama_doble` (donde duermen; bajo el colchón de una
+  doble, los ahorros), `tv` (con una pieza `aparte: true`, la pantalla que se enciende), `cocina` («picar algo», donde
+  cocinan), `nevera`, `armario` (esconderse), `comoda` (registrar los cajones), `espejo`, `piano`, `guitarra`, `libros`,
+  `telefono`, `chimenea`. Una habitación con camas, un dormitorio sin `cama` deja a la familia sin dormir.
+- **El estilo de la casa**: una pieza con `tinte: "tela"` toma una de las telas del estilo; con `tinte: "madera"`, su
+  madera.
+- La altura de las casas es menor (2,75 m arriba): nada más alto de 2,4 m.
+
+Comprobación: `validar.py vivienda_<estancia> --semillas 1,…,81` valida el kit en 81 hogares (cada perfil con cada uno de
+sus estilos y su botín) y `validar.py --casas 200` construye 200 casas como las construye el juego y comprueba cada
+habitación amueblada por kit (obligatorios de ese hogar, nada flotando ni metido en otra cosa, el paso desde su puerta).
+Para verlas: `python3 tools/interiores/fotos_casa.py <tipo> 3` (tipos de `src/houses.js`: salon, cocina, bano, dorm,
+dorm2, ninos, dormJoven, comedor, estudio, despacho, musica, trofeos, taller, costura, despensa, trastero).
+
 ## Cómo se trabaja
 
 ```bash

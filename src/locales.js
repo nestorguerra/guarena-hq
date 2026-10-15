@@ -43,7 +43,17 @@ export function choca(A, B, tol = TOL) {
 }
 const grow = (v, m) => ({ ...v, hw: v.hw + m, hd: v.hd + m });
 
-export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null) {
+// does a household fit an entry's list (perfil, estilo)? a list of names, or of «!name» left out
+export const encaja = (lista, valor) => !lista || (lista.some((t) => t.startsWith('!')) ? !lista.includes('!' + valor) : lista.includes(valor));
+// the entries of a kit that belong to a household { perfil, estilo, botin: [what it has to take] } (src/houses.js does
+// its own, taking the loot from the house's pool as it goes)
+export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && encaja(e.estilo, hogar.estilo) && (!e.botin || (hogar.botin || []).includes(e.botin));
+
+// the layout alone, with no room built: the kit's objects in its frame, laid out with this seed. ctx, for a room of a
+// house (src/houses.js): { W, D, H } its size instead of the kit's ranges, inicio { x, z } where one comes in (the way
+// through starts there), libres the house's own clear areas (the swing of its doors; its windows: nothing tall or hung
+// there), filtro (whether an entry belongs to this household: its profile, its style)
+export function amueblar(kit, seed = 1, ctx = null) {
   const K = KITS[kit];
   if (!K) throw new Error('sin kit: ' + kit);
   const tipologia = K.tipologia;
@@ -53,7 +63,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   // (a shuffle of its own: sort() with a random comparator asks for a different number of draws from one run to the next)
   const baraja = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const q3 = (a) => a[0] + Math.round((r() * (a[1] - a[0])) / 0.3) * 0.3;
-  const W = q3(K.superficie.ancho), D = q3(K.superficie.fondo), H = K.superficie.alto || 3.3;
+  const W = ctx && ctx.W != null ? ctx.W : q3(K.superficie.ancho), D = ctx && ctx.D != null ? ctx.D : q3(K.superficie.fondo), H = (ctx && ctx.H) || K.superficie.alto || 3.3;
   const env = { W, D, H };
   const ev = (e) => (typeof e === 'number' ? e : Function(...Object.keys(env), `return (${e});`)(...Object.values(env)));
   for (const [k, v] of Object.entries(K.variables || {})) env[k] = ev(v);
@@ -61,7 +71,8 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
 
   // ---- the partitions, the zones (up to the partitions' faces) and what is kept clear: the street door's way in, both
   // sides of each partition door (as deep as its leaf swings), and the kit's own (the place to order at the counter)
-  const libres = [{ cx: puertaX, cz: 0.6, hw: 0.75, hd: 0.6, a: 0, y0: 0, y1: 2.2 }];
+  const libres = ctx && ctx.libres ? [...ctx.libres] : [{ cx: puertaX, cz: 0.6, hw: 0.75, hd: 0.6, a: 0, y0: 0, y1: 2.2 }];
+  const inicio = ctx && ctx.inicio ? ctx.inicio : puertaX; // (where the way through starts: the street door, or the room's)
   const tabiques = (K.tabiques || []).map((t) => {
     const [ax, az] = t.de.map(ev), [bx, bz] = t.a.map(ev);
     const o = { ax, az, bx, bz };
@@ -101,7 +112,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
     const piezas = [];
     P.forEach((p, j) => { if (j !== sin) for (const q of partes(p)) piezas.push(q); });
     for (const it of extra) for (const q of partes(it)) piezas.push(q);
-    const z = mapaPaso(planta, piezas, 0.05, ancho, puertaX).zonas;
+    const z = mapaPaso(planta, piezas, 0.05, ancho, inicio).zonas;
     return Object.keys(z).filter((id) => z[id].alcanzable > 0);
   };
   let debe = alcanza(), guardias = 0;
@@ -130,7 +141,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const origen = (obj, cx, cz, ry) => { const b = caja(obj); const [ox, oz] = rot((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2, ry); return [cx - ox, cz - oz]; };
   const tantos = (e, len = 0, area = 0, sops = 0) => (e.cantidad ? N(e.cantidad) : e.por_m ? Math.max(1, Math.round(len * U(e.por_m))) : e.por_m2 ? Math.max(1, Math.round(area * U(e.por_m2))) : e.por_soporte && !Array.isArray(e.por_soporte) ? sops * e.por_soporte : 1);
   const variante = (e, k) => (e.variantes ? (e.todas && k < e.variantes.length ? e.variantes[k] : e.variantes[Math.floor(r() * e.variantes.length)]) : e.obj);
-  const cursores = {}, estantes = {};
+  const cursores = {}, estantes = {}, activas = []; // (activas: the entries laid out for this household)
 
   const reglas = {
     // the counter's modules, end to end along a line (the kit's own design: never moved, never refused)
@@ -147,6 +158,17 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
       }
     },
     contra_pared(e, Z) {
+      // (a list of walls, or '*' any of the four: each piece against the first that takes it — a room's, whose door and
+      // windows the kit cannot know)
+      if (typeof e.pared !== 'string' || e.pared === '*') {
+        const lados = e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : e.pared, n = N(e.cantidad || 1);
+        for (let puestos = 0, k = 0; puestos < n && k < n + 3; k++) {
+          const n0 = P.length;
+          for (const lado of lados) { reglas.contra_pared({ ...e, pared: lado, cantidad: 1, llenar: false, variantes: e.variantes ? [variante(e, puestos)] : undefined }, Z); if (P.length > n0) break; }
+          if (P.length > n0) puestos++; else break;
+        }
+        return;
+      }
       const pw = PARED[e.pared](Z), key = Z.id + e.pared;
       const n = e.llenar ? 99 : N(e.cantidad || 1);
       let puestos = 0;
@@ -164,11 +186,34 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
         puestos++;
       }
     },
+    // against the wall facing the one `de` stands against (the sofa across from the telly)
+    enfrente(e, Z) {
+      const es = (q, id) => (Array.isArray(id) ? id.includes(q.obj) : q.obj === id);
+      const ref = [...P].reverse().find((q) => q.zona === Z.id && es(q, e.de));
+      if (!ref) return;
+      const a = Math.atan2(Math.sin(ref.ry), Math.cos(ref.ry)), lado = Math.abs(a) < 0.3 ? 'S' : Math.abs(Math.abs(a) - Math.PI) < 0.3 ? 'N' : a > 0 ? 'W' : 'E';
+      const n0 = P.length;
+      reglas.contra_pared({ ...e, pared: { S: 'N', N: 'S', W: 'E', E: 'W' }[lado] }, Z);
+      if (P.length === n0 && e.si_no !== false) reglas.contra_pared({ ...e, pared: '*' }, Z); // (no room across: against any wall)
+    },
+    // between two pieces, facing as the second (the coffee table between the sofa and the telly; the rug under it)
+    entre(e, Z) {
+      const es = (q, id) => (Array.isArray(id) ? id.includes(q.obj) : q.obj === id);
+      const A = [...P].reverse().find((q) => q.zona === Z.id && es(q, e.a)), Bq = [...P].reverse().find((q) => q.zona === Z.id && es(q, e.b));
+      if (!A || !Bq) return;
+      const dx = Bq.v.cx - A.v.cx, dz = Bq.v.cz - A.v.cz, L = Math.hypot(dx, dz) || 1;
+      for (const d of [0, 0.12, -0.12, 0.25, -0.25]) {
+        const obj = variante(e, 0), ry = Bq.ry + Math.PI, [x, z] = origen(obj, (A.v.cx + Bq.v.cx) / 2 + (dx / L) * d, (A.v.cz + Bq.v.cz) / 2 + (dz / L) * d, ry);
+        const it = { obj, x, y: 0, z, ry }, v = volumen(it);
+        if (dentro(v, Z) && libre(v) && !cierra([it])) { poner(obj, Z.id, 'entre', x, 0, z, ry); return; }
+      }
+      if (e.si_no !== false) reglas.suelo_libre({ ...e, cantidad: [1, 1] }, Z); // (no room between them: wherever it fits)
+    },
     // hung on a wall, its back flat on the face: at random, in a row `cada` metres apart (round what is there already),
     // or over its fellow below (sobre_de)
     pared(e, Z) {
       // (one wall, or a list of them to go on to when the first is full; a row stops at `maximo` if the kit says so)
-      const paredes = [].concat(e.pared), ref = e.sobre_de ? P.find((p) => p.zona === Z.id && p.obj === e.sobre_de) : null;
+      const paredes = e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : [].concat(e.pared), ref = e.sobre_de ? P.find((p) => p.zona === Z.id && p.obj === e.sobre_de) : null;
       const colocar = (pw, obj, s) => {
         const b = caja(obj), c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (-b.z0 + 0.003);
         const [ox, oz] = rot((b.x0 + b.x1) / 2, 0, pw.ry);
@@ -288,12 +333,14 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
           if (sillas.length >= ns) break;
           let dist = (sx ? mb.w : mb.d) / 2 + sb.d / 2 - 0.1 + (r() - 0.5) * 0.06, it;
           const sesgo = (r() - 0.5) * 0.28; // (facing the table, a little askew)
-          for (let t = 0; t < 8; t++, dist += 0.02) { // (tucked in, but clear of the table's legs and foot)
+          let suelta = false;
+          for (let t = 0; t < 10; t++, dist += 0.02) { // (tucked in, but clear of the table's legs, foot or skirts)
             const [ox, oz] = rot(sx * dist, sz * dist, ry), sry = Math.atan2(-ox, -oz) + sesgo;
             const [x, z] = origen(silla, cx + ox, cz + oz, sry);
             it = { obj: silla, x, y: 0, z, ry: sry };
-            if (hunde(it, mesaIt) <= 0.005) break;
+            if (hunde(it, mesaIt) <= 0.005) { suelta = true; break; }
           }
+          if (!suelta) continue;
           const v = volumen(it);
           if (dentro(v, Z) && libre(v) && lejos(v) && !sillas.some((s) => choca(s.v, v))) sillas.push({ ...it, v });
         }
@@ -387,7 +434,8 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const SUELTA = new Set(['fila', 'esquina', 'suelo_libre']);
   for (const [ei, e] of K.objetos.entries()) {
     const Z = zonas[e.zona];
-    if (!Z || !reglas[e.regla]) continue;
+    if (!Z || !reglas[e.regla] || (ctx && ctx.filtro && !ctx.filtro(e))) continue;
+    activas.push(ei);
     entrada = ei;
     const n0 = P.length;
     reglas[e.regla](e, Z);
@@ -401,6 +449,14 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
     }
   }
 
+  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas };
+}
+
+// a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
+// household only
+export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null) {
+  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas } = amueblar(kit, seed, hogar ? { filtro: filtroHogar(hogar) } : null);
+  const t2 = MURO / 2;
   // ---- the room (its walls outside the frame: their faces at its edges)
   const B = new HouseBuilder(origin.x, origin.z, false);
   const mWall = B.mat('pared', () => std(new THREE.Color(K.pared || '#ece6da').getHex(), { roughness: 0.92 }));
@@ -513,7 +569,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
   let hh = 2166136261;
   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
-  h.local = { kit, tipologia, seed, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, hash: hh.toString(16), title };
+  h.local = { kit, tipologia, seed, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
   h.venue = false;
   // (what the game asks of any interior: where it stands, its extent, what it is; the street seen from its windows)
   h.origin = { x: origin.x, z: origin.z };

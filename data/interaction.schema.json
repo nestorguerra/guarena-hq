@@ -1,34 +1,233 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "data/interaction.schema.json",
-  "title": "Objeto del mundo y su interacción (backlog técnico, X-01 y X-02)",
-  "type": "object",
-  "required": ["id", "nombre", "categoria", "clase", "masa", "material", "soporte", "partes"],
-  "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
-    "nombre": {"type": "string", "minLength": 1},
-    "categoria": {"type": "string", "minLength": 1},
-    "clase": {"enum": ["PICKUP", "CARRY", "PUSH", "PUSH_HEAVY", "FIXED"]},
-    "modificadores": {"type": "array", "items": {"enum": ["SEAT", "USE"]}},
-    "motivo_clase": {"type": "string"},
-    "motivo_fijo": {"enum": ["anclado en la realidad", "estructural", "rendimiento", "diseño"]},
-    "masa": {"type": "number"},
-    "material": {"enum": ["madera", "metal", "cristal", "plastico", "ceramica", "tela", "papel", "piedra", "comida", "liquido", "goma"]},
-    "soporte": {"enum": ["suelo", "pared", "superficie", "techo"]},
-    "partes": {"type": "array", "items": {"type": "object", "required": ["f", "d", "p"], "properties": {
-      "f": {"enum": ["caja", "cil", "esfera", "cono", "plano"]},
-      "d": {"type": "array", "items": {"type": "number"}},
-      "p": {"type": "array", "items": {"type": "number"}},
-      "r": {"type": "array", "items": {"type": "number"}},
-      "c": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"},
-      "m": {"type": "string"},
-      "tex": {"type": "object"},
-      "luz": {"type": "boolean"}
-    }}},
-    "superficies": {"type": "array", "items": {"type": "object", "required": ["y"], "properties": {"y": {"type": "number"}, "margen": {"type": "number"}, "fondo": {"type": "number"}, "ancho": {"type": "number"}}}},
-    "asientos": {"type": "array", "items": {"type": "object", "required": ["p", "h", "anim"], "properties": {"p": {"type": "array"}, "h": {"type": "number"}, "anim": {"enum": ["banco", "silla", "taburete_alto", "sofa", "suelo", "escalon"]}}}},
-    "agarre": {"type": "object"},
-    "nota": {"type": "string"}
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "data/interaction.schema.json",
+ "title": "Objeto del mundo y su interacción (backlog técnico, X-01 y X-02)",
+ "type": "object",
+ "required": [
+  "id",
+  "nombre",
+  "categoria",
+  "clase",
+  "masa",
+  "material",
+  "soporte",
+  "partes"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z0-9_]+$"
   },
-  "additionalProperties": false
+  "nombre": {
+   "type": "string",
+   "minLength": 1
+  },
+  "categoria": {
+   "type": "string",
+   "minLength": 1
+  },
+  "clase": {
+   "enum": [
+    "PICKUP",
+    "CARRY",
+    "PUSH",
+    "PUSH_HEAVY",
+    "FIXED"
+   ]
+  },
+  "modificadores": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "SEAT",
+     "USE"
+    ]
+   }
+  },
+  "motivo_clase": {
+   "type": "string"
+  },
+  "motivo_fijo": {
+   "enum": [
+    "anclado en la realidad",
+    "estructural",
+    "rendimiento",
+    "diseño"
+   ]
+  },
+  "masa": {
+   "type": "number"
+  },
+  "material": {
+   "enum": [
+    "madera",
+    "metal",
+    "cristal",
+    "plastico",
+    "ceramica",
+    "tela",
+    "papel",
+    "piedra",
+    "comida",
+    "liquido",
+    "goma"
+   ]
+  },
+  "soporte": {
+   "enum": [
+    "suelo",
+    "pared",
+    "superficie",
+    "techo"
+   ]
+  },
+  "partes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "f",
+     "d",
+     "p"
+    ],
+    "properties": {
+     "f": {
+      "enum": [
+       "caja",
+       "cil",
+       "esfera",
+       "cono",
+       "plano"
+      ]
+     },
+     "d": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      }
+     },
+     "p": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      }
+     },
+     "r": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      }
+     },
+     "c": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+     },
+     "m": {
+      "type": "string"
+     },
+     "tex": {
+      "type": "object"
+     },
+     "luz": {
+      "type": "boolean"
+     },
+     "tinte": {
+      "enum": [
+       "tela",
+       "madera"
+      ],
+      "description": "en una casa, el color de esta pieza lo pone su estilo (las telas y la madera del vecino)"
+     },
+     "aparte": {
+      "type": "boolean",
+      "description": "una malla propia (la pantalla de la tele, que se enciende y se apaga)"
+     }
+    }
+   }
+  },
+  "superficies": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "y"
+    ],
+    "properties": {
+     "y": {
+      "type": "number"
+     },
+     "margen": {
+      "type": "number"
+     },
+     "fondo": {
+      "type": "number"
+     },
+     "ancho": {
+      "type": "number"
+     }
+    }
+   }
+  },
+  "asientos": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "p",
+     "h",
+     "anim"
+    ],
+    "properties": {
+     "p": {
+      "type": "array"
+     },
+     "h": {
+      "type": "number"
+     },
+     "anim": {
+      "enum": [
+       "banco",
+       "silla",
+       "taburete_alto",
+       "sofa",
+       "suelo",
+       "escalon"
+      ]
+     }
+    }
+   }
+  },
+  "agarre": {
+   "type": "object"
+  },
+  "rol": {
+   "enum": [
+    "sofa",
+    "sillon",
+    "silla",
+    "mesa",
+    "cama",
+    "cama_doble",
+    "tv",
+    "cocina",
+    "nevera",
+    "armario",
+    "comoda",
+    "espejo",
+    "piano",
+    "guitarra",
+    "libros",
+    "telefono",
+    "chimenea",
+    "caja_fuerte",
+    "armero",
+    "escritorio"
+   ],
+   "description": "su papel en la vida de una casa (src/houses.js): dónde se sienta, duerme, come o cocina la gente, la tele que se enciende, el armario donde esconderse, los cajones que se registran…"
+  },
+  "nota": {
+   "type": "string"
+  }
+ },
+ "additionalProperties": false
 }

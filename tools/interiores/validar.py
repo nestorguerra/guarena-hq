@@ -2,6 +2,7 @@
 # tools/perf/cdp.py, port 9333) on the development server: every kit built with a few seeds and checked by
 # tools/interiores/validar.js. Writes data/interiores/validacion/<kit>.json; exit 1 on any blocking error.
 #   python3 tools/interiores/validar.py [kit …] [--semillas 1,2,3,4,5] [--juego]
+#   python3 tools/interiores/validar.py --casas [n]     (the neighbours' houses: every room furnished from a kit)
 import glob, json, os, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'perf'))
@@ -17,6 +18,15 @@ def main():
     try:
         T.ev('''(async () => { const t0 = performance.now(); while (performance.now() - t0 < 180000) { if (%s) break; await new Promise((r) => setTimeout(r, 250)); } })()''' % ("window.game && window.game.state === 'play'" if juego else 'window.__listo'), timeout=240)
         res = {}
+        if '--casas' in sys.argv: # (the neighbours' houses, as the game builds them: 60 of them)
+            n = int(sys.argv[sys.argv.index('--casas') + 1]) if len(sys.argv) > sys.argv.index('--casas') + 1 and sys.argv[sys.argv.index('--casas') + 1].isdigit() else 60
+            casas = json.loads(T.ev('(async () => { const V = await import("/tools/interiores/validar.js?" + Date.now()); return JSON.stringify(await V.validarCasas(%s)); })()' % json.dumps([1000 + 37 * k for k in range(n)]), timeout=900))
+            os.makedirs(os.path.join(ROOT, 'data', 'interiores', 'validacion'), exist_ok=True)
+            json.dump({'casas': len(casas), 'errores': sum(len(c['errores']) for c in casas), 'resultados': casas}, open(os.path.join(ROOT, 'data', 'interiores', 'validacion', 'casas.json'), 'w'), ensure_ascii=False, indent=1)
+            mal = [c for c in casas if c['errores']]
+            print('casas ·', len(casas), 'construidas,', sum(len(c['salas']) for c in casas), 'estancias por kit,', len(mal), 'con errores')
+            for c in mal[:8]: print('   ', c['seed'], c['perfil'], c['estilo'], c['errores'][:3])
+            return not mal
         for t in tips:
             res[t] = json.loads(T.ev('(async () => { const V = await import("/tools/interiores/validar.js?" + Date.now()); return JSON.stringify(await V.validar(%s, %s)); })()' % (json.dumps(t), json.dumps(seeds)), timeout=600))
     finally:
@@ -27,7 +37,7 @@ def main():
     for t, rr in res.items():
         json.dump({'kit': t, 'semillas': seeds, 'errores': sum(len(r['errores']) for r in rr), 'resultados': rr}, open(os.path.join(ROOT, 'data', 'interiores', 'validacion', t + '.json'), 'w'), ensure_ascii=False, indent=1)
     for t, rr in res.items():
-        print(t, '·', ' | '.join(f"s{r['seed']}: {r['objetos']} obj, {r['distintos']} dist., {len(r['errores'])} err" for r in rr))
+        print(t, '·', ' | '.join(f"s{r['seed']}{' (' + r['hogar'] + ')' if r.get('hogar') else ''}: {r['objetos']} obj, {r['distintos']} dist., {len(r['errores'])} err" for r in rr))
         for r in rr[:2]:
             for e in r['errores'][:12]: print('   ', e)
     return total == 0

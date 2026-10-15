@@ -9,6 +9,7 @@
 //  - variación: the same seed gives the same layout (its hash), another seed a different one (≥ 30 % of it).
 //   const V = await import('/tools/interiores/validar.js'); await V.validar('cafeteria', 7)
 import { buildLocal } from '/src/locales.js';
+import { PROFILES, buildVecino } from '/src/houses.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { caja } from '/src/objetos.js';
 import { rot, partes, penetra, mapaPaso } from '/src/interiores_geo.js';
@@ -24,6 +25,7 @@ export function revisar(h, presupuesto) {
   for (const c of C) porEntrada.set(c.e, (porEntrada.get(c.e) || 0) + 1);
   const recuento = [];
   for (const [ei, e] of K.objetos.entries()) {
+    if (L.activas && !L.activas.includes(ei)) continue; // (an entry of another household)
     const n = porEntrada.get(ei) || 0, Z = L.zonas[e.zona], area = (Z.x1 - Z.x0) * (Z.z1 - Z.z0), largo = Math.max(Z.x1 - Z.x0, Z.z1 - Z.z0);
     let lo = e.obligatorio ? 1 : 0, hi = Infinity;
     if (e.cantidad) { lo = Math.max(lo, e.cantidad[0]); hi = e.cantidad[1]; }
@@ -76,7 +78,7 @@ export function revisar(h, presupuesto) {
   }
   // ---- paso libre (0,9 m) desde la puerta a cada zona pública (rejilla de 5 cm, la misma geometría que el montaje);
   // las zonas de trabajo (trasbarra, almacén), aviso si el personal no llega
-  const mapa = mapaPaso({ W, D, zonas: L.zonas, tabiques: L.tabiques }, PZ.flat(), 0.05, L.ancho || 0.9, L.puertaX || 0);
+  const mapa = mapaPaso({ W, D, zonas: L.zonas, tabiques: L.tabiques }, PZ.flat(), 0.05, L.ancho || 0.9, L.inicio || L.puertaX || 0);
   const zonasPaso = {};
   for (const Z of Object.values(L.zonas)) {
     const m = mapa.zonas[Z.id];
@@ -123,14 +125,24 @@ function diferencia(A, B) {
   return 1 - match / Math.max(A.length, B.length);
 }
 
+// the households a home's room is laid out for, one per seed: every profile of neighbour in turn, with its styles and
+// what it has to take (src/houses.js PROFILES)
+function hogarDe(K, s) {
+  if (!K.objetos.some((e) => e.perfil || e.estilo || e.botin)) return null;
+  const ids = Object.keys(PROFILES), id = ids[(s - 1) % ids.length], P = PROFILES[id];
+  return { perfil: id, estilo: P.styles[Math.floor((s - 1) / ids.length) % P.styles.length], botin: P.loot };
+}
+
 export async function validar(tip, seeds = [1, 2, 3]) {
   const presupuesto = await (await fetch('/data/quality_budgets.json')).json();
   const out = [];
   for (const s of seeds) {
-    const h = buildLocal(tip, s, ORIGIN, 'Validación');
+    const hogar = hogarDe(KITS[tip], s);
+    const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar);
     const rep = revisar(h, presupuesto);
     // (I-03: the same seed again, the same layout)
-    const h2 = buildLocal(tip, s, ORIGIN, 'Validación');
+    const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar);
+    if (hogar) rep.hogar = `${hogar.perfil} · ${hogar.estilo}`;
     rep.determinista = h2.local.hash === h.local.hash;
     if (!rep.determinista) rep.errores.push(`variación: la semilla ${s} da otro trazado la segunda vez`);
     rep._c = h.local.colocados.map((c) => ({ obj: c.obj, x: c.x, y: c.y, z: c.z, ry: c.ry }));
@@ -143,5 +155,28 @@ export async function validar(tip, seeds = [1, 2, 3]) {
     if (d < 0.3) out[i].errores.push(`variación: con la semilla ${out[i].seed} solo cambia un ${(d * 100).toFixed(0)} % (el backlog pide ≥ 30 %)`);
   }
   for (const r of out) delete r._c;
+  return out;
+}
+
+// the neighbours' houses (epic I, vivienda por estancia): each house built as the game builds it, and every room of it
+// furnished from a kit checked as an interior is — its household's entries, nothing floating or run into another, the way
+// through from its door — (its light is the house's: not checked here), and the house within the interior budget
+export async function validarCasas(seeds) {
+  const presupuesto = await (await fetch('/data/quality_budgets.json')).json(), B = presupuesto.interior, out = [];
+  for (const s of seeds) {
+    const h = buildVecino(s, ORIGIN), err = [];
+    let tris = 0;
+    h.group.traverse((o) => { if (o.isMesh) tris += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3; });
+    if (tris > B.triangulos_max) err.push(`rendimiento: ${Math.round(tris)} triángulos > ${B.triangulos_max}`);
+    const salas = [];
+    for (const est of h.estancias) {
+      const rep = revisar({ local: est, group: { traverse() {} } }, { interior: { triangulos_max: Infinity, mallas_max: Infinity, luces_max: Infinity } });
+      const e = rep.errores.filter((x) => !x.startsWith('luz'));
+      for (const x of e) err.push(`${est.sala} (${est.kit}): ${x}`);
+      salas.push({ sala: est.sala, kit: est.kit, objetos: est.colocados.length, distintos: rep.distintos, errores: e.length });
+    }
+    out.push({ seed: s, perfil: h.profile.id, estilo: h.profile.style, plano: h.profile.layout, triangulos: Math.round(tris), salas, errores: err });
+    h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
+  }
   return out;
 }

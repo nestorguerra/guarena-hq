@@ -139,11 +139,13 @@ function mat(f) {
         : new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78, metalness: 0 }));
 }
 const _c = new THREE.Color();
-// items: [{ obj, x, y, z, ry, seed }] in world metres → THREE.Group
+// items: [{ obj, x, y, z, ry, seed, paleta? }] in world metres → THREE.Group. paleta (a house's style): { tela, madera }
+// colour the parts marked tinte 'tela' (one of the fabrics, the same for all of a piece) or 'madera'. A part marked aparte
+// is a mesh of its own (the telly's screen, switched on and off): group.userData.aparte = [{ i (the item), mesh }]
 export function construir(items) {
-  const bins = { mate: [], metal: [], cristal: [] }, extra = [];
+  const bins = { mate: [], metal: [], cristal: [] }, extra = [], aparte = [];
   const M = new THREE.Matrix4(), Q = new THREE.Quaternion(), S = new THREE.Vector3(1, 1, 1), P = new THREE.Vector3(), Y = new THREE.Vector3(0, 1, 0);
-  for (const it of items) {
+  for (const [ii, it] of items.entries()) {
     const o = OBJETOS[it.obj];
     if (!o) continue;
     Q.setFromAxisAngle(Y, it.ry || 0); P.set(it.x, it.y || 0, it.z); M.compose(P, Q, S);
@@ -158,7 +160,13 @@ export function construir(items) {
         }
       }
       const g = parteGeo(p); g.applyMatrix4(M);
-      _c.set(p.c || '#888888').convertSRGBToLinear();
+      const pal = it.paleta, col0 = pal && p.tinte === 'tela' && pal.tela && pal.tela.length ? pal.tela[(it.seed || 0) % pal.tela.length] : pal && p.tinte === 'madera' && pal.madera ? pal.madera : p.c;
+      if (p.aparte) { // (its own mesh and material: the screen)
+        const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: new THREE.Color(col0 || '#202020'), emissive: 0x6a8aa8, emissiveIntensity: 0, roughness: 0.3 }));
+        extra.push(m); aparte.push({ i: ii, mesh: m });
+        continue;
+      }
+      _c.set(col0 || '#888888').convertSRGBToLinear();
       const n = g.attributes.position.count, col = new Float32Array(n * 3);
       for (let i = 0; i < n; i++) { col[i * 3] = _c.r; col[i * 3 + 1] = _c.g; col[i * 3 + 2] = _c.b; }
       g.setAttribute('color', new THREE.BufferAttribute(col, 3));
@@ -175,6 +183,7 @@ export function construir(items) {
     group.add(m);
   }
   for (const m of extra) group.add(m);
+  group.userData.aparte = aparte;
   return group;
 }
 
@@ -187,4 +196,3 @@ export function kelvin(k) {
   const c = (v) => Math.max(0, Math.min(255, v)) / 255;
   return new THREE.Color(c(r), c(g), c(b));
 }
-export { mulberry32 };

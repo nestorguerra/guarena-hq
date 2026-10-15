@@ -29,6 +29,8 @@ jobs:
           GUARENA_MP_URL: ${{ vars.GUARENA_MP_URL }}
         run: |
           python3 tools/build.py
+          # (el empaquetador no entiende «export { … }»: si queda alguno, el juego no arrancaría)
+          if grep -n '^export ' dist/test.html; then echo 'Queda un export suelto en el paquete: el juego no arrancaría'; exit 1; fi
           # (épica R del backlog: ninguna marca ni comercio real en la copia publicada y ningún texto de marcador;
           # si aparece alguno, no se publica)
           python3 tools/rotulos/rotulos.py validar dist/test.html

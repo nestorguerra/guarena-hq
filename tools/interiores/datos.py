@@ -79,7 +79,8 @@ def main():
                 if not any(abs(c + h - sup['y']) <= 0.005 for h, c in ext): errs.append(f'{o["id"]}: la superficie {k} (y {sup["y"]}) no está en lo alto de ninguna pieza')
             if o['soporte'] != 'techo' and min(c - h for h, c in ext) < -0.002: errs.append(f'{o["id"]}: baja {-min(c - h for h, c in ext) * 100:.1f} cm por debajo de su pie')
     MIN = {'tienda_especializada': 40, 'tienda_ropa': 40, 'farmacia': 40, 'sucursal_bancaria': 40, 'oficina': 40, 'restaurante': 60, 'bar': 60, 'cafeteria': 60,
-           'salon': 60, 'cocina': 60, 'dormitorio': 60, 'bano': 60, 'gimnasio': 80, 'alimentacion': 80}
+           'salon': 60, 'cocina': 60, 'dormitorio': 60, 'bano': 60, 'gimnasio': 80, 'alimentacion': 80,
+           'otra_estancia': 30}  # (the lesser rooms of a home: pantry, box room, workshop, sewing room…)
     KITS, informe = {}, {}
     for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'kits', '*.json'))):
         if f.endswith('.schema.json'): continue

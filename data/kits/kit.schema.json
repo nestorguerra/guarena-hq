@@ -30,7 +30,8 @@
     "salon",
     "cocina",
     "dormitorio",
-    "bano"
+    "bano",
+    "otra_estancia"
    ]
   },
   "nombre": {
@@ -157,7 +158,9 @@
        "conjunto",
        "sobre",
        "vida",
-       "techo"
+       "techo",
+       "enfrente",
+       "entre"
       ]
      },
      "obligatorio": {
@@ -173,6 +176,27 @@
      "maximo": {
       "type": "number",
       "description": "en una fila de pared (cada), cuántas piezas como mucho"
+     },
+     "perfil": {
+      "type": "array",
+      "description": "solo en las casas de estos vecinos (src/houses.js PROFILES: abuela, matrimonio, familia, estudiante, cazador, musico, rico, agricultor, artista); «!x» excluye"
+     },
+     "estilo": {
+      "type": "array",
+      "description": "solo en las casas de estos estilos (antiguo, rustico, moderno, alegre, joven, lujo, bohemio); «!x» excluye"
+     },
+     "botin": {
+      "type": "string",
+      "description": "una cosa que se puede llevar (src/houses.js LOOT): la entrada solo se pone si el perfil de la casa la tiene, y lo puesto es el botín"
+     },
+     "de": {
+      "description": "enfrente: la pieza (o piezas) contra cuya pared de enfrente se pone"
+     },
+     "a": {
+      "description": "entre: la primera pieza"
+     },
+     "b": {
+      "description": "entre: la segunda (la nueva mira como ella, girada)"
      }
     }
    }
