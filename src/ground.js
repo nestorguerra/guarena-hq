@@ -1,10 +1,11 @@
 // Ground surfaces: countryside field patchwork, OSM land use areas, roads (asphalt / dirt), sidewalks, curbs, markings.
 import * as THREE from 'three';
 import { GROUND, GROUND_SCALE, asphaltBase, aceraMean, pavingMean } from './textures.js';
-import { offsetPolyline, mulberry32, hash1, hash2, ringArea, pointInRing, polySample, polyCum, clamp, orientedRect } from './util.js';
+import { offsetPolyline, mulberry32, hash1, hash2, ringArea, ringBounds, pointInRing, polySample, polyCum, clamp, orientedRect } from './util.js';
 import { STYLE } from './style.js';
 import { CLAY_ROAD } from './plastilina.js';
 import { STYLES as CALLES, parkOf } from './calles.js';
+import { SUELOS, PASOS, AMARILLOS, SIN_VADO_AMARILLO } from './calles_arreglos.js';
 const KW = () => 0.28; // the kerb's width (the claymation's were fat blocks of 0.42, after the user's first pictures, until 2026-10-12)
 
 // Parking lots (like the one by Santa María): rows of 2.5 x 5 m bays along the lot's long side, 6 m aisles between
@@ -129,7 +130,7 @@ export class GroundBuilder {
     for (let i = 0; i < n; i++) {
       const ix = inner[i * 2], iz = inner[i * 2 + 1], ox = outer[i * 2], oz = outer[i * 2 + 1];
       const ax = (ox - ix) / W, az = (oz - iz) / W; // (across, per metre)
-      const H = 0.075 * (1 - 0.8 * clamp(flags[i], 0, 1));
+      const H = 0.075 * (1 - 0.8 * clamp(flags[i] > 2.5 ? 0 : flags[i], 0, 1)); // (3: painted yellow only)
       for (let k = 0; k < m; k++) {
         const t = T[k], h = F[k] * H, x = ix + ax * t, z = iz + az * t;
         const k0 = Math.max(0, k - 1), k1 = Math.min(m - 1, k + 1), dh = ((F[k1] - F[k0]) * H) / Math.max(1e-4, T[k1] - T[k0]);
@@ -217,7 +218,12 @@ function tintFrom(hex, base, k = 0.88) {
 }
 // a street's own pavement (calles_estilos.js acera: its colour and the pattern of its tiles) as the strip's tint: for a
 // plain one a tint from the tiles' own; for hydraulic tiles in a pattern its white as it is (the material draws them)
-function paveTint(pv) { return pv.pat > 0 ? [1, 3, 5].map((i) => lin8(pv.col, i)) : tintFrom(pv.col, aceraMean(), 0.95); }
+// the earth of the town's lots and verges, reddish and dry (the captures: «solar de tierra rojiza con hierbas secas»)
+const SOLAR = [0.72, 0.6, 0.68]; // (measured against the captures' lots: a muted tan, not the photo's straw yellow)
+// a pavement with nothing of its own: the town's grey tiles
+const PAVE0 = { col: null, pat: 0 };
+function paveTint(pv) {
+  if (!pv.col) return [1, 1, 1]; return pv.pat > 0 ? [1, 3, 5].map((i) => lin8(pv.col, i)) : tintFrom(pv.col, aceraMean(), 0.95); }
 // a street's pavement at a point of it, on the side whose outward normal is (nx, nz): its own, or a stretch's (tramos
 // with an acera, by where the point falls and, if given, which way that side faces — 'N', 'S', 'E', 'O')
 const FACING = { N: [0, -1], S: [0, 1], E: [1, 0], O: [-1, 0] };
@@ -232,13 +238,26 @@ function paveOf(cs, x, z, nx, nz) {
 }
 // a street's road where this stretch of it runs (calles_estilos.js): its own, or a stretch's (tramos, by where the
 // stretch's middle falls: the setts of Estacada only west of Malfeitos, say) — { road, col }
+// a street's kerbs in their colour, as its captures show them (calles.js bordillo: concrete grey, a whitewashed or an
+// ochre kerb), as a multiplier of the kerb's own grey (materials.js) — compared in linear light
+const KERB_TINTS = new Map();
+function kerbTint(e) {
+  const hx = CALLES[e.name] && CALLES[e.name].bordillo;
+  if (!hx || !/^#[0-9a-f]{6}$/i.test(hx)) return [1, 1, 1];
+  if (!KERB_TINTS.has(hx)) {
+    const l = (v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+    const base = [0.52, 0.51, 0.49];
+    KERB_TINTS.set(hx, [1, 3, 5].map((i, k) => Math.max(0.1, Math.min(2.2, l(parseInt(hx.slice(i, i + 2), 16)) / base[k]))));
+  }
+  return KERB_TINTS.get(hx);
+}
 function roadOf(cs, e) {
-  let road = cs.road, col = cs.roadCol;
+  let road = cs.road, col = cs.roadCol, firme = cs.firme, lineas = null, senda = null;
   if (cs.tramos) {
     const m = polySample(e.pts, e.cum, e.len / 2, {});
-    for (const t of cs.tramos) if ((t.road || t.col) && Math.hypot(m.x - t.x, m.z - t.z) < t.r) { road = t.road || road; col = t.col || col; break; }
+    for (const t of cs.tramos) if ((t.road || t.col || t.firme || t.lineas || t.senda) && Math.hypot(m.x - t.x, m.z - t.z) < t.r) { road = t.road || road; col = t.col || col; firme = t.firme || firme; lineas = t.lineas || lineas; senda = t.senda || senda; break; }
   }
-  return { road, col };
+  return { road, col, firme, lineas, senda };
 }
 
 const ringCentroidXZ = (r) => { let x = 0, z = 0; for (let i = 0; i < r.length; i += 2) { x += r[i]; z += r[i + 1]; } return [x / (r.length / 2), z / (r.length / 2)]; };
@@ -247,7 +266,7 @@ function areaStyle(a) {
   const k = a.kind;
   const area = Math.abs(ringArea(a.ring));
   switch (k) {
-    case 'landuse:residential': return { layer: GROUND.acera, tint: [1, 1, 1], level: 1 };
+    case 'landuse:residential': return { layer: GROUND.hierbaseca, tint: SOLAR, level: 1 }; // (the town's unbuilt ground: its lots' dry weeds on reddish earth — the pavements are laid street by street)
     case 'landuse:industrial': return { layer: GROUND.hormigon, tint: [0.98, 0.96, 0.92], level: 1 };
     case 'landuse:orchard': return { layer: GROUND.olivar, tint: [1, 1, 1], level: 1, olive: true };
     case 'landuse:forest': return { layer: GROUND.hierbaseca, tint: [0.85, 0.85, 0.75], level: 1, forest: true };
@@ -325,11 +344,15 @@ function makeParcels(map, rnd) {
 // (1 = lowered kerb, 2 = lowered and painted yellow)
 function makeRamps(map, opts) {
   const list = [];
-  for (const g of opts.garages || []) list.push({ x: g.x, z: g.z, tx: -g.nz, tz: g.nx, nx: g.nx, nz: g.nz, hw: g.r - 0.15, reach: 9, flag: hash1(Math.floor(g.x * 3 + g.z * 7)) < 0.5 ? 2 : 1 });
+  // (a garage's lowered kerb painted yellow or not, by chance — but never where the captures show it grey: SIN_VADO_AMARILLO)
+  const grey = SIN_VADO_AMARILLO.map((r) => ({ r, bb: ringBounds(r) })), greyAt = (x, z) => grey.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
+  for (const g of opts.garages || []) list.push({ x: g.x, z: g.z, tx: -g.nz, tz: g.nx, nx: g.nx, nz: g.nz, hw: g.r - 0.15, reach: 9, flag: hash1(Math.floor(g.x * 3 + g.z * 7)) < 0.5 && !greyAt(g.x, g.z) ? 2 : 1 });
   for (const p of map.pois) {
     if (p.kind !== 'highway:crossing') continue;
     list.push({ x: p.x, z: p.z, round: true, hw: 2.4, flag: 1 });
   }
+  // (the kerbs the captures show painted yellow — no parking — calles_arreglos.js AMARILLOS: a point every metre of them)
+  for (const L of AMARILLOS) for (let i = 0; i < L.length; i += 2) list.push({ x: L[i], z: L[i + 1], round: true, hw: 0.9, flag: 3 });
   const cell = 12, grid = new Map();
   for (const r of list) {
     const k = Math.floor(r.x / cell) + ':' + Math.floor(r.z / cell);
@@ -347,7 +370,7 @@ function curbRamp(x, z, ramps) {
     const a = grid.get((cx + i) + ':' + (cz + j));
     if (!a) continue;
     for (const r of a) {
-      if (r.round) { if (Math.hypot(x - r.x, z - r.z) < r.hw) best = Math.max(best, r.flag); continue; }
+      if (r.round) { if (Math.hypot(x - r.x, z - r.z) < r.hw) best = r.flag === 3 ? (best || 3) : best === 3 ? r.flag : Math.max(best, r.flag); continue; }
       const dx = x - r.x, dz = z - r.z;
       const along = dx * r.tx + dz * r.tz, out = dx * r.nx + dz * r.nz;
       if (out > 0 && out < r.reach && Math.abs(along) < r.hw) best = Math.max(best, r.flag);
@@ -389,6 +412,14 @@ export function buildGround(map, materials, opts = {}) {
     if (st.parking) parkingPlots.push(a);
     if (st.pitch) pitches.push({ a, kind: st.pitch });
   }
+  // ---- the ground the audit of 2026-10-13 found otherwise (calles_arreglos.js SUELOS) and the gardens behind the houses'
+  // front fences (tapias.js): over the pavements, under the roads
+  const SU = { losa: [GROUND.plaza, '#cfcac0'], baldosa: [GROUND.acera, '#c9c4bb'], tierra: [GROUND.tierra, '#a88c67'], hierba: [GROUND.hierbaseca, '#b39d62'], cesped: [GROUND.cesped, '#4f7d33'], asfalto: [GROUND.asphalt2, '#8a8780'], adoquin: [GROUND.adoquin, '#9a958c'], grava: [GROUND.grava, '#b8b2a6'] };
+  for (const g of SUELOS.concat(opts.extraGround || [])) {
+    const [layer, mean] = SU[g.mat] || SU.tierra;
+    const tint = g.col ? tintFrom(g.col, mean, 0.9) : g.mat === 'tierra' || g.mat === 'hierba' ? SOLAR : W;
+    levels[3].polygon(new Float32Array(g.ring), null, 0, layer, tint, 0);
+  }
   // ---- roads (level 5 asphalt, level 4 dirt / paths) + junction discs
   const asphalt = levels[5], dirt = levels[4];
   const curbs = new GroundBuilder();
@@ -415,6 +446,7 @@ export function buildGround(map, materials, opts = {}) {
         if (rd.col) tint = tintFrom(rd.col, pavingMean('losa'), 0.92);
       } else if (rd.col) tint = tintFrom(rd.col, asphaltBase(layer === GROUND.asphalt ? 'asphalt' : 'asphalt2'), 0.88 * (STYLE.plastilina ? CLAY_ROAD : 1));
     }
+    if (rd && rd.senda && layer === GROUND.acera) tint = tintFrom(rd.senda, pavingMean('losa'), 0.92); // (a footway or cycle lane in its colour: tramos senda)
     const hw = e.losa ? Math.max(e.w / 2, (e.facade || e.w) / 2 - 0.05) : e.w / 2, kb = e.losa ? null : e.kerb;
     let L, R, cum = e.cum;
     if (kb && B === asphalt) {
@@ -433,10 +465,13 @@ export function buildGround(map, materials, opts = {}) {
       // swimming pool are freshly done)
       const base = e.cls === 'primary' || e.cls === 'primary_link' ? 0.06 : e.cls === 'secondary' ? 0.12 : e.cls === 'tertiary' ? 0.2 : e.cls === 'service' ? 0.4 : 0.3;
       const fresh = /^(Calle Derecha|Calle Puerta del Sol|Avenida de la Constitución|Carretera de Guareña a Oliva de Mérida)$/.test(e.name || '') || Math.hypot(e.pts[0] + 560, e.pts[1] - 215) < 170;
-      const dmg = fresh ? 0.03 : clamp(base + (hash1(e.id * 7 + 3) - 0.5) * 0.2, 0.02, 0.8);
+      const firme = CALLES[e.name] && roadOf(CALLES[e.name], e).firme; // (as its captures show it: 'liso' new, 'gastado' cracked and patched — a stretch of it its own)
+      const dmg = firme === 'gastado' ? 0.55 : firme === 'liso' || fresh ? 0.03 : clamp(base + (hash1(e.id * 7 + 3) - 0.5) * 0.2, 0.02, 0.8); // (as seen first: a stretch the captures show worn is worn, even on a street newly done)
       // overlapping strips of the same layer used to flicker (z-fighting) where streets meet: a few millimetres of
       // height by importance (the main road on top) and the junction discs above them all
-      const zy = e.cls === 'primary' || e.cls === 'primary_link' || e.cls === 'secondary' ? 0.005 : e.cls === 'tertiary' ? 0.0035 : e.cls === 'service' ? 0 : 0.002;
+      // (and two of the same class laid over each other — a carriageway and the unnamed lane the map runs along it —
+      // flickered in white stairs: the one in its street's own colour a hair above, the rest apart by their number)
+      const zy = (e.cls === 'primary' || e.cls === 'primary_link' || e.cls === 'secondary' ? 0.005 : e.cls === 'tertiary' ? 0.0035 : e.cls === 'service' ? 0 : 0.002) + (CALLES[e.name] ? 0.0008 : 0) + (e.id % 3) * 0.0002;
       if (kb) B.roadStrip(L, R, cum, kb.p, zy, layer, tint, dmg + 4 * (e.id % 997), kb.m);
       else B.roadStrip(L, R, e.cum, hw, zy, layer, tint, dmg + 4 * (e.id % 997));
     } else if (B === dirt && layer === GROUND.tierra) {
@@ -458,7 +493,8 @@ export function buildGround(map, materials, opts = {}) {
       for (const side of [1, -1]) {
         if (kb.regime === 2 || (kb.regime === 1 && kb.side !== side)) continue;
         const K = side > 0 ? kb.p : kb.m, Fh = side > 0 ? kb.fp : kb.fm, open = kerbSide(side);
-        const has = (i) => (Fh[i] === Fh[i] ? Fh[i] - K[i] >= 0.15 : open);
+        const OV = kb.ov ? (side > 0 ? kb.ov.p : kb.ov.m) : null; // (a pavement as the captures show it: kerbs.js applyAceras)
+        const has = (i) => (OV && OV[i] === OV[i] ? OV[i] > 0.05 : Fh[i] === Fh[i] ? Fh[i] - K[i] >= 0.15 : open);
         for (let i = 0; i < kb.n; ) {
           if (!has(i)) { i++; continue; }
           let j = i;
@@ -473,19 +509,22 @@ export function buildGround(map, materials, opts = {}) {
               outer[k * 2] = tmpG.x + nx * (a + KW()); outer[k * 2 + 1] = tmpG.z + nz * (a + KW());
               along[k] = (i + k) * kb.st; flags[k] = curbRamp(inner[k * 2], inner[k * 2 + 1], ramps);
             }
-            trimStrip(inner, outer, e, map, (a, b, idx) => curbs.curbStrip(a, b, idx.map((k) => along[k]), idx.map((k) => flags[k]), 0, GROUND.bordillo, [1, 1, 1]));
-            // (the street's own pavement behind the kerb, to the houses: as in its captures — calles.js; a stretch of it
-            // its own tiles, if its captures show them)
-            if (cs && (cs.acera || cs.tramos)) {
+            trimStrip(inner, outer, e, map, (a, b, idx) => curbs.curbStrip(a, b, idx.map((k) => along[k]), idx.map((k) => flags[k]), 0, GROUND.bordillo, kerbTint(e)));
+            // (the pavement behind the kerb, to the houses — where none stands, as wide as the orthophotos measured it, and
+            // none where they found none: a verge, the earth of a lot. The street's own tiles where its captures show them
+            // — calles.js, a stretch of it its own, if they show it — the town's grey ones elsewhere)
+            {
+              const swS = side > 0 ? e.swP : e.swM, bare = e.measured && swS == null;
               const pin = new Float32Array(m * 2), pout = new Float32Array(m * 2), pw = new Float32Array(m), spec = new Array(m);
               for (let k = 0; k < m; k++) {
                 polySample(e.pts, e.cum, (i + k) * kb.st, tmpG);
                 const nx = -tmpG.dz * side, nz = tmpG.dx * side, a = K[i + k] + KW(), f = Fh[i + k];
-                const b = f === f ? Math.max(a + 0.3, f + 0.05) : a + Math.max(1, (side > 0 ? e.swP : e.swM) ?? e.sw ?? 1.2);
+                const ow = OV ? OV[i + k] : NaN;
+                const b = ow === ow ? a + ow : f === f ? Math.max(a + 0.3, f + 0.05) : bare ? a : a + Math.max(1, swS ?? e.sw ?? 1.2);
                 pin[k * 2] = tmpG.x + nx * a; pin[k * 2 + 1] = tmpG.z + nz * a;
                 pout[k * 2] = tmpG.x + nx * b; pout[k * 2 + 1] = tmpG.z + nz * b;
                 pw[k] = b - a;
-                spec[k] = paveOf(cs, tmpG.x, tmpG.z, nx, nz);
+                spec[k] = pw[k] < 0.05 ? null : (cs && paveOf(cs, tmpG.x, tmpG.z, nx, nz)) || PAVE0;
               }
               // (one strip for each stretch of the same tiles, the next starting where the last ended)
               for (let k0 = 0; k0 < m - 1; ) {
@@ -495,7 +534,7 @@ export function buildGround(map, materials, opts = {}) {
                 if (pv && hi > k0) {
                   const sl = (arr, n) => arr.slice(k0 * n, (hi + 1) * n);
                   const AL = along.slice(k0, hi + 1), PW = pw.slice(k0, hi + 1), pt = paveTint(pv);
-                  trimStrip(sl(pin, 2), sl(pout, 2), e, map, (a, b, idx) => levels[2].paveStrip(a, b, idx.map((k) => AL[k]), idx.map((k) => PW[k]), 0, GROUND.acera, pt, pv.pat || 0));
+                  trimStrip(sl(pin, 2), sl(pout, 2), e, map, (a, b, idx) => levels[2].paveStrip(a, b, idx.map((k) => AL[k]), idx.map((k) => PW[k]), 0.01, GROUND.acera, pt, pv.pat || 0)); // (a centimetre over the junctions' paved corners)
                 }
                 k0 = k1 + 1;
               }
@@ -513,31 +552,63 @@ export function buildGround(map, materials, opts = {}) {
         const inner = offsetPolyline(dp, side * hw), outer = offsetPolyline(dp, side * (hw + KW()));
         const flags = new Float32Array(inner.length / 2);
         for (let i = 0; i < flags.length; i++) flags[i] = curbRamp(inner[i * 2], inner[i * 2 + 1], ramps);
-        trimStrip(inner, outer, e, map, (a, b, idx) => curbs.curbStrip(a, b, idx.map((k) => cum[k]), idx.map((k) => flags[k]), 0, GROUND.bordillo, [1, 1, 1]));
+        trimStrip(inner, outer, e, map, (a, b, idx) => curbs.curbStrip(a, b, idx.map((k) => cum[k]), idx.map((k) => flags[k]), 0, GROUND.bordillo, kerbTint(e)));
       }
     }
   }
   // the boulevards' medians, where the captures show one on a carriageway the map has as one (calles.js bulevar): a
   // raised strip of light concrete setts down its middle, kerbed both sides — its trees and benches: townplus.js
-  for (const st of Object.values(CALLES)) {
-    const bv = st.bulevar;
-    if (!bv) continue;
+  for (const bv of Object.values(CALLES).flatMap((st) => (st.bulevar ? [].concat(st.bulevar) : []))) {
+    // (asphalt under a median that the map's carriageways leave bare — between them, through its crossings and its ends:
+    // calles_medianas.js — in the street's own colour)
+    if (bv.base) {
+      const B = densify(bv.base.pts.flat(), 1.2), bc = polyCum(B), bh = bv.base.ancho / 2;
+      const cs = Object.values(CALLES).find((st) => [].concat(st.bulevar || []).includes(bv)), rc = cs && cs.roadCol;
+      const at = rc ? tintFrom(rc, asphaltBase('asphalt'), 0.88 * (STYLE.plastilina ? CLAY_ROAD : 1)) : W;
+      asphalt.roadStrip(offsetPolyline(B, bh), offsetPolyline(B, -bh), bc, bh, 0.001, GROUND.asphalt, at, 0.2);
+    }
     const P = densify(bv.pts.flat(), 1.2), cum = polyCum(P), n = P.length / 2;
     let i0 = 0, i1 = n - 1;
     while (i0 < n - 1 && cum[i0] < (bv.desde || 0)) i0++;
     while (i1 > i0 && cum[i1] > (bv.hasta ?? cum[n - 1])) i1--;
     const Q = P.slice(i0 * 2, (i1 + 1) * 2), qc = Array.from(cum.slice(i0, i1 + 1));
     if (Q.length < 4) continue;
-    const hw = (bv.ancho || 3) / 2, tint = bv.col ? tintFrom(bv.col, pavingMean('adoquin'), 0.9) : W;
-    levels[6].roadStrip(offsetPolyline(Q, hw), offsetPolyline(Q, -hw), qc, hw, 0.012, GROUND.adoquin, tint, 0.05);
+    // (its paving: concrete setts, or tiles — calles_medianas.js — in its own colour; a stretch of it paved otherwise, its
+    // tramos: the red tiles at the Calle Don Benito's east end)
+    const hw = (bv.ancho || 3) / 2;
+    const ranges = [[qc[0], qc[qc.length - 1], bv.col, bv.suelo]];
+    for (const t of bv.tramos || []) {
+      for (let r = ranges.length - 1; r >= 0; r--) {
+        const [a, b, c, su] = ranges[r];
+        if (t.hasta <= a || t.desde >= b) continue;
+        const parts = [];
+        if (t.desde > a) parts.push([a, t.desde, c, su]);
+        parts.push([Math.max(a, t.desde), Math.min(b, t.hasta), t.col, t.suelo]);
+        if (t.hasta < b) parts.push([t.hasta, b, c, su]);
+        ranges.splice(r, 1, ...parts);
+      }
+    }
+    for (const [a, b, c, su] of ranges) {
+      let i0 = 0, i1 = qc.length - 1;
+      while (i0 < qc.length - 1 && qc[i0 + 1] <= a) i0++;
+      while (i1 > i0 && qc[i1 - 1] >= b) i1--;
+      if (i1 - i0 < 1) continue;
+      const S = Q.slice(i0 * 2, (i1 + 1) * 2), sc = qc.slice(i0, i1 + 1), slab = su === 'losa';
+      const tint = c ? tintFrom(c, pavingMean(slab ? 'losa' : 'adoquin'), 0.9) : W;
+      levels[6].roadStrip(offsetPolyline(S, hw), offsetPolyline(S, -hw), sc, hw, 0.012, slab ? GROUND.plaza : GROUND.adoquin, tint, 0.05);
+    }
+    // (its kerbs in their colour where seen — calles_medianas.js bordillo: granite grey —, else the town's)
+    const ktint = bv.bordillo ? (() => { const l = (v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; const base = [0.52, 0.51, 0.49]; return [1, 3, 5].map((i, k) => Math.max(0.1, Math.min(2.2, l(parseInt(bv.bordillo.slice(i, i + 2), 16)) / base[k]))); })() : [1, 1, 1];
     for (const sd of [1, -1]) {
       const inner = offsetPolyline(Q, sd * hw), outer = offsetPolyline(Q, sd * (hw - KW()));
-      curbs.curbStrip(inner, outer, qc, new Float32Array(qc.length), 0, GROUND.bordillo, [1, 1, 1]);
+      curbs.curbStrip(inner, outer, qc, new Float32Array(qc.length), 0, GROUND.bordillo, ktint);
     }
   }
   for (const [nid, info] of nodeLayer) {
     const n = map.nodes[nid];
     info.B.disc(n.x, n.z, info.r, 0.009, info.layer, info.tint);
+    // (round a junction of the town's streets, their pavements meet: the corners paved, under the carriageway)
+    if (n.degree >= 2 && n.edges.some((id) => map.edges[id].kerb)) levels[2].disc(n.x, n.z, n.radius + 3.6, 0, GROUND.acera, [1, 1, 1], 24);
   }
   const geoms = levels.map((b) => b.geometry());
   return { geoms, curbs: curbs.geometry(), water, olivePlots, vinePlots, forestPlots, parkPlots, parkingPlots, pitches, parcels };
@@ -586,35 +657,65 @@ export function buildMarkings(map) {
   const tmp = {};
   // centre lines (none on the old town's streets: their captures show no paint at all — a street with a style has them
   // only where its captures do, calles.js lineas)
-  const painted = (e, k) => { const cs = CALLES[e.name]; return !cs || !!(cs.lineas && cs.lineas[k]); };
+  // (a street seen in its captures: its own lines — lineas { centro: true|'discontinua'|'continua'|'doble', bordes,
+  // aparcamiento } —; the rest of the town: a centre line on its main roads only, none on its streets — the audit of
+  // 2026-10-13 found lines painted on street after street that has none)
+  // (a street's lines as its captures show them — a stretch of it its own: calles.js tramos lineas)
+  const linesOf = (e) => { const cs = CALLES[e.name]; return cs ? roadOf(cs, e).lineas || cs.lineas : null; };
+  const painted = (e, k) => { const cs = CALLES[e.name], L = linesOf(e); return cs ? !!(L && L[k]) : k === 'centro' && (e.cls === 'primary' || e.cls === 'secondary' || e.cls === 'primary_link'); };
+  const centreKind = (e) => { const L = linesOf(e), c = L && L.centro; return c === 'continua' || c === 'doble' ? c : 'discontinua'; };
   for (const e of map.edges) {
     if (e.dirt || e.oneway || e.walkOnly || e.cobbled || !painted(e, 'centro')) continue;
-    if (!['primary', 'secondary', 'tertiary', 'unclassified', 'primary_link'].includes(e.cls)) continue;
+    if (!['primary', 'secondary', 'tertiary', 'unclassified', 'primary_link', 'residential'].includes(e.cls)) continue;
     if (e.w < 5.8) continue;
     const na = map.nodes[e.a], nb = map.nodes[e.b];
     const s0 = na.degree > 1 ? na.radius + 5 : 1, s1 = e.len - (nb.degree > 1 ? nb.radius + 5 : 1);
     const dash = 4.5; // one texture repeat = dash + gap = 9 m
+    const kind = centreKind(e), offs = kind === 'doble' ? [-0.16, 0.16] : [0];
     for (let s = s0; s < s1 - 1; s += 2) {
       const a = polySample(e.pts, e.cum, s, {}), b = polySample(e.pts, e.cum, Math.min(s + 2, s1), {});
       const hw = STYLE.plastilina ? 0.11 : 0.08; // (claymation: a fat roll of white clay)
-      const nxa = -a.dz * hw, nza = a.dx * hw, nxb = -b.dz * hw, nzb = b.dx * hw;
-      const u0 = (s - s0) / (dash * 2), u1 = (Math.min(s + 2, s1) - s0) / (dash * 2);
-      addQuad([a.x + nxa, a.z + nza], [b.x + nxb, b.z + nzb], [b.x - nxb, b.z - nzb], [a.x - nxa, a.z - nza], u0, 0.845, u1, 0.905);
+      for (const o of offs) {
+        const ax = a.x - a.dz * o, az = a.z + a.dx * o, bx = b.x - b.dz * o, bz = b.z + b.dx * o;
+        const nxa = -a.dz * hw, nza = a.dx * hw, nxb = -b.dz * hw, nzb = b.dx * hw;
+        if (kind === 'discontinua') {
+          const u0 = (s - s0) / (dash * 2), u1 = (Math.min(s + 2, s1) - s0) / (dash * 2);
+          addQuad([ax + nxa, az + nza], [bx + nxb, bz + nzb], [bx - nxb, bz - nzb], [ax - nxa, az - nza], u0, 0.845, u1, 0.905);
+        } else addQuad([ax + nxa, az + nza], [bx + nxb, bz + nzb], [bx - nxb, bz - nzb], [ax - nxa, az - nza], 0.02, 0.6, 0.98, 0.65); // (solid: the atlas' continuous row)
+      }
+    }
+  }
+  // (the edge lines of a road without kerbs, where its captures show them: lineas.bordes)
+  for (const e of map.edges) {
+    if (e.dirt || e.walkOnly || e.cobbled || !e.drive || !painted(e, 'bordes')) continue;
+    const s1 = e.len - 1;
+    for (let s = 1; s < s1; s += 2) {
+      const s2 = Math.min(s + 2, s1);
+      const a = polySample(e.pts, e.cum, s, {}), b = polySample(e.pts, e.cum, s2, {}), hw = 0.08;
+      for (const side of [-1, 1]) {
+        const oa = side * (map.kerbAt(e, s, side) - 0.35), ob = side * (map.kerbAt(e, s2, side) - 0.35);
+        const ax = a.x - a.dz * oa, az = a.z + a.dx * oa, bx = b.x - b.dz * ob, bz = b.z + b.dx * ob;
+        addQuad([ax - a.dz * hw, az + a.dx * hw], [bx - b.dz * hw, bz + b.dx * hw], [bx + b.dz * hw, bz - b.dx * hw], [ax + a.dz * hw, az - a.dx * hw], 0.02, 0.6, 0.98, 0.65);
+      }
     }
   }
   // (claymation: on the wide streets a continuous roll of white clay a parking lane in from each kerb, as in the user's
   // second picture)
   if (STYLE.plastilina) for (const e of map.edges) {
-    if (e.dirt || e.walkOnly || e.cobbled || !e.drive || e.w < 6.8 || !painted(e, 'aparcamiento')) continue;
+    if (e.dirt || e.walkOnly || e.cobbled || !e.drive || e.w < 5 || !painted(e, 'aparcamiento')) continue;
     const na = map.nodes[e.a], nb = map.nodes[e.b];
     const s0 = na.degree > 1 ? na.radius + 3 : 1, s1 = e.len - (nb.degree > 1 ? nb.radius + 3 : 1);
     const kb = e.kerb;
+    // (a street its captures show the line on but too narrow for a lane each side, 5 to 6.8 m: one, on the side the cars
+    // park — fleet.js's rule)
+    const one = e.w < 6.8 ? (e.oneway ? -1 : hash1(e.id) < 0.5 ? 1 : -1) : 0;
     for (const side of [-1, 1]) {
+      if (one && side !== one) continue;
       if (kb && (kb.regime === 2 || (kb.regime === 1 && kb.side !== side))) continue; // (no kerb that side: no parking lane)
       for (let s = s0; s < s1 - 0.5; s += 2) {
         const s2 = Math.min(s + 2, s1);
         // (from the kerb as laid, kerbs.js; not where the carriageway narrows under 6.8 m)
-        if (kb && (map.kerbAt(e, s, 1) + map.kerbAt(e, s, -1) < 6.8 || map.kerbAt(e, s2, 1) + map.kerbAt(e, s2, -1) < 6.8)) continue;
+        if (kb && (map.kerbAt(e, s, 1) + map.kerbAt(e, s, -1) < (one ? 5 : 6.8) || map.kerbAt(e, s2, 1) + map.kerbAt(e, s2, -1) < (one ? 5 : 6.8))) continue;
         const oa = side * (map.kerbAt(e, s, side) - 1.95), ob = side * (map.kerbAt(e, s2, side) - 1.95);
         const a = polySample(e.pts, e.cum, s, {}), b = polySample(e.pts, e.cum, s2, {}), hw = 0.13;
         const ax = a.x - a.dz * oa, az = a.z + a.dx * oa, bx = b.x - b.dz * ob, bz = b.z + b.dx * ob;
@@ -622,8 +723,8 @@ export function buildMarkings(map) {
       }
     }
   }
-  // zebra crossings at OSM crossing nodes
-  for (const p of map.pois) {
+  // zebra crossings at OSM crossing nodes, and where the captures show one (calles_arreglos.js PASOS)
+  for (const p of map.pois.filter((o) => o.kind === 'highway:crossing').concat(PASOS.map(([x, z]) => ({ kind: 'highway:crossing', x, z })))) {
     if (p.kind !== 'highway:crossing') continue;
     const q = map.nearestEdge(p.x, p.z, 6, (e) => e.drive);
     if (!q) continue;

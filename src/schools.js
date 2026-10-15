@@ -6,7 +6,8 @@
 // two goals, two baskets) where there is room for one. A school too small for a yard gets its plaque on the facade.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { pointInRing, polyNearest } from './util.js';
+import { pointInRing, polyNearest, ringBounds } from './util.js';
+import { SIN_VALLA_COLEGIO } from './calles_arreglos.js';
 import { flagCanvas } from './textures.js';
 
 const NAMES = [[/San Gregorio Educ/i, 'CEIP San Gregorio', 'Educación Infantil'], [/C\.?P\.? San Gregorio/i, 'CEIP San Gregorio', 'Guareña'],
@@ -71,9 +72,12 @@ export function buildSchools(L) {
     return false;
   };
   // a straight run of fence from a to b (plinth, railings, posts) and its collider
+  const noFence = SIN_VALLA_COLEGIO.map((r) => ({ r, bb: ringBounds(r) }));
   const fence = (ax, az, bx, bz) => {
     const len = Math.hypot(bx - ax, bz - az);
     if (len < 0.4) return;
+    const mx0 = (ax + bx) / 2, mz0 = (az + bz) / 2; // (none where the captures show none: calles_arreglos.js SIN_VALLA_COLEGIO)
+    if (noFence.some((o) => mx0 > o.bb[0] && mx0 < o.bb[2] && mz0 > o.bb[1] && mz0 < o.bb[3] && pointInRing(mx0, mz0, o.r))) return;
     const ry = Math.atan2(-(bz - az), bx - ax), mx = (ax + bx) / 2, mz = (az + bz) / 2;
     G.plinth.push(at(new THREE.BoxGeometry(len, 0.55, 0.22), mx, 0.275, mz, ry));
     const p = new THREE.PlaneGeometry(len, 1.35), uv = p.attributes.uv;

@@ -1,4 +1,4 @@
-# The long yard walls the user's captures show where the map has no building at all (the per-house notes: casas/*.json,
+# The long yard walls (and tall hedges) the user's captures show where the map has no building at all (the per-house notes: casas/*.json,
 # «tapia … en el mapa no hay edificio ahí»): for each, the view it was seen from, the side, how far along, its height,
 # what it is made of and its colour — written by hand below from those notes. From the view's camera (fitted where
 # Google's GPS was off: .cache/calles/camaras.json) along its axis, metre by metre, the street beside it and the line its
@@ -22,6 +22,10 @@ TAPIAS = [
     (34, 'der', 0, 30, 2.5, 'piedra', '#b29b80', None),        # Cuesta: rubble and rammed earth, never whitewashed
     (40, 'izq', 0, 12, 2.6, 'cal', '#efede6', None),           # Derecha: the white wall before the houses
     (46, 'izq', 0, 8, 2.6, 'cal', '#efede6', '#5a3a24'),       # Don Manuel Dorado: the wall before the houses, its gate
+    # (and the tall clipped hedges of Arizona cypress — arizónicas — that close a garden or a lot the same way: a hedge
+    # instead of a wall, its colour the dull olive green they show in daylight)
+    (188, 'der', 0, 26, 2.5, 'seto', '#6a7a52', None),         # Antonio Machado, its south end: along the east pavement
+    (191, 'izq', 0, 42, 2.2, 'seto', '#6a7a52', None),         # El Chiriveje: round the garden of the block of flats (502)
 ]
 
 B = [[v / 10 for v in b['p']] for b in M['buildings']]

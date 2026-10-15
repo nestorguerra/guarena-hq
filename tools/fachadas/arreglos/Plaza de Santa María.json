@@ -1,0 +1,279 @@
+{
+ "calle": {
+  "walls": [
+   [
+    "#f1efe9",
+    0.7
+   ],
+   [
+    "#e6dccd",
+    0.15
+   ],
+   [
+    "#e3d6c3",
+    0.15
+   ]
+  ],
+  "pots": 0,
+  "toldos": false,
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": true
+  },
+  "roadCol": "#9a948b"
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 5,
+   "lado": "izq",
+   "desde": -6,
+   "hasta": 14,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 5,
+   "lado": "der",
+   "desde": -6,
+   "hasta": 40,
+   "ancho": 0
+  },
+  {
+   "tipo": "suelo",
+   "vista": 5,
+   "lado": "izq",
+   "desde": -6,
+   "hasta": 30,
+   "fondo": 14,
+   "material": "asfalto",
+   "color": "#9a948b"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 5,
+   "lado": "der",
+   "desde": -6,
+   "hasta": 40,
+   "fondo": 12,
+   "material": "asfalto",
+   "color": "#9a948b"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 5,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 36,
+   "modo": "bateria",
+   "lateral": 0,
+   "camara": {
+    "x": -188.0,
+    "z": -68.4,
+    "heading": 73.5
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 6,
+   "lado": "der",
+   "desde": 6,
+   "hasta": 16,
+   "fondo": 14,
+   "material": "asfalto",
+   "color": "#9a948b"
+  },
+  {
+   "tipo": "senal",
+   "vista": 6,
+   "lado": "der",
+   "en": 14,
+   "lateral": 11.5,
+   "placas": [
+    "aparcamiento"
+   ],
+   "mira": "camara",
+   "pared": true
+  },
+  {
+   "tipo": "acera",
+   "vista": 7,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 32,
+   "ancho": 0,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 7,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 32,
+   "ancho": 0,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 7,
+   "lado": "izq",
+   "desde": -10,
+   "hasta": 32,
+   "fondo": 28,
+   "material": "asfalto",
+   "color": "#9a948b",
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 7,
+   "lado": "izq",
+   "desde": 5,
+   "hasta": 40,
+   "fondo": 38,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 7,
+   "lado": "izq",
+   "desde": -14,
+   "hasta": -3.5,
+   "modo": "bateria",
+   "lateral": 9,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 30
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 7,
+   "lado": "izq",
+   "desde": -20,
+   "hasta": -6,
+   "modo": "bateria",
+   "lateral": 14,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 30
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 7,
+   "lado": "izq",
+   "desde": -34,
+   "hasta": -8,
+   "modo": "bateria",
+   "lateral": 20,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 30
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 7,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 16,
+   "modo": "cordon",
+   "lateral": 6.0,
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 7,
+   "lado": "der",
+   "en": 8.2,
+   "lateral": 7.0,
+   "placas": [
+    "direccion_prohibida",
+    "prohibido_estacionar"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": -174.32,
+    "z": -89.95,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "poste",
+   "vista": 7,
+   "lado": "der",
+   "en": 19,
+   "lateral": 3.0,
+   "modelo": "madera",
+   "alto": 9.5
+  },
+  {
+   "tipo": "cartel",
+   "vista": 6,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 9.7,
+   "alto": 6.2,
+   "suelo": 0,
+   "color": "#f2f0ea",
+   "mira": "espalda",
+   "camara": {
+    "x": -149.26,
+    "z": -87.49,
+    "heading": 124.7
+   }
+  },
+  {
+   "tipo": "tapa",
+   "vista": 6,
+   "lado": "der",
+   "en": 3.2,
+   "lateral": 3.3,
+   "forma": "rejilla",
+   "tam": 1.6
+  },
+  {
+   "tipo": "sin_tapias",
+   "vista": 6,
+   "lado": "der",
+   "desde": 6,
+   "hasta": 17,
+   "fondo": 8
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 7,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 6,
+   "fondo": 6,
+   "nota": "revisión final: la farola que el juego ponía pegada a la cámara; la captura no tiene ninguna ahí"
+  }
+ ]
+}

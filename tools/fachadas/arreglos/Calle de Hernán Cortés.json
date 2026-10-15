@@ -1,0 +1,24 @@
+{
+ "calle": {
+  "lineas": {"centro": false, "bordes": false, "aparcamiento": false},
+  "arboles": null,
+  "road": "asfalto",
+  "roadCol": "#d1bfa7",
+  "acera": {"col": "#e3d5bd", "pat": 0},
+  "lamps": {"every": 30, "kind": "pared"},
+  "pots": 0.05,
+  "toldos": false
+ },
+ "items": [
+  {"tipo": "aparcamiento", "vista": 244, "lado": "der", "desde": 1, "hasta": 55, "modo": "cordon"},
+  {"tipo": "aparcamiento", "vista": 244, "lado": "izq", "desde": 16, "hasta": 55, "modo": "cordon"},
+  {"tipo": "farola", "vista": 244, "lado": "der", "en": 13, "modelo": "fernandino"},
+  {"tipo": "farola", "vista": 245, "lado": "izq", "en": 12, "modelo": "fernandino"},
+  {"tipo": "aparcamiento", "vista": 245, "lado": "der", "desde": 10, "hasta": 15, "modo": "cordon"},
+  {"tipo": "farola", "vista": 246, "lado": "izq", "en": 6, "modelo": "fernandino"},
+  {"tipo": "acera", "vista": 247, "lado": "der", "desde": 0, "hasta": 60, "ancho": 0},
+  {"tipo": "suelo", "vista": 247, "lado": "der", "desde": 0, "hasta": 60, "fondo": 6, "material": "tierra", "color": "#b9a07f"},
+  {"tipo": "arboles", "vista": 247, "lado": "der", "desde": 8, "hasta": 62, "especie": "platano", "cada": 10, "escala": 0.85, "lateral": 7.2},
+  {"tipo": "farola", "vista": 247, "lado": "der", "en": 11, "modelo": "baculo", "lateral": 16}
+ ]
+}

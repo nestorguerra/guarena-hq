@@ -1,0 +1,133 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "toldos": 0,
+  "tramos": [
+   {
+    "x": -128.55,
+    "z": -24.68,
+    "r": 4,
+    "acera": {
+     "col": "#dba99b",
+     "pat": 0
+    }
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "paso",
+   "vista": 29,
+   "lado": "der",
+   "en": -0.8,
+   "lateral": 1.6
+  },
+  {
+   "tipo": "bolardos",
+   "vista": 29,
+   "lado": "izq",
+   "desde": 6.7,
+   "hasta": 7.5,
+   "cada": 0.8,
+   "lateral": 0.2
+  },
+  {
+   "tipo": "farola",
+   "vista": 29,
+   "lado": "der",
+   "en": 8.5,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "acera",
+   "vista": 30,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 38,
+   "ancho": 0,
+   "camara": {
+    "x": -96.76,
+    "z": 3.53,
+    "heading": 40.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 30,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 38,
+   "ancho": 0,
+   "camara": {
+    "x": -96.76,
+    "z": 3.53,
+    "heading": 40.0
+   }
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 30,
+   "lado": "ambos",
+   "desde": 0,
+   "hasta": 8,
+   "camara": {
+    "x": -96.76,
+    "z": 3.53,
+    "heading": 40.0
+   }
+  },
+  {
+   "tipo": "bolardos",
+   "vista": 30,
+   "lado": "izq",
+   "desde": 7.9,
+   "hasta": 8.7,
+   "cada": 0.8,
+   "lateral": 6.5,
+   "camara": {
+    "x": -96.76,
+    "z": 3.53,
+    "heading": 40.0
+   }
+  },
+  {
+   "tipo": "bolardos",
+   "vista": 30,
+   "lado": "izq",
+   "desde": 8.2,
+   "hasta": 9.0,
+   "cada": 0.8,
+   "lateral": 1.2,
+   "camara": {
+    "x": -96.76,
+    "z": 3.53,
+    "heading": 40.0
+   }
+  },
+  {
+   "tipo": "paso",
+   "vista": 31,
+   "en": 7.3
+  },
+  {
+   "tipo": "tapia",
+   "vista": 31,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 5,
+   "alto": 0.85,
+   "material": "seto",
+   "color": "#4d6038",
+   "lateral": 0,
+   "camara": {
+    "x": -17.27,
+    "z": 35.52,
+    "heading": 27.8
+   }
+  }
+ ]
+}

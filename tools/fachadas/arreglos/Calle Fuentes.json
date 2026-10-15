@@ -1,0 +1,404 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#d0c3ae",
+  "acera": {
+   "col": "#cbc3b3",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 25,
+   "kind": "pared"
+  },
+  "pots": 0,
+  "toldos": 0,
+  "tramos": [
+   {
+    "x": 160.4,
+    "z": 202.4,
+    "r": 22,
+    "acera": {
+     "col": "#efebe5",
+     "pat": 1
+    }
+   }
+  ],
+  "firme": "liso",
+  "aristas": [
+   495
+  ]
+ },
+ "items": [
+  {
+   "tipo": "amarillo",
+   "vista": 62,
+   "lado": "izq",
+   "desde": 5.5,
+   "hasta": 8.0
+  },
+  {
+   "tipo": "farola",
+   "vista": 62,
+   "lado": "der",
+   "en": 19.6,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 61,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 20,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "acera",
+   "vista": 63,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 1.0
+  },
+  {
+   "tipo": "farola",
+   "vista": 64,
+   "lado": "izq",
+   "en": 5,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "cable",
+   "vista": 62,
+   "en": 7,
+   "alto": 5.5
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.07,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -17.24,
+    "z": 246.74,
+    "heading": 94.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -17.05,
+    "z": 244.74,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.85,
+    "z": 242.76,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 1.97,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.68,
+    "z": 240.8,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.05,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.53,
+    "z": 238.81,
+    "heading": 93.8
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.36,
+    "z": 236.81,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.16,
+    "z": 234.83,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -15.96,
+    "z": 232.85,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -15.37,
+    "z": 226.91,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -15.17,
+    "z": 224.93,
+    "heading": 95.9
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 1.99,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -14.95,
+    "z": 222.96,
+    "heading": 95.9
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.03,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -14.7,
+    "z": 220.98,
+    "heading": 97.6
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 2.01,
+   "alto": 2.4,
+   "suelo": 0.0,
+   "color": "#836f5a",
+   "mira": "espalda",
+   "camara": {
+    "x": -14.47,
+    "z": 219.0,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 1.1,
+   "alto": 2.3,
+   "suelo": 0.0,
+   "color": "#3b2f26",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.36,
+    "z": 237.81,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 63,
+   "lado": "izq",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 0.8,
+   "alto": 0.8,
+   "suelo": 3.5,
+   "color": "#2e2a27",
+   "mira": "espalda",
+   "camara": {
+    "x": -16.96,
+    "z": 243.746,
+    "heading": 95.7
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 61,
+   "de": {
+    "en": 11.61,
+    "lado": "izq",
+    "lateral": 3.93
+   },
+   "a": {
+    "en": 12.41,
+    "lado": "izq",
+    "lateral": 4.0
+   },
+   "alto": 8.3,
+   "material": "cal",
+   "color": "#f2efe8"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 61,
+   "de": {
+    "en": 12.41,
+    "lado": "izq",
+    "lateral": 4.0
+   },
+   "a": {
+    "en": 12.48,
+    "lado": "izq",
+    "lateral": 3.2
+   },
+   "alto": 8.3,
+   "material": "cal",
+   "color": "#f2efe8"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 61,
+   "de": {
+    "en": 12.48,
+    "lado": "izq",
+    "lateral": 3.2
+   },
+   "a": {
+    "en": 11.68,
+    "lado": "izq",
+    "lateral": 3.13
+   },
+   "alto": 8.3,
+   "material": "cal",
+   "color": "#f2efe8"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 61,
+   "de": {
+    "en": 11.68,
+    "lado": "izq",
+    "lateral": 3.13
+   },
+   "a": {
+    "en": 11.61,
+    "lado": "izq",
+    "lateral": 3.93
+   },
+   "alto": 8.3,
+   "material": "cal",
+   "color": "#f2efe8"
+  }
+ ]
+}

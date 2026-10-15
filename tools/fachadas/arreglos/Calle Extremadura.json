@@ -1,0 +1,167 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#cbb8a0",
+  "acera": {
+   "col": "#d3c7b1",
+   "pat": 0
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 999,
+   "kind": "columna"
+  },
+  "pots": 0,
+  "toldos": 0,
+  "cables": false,
+  "garage": 0.3,
+  "balc": 0.15,
+  "pretil": 0.2,
+  "kinds": {
+   "renovada": 0.5,
+   "moderna": 0.4,
+   "color": 0.1
+  },
+  "walls": [
+   [
+    "#f0ede8",
+    0.5
+   ],
+   [
+    "#eee0cc",
+    0.25
+   ],
+   [
+    "#e6d6bf",
+    0.15
+   ],
+   [
+    "#d9b88a",
+    0.1
+   ]
+  ],
+  "plinth": [
+   {
+    "kind": null,
+    "share": 0.5
+   },
+   {
+    "kind": "piedra",
+    "col": "#d5c4aa",
+    "h": 0.9,
+    "share": 0.3
+   },
+   {
+    "kind": "granito",
+    "col": "#9a958f",
+    "h": 0.9,
+    "share": 0.2
+   }
+  ],
+  "surround": {
+   "share": 0.3,
+   "col": "#f2eee6"
+  },
+  "reja": {
+   "share": 0.4,
+   "col": "#1e1e22",
+   "buche": 0.0
+  }
+ },
+ "items": [
+  {
+   "tipo": "tapia",
+   "vista": 101,
+   "lado": "der",
+   "desde": -4,
+   "hasta": 3.8,
+   "alto": 1.7,
+   "material": "verja",
+   "color": "#f1f0ec",
+   "murete": "#d5c4aa"
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 123,
+   "lado": "izq",
+   "desde": 3.5,
+   "hasta": 13
+  },
+  {
+   "tipo": "tapia",
+   "vista": 123,
+   "lado": "izq",
+   "desde": 3.5,
+   "hasta": 13,
+   "alto": 2.4,
+   "material": "enfoscado",
+   "color": "#f4f3f0",
+   "puerta": "#4a4b50"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 123,
+   "lado": "izq",
+   "desde": -8,
+   "hasta": 3.2,
+   "alto": 1.9,
+   "material": "celosia",
+   "color": "#6b7176",
+   "murete": "#d9b88a",
+   "lateral": 6.8
+  },
+  {
+   "tipo": "arbol",
+   "vista": 123,
+   "lado": "izq",
+   "en": 5,
+   "fondo": 3,
+   "especie": "frutal",
+   "escala": 0.9
+  },
+  {
+   "tipo": "farola",
+   "vista": 123,
+   "lado": "izq",
+   "en": 5,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 124,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 9,
+   "alto": 1.9,
+   "material": "celosia",
+   "color": "#6b7176",
+   "murete": "#d9d1c0",
+   "puerta": "#6e7377"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 124,
+   "lado": "izq",
+   "desde": 9,
+   "hasta": 18,
+   "alto": 1.9,
+   "material": "celosia",
+   "color": "#6b7176",
+   "murete": "#d9d1c0"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 124,
+   "lado": "izq",
+   "en": 19,
+   "fondo": 3.5,
+   "especie": "morera",
+   "escala": 1.0
+  }
+ ]
+}

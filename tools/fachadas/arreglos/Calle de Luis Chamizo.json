@@ -1,0 +1,112 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "acera": {
+   "col": "#dccdb6",
+   "pat": 0
+  },
+  "tramos": [
+   {
+    "x": 338.0,
+    "z": 151.5,
+    "r": 45,
+    "acera": {
+     "col": "#efebe5",
+     "pat": 1
+    }
+   }
+  ],
+  "toldos": 0,
+  "firme": "liso"
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 180,
+   "lado": "izq",
+   "en": 9,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 181,
+   "lado": "izq",
+   "en": 6.3,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 181,
+   "lado": "der",
+   "en": 24,
+   "tipos": [
+    "envases",
+    "resto"
+   ]
+  },
+  {
+   "tipo": "farola",
+   "vista": 182,
+   "lado": "izq",
+   "en": 5.8,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "senal",
+   "vista": 182,
+   "lado": "der",
+   "en": 9,
+   "placas": [
+    "peligro"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "cable",
+   "vista": 180,
+   "en": 12,
+   "alto": 7.0
+  },
+  {
+   "tipo": "banderines",
+   "vista": 180,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 60,
+   "alto": 6.5,
+   "colores": [
+    "#2f8f46",
+    "#f4f4f0"
+   ]
+  },
+  {
+   "tipo": "banderines",
+   "vista": 181,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 60,
+   "alto": 6.5,
+   "colores": [
+    "#2b4fa8",
+    "#f4f4f0"
+   ]
+  },
+  {
+   "tipo": "banderines",
+   "vista": 182,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 60,
+   "alto": 6.5,
+   "colores": [
+    "#c8202a",
+    "#f2c230"
+   ]
+  }
+ ]
+}

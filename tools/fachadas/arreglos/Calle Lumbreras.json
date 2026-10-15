@@ -1,0 +1,52 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#d6c7b1",
+  "acera": {
+   "col": "#ece6dc",
+   "pat": 1
+  },
+  "arboles": null,
+  "pots": 0,
+  "toldos": 0,
+  "balc": 0.05,
+  "lamps": {
+   "every": 999,
+   "kind": "pared"
+  },
+  "walls": [
+   [
+    "#f0ece4",
+    0.65
+   ],
+   [
+    "#e8d8bd",
+    0.35
+   ]
+  ]
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 261,
+   "lado": "der",
+   "en": 3,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 263,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 10,
+   "alto": 7,
+   "material": "enfoscado",
+   "color": "#b7ab98"
+  }
+ ]
+}

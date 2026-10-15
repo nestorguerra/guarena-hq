@@ -9,7 +9,8 @@
 import * as THREE from 'three';
 import { GroundBuilder } from './ground.js';
 import { GROUND } from './textures.js';
-import { mulberry32, polySample, clamp } from './util.js';
+import { mulberry32, polySample, clamp, pointInRing, ringBounds } from './util.js';
+import { SIN_FLORES } from './calles_arreglos.js';
 
 // ------------------------------------------------------------------ zone map
 function ageOf(y) {
@@ -343,7 +344,8 @@ export function buildGroundRelief(world, map, field) {
 export function placeGroundLife(world, map, field, weedSpots) {
   const fd = world.facades;
   const rnd = mulberry32(31337);
-  const put = (k, x, z, s) => { fd.addPlant(k, x, 0, z, s, (rnd() * 4294967296) >>> 0); n++; };
+  const bare = SIN_FLORES.map((r) => ({ r, bb: ringBounds(r) })); // (none where the captures show none: calles_arreglos.js)
+  const put = (k, x, z, s) => { const seed = (rnd() * 4294967296) >>> 0; if (bare.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r))) return; fd.addPlant(k, x, 0, z, s, seed); n++; };
   let n = 0;
   const zone = (x, z) => clamp(0.25 + field.age(x, z) * 0.55 + field.green(x, z) * 0.6, 0, 1.4);
   // squares, pedestrian streets and the market are swept every morning; parks, schools and pitches are looked after;

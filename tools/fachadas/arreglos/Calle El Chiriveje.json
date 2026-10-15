@@ -1,0 +1,14 @@
+{"calle": {"lineas": {"centro": false, "bordes": false, "aparcamiento": false}, "arboles": null, "lamps": {"every": 30, "kind": "columna"}, "road": "asfalto", "roadCol": "#8d8478", "pots": 0, "toldos": 0.02, "garage": 0.3, "balc": 0.45, "walls": [["#f4f2ec", 0.6], ["#f3d9b6", 0.15], ["#f0e6d8", 0.15], ["#e3dac8", 0.05], ["#c08f75", 0.05, "ladrillo"]], "kinds": {"renovada": 0.5, "color": 0.2, "moderna": 0.3}}, "items": [
+ {"tipo": "farola", "vista": 189, "lado": "der", "en": 8, "modelo": "baculo"},
+ {"tipo": "contenedores", "vista": 189, "lado": "izq", "en": 11, "tipos": ["papel", "resto", "papel", "envases"]},
+ {"tipo": "tapia", "vista": 189, "lado": "izq", "desde": 30, "hasta": 41, "alto": 2.0, "material": "verja", "color": "#5f86a6", "lateral": 12.6},
+ {"tipo": "tapia", "vista": 190, "lado": "izq", "desde": 2, "hasta": 27, "alto": 1.9, "material": "verja", "color": "#1e1e1e", "murete": "#f0eee8", "lateral": 12.0},
+ {"tipo": "arbol", "vista": 190, "lado": "izq", "en": 32, "especie": "frutal", "escala": 1.1, "lateral": 14.5},
+ {"tipo": "arbol", "vista": 190, "lado": "izq", "en": 37, "especie": "acacia", "escala": 1.0, "lateral": 14.5},
+ {"tipo": "farola", "vista": 190, "lado": "der", "en": 32, "modelo": "baculo"},
+ {"tipo": "tapia", "vista": 191, "lado": "der", "desde": 0, "hasta": 36, "alto": 1.9, "material": "verja", "color": "#f0efe9", "murete": "#f0efe9", "lateral": 8.3},
+ {"tipo": "farola", "vista": 191, "lado": "izq", "en": 3, "modelo": "baculo"},
+ {"tipo": "amarillo", "vista": 191, "lado": "izq", "desde": -4, "hasta": 32},
+ {"tipo": "farola", "vista": 191, "lado": "der", "en": 7, "modelo": "pared", "lateral": 13.6},
+ {"tipo": "contenedores", "vista": 191, "lado": "der", "en": 14, "tipos": ["resto"]}
+]}

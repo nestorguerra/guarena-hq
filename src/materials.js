@@ -215,7 +215,10 @@ mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
   }
   // ---- a house's own plinth (its street's style, calles.js — vZoc: the colour, and its kind × 10 plus its height): it
   // takes the place of its façade kind's painted one; round the holes (vRect) the opening's own frame and leaf stay
-  float zk = floor(vZoc.w / 10.0 + 1e-3), zh = vZoc.w - zk * 10.0;
+  // (its hundreds: the whitewash peeling off — calles.js peel, below)
+  float pk = floor(vZoc.w / 100.0 + 1e-3), zw = vZoc.w - pk * 100.0;
+  float zk = floor(zw / 10.0 + 1e-3), zh = zw - zk * 10.0;
+  bool gBare = false;
   bool zOwn = zk > 0.5 && !isRoof && fl < 0.5 && !fillQ && gGlass < 0.5 && layer < 63.5;
   gZocH = -1.0;
   if (zOwn) {
@@ -224,7 +227,7 @@ mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
     bool inHole = vRect.z > vRect.x + 0.01 && c0.x > vRect.x - 0.03 && c0.x < vRect.z + 0.03 && c0.y > vRect.y - 0.02 && c0.y < vRect.w + 0.02;
     int st8 = int(floor(layer / 8.0 + 0.001));
     bool kindPlinth = y < uZocH[st8] + 0.02 && wallMask < 0.5 && !inHole;
-    if (zk > 5.5) { if (kindPlinth) col = vTint * 0.96; } // (no plinth: the wall's paint to the ground)
+    if (zk > 5.5) { if (kindPlinth) { col = vTint * 0.96; gBare = true; } } // (no plinth: the wall's paint to the ground)
     else if (!inHole && y < zh && (wallMask > 0.5 || kindPlinth)) {
       vec3 wz = normalize(vWNrm);
       vec2 wuv = vec2(dot(vWPos.xz, vec2(-wz.z, wz.x)), vWPos.y);
@@ -255,6 +258,24 @@ mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv) {
       col *= mix(0.86, 1.0, smoothstep(0.0, 0.03, zh - y)); // (its top edge's shade)
       gZocH = zh;
     } else if (kindPlinth) col = vTint * 0.96; // (above it, where the kind's own plinth was: the wall)
+  }
+  // ---- the whitewash peeling off (calles.js peel: how much, 1–3, plus three times what shows under it — ochre render
+  // and earth, grey mortar, white render): patches where the lime has come away, most of them along the foot of the wall
+  // where the damp rises, the deepest showing what is under the render; a hairline of shade along each one's broken lip
+  if (pk > 0.5 && !isRoof && !fillQ && gGlass < 0.5 && (wallMask > 0.5 || gBare) && layer < 63.5) {
+    float pt = floor((pk - 1.0) / 3.0 + 1e-3), amt = pk - pt * 3.0;
+    vec3 wq = normalize(vWNrm);
+    vec2 pp = vec2(dot(vWPos.xz, vec2(-wq.z, wq.x)), vWPos.y);
+    // (ragged edges: the finer octaves break the round blots up into flakes)
+    float pn = gNoise(pp * 0.8) * 0.5 + gNoise(pp * 2.1 + 3.7) * 0.25 + gNoise(pp * 5.3 + 1.3) * 0.15 + gNoise(pp * 13.0 + 7.9) * 0.1;
+    float foot = 1.0 - smoothstep(0.3, 0.9 + 0.5 * amt, pp.y);
+    float thr = 0.84 - 0.06 * amt - foot * (0.12 + 0.06 * amt);
+    float pm = smoothstep(thr, thr + 0.015, pn);
+    vec3 under = pt < 0.5 ? vec3(0.66, 0.58, 0.46) : pt < 1.5 ? vec3(0.4, 0.39, 0.37) : vec3(0.83, 0.81, 0.77);
+    vec3 deep = pt < 0.5 ? vec3(0.42, 0.36, 0.28) : pt < 1.5 ? vec3(0.27, 0.26, 0.24) : vec3(0.52, 0.5, 0.47);
+    float pd = smoothstep(thr + 0.1, thr + 0.16, pn) * (amt > 1.5 ? 0.85 : 0.4);
+    col = mix(col, mix(under, deep, pd) * (0.9 + 0.2 * gNoise(pp * 9.0)), pm);
+    col *= 1.0 - 0.22 * smoothstep(thr - 0.03, thr, pn) * (1.0 - pm);
   }
   // ---- zócalo (plinth): photo-scanned granite on stone plinths, plaster grain on painted ones, with their normal maps
   if (!zOwn && !isRoof && uDetOn > 0.5 && fl < 0.5 && !fillQ && gGlass < 0.5 && wallMask < 0.5 && layer < 63.5) {
@@ -667,8 +688,8 @@ ${GROUND_GLSL}`)
     gGH -= 0.008 * clamp(cr, 0.0, 1.0);
     // cracks: the paving joint along the street, transverse cracks, alligator cracking where the street is tired
     float crack = 0.0;
-    float jn = step(0.55 - dmg * 0.4, gNoise(vec2(s * 0.06, eid * 1.7)));
-    crack = max(crack, gLine(t - (hw > 3.2 ? 0.0 : hw * 0.3) - 0.07 * sin(s * 0.8 + eid) - 0.05 * (gNoise(vec2(s * 2.5, eid)) - 0.5), GCW) * jn);
+    // (no joint down the middle of the street: the captures show none — the audit of 2026-10-13 found it «a dark crack
+    // down the centre of almost every street»)
     float cc = floor(s / 11.0);
     float sc = s - (cc * 11.0 + 5.5 + (gHash2(vec2(cc, eid)) - 0.5) * 7.0) - 0.3 * sin(t * 1.7 + cc * 2.1) - 0.22 * (gNoise(vec2(t * 1.3, cc)) - 0.5) - 0.07 * (gNoise(vec2(t * 6.0, cc + 4.0)) - 0.5);
     // a transverse crack rarely spans the whole street: a random stretch of it
@@ -894,8 +915,9 @@ ${GROUND_GLSL}`)
   // ---- granite kerbs (flat strip shaded as a kerb): across t from the road edge, ramp in front of garages / crossings
   if (layer > 15.5) {
     float s = vLoc.x, t = vLoc.y;
-    float ramp = clamp(vLoc.w, 0.0, 1.0), yellow = smoothstep(1.4, 1.6, vLoc.w);
-    vec3 gran = vec3(0.73, 0.72, 0.69) * (0.88 + 0.2 * gNoise(vec2(s, t) * 35.0)) * (0.9 + 0.12 * gNoise(vec2(s * 0.7, 3.0)));
+    float ramp = vLoc.w > 2.5 && vLoc.w < 7.5 ? 0.0 : clamp(vLoc.w, 0.0, 1.0), yellow = smoothstep(1.4, 1.6, vLoc.w) * (1.0 - step(7.5, vLoc.w)); // (3: painted yellow along the kerb, not lowered)
+    // (concrete grey, as the captures show the kerbs — they were near white)
+    vec3 gran = vec3(0.5, 0.495, 0.48) * vTint * (0.88 + 0.2 * gNoise(vec2(s, t) * 35.0)) * (0.9 + 0.12 * gNoise(vec2(s * 0.7, 3.0)));
     if (uGDetOn > 0.5) gran *= mix(1.0, clamp(dot(texture(uGDet, vec3(vec2(s, t) / 1.5, 1.0)).rgb, vec3(0.333)) / max(uGDetMean[1], 0.05), 0.8, 1.2), 0.6);
     float face = mix(0.06, 0.018, ramp);
     float onFace = 1.0 - smoothstep(face - 0.004, face + 0.004, t);
@@ -915,14 +937,14 @@ ${GROUND_GLSL}`)
       // top, a dark gap between them — and painted as raised: its face (towards the road) in shade, its rounded top
       // edge catching the light, its shadow on the road (the user's pictures)
       float real = step(7.5, vLoc.w), fl = vLoc.w - 8.0 * real; // (real: a roll with its own shape, ground.js curbRoll)
-      ramp = clamp(fl, 0.0, 1.0); yellow = smoothstep(1.4, 1.6, fl);
+      ramp = fl > 2.5 ? 0.0 : clamp(fl, 0.0, 1.0); yellow = smoothstep(1.4, 1.6, fl);
       paint = yellow * (1.0 - smoothstep(0.1, 0.12, t)) * step(0.28, gNoise(vec2(s * 7.0, t * 25.0)));
       float bi = floor(s / 0.5), be = min(fract(s / 0.5), 1.0 - fract(s / 0.5)) * 0.5;
       float gap = 1.0 - smoothstep(0.006, 0.02, be);
       float fw = mix(0.13, 0.03, ramp) * (1.0 - real);                        // (the face, seen from the road — painted on the flat strip only)
       float f = (1.0 - smoothstep(fw - 0.01, fw + 0.01, t)) * (1.0 - real);
       float lip = smoothstep(fw, fw + 0.03, t) * (1.0 - smoothstep(fw + 0.03, fw + 0.09, t)); // (the rounded top edge)
-      vec3 cc = vec3(0.8, 0.77, 0.71) * (0.9 + 0.14 * gHash2(vec2(bi, 5.0)));
+      vec3 cc = vec3(0.52, 0.51, 0.49) * vTint * (0.9 + 0.14 * gHash2(vec2(bi, 5.0))); // (concrete grey: the captures' kerbs — the clay's were near white)
       col = cc * mix(1.0, mix(0.38, 0.62, t / max(fw, 1e-3)), f) * (1.0 + 0.16 * lip) * (1.0 - 0.65 * gap);
       col = mix(col, vec3(0.92, 0.74, 0.08), paint * 0.9);
       gGH = mix(0.11 * (1.0 - f) * (1.0 - ramp * 0.8) * (1.0 - 0.6 * gap) + 0.025 * smoothstep(0.0, 0.07, be) * smoothstep(fw, fw + 0.06, t), 0.02 * smoothstep(0.0, 0.07, be), real);

@@ -1,0 +1,58 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 60,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#bdb6aa",
+  "acera": {
+   "col": "#a6a39e",
+   "pat": 0
+  },
+  "pots": 0.02,
+  "toldos": 0.05,
+  "bordillo": "#a8a49d"
+ },
+ "items": [
+  {
+   "tipo": "senal",
+   "vista": 154,
+   "lado": "izq",
+   "en": 1.5,
+   "placas": [
+    "stop"
+   ],
+   "mira": "espalda",
+   "camara": {
+    "x": 115.76,
+    "z": -357.28,
+    "heading": 126.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 142,
+   "lado": "izq",
+   "en": 4.2,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "senal",
+   "vista": 154,
+   "lado": "izq",
+   "en": 15.5,
+   "lateral": 7.0,
+   "placas": [
+    "sentido_obligatorio"
+   ],
+   "mira": "camara"
+  }
+ ]
+}

@@ -16,6 +16,8 @@ import { mulberry32, hash1, polySample, pointInRing, ringBounds, ringArea } from
 import { makeNightGlowMaterial } from './materials.js';
 import { groundPot } from './facades.js';
 import { STYLE } from './style.js';
+import { SIN_PLACAS, SIN_TERRAZA, SIN_BUZON } from './calles_arreglos.js';
+import { CASAS } from './calles_casas.js';
 
 const at = (g, x, y, z) => { g.translate(x, y, z); return g; };
 function merged(list) {
@@ -322,7 +324,9 @@ export function buildStreetLife(world, map, q) {
   const tmpC = new THREE.Color();
   const POTS = new Set(['macetaGeranio', 'macetaGitanilla', 'macetaAspidistra', 'maceton']);
   let potSeed = 5;
+  let MUTE = false; // (a door whose captures show nothing outside it: calles_casas.js atrezo false — drawn as before, put nowhere)
   const put = (k, x, y, z, ang, s = 1, color = null) => {
+    if (MUTE) { if (POTS.has(k)) potSeed++; return; }
     if (POTS.has(k)) { // pots are built with their plants (leaf cards) when their chunk streams in
       const seed = potSeed++;
       world.facades.addBuild(x, z, k === 'maceton' ? 1 : 0.5, (Gb, Fb, Pb) => groundPot(Gb, Pb, k, x, y, z, s, mulberry32(seed * 7919)));
@@ -368,6 +372,7 @@ export function buildStreetLife(world, map, q) {
   // is this point in front of a door, garage or shop front? (r = extra margin)
   const nearOpening = (x, z, r) => groundOpen.some((o) => { const rr = o.r + r; return Math.abs(o.x - x) < rr && Math.abs(o.z - z) < rr && Math.hypot(o.x - x, o.z - z) < rr; });
   for (const d of doors) {
+    MUTE = !!(d.calle && d.calle.atrezo === false);
     const h = hash1(Math.floor(d.wx * 31 + d.wz * 17) * 7 + 3);
     const r = mulberry32(Math.floor(h * 1e9));
     const nx = d.nx, nz = d.nz, tx = -nz, tz = nx;
@@ -400,10 +405,11 @@ export function buildStreetLife(world, map, q) {
       }
       if (r() < 0.4) { const [x, z] = P(side * (0.95 + r() * 0.2), 0.24); if (free(x, z, 0.12)) { put(pick(['macetaGeranio', 'macetaAspidistra']), x, 0, z, r() * 6.28); stats.doorItems++; } }
     }
-    const extra = r();
+    // (on the streets seen in the captures, a quarter as much clutter on the doorsteps: they show little)
+    const extra = r() / (d.calle && d.calle.street ? 0.25 : 1);
     if (extra < 0.08) { const [x, z] = P(side * 0.95, 0.28); if (free(x, z, 0.15)) { put('butano', x, 0, z, r() * 6.28); stats.doorItems++; } }
     else if (extra < 0.12) { const [x, z] = P(side * 1.0, 0.1); if (free(x, z, 0.1)) put('escoba', x, 0, z, ang); }
-    else if (extra < 0.16) { const [x, z] = P(side * 1.55, 0.36); if (free(x, z, 0.3)) (world.twoWheelSpots || (world.twoWheelSpots = [])).push({ model: 'bici', x, z, heading: ang + Math.PI / 2, color: pick(['#c8202a', '#2f5fa8', '#1c1c20', '#f2f2ee', '#3c6e4a']) }); }
+    else if (extra < 0.16) { const [x, z] = P(side * 1.55, 0.36); if (free(x, z, 0.3) && !MUTE) (world.twoWheelSpots || (world.twoWheelSpots = [])).push({ model: 'bici', x, z, heading: ang + Math.PI / 2, color: pick(['#c8202a', '#2f5fa8', '#1c1c20', '#f2f2ee', '#3c6e4a']) }); }
     else if (extra < 0.2) { const [x, z] = P(side * 1.0, 0.4); if (free(x, z, 0.25)) put(pick(['sillaPlastico', 'sillaEnea']), x, 0, z, ang + (r() - 0.5) * 0.6); }
     else if (extra < 0.22) { const [x, z] = P(side * 0.95, 0.25); if (free(x, z, 0.2)) put('carro', x, 0, z, ang); }
     else if (extra < 0.245 && d.old) { const [x, z] = P(side * 1.9, 0.2); if (free(x, z, 0.7) && !map.roadAt(x, z, 0.35)) { put('poyete', x, 0, z, ang); col.addCircle(x, z, 0.55, 0.5, -4); } }
@@ -424,6 +430,7 @@ export function buildStreetLife(world, map, q) {
     }
   }
 
+  MUTE = false;
   // ---- waste containers: add the glass igloo, bags, boxes and litter around each set
   const conts = (world.breakables || []).filter((b) => b.kind === 'cont');
   const sets = [];
@@ -438,7 +445,8 @@ export function buildStreetLife(world, map, q) {
     const ux = Math.sin(s.ang - Math.PI / 2), uz = Math.cos(s.ang - Math.PI / 2); // along the row
     debug.sets.push({ x: cx, z: cz, ang: s.ang });
     // the green glass igloo at one end of the row
-    if (r() < 0.75) { const x = cx + ux * (s.n * 0.75 + 0.9), z = cz + uz * (s.n * 0.75 + 0.9); if (free(x, z, 0.8) && !map.roadAt(x, z, 0.9, true)) { put('iglu', x, 0, z, s.ang); col.addCircle(x, z, 0.8, 1.3, -6); } }
+    const roll = r(), told = s.items.find((c) => c.iglu !== undefined); // (a set from the captures: its igloo as they show it)
+    if (told ? told.iglu : roll < 0.75) { const x = cx + ux * (s.n * 0.75 + 0.9), z = cz + uz * (s.n * 0.75 + 0.9); if (free(x, z, 0.8) && !map.roadAt(x, z, 0.9, true)) { put('iglu', x, 0, z, s.ang); col.addCircle(x, z, 0.8, 1.3, -6); } }
     // bags and boxes piled next to the containers (the containers are always a bit too full)
     const nb = 2 + Math.floor(r() * 6);
     for (let i = 0; i < nb; i++) {
@@ -476,6 +484,8 @@ export function buildStreetLife(world, map, q) {
   }
 
   // ---- bars: terraces, stacked crates, chalkboard; shops: fruit crates; pharmacy cross; Correos
+  const inZone = (R, x, z) => R.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
+  const noTerrace = SIN_TERRAZA.map((r) => ({ r, bb: ringBounds(r) })), noPostBox = SIN_BUZON.map((r) => ({ r, bb: ringBounds(r) }));
   const squares = map.areas.filter((a) => ['place:square', 'highway:pedestrian', 'amenity:marketplace'].includes(a.kind)).map((a) => ({ ring: a.ring, bb: ringBounds(a.ring) }));
   const inSquare = (x, z) => squares.some((s) => x > s.bb[0] && x < s.bb[2] && z > s.bb[1] && z < s.bb[3] && pointInRing(x, z, s.ring));
   const glowGreen = makeNightGlowMaterial(0x22cc55, { dayLevel: 1.0, nightLevel: 2.6 });
@@ -497,6 +507,7 @@ export function buildStreetLife(world, map, q) {
     const P = (along, out) => [d.x + tx * along + d.nx * out, d.z + tz * along + d.nz * out];
     if (bar) {
       if (seenBars.some((b) => Math.hypot(b.x - d.x, b.z - d.z) < 6)) continue;
+      if (inZone(noTerrace, d.x + d.nx * 2, d.z + d.nz * 2)) continue; // (none where the captures show none: SIN_TERRAZA)
       seenBars.push(d);
       const [sx, sz] = P(0, 3.2);
       const wide = inSquare(sx, sz) || (d.edge && (d.edge.sw > 2.2 || d.edge.cls === 'pedestrian' || d.edge.cls === 'living_street'));
@@ -530,7 +541,7 @@ export function buildStreetLife(world, map, q) {
       crosses.add(x, 3.05, z, ang);
     } else if (post) {
       const [x, z] = P(1.4, 0.5);
-      if (free(x, z, 0.3) && !map.roadAt(x, z, 0.3)) { put('buzon', x, 0, z, ang); col.addCircle(x, z, 0.25, 1.2, -4); }
+      if (free(x, z, 0.3) && !map.roadAt(x, z, 0.3) && !inZone(noPostBox, x, z)) { put('buzon', x, 0, z, ang); col.addCircle(x, z, 0.25, 1.2, -4); }
     }
   }
 
@@ -589,7 +600,7 @@ export function buildStreetLife(world, map, q) {
     const [cx, cz] = p.c;
     if (!pointInRing(cx, cz, p.ring)) continue;
     if (p.roofKind === 'flat' && h < 0.28 && p.area > 45 && p.area < 400) put('tendedero', cx, p.H + 0.02, cz, h * 40);
-    else if (h > 0.86) put('parabolica', cx + (hash1(p.id) - 0.5) * 2, p.H + (p.roofKind === 'flat' ? 0.02 : 0.6), cz, h * 25);
+    else if (h > 0.86 && !(p.b >= 0 && CASAS[p.b] && CASAS[p.b].parabolica === false)) put('parabolica', cx + (hash1(p.id) - 0.5) * 2, p.H + (p.roofKind === 'flat' ? 0.02 : 0.6), cz, h * 25);
   }
 
   stats.plates = buildStreetPlates(world, map);
@@ -607,6 +618,7 @@ function plateText(name) {
   return t.toUpperCase();
 }
 function buildStreetPlates(world, map) {
+  const noPlate = SIN_PLACAS.map((r) => ({ r, bb: ringBounds(r) }));
   const names = [];
   const index = new Map();
   const edges = map.edges.filter((e) => e.name && (e.drive || e.walk) && !e.blocked && e.len > 14 && map.inTown(e.pts[0], e.pts[1]));
@@ -665,6 +677,7 @@ function buildStreetPlates(world, map) {
         const d = hw + 7 * t - 0.03;
         const px = tmp.x + nx * d, pz = tmp.z + nz * d;
         if (placed.some((q) => Math.hypot(q[0] - px, q[1] - pz) < 4)) continue;
+        if (noPlate.some((o) => px > o.bb[0] && px < o.bb[2] && pz > o.bb[1] && pz < o.bb[3] && pointInRing(px, pz, o.r))) continue; // (none where the captures show none: calles_arreglos.js)
         placed.push([px, pz]);
         // the plate faces the street (-n), its width runs along the street direction
         const fx = -nx, fz = -nz, ax = tmp.dx, az = tmp.dz;

@@ -70,6 +70,14 @@ export function makeFurnitureGeometries() {
     const head = paint(at(new THREE.BoxGeometry(0.34, 0.1, 0.6), 0, 5.5, 1.15), '#2f3236');
     F.farola = merged([pole, base, arm, head]);
     F.farolaLuz = paint(at(new THREE.BoxGeometry(0.28, 0.03, 0.5), 0, 5.44, 1.15), '#fff0cf');
+    // (two more the captures show, calles_arreglos.js FAROLAS: a slim grey column crowned by an opal globe — the newer
+    // squares' and estates' —, and a dark one with a mushroom-shaped head over a ring of light — the newer streets')
+    const shaft = (h, r0, r1, col) => paint(at(new THREE.CylinderGeometry(r1, r0, h, 10), 0, h / 2, 0), col);
+    F.farolaGlobo = merged([shaft(3.6, 0.07, 0.045, '#8d9196'), paint(at(new THREE.CylinderGeometry(0.12, 0.16, 0.25, 10), 0, 0.12, 0), '#7c8085'), paint(at(new THREE.CylinderGeometry(0.06, 0.09, 0.12, 10), 0, 3.66, 0), '#7c8085')]);
+    F.farolaGloboLuz = paint(at(new THREE.SphereGeometry(0.24, 14, 10), 0, 3.95, 0), '#fff4dc');
+    F.farolaSeta = merged([shaft(3.8, 0.075, 0.05, '#2b2d30'), paint(at(new THREE.CylinderGeometry(0.13, 0.17, 0.3, 10), 0, 0.15, 0), '#2b2d30'),
+      paint(at(new THREE.SphereGeometry(0.38, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), 0, 4.0, 0), '#2b2d30')]);
+    F.farolaSetaLuz = paint(at(new THREE.CylinderGeometry(0.3, 0.3, 0.08, 16), 0, 3.97, 0), '#fff0cf');
   }
   // bench (banco) with backrest
   {

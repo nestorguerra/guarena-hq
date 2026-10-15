@@ -1,0 +1,210 @@
+{
+ "calle": {
+  "road": "asfalto",
+  "roadCol": "#9a8a74",
+  "acera": {
+   "col": "#8f887c",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": 0,
+  "pretil": 0.9,
+  "lamps": {
+   "every": 45,
+   "kind": "pared"
+  },
+  "walls": [
+   [
+    "#efece4",
+    0.84
+   ],
+   [
+    "#e9d8b6",
+    0.1
+   ],
+   [
+    "#e4cfc1",
+    0.06
+   ]
+  ],
+  "aristas": [
+   367
+  ],
+  "tramos": [
+   {
+    "x": 7.7,
+    "z": 150.3,
+    "r": 6,
+    "firme": "liso"
+   },
+   {
+    "x": 47.5,
+    "z": 138.3,
+    "r": 6,
+    "firme": "liso"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 68,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 0.85
+  },
+  {
+   "tipo": "acera",
+   "vista": 68,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 0.85
+  },
+  {
+   "tipo": "farola",
+   "vista": 69,
+   "lado": "izq",
+   "en": 4,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 69,
+   "lado": "der",
+   "en": 10,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "senal",
+   "vista": 69,
+   "lado": "izq",
+   "en": 5,
+   "placas": [
+    "sentido_obligatorio"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 70,
+   "lado": "ambos",
+   "desde": 0,
+   "hasta": 4,
+   "camara": {
+    "x": 76.51,
+    "z": 191.66,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 70,
+   "lado": "izq",
+   "en": 7,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": 76.51,
+    "z": 191.66,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 70,
+   "lado": "der",
+   "en": 4,
+   "modelo": "fernandino",
+   "camara": {
+    "x": 76.51,
+    "z": 191.66,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 71,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 22,
+   "ancho": 0.8
+  },
+  {
+   "tipo": "acera",
+   "vista": 71,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 22,
+   "ancho": 0.8
+  },
+  {
+   "tipo": "acera",
+   "vista": 72,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 36,
+   "ancho": 0.8
+  },
+  {
+   "tipo": "acera",
+   "vista": 72,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 36,
+   "ancho": 0.8
+  },
+  {
+   "tipo": "farola",
+   "vista": 72,
+   "lado": "der",
+   "en": 9,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 71,
+   "lado": "der",
+   "desde": -2,
+   "hasta": 12
+  },
+  {
+   "tipo": "cable",
+   "vista": 70,
+   "en": 6,
+   "alto": 6.5
+  },
+  {
+   "tipo": "cable",
+   "vista": 71,
+   "en": 9,
+   "alto": 5.8
+  },
+  {
+   "tipo": "sin_placas",
+   "vista": 62,
+   "lado": "der",
+   "desde": 88,
+   "hasta": 100
+  },
+  {
+   "tipo": "sin_bancos",
+   "vista": 72,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 14,
+   "fondo": 5
+  },
+  {
+   "tipo": "bajante",
+   "vista": 69,
+   "lado": "der",
+   "en": 3.85,
+   "alto": 6.0,
+   "color": "#26262a"
+  }
+ ]
+}

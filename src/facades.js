@@ -52,6 +52,23 @@ const GARAGE_P = { trad_verde: 0.05, trad_ocre: 0.05, piedra: 0.03, renovada: 0.
 // balconies mostly above the door, some garages, shop fronts on commercial ground floors.
 // runs: [{ ax, az, dx, dz, L, uTot, t0, t1, exposed }] — sets run.cells (Map b*64+f -> type)
 export function planPart(part, info, runs, H, forcedDoors) {
+  planCells(part, info, runs, H, forcedDoors);
+  // (a front read bay by bay in its captures — calles.js fachada, buildings.js gives its wall as many bays —: its openings
+  // as they are, floor by floor: P door, V window, C garage, B balcony, T shop front, - blind)
+  const nF = Math.floor(H / FLOOR_H + 0.02);
+  for (const r of runs) {
+    if (!r.fachada || !r.cells || !(r.b1 > r.b0)) continue;
+    const nb = r.b1 - r.b0;
+    for (let i = 0; i < nb; i++) for (let f = 0; f < nF; f++) {
+      const row = r.fachada[f === 0 ? 'pb' : 'p' + f];
+      if (!row) continue;
+      const ch = row[Math.min(row.length - 1, Math.floor(((i + 0.5) * row.length) / nb))], g = f === 0;
+      const t = ch === 'P' ? (g ? CT.DOOR : CT.BALC) : ch === 'V' ? (g ? CT.WIN_G : CT.WIN_U) : ch === 'C' ? (g ? CT.GARAGE : CT.WIN_U) : ch === 'B' ? (g ? CT.WIN_G : CT.BALC) : ch === 'T' ? (g ? CT.SHOP : CT.WIN_U) : g ? CT.BLANK_G : CT.BLANK_U;
+      r.cells.set((r.b1 - 1 - i) * 64 + f, t); // (read left to right facing the front: a wall runs from its start on the right)
+    }
+  }
+}
+function planCells(part, info, runs, H, forcedDoors) {
   const nF = Math.floor(H / FLOOR_H + 0.02);
   const rnd = mulberry32(((part.id + 17) * 2654435761) >>> 0);
   const ground = [];
@@ -104,20 +121,22 @@ export function planPart(part, info, runs, H, forcedDoors) {
     }
     const gp = (info.calle && info.calle.garage != null ? info.calle.garage : GARAGE_P[style]) ?? 0.1; // (its street's share, calles.js)
     const tapia = !!(info.calle && info.calle.tapia); // (a yard wall seen in the captures: blind, with its gate)
-    const capilla = !!(info.calle && info.calle.capilla); // (a chapel: blind walls, its portal its own — landmarks.js)
+    const capilla = !!(info.calle && (info.calle.capilla || info.calle.ciega)); // (a chapel: blind walls, its portal its own — landmarks.js; a shed's blind front)
     for (const g of ground) {
       if (capilla) { set(g.r, g.b, 0, CT.BLANK_G); continue; }
       if (tapia) { set(g.r, g.b, 0, doors.has(g) && g.r.L / g.r.uTot > 2.6 ? CT.GARAGE : CT.BLANK_G); continue; }
       if (doors.has(g)) { set(g.r, g.b, 0, CT.DOOR); continue; }
       const h = rnd();
       const bw = g.r.L / g.r.uTot;
+      // (behind an arcade, its portals and windows only — no garage nor shop front opens under it: buildings.js markArcade)
+      if (g.r.arcade) { set(g.r, g.b, 0, h < 0.4 ? CT.BLANK_G : CT.WIN_G); continue; }
       set(g.r, g.b, 0, h < gp && bw > 2.6 ? CT.GARAGE : h > 0.95 ? CT.BLANK_G : CT.WIN_G);
     }
   }
   const bp = (info.calle && info.calle.balc != null ? info.calle.balc : BALC_P[style]) ?? 0.25;
   for (const g of ground) {
     for (let f = 1; f < nF; f++) {
-      if (info.calle && (info.calle.tapia || info.calle.capilla)) { set(g.r, g.b, f, CT.BLANK_U); continue; }
+      if (info.calle && (info.calle.tapia || info.calle.capilla || info.calle.ciega)) { set(g.r, g.b, f, CT.BLANK_U); continue; }
       const below = g.r.cells.get(g.b * 64 + f - 1);
       const h = rnd();
       const t = (below === CT.DOOR && h < 0.55) || (below === CT.BALC && h < 0.6) || (below !== CT.DOOR && h < bp) ? CT.BALC : h > 0.96 ? CT.BLANK_U : CT.WIN_U;
@@ -371,6 +390,8 @@ function buildingStyle(o) {
   const cs = o.calle;
   if (cs) {
     if (cs.reja != null) bs.reja = cs.reja;
+    if (cs.bajantes != null) bs.pipes = cs.bajantes; // (its downpipes as seen, or none)
+    if (cs.aires != null) bs.ac = cs.aires === true ? 0.5 : cs.aires === false ? 0 : Math.max(0, Math.min(1, +cs.aires)); // (its split units as seen: many, none or that share of its upper windows)
     if (cs.rejaCol) bs.rejaCol = hexC(cs.rejaCol);
     if (cs.buche != null) bs.buche = cs.buche;
     if (cs.surround !== undefined) { // (the street's: painted round the openings, or the door's of granite)
@@ -383,6 +404,14 @@ function buildingStyle(o) {
     if (cs.door) bs.doorCol = hexC(cs.door);
     if (cs.wood) bs.wood = hexC(cs.wood);
     if (cs.pots != null) bs.pots = cs.pots;
+    // (awnings: the house's own as seen, or few — the audit found the captured streets' fronts with far fewer)
+    bs.toldos = cs.toldos === true ? 1 : cs.toldos === false ? 0 : typeof cs.toldos === 'number' ? cs.toldos : cs.street ? 0.25 : 1;
+    if (cs.toldo) { bs.awning = hexC(cs.toldo.hex); bs.awningPlain = !cs.toldo.rayas; if (cs.toldos == null) bs.toldos = 1; } // (its awnings' colour as seen, plain or striped)
+    if (cs.ropa === false) bs.noLaundry = true;
+    if (cs.cochera) bs.garageSeen = hexC(cs.cochera);
+    if (cs.arcos_puertas) bs.doorArch = true;
+    if (cs.arcos_ventanas) bs.winArch = true;
+    if (cs.barandilla) bs.rail = cs.barandilla; // ('balaustres' turned white posts, 'forja' bars with a scroll band, 'barrotes' plain)
   }
   bsCache.set(key, bs);
   return bs;
@@ -470,16 +499,17 @@ function reja(G, x0, y0, x1, y1, z, col, buche, rnd) {
   }
 }
 
-export function awning(G, x0, x1, yTop, zTop, drop, out, col, withArms = true) {
+export function awning(G, x0, x1, yTop, zTop, drop, out, col, withArms = true, plain = false) {
+  const pat = plain ? 0 : PAT.STRIPES; // (a plain canvas, or the striped one)
   const yF = yTop - drop, zF = zTop + out;
   const L = Math.hypot(drop, out);
   const ny = out / L, nz = drop / L;
-  G.quad([x0, yTop, zTop], [x1, yTop, zTop], [x1, yF, zF], [x0, yF, zF], 0, ny, nz, col, PAT.STRIPES);
-  G.quad([x0, yTop - 0.004, zTop], [x0, yF - 0.004, zF], [x1, yF - 0.004, zF], [x1, yTop - 0.004, zTop], 0, -ny, -nz, mul(col, 0.62), PAT.STRIPES);
+  G.quad([x0, yTop, zTop], [x1, yTop, zTop], [x1, yF, zF], [x0, yF, zF], 0, ny, nz, col, pat);
+  G.quad([x0, yTop - 0.004, zTop], [x0, yF - 0.004, zF], [x1, yF - 0.004, zF], [x1, yTop - 0.004, zTop], 0, -ny, -nz, mul(col, 0.62), pat);
   // valance (faldón) with both faces
   const vh = 0.22;
-  G.quad([x0, yF, zF], [x1, yF, zF], [x1, yF - vh, zF], [x0, yF - vh, zF], 0, 0, 1, col, PAT.STRIPES);
-  G.quad([x1, yF, zF - 0.004], [x0, yF, zF - 0.004], [x0, yF - vh, zF - 0.004], [x1, yF - vh, zF - 0.004], 0, 0, -1, mul(col, 0.6), PAT.STRIPES);
+  G.quad([x0, yF, zF], [x1, yF, zF], [x1, yF - vh, zF], [x0, yF - vh, zF], 0, 0, 1, col, pat);
+  G.quad([x1, yF, zF - 0.004], [x0, yF, zF - 0.004], [x0, yF - vh, zF - 0.004], [x1, yF - vh, zF - 0.004], 0, 0, -1, mul(col, 0.6), pat);
   if (withArms) for (const x of [x0 + 0.06, x1 - 0.06]) G.bar([x, yTop - drop * 0.7, 0.02], [x, yF + 0.01, zF - 0.02], 0.02, C.metalDk);
 }
 
@@ -538,6 +568,7 @@ function buildWindow(G, F, o, bs, rnd, upper) {
     G.box(X1 + 0.018, Y0, 0.004, X1 + w + 0.018, Y1, 0.034, bs.wood, PAT.LOUVER);
     for (const x of [X0 - 0.02, X1 + 0.02]) for (const y of [Y0 + 0.25, Y1 - 0.25]) G.box(x - 0.012, y - 0.02, 0, x + 0.012, y + 0.02, 0.04, C.iron);
   }
+  if (bs.winArch) archOver(G, X0, X1, Y1, bs.recercado || mul(bs.wall, 0.9), hexC('#2b333b')); // (its arched top, as seen)
   // painted surround (recercado) typical of the whitewashed villages
   if (bs.recercado) {
     const b = 0.13, z = 0.003;
@@ -563,6 +594,7 @@ function buildBalcony(G, F, o, bs, rnd) {
   const zo = bs.big ? 0.75 : 0.5;
   G.box(xa, Y0 - 0.15, -D + 0.07, xb, Y0 + 0.004, zo, bs.big ? hexC('#d8d6d0') : mul(bs.wall, 0.95));
   G.box(xa - 0.02, Y0 - 0.19, 0, xb + 0.02, Y0 - 0.15, zo + 0.02, mul(bs.wall, 0.86), 0, 31);
+  if (bs.winArch) archOver(G, X0, X1, Y1, bs.recercado || mul(bs.wall, 0.9), hexC('#2b333b'));
   // railing
   const rT = Y0 + 1.0, rB = Y0 + 0.07, zr = zo - 0.035, xl = xa + 0.035, xr = xb - 0.035;
   const col = bs.rejaCol;
@@ -576,8 +608,18 @@ function buildBalcony(G, F, o, bs, rnd) {
     G.bar([xl, rB, zr], [xr, rB, zr], 0.018, col);
     G.bar([xl, rB, 0.02], [xl, rB, zr], 0.018, col);
     G.bar([xr, rB, 0.02], [xr, rB, zr], 0.018, col);
-    const n = Math.max(4, Math.round((xr - xl) / 0.11));
-    for (let i = 0; i <= n; i++) { const x = xl + ((xr - xl) * i) / n; G.bar([x, rB - 0.07, zr], [x, rT - 0.035, zr], 0.014, col); }
+    if (bs.rail === 'balaustres') { // (turned balusters of stone or plaster, a hand and a half apart, under a broad rail)
+      const n = Math.max(3, Math.round((xr - xl) / 0.16));
+      for (let i = 0; i <= n; i++) { const x = xl + ((xr - xl) * i) / n; G.cyl(x, zr, rB - 0.07, rB + 0.35, 0.045, 0.03, 6, col); G.cyl(x, zr, rB + 0.35, rT - 0.04, 0.03, 0.045, 6, col); }
+      G.box(xl - 0.03, rT - 0.06, zr - 0.06, xr + 0.03, rT, zr + 0.06, col, 0, ALL);
+    } else {
+      const n = Math.max(4, Math.round((xr - xl) / 0.11));
+      for (let i = 0; i <= n; i++) { const x = xl + ((xr - xl) * i) / n; G.bar([x, rB - 0.07, zr], [x, rT - 0.035, zr], 0.014, col); }
+      if (bs.rail === 'forja') { // (a band of scrolls under the rail: two rails and little curls between)
+        G.bar([xl, rT - 0.24, zr], [xr, rT - 0.24, zr], 0.014, col);
+        for (let x = xl + 0.11; x < xr - 0.05; x += 0.22) { G.bar([x, rT - 0.24, zr], [x + 0.055, rT - 0.13, zr], 0.012, col); G.bar([x + 0.055, rT - 0.13, zr], [x + 0.11, rT - 0.24, zr], 0.012, col); }
+      }
+    }
     const ns = Math.max(2, Math.round(zr / 0.11));
     for (let i = 1; i < ns; i++) { const z = (zr * i) / ns; G.bar([xl, rB - 0.07, z], [xl, rT - 0.035, z], 0.014, col); G.bar([xr, rB - 0.07, z], [xr, rT - 0.035, z], 0.014, col); }
   }
@@ -585,10 +627,22 @@ function buildBalcony(G, F, o, bs, rnd) {
   if (!bs.big && rnd() < 0.45) {
     const n = (xr - xl) > 1.3 ? 3 : 2;
     for (let k = 0; k < n; k++) flowerPot(F, xl + 0.15 + ((xr - xl - 0.3) * k) / Math.max(1, n - 1), rT - 0.2, zr + 0.09, 0.07, rnd, true);
-  } else if (rnd() < 0.2) laundry(F, xl, xr, rT, zr, rnd);
-  if (rnd() < 0.12) awning(G, X0 - 0.2, X1 + 0.2, Y1 + 0.22, 0.02, 0.5, 0.75, bs.awning);
+  } else if (rnd() < 0.2 && !bs.noLaundry) laundry(F, xl, xr, rT, zr, rnd); // (none where its captures show none)
+  if (rnd() < 0.12 * (bs.toldos ?? 1)) awning(G, X0 - 0.2, X1 + 0.2, Y1 + 0.22, 0.02, 0.5, 0.75, bs.awning, true, bs.awningPlain);
 }
 
+// a round arch over an opening, as seen on some fronts (calles_casas.js arcos_puertas): its moulding a half ring over
+// the lintel, in the surround's colour, the tympanum within it filled like the leaf — in little steps, as the facade
+// details are boxes
+function archOver(G, X0, X1, Y1, ring, fill) {
+  const r = (X1 - X0) / 2, cx = (X0 + X1) / 2, N = 12;
+  for (let k = 0; k < N; k++) {
+    const a0 = Math.PI * (k / N), a1 = Math.PI * ((k + 1) / N), xa = cx - Math.cos(a0) * r, xb = cx - Math.cos(a1) * r;
+    const yTop = Y1 + Math.max(Math.sin(a0), Math.sin(a1)) * r;
+    G.box(Math.min(xa, xb), Y1, -0.03, Math.max(xa, xb), yTop - 0.02, -0.005, fill, 0, 16);
+    G.box(Math.min(xa, xb) - 0.02, yTop - 0.04, 0, Math.max(xa, xb) + 0.02, yTop + 0.1, 0.035, ring, 0, 31);
+  }
+}
 function buildDoor(G, F, o, bs, rnd) {
   const X0 = o.x0, X1 = o.x1, Y1 = o.y1, D = o.D;
   const W = X1 - X0;
@@ -605,6 +659,7 @@ function buildDoor(G, F, o, bs, rnd) {
     G.box(X1, stepH, 0, X1 + b, Y1 + b, z, bs.recercado, 0, 16);
     G.box(X0, Y1, 0, X1, Y1 + b, z, bs.recercado, 0, 16);
   }
+  if (bs.doorArch) archOver(G, X0, X1, Y1, bs.recercado || bs.stone, mul(bs.doorCol, 0.9));
   const zb = -D + 0.004, zf = -D + 0.07;
   const marco = bs.doorKind === 'wood' ? mul(bs.doorCol, 0.8) : bs.doorKind === 'modern' ? C.anth : C.alu;
   G.box(X0, stepH, zb, X0 + 0.06, Y1, zf, marco);
@@ -666,7 +721,9 @@ function buildDoor(G, F, o, bs, rnd) {
 
 function buildGarage(G, F, o, bs, rnd) {
   const X0 = o.x0, X1 = o.x1, Y1 = o.y1, D = o.D;
-  const gc = rnd() < 0.3 ? pickR(rnd, [hexC('#f0efeb'), hexC('#6b3f22'), hexC('#3f5f36'), hexC('#8e9295'), hexC('#2f4f6a')]) : bs.garage;
+  const alt = rnd() < 0.3 ? pickR(rnd, [hexC('#f0efeb'), hexC('#6b3f22'), hexC('#3f5f36'), hexC('#8e9295'), hexC('#2f4f6a')]) : null;
+  const gc = bs.garageSeen || alt || bs.garage; // (its garage door's colour as seen, when its notes give it)
+  if (bs.doorArch) archOver(G, X0, X1, Y1, bs.recercado || mul(bs.wall, 0.9), gc);
   G.box(X0, 0.01, -D + 0.012, X1, Y1, -D + 0.045, gc, PAT.RIBS, 16);
   G.box(X0 - 0.05, Y1, 0, X1 + 0.05, Y1 + 0.1, 0.02, mul(bs.wall, 0.93), 0, 31);
   G.box((X0 + X1) / 2 - 0.035, 1.0, -D + 0.045, (X0 + X1) / 2 + 0.035, 1.12, -D + 0.07, C.metalDk, 0, ALL);
@@ -693,7 +750,7 @@ function buildShop(G, F, o, bs, rnd) {
   G.box(X0 - 0.03, Y1, 0, X1 + 0.03, Y1 + 0.3, 0.17, C.metal, PAT.SHUTTER, 31);
   // fascia (sign band)
   if (o.f === 0 && o.H > 2.95) G.box(0.06, Y1 + 0.32, 0, o.bw - 0.06, Math.min(3.06, o.H - 0.02), 0.06, bs.fascia, 0, 31);
-  if (rnd() < 0.55) awning(G, X0, X1, Y1 - 0.01, 0.17, 0.4, 0.95, bs.awning);
+  if (rnd() < 0.55 * (bs.toldos ?? 1)) awning(G, X0, X1, Y1 - 0.01, 0.17, 0.4, 0.95, bs.awning, true, bs.awningPlain);
 }
 
 // per-run extras: downpipes at the corners, cornice moulding under the eaves
@@ -703,7 +760,7 @@ function buildRun(G, r, bs, rnd) {
   const tx = dx / L, tz = dz / L;
   G.frame(r.ax, 0, r.az, tx, tz, r.nx, r.nz);
   const H = r.H;
-  if (r.pitched && rnd() < 0.5) {
+  if (r.pitched && (bs.pipes == null ? rnd() < 0.5 : (rnd(), bs.pipes))) {
     const ends = rnd() < 0.5 ? [0.13] : rnd() < 0.5 ? [L - 0.13] : [0.13, L - 0.13];
     for (const x of ends) {
       const y0 = r.shopEnds ? 2.95 : 0.05;

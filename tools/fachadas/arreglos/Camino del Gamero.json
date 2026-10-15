@@ -1,0 +1,258 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#a89d90",
+  "acera": {
+   "col": "#d3c4a9",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 600,
+   "kind": "columna"
+  }
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 217,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 130,
+   "ancho": 2.4,
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 217,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 130,
+   "ancho": 2.2,
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "paso",
+   "vista": 217,
+   "en": 11,
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 217,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 125,
+   "fondo": 45,
+   "material": "hierba",
+   "color": "#a39b6b",
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 217,
+   "lado": "der",
+   "en": 15,
+   "modelo": "baculo",
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 217,
+   "lado": "der",
+   "en": 44,
+   "modelo": "baculo",
+   "camara": {
+    "x": 1014.3,
+    "z": 96.8,
+    "heading": 302.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 216,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 85,
+   "ancho": 2.4
+  },
+  {
+   "tipo": "acera",
+   "vista": 216,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 85,
+   "ancho": 2.2
+  },
+  {
+   "tipo": "tapia",
+   "vista": 216,
+   "lado": "der",
+   "desde": 5.5,
+   "hasta": 11.5,
+   "alto": 3.7,
+   "material": "cal",
+   "color": "#e6e3dc",
+   "lateral": 13.5
+  },
+  {
+   "tipo": "tapia",
+   "vista": 216,
+   "lado": "der",
+   "desde": 11.5,
+   "hasta": 17.5,
+   "alto": 3.7,
+   "material": "cal",
+   "color": "#e6e3dc",
+   "puerta": "#4f5e4c",
+   "lateral": 13.5
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 216,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 100,
+   "fondo": 45
+  },
+  {
+   "tipo": "suelo",
+   "vista": 216,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 85,
+   "fondo": 45,
+   "material": "hierba",
+   "color": "#a9a271"
+  },
+  {
+   "tipo": "acera",
+   "vista": 215,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "ancho": 2.4
+  },
+  {
+   "tipo": "acera",
+   "vista": 215,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 19,
+   "ancho": 3.0
+  },
+  {
+   "tipo": "acera",
+   "vista": 215,
+   "lado": "der",
+   "desde": 19,
+   "hasta": 60,
+   "ancho": 2.2
+  },
+  {
+   "tipo": "suelo",
+   "vista": 215,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 62,
+   "fondo": 45,
+   "material": "hierba",
+   "color": "#dcc4a0"
+  },
+  {
+   "tipo": "farola",
+   "vista": 215,
+   "lado": "izq",
+   "en": 3,
+   "modelo": "baculo",
+   "lateral": 5.8
+  },
+  {
+   "tipo": "farola",
+   "vista": 215,
+   "lado": "izq",
+   "en": 24,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 215,
+   "lado": "izq",
+   "en": 52,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 215,
+   "lado": "izq",
+   "en": 80,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 215,
+   "lado": "izq",
+   "en": 108,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 215,
+   "lado": "izq",
+   "desde": 27,
+   "hasta": 62,
+   "alto": 2.0,
+   "material": "enfoscado",
+   "color": "#d8d5cc",
+   "lateral": 49.2
+  },
+  {
+   "tipo": "silos",
+   "vista": 217,
+   "lado": "der",
+   "en": 145,
+   "lateral": 125,
+   "n": 2,
+   "radio": 2.8,
+   "alto": 14,
+   "color": "#e6e6e2",
+   "nota": "n=2172: silos blancos junto a la nave 1922 (x≈1020–1080), ≈140–160 m adelante y ≈125–150 m a la derecha"
+  },
+  {
+   "tipo": "silos",
+   "vista": 217,
+   "lado": "der",
+   "en": 158,
+   "lateral": 150,
+   "n": 1,
+   "radio": 2.5,
+   "alto": 12,
+   "color": "#e6e6e2",
+   "nota": "n=2172: el silo junto a la caseta 1923 (x≈1140–1160)"
+  }
+ ]
+}

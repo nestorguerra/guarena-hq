@@ -1,0 +1,19 @@
+{
+ "calle": {
+  "lineas": {"centro": false, "bordes": false, "aparcamiento": false},
+  "road": "asfalto",
+  "roadCol": "#b4a58f",
+  "acera": {"col": "#9d9482", "pat": 0},
+  "pots": 0,
+  "cables": true,
+  "lamps": {"every": 30, "kind": "pared"},
+  "tramos": [
+   {"x": -8.0, "z": -219.4, "r": 40, "road": "adoquin", "col": "#7f7261"}
+  ]
+ },
+ "items": [
+  {"tipo": "amarillo", "vista": 135, "lado": "izq", "desde": 0, "hasta": 55},
+  {"tipo": "amarillo", "vista": 135, "lado": "der", "desde": 0, "hasta": 55},
+  {"tipo": "farola", "vista": 135, "lado": "izq", "en": 8, "modelo": "fernandino"}
+ ]
+}

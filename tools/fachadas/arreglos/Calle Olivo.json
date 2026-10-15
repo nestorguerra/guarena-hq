@@ -1,0 +1,78 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#c9c2b8",
+  "lamps": {
+   "every": 999,
+   "kind": "pared"
+  },
+  "pots": 0,
+  "toldos": 0,
+  "firme": "liso",
+  "bordillo": "#b8b2a8"
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 183,
+   "lado": "izq",
+   "en": 9,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 184,
+   "lado": "izq",
+   "en": 21.8,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 185,
+   "lado": "der",
+   "en": 24,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 184,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 4.2,
+   "alto": 2.2,
+   "material": "verja",
+   "color": "#1e1e1e",
+   "lateral": 2.35
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 184,
+   "lado": "der",
+   "desde": 1.5,
+   "hasta": 13,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "cartel",
+   "vista": 185,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 3.0,
+   "alto": 0.9,
+   "suelo": 5.5,
+   "color": "#44474a",
+   "mira": "espalda",
+   "camara": {
+    "x": 841.564,
+    "z": 360.43,
+    "heading": 190.9
+   }
+  }
+ ]
+}

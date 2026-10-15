@@ -1,0 +1,164 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "acera": {
+   "col": "#86827b",
+   "pat": 0
+  },
+  "garage": 0.1,
+  "tramos": [
+   {
+    "x": -232,
+    "z": 74,
+    "r": 40,
+    "road": "asfalto",
+    "col": "#625850"
+   },
+   {
+    "x": -196,
+    "z": 109,
+    "r": 20,
+    "road": "asfalto",
+    "col": "#625850"
+   },
+   {
+    "x": -226.9,
+    "z": 133.9,
+    "r": 6,
+    "firme": "gastado"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 73,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "ancho": 0.7
+  },
+  {
+   "tipo": "acera",
+   "vista": 73,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 0.8
+  },
+  {
+   "tipo": "arbol",
+   "vista": 73,
+   "lado": "der",
+   "en": 27,
+   "fondo": 4,
+   "especie": "morera"
+  },
+  {
+   "tipo": "acera",
+   "vista": 74,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "ancho": 0.9
+  },
+  {
+   "tipo": "acera",
+   "vista": 74,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 60,
+   "ancho": 1.0
+  },
+  {
+   "tipo": "farola",
+   "vista": 74,
+   "lado": "der",
+   "en": 10.5,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "acera",
+   "vista": 75,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 1.4,
+   "camara": {
+    "x": -249.99,
+    "z": 142.15,
+    "heading": 70.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 75,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 28,
+   "ancho": 1.8,
+   "camara": {
+    "x": -249.99,
+    "z": 142.15,
+    "heading": 70.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 75,
+   "lado": "izq",
+   "desde": -10,
+   "hasta": 50,
+   "fondo": 30,
+   "camara": {
+    "x": -249.99,
+    "z": 142.15,
+    "heading": 70.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 76,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 35,
+   "ancho": 1.1
+  },
+  {
+   "tipo": "acera",
+   "vista": 76,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 25,
+   "ancho": 1.0
+  },
+  {
+   "tipo": "farola",
+   "vista": 76,
+   "lado": "izq",
+   "en": 14,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "deposito",
+   "vista": 75,
+   "lado": "izq",
+   "en": 21.4,
+   "lateral": 20.4,
+   "alto": 14,
+   "material": "ladrillo",
+   "color": "#a5917a"
+  },
+  {
+   "tipo": "sin_vado_amarillo",
+   "vista": 73,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 12
+  }
+ ]
+}

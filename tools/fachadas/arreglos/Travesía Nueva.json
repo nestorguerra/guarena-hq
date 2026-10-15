@@ -1,0 +1,20 @@
+{
+ "calle": {
+  "lineas": {"centro": false, "bordes": false, "aparcamiento": false},
+  "arboles": null,
+  "lamps": {"every": 999, "kind": "pared"},
+  "road": "asfalto",
+  "roadCol": "#cdbba2",
+  "acera": {"col": "#e0d4bc", "pat": 0},
+  "tramos": [{"x": 125, "z": -252, "r": 38, "lado": "E", "acera": {"col": "#9a948e", "pat": 0}}],
+  "pots": 0,
+  "toldos": 0
+ },
+ "items": [
+  {
+   "tipo": "farola", "vista": 149, "lado": "izq", "en": 8.0, "modelo": "fernandino",
+   "camara": {"x": 120.65, "z": -244.76, "heading": 19.0},
+   "nota": "Único farol de la calle: fernandino en ménsula sobre la esquina oeste donde acaba el muro blanco de 3366 y empieza la tapia 3365 (vista 149 x≈618 de 1440; en la vista 150 aparece a la derecha, x≈893-918); el resto de la calle, sin farolas (calle.lamps cada 999)."
+  }
+ ]
+}

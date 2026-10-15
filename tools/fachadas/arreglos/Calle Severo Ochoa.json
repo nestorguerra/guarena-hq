@@ -1,0 +1,220 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 11,
+   "kind": "columna"
+  },
+  "acera": {
+   "col": "#d6cdbf",
+   "pat": 0
+  },
+  "tramos": [
+   {
+    "x": 578.5,
+    "z": -211,
+    "r": 7,
+    "lado": "O",
+    "acera": {
+     "col": "#dcb8a6",
+     "pat": 0
+    }
+   }
+  ],
+  "pots": 0,
+  "toldos": false
+ },
+ "items": [
+  {
+   "tipo": "amarillo",
+   "vista": 209,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 38
+  },
+  {
+   "tipo": "suelo",
+   "vista": 209,
+   "lado": "der",
+   "desde": 6,
+   "hasta": 42,
+   "fondo": 35,
+   "material": "hierba",
+   "color": "#c2ae83"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 209,
+   "lado": "der",
+   "desde": 6,
+   "hasta": 50,
+   "fondo": 30
+  },
+  {
+   "tipo": "tapia",
+   "vista": 209,
+   "lado": "izq",
+   "desde": 9.5,
+   "hasta": 38,
+   "camara": {
+    "x": 577.3,
+    "z": -194.3,
+    "heading": 270
+   },
+   "alto": 2.2,
+   "material": "enfoscado",
+   "color": "#c4bdb0"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 209,
+   "lado": "izq",
+   "en": 27,
+   "lateral": 16.5,
+   "especie": "pino",
+   "escala": 1.3
+  },
+  {
+   "tipo": "arbol",
+   "vista": 209,
+   "lado": "izq",
+   "en": 26,
+   "lateral": 14,
+   "especie": "morera",
+   "escala": 0.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 209,
+   "lado": "izq",
+   "en": 28,
+   "lateral": 9.5,
+   "especie": "morera",
+   "escala": 0.8
+  },
+  {
+   "tipo": "tapia",
+   "vista": 209,
+   "lado": "izq",
+   "desde": 15,
+   "hasta": 25,
+   "lateral": 9,
+   "alto": 1.5,
+   "material": "seto",
+   "color": "#5f7a3e"
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 209,
+   "lado": "der",
+   "en": 19,
+   "tipos": [
+    "resto",
+    "envases",
+    "papel"
+   ]
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 210,
+   "lado": "der",
+   "desde": -2,
+   "hasta": 13
+  },
+  {
+   "tipo": "suelo",
+   "vista": 210,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 9,
+   "fondo": 40,
+   "material": "tierra",
+   "color": "#c99a76"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 210,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 9,
+   "fondo": 30
+  },
+  {
+   "tipo": "tapia",
+   "vista": 210,
+   "lado": "izq",
+   "desde": 5,
+   "hasta": 15,
+   "lateral": 12.5,
+   "alto": 2.2,
+   "material": "malla",
+   "color": "#8a8e90",
+   "murete": "#e0d6c6"
+  },
+  {
+   "tipo": "paso",
+   "vista": 210,
+   "en": 17
+  },
+  {
+   "tipo": "suelo",
+   "vista": 211,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 20,
+   "fondo": -7.5,
+   "material": "tierra",
+   "color": "#e3c9a5"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 211,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 20,
+   "fondo": 20,
+   "material": "tierra",
+   "color": "#e3c9a5"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 211,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 24,
+   "fondo": -7.5,
+   "material": "hierba",
+   "color": "#a9a56f"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 211,
+   "lado": "izq",
+   "desde": 35,
+   "hasta": 48,
+   "fondo": 40
+  },
+  {
+   "tipo": "placa",
+   "vista": 209,
+   "lado": "izq",
+   "en": 4.2,
+   "texto": "Severo Ochoa",
+   "fondo": "#2a3f6b",
+   "letra": "#f4f4f0"
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 210,
+   "lado": "der",
+   "desde": -3,
+   "hasta": 5,
+   "nota": "revisión final: la farola que el juego ponía pegada a la cámara; la captura no tiene ninguna ahí"
+  }
+ ]
+}

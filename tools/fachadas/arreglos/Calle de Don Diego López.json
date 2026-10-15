@@ -1,0 +1,205 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "adoquin_plataforma",
+  "roadCol": "#cdcac2",
+  "acera": {
+   "col": "#ddd5cb",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 30,
+   "kind": "pared"
+  },
+  "pots": 0.1,
+  "tramos": [
+   {
+    "x": 228,
+    "z": 123,
+    "r": 30,
+    "road": "asfalto",
+    "col": "#d0c0ab"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "arbol",
+   "vista": 241,
+   "lado": "izq",
+   "en": 28,
+   "fondo": 0.8,
+   "especie": "palmera",
+   "escala": 0.3
+  },
+  {
+   "tipo": "arbol",
+   "vista": 241,
+   "lado": "der",
+   "en": 28,
+   "fondo": -1.4,
+   "especie": "palmera",
+   "escala": 0.3
+  },
+  {
+   "tipo": "banco",
+   "vista": 241,
+   "lado": "der",
+   "en": 6.5,
+   "fondo": 0.7,
+   "mira": "calle"
+  },
+  {
+   "tipo": "senal",
+   "vista": 241,
+   "lado": "izq",
+   "en": 10,
+   "placas": [
+    "sentido_obligatorio"
+   ],
+   "mira": "camara",
+   "pared": true
+  },
+  {
+   "tipo": "senal",
+   "vista": 241,
+   "lado": "der",
+   "en": 16,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara",
+   "pared": true
+  },
+  {
+   "tipo": "acera",
+   "vista": 243,
+   "lado": "der",
+   "desde": -3,
+   "hasta": 14,
+   "ancho": 0
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 243,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 55,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 243,
+   "lado": "der",
+   "desde": 1,
+   "hasta": 55,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 243,
+   "lado": "izq",
+   "desde": 4,
+   "hasta": 45,
+   "fondo": 8
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 243,
+   "lado": "der",
+   "desde": 28,
+   "hasta": 56,
+   "fondo": 8
+  },
+  {
+   "tipo": "banderines",
+   "vista": 241,
+   "en": 6.5,
+   "alto": 6,
+   "colores": [
+    "#c60b1e",
+    "#ffc400"
+   ]
+  },
+  {
+   "tipo": "banderines",
+   "vista": 243,
+   "en": 7,
+   "alto": 5.2,
+   "colores": [
+    "#c60b1e",
+    "#ffc400"
+   ]
+  },
+  {
+   "tipo": "escalones",
+   "vista": 243,
+   "lado": "izq",
+   "desde": 9.3,
+   "hasta": 10.3,
+   "alto": 0.1,
+   "peldanos": 1,
+   "borde": "#c8352b",
+   "camara": {
+    "x": 248.69,
+    "z": 123.1,
+    "heading": 287.0
+   }
+  },
+  {
+   "tipo": "escalones",
+   "vista": 243,
+   "lado": "izq",
+   "desde": 10.3,
+   "hasta": 11.4,
+   "alto": 0.1,
+   "peldanos": 1,
+   "borde": "#f4f4f0",
+   "camara": {
+    "x": 248.69,
+    "z": 123.1,
+    "heading": 287.0
+   }
+  },
+  {
+   "tipo": "escalones",
+   "vista": 243,
+   "lado": "izq",
+   "desde": 11.4,
+   "hasta": 12.6,
+   "alto": 0.1,
+   "peldanos": 1,
+   "borde": "#c8352b",
+   "camara": {
+    "x": 248.69,
+    "z": 123.1,
+    "heading": 287.0
+   }
+  },
+  {
+   "tipo": "casa",
+   "vista": 243,
+   "lado": "der",
+   "desde": 94,
+   "hasta": 106,
+   "lateral": 11.5,
+   "fondo": 10,
+   "plantas": 6,
+   "alto": 20,
+   "color": "#c9b8a6"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 241,
+   "lado": "izq",
+   "desde": -3,
+   "hasta": 14,
+   "fondo": 14,
+   "nota": "revisión final: la captura no tiene palmeras a la izquierda, en la plaza"
+  }
+ ]
+}

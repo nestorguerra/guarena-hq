@@ -1,0 +1,204 @@
+{
+ "calle": {
+  "toldos": false,
+  "pots": 0.03,
+  "balc": 0.7,
+  "arboles": null,
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "kinds": {
+   "trad_ocre": 0.3,
+   "trad_verde": 0.08,
+   "renovada": 0.45,
+   "color": 0.1,
+   "moderna": 0.07
+  },
+  "tramos": [
+   {
+    "x": 96,
+    "z": 75,
+    "r": 4,
+    "road": "asfalto",
+    "col": "#a09d97"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "arboles",
+   "vista": 65,
+   "lado": "izq",
+   "desde": 9,
+   "hasta": 25,
+   "especie": "naranjo",
+   "cada": 8,
+   "escala": 0.7
+  },
+  {
+   "tipo": "arbol",
+   "vista": 65,
+   "lado": "izq",
+   "en": 31,
+   "especie": "naranjo",
+   "escala": 0.7
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 65,
+   "lado": "izq",
+   "desde": 2,
+   "hasta": 9.5
+  },
+  {
+   "tipo": "senal",
+   "vista": 65,
+   "lado": "der",
+   "en": 4.9,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 65,
+   "lado": "der",
+   "desde": 8,
+   "hasta": 30
+  },
+  {
+   "tipo": "arboles",
+   "vista": 66,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 20,
+   "especie": "naranjo",
+   "cada": 8,
+   "escala": 0.7
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 66,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 40,
+   "fondo": 12
+  },
+  {
+   "tipo": "farola",
+   "vista": 66,
+   "lado": "der",
+   "en": 9.6,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 67,
+   "lado": "izq",
+   "desde": 5,
+   "hasta": 10,
+   "fondo": 12
+  },
+  {
+   "tipo": "senal",
+   "vista": 67,
+   "lado": "izq",
+   "en": 3.8,
+   "lateral": 2.7,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "espalda"
+  },
+  {
+   "tipo": "bolardos",
+   "vista": 67,
+   "lado": "izq",
+   "desde": 4.8,
+   "hasta": 5.6,
+   "cada": 0.8,
+   "lateral": 2.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 67,
+   "lado": "izq",
+   "en": 3.7,
+   "lateral": 4.2,
+   "especie": "palmera",
+   "escala": 0.3,
+   "camara": {
+    "x": 120.3,
+    "z": 73.8,
+    "heading": 290.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 67,
+   "lado": "izq",
+   "en": 8.8,
+   "lateral": 14.5,
+   "especie": "palmera",
+   "escala": 0.3,
+   "camara": {
+    "x": 120.3,
+    "z": 73.8,
+    "heading": 290.0
+   }
+  },
+  {
+   "tipo": "banderines",
+   "vista": 67,
+   "en": 13,
+   "alto": 9,
+   "colores": [
+    "#2e7d32",
+    "#f5f5f5"
+   ],
+   "camara": {
+    "x": 120.3,
+    "z": 73.8,
+    "heading": 290.0
+   }
+  },
+  {
+   "tipo": "banderines",
+   "vista": 67,
+   "en": 17.5,
+   "alto": 7,
+   "colores": [
+    "#2e7d32",
+    "#f5f5f5"
+   ],
+   "camara": {
+    "x": 120.3,
+    "z": 73.8,
+    "heading": 290.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 67,
+   "lado": "der",
+   "en": 4.9,
+   "lateral": 4.1,
+   "placas": [
+    "zona_residencial"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "placa",
+   "vista": 67,
+   "lado": "der",
+   "en": 4.8,
+   "texto": "Calle Pajares",
+   "fondo": "#2b3445",
+   "letra": "#f2f2ee"
+  }
+ ]
+}

@@ -17,7 +17,7 @@ for f in sorted(os.listdir(SRC)):
         if not (0 <= i < len(P)) or not all(isinstance(c.get(a), (int, float)) for a in ('x', 'z')): continue
         v = P[i]
         moved = ((c['x'] - v['x']) ** 2 + (c['z'] - v['z']) ** 2) ** 0.5
-        if moved > 40: print('vista', i, 'movida', round(moved, 1), 'm: no se toma', f); continue
+        if moved > (60 if f.startswith('zz_') else 40): print('vista', i, 'movida', round(moved, 1), 'm: no se toma', f); continue  # (the audit's fits: up to 60 m — a link that gave the roundabout's centre, not the camera)
         out[str(i)] = {'x': round(float(c['x']), 2), 'z': round(float(c['z']), 2), 'heading': float(c.get('heading', v['heading'])),
                        'eye': float(c.get('eye') or 2.5), 'moved': round(moved, 1), 'from': f[:-5]}
         if isinstance(c.get('fov'), (int, float)): out[str(i)]['fov'] = float(c['fov'])

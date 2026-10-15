@@ -2,7 +2,8 @@
 import { polyCum, polySample, polyNearest, ringArea, ringCentroid, clamp, pointInRing } from './util.js';
 import { StaticCollider, PolyIndex } from './collision.js';
 import { kerbAt } from './kerbs.js';
-import { NOMBRES } from './calles.js';
+import { NOMBRES, CALZADAS, PLANTAS, STYLES } from './calles.js';
+import { CASAS } from './calles_casas.js';
 
 // a point surely inside a ring (its centroid, unless the outline bends round it: then on the way to a corner)
 function innerPoint(r) {
@@ -69,6 +70,37 @@ export class MapData {
       return ed;
     });
     for (const [id, nm] of Object.entries(NOMBRES)) { const e = this.edges[id]; if (e && !e.name) e.name = nm; } // (calles.js: the names the map leaves out)
+    for (const [nm, st] of Object.entries(STYLES)) for (const id of (st && st.aristas) || []) { const e = this.edges[id]; if (e && !e.name) e.name = nm; } // (and the pieces a street's notes claim: its style reaches them)
+    // (and the carriageways it draws on top of their median: each moved to its own side of it, its ends still at its
+    // junctions — calles_medianas.js; its pavement on the houses' side only, its cars parked there)
+    for (const [id, c] of Object.entries(CALZADAS)) {
+      const e = this.edges[id];
+      if (!e) continue;
+      e.pts = new Float32Array(c.pts.flat()); e.cum = polyCum(e.pts); e.len = e.cum[e.cum.length - 1];
+      e.w = c.w; e.sw = Math.max(c.sp, c.sm); e.swP = c.sp; e.swM = c.sm; e.measured = true; e.kerbPts = null; e.facade = c.w + c.sp * 2;
+      e.parkOnly = c.park || 0;
+    }
+    // (a stretch the map draws out of place or of the wrong width, as its captures show it — a street's calzadas: { edge id:
+    // { desplaza: m to the left of a → b, ancho, acera } }): its line moved over, easing back to its ends in its last
+    // 4 m so it keeps its junctions; its carriageway and pavements as wide as seen
+    for (const st of Object.values(STYLES)) for (const [id, c] of Object.entries((st && st.calzadas) || {})) {
+      const e = this.edges[id];
+      if (!e || !c) continue;
+      const d = +c.desplaza || 0, pz = Array.isArray(c.puntos) ? c.puntos.slice().sort((a, b) => a[0] - b[0]) : null;
+      // (or in pieces: puntos [[s m from its start a, offset m], …], straight between them — a street with a kink)
+      const off = (s0) => { if (!pz || !pz.length) return d; if (s0 <= pz[0][0]) return pz[0][1]; for (let k = 1; k < pz.length; k++) if (s0 <= pz[k][0]) { const [s1, d1] = pz[k - 1], [s2, d2] = pz[k]; return d1 + ((d2 - d1) * (s0 - s1)) / Math.max(1e-3, s2 - s1); } return pz[pz.length - 1][1]; };
+      if (d || (pz && pz.length)) {
+        const P = [], t = {}, n = Math.max(2, Math.ceil(e.len / 2));
+        for (let k = 0; k <= n; k++) {
+          const s0 = (e.len * k) / n, w = Math.min(1, s0 / 4, (e.len - s0) / 4), o = off(s0) * w;
+          polySample(e.pts, e.cum, s0, t);
+          P.push(t.x - t.dz * o, t.z + t.dx * o);
+        }
+        e.pts = new Float32Array(P); e.cum = polyCum(e.pts); e.len = e.cum[e.cum.length - 1]; e.kerbPts = null;
+      }
+      if (c.ancho > 1) { e.w = +c.ancho; e.kerbPts = null; }
+      if (c.acera != null) { e.sw = +c.acera; e.swP = +c.acera; e.swM = +c.acera; e.measured = true; e.kerbPts = null; }
+    }
     for (const e of this.edges) {
       if (e.len < 0.5) continue;
       this.nodes[e.a].edges.push(e.id);
@@ -379,6 +411,81 @@ export class MapData {
       const ring = dec(p.p);
       return { id: i, ring, holes: p.h ? p.h.map(dec) : null, floors: p.f, b: p.b, c: ringCentroid(ring), area: Math.abs(ringArea(ring)) };
     });
+    // (a building the Catastro registers much larger than it stands: its outline as measured, one part of its storeys —
+    // calles.js PLANTAS; its other parts go, kept in the list as gone so the parts keep their indices)
+    for (const [id, f] of Object.entries(PLANTAS)) {
+      const b = this.buildings[id];
+      if (!b) continue;
+      const ring = new Float32Array(f.ring.flat());
+      Object.assign(b, { ring, holes: null, area: Math.abs(ringArea(ring)), c: ringCentroid(ring), floors: f.floors });
+      let kept = false;
+      for (const p of this.parts) {
+        if (p.b !== b.id) continue;
+        if (!kept) { Object.assign(p, { ring: new Float32Array(ring), holes: null, floors: f.floors, c: ringCentroid(ring), area: b.area }); kept = true; }
+        else { p.b = -1; p.gone = true; }
+      }
+      if (!kept) this.parts.push({ id: this.parts.length, ring: new Float32Array(ring), holes: null, floors: f.floors, b: b.id, c: ringCentroid(ring), area: b.area });
+    }
+    // (a front the Catastro puts out of place, as its captures show it — calles_casas.js mover_frente { m, calle? }: the
+    // walls of the building and its parts that look onto that street, within 3 m, moved m towards it — back if negative)
+    const bearing = (nx, nz) => ((Math.atan2(nx, -nz) * 180) / Math.PI + 360) % 360, near_b = (nx, nz, r) => { const d = Math.abs(((bearing(nx, nz) - r + 540) % 360) - 180); return d <= 40; }; // (a wall's outward normal as a compass bearing: 0 north, 90 east)
+    for (const [id, h] of Object.entries(CASAS)) {
+      const mf = h.mover_frente, b = this.buildings[id];
+      if (!mf || !b || !(Math.abs(mf.m) > 0.01)) continue;
+      const near = this.edges.filter((e) => (!mf.calle || e.name === mf.calle) && (e.walk || e.drive) && Math.abs(e.pts[0] - b.c[0]) < 400 && Math.abs(e.pts[1] - b.c[1]) < 400);
+      const shift = (ring) => {
+        const n = ring.length / 2, mv = new Float32Array(n * 2), cnt = new Uint8Array(n), out = new Float32Array(ring);
+        for (let i = 0; i < n; i++) {
+          const j = (i + 1) % n, ax = ring[i * 2], az = ring[i * 2 + 1], bx = ring[j * 2], bz = ring[j * 2 + 1], L = Math.hypot(bx - ax, bz - az);
+          if (L < 0.3) continue;
+          const nx = (bz - az) / L, nz = -(bx - ax) / L, px = (ax + bx) / 2 + nx * 2, pz = (az + bz) / 2 + nz * 2; // (outward, as buildings.js)
+          if (mf.rumbo != null ? !near_b(nx, nz, mf.rumbo) : !near.some((e) => polyNearest(e.pts, e.cum, px, pz).d < e.w / 2 + 3)) continue; // (by its bearing, a wall onto no street)
+          for (const k of [i, j]) { mv[k * 2] += nx; mv[k * 2 + 1] += nz; cnt[k]++; }
+        }
+        for (let i = 0; i < n; i++) if (cnt[i]) { const l = Math.hypot(mv[i * 2], mv[i * 2 + 1]) || 1; out[i * 2] += (mv[i * 2] / l) * mf.m; out[i * 2 + 1] += (mv[i * 2 + 1] / l) * mf.m; }
+        return out;
+      };
+      b.ring = shift(b.ring); b.c = ringCentroid(b.ring); b.area = Math.abs(ringArea(b.ring));
+      for (const p of this.parts) if (p.b === b.id) { p.ring = shift(p.ring); p.c = ringCentroid(p.ring); p.area = Math.abs(ringArea(p.ring)); }
+    }
+    // (one building of the Catastro that is two of different heights, as its captures show — calles_casas.js partir
+    // { calle?, metros, alto_izq, alto_der }: its parts cut square to its front to that street, so many metres from the
+    // front's left end as seen from the street; each side as tall as seen)
+    for (const [id, h] of Object.entries(CASAS)) {
+      const pc = h.partir, b = this.buildings[id];
+      if (!pc || !b) continue;
+      const near = this.edges.filter((e) => (!pc.calle || e.name === pc.calle) && (e.walk || e.drive) && Math.abs(e.pts[0] - b.c[0]) < 400 && Math.abs(e.pts[1] - b.c[1]) < 400);
+      const R = b.ring, n = R.length / 2;
+      let best = null;
+      for (let i = 0; i < n; i++) {
+        const j = (i + 1) % n, ax = R[i * 2], az = R[i * 2 + 1], bx = R[j * 2], bz = R[j * 2 + 1], L = Math.hypot(bx - ax, bz - az);
+        if (L < 2) continue;
+        const nx = (bz - az) / L, nz = -(bx - ax) / L, px = (ax + bx) / 2 + nx * 2, pz = (az + bz) / 2 + nz * 2;
+        if (pc.rumbo != null ? !near_b(nx, nz, pc.rumbo) : !near.some((e) => polyNearest(e.pts, e.cum, px, pz).d < e.w / 2 + 3)) continue;
+        if (!best || L > best.L) best = { ax, az, bx, bz, L };
+      }
+      if (!best) continue;
+      // (its left end as seen from the street is b: the walls run right to left — buildings.js)
+      const tx = (best.ax - best.bx) / best.L, tz = (best.az - best.bz) / best.L, cx = best.bx + tx * pc.metros, cz = best.bz + tz * pc.metros;
+      const side = (x, z) => (x - cx) * tx + (z - cz) * tz; // (< 0: the left piece)
+      const clip = (ring, keepLeft) => { // (Sutherland–Hodgman against the cutting line)
+        const out = [], m = ring.length / 2;
+        for (let i = 0; i < m; i++) {
+          const j = (i + 1) % m, x0 = ring[i * 2], z0 = ring[i * 2 + 1], x1 = ring[j * 2], z1 = ring[j * 2 + 1];
+          const s0 = side(x0, z0) * (keepLeft ? -1 : 1), s1 = side(x1, z1) * (keepLeft ? -1 : 1);
+          if (s0 >= 0) out.push(x0, z0);
+          if ((s0 >= 0) !== (s1 >= 0)) { const t = s0 / (s0 - s1); out.push(x0 + (x1 - x0) * t, z0 + (z1 - z0) * t); }
+        }
+        return out.length >= 6 ? new Float32Array(out) : null;
+      };
+      for (const p of this.parts.slice()) {
+        if (p.b !== b.id || p.gone) continue;
+        const L = clip(p.ring, true), Rr = clip(p.ring, false);
+        if (!L || !Rr) { p.alto = side(p.c[0], p.c[1]) < 0 ? pc.alto_izq : pc.alto_der; continue; }
+        Object.assign(p, { ring: L, holes: null, c: ringCentroid(L), area: Math.abs(ringArea(L)), alto: pc.alto_izq });
+        this.parts.push({ id: this.parts.length, ring: Rr, holes: null, floors: p.floors, b: b.id, c: ringCentroid(Rr), area: Math.abs(ringArea(Rr)), alto: pc.alto_der });
+      }
+    }
     this.collider = new StaticCollider(x0 - 400, z0 - 400, x1 + 400, z1 + 400, 8);
     this.bIndex = new PolyIndex(x0 - 400, z0 - 400, x1 + 400, z1 + 400, 16);
     for (const b of this.buildings) this.bIndex.add(b.ring, b);
@@ -395,6 +502,7 @@ export class MapData {
       if (q && q.data && q.data.id !== p.b) { p.b = q.data.id; this.relinked++; }
     }
     for (const p of this.parts) if (p.b >= 0) { const b = this.buildings[p.b]; if (!(b.floors >= p.floors)) b.floors = p.floors; }
+    for (const [id, f] of Object.entries(PLANTAS)) if (this.buildings[id]) this.buildings[id].floors = f.floors;
   }
   buildingAt(x, z) { const p = this.bIndex.find(x, z); return p ? p.data : null; }
   // the outlines changed (solidez.js welds them): the index again
@@ -407,7 +515,7 @@ export class MapData {
   useDrawnParts(parts) {
     const { x0, z0, x1, z1 } = this.bounds;
     const ix = new PolyIndex(x0 - 400, z0 - 400, x1 + 400, z1 + 400, 16);
-    for (const p of parts) if (p.b >= 0) ix.add(p.ring, this.buildings[p.b]);
+    for (const p of parts) if (p.b >= 0) ix.add(p.walkRing || p.ring, this.buildings[p.b]); // (a part's arcades not inside it: buildings.js)
     this.bIndex = ix;
   }
 

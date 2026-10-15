@@ -536,11 +536,18 @@ function drawFacadeLayer(style, layer, S, seed) {
   const d = img.data;
   const tint = style === 'color' || style === 'trad_verde' || style === 'trad_ocre' || style === 'renovada' || style === 'moderna';
   const wallRGB = tint ? hexRGB(st.wall) : null;
+  // (a shed's ribbed sheet takes the colour seen too — calles_casas.js wall, muros: its pale grey pixels, not its doors,
+  // windows or rust — at 0.8, so the claymation's smoothing of painted walls leaves its ribs alone; until 2026-10-14 no
+  // shed showed the colour its captures gave it)
+  const metal = st.wall === 'metal';
   for (let i = 0, p = 0; p < d.length; i++, p += 4) {
     let a = 0;
     if (wallRGB) {
       const dr = d[p] - wallRGB[0], dg = d[p + 1] - wallRGB[1], db = d[p + 2] - wallRGB[2];
       if (dr * dr + dg * dg + db * db < 900) a = 255;
+    } else if (metal) {
+      const mx = Math.max(d[p], d[p + 1], d[p + 2]), mn = Math.min(d[p], d[p + 1], d[p + 2]);
+      if (mx - mn < 22 && d[p] * 0.3 + d[p + 1] * 0.59 + d[p + 2] * 0.11 > 160) a = 204; // (above the grey plinth: 153)
     }
     d[p + 3] = a;
   }
@@ -1027,38 +1034,74 @@ export function textCanvas(txt, { w = 512, h = 128, bg = null, fg = '#fff', font
 // claymation: the church's stones as pieces of clay pressed into a bed of softer clay — round-cornered, each its own flat
 // colour, lighter where the thumb rounded its top and darker under, a soft groove round each; no speckle, no grain
 function clayStones(ctx, S, rnd, ash, hx) {
+  if (!ash) return clayRubble(ctx, S, rnd, hx);
   // (the bed of lime mortar, weathered grey-beige — 2026-10-13, after the captures: it was pale cream, for the user's
   // first pictures)
-  ctx.fillStyle = ash ? '#a39a8a' : '#b8af9f';
+  ctx.fillStyle = '#a39a8a';
   ctx.fillRect(0, 0, S, S);
   if (hx) { hx.fillStyle = '#202020'; hx.fillRect(0, 0, S, S); } // (its relief: each stone a bulge, the bed sunk between)
-  const rows = ash ? 5 : 7, rh = S / rows;
+  const rows = 5, rh = S / rows;
   for (let r = 0; r < rows; r++) {
-    let x = ash ? (r % 2 ? -S / 5 : 0) : -rnd() * rh;
+    let x = r % 2 ? -S / 5 : 0;
     while (x < S) {
-      const w = ash ? S * (0.26 + rnd() * 0.16) : rh * (1 + rnd() * 0.9);
+      const w = S * (0.26 + rnd() * 0.16);
       // (each stone its own colour, as Santa María's in the captures: grey-brown granite, some warmer with iron, a few
       // dark — they were ochre, cream and orange, for the user's first pictures, until 2026-10-13)
-      const v = ash ? 0.88 + rnd() * 0.14 : 0.84 + rnd() * 0.2, kc = rnd();
-      const b = (ash ? [180, 172, 156] : kc < 0.38 ? [150, 138, 120] : kc < 0.62 ? [168, 155, 134] : kc < 0.8 ? [158, 130, 100] : kc < 0.92 ? [132, 120, 104] : [112, 103, 92]).map((k) => k * v);
-      const pad = S * (ash ? 0.012 : 0.01 + rnd() * 0.012), ww = w - 2 * pad, hh = rh - 2 * pad - (ash ? 0 : rnd() * rh * 0.12);
-      const y0 = r * rh + pad, rad = Math.min(ww, hh) * (ash ? 0.16 : 0.22 + rnd() * 0.1); // (squarish blocks, as the masonry is, softened)
-      for (const ox of [0, -S, S]) {
-        const x0 = x + pad + ox;
-        if (x0 > S || x0 + ww < 0) continue;
-        ctx.save();
-        ctx.shadowColor = 'rgba(40,30,20,0.45)'; ctx.shadowBlur = S * 0.012; ctx.shadowOffsetY = S * 0.005; // (its groove)
-        const gr = ctx.createLinearGradient(x0, y0, x0 + ww * 0.35, y0 + hh);
-        gr.addColorStop(0, `rgb(${b.map((k) => Math.min(255, Math.round(k * 1.13))).join(',')})`);
-        gr.addColorStop(0.45, `rgb(${b.map(Math.round).join(',')})`);
-        gr.addColorStop(1, `rgb(${b.map((k) => Math.round(k * 0.84)).join(',')})`);
-        ctx.fillStyle = gr;
-        ctx.beginPath(); ctx.roundRect(x0, y0, ww, hh, rad); ctx.fill();
-        ctx.restore();
-        if (hx) { const hv = Math.round(150 + v * 90); hx.fillStyle = `rgb(${hv},${hv},${hv})`; hx.beginPath(); hx.roundRect(x0 + S * 0.006, y0 + S * 0.006, ww - S * 0.012, hh - S * 0.012, rad); hx.fill(); }
-      }
+      const v = 0.88 + rnd() * 0.14; rnd(); // (the third draw is the colour's, kept so that the stones are the same ones)
+      const b = [180, 172, 156].map((k) => k * v);
+      const pad = S * 0.012, ww = w - 2 * pad, hh = rh - 2 * pad;
+      const y0 = r * rh + pad, rad = Math.min(ww, hh) * 0.16; // (squarish blocks, as the masonry is, softened)
+      clayPiece(ctx, hx, S, x + pad, y0, ww, hh, rad, b, v);
       x += w;
     }
+  }
+}
+// one piece of clay pressed into the bed: a flat colour, lighter where the thumb rounded its top and darker under, a
+// soft groove round it; drawn again at the tile's other sides so it wraps
+function clayPiece(ctx, hx, S, x1, y0, ww, hh, rad, b, v) {
+  for (const ox of [0, -S, S]) {
+    const x0 = x1 + ox;
+    if (x0 > S || x0 + ww < 0) continue;
+    ctx.save();
+    ctx.shadowColor = 'rgba(40,30,20,0.45)'; ctx.shadowBlur = S * 0.012; ctx.shadowOffsetY = S * 0.005; // (its groove)
+    const gr = ctx.createLinearGradient(x0, y0, x0 + ww * 0.35, y0 + hh);
+    gr.addColorStop(0, `rgb(${b.map((k) => Math.min(255, Math.round(k * 1.13))).join(',')})`);
+    gr.addColorStop(0.45, `rgb(${b.map(Math.round).join(',')})`);
+    gr.addColorStop(1, `rgb(${b.map((k) => Math.round(k * 0.84)).join(',')})`);
+    ctx.fillStyle = gr;
+    ctx.beginPath(); ctx.roundRect(x0, y0, ww, hh, rad); ctx.fill();
+    ctx.restore();
+    if (hx) { const hv = Math.round(150 + v * 90); hx.fillStyle = `rgb(${hv},${hv},${hv})`; hx.beginPath(); hx.roundRect(x0 + S * 0.006, y0 + S * 0.006, ww - S * 0.012, hh - S * 0.012, rad); hx.fill(); }
+  }
+}
+// Santa María's rubble masonry as the captures show it (2026-10-14): stones of all sizes laid in loose courses, many of
+// them flat dark slabs («lajas») of schist among the pink-brown granite and the sandstone, in a lot of warm lime
+// mortar — the whole a rosy brown, not the even bricks of grey and orange it was
+function clayRubble(ctx, S, rnd, hx) {
+  ctx.fillStyle = '#d0baa6'; // (the mortar: warm, pale, a little rosy)
+  ctx.fillRect(0, 0, S, S);
+  if (hx) { hx.fillStyle = '#202020'; hx.fillRect(0, 0, S, S); }
+  const PAL = [[0.28, [202, 164, 144]], [0.5, [218, 182, 160]], [0.66, [188, 154, 136]], [0.8, [210, 192, 170]], [0.92, [142, 122, 116]], [1, [106, 94, 92]]];
+  // the courses: heights from a third of a metre down to a hand, summing exactly to the tile so that it wraps
+  const hs = []; let tot = 0;
+  while (tot < S - S * 0.07) { const h = S * (0.07 + rnd() * 0.09); hs.push(h); tot += h; }
+  const k = S / tot; let y = 0;
+  for (const h0 of hs) {
+    const rh = h0 * k; let x = -rnd() * rh * 2;
+    while (x < S) {
+      const slab = rnd() < 0.12; // (a flat slab lying on its bed: long and thin)
+      const w = slab ? rh * (1.6 + rnd() * 1.8) : rh * (0.8 + rnd() * 1.5);
+      const hh0 = slab ? rh * (0.45 + rnd() * 0.25) : rh * (0.7 + rnd() * 0.32);
+      const kc = slab && rnd() < 0.6 ? 0.9 + rnd() * 0.1 : rnd();
+      const v = 0.88 + rnd() * 0.22, base = PAL.find((p) => kc <= p[0])[1], b = base.map((c, i) => c * v * [0.97, 0.955, 0.93][i]);
+      const pad = S * (0.007 + rnd() * 0.01), ww = w - 2 * pad, hh = hh0 - pad;
+      const yy = y + (rh - hh0) * (slab ? rnd() : 0.5) + pad / 2;
+      clayPiece(ctx, hx, S, x + pad, yy, ww, hh, Math.min(ww, hh) * (0.22 + rnd() * 0.28), b, v);
+      // (a chip of stone wedged in the joint above it now and then)
+      if (rnd() < 0.3) { const cw = rh * (0.22 + rnd() * 0.2), cc = base.map((c) => c * (0.7 + rnd() * 0.2)); clayPiece(ctx, hx, S, x + w * rnd() - cw / 2, y - cw * 0.35, cw, cw * 0.8, cw * 0.3, cc, 0.8); }
+      x += w;
+    }
+    y += rh;
   }
 }
 export function stoneCanvas(kind, S = 512, seed = 1) {
@@ -1128,6 +1171,18 @@ export function stoneCanvas(kind, S = 512, seed = 1) {
     ctx.globalAlpha = 0.1;
     for (let i = 0; i < 10; i++) { ctx.fillStyle = '#4a4538'; ctx.fillRect(rnd() * S, 0, 3 + rnd() * 8, S * rnd()); }
     ctx.globalAlpha = 1;
+  } else if (kind === 'revoco') {
+    // ashlar under lime-wash, its joints barely marked: the town hall's sides as the 2009 captures show them
+    ctx.fillStyle = '#e9e7e1';
+    ctx.fillRect(0, 0, S, S);
+    const rows = 6, rh = S / rows, jw = Math.max(1, S / 256);
+    ctx.fillStyle = 'rgba(70,66,58,0.10)';
+    for (let r = 0; r < rows; r++) {
+      ctx.fillRect(0, r * rh, S, jw);
+      for (let x = r % 2 ? S / 4 : 0; x < S; x += S / 2) ctx.fillRect(x, r * rh, jw, rh);
+    }
+    speckle(ctx, S, rnd, S * S * 0.03, ['#d6d3cb', '#f4f2ec', '#c9c5bb'], 0.5, 1.4, 0.35);
+    grain(ctx, S, seed, 0.05, 5, 4);
   } else if (kind === 'reloj') {
     ctx.fillStyle = '#f4efe2';
     ctx.beginPath(); ctx.arc(S / 2, S / 2, S * 0.48, 0, Math.PI * 2); ctx.fill();

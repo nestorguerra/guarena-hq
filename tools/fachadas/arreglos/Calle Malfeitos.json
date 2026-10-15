@@ -1,0 +1,18 @@
+{"calle": {"tramos": [{"x": 110.5, "z": -146, "r": 11, "lado": "E", "acera": {"col": "#d0a095", "pat": 2}}, {"x": 131, "z": -42, "r": 46, "lado": "E", "acera": {"col": "#efebe5", "pat": 2}}, {"x": 131, "z": -42, "r": 46, "lado": "O", "acera": {"col": "#b9b1a4", "pat": 1}}], "firme": "liso"}, "items": [
+ {"tipo": "amarillo", "vista": 77, "lado": "izq", "desde": 50, "hasta": 54, "camara": {"x": 110.2, "z": -192.5, "heading": 180.0}},
+ {"tipo": "amarillo", "vista": 77, "lado": "der", "desde": 47, "hasta": 52, "camara": {"x": 110.2, "z": -192.5, "heading": 180.0}},
+ {"tipo": "suelo", "vista": 80, "lado": "der", "desde": -1, "hasta": 5, "fondo": 10, "material": "asfalto", "color": "#cbc0b2", "camara": {"x": 115.44, "z": -78.14, "heading": 160.0}},
+ {"tipo": "farola", "vista": 80, "lado": "izq", "en": 15, "modelo": "fernandino", "camara": {"x": 115.44, "z": -78.14, "heading": 160.0}},
+ {"tipo": "sin_senales", "vista": 77, "lado": "izq", "desde": 48, "hasta": 56, "camara": {"x": 110.2, "z": -192.5, "heading": 180.0}},
+ {"tipo": "senal", "vista": 77, "lado": "izq", "en": 53.5, "placas": ["sentido_obligatorio"], "mira": "espalda", "camara": {"x": 110.2, "z": -192.5, "heading": 180.0}},
+ {"tipo": "cartel", "vista": 79, "lado": "izq", "en": 1.6, "lateral": 1.98, "ancho": 6.0, "alto": 0.9, "suelo": 0, "color": "#cfc0a6", "mira": "calle", "camara": {"x": 126.9, "z": -45.75, "heading": 340.0}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 5.73, "lateral": 7.12, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 6.09, "lateral": 6.19, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 6.45, "lateral": 5.26, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 6.82, "lateral": 4.32, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 7.18, "lateral": 3.39, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "cartel", "vista": 80, "lado": "der", "en": 7.54, "lateral": 2.46, "ancho": 1.0, "alto": 0.6, "suelo": 0, "color": "#9a9690", "mira": "camara", "camara": {"x": 115.34, "z": -76.54, "heading": 160.8}},
+ {"tipo": "sin_buzon", "vista": 78, "lado": "der", "desde": 6, "hasta": 18},
+ {"tipo": "silos", "vista": 77, "lado": "der", "en": 24, "lateral": 11, "n": 1, "radio": 2.2, "alto": 15, "color": "#9d9e9b"},
+ {"tipo": "silos", "vista": 77, "lado": "der", "en": 25, "lateral": 12.6, "n": 1, "radio": 0.45, "alto": 24.5, "color": "#8e9296"}
+]}

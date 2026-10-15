@@ -1,0 +1,73 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "toldos": 0,
+  "pots": 0.03,
+  "acera": {
+   "col": "#cebfaa",
+   "pat": 0
+  },
+  "firme": "liso",
+  "bordillo": "#9c9893",
+  "tramos": [
+   {
+    "x": 754.6,
+    "z": -14.4,
+    "r": 4,
+    "firme": "gastado"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 168,
+   "lado": "izq",
+   "en": 7.3,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "senal",
+   "vista": 168,
+   "lado": "der",
+   "en": 4.1,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "farola",
+   "vista": 169,
+   "lado": "der",
+   "en": 9.5,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 170,
+   "lado": "izq",
+   "en": 15.8,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 170,
+   "lado": "der",
+   "desde": -3,
+   "hasta": 6,
+   "fondo": 8
+  },
+  {
+   "tipo": "cable",
+   "vista": 169,
+   "en": 27,
+   "alto": 8.5
+  }
+ ]
+}

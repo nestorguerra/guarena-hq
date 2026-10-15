@@ -1,0 +1,356 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#aa9e8b",
+  "acera": {
+   "col": "#55534e",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 999,
+   "kind": "pared"
+  },
+  "pots": 0.03,
+  "toldos": 0,
+  "pretil": 0.15,
+  "garage": 0.25,
+  "balc": 0.1,
+  "firme": "gastado",
+  "tramos": [
+   {
+    "x": 684.3,
+    "z": 290.4,
+    "r": 3,
+    "road": "asfalto",
+    "col": "#b7aa96"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "tapia",
+   "vista": 250,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 19,
+   "lateral": 10.4,
+   "alto": 3.1,
+   "material": "piedra",
+   "color": "#c8baa3"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 250,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 25
+  },
+  {
+   "tipo": "sin_contenedores",
+   "vista": 250,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 40
+  },
+  {
+   "tipo": "farola",
+   "vista": 250,
+   "lado": "der",
+   "en": 8.2,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 251,
+   "lado": "der",
+   "desde": 2.5,
+   "hasta": 6.5,
+   "lateral": 3.8,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#5a7440",
+   "camara": {
+    "x": 878.29,
+    "z": 326.71,
+    "heading": 285.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 251,
+   "lado": "der",
+   "en": 4.8,
+   "lateral": 3.7,
+   "placas": [
+    "paso_peatones"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": 878.29,
+    "z": 326.71,
+    "heading": 285.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 251,
+   "lado": "der",
+   "en": 5.7,
+   "lateral": 6.8,
+   "placas": [
+    "ceda"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": 878.29,
+    "z": 326.71,
+    "heading": 285.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 251,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 8,
+   "fondo": 5,
+   "camara": {
+    "x": 878.29,
+    "z": 326.71,
+    "heading": 285.0
+   }
+  },
+  {
+   "tipo": "paso",
+   "vista": 251,
+   "en": 13.5
+  },
+  {
+   "tipo": "banderines",
+   "vista": 251,
+   "en": 8,
+   "alto": 7,
+   "colores": [
+    "#c60b1e",
+    "#ffc400"
+   ],
+   "camara": {
+    "x": 883.5,
+    "z": 318.0,
+    "heading": 282.0
+   }
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "der",
+   "en": 4.0,
+   "lateral": 2.6,
+   "largo": 2.0,
+   "ancho": 0.14
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "der",
+   "en": 10.0,
+   "lateral": 2.8,
+   "largo": 2.0,
+   "ancho": 0.14
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 8.0,
+   "lateral": 1.1,
+   "largo": 12,
+   "ancho": 0.14
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 3.5,
+   "lateral": 9.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 4.25,
+   "lateral": 8.25,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 5.0,
+   "lateral": 7.5,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 5.75,
+   "lateral": 6.75,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 6.5,
+   "lateral": 6.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 5.1,
+   "lateral": 9.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 5.85,
+   "lateral": 8.25,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 6.6,
+   "lateral": 7.5,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 7.35,
+   "lateral": 6.75,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 8.1,
+   "lateral": 6.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 6.7,
+   "lateral": 9.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 7.45,
+   "lateral": 8.25,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 8.2,
+   "lateral": 7.5,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 8.95,
+   "lateral": 6.75,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 9.7,
+   "lateral": 6.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 8.3,
+   "lateral": 9.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 9.05,
+   "lateral": 8.25,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 9.8,
+   "lateral": 7.5,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 10.55,
+   "lateral": 6.75,
+   "largo": 0.9,
+   "ancho": 0.4
+  },
+  {
+   "tipo": "marca",
+   "vista": 251,
+   "lado": "izq",
+   "en": 11.3,
+   "lateral": 6.0,
+   "largo": 0.9,
+   "ancho": 0.4
+  }
+ ]
+}

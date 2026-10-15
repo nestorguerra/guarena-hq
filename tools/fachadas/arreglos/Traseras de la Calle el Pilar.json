@@ -1,0 +1,752 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 16,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#e0ccb6",
+  "acera": {
+   "col": "#e5ddd0",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": 0,
+  "balc": 0,
+  "garage": 0.25,
+  "pretil": 0.15,
+  "walls": [
+   [
+    "#f3f1ee",
+    0.55
+   ],
+   [
+    "#efebe6",
+    0.2
+   ],
+   [
+    "#d7c4b0",
+    0.15
+   ],
+   [
+    "#e8e2d6",
+    0.1
+   ]
+  ]
+ },
+ "items": [
+  {
+   "tipo": "suelo",
+   "vista": 269,
+   "lado": "der",
+   "desde": -10,
+   "hasta": 70,
+   "fondo": 40,
+   "material": "tierra",
+   "color": "#a8937f",
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 2,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 10,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 18,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 26,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 34,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 42,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 50,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 58,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 66,
+   "fondo": 3,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 2,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 10,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 18,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 26,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 34,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 42,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 50,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 66,
+   "fondo": 11,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 2,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 10,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 18,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 26,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 34,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 42,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 50,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 58,
+   "fondo": 19,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 2,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 10,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 18,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 26,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 34,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 42,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 50,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 58,
+   "fondo": 27,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 2,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 10,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 18,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 26,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 34,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 50,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 58,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 269,
+   "lado": "der",
+   "en": 66,
+   "fondo": 35,
+   "especie": "olivo",
+   "escala": 0.75,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 270,
+   "lado": "izq",
+   "desde": -5,
+   "hasta": 15,
+   "fondo": 30,
+   "material": "hierba",
+   "color": "#958c64",
+   "camara": {
+    "x": 341.28,
+    "z": 425.12,
+    "heading": 279.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 270,
+   "lado": "izq",
+   "desde": 15,
+   "hasta": 38,
+   "alto": 2.2,
+   "material": "cal",
+   "color": "#e8e4dc",
+   "camara": {
+    "x": 341.28,
+    "z": 425.12,
+    "heading": 279.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 269,
+   "lado": "der",
+   "desde": -5,
+   "hasta": 95,
+   "ancho": 0.06,
+   "camara": {
+    "x": 214.76,
+    "z": 404.65,
+    "heading": 99.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 270,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 30,
+   "ancho": 0,
+   "camara": {
+    "x": 341.28,
+    "z": 425.12,
+    "heading": 279.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 270,
+   "lado": "izq",
+   "desde": 20,
+   "hasta": 50,
+   "lateral": 26,
+   "alto": 1.5,
+   "material": "malla",
+   "color": "#6b5a45",
+   "camara": {
+    "x": 342.17,
+    "z": 427.48,
+    "heading": 278.5
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 270,
+   "lado": "izq",
+   "desde": 27,
+   "hasta": 37,
+   "lateral": 25.8,
+   "alto": 1.3,
+   "material": "ladrillo",
+   "color": "#b4553f",
+   "camara": {
+    "x": 342.17,
+    "z": 427.48,
+    "heading": 278.5
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 270,
+   "lado": "der",
+   "en": 10.5,
+   "lateral": 3.35,
+   "modelo": "pared",
+   "camara": {
+    "x": 342.17,
+    "z": 427.48,
+    "heading": 278.5
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 270,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 6.3,
+   "alto": 0.4,
+   "suelo": 1.9,
+   "color": "#b5654f",
+   "mira": "espalda",
+   "camara": {
+    "x": 338.722,
+    "z": 423.55,
+    "heading": 187.1
+   }
+  }
+ ]
+}

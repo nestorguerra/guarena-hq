@@ -1,0 +1,171 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": "discontinua",
+   "bordes": true,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 90,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#bfb2a6",
+  "acera": {
+   "col": "#c9c4bb",
+   "pat": 0
+  },
+  "calzadas": {
+   "125": {
+    "ancho": 6.5,
+    "acera": 0
+   },
+   "675": {
+    "ancho": 6.5,
+    "acera": 0
+   },
+   "678": {
+    "ancho": 6.5,
+    "acera": 0
+   }
+  },
+  "aristas": [
+   676,
+   677
+  ]
+ },
+ "items": [
+  {
+   "tipo": "suelo",
+   "vista": 282,
+   "lado": "izq",
+   "desde": -20,
+   "hasta": 170,
+   "fondo": 150,
+   "material": "hierba",
+   "color": "#b9b07f",
+   "camara": {
+    "x": -963.26,
+    "z": -764.63,
+    "heading": 110.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 282,
+   "lado": "der",
+   "desde": -20,
+   "hasta": 170,
+   "fondo": 7,
+   "material": "hierba",
+   "color": "#8f9957",
+   "camara": {
+    "x": -963.26,
+    "z": -764.63,
+    "heading": 110.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 282,
+   "lado": "izq",
+   "en": 21.6,
+   "placas": [
+    "velocidad_50"
+   ],
+   "mira": "espalda",
+   "lateral": 9.2,
+   "camara": {
+    "x": -963.26,
+    "z": -764.63,
+    "heading": 110.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 284,
+   "lado": "izq",
+   "en": 37,
+   "especie": "palmera",
+   "escala": 1.0,
+   "lateral": 9.0
+  },
+  {
+   "tipo": "farola",
+   "vista": 284,
+   "lado": "izq",
+   "en": 48,
+   "modelo": "baculo",
+   "lateral": 8.5
+  },
+  {
+   "tipo": "farola",
+   "vista": 284,
+   "lado": "der",
+   "en": 48,
+   "modelo": "baculo",
+   "lateral": 6.5
+  },
+  {
+   "tipo": "senal",
+   "vista": 284,
+   "lado": "der",
+   "en": 32,
+   "placas": [
+    "peligro"
+   ],
+   "mira": "camara",
+   "lateral": 4.8
+  },
+  {
+   "tipo": "tapia",
+   "vista": 284,
+   "lado": "der",
+   "desde": 50,
+   "hasta": 51,
+   "alto": 2.5,
+   "material": "ladrillo",
+   "color": "#a8705c",
+   "lateral": 12.5
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 282,
+   "lado": "izq",
+   "desde": 60,
+   "hasta": 270,
+   "fondo": 260
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 282,
+   "lado": "izq",
+   "desde": 120,
+   "hasta": 300,
+   "fondo": 300
+  },
+  {
+   "tipo": "sierra",
+   "vista": 282,
+   "col_desde": 1070,
+   "col_hasta": 1440,
+   "alto_px": 20,
+   "distancia": 12
+  },
+  {
+   "tipo": "banda",
+   "vista": 284,
+   "en": 7.6,
+   "modelo": "damero",
+   "fondo": 0.8
+  },
+  {
+   "tipo": "banda",
+   "vista": 284,
+   "en": 6.0,
+   "modelo": "damero",
+   "fondo": 0.8
+  }
+ ]
+}

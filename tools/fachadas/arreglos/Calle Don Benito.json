@@ -1,0 +1,159 @@
+{
+ "calle": {
+  "bordillo": "#8f8d89"
+ },
+ "items": [
+  {
+   "tipo": "tapia",
+   "vista": 171,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 11,
+   "alto": 2.0,
+   "material": "enfoscado",
+   "color": "#a3acb4",
+   "lateral": 13.2
+  },
+  {
+   "tipo": "senal",
+   "vista": 171,
+   "lado": "der",
+   "en": 7.6,
+   "placas": [
+    "resalto"
+   ],
+   "mira": "camara",
+   "lateral": 4.9
+  },
+  {
+   "tipo": "tapia",
+   "vista": 172,
+   "lado": "izq",
+   "desde": 5,
+   "hasta": 26,
+   "alto": 1.9,
+   "material": "verja",
+   "color": "#1e1e1e",
+   "murete": "#f4f3ef",
+   "lateral": 15.0,
+   "camara": {
+    "x": 601.02,
+    "z": -56.19,
+    "heading": 91.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 173,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 47,
+   "alto": 1.5,
+   "material": "cal",
+   "color": "#f2f1ec",
+   "lateral": 16.4,
+   "camara": {
+    "x": 674.61,
+    "z": -52.99,
+    "heading": 270.5
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 173,
+   "lado": "der",
+   "desde": -2,
+   "hasta": 2,
+   "fondo": -9.9,
+   "camara": {
+    "x": 674.08,
+    "z": -52.1,
+    "heading": 268.4
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 173,
+   "lado": "der",
+   "en": 10,
+   "ancho": 4,
+   "alto": 4.2,
+   "suelo": 0.1,
+   "color": "#46a24f",
+   "lateral": 17.4,
+   "mira": "calle",
+   "camara": {
+    "x": 674.08,
+    "z": -52.1,
+    "heading": 268.4
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 173,
+   "lado": "der",
+   "en": 14,
+   "ancho": 4,
+   "alto": 4.2,
+   "suelo": 0.1,
+   "color": "#2d52b5",
+   "lateral": 17.4,
+   "mira": "calle",
+   "camara": {
+    "x": 674.08,
+    "z": -52.1,
+    "heading": 268.4
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 173,
+   "lado": "der",
+   "en": 18,
+   "ancho": 4,
+   "alto": 4.2,
+   "suelo": 0.1,
+   "color": "#46a24f",
+   "lateral": 17.4,
+   "mira": "calle",
+   "camara": {
+    "x": 674.08,
+    "z": -52.1,
+    "heading": 268.4
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 173,
+   "lado": "der",
+   "en": 22,
+   "ancho": 4,
+   "alto": 4.2,
+   "suelo": 0.1,
+   "color": "#2d52b5",
+   "lateral": 17.4,
+   "mira": "calle",
+   "camara": {
+    "x": 674.08,
+    "z": -52.1,
+    "heading": 268.4
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 172,
+   "de": {
+    "en": -2,
+    "lado": "izq",
+    "lateral": 2.4
+   },
+   "a": {
+    "en": 4.5,
+    "lado": "izq",
+    "lateral": 2.4
+   },
+   "ancho": 3,
+   "nota": "revisión final: el árbol de la mediana pegado a la cámara; en la captura el primero está a ~10 m"
+  }
+ ]
+}

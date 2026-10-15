@@ -1,0 +1,93 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 999,
+   "kind": "columna"
+  },
+  "road": "asfalto",
+  "roadCol": "#baa68d",
+  "acera": {
+   "col": "#bea98e",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": 0,
+  "pretil": 1.0,
+  "garage": 0.33,
+  "balc": 0.33,
+  "walls": [
+   [
+    "#f0efe9",
+    1.0
+   ]
+  ],
+  "kinds": {
+   "renovada": 1.0
+  },
+  "shutters": "#f0eee8",
+  "frames": "#f0efea",
+  "door": "#eeede8",
+  "reja": {
+   "share": 0.7,
+   "col": "#1e1e1e",
+   "buche": 0.0
+  }
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 115,
+   "lado": "izq",
+   "en": 12.9,
+   "modelo": "globo",
+   "camara": {
+    "x": 237.15,
+    "z": -427.45,
+    "heading": 18.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 115,
+   "lado": "izq",
+   "en": 10.8,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "espalda",
+   "camara": {
+    "x": 237.15,
+    "z": -427.45,
+    "heading": 18.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 116,
+   "lado": "izq",
+   "en": 24,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 117,
+   "lado": "izq",
+   "en": 20.8,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 117,
+   "lado": "izq",
+   "desde": -1,
+   "hasta": 33,
+   "modo": "cordon"
+  }
+ ]
+}

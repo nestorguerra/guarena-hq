@@ -1,0 +1,219 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "adoquin_plataforma",
+  "roadCol": "#a99f91",
+  "acera": {
+   "col": "#aea597",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 999,
+   "kind": "pared"
+  },
+  "pots": 0,
+  "toldos": 0,
+  "balc": 0.5,
+  "kinds": {
+   "renovada": 0.85,
+   "color": 0.15
+  },
+  "surround": {
+   "share": 0.6,
+   "col": "#dbc6aa",
+   "kind": "pintado"
+  },
+  "tramos": [
+   {
+    "x": -206.43,
+    "z": -153.65,
+    "r": 1.0,
+    "lado": "S",
+    "acera": {
+     "col": "#a8604f",
+     "pat": 0
+    }
+   },
+   {
+    "x": -211.75,
+    "z": -158.63,
+    "r": 1.0,
+    "lado": "N",
+    "acera": {
+     "col": "#a8604f",
+     "pat": 0
+    }
+   },
+   {
+    "x": -63.0,
+    "z": -153.4,
+    "r": 2.6,
+    "acera": {
+     "col": "#a8604f",
+     "pat": 0
+    }
+   },
+   {
+    "x": -69,
+    "z": -164,
+    "r": 20,
+    "road": "adoquin",
+    "col": "#8f8a80"
+   }
+  ],
+  "aristas": [
+   369
+  ]
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 26,
+   "lado": "izq",
+   "en": 4.5,
+   "lateral": 4.65,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 27,
+   "lado": "izq",
+   "en": 9.2,
+   "lateral": 3.85,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 28,
+   "lado": "der",
+   "en": 10.6,
+   "lateral": 0.0,
+   "modelo": "fernandino",
+   "camara": {
+    "x": -58.42,
+    "z": -152.4,
+    "heading": 330.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 27,
+   "lado": "izq",
+   "en": 1.6,
+   "lateral": 2.65,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "espalda"
+  },
+  {
+   "tipo": "senal",
+   "vista": 28,
+   "lado": "der",
+   "en": 4.7,
+   "lateral": 3.0,
+   "placas": [
+    "aparcamiento"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": -58.42,
+    "z": -152.4,
+    "heading": 330.0
+   }
+  },
+  {
+   "tipo": "paso",
+   "vista": 28,
+   "en": 3.8,
+   "camara": {
+    "x": -58.42,
+    "z": -152.4,
+    "heading": 330.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 27,
+   "lado": "izq",
+   "desde": 45,
+   "hasta": 110
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 27,
+   "lado": "der",
+   "desde": 45,
+   "hasta": 110
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 26,
+   "lado": "ambos",
+   "desde": -5,
+   "hasta": 70
+  },
+  {
+   "tipo": "sin_placas",
+   "vista": 28,
+   "lado": "ambos",
+   "desde": -4,
+   "hasta": 30
+  },
+  {
+   "tipo": "cartel",
+   "vista": 28,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 4.6,
+   "alto": 0.8,
+   "suelo": 3.2,
+   "color": "#efeeea",
+   "texto": "FARMACIA",
+   "letra": "#46688f",
+   "mira": "espalda",
+   "camara": {
+    "x": -60.156,
+    "z": -162.359,
+    "heading": 163.3
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 28,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "ancho": 0.8,
+   "alto": 0.8,
+   "suelo": 4.7,
+   "color": "#1f9d55",
+   "texto": "+",
+   "letra": "#ffffff",
+   "mira": "espalda",
+   "camara": {
+    "x": -63.606,
+    "z": -161.329,
+    "heading": 163.3
+   }
+  },
+  {
+   "tipo": "plaza_azul",
+   "vista": 28,
+   "lado": "der",
+   "en": 0,
+   "lateral": 0,
+   "largo": 5,
+   "camara": {
+    "x": -57.82,
+    "z": -160.82,
+    "heading": 253.3
+   }
+  }
+ ]
+}

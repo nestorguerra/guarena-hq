@@ -1,0 +1,163 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#c2b6a6",
+  "acera": {
+   "col": "#cfc3b0",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0,
+  "toldos": 0,
+  "lamps": {
+   "every": 45,
+   "kind": "pared"
+  }
+ },
+ "items": [
+  {
+   "tipo": "amarillo",
+   "vista": 121,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 55
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 121,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 45
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 121,
+   "lado": "der",
+   "desde": 30,
+   "hasta": 75
+  },
+  {
+   "tipo": "acera",
+   "vista": 122,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "ancho": 0
+  },
+  {
+   "tipo": "suelo",
+   "vista": 122,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "fondo": 40,
+   "material": "hierba",
+   "color": "#a99d6b"
+  },
+  {
+   "tipo": "senal",
+   "vista": 122,
+   "lado": "der",
+   "en": 22,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 122,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 6,
+   "alto": 2.2,
+   "material": "enfoscado",
+   "color": "#b8ada0"
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 122,
+   "lado": "izq",
+   "en": 22,
+   "tipos": [
+    "resto"
+   ]
+  },
+  {
+   "tipo": "farola",
+   "vista": 122,
+   "lado": "der",
+   "en": 9,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 122,
+   "lado": "der",
+   "desde": 6,
+   "hasta": 45,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "casa",
+   "vista": 121,
+   "lado": "der",
+   "desde": 22,
+   "hasta": 32,
+   "lateral": 18,
+   "fondo": 8,
+   "plantas": 1,
+   "alto": 5.3,
+   "color": "#8fb27f"
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 120,
+   "lado": "der",
+   "desde": -5,
+   "hasta": 20
+  },
+  {
+   "tipo": "espejo",
+   "vista": 122,
+   "lado": "izq",
+   "en": 11,
+   "lateral": 7,
+   "mira": "camara"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 122,
+   "lado": "izq",
+   "lateral": 30,
+   "desde": 50,
+   "hasta": 115,
+   "alto": 1.9,
+   "material": "malla",
+   "color": "#8e9a90",
+   "camara": {
+    "x": 112.12,
+    "z": -691.44,
+    "heading": 189.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 122,
+   "lado": "izq",
+   "desde": 100,
+   "hasta": 200,
+   "fondo": 90,
+   "camara": {
+    "x": 112.12,
+    "z": -691.44,
+    "heading": 189.0
+   }
+  }
+ ]
+}

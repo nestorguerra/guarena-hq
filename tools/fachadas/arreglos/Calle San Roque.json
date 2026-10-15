@@ -1,0 +1,207 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#d1bea6",
+  "acera": {
+   "col": "#ebe1ca",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0.03,
+  "toldos": 0,
+  "lamps": {
+   "every": 30,
+   "kind": "pared"
+  }
+ },
+ "items": [
+  {
+   "tipo": "sin_arboles",
+   "vista": 265,
+   "lado": "der",
+   "desde": -6,
+   "hasta": 8,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 265,
+   "lado": "der",
+   "desde": 13.5,
+   "hasta": 17.5,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 265,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 26,
+   "fondo": 14,
+   "material": "tierra",
+   "color": "#c9a98c",
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 10.5,
+   "especie": "ciruelo",
+   "escala": 0.9,
+   "fondo": 6.0,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 19,
+   "especie": "morera",
+   "escala": 1.4,
+   "fondo": 5.5,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 22.5,
+   "especie": "ciruelo",
+   "escala": 0.7,
+   "fondo": 5.0,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 26,
+   "especie": "frutal",
+   "escala": 0.7,
+   "fondo": 5.0,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 30,
+   "especie": "frutal",
+   "escala": 0.7,
+   "lateral": 15.3,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 34,
+   "especie": "ciruelo",
+   "escala": 0.7,
+   "lateral": 16.4,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 38,
+   "especie": "frutal",
+   "escala": 0.7,
+   "lateral": 17.5,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 265,
+   "lado": "der",
+   "en": 42,
+   "especie": "ciruelo",
+   "escala": 0.7,
+   "lateral": 18.7,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 265,
+   "lado": "izq",
+   "desde": 13.5,
+   "hasta": 20.5,
+   "alto": 2.8,
+   "material": "cal",
+   "color": "#f1eee8",
+   "puerta": "#876c58",
+   "lateral": 11,
+   "camara": {
+    "x": 429.23,
+    "z": 361.36,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 266,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 65,
+   "ancho": 1.6
+  },
+  {
+   "tipo": "farola",
+   "vista": 266,
+   "lado": "izq",
+   "en": 11.5,
+   "modelo": "fernandino"
+  }
+ ]
+}

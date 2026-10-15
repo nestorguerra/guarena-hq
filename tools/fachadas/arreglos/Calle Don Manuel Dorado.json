@@ -1,0 +1,22 @@
+{"calle": {"firme": "liso", "aristas": [395]}, "items": [
+ {"tipo": "sin_senales", "vista": 45, "lado": "der", "desde": 0, "hasta": 5},
+ {"tipo": "senal", "vista": 47, "lado": "der", "en": 16, "placas": ["aparcamiento"], "mira": "camara", "pared": true},
+ {"tipo": "farola", "vista": 48, "lado": "der", "en": 6.5, "modelo": "fernandino", "camara": {"x": -94.8, "z": -7.0, "heading": 0.0}},
+ {"tipo": "sin_arboles", "vista": 48, "lado": "der", "desde": 25, "hasta": 55, "fondo": 25, "camara": {"x": -94.8, "z": -7.0, "heading": 0.0}},
+ {"tipo": "senal", "vista": 49, "lado": "izq", "en": 7.7, "placas": ["ceda"], "mira": "espalda"},
+ {"tipo": "farola", "vista": 49, "lado": "izq", "en": 22, "modelo": "fernandino"},
+ {"tipo": "acera", "vista": 46, "lado": "izq", "desde": -2, "hasta": 24, "ancho": 0.35},
+ {"tipo": "sin_vado_amarillo", "vista": 45, "lado": "izq", "desde": -4, "hasta": 14},
+ {"tipo": "sin_farolas", "vista": 46, "lado": "izq", "desde": 5, "hasta": 22},
+ {"tipo": "cable", "vista": 48, "en": 11, "alto": 6.7},
+ {"tipo": "espejo", "vista": 47, "lado": "der", "en": 1.0, "mira": "camara"},
+ {"tipo": "silos", "vista": 47, "lado": "izq", "en": 75, "lateral": 8.7, "n": 1, "radio": 1.1, "alto": 16, "color": "#a88a7c"},
+ {"tipo": "sin_placas", "vista": 49, "lado": "izq", "desde": -4, "hasta": 15},
+ {"tipo": "placa", "vista": 49, "lado": "der", "en": 4.4, "texto": "Calle Don Manuel Dorado", "fondo": "#1d2126", "letra": "#f1f1ee"},
+ {"tipo": "cartel", "vista": 45, "lado": "der", "en": 0, "lateral": 0, "ancho": 2.6, "alto": 0.4, "suelo": 2.65, "color": "#34363a", "mira": "espalda", "camara": {"x": -106.349, "z": 27.705, "heading": 103.5}},
+ {"tipo": "bajante", "vista": 47, "lado": "izq", "en": 1.4, "alto": 9, "color": "#1e1e1e"},
+ {"tipo": "marca", "vista": 48, "lado": "der", "en": 5.85, "largo": 0.5, "ancho": 0.5, "color": "#ecebe6", "lateral": 1.65},
+ {"tipo": "marca", "vista": 48, "lado": "der", "en": 5.45, "largo": 0.6, "ancho": 0.9, "color": "#ecebe6", "lateral": 2.8},
+ {"tipo": "tapa", "vista": 49, "lado": "izq", "en": 3.6, "forma": "redonda", "tam": 0.38, "color": "#5b4a40", "sobre": "acera"},
+ {"tipo": "tapa", "vista": 49, "lado": "izq", "en": 3.2, "forma": "redonda", "tam": 0.38, "color": "#5b4a40", "sobre": "acera"}
+]}

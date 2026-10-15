@@ -7,7 +7,8 @@
 // stickered, rusty, tagged, leaning or twisted on the post.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { mulberry32, hash1, polySample, polyNearest } from './util.js';
+import { mulberry32, hash1, polySample, polyNearest, pointInRing, ringBounds } from './util.js';
+import { SENALES, SIN_SENALES } from './calles_arreglos.js';
 
 const CELL = 256, COLS = 8, ROWS = 8;
 const RED = '#c4151c', BLUE = '#0b4ea2', WHITE = '#f7f7f4', BLACK = '#111111', BROWN = '#6b3d1e';
@@ -108,6 +109,42 @@ const FACES = {
   },
   turismo(ctx, s) { board(ctx, s, BROWN, WHITE, WHITE, 'PANTANO DE SAN ROQUE', 0.15); },
   bano(ctx, s) { board(ctx, s, WHITE, RED, RED, 'PROHIBIDO BAÑARSE', 0.16); },
+  // (three more the captures show: the audit of 2026-10-13, calles_arreglos.js SENALES)
+  peligro(ctx, s) { // P-50: other dangers
+    warn(ctx, s); ctx.fillStyle = BLACK;
+    ctx.fillRect(s * 0.465, s * 0.4, s * 0.07, s * 0.26);
+    ctx.beginPath(); ctx.arc(s * 0.5, s * 0.73, s * 0.042, 0, 7); ctx.fill();
+  },
+  aparcamiento(ctx, s) { // S-17: parking
+    path(ctx, SQUARE, s, 0, 0); ctx.fillStyle = BLUE; ctx.fill();
+    ctx.fillStyle = WHITE; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = `bold ${s * 0.68}px Arial, Helvetica, sans-serif`; ctx.fillText('P', s * 0.5, s * 0.54);
+  },
+  zonaResidencial(ctx, s) { // S-28: residential zone — a white panel on blue, a house and a figure on it
+    path(ctx, SQUARE, s, 0, 0); ctx.fillStyle = BLUE; ctx.fill();
+    ctx.fillStyle = WHITE; ctx.fillRect(s * 0.14, s * 0.14, s * 0.72, s * 0.72);
+    ctx.fillStyle = BLUE;
+    ctx.beginPath(); ctx.moveTo(s * 0.22, s * 0.48); ctx.lineTo(s * 0.4, s * 0.3); ctx.lineTo(s * 0.58, s * 0.48); ctx.closePath(); ctx.fill();
+    ctx.fillRect(s * 0.26, s * 0.48, s * 0.28, s * 0.28);
+    ctx.beginPath(); ctx.arc(s * 0.7, s * 0.42, s * 0.05, 0, 7); ctx.fill(); ctx.fillRect(s * 0.66, s * 0.49, s * 0.08, s * 0.27);
+  },
+  noCamiones(ctx, s) { // R-106: no lorries — a lorry in black inside the red ring
+    path(ctx, CIRCLE, s, 0, 0); ctx.fillStyle = WHITE; ctx.fill();
+    ctx.strokeStyle = RED; ctx.lineWidth = s * 0.11; ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.44, 0, 7); ctx.stroke();
+    ctx.fillStyle = BLACK; ctx.fillRect(s * 0.24, s * 0.38, s * 0.36, s * 0.22); ctx.fillRect(s * 0.6, s * 0.45, s * 0.16, s * 0.15);
+    for (const x of [0.32, 0.5, 0.68]) { ctx.beginPath(); ctx.arc(s * x, s * 0.63, s * 0.045, 0, 7); ctx.fill(); }
+  },
+  glorieta(ctx, s) { // R-402: roundabout, three arrows going round anticlockwise
+    path(ctx, CIRCLE, s, 0, 0); ctx.fillStyle = BLUE; ctx.fill();
+    ctx.strokeStyle = WHITE; ctx.fillStyle = WHITE; ctx.lineWidth = s * 0.075;
+    for (let k = 0; k < 3; k++) {
+      const a0 = (k * 2 * Math.PI) / 3 - Math.PI / 2;
+      ctx.beginPath(); ctx.arc(s * 0.5, s * 0.5, s * 0.25, a0 + 0.35, a0 + 1.75); ctx.stroke();
+      const hx = s * 0.5 + Math.cos(a0 + 0.35) * s * 0.25, hy = s * 0.5 + Math.sin(a0 + 0.35) * s * 0.25;
+      const tx = Math.sin(a0 + 0.35), ty = -Math.cos(a0 + 0.35), ox = Math.cos(a0 + 0.35), oy = Math.sin(a0 + 0.35);
+      ctx.beginPath(); ctx.moveTo(hx + tx * s * 0.12, hy + ty * s * 0.12); ctx.lineTo(hx + ox * s * 0.085, hy + oy * s * 0.085); ctx.lineTo(hx - ox * s * 0.085, hy - oy * s * 0.085); ctx.closePath(); ctx.fill();
+    }
+  },
 };
 function speed(ctx, s, n) {
   path(ctx, CIRCLE, s, 0, 0); ctx.fillStyle = RED; ctx.fill();
@@ -132,10 +169,11 @@ function board(ctx, s, bg, border, fg, txt, fs = 0.2) {
 const SHAPE_OF = {
   stop: OCT, ceda: TRI_DOWN, prohibido: CIRCLE, v50: CIRCLE, v30: CIRCLE, noAparcar: CIRCLE, noParar: CIRCLE, paso: SQUARE,
   pelPaso: TRI_UP, ninos: TRI_UP, resalto: TRI_UP, bus: SQUARE, sentido: CIRCLE, entrada: RECT3, salida: RECT3, turismo: RECT3, bano: RECT3,
+  peligro: TRI_UP, aparcamiento: SQUARE, glorieta: CIRCLE, zonaResidencial: SQUARE, noCamiones: CIRCLE,
 };
 const WIDE = { entrada: 1, salida: 1, turismo: 1, bano: 1 };
 // physical size (m): width of the plate
-const SIZE = { stop: 0.6, ceda: 0.7, prohibido: 0.6, v50: 0.6, v30: 0.6, noAparcar: 0.6, noParar: 0.6, paso: 0.6, pelPaso: 0.7, ninos: 0.7, resalto: 0.7, bus: 0.6, sentido: 0.6, entrada: 1.5, salida: 1.5, turismo: 1.5, bano: 1.2 };
+const SIZE = { stop: 0.6, ceda: 0.7, prohibido: 0.6, v50: 0.6, v30: 0.6, noAparcar: 0.6, noParar: 0.6, paso: 0.6, pelPaso: 0.7, ninos: 0.7, resalto: 0.7, bus: 0.6, sentido: 0.6, entrada: 1.5, salida: 1.5, turismo: 1.5, bano: 1.2, peligro: 0.7, aparcamiento: 0.6, glorieta: 0.6, zonaResidencial: 0.7, noCamiones: 0.6 };
 
 // wear painted over a face: sun fade, stickers, rust bleeding from the edges, grime streaks, a tag
 function wear(ctx, x0, y0, w, h, rnd, kind) {
@@ -257,6 +295,8 @@ export function buildTrafficSigns(world, map) {
   const placed = [];
   const lampNear = (x, z, r) => { const L = world.lampPoints; for (let i = 0; i < L.length; i += 3) if (Math.abs(L[i] - x) < r && Math.abs(L[i + 2] - z) < r) return true; return false; };
   const taken = (x, z, r = 1.1) => placed.some(([a, b]) => Math.hypot(a - x, b - z) < r);
+  const bare = SIN_SENALES.map((r) => ({ r, bb: ringBounds(r) }));
+  const unsigned = (x, z) => bare.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
   const MAJOR = new Set(['stop', 'ceda', 'prohibido', 'paso', 'entrada', 'salida', 'glorieta', 'v30', 'v50', 'ninos']);
   const angDiff = (a, b) => { let d = (a - b) % (Math.PI * 2); if (d > Math.PI) d -= Math.PI * 2; if (d < -Math.PI) d += Math.PI * 2; return d; };
   // where drivers must stop / give way (edge id : junction node) — the traffic AI obeys these
@@ -266,12 +306,15 @@ export function buildTrafficSigns(world, map) {
 
   // one post (or wall bracket) carrying a stack of plates. faceAng: the direction the faces look (towards the drivers)
   function post(x, z, faceAng, plates, opts = {}) {
-    if (map.buildingAt(x, z) || taken(x, z)) return false;
-    // no forest of posts at a corner: minor signs keep 7 m away from any other; an approach gets one sign
-    const minor = !plates.some((p) => MAJOR.has(p));
-    const near = (world.signList || []).filter((s) => Math.hypot(s.x - x, s.z - z) < (minor ? 7 : 3.2));
-    if (minor && near.length) return false;
-    if (near.some((s) => Math.abs(angDiff(s.a, faceAng)) < 1.0) || near.length >= 2) return false;
+    // (the signs the captures show stand where they are — opts.force —; where they show none, the game puts none)
+    if (!opts.force) {
+      if (map.buildingAt(x, z) || taken(x, z) || unsigned(x, z)) return false;
+      // no forest of posts at a corner: minor signs keep 7 m away from any other; an approach gets one sign
+      const minor = !plates.some((p) => MAJOR.has(p));
+      const near = (world.signList || []).filter((s) => Math.hypot(s.x - x, s.z - z) < (minor ? 7 : 3.2));
+      if (minor && near.length) return false;
+      if (near.some((s) => Math.abs(angDiff(s.a, faceAng)) < 1.0) || near.length >= 2) return false;
+    }
     placed.push([x, z]);
     (world.signList || (world.signList = [])).push({ x, z, a: faceAng, plates, wall: !!opts.wall });
     const worn = opts.worn ?? rnd() < 0.3;
@@ -359,6 +402,9 @@ export function buildTrafficSigns(world, map) {
     return post(x, z, Math.atan2(-fx, -fz), plates, opts);
   }
   const sampleDir = (e, s) => { polySample(e.pts, e.cum, s, tmp); return { x: tmp.x, z: tmp.z, dx: tmp.dx, dz: tmp.dz }; };
+
+  // --- the signs the audit of 2026-10-13 found in the captures (calles_arreglos.js SENALES), first: the rest keep clear
+  for (const [x, z, a, plates, wnx, wnz] of SENALES) post(x, z, a, plates, wnx || wnz ? { force: true, wall: { nx: wnx, nz: wnz }, armLen: 0.42, bottom: 2.3 } : { force: true });
 
   // --- STOP / give way from OSM, and on minor roads meeting a main road
   const osmYield = [];

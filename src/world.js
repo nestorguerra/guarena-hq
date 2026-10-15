@@ -5,7 +5,7 @@ import { arrayTexture, makeBuildingMaterial, makeGroundMaterial, makeNightGlowMa
 import { FacadeDetails, CT } from './facades.js';
 import { PLAYER_PRESETS } from './characters.js';
 import { buildStreetLife } from './streetlife.js';
-import { STYLES as CALLES } from './calles.js';
+import { STYLES as CALLES, seenSolar } from './calles.js';
 import { buildBuildings, buildAOGeometry } from './buildings.js';
 import { infillGaps, placeStreetShops } from './infill.js';
 import { loadTextureArray, loadTexture, DETAIL_LAYERS, DETAIL_SIZE, GROUND_DETAIL, GROUND_DETAIL_SIZE } from './assets.js';
@@ -23,10 +23,14 @@ import { Reservoir } from './pantano.js';
 import { buildTrafficSigns } from './signs.js';
 import { measuredGaps, resolveMeasured, buildMeasuredDetails, measuredLamps } from './fachadas.js';
 import { weldParts, fillCracks } from './solidez.js';
-import { layKerbs } from './kerbs.js';
+import { layKerbs, applyAceras } from './kerbs.js';
 import { buildTapias } from './tapias.js';
+import { FAROLAS, CONTENEDORES, SIN_CONTENEDORES, BANCOS, BOLARDOS, ACERAS, SIN_RELLENO, SIN_FAROLAS, RELLENOS, CASAS_NUEVAS, SIN_POSTES, SIN_BANCOS } from './calles_arreglos.js';
+import { CASAS } from './calles_casas.js';
+import { buildDetalles } from './detalles.js';
+import { baculoLamp } from './townplus.js';
 import { MALFEITOS } from './malfeitos.js';
-import { mulberry32, hash1, pointInRing, ringArea, ringBounds, polySample, polyNearest, clamp } from './util.js';
+import { mulberry32, hash1, pointInRing, ringArea, ringBounds, ringCentroid, polySample, polyNearest, clamp } from './util.js';
 
 export class World {
   constructor(scene, map, quality) {
@@ -74,12 +78,39 @@ export class World {
     this.hiper = await hiperIglesia(this.landmarks, { aniso: q.aniso }).catch((e) => { console.warn('[hiper]', e); return null; });
     // (and its inside, fetched in the background once the town is up: it is not inside the page — hiperinterior.js)
     if (this.hiper) setTimeout(() => loadInterior(), 12000);
-    const skipPart = (p) => this.landmarks.claims(p.c[0], p.c[1]);
+    const skipPart = (p) => p.gone || this.landmarks.claims(p.c[0], p.c[1]); // (gone: a part the measured outline left out, mapdata.js)
     // the street fronts the Catastro leaves open where the town has houses (src/infill.js)
     // (the houses the photographs show where the Catastro has none — calle Malfeitos, fachadas.js — before the town's
     // own filling, which then leaves those gaps alone)
     const gaps = measuredGaps(map, MALFEITOS);
-    this.infill = infillGaps(map, { claims: (x, z) => this.landmarks.claims(x, z) });
+    // (none where the captures show a lot, a yard or a wall in the gap: calles_arreglos.js SIN_RELLENO)
+    const bare = SIN_RELLENO.concat(CASAS_NUEVAS.map((o) => o.ring)).map((r) => ({ r, bb: ringBounds(r) })); // (nor where a house the map lacks goes: below)
+    const unfilled = (x, z) => bare.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
+    this.infill = infillGaps(map, { claims: (x, z) => this.landmarks.claims(x, z) || unfilled(x, z) });
+    // (the houses the captures show where the map has none: calles_arreglos.js CASAS_NUEVAS — added after the town's own
+    // filling, so its houses keep their numbers; painted and as tall as seen, as if seen house by house)
+    for (const o of CASAS_NUEVAS) {
+      const ring = o.ring.slice(), c = ringCentroid(ring), area = Math.abs(ringArea(ring));
+      const b = { id: map.buildings.length, ring, holes: null, use: 0, year: 1990, floors: o.floors, area, c, height: 0, infill: true };
+      map.buildings.push(b);
+      map.parts.push({ id: map.parts.length, ring, holes: null, floors: o.floors, b: b.id, c, area });
+      map.bIndex.add(ring, b);
+      CASAS[b.id] = o.alto ? { wall: o.wall, floors: o.floors, alto: o.alto } : { wall: o.wall, floors: o.floors };
+    }
+    // (and a made-up house painted as the captures show the one standing there, with its storeys: calles_arreglos.js
+    // RELLENOS — as if it had been seen house by house, calles_casas.js)
+    for (const o of RELLENOS) {
+      const bb = ringBounds(o.ring);
+      for (const a of this.infill) {
+        const b = map.buildings[a.id], R = b.ring; // (its front in the band: any corner of it — its middle lies deeper)
+        let hit = false;
+        for (let i = 0; i < R.length && !hit; i += 2) hit = R[i] > bb[0] && R[i] < bb[2] && R[i + 1] > bb[1] && R[i + 1] < bb[3] && pointInRing(R[i], R[i + 1], o.ring);
+        if (!hit) continue;
+        CASAS[a.id] = { wall: o.wall, floors: o.floors };
+        b.floors = o.floors; a.floors = o.floors;
+        for (const p of map.parts) if (p.b === a.id) p.floors = o.floors;
+      }
+    }
     this.streetShops = placeStreetShops(map, { claims: (x, z) => this.landmarks.claims(x, z) });
     // a solid town (solidez.js): the houses welded into rows — no crack between two neighbours, their party walls one —
     // and every crack left, up to 1.3 m wide, closed with a piece of wall from one house's wall to the other's; the
@@ -172,6 +203,7 @@ void main(){
     map.collider.buildSegments();
     // the kerbs along the houses as they stand: a pavement to walk on wherever the street has room (kerbs.js)
     this.kerbs = timed('bordillos', () => layKerbs(map));
+    applyAceras(map, ACERAS); // (and the pavements the captures show otherwise)
     // the yard walls the map leaves out between the old town's houses (tapias.js): after the kerbs, which find the gaps
     this.tapias = timed('tapias', () => buildTapias(this, map));
 
@@ -179,7 +211,7 @@ void main(){
     await step('Arando los campos de las Vegas…', 0.5);
     // (the claymation cobbled every street round the church, after the user's third picture, until 2026-10-13: they are
     // asphalt there, as the captures show — calles.js has each street's own)
-    const G = buildGround(map, null, { garages: this.facadeGround.filter((o) => o.type === CT.GARAGE) });
+    const G = buildGround(map, null, { garages: this.facadeGround.filter((o) => o.type === CT.GARAGE), extraGround: this.extraGround || [] });
     this.groundData = G;
     // CC0 photo-scanned ground (asphalt, concrete, dry earth, gravel, grass) + the zone map for the imperfections
     const gS = q.photo || (q.texSize >= 512 ? 512 : 256);
@@ -330,6 +362,8 @@ void main(){
     const g = (geo, m = mat, cs = true) => { const ig = new InstanceGroup(geo, m, { castShadow: cs, chunk: 200, maxDist: 450 }); this.lodGroups.push(ig); return ig; };
     const lampsWall = g(F.farolPared), lampsWallL = g(F.farolParedLuz, glowMat, false);
     const lampsPost = g(F.farola), lampsPostL = g(F.farolaLuz, glowMat, false);
+    const lampsGlobo = g(F.farolaGlobo), lampsGloboL = g(F.farolaGloboLuz, glowMat, false), lampsSeta = g(F.farolaSeta), lampsSetaL = g(F.farolaSetaLuz, glowMat, false);
+    const bacG = baculoLamp(), lampsDoble = g(bacG.iron), lampsDobleL = g(bacG.glow, glowMat, false);
     const benches = g(F.banco), bolards = g(F.bolardo);
     const conts = { v: g(F.contVerde), a: g(F.contAmarillo), z: g(F.contAzul), m: g(F.contMarron) };
     const chimneys = g(F.chimenea), antennas = g(F.antena, mat, false), solar = g(F.solar), tanks = g(F.deposito), acs = g(F.aire);
@@ -372,12 +406,14 @@ void main(){
       return map.buildingAt(x, z);
     };
     this.lampLog = { wall: 0, post: 0, skipped: 0 };
+    const dark = SIN_FAROLAS.map((r) => ({ r, bb: ringBounds(r) })), unlit = (x, z) => dark.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
     for (const e of map.edges) {
       if (!e.drive && e.cls !== 'pedestrian') continue;
       if (e.dirt) continue;
       const inTown = map.inTown(e.pts[0], e.pts[1]) || map.inTown(e.pts[e.pts.length - 2], e.pts[e.pts.length - 1]);
       if (!inTown && e.cls !== 'primary') continue;
       if (this.measured && this.measured.lampEdges.has(e.name)) continue; // (a measured street: its own lanterns, below)
+      if (e.parkOnly) continue; // (a carriageway beside a median: the median's tall lamps light it, townplus.js bulevar)
       // (the old town's streets as their captures show them, calles.js: wrought-iron lanterns on the fronts as far apart
       // as there, up at the first floor, and never a lamp post; elsewhere — claymation — a lantern every few houses)
       const cs = CALLES[e.name], posts = !!(cs && cs.lamps && cs.lamps.kind === 'columna'); // (lamp posts on the pavement, where its captures show them)
@@ -388,6 +424,7 @@ void main(){
         side = -side;
         const nx = -tmp.dz * side, nz = tmp.dx * side;
         const hw = map.kerbAt(e, s, side); // (the kerb as laid along the houses, kerbs.js)
+        if (unlit(tmp.x + nx * hw, tmp.z + nz * hw)) { this.lampLog.skipped++; continue; } // (none where the captures show none)
         const w = inTown && !posts ? wallAt(tmp.x + nx * hw, tmp.z + nz * hw, nx, nz) : null;
         if (w) {
           const r = w.r, ang = Math.atan2(r.nx, r.nz); // lantern arm along the wall normal, out over the pavement
@@ -409,6 +446,33 @@ void main(){
         }
       }
     }
+    // the lamps the audit of 2026-10-13 found missing (calles_arreglos.js FAROLAS): a lantern on the wall, a post by the kerb
+    for (const [x, z, nx, nz, model] of FAROLAS) {
+      const ang = Math.atan2(nx, nz);
+      if (model === 'pared' || model === 'fernandino') {
+        const y = 3.6;
+        lampsWall.add(x, y, z, ang); lampsWallL.add(x, y, z, ang);
+        lampPts.push(x + nx * 0.62, y - 0.36, z + nz * 0.62);
+        this.lampLog.wall++;
+      } else if (model === 'doble') { // (a grey column of 9 m with an arm out each way — townplus.js baculoLamp —, across the street)
+        const h1 = lampsDoble.add(x, 0, z, Math.atan2(nz, -nx)), h2 = lampsDobleL.add(x, 0, z, Math.atan2(nz, -nx));
+        col.addCircle(x, z, 0.16, 9, -5);
+        for (const sx of [-1, 1]) lampPts.push(x + nx * sx * 1.85, 8.9, z + nz * sx * 1.85);
+        this.lampLog.post++;
+      } else if (model === 'globo' || model === 'seta') { // (a column with its light on top, not on an arm)
+        const [G1, G2] = model === 'globo' ? [lampsGlobo, lampsGloboL] : [lampsSeta, lampsSetaL];
+        const h1 = G1.add(x, 0, z, 0), h2 = G2.add(x, 0, z, 0);
+        this.breakables.push({ kind: 'farola', x, z, r: 0.12, group: G1, h: h1, group2: G2, h2, ang: 0, geo: model === 'globo' ? F.farolaGlobo : F.farolaSeta, h6: 4 });
+        lampPts.push(x, 3.9, z);
+        this.lampLog.post++;
+      } else {
+        const a2 = Math.atan2(-nx, -nz) + Math.PI;
+        const h1 = lampsPost.add(x, 0, z, a2), h2 = lampsPostL.add(x, 0, z, a2);
+        this.breakables.push({ kind: 'farola', x, z, r: 0.15, group: lampsPost, h: h1, group2: lampsPostL, h2, ang: a2, geo: F.farola, h6: 6 });
+        lampPts.push(x + nx * 1.15, 5.4, z + nz * 1.15);
+        this.lampLog.post++;
+      }
+    }
     // the lanterns of the measured fronts, where they hang in the photographs
     if (this.measured) for (const L of measuredLamps(this.measured)) {
       lampsWall.add(L.x, L.y, L.z, L.ang); lampsWallL.add(L.x, L.y, L.z, L.ang);
@@ -419,6 +483,18 @@ void main(){
     // parked cars leave that space free), a little away from the junction — never in a narrow street's carriageway
     const junctions = map.nodes.filter((n) => n.degree >= 3 && map.inTown(n.x, n.z));
     const doorsNear = (x, z) => this.facadeGround.some((o) => Math.abs(o.x - x) < o.r + 1.4 && Math.abs(o.z - z) < o.r + 1.4 && Math.hypot(o.x - x, o.z - z) < o.r + 1.4);
+    const noBins = SIN_CONTENEDORES.map((r) => ({ r, bb: ringBounds(r) }));
+    const binless = (x, z) => noBins.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
+    const CONT_GEO = { v: 'Verde', a: 'Amarillo', z: 'Azul', m: 'Marron' };
+    // (the sets the captures show, calles_arreglos.js CONTENEDORES, first: a row along the kerb, the igloo where they show it)
+    for (const [x, z, ux, uz, kinds] of CONTENEDORES) {
+      const row = [...kinds].filter((k) => k !== 'i'), ang = Math.atan2(ux, uz) + Math.PI / 2;
+      row.forEach((k, i) => {
+        const along = (i - (row.length - 1) / 2) * 1.45, px = x + ux * along, pz = z + uz * along;
+        const h = conts[k].add(px, 0, pz, ang);
+        this.breakables.push({ kind: 'cont', x: px, z: pz, r: 0.75, color: k, group: conts[k], h, ang, geo: F['cont' + CONT_GEO[k]], iglu: kinds.includes('i') });
+      });
+    }
     for (const n of junctions) {
       if (hash1(n.id * 7) > 0.34) continue;
       const e = n.edges.map((id) => map.edges[id]).filter((q) => q.drive && !q.dirt && !q.blocked && q.w >= 8 && q.len > n.radius + 24 && q.cls !== 'primary').sort((a, b) => b.w - a.w)[0];
@@ -433,6 +509,7 @@ void main(){
       const ang = Math.atan2(tmp.dx, tmp.dz);
       const kinds = ['v', 'a', 'z', 'm'];
       if (doorsNear(tmp.x + nx * d, tmp.z + nz * d)) continue;
+      if (binless(tmp.x + nx * d, tmp.z + nz * d) || CONTENEDORES.some(([cx, cz]) => Math.hypot(cx - tmp.x - nx * d, cz - tmp.z - nz * d) < 12)) continue; // (none where the captures show none, nor beside theirs)
       for (let k = 0; k < 4; k++) {
         const along = (k - 1.5) * 1.45;
         const x = tmp.x + nx * d + tmp.dx * along, z = tmp.z + nz * d + tmp.dz * along;
@@ -444,6 +521,7 @@ void main(){
       }
     }
     // benches in parks & plazas
+    const noBench = SIN_BANCOS.map((r) => ({ r, bb: ringBounds(r) }));
     const plazaLike = map.areas.filter((a) => ['leisure:park', 'place:square', 'highway:pedestrian', 'amenity:marketplace', 'landuse:village_green'].includes(a.kind));
     for (const a of plazaLike) {
       const [x0, z0, x1, z1] = ringBounds(a.ring);
@@ -458,25 +536,32 @@ void main(){
         const sq = map.nearestEdge(x, z, 30, (o) => o.walk && !o.blocked);
         if (!sq || sq.d > 28 || col.raycast(x, z, sq.x, sq.z, 1, 1) < 0.98) continue;
         const ang = rnd() * Math.PI * 2;
+        if (noBench.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r))) continue; // (none where the captures show none: calles_arreglos.js SIN_BANCOS)
         benches.add(x, 0, z, ang);
         col.addCircle(x, z, 0.55, 1, -4);
         this.spawnSpots.push({ kind: 'bench', x, z, ang });
       }
     }
+    // the benches and bollards the captures show (calles_arreglos.js BANCOS, BOLARDOS)
+    for (const [x, z, ang] of BANCOS) { benches.add(x, 0, z, ang); col.addCircle(x, z, 0.55, 1, -4); this.spawnSpots.push({ kind: 'bench', x, z, ang }); }
+    for (const [x, z] of BOLARDOS) { bolards.add(x, 0, z, 0); col.addCircle(x, z, 0.09, 0.9, -4); }
     // roof clutter: chimneys, antennas, solar panels, water tanks
     for (const p of this.buildingParts) {
       if (p.area < 25) continue;
       const h = hash1(p.id * 13 + 5);
       const [cx, cz] = p.c;
       if (!pointInRing(cx, cz, p.ring)) continue;
+      const sol = p.b >= 0 ? seenSolar(p.b) : null; // (the solar panels seen on it, or none: calles_casas.js placas)
       if (p.info.style === 'nave') {
-        if (h < 0.18) for (let k = 0; k < 4; k++) solar.add(cx + (k - 1.5) * 2.2, p.H + 0.1, cz, 0);
+        if (sol ?? h < 0.18) for (let k = 0; k < 4; k++) solar.add(cx + (k - 1.5) * 2.2, p.H + 0.1, cz, 0);
         continue;
       }
-      if (h < 0.35) chimneys.add(cx + (hash1(p.id) - 0.5) * 2, p.H + 0.2, cz + (hash1(p.id + 1) - 0.5) * 2, h * 20, 1, 1 + h);
-      if (h > 0.55 && h < 0.8) antennas.add(cx, p.H + 0.8, cz, h * 30);
-      if (p.floors >= 3 && h > 0.3) { tanks.add(cx + 1.5, p.H, cz - 1, 0); acs.add(cx - 1.5, p.H, cz + 1, h * 5); }
-      if (h > 0.9) for (let k = 0; k < 3; k++) solar.add(cx + (k - 1) * 2.1, p.H + 1.2, cz, 0.3);
+      if (h < 0.35 && !(p.b >= 0 && CASAS[p.b] && CASAS[p.b].chimeneas != null)) chimneys.add(cx + (hash1(p.id) - 0.5) * 2, p.H + 0.2, cz + (hash1(p.id + 1) - 0.5) * 2, h * 20, 1, 1 + h); // (its own as seen: buildings.js)
+      // (its aerials and air conditioners as seen, when its notes say: detalles.js draws those — calles_casas.js antenas, aires)
+      const seen = p.b >= 0 ? CASAS[p.b] : null, ownAerials = seen && seen.antenas != null, noAC = seen && seen.aires === false;
+      if (!ownAerials && h > 0.55 && h < 0.8) antennas.add(cx, p.H + 0.8, cz, h * 30);
+      if (p.floors >= 3 && h > 0.3) { tanks.add(cx + 1.5, p.H, cz - 1, 0); if (!noAC) acs.add(cx - 1.5, p.H, cz + 1, h * 5); }
+      if (sol ?? h > 0.9) for (let k = 0; k < 3; k++) solar.add(cx + (k - 1) * 2.1, p.H + 1.2, cz, 0.3);
     }
     // power poles from OSM nodes. Some are mapped in a carriageway (on the centreline or a little off): those go to the
     // nearer kerb, and their wires with them; where neither kerb is free the line hangs from the facade instead
@@ -501,8 +586,9 @@ void main(){
       }
       if (!moved) p.kind = 'power:pole_wall';
     }
-    for (const p of map.pois) if (p.kind === 'power:pole') { poles.add(p.x, 0, p.z, hash1(p.x) * 3); col.addCircle(p.x, p.z, 0.2, 9, -5); }
-    for (const grp of [lampsWall, lampsWallL, lampsPost, lampsPostL, benches, bolards, chimneys, antennas, solar, tanks, acs, poles, ...Object.values(conts)]) grp.build(this.root);
+    const noPole = SIN_POSTES.map((r) => ({ r, bb: ringBounds(r) })); // (none where the captures show none: calles_arreglos.js)
+    for (const p of map.pois) if (p.kind === 'power:pole' && !noPole.some((o) => p.x > o.bb[0] && p.x < o.bb[2] && p.z > o.bb[1] && p.z < o.bb[3] && pointInRing(p.x, p.z, o.r))) { poles.add(p.x, 0, p.z, hash1(p.x) * 3); col.addCircle(p.x, p.z, 0.2, 9, -5); }
+    for (const grp of [lampsWall, lampsWallL, lampsPost, lampsPostL, lampsGlobo, lampsGloboL, lampsSeta, lampsSetaL, lampsDoble, lampsDobleL, benches, bolards, chimneys, antennas, solar, tanks, acs, poles, ...Object.values(conts)]) grp.build(this.root);
     // vertical traffic signs (shaped plates on posts or wall brackets, some worn)
     try { buildTrafficSigns(this, map); } catch (e) { console.warn('signs', e); }
     // breakable props as colliders (containers, lamp posts)
@@ -513,6 +599,9 @@ void main(){
     this.buildPowerLines();
     // what really fills the streets: chairs, pots, bags, litter, terraces, cats… (streetlife.js)
     buildStreetLife(this, map, this.q);
+    // the wiring, signs, aerials and letter boxes of the fronts, the silos, water towers, wires across and bars' terraces the
+    // captures show (detalles.js)
+    try { this.detalles = buildDetalles(this, map); } catch (e) { console.warn('detalles', e); }
     // and the weeds, grass and scrub invading pavements, kerbs, tree pits and yards (groundfx.js)
     placeGroundLife(this, map, this.groundField, (this.groundRelief && this.groundRelief.weedSpots) || []);
   }
@@ -548,11 +637,14 @@ void main(){
   }
 
   buildPowerLines() {
-    const lines = this.map.lines.filter((l) => l.kind.startsWith('power:'));
+    // (not the spans that cross where the captures show no wires and no poles: calles_arreglos.js SIN_POSTES)
+    const noPole = SIN_POSTES.map((r) => ({ r, bb: ringBounds(r) })), bare = (x, z) => noPole.some((o) => x > o.bb[0] && x < o.bb[2] && z > o.bb[1] && z < o.bb[3] && pointInRing(x, z, o.r));
+    const lines = this.map.lines.filter((l) => l.kind.startsWith('power:')).map((l) => { const P = l.pts, keep = []; for (let i = 0; i < P.length; i += 2) keep.push(!bare(P[i], P[i + 1])); return { ...l, keep }; });
     const pos = [];
     for (const l of lines) {
       const p = l.pts;
       for (let i = 0; i < p.length - 2; i += 2) {
+        if (l.keep && (!l.keep[i / 2] || !l.keep[i / 2 + 1])) continue;
         const ax = p[i], az = p[i + 1], bx = p[i + 2], bz = p[i + 3];
         const L = Math.hypot(bx - ax, bz - az);
         const nx = -(bz - az) / L, nz = (bx - ax) / L;

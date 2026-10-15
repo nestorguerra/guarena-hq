@@ -1,0 +1,181 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 30,
+   "kind": "columna"
+  },
+  "road": "asfalto",
+  "roadCol": "#cdb9a0",
+  "acera": {
+   "col": "#ddd2bf",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": false,
+  "garage": 0.08,
+  "balc": 0.5,
+  "walls": [
+   [
+    "#eccbb3",
+    0.7
+   ],
+   [
+    "#f2f1ea",
+    0.3
+   ]
+  ],
+  "aristas": [
+   298
+  ],
+  "tramos": [
+   {
+    "x": 161.1,
+    "z": -578.7,
+    "r": 20,
+    "firme": "gastado"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "sin_arboles",
+   "vista": 134,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 120,
+   "fondo": 6
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 134,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 120,
+   "fondo": 6
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 138,
+   "lado": "izq",
+   "desde": 12,
+   "hasta": 60,
+   "fondo": 6
+  },
+  {
+   "tipo": "paso",
+   "vista": 134,
+   "en": 12.5
+  },
+  {
+   "tipo": "senal",
+   "vista": 134,
+   "lado": "izq",
+   "en": 12,
+   "placas": [
+    "paso_peatones"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "senal",
+   "vista": 134,
+   "lado": "der",
+   "en": 9.5,
+   "placas": [
+    "paso_peatones"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 138,
+   "lado": "izq",
+   "en": 13.6,
+   "tipos": [
+    "resto",
+    "papel",
+    "envases"
+   ]
+  },
+  {
+   "tipo": "tapia",
+   "vista": 134,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 25.77,
+   "alto": 1.9,
+   "material": "verja",
+   "color": "#4a3436",
+   "lateral": 0,
+   "camara": {
+    "x": 221.39,
+    "z": -554.22,
+    "heading": 33.44
+   },
+   "murete": "#e6bfa6",
+   "puerta": "#7d3a48"
+  },
+  {
+   "tipo": "farola",
+   "vista": 138,
+   "lado": "der",
+   "en": 8.9,
+   "modelo": "globo",
+   "lateral": 17.3
+  },
+  {
+   "tipo": "senal",
+   "vista": 138,
+   "lado": "izq",
+   "en": 6.7,
+   "lateral": 4.0,
+   "placas": [
+    "prohibido_camiones"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "casa",
+   "vista": 133,
+   "fondo": 3.2,
+   "plantas": 1,
+   "alto": 2.8,
+   "color": "#efeee9",
+   "nota": "revisión final: la caseta blanca del centro de transformación (tres puertas grises), detrás de la acera de la derecha",
+   "de": {
+    "en": 10.5,
+    "lado": "der",
+    "lateral": 0.6
+   },
+   "a": {
+    "en": 7.0,
+    "lado": "der",
+    "lateral": 7.4
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 133,
+   "alto": 1.1,
+   "material": "seto",
+   "color": "#3f5a2e",
+   "nota": "revisión final: el seto que sigue a la caseta",
+   "de": {
+    "en": 7.6,
+    "lado": "der",
+    "lateral": 7.6
+   },
+   "a": {
+    "en": 6.0,
+    "lado": "der",
+    "lateral": 16
+   }
+  }
+ ]
+}

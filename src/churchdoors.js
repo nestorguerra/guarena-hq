@@ -527,8 +527,25 @@ export function southPortal(stone, { w = 2.3, spring = 3.3, room = 2.6 } = {}) {
   for (let i = 0; i < 26; i++) parts.push(box(0.09, 0.1, 0.12, -EW / 2 + 0.15 + i * (EW - 0.3) / 25, ye + 0.6, 0.86));
   for (const sx of [-1, 1]) parts.push(...finial(sx * (pos[0] + pos[1]) / 2, ye + 1.04, 0.45, 0.8, 0.4));
   parts.push(...finial(0, ye + 1.04, 0.3, 1.0, 0.44));
+  // the upper tier (the captures, 2026-10-14: the doorway is a two-storey baroque portal, ≈ 11 m): over the great cornice a
+  // niche with its saint between two pilasters, volutes carrying down to the lower tier, and a broken pediment
+  const nicheVoid = [];
+  { const y0 = ye + 1.04, NW = 1.0, NH = 2.1;
+    parts.push(box(2.5, 0.34, 0.62, 0, y0 + 0.17, 0.3));
+    for (const q of niche(0, y0 + 0.5, 0.06, NW, NH)) (q.void ? nicheVoid : parts).push(q.g);
+    for (const sx of [-1, 1]) {
+      parts.push(box(0.3, NH + 0.3, 0.3, sx * 0.95, y0 + 0.5 + (NH + 0.3) / 2, 0.22), box(0.42, 0.14, 0.42, sx * 0.95, y0 + 0.57, 0.22), box(0.42, 0.14, 0.42, sx * 0.95, y0 + NH + 0.78, 0.22));
+      const vo = new THREE.TorusGeometry(0.3, 0.07, 6, 14, Math.PI * 1.5); vo.rotateZ(sx > 0 ? -Math.PI * 0.25 : Math.PI * 1.25); parts.push(at(vo, sx * 1.55, y0 + 0.55, 0.2));
+      parts.push(box(0.5, 0.5, 0.2, sx * 1.45, y0 + 0.5, 0.15));
+    }
+    parts.push(box(2.8, 0.2, 0.52, 0, y0 + NH + 0.9, 0.3), box(2.6, 0.12, 0.44, 0, y0 + NH + 1.06, 0.28));
+    for (const sx of [-1, 1]) { const rc = new THREE.BoxGeometry(1.5, 0.14, 0.4); rc.rotateZ(sx * 0.3); parts.push(at(rc, sx * 0.75, y0 + NH + 1.4, 0.28)); }
+    parts.push(...finial(0, y0 + NH + 1.5, 0.28, 0.6, 0.3), at(new THREE.CylinderGeometry(0.2, 0.24, 0.9, 10), 0, y0 + 1.0, 0.1)); // (the saint)
+    parts.push(at(new THREE.SphereGeometry(0.16, 10, 8), 0, y0 + 1.62, 0.1));
+  }
   const m = new THREE.Mesh(merged(parts), stone); m.castShadow = true; m.receiveShadow = true; g.add(m);
-  const door = new ChurchDoor({ w, spring, style: 'clavos', key: 'sur', one: true });
+  g.add(new THREE.Mesh(merged(nicheVoid), mats().void));
+  const door = new ChurchDoor({ w, spring, style: 'cuarterones', cols: 2, key: 'sur', one: true });
   door.group.position.set(0, 0.1, -0.55); g.add(door.group);
   g.add(vestibule(w, C, 0.6, clamp(room - 0.7, 1.3, 2.4)));
   return { group: g, door, posts: [[-(pos[0] + pos[1]) / 2, 0.45, 0.85], [(pos[0] + pos[1]) / 2, 0.45, 0.85]], depth: 0.6, w, spring };
@@ -554,6 +571,12 @@ export function northPortal(stone, { w = 2.2, spring = 3.2 } = {}) {
   // the niche over it (empty)
   for (const q of niche(0, AT + 0.35, 0, 0.9, 1.6)) (q.void ? voids : parts).push(q.g);
   parts.push(box(1.7, 0.18, 0.36, 0, AT + 0.35 + 1.75, 0.16));
+  // (the aedicule, as the captures show it, 2026-10-14: slender columns either side of the niche on a cornice that runs
+  // wide over the arch, and a small triangular pediment on the entablature)
+  parts.push(box(AW + 0.5, 0.2, 0.5, 0, AT + 0.1, 0.25));
+  for (const sx of [-1, 1]) { parts.push(...column(sx * 0.62, 0.22, AT + 0.35, 1.6, 0.075)); parts.push(box(0.3, 0.5, 0.3, sx * 1.3, AT + 0.42, 0.16)); }
+  { const tri = new THREE.Shape(); tri.moveTo(-0.95, 0); tri.lineTo(0.95, 0); tri.lineTo(0, 0.55); tri.closePath(); parts.push(at(new THREE.ExtrudeGeometry(tri, { depth: 0.22, bevelEnabled: false }), 0, AT + 0.35 + 1.84, 0.06)); }
+  parts.push(...finial(0, AT + 0.35 + 2.35, 0.14, 0.5, 0.28));
   const m = new THREE.Mesh(merged(parts), stone); m.castShadow = true; m.receiveShadow = true; g.add(m);
   const vm = new THREE.Mesh(merged(voids), mats().void); g.add(vm);
   const door = new ChurchDoor({ w, spring, style: 'clavos', key: 'norte' });

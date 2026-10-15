@@ -24,7 +24,7 @@ export function weldParts(map, { tol = 0.35, wideTol = 0.5, fixed = () => false,
     rings.push({ owner, key: 'ring', kind, fixed: isFixed, wide: isWide, orig: Array.from(owner.ring) });
     if (owner.holes) owner.holes.forEach((h, i) => rings.push({ owner, key: i, kind, fixed: isFixed, wide: isWide, orig: Array.from(h) }));
   };
-  for (const p of map.parts) add(p, 'p');
+  for (const p of map.parts) if (!p.gone) add(p, 'p'); // (gone: a part the measured outline left out, mapdata.js)
   for (const b of map.buildings) add(b, 'b');
   // ---- the corners, each its own node to begin with
   const VX = [], VZ = [], VR = [];
@@ -260,7 +260,7 @@ export function fillCracks(map, { maxGap = 1.3, minGap = 0.00002, step = 0.25, m
     }
   };
   const addPart = (part) => { pIx.add(part.ring, part); addRing(part, part.ring); for (const h of part.holes || []) addRing(part, h); };
-  for (const p of map.parts) addPart(p);
+  for (const p of map.parts) if (!p.gone) addPart(p);
   const solidOf = (q, x, z) => pointInRing(x, z, q.ring) && !(q.holes && q.holes.some((h) => pointInRing(x, z, h)));
   // (per stretch of wall: the parts about it, gathered once)
   let LP = [];

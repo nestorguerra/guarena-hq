@@ -5,6 +5,7 @@
 // parks with palms and hedges, cypresses in the cemetery, fruit trees and palms in the yards inside the blocks).
 import { mulberry32, hash1, hash2, pointInRing, ringArea, ringBounds, polySample } from './util.js';
 import { STYLES as CALLES, parkOf } from './calles.js';
+import { ARBOLES, SIN_ARBOLES } from './calles_arreglos.js';
 
 // a little colour of its own for each tree (brighter or darker, a touch warmer or cooler)
 function tintOf(rnd, k = 1) { const b = 1 + (rnd() - 0.5) * 0.2 * k, h = (rnd() - 0.5) * 0.1 * k; return [b * (1 + h), b, b * (1 - h * 0.6)]; }
@@ -24,7 +25,9 @@ export function plantTown(world, G, F, q) {
     return false;
   };
   const roadClear = (x, z, pad) => { const e = map.nearestEdge(x, z, 14); return !(e && e.d < e.edge.w / 2 + pad); };
-  const free = (x, z, pad = 1.5) => !map.buildingAt(x, z) && roadClear(x, z, pad);
+  // (nor inside a landmark's outline: the town hall's arcade, say, open to walk in — landmarks.js claims)
+  const claims = world.landmarks ? (x, z) => world.landmarks.claims(x, z) : () => false;
+  const free = (x, z, pad = 1.5) => !map.buildingAt(x, z) && !claims(x, z) && roadClear(x, z, pad);
   // everything planted so far, in a grid, so trees keep their distance from each other (and from what is there)
   const taken = new Map();
   const tk = (x, z) => Math.floor(x / 6) + ':' + Math.floor(z / 6);
@@ -34,7 +37,11 @@ export function plantTown(world, G, F, q) {
     return true;
   };
   const cap = q.trees || 6500;
+  // (where the captures show no tree at all — calles_arreglos.js SIN_ARBOLES —: none planted, of any kind)
+  const bare = SIN_ARBOLES.map((r) => ({ r: new Float32Array(r), bb: ringBounds(r) }));
+  const bareAt = (x, z) => bare.some((b) => x > b.bb[0] && x < b.bb[2] && z > b.bb[1] && z < b.bb[3] && pointInRing(x, z, b.r));
   const put = (name, x, z, o = {}) => {
+    if (bare.length && bareAt(x, z)) return null;
     const r = (ROOM[name] || 2) * (o.s || 1);
     if (o.check !== false && !roomy(x, z, r)) return null;
     const it = F.add(name, x, z, { rnd, ...o });
@@ -50,7 +57,23 @@ export function plantTown(world, G, F, q) {
 
   // ---------------- the town first (what the player sees from the street), then the countryside out to the cap
   // plaza orange trees and other hand-placed trees from the landmarks module
-  for (const t of world.extraTrees || []) if (t.onRoad ? !map.buildingAt(t.x, t.z) : free(t.x, t.z, t.pad ?? 0.8)) T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, { s: t.s || 1, check: false }); // (onRoad: a boulevard's median, on the carriageway the map has as one)
+  // (onRoad: a boulevard's median, on the carriageway the map has as one; a hedge's piece turned along its line and as
+  // tall as it stands, a red-leaved plum its own colour)
+  for (const t of world.extraTrees || []) if (t.onRoad ? !map.buildingAt(t.x, t.z) && !claims(t.x, t.z) : free(t.x, t.z, t.pad ?? 0.8)) {
+    const o = { s: t.s || 1, check: false };
+    if (t.sy) o.sy = t.sy;
+    if (t.rot != null) o.rot = t.rot;
+    if (t.tint) o.tint = t.tint;
+    if (t.trunk != null) o.trunk = t.trunk;
+    T(t.kind === 'arbusto' ? 'adelfa' : t.kind, t.x, t.z, o);
+  }
+  // the trees the captures show where the game had none (calles_arreglos.js ARBOLES), of their kind ('ciruelo': the
+  // red-leaved plum, the fruit tree in purple; 'acacia': a mulberry's crown)
+  for (const [x, z, sp0, sc] of ARBOLES) {
+    const sp = sp0 === 'ciruelo' ? 'frutal' : sp0 === 'acacia' ? 'morera' : sp0;
+    if (map.buildingAt(x, z)) continue;
+    T(sp, x, z, { s: sc || 1, check: false, ...(sp0 === 'ciruelo' ? { tint: [0.95, 0.16, 0.62] } : {}) });
+  }
   // street trees: one species (and one age) along a whole street, evenly spaced on the pavement, clear of doors (a
   // street seen in its captures: its own, or a stretch's — calles_estilos.js arboles, tramos)
   const treesOf = (cs, e) => {
@@ -85,7 +108,7 @@ export function plantTown(world, G, F, q) {
         const x = p.x - p.dz * off * side, z = p.z + p.dx * off * side;
         // (a street's own trees stand in their pits behind the kerb as laid — its nominal width does not hold them off —
         // and may come nearer a door, as they do there)
-        if ((own ? map.buildingAt(x, z) : !free(x, z, 0.6)) || nearDoor(x, z, own ? 0.8 : 1.2)) continue;
+        if ((own ? map.buildingAt(x, z) || claims(x, z) : !free(x, z, 0.6)) || nearDoor(x, z, own ? 0.8 : 1.2)) continue;
         if (hash2(Math.floor(x), Math.floor(z)) < 0.1) continue; // (a gap here and there: one died, one was never planted)
         const t = T(sp, x, z, { s: size * (0.95 + rnd() * 0.1), tint: stint.map((v) => v * (0.96 + rnd() * 0.08)) });
         if (t) world.streetTrees.push({ x, z, dx: p.dx, dz: p.dz });
@@ -181,7 +204,7 @@ export function plantTown(world, G, F, q) {
       for (let i = 0; i < n; i++) {
         const x = x0 + rnd() * (x1 - x0), z = z0 + rnd() * (z1 - z0);
         // (off the street, and back from the facades: a yard tree grows behind the house, against the back walls)
-        if (!pointInRing(x, z, u.ring) || map.buildingAt(x, z) || field.road(x, z) < 5.5 || field.facade(x, z) < 2.5) continue;
+        if (!pointInRing(x, z, u.ring) || map.buildingAt(x, z) || claims(x, z) || field.road(x, z) < 5.5 || field.facade(x, z) < 2.5) continue;
         const ar = map.areaAt(x, z);
         if (ar && ar.kind !== 'landuse:residential') continue;
         if (map.buildingAt(x + 1.3, z) || map.buildingAt(x - 1.3, z) || map.buildingAt(x, z + 1.3) || map.buildingAt(x, z - 1.3)) continue; // (room for a crown)

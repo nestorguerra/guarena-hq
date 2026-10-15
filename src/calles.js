@@ -8,7 +8,12 @@
 import { polyNearest, pointInRing, ringArea, mulberry32 } from './util.js';
 import { STYLES as STYLES0 } from './calles_estilos.js';
 import { CASAS } from './calles_casas.js';
+import { CALZADAS as CALZADAS0, BULEVARES } from './calles_medianas.js';
 export const STYLES = STYLES0; // (re-exported so: tools/build.py knows only `export const|function|class`)
+// the medians the map has no room for (calles_medianas.js): the street's boulevard, laid down the middle of its two
+// carriageways once mapdata.js has moved them either side of it (none of the old median search: there is no other one)
+for (const [k, v] of Object.entries(BULEVARES)) STYLES[k] = { ...(STYLES[k] || {}), bulevar: v, mediana: null };
+export const CALZADAS = CALZADAS0;
 
 // ---------------------------------------------------------------- which street a building looks onto
 // Each building's street: the named street (or square) its fronts look onto, by the metres of front that do — walls
@@ -83,6 +88,9 @@ export function streetsOf(map, church = null) {
 //  pretil: share                           houses whose front ends in a parapet before the tiled roof (no tile eaves)
 //  lamps: { every }                        wall lanterns, metres apart
 //  cables: true                            telephone and power lines along the fronts
+//  desconchada: { share, nivel, bajo }     houses whose whitewash is peeling off: how many, how much (1 along the foot of
+//                                          the wall, 2 patches, 3 big ones all over), and what shows under it ('ocre' the
+//                                          old ochre render and earth, 'gris' grey mortar or masonry, 'blanco' white render)
 
 // a building's own resolved style on its street, picked once with its seed (the same every load)
 const _hexes = new Map();
@@ -111,10 +119,11 @@ export function houseStyle(street, bid) {
     surround: S.surround && rnd() < S.surround.share ? S.surround.col : null,
     surroundKind: S.surround && S.surround.kind ? S.surround.kind : null,
     reja: S.reja ? rnd() < S.reja.share : null, rejaCol: S.reja ? S.reja.col : null, buche: S.reja ? rnd() < (S.reja.buche || 0) : null,
-    balc: S.balc ?? null, garage: S.garage ?? null, pots: S.pots ?? null,
+    balc: S.balc ?? null, garage: S.garage ?? null, pots: S.pots ?? null, toldos: S.toldos ?? null, // (toldos: the street's share of awnings)
     pretil: S.pretil != null ? rnd() < S.pretil : false,
     shutters: S.shutters || null, frames: S.frames || null, door: S.door || null, wood: S.wood || null,
   };
+  if (S.desconchada && rnd() < S.desconchada.share) out.peel = peelCode(S.desconchada.nivel || 2, S.desconchada.bajo);
   _hexes.set(key, CASAS[bid] ? ownStyle(street, bid, out) : out);
   return _hexes.get(key);
 }
@@ -124,13 +133,41 @@ export function parkOf(x, z) {
   for (const k in STYLES) { const p = STYLES[k].parque; if (p && Math.hypot(x - p.x, z - p.z) < p.r) return p; }
   return null;
 }
+// the buildings the Catastro registers much larger than they stand (by index in data/map.json): their outline as the
+// PNOA orthophotos show it (three flights; numbers only) and their storeys — the hut in the middle of the car park of
+// Santa María (its captures: view 7), a single storey of 13 × 8.6 m with its gable roof along it, where the Catastro has
+// a two-storey strip lying over the Calle Pozo Pajares besides (mapdata.js: its other parts go)
+export const PLANTAS = { 2783: { ring: [[-191.5, -101.2], [-182.8, -91.6], [-189.0, -85.6], [-197.7, -95.2]], floors: 1 } };
 // the names the map leaves out: a stretch of street with none, which its captures show to be part of a named one
 // (mapdata.js gives it the name: its style, its signs) — by its index in data/map.json
 export const NOMBRES = { 365: 'Calle Eugenio Frutos' }; // (its south branch, towards Herreros: view 60)
 // the paint seen on a building in the captures, whatever it is (a shed's too: buildings.js)
 export function seenWall(bid) { return (CASAS[bid] && CASAS[bid].wall) || null; }
+// and on a front to another street, by that street's name (calles_casas.js muros)
+export function seenMuros(bid) { return (CASAS[bid] && CASAS[bid].muros) || null; }
+// a shed's front as seen (it takes no house style): its openings bay by bay and its painted mouldings, or null
+export function seenNave(bid) {
+  const h = CASAS[bid];
+  if (!h || !(h.fachada || h.fachadas || h.pilastras || h.impostas || h.cornisa || h.door || h.cochera)) return null;
+  const o = { street: null, own: true };
+  for (const k of ['fachada', 'frente', 'fachadas', 'pilastras', 'impostas', 'cornisa', 'door', 'cochera', 'frames', 'shutters']) if (h[k] != null) o[k] = h[k];
+  return o;
+}
 // and its storeys, as many as are seen (the Catastro's count is now and then one too many or too few)
 export function seenFloors(bid) { return (CASAS[bid] && CASAS[bid].floors) || 0; }
+// its roof of corrugated sheet, as seen ({ col, una: one slope down to the street }), whatever the building is
+export function seenRoof(bid) { return (CASAS[bid] && CASAS[bid].cubierta) || null; }
+// its roof tiles' colour, its walls' height (m, all its parts) and its solar panels, as seen (the audit of 2026-10-13)
+export function seenTile(bid) { return (CASAS[bid] && CASAS[bid].teja) || null; }
+export function seenHeight(bid) { return (CASAS[bid] && CASAS[bid].alto) || 0; }
+// a house the Catastro registers as a store or a workshop, a house as seen (calles_casas.js nave: false)
+export function seenNotNave(bid) { return !!(CASAS[bid] && CASAS[bid].nave === false); }
+export function seenSolar(bid) { const h = CASAS[bid]; return h && typeof h.placas === 'boolean' ? h.placas : null; }
+// its whitewash peeling off, as seen: for the wall's shader (materials.js), how much plus three times what shows under
+// it — 1–3 ochre render and earth, 4–6 grey mortar, 7–9 white render; 0 none
+const PEEL = { ocre: 0, gris: 1, blanco: 2 };
+const peelCode = (n, under) => Math.max(1, Math.min(3, Math.round(n))) + 3 * (PEEL[under] ?? 0);
+export function seenPeel(bid) { const d = CASAS[bid] && CASAS[bid].desconchada; return d ? peelCode(d[0], d[1]) : 0; }
 // a house seen in the captures (calles_casas.js): what was seen of it over its street's draw
 function ownStyle(street, bid, base) {
   const h = CASAS[bid], o = { ...base, street, own: true };
@@ -149,5 +186,18 @@ function ownStyle(street, bid, base) {
   if (h.shutters) o.shutters = h.shutters;
   if (h.frames) o.frames = h.frames;
   if (h.pretil != null) o.pretil = h.pretil;
+  if (h.desconchada) o.peel = peelCode(h.desconchada[0], h.desconchada[1]);
+  if (h.soportal) o.soportal = h.soportal; // (a block on its arcade: buildings.js)
+  if (h.ciega) o.ciega = true; // (a front with no opening at all: a shed's blind wall, facades.js)
+  // (and what the audit of 2026-10-13 asked for, house by house, as its captures show it: the openings of its street front
+  // bay by bay and floor by floor — fachada {pb, p1, …}, letters P door, V window, C garage, B balcony, T shop front,
+  // - blind —, a flat roof behind a parapet (azotea), awnings and pots or none, its front fence where it stands back
+  // from the pavement (cerramiento), pilasters, string courses and cornice in their colour)
+  for (const k of ['fachada', 'frente', 'fachadas', 'bajantes', 'azotea', 'toldos', 'macetas', 'cerramiento', 'pilastras', 'impostas', 'cornisa']) if (h[k] != null) o[k] = h[k];
+  // (and the second round's, 2026-10-14: its wall's colour on a front to another street, its air conditioners, aerials,
+  // dish, the wiring along it, its shop's sign and letter boxes — buildings.js, facades.js, detalles.js)
+  for (const k of ['muros', 'pinturas', 'aires', 'antenas', 'parabolica', 'cables', 'rotulo', 'buzones', 'atrezo', 'toldo', 'cierro', 'celosia', 'mural', 'pergola', 'ropa', 'cochera', 'arcos_puertas', 'arcos_ventanas', 'barandilla', 'chimeneas', 'todas_fachadas', 'tejado', 'canecillos']) if (h[k] != null) o[k] = h[k];
+  if (h.reja_hex) o.rejaCol = h.reja_hex; // (its grilles' and railings' colour, as seen)
+  if (h.macetas === false) o.pots = 0;
   return o;
 }

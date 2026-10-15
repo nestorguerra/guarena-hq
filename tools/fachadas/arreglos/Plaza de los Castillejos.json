@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 11,
+   "lado": "der",
+   "desde": 5,
+   "hasta": 21,
+   "ancho": 1.2,
+   "camara": {
+    "x": -153.08,
+    "z": -19.04,
+    "heading": 70.0
+   }
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 11,
+   "lado": "izq",
+   "desde": -3,
+   "hasta": 5,
+   "camara": {
+    "x": -153.08,
+    "z": -19.04,
+    "heading": 70.0
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 10,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 12,
+   "modo": "bateria",
+   "lateral": 0,
+   "camara": {
+    "x": -129.9,
+    "z": -42.9,
+    "heading": 330
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 10,
+   "lado": "der",
+   "desde": -5,
+   "hasta": 20,
+   "fondo": 20,
+   "material": "asfalto",
+   "color": "#a69e94"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 10,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 15,
+   "fondo": 20,
+   "material": "asfalto",
+   "color": "#a69e94"
+  }
+ ],
+ "calle": {}
+}

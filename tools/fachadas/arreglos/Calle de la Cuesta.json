@@ -1,0 +1,167 @@
+{
+ "calle": {
+  "kinds": {
+   "renovada": 0.9,
+   "color": 0.1
+  },
+  "lamps": {
+   "every": 90,
+   "kind": "pared"
+  },
+  "pots": 0.02,
+  "toldos": 0
+ },
+ "items": [
+  {
+   "tipo": "tapia",
+   "vista": 34,
+   "lado": "der",
+   "desde": 30,
+   "hasta": 65,
+   "alto": 2.5,
+   "material": "piedra",
+   "color": "#b29b80"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 34,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 60,
+   "fondo": 6
+  },
+  {
+   "tipo": "arboles",
+   "vista": 34,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 15,
+   "especie": "frutal",
+   "cada": 4,
+   "escala": 1.2,
+   "lateral": 13
+  },
+  {
+   "tipo": "arboles",
+   "vista": 34,
+   "lado": "der",
+   "desde": 22,
+   "hasta": 40,
+   "especie": "frutal",
+   "cada": 4,
+   "escala": 1.2,
+   "lateral": 21
+  },
+  {
+   "tipo": "senal",
+   "vista": 35,
+   "lado": "izq",
+   "en": 2.2,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara",
+   "pared": true
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 35,
+   "lado": "der",
+   "en": 17,
+   "tipos": [
+    "resto"
+   ],
+   "acera": true
+  },
+  {
+   "tipo": "senal",
+   "vista": 36,
+   "lado": "izq",
+   "en": 1.3,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": -227.09,
+    "z": 41.49,
+    "heading": 358.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 36,
+   "lado": "der",
+   "en": 2.7,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": -227.09,
+    "z": 41.49,
+    "heading": 358.0
+   }
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 35,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 12
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 36,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 14
+  },
+  {
+   "tipo": "cartel",
+   "vista": 34,
+   "lado": "izq",
+   "en": 2.8,
+   "lateral": 4.36,
+   "ancho": 0.5,
+   "alto": 0.4,
+   "suelo": 2.0,
+   "color": "#f4f4f0",
+   "texto": "VADO",
+   "letra": "#b3262e",
+   "mira": "calle",
+   "camara": {
+    "x": -373.9,
+    "z": 26.79,
+    "heading": 65.0
+   }
+  },
+  {
+   "tipo": "escalones",
+   "vista": 37,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 30,
+   "alto": 0.18,
+   "peldanos": 1,
+   "camara": {
+    "x": -269.04,
+    "z": 8.96,
+    "heading": 80.0
+   }
+  },
+  {
+   "tipo": "bolardos",
+   "vista": 37,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 30,
+   "cada": 1.6,
+   "camara": {
+    "x": -269.04,
+    "z": 8.96,
+    "heading": 80.0
+   }
+  }
+ ]
+}

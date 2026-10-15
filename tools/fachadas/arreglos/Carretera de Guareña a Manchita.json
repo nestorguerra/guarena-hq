@@ -1,0 +1,858 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": "discontinua",
+   "bordes": true,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "road": "asfalto",
+  "roadCol": "#c3b4a2",
+  "aristas": [
+   790,
+   791
+  ],
+  "tramos": [
+   {
+    "x": 1093.7,
+    "z": 383.0,
+    "r": 3,
+    "senda": "#8f9c5a"
+   },
+   {
+    "x": 1208.8,
+    "z": 405.0,
+    "r": 3,
+    "senda": "#8f9c5a"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -12,
+   "hasta": 67,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 73,
+   "hasta": 135,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 218,
+   "lado": "der",
+   "desde": -12,
+   "hasta": 67,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 218,
+   "lado": "der",
+   "desde": 73,
+   "hasta": 135,
+   "ancho": 0
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 218,
+   "lado": "ambos",
+   "desde": -12,
+   "hasta": 67
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 218,
+   "lado": "ambos",
+   "desde": 73,
+   "hasta": 135
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -12,
+   "hasta": 67,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 73,
+   "hasta": 135,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "der",
+   "desde": -12,
+   "hasta": 67,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "der",
+   "desde": 73,
+   "hasta": 135,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -12,
+   "hasta": 67,
+   "fondo": 4.6,
+   "material": "losa",
+   "color": "#d3c7ab"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 73,
+   "hasta": 135,
+   "fondo": 4.6,
+   "material": "losa",
+   "color": "#d3c7ab"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -12,
+   "hasta": -2,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 12.33
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 8,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 12.1
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 8,
+   "hasta": 18,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 11.88
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 18,
+   "hasta": 28,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 11.65
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 28,
+   "hasta": 38,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 11.43
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 38,
+   "hasta": 48,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 11.21
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 48,
+   "hasta": 58,
+   "alto": 0.8,
+   "material": "enfoscado",
+   "color": "#c9c0a8",
+   "lateral": 10.98
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -12,
+   "hasta": -2,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 12.53
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 8,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 12.3
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 8,
+   "hasta": 18,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 12.08
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 18,
+   "hasta": 28,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 11.85
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 28,
+   "hasta": 38,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 11.63
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 38,
+   "hasta": 48,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 11.41
+  },
+  {
+   "tipo": "tapia",
+   "vista": 218,
+   "lado": "izq",
+   "desde": 48,
+   "hasta": 58,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#74604a",
+   "lateral": 11.18
+  },
+  {
+   "tipo": "suelo",
+   "vista": 218,
+   "lado": "der",
+   "desde": -12,
+   "hasta": 67,
+   "fondo": 30,
+   "material": "tierra",
+   "color": "#bcab8a"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 218,
+   "lado": "der",
+   "desde": 73,
+   "hasta": 135,
+   "fondo": 30,
+   "material": "tierra",
+   "color": "#bcab8a"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 8.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 29.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 51.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 73.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 95.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 117.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 7.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 28.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 49.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 91.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 112.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 133.6,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "izq",
+   "en": 40.6,
+   "especie": "palmera",
+   "escala": 0.8,
+   "fondo": 6.5
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 9.0,
+   "especie": "adelfa",
+   "escala": 0.7,
+   "fondo": 3.7
+  },
+  {
+   "tipo": "arbol",
+   "vista": 218,
+   "lado": "der",
+   "en": 12.6,
+   "especie": "adelfa",
+   "escala": 0.6,
+   "fondo": 3.6
+  },
+  {
+   "tipo": "acera",
+   "vista": 219,
+   "lado": "izq",
+   "desde": -10,
+   "hasta": 37,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 47,
+   "hasta": 100,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 219,
+   "lado": "der",
+   "desde": -10,
+   "hasta": 37,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 219,
+   "lado": "der",
+   "desde": 47,
+   "hasta": 100,
+   "ancho": 0
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 219,
+   "lado": "ambos",
+   "desde": -10,
+   "hasta": 37
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 219,
+   "lado": "ambos",
+   "desde": 47,
+   "hasta": 100
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "izq",
+   "desde": -10,
+   "hasta": 37,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 47,
+   "hasta": 100,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "der",
+   "desde": -10,
+   "hasta": 37,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "der",
+   "desde": 47,
+   "hasta": 100,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 219,
+   "lado": "izq",
+   "desde": -10,
+   "hasta": 26,
+   "fondo": 10,
+   "material": "losa",
+   "color": "#dfd2ba"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 26,
+   "hasta": 37,
+   "fondo": 4.6,
+   "material": "losa",
+   "color": "#d3c7ab"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 47,
+   "hasta": 100,
+   "fondo": 4.6,
+   "material": "losa",
+   "color": "#d3c7ab"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "izq",
+   "desde": -6,
+   "hasta": 4,
+   "alto": 1.9,
+   "material": "verja",
+   "color": "#2f5fae",
+   "murete": "#f0eee8",
+   "lateral": 9.36
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 4,
+   "hasta": 14,
+   "alto": 1.9,
+   "material": "verja",
+   "color": "#2f5fae",
+   "murete": "#f0eee8",
+   "lateral": 9.14
+  },
+  {
+   "tipo": "tapia",
+   "vista": 219,
+   "lado": "izq",
+   "desde": 14,
+   "hasta": 24,
+   "alto": 1.9,
+   "material": "verja",
+   "color": "#2f5fae",
+   "murete": "#f0eee8",
+   "lateral": 8.93
+  },
+  {
+   "tipo": "suelo",
+   "vista": 219,
+   "lado": "der",
+   "desde": -10,
+   "hasta": 37,
+   "fondo": 30,
+   "material": "tierra",
+   "color": "#bcab8a"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 219,
+   "lado": "der",
+   "desde": 47,
+   "hasta": 100,
+   "fondo": 30,
+   "material": "tierra",
+   "color": "#bcab8a"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 6.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 28.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 50.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 72.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "izq",
+   "en": 9.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "izq",
+   "en": 30.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "izq",
+   "en": 51.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "izq",
+   "en": 72.8,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 4.9
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 16.5,
+   "especie": "adelfa",
+   "escala": 0.7,
+   "fondo": 3.5
+  },
+  {
+   "tipo": "arbol",
+   "vista": 219,
+   "lado": "der",
+   "en": 20.5,
+   "especie": "adelfa",
+   "escala": 0.6,
+   "fondo": 3.5
+  },
+  {
+   "tipo": "acera",
+   "vista": 220,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 30,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 220,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 30,
+   "ancho": 0
+  },
+  {
+   "tipo": "sin_relleno",
+   "vista": 220,
+   "lado": "ambos",
+   "desde": 3,
+   "hasta": 30
+  },
+  {
+   "tipo": "tapia",
+   "vista": 220,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 30,
+   "alto": 0.9,
+   "material": "seto",
+   "color": "#6f7248"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 220,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 30,
+   "fondo": 25,
+   "material": "tierra",
+   "color": "#bcab8a"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 220,
+   "lado": "izq",
+   "en": 9.3,
+   "especie": "morera",
+   "escala": 0.6,
+   "fondo": 6.5
+  },
+  {
+   "tipo": "arbol",
+   "vista": 220,
+   "lado": "izq",
+   "en": 5.0,
+   "especie": "adelfa",
+   "escala": 1.3,
+   "fondo": 3.0
+  },
+  {
+   "tipo": "arbol",
+   "vista": 220,
+   "lado": "izq",
+   "en": 8.4,
+   "especie": "adelfa",
+   "escala": 0.8,
+   "fondo": 3.3
+  },
+  {
+   "tipo": "arbol",
+   "vista": 220,
+   "lado": "izq",
+   "en": 11.9,
+   "especie": "adelfa",
+   "escala": 0.7,
+   "fondo": 3.0
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 220,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 30,
+   "fondo": 30
+  },
+  {
+   "tipo": "suelo",
+   "vista": 220,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 30,
+   "fondo": 16,
+   "material": "asfalto",
+   "color": "#d0bfab"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 220,
+   "lado": "der",
+   "desde": 10,
+   "hasta": 19,
+   "alto": 2.0,
+   "material": "malla",
+   "color": "#8b8a80",
+   "lateral": 23.0
+  },
+  {
+   "tipo": "tapia",
+   "vista": 220,
+   "lado": "der",
+   "desde": 19,
+   "hasta": 28,
+   "alto": 2.0,
+   "material": "malla",
+   "color": "#8b8a80",
+   "lateral": 26.5
+  },
+  {
+   "tipo": "tapia",
+   "vista": 220,
+   "lado": "der",
+   "desde": 28,
+   "hasta": 37,
+   "alto": 2.0,
+   "material": "malla",
+   "color": "#8b8a80",
+   "lateral": 30.0
+  },
+  {
+   "tipo": "tapia",
+   "vista": 220,
+   "lado": "der",
+   "desde": 37,
+   "hasta": 46,
+   "alto": 2.0,
+   "material": "malla",
+   "color": "#8b8a80",
+   "lateral": 33.0
+  },
+  {
+   "tipo": "sin_postes",
+   "vista": 220,
+   "lado": "izq",
+   "desde": 30,
+   "hasta": 90,
+   "fondo": 80
+  }
+ ]
+}

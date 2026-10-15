@@ -1,0 +1,265 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#d2c2a9",
+  "acera": {
+   "col": "#cbc3b3",
+   "pat": 0
+  }
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 85,
+   "lado": "izq",
+   "en": 7.8,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "senal",
+   "vista": 85,
+   "lado": "der",
+   "en": 2.7,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara",
+   "pared": true
+  },
+  {
+   "tipo": "acera",
+   "vista": 86,
+   "lado": "izq",
+   "desde": -8,
+   "hasta": 10.5,
+   "ancho": 0
+  },
+  {
+   "tipo": "suelo",
+   "vista": 86,
+   "lado": "izq",
+   "desde": -8,
+   "hasta": 10.5,
+   "fondo": 14,
+   "material": "asfalto",
+   "color": "#d3c5ad"
+  },
+  {
+   "tipo": "acera",
+   "vista": 86,
+   "lado": "der",
+   "desde": -6,
+   "hasta": 30,
+   "ancho": 0.9
+  },
+  {
+   "tipo": "acera",
+   "vista": 87,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 11,
+   "ancho": 0,
+   "camara": {
+    "x": -138.69,
+    "z": 280.41,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 87,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 11,
+   "fondo": 12,
+   "material": "tierra",
+   "color": "#cdb48c",
+   "camara": {
+    "x": -138.69,
+    "z": 280.41,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 87,
+   "lado": "der",
+   "en": 5.9,
+   "especie": "morera",
+   "escala": 0.8,
+   "lateral": 4.8,
+   "camara": {
+    "x": -138.69,
+    "z": 280.41,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "senal",
+   "vista": 87,
+   "lado": "der",
+   "en": 8.8,
+   "placas": [
+    "stop"
+   ],
+   "mira": "camara",
+   "lateral": 0.7,
+   "camara": {
+    "x": -138.69,
+    "z": 280.41,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 88,
+   "lado": "izq",
+   "desde": 6,
+   "hasta": 30,
+   "alto": 4.6,
+   "material": "cal",
+   "color": "#eeebe3"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 88,
+   "lado": "izq",
+   "desde": 2.5,
+   "hasta": 6,
+   "alto": 7.0,
+   "material": "cal",
+   "color": "#f0eee9"
+  },
+  {
+   "tipo": "acera",
+   "vista": 88,
+   "lado": "der",
+   "desde": 8,
+   "hasta": 26,
+   "ancho": 0
+  },
+  {
+   "tipo": "suelo",
+   "vista": 88,
+   "lado": "der",
+   "desde": 8,
+   "hasta": 26,
+   "fondo": 7,
+   "material": "tierra",
+   "color": "#cbb48d"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 88,
+   "lado": "der",
+   "en": 22.8,
+   "especie": "morera",
+   "escala": 0.8,
+   "lateral": 9.3
+  },
+  {
+   "tipo": "arbol",
+   "vista": 88,
+   "lado": "der",
+   "en": 15.5,
+   "especie": "morera",
+   "escala": 0.8,
+   "lateral": 9.9
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 88,
+   "lado": "izq",
+   "en": 6,
+   "tipos": [
+    "resto",
+    "papel",
+    "papel",
+    "organico"
+   ]
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 88,
+   "lado": "der",
+   "en": 14.7,
+   "tipos": [
+    "vidrio",
+    "papel"
+   ]
+  },
+  {
+   "tipo": "placa",
+   "vista": 85,
+   "lado": "der",
+   "en": 4.6,
+   "texto": "Pozo Dulce",
+   "fondo": "#55606a",
+   "letra": "#f2f2ee"
+  },
+  {
+   "tipo": "silos",
+   "vista": 87,
+   "lado": "der",
+   "en": 36,
+   "lateral": 27,
+   "n": 1,
+   "radio": 1,
+   "alto": 17,
+   "color": "#a65a45"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 87,
+   "lado": "der",
+   "desde": 44,
+   "hasta": 50,
+   "fondo": 125
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 87,
+   "lado": "der",
+   "desde": 50,
+   "hasta": 56,
+   "fondo": 125
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 87,
+   "lado": "der",
+   "desde": 56,
+   "hasta": 62,
+   "fondo": 125
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 87,
+   "lado": "der",
+   "desde": 62,
+   "hasta": 68,
+   "fondo": 125
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 87,
+   "lado": "der",
+   "desde": 68,
+   "hasta": 74,
+   "fondo": 125
+  },
+  {
+   "tipo": "sin_flores",
+   "vista": 85,
+   "lado": "der",
+   "desde": -2,
+   "hasta": 16,
+   "fondo": 4
+  }
+ ]
+}

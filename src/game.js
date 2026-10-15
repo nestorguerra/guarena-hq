@@ -230,6 +230,8 @@ export class Game {
       this.grade = new ShaderPass(ClayGrade);
       if (this.gtao) { this.grade.uniforms.tAO.value = this.gtao.gtaoMap; this.grade.uniforms.uAO.value = STUDIO_AO.blend; }
       this.grade.material.depthTest = this.grade.material.depthWrite = false; // (full-screen passes never touch depth)
+      { const gradeRender = this.grade.render.bind(this.grade), U = this.grade.uniforms; // (the scene's depth, for the AO's fade far off)
+        this.grade.render = (renderer, wb, rb, dt, mask) => { U.tDepth.value = this.sceneDepth; U.uNear.value = this.camera.near; U.uFar.value = this.camera.far; gradeRender(renderer, wb, rb, dt, mask); }; }
       this.composer.addPass(this.grade);
       { // (pure clay colours, the studio's fill in the shadows, a touch of lens)
         const G = PLASTILINA.grade, U = this.grade.uniforms;

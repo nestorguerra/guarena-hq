@@ -1,0 +1,187 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#a8a49c",
+  "acera": {
+   "col": "#c2bbb0",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0,
+  "toldos": 0,
+  "pretil": 0.8,
+  "balc": 0.6,
+  "tramos": [
+   {
+    "x": 118,
+    "z": -76,
+    "r": 4,
+    "lado": "S",
+    "acera": {
+     "col": "#efebe5",
+     "pat": 2
+    }
+   },
+   {
+    "x": 130,
+    "z": -76,
+    "r": 9,
+    "lado": "S",
+    "acera": {
+     "col": "#b87d6a",
+     "pat": 0
+    }
+   },
+   {
+    "x": 108,
+    "z": -83,
+    "r": 13,
+    "lado": "N",
+    "acera": {
+     "col": "#e0c8bb",
+     "pat": 0
+    }
+   },
+   {
+    "x": 20,
+    "z": -74,
+    "r": 90,
+    "road": "adoquin",
+    "col": "#b5aea4"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "senal",
+   "vista": 50,
+   "lado": "der",
+   "en": 1.5,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "calle",
+   "pared": true
+  },
+  {
+   "tipo": "paso",
+   "vista": 51,
+   "en": 10.5
+  },
+  {
+   "tipo": "farola",
+   "vista": 80,
+   "lado": "izq",
+   "en": 7,
+   "modelo": "fernandino",
+   "camara": {
+    "x": 115.44,
+    "z": -78.14,
+    "heading": 160.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 51,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 40,
+   "ancho": 1.0
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 52,
+   "lado": "der",
+   "desde": 1,
+   "hasta": 32,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 53,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "fondo": 5
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 53,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 50,
+   "fondo": 5
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 53,
+   "lado": "izq",
+   "desde": 1,
+   "hasta": 30,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "farola",
+   "vista": 53,
+   "lado": "der",
+   "en": 7,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 54,
+   "lado": "der",
+   "en": 4.5,
+   "lateral": 3.4,
+   "especie": "platano",
+   "escala": 1.4
+  },
+  {
+   "tipo": "sin_contenedores",
+   "vista": 54,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 12
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 55,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "fondo": 5
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 55,
+   "lado": "izq",
+   "desde": 1,
+   "hasta": 30,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "sin_vado_amarillo",
+   "vista": 54,
+   "lado": "izq",
+   "desde": 3,
+   "hasta": 14
+  },
+  {
+   "tipo": "cable",
+   "vista": 52,
+   "en": 7.5,
+   "alto": 5.5
+  },
+  {
+   "tipo": "cable",
+   "vista": 55,
+   "en": 7,
+   "alto": 5.0
+  }
+ ]
+}

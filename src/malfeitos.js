@@ -135,7 +135,9 @@ const E_PIEDRA = { // the house of beige stone: a ground floor clad in limestone
   ],
   open: [
     { k: 'door', x0: 0.48, x1: 1.44, y0: 0, y1: 2.43, d: 0.35, leaf: { kind: 'chapa', col: '#e2dccf', knocker: false } },
-    { k: 'win', x0: 2.3, x1: 3.65, y0: 0.99, y1: 2.44, d: 0.15, frame: { col: '#8e9195', leaves: 2 }, pers: { col: '#9a9d9f', lvl: 1 } },
+    // (capture 77, May 2024, at its left edge: white flat bars in front of a brown roller shutter, not a grey one down)
+    { k: 'win', x0: 2.3, x1: 3.65, y0: 0.99, y1: 2.44, d: 0.15, frame: { col: '#8e9195', leaves: 2 }, pers: { col: PERS_BROWN, lvl: 0.8 },
+      reja: { col: '#f0efea', gap: 0.2, s: 0.04, hz: [], z: 0.09 } },
     { k: 'door', x0: 4.55, x1: 5.75, y0: 0, y1: 2.43, d: 0.26, leaf: { kind: 'clavos', n: 2, col: '#5a321f', nails: '#2a1d15' }, surr: { w: 0.12, top: 0.14, col: GRANITE, stone: true } },
     { k: 'balc', x0: 4.6, x1: 5.4, y0: 3.62, y1: 5.55, d: 0.15, frame: { col: '#f0efea' }, pers: { col: PERS_BROWN, lvl: 0.7 },
       slab: { x0: -0.05, x1: 5.55, y: 3.62, t: 0.2, out: 0.75, col: '#ecebe6', mould: false }, rail: { kind: 'lamas', h: 1.1, col: '#f2f1ed' } },
@@ -169,7 +171,7 @@ const twin14 = (id, s0, num) => ({
     { k: 'door', x0: 2.42, x1: 3.6, y0: 0, y1: 2.5, d: 0.24, leaf: { kind: 'cuarterones', n: 2, col: '#6d4428', panels: [[0.06, 0.42], [0.5, 0.94]], metal: '#b8953f' },
       surr: { w: 0.28, top: 0.32, col: '#a9a39c', stone: true, d: 0.035 }, num: { text: num, y: 2.62, h: 0.13, col: '#2a2420', z: 0.04 } },
     { k: 'balc', x0: 0.72, x1: 1.62, y0: 3.4, y1: 5.65, d: 0.3, frame: { col: PERS_BROWN }, pers: { col: PERS_BROWN, lvl: 0.5 }, surr: { w: 0.16, top: 0.22, col: '#f4f2ec', d: 0.05 },
-      slab: { x0: 0.12, x1: 2.25, y: 3.4, t: 0.26, out: 0.5, col: '#efebe2' }, rail: { kind: 'canizo', h: 1.05, col: BLACK, screen: CANIZO } },
+      slab: { x0: 0.12, x1: 2.25, y: 3.4, t: 0.26, out: 0.5, col: '#efebe2' }, rail: { kind: 'canizo', h: 1.05, col: '#9a8460', screen: CANIZO } }, // (capture 77, May 2024: closed by the reed screen, no black bars to be seen: its bars, the reed's own brown)
   ],
   extra: [
     { k: 'plate', x: 0.5, y: 2.95, w: 0.38, h: 0.3, col: '#efeeea' },
@@ -267,6 +269,7 @@ const E_CORREOS = {
     { k: 'box', x0: 9.6, y0: 2.9, x1: 10.25, y1: 3.3, d: 0.16, col: '#1f3f8f' },             // its blue crown
     ...corBays.map((c) => ({ k: 'toldo', x0: c - 0.75, x1: c + 0.75, y: 6.15, drop: 0.45, out: 0.6, col: GREEN_AWNING })),
     { k: 'ac', x: 5.5, y: 7.0 }, { k: 'ac', x: 8.3, y: 4.5 }, { k: 'ac', x: 11.05, y: 7.0 },
+    { k: 'ac', x: 16.6, y: 3.15 }, // (the white unit at its south corner under the last balcony: capture 78, Oct 2021 — columns 1145–1195, 2.4 m from the camera)
   ],
 };
 
@@ -441,7 +444,7 @@ const W7 = { // nº 7 — white with ochre frames: arched windows behind grilles
       slab: { x0: 3.34, x1: 7.18, y: 4.25, t: 0.22, out: 0.4, col: OCHRE_7 }, rail: { kind: 'bars', h: 0.95, col: BLACK } },
     { k: 'win', x0: 8.4, x1: 9.5, y0: 4.65, y1: 5.75, d: 0.2, frame: { col: '#f0efea', leaves: 2 }, pers: { col: PERS_WHITE, lvl: 0.7 }, surr: { w: 0.14, top: 0.14, col: OCHRE_7, d: 0.02, bottom: 0.1 } },
   ],
-  extra: [{ k: 'lamp', x: 7.85, y: 5.0 }, { k: 'cable', pts: [[0, 3.15], [4.9, 3.05], [9.85, 3.0]], sag: 0.08 }],
+  extra: [{ k: 'cable', pts: [[0, 3.15], [4.9, 3.05], [9.85, 3.0]], sag: 0.08 }], // (no wall lamp: capture 77, May 2024, sees all this front from 3 m and has none)
 };
 
 const W_LADRILLO = { // the brick block (1977): cream slab edges, windows with brown roller shutters, a garage, windows

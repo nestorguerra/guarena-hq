@@ -1,0 +1,480 @@
+{
+ "calle": {
+  "roadCol": "#ab9f91",
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "bordillo": "#b2ada3",
+  "tramos": [
+   {
+    "x": 558,
+    "z": 126.5,
+    "r": 40,
+    "firme": "liso"
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 160,
+   "lado": "der",
+   "en": 15.4,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "farola",
+   "vista": 160,
+   "lado": "izq",
+   "en": 25.5,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "farola",
+   "vista": 161,
+   "lado": "izq",
+   "en": 8,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "sin_contenedores",
+   "vista": 161,
+   "lado": "izq",
+   "desde": 25,
+   "hasta": 50
+  },
+  {
+   "tipo": "tapia",
+   "vista": 162,
+   "lado": "izq",
+   "desde": 22,
+   "hasta": 50,
+   "alto": 2.2,
+   "material": "seto",
+   "color": "#5e6a4a"
+  },
+  {
+   "tipo": "farola",
+   "vista": 162,
+   "lado": "izq",
+   "en": 33,
+   "modelo": "columna"
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 162,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 15
+  },
+  {
+   "tipo": "farola",
+   "vista": 163,
+   "lado": "izq",
+   "en": 7,
+   "modelo": "baculo",
+   "camara": {
+    "x": 1308.22,
+    "z": 194.92,
+    "heading": 280.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 163,
+   "lado": "izq",
+   "en": 22.5,
+   "modelo": "baculo",
+   "camara": {
+    "x": 1308.22,
+    "z": 194.92,
+    "heading": 280.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 163,
+   "lado": "izq",
+   "en": 38,
+   "modelo": "baculo",
+   "camara": {
+    "x": 1308.22,
+    "z": 194.92,
+    "heading": 280.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 163,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 70,
+   "fondo": 60,
+   "material": "tierra",
+   "color": "#b4a386",
+   "camara": {
+    "x": 1308.22,
+    "z": 194.92,
+    "heading": 280.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 164,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "fondo": 50,
+   "material": "hierba",
+   "color": "#948a68",
+   "camara": {
+    "x": 1568.61,
+    "z": 180.0,
+    "heading": 260.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 164,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 60,
+   "fondo": 5,
+   "material": "hierba",
+   "color": "#8f8a5f",
+   "camara": {
+    "x": 1568.61,
+    "z": 180.0,
+    "heading": 260.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 163,
+   "lado": "izq",
+   "desde": 4,
+   "hasta": 60,
+   "fondo": 26,
+   "material": "asfalto",
+   "color": "#9a9791"
+  },
+  {
+   "tipo": "farola",
+   "vista": 162,
+   "lado": "der",
+   "en": 16.5,
+   "lateral": 21.7,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 162,
+   "lado": "der",
+   "en": 33,
+   "lateral": 14,
+   "tipos": [
+    "papel",
+    "envases"
+   ]
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 162,
+   "lado": "der",
+   "desde": 5,
+   "hasta": 40,
+   "fondo": 30,
+   "camara": {
+    "x": 865.07,
+    "z": 136.7,
+    "heading": 272.0
+   }
+  },
+  {
+   "tipo": "acera",
+   "vista": 163,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 70,
+   "ancho": 0
+  },
+  {
+   "tipo": "tapia",
+   "vista": 163,
+   "lado": "izq",
+   "desde": 18,
+   "hasta": 56,
+   "lateral": 18,
+   "alto": 2.6,
+   "material": "seto",
+   "color": "#58664a"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 162,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 5,
+   "fondo": 5,
+   "material": "asfalto",
+   "color": "#aa9e90"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 162,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 5,
+   "fondo": -1.2,
+   "material": "asfalto",
+   "color": "#aa9e90"
+  },
+  {
+   "tipo": "casa",
+   "vista": 162,
+   "lado": "izq",
+   "desde": 34,
+   "hasta": 42,
+   "lateral": 57,
+   "fondo": 13,
+   "plantas": 2,
+   "color": "#e6d9c4",
+   "alto": 7.5
+  },
+  {
+   "tipo": "arbol",
+   "vista": 164,
+   "lado": "der",
+   "en": 30,
+   "especie": "olivo",
+   "escala": 0.45,
+   "lateral": 60
+  },
+  {
+   "tipo": "arbol",
+   "vista": 164,
+   "lado": "der",
+   "en": 36,
+   "especie": "olivo",
+   "escala": 0.45,
+   "lateral": 60
+  },
+  {
+   "tipo": "arbol",
+   "vista": 164,
+   "lado": "der",
+   "en": 42,
+   "especie": "olivo",
+   "escala": 0.45,
+   "lateral": 60
+  },
+  {
+   "tipo": "arbol",
+   "vista": 164,
+   "lado": "der",
+   "en": 48,
+   "especie": "olivo",
+   "escala": 0.45,
+   "lateral": 60
+  },
+  {
+   "tipo": "arbol",
+   "vista": 164,
+   "lado": "der",
+   "en": 55,
+   "especie": "olivo",
+   "escala": 0.45,
+   "lateral": 60
+  },
+  {
+   "tipo": "sin_postes",
+   "vista": 164,
+   "lado": "der",
+   "desde": 60,
+   "hasta": 100,
+   "fondo": 70
+  },
+  {
+   "tipo": "poste",
+   "vista": 164,
+   "lado": "der",
+   "en": 82,
+   "modelo": "celosia",
+   "alto": 10,
+   "lateral": 60
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 3.0,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 4.1,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 5.2,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 6.3,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 7.4,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 8.5,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 9.6,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 10.7,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 11.8,
+   "lateral": 3.7,
+   "largo": 0.55,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 5.5,
+   "lateral": 8.2,
+   "largo": 0.7,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 7.0,
+   "lateral": 8.2,
+   "largo": 0.7,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 8.5,
+   "lateral": 8.2,
+   "largo": 0.7,
+   "ancho": 0.15
+  },
+  {
+   "tipo": "marca",
+   "vista": 162,
+   "lado": "der",
+   "en": 7.25,
+   "lateral": 5.75,
+   "largo": 1.0,
+   "ancho": 3.9
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 6,
+   "largo": 12,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 18,
+   "largo": 12,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 30,
+   "largo": 12,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 42,
+   "largo": 12,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 54,
+   "largo": 12,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  },
+  {
+   "tipo": "marca",
+   "vista": 164,
+   "en": 63.75,
+   "largo": 7.5,
+   "ancho": 3.8,
+   "color": "#c7a284",
+   "sobre": "calzada"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 45,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#bfb19e",
+  "acera": {
+   "col": "#d6cbb8",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": 0,
+  "garage": 0.12
+ },
+ "items": [
+  {
+   "tipo": "aparcamiento",
+   "vista": 144,
+   "lado": "izq",
+   "desde": 5,
+   "hasta": 55,
+   "modo": "cordon",
+   "camara": {
+    "x": 290.3,
+    "z": -199.37,
+    "heading": 300.0
+   }
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 144,
+   "lado": "der",
+   "desde": 13,
+   "hasta": 55,
+   "modo": "cordon",
+   "camara": {
+    "x": 290.3,
+    "z": -199.37,
+    "heading": 300.0
+   }
+  }
+ ]
+}

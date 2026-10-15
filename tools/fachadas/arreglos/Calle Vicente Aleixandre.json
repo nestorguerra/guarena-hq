@@ -1,0 +1,301 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#c2b4a2",
+  "acera": {
+   "col": "#e0d2b8",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0,
+  "toldos": 0,
+  "lamps": {
+   "every": 30,
+   "kind": "pared"
+  },
+  "balc": 0,
+  "garage": 0.05,
+  "pretil": 0.5,
+  "walls": [
+   [
+    "#eceae6",
+    0.65
+   ],
+   [
+    "#ece6d6",
+    0.15
+   ],
+   [
+    "#efede8",
+    0.1
+   ],
+   [
+    "#c6c5c1",
+    0.1
+   ]
+  ],
+  "kinds": {
+   "renovada": 1.0
+  },
+  "desconchada": {
+   "share": 0.5,
+   "nivel": 2,
+   "bajo": "gris"
+  },
+  "tramos": [
+   {
+    "x": 672,
+    "z": -173,
+    "r": 50,
+    "lado": "S",
+    "acera": {
+     "col": "#9a9a9c",
+     "pat": 0
+    }
+   }
+  ]
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 212,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 45,
+   "ancho": 2.4,
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 212,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "fondo": 40,
+   "material": "tierra",
+   "color": "#c2a67e",
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 212,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 60,
+   "fondo": 30,
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 212,
+   "lado": "izq",
+   "en": 12.5,
+   "lateral": 3.0,
+   "modelo": "baculo",
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 212,
+   "lado": "izq",
+   "desde": 30,
+   "hasta": 55,
+   "lateral": 40,
+   "alto": 3.2,
+   "material": "enfoscado",
+   "color": "#e4e1d8",
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "contenedores",
+   "vista": 212,
+   "lado": "izq",
+   "en": 70,
+   "lateral": 31,
+   "tipos": [
+    "envases",
+    "papel"
+   ],
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 82.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 213,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 4.4,
+   "alto": 3.4,
+   "material": "enfoscado",
+   "color": "#a2b6cc"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 213,
+   "lado": "izq",
+   "desde": 15,
+   "hasta": 26,
+   "alto": 6.3,
+   "material": "cal",
+   "color": "#ece6d6"
+  },
+  {
+   "tipo": "farola",
+   "vista": 213,
+   "lado": "der",
+   "en": 15.7,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 214,
+   "lado": "izq",
+   "desde": -8.5,
+   "hasta": 30.5,
+   "alto": 4.7,
+   "material": "cal",
+   "color": "#ece9e2",
+   "murete": "#b5b4b2"
+  },
+  {
+   "tipo": "farola",
+   "vista": 214,
+   "lado": "izq",
+   "en": 35,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "acera",
+   "vista": 214,
+   "lado": "der",
+   "desde": 5,
+   "hasta": 40,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 212,
+   "lado": "izq",
+   "desde": -6,
+   "hasta": 45,
+   "ancho": 2.4,
+   "calzada": 5.9
+  },
+  {
+   "tipo": "acera",
+   "vista": 212,
+   "lado": "der",
+   "desde": -6,
+   "hasta": 20,
+   "ancho": 2.0,
+   "calzada": 1.2
+  },
+  {
+   "tipo": "silos",
+   "vista": 214,
+   "lado": "izq",
+   "en": 11.5,
+   "lateral": 8.5,
+   "n": 1,
+   "radio": 3.2,
+   "alto": 20,
+   "color": "#d3d8dc"
+  },
+  {
+   "tipo": "silos",
+   "vista": 214,
+   "lado": "izq",
+   "en": 23.5,
+   "lateral": 8.5,
+   "n": 1,
+   "radio": 3.2,
+   "alto": 20,
+   "color": "#d3d8dc"
+  },
+  {
+   "tipo": "silos",
+   "vista": 214,
+   "lado": "izq",
+   "en": 35.5,
+   "lateral": 8.5,
+   "n": 1,
+   "radio": 3.2,
+   "alto": 20,
+   "color": "#d3d8dc"
+  },
+  {
+   "tipo": "silos",
+   "vista": 214,
+   "lado": "izq",
+   "en": 47.5,
+   "lateral": 8.5,
+   "n": 1,
+   "radio": 3.2,
+   "alto": 20,
+   "color": "#d3d8dc"
+  },
+  {
+   "tipo": "cartel",
+   "vista": 212,
+   "lado": "der",
+   "en": 5.0,
+   "lateral": 9.7,
+   "ancho": 2.0,
+   "alto": 0.6,
+   "suelo": 6.7,
+   "color": "#2e7d46",
+   "mira": "camara",
+   "camara": {
+    "x": 543.99,
+    "z": -156.11,
+    "heading": 85.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 213,
+   "alto": 3.0,
+   "material": "cal",
+   "color": "#ece6d6",
+   "nota": "revisión final: el muro blanco continuo de la izquierda (entre los tramos que ya había) — de punto a punto: el mapa tiene ahí un solar sin dibujar y la tapia a lo largo de la calle se saltaba",
+   "de": {
+    "en": 4.4,
+    "lado": "izq",
+    "lateral": 4.6
+   },
+   "a": {
+    "en": 15,
+    "lado": "izq",
+    "lateral": 5.3
+   }
+  }
+ ]
+}

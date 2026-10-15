@@ -1,0 +1,50 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#a89b88",
+  "acera": {
+   "col": "#cdc2b0",
+   "pat": 0
+  },
+  "lamps": {
+   "every": 30,
+   "kind": "columna"
+  },
+  "pots": 0.05,
+  "toldos": 0,
+  "garage": 0.33,
+  "pretil": 0.9,
+  "balc": 0.5
+ },
+ "items": [
+  {
+   "tipo": "senal",
+   "vista": 103,
+   "lado": "izq",
+   "en": 3.0,
+   "placas": [
+    "velocidad_30"
+   ],
+   "mira": "espalda"
+  },
+  {
+   "tipo": "farola",
+   "vista": 104,
+   "lado": "der",
+   "en": 12,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 105,
+   "lado": "izq",
+   "en": 6.5,
+   "modelo": "globo"
+  }
+ ]
+}

@@ -174,3 +174,28 @@ export function kerbAt(e, s, side) {
   const a = side > 0 ? k.p : k.m, x = Math.max(0, Math.min(k.n - 1, s / k.st)), i = Math.min(k.n - 2, Math.floor(x)), f = x - i;
   return a[i] + (a[i + 1] - a[i]) * f;
 }
+
+// the pavements the audit of 2026-10-13 found otherwise (calles_arreglos.js ACERAS: a stretch of one side and its width,
+// 0 none — the carriageway to the fronts, or to the earth where none stands): the kerb moved to leave it where houses
+// stand, and the ground told what to lay there (e.kerb.ov, by sample: NaN where the kerbs above decide)
+export function applyAceras(map, list) {
+  const t = {};
+  for (const A of list) {
+    const P = A.pts;
+    for (let i = 0; i < P.length; i += 2) {
+      const q = map.nearestEdge(P[i], P[i + 1], 15, (e) => !!e.kerb);
+      if (!q || q.d > 15) continue;
+      const e = q.edge, kb = e.kerb;
+      polySample(e.pts, e.cum, q.s, t);
+      const side = (P[i] - t.x) * -t.dz + (P[i + 1] - t.z) * t.dx >= 0 ? 1 : -1;
+      const ov = kb.ov || (kb.ov = { p: new Float32Array(kb.n).fill(NaN), m: new Float32Array(kb.n).fill(NaN) });
+      const O = side > 0 ? ov.p : ov.m, K = side > 0 ? kb.p : kb.m, F = side > 0 ? kb.fp : kb.fm;
+      const c = Math.round(q.s / kb.st);
+      for (let j = Math.max(0, c - 1); j <= Math.min(kb.n - 1, c + 1); j++) {
+        O[j] = A.ancho;
+        if (A.calzada) K[j] = A.calzada; // (the kerb where the captures show it, from the axis: the carriageway as wide as seen)
+        else if (F[j] === F[j]) K[j] = Math.max(1.4, F[j] - A.ancho - (A.ancho > 0 ? 0.28 : 0)); // (0.28: the kerb's width, ground.js)
+      }
+    }
+  }
+}

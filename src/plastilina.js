@@ -42,16 +42,18 @@ export const STUDIO_AO = {
 // contrast round the middle greys, the studio's fill in the shadows, the lens's darker corners
 // The contact shadows (STUDIO_AO, worked out at half the resolution) are laid on here first, as the AO pass's own
 // blend did: the picture times the occlusion (tAO, sampled smoothly between its texels; uAO its strength, 0 without
-// it). (Brought up following the depth instead — a bilateral upsampling — the edges of cars and kerbs came out stepped
+// it), fading out far off (tDepth). (Brought up following the depth instead — a bilateral upsampling — the edges of cars and kerbs came out stepped
 // at the AO's coarser pixels: the plain blend reads cleaner)
 export const ClayGrade = {
-  uniforms: { tDiffuse: { value: null }, tAO: { value: null }, uAO: { value: 0 }, uSat: { value: 1 }, uWarm: { value: 0 }, uContrast: { value: 1 }, uLift: { value: 0 }, uVignette: { value: 0 }, uGain: { value: 1 }, uTint: { value: { x: 1, y: 1, z: 1 } } },
+  uniforms: { tDiffuse: { value: null }, tAO: { value: null }, tDepth: { value: null }, uNear: { value: 0.25 }, uFar: { value: 4200 }, uAO: { value: 0 }, uSat: { value: 1 }, uWarm: { value: 0 }, uContrast: { value: 1 }, uLift: { value: 0 }, uVignette: { value: 0 }, uGain: { value: 1 }, uTint: { value: { x: 1, y: 1, z: 1 } } },
   vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
   fragmentShader: `
-    uniform sampler2D tDiffuse, tAO; uniform float uAO, uSat, uWarm, uContrast, uLift, uVignette, uGain; uniform vec3 uTint; varying vec2 vUv;
+    uniform sampler2D tDiffuse, tAO, tDepth; uniform float uAO, uNear, uFar, uSat, uWarm, uContrast, uLift, uVignette, uGain; uniform vec3 uTint; varying vec2 vUv;
     void main(){
       vec4 c = texture2D(tDiffuse, vUv);
-      if (uAO > 0.0) c.rgb *= mix(1.0, texture2D(tAO, vUv).r, uAO);
+      // (none past half a kilometre: the depth there too coarse for it, the far hills came out striped in black)
+      float z = texture2D(tDepth, vUv).x * 2.0 - 1.0, vz = 2.0 * uNear * uFar / (uFar + uNear - z * (uFar - uNear));
+      if (uAO > 0.0) c.rgb *= mix(1.0, texture2D(tAO, vUv).r, uAO * (1.0 - smoothstep(400.0, 900.0, vz)));
       vec3 col = max(c.rgb, 0.0) * uGain * uTint;
       float l = dot(col, vec3(0.2126, 0.7152, 0.0722));
       col = mix(vec3(l), col, uSat);

@@ -1,0 +1,11 @@
+{"calle": {"acera": {"col": "#d8cbb2", "pat": 0}, "roadCol": "#b8aea3", "lineas": {"centro": false, "bordes": false, "aparcamiento": false}, "tramos": [{"x": 677.1, "z": 12.9, "r": 12, "firme": "liso"}]}, "items": [
+ {"tipo": "tapia", "vista": 177, "lado": "izq", "desde": 0.2, "hasta": 4.3, "lateral": 2.7, "alto": 4.4, "material": "cal", "color": "#f5f3ee", "puerta": "#98785d"},
+ {"tipo": "contenedores", "vista": 177, "lado": "izq", "en": 14.2, "lateral": 3.8, "tipos": ["envases", "papel"], "acera": true},
+ {"tipo": "farola", "vista": 177, "lado": "der", "en": 17, "lateral": 7.5, "modelo": "fernandino"},
+ {"tipo": "paso", "vista": 178, "en": 11},
+ {"tipo": "farola", "vista": 178, "lado": "der", "en": 11.9, "lateral": 6.1, "modelo": "fernandino"},
+ {"tipo": "tapia", "vista": 179, "lado": "izq", "desde": 3.5, "hasta": 11.1, "lateral": 5.6, "alto": 7.0, "material": "cal", "color": "#f0efec"},
+ {"tipo": "banderines", "vista": 178, "en": 14, "alto": 6.5, "colores": ["#2d62c4", "#4a86e6"], "camara": {"x": 644.55, "z": 155.8, "heading": 10.0}},
+ {"tipo": "banderines", "vista": 179, "en": 14, "alto": 6.5, "colores": ["#2e8b3d", "#f4f4f0"], "camara": {"x": 679.12, "z": -3.51, "heading": 190.0}},
+ {"tipo": "marca", "vista": 179, "lado": "izq", "en": 3.2, "largo": 0.35, "ancho": 3.4, "color": "#f2f2ee", "lateral": 3.2}
+]}

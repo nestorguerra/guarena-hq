@@ -44,7 +44,13 @@ export async function shot(id, o = {}) {
   G.camera.aspect = w / h;
   const body = G.player.char && G.player.char.object;
   if (body) body.visible = false;
+  // (a car the game parked where the Street View car itself stood would fill the frame: those within 6 m of the
+  // lens are put out of sight for the picture, and back after)
+  const near = ((G.fleet && G.fleet.vehicles) || []).filter((c) => c.parked && Math.hypot(c.x - v.x, c.z - v.z) < 6);
+  const moveAll = (d) => { for (const c of near) { c.x += d; c.writeMatrix(G.fleet.renderer, G.fleet.tmp); } };
+  moveAll(1e4);
   for (let k = 0; k < 4; k++) { step(1); pose(v, o); G.sky.update(0, G.camera.position); G.render(); }
+  moveAll(-1e4);
   const c = r.domElement, out = document.createElement('canvas');
   out.width = w; out.height = h; out.getContext('2d').drawImage(c, 0, 0, c.width, c.height, 0, 0, w, h);
   if (body) body.visible = true;

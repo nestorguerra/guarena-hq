@@ -3,6 +3,7 @@
 import { Vehicle, VehicleRenderer, MODELS, PARKED_MIX, makeTmp, obbContact, resolvePair } from './vehicles.js';
 import { polySample, hash1, clamp, mulberry32 } from './util.js';
 import { parkingBays } from './ground.js';
+import { APARCAMIENTOS } from './calles_arreglos.js';
 import { PERK } from './perks.js';
 
 export class Fleet {
@@ -27,8 +28,9 @@ export class Fleet {
       if (!e.drive || e.blocked || e.dirt || e.cls === 'service' || e.cls === 'track' || e.cls === 'living_street') continue;
       if (!map.inTown(e.pts[0], e.pts[1])) continue;
       const w = e.w;
-      if (w < 7.0) continue;
-      const sides = w >= 10.2 ? [1, -1] : [e.oneway ? -1 : (hash1(e.id) < 0.5 ? 1 : -1)];
+      if (w < 7.0 && !e.parkOnly) continue;
+      // (a carriageway beside a median parks along its houses only: calles_medianas.js)
+      const sides = e.parkOnly ? [e.parkOnly] : w >= 10.2 ? [1, -1] : [e.oneway ? -1 : (hash1(e.id) < 0.5 ? 1 : -1)];
       e.parkSide = sides.length === 2 ? 2 : sides[0];
       const na = map.nodes[e.a], nb = map.nodes[e.b];
       const s0 = na.degree > 1 ? na.radius + 9 : 4, s1 = e.len - (nb.degree > 1 ? nb.radius + 9 : 4);
@@ -53,6 +55,27 @@ export class Fleet {
           }
           s += 5.6 + rnd() * 1.2;
         }
+      }
+    }
+    // the rows of parked cars the captures show (calles_arreglos.js APARCAMIENTOS): along the kerb (cordón) or square to it,
+    // nose in (batería), about one place in seven free; the street's own cars give way to them there
+    for (const A of APARCAMIENTOS) {
+      const P = A.pts, bat = A.modo === 'bateria', step = bat ? 2.5 : 5.9;
+      const near = (x, z) => { for (let i = 0; i + 3 < P.length; i += 2) { const ax = P[i], az = P[i + 1], dx = P[i + 2] - ax, dz = P[i + 3] - az, L2 = dx * dx + dz * dz || 1; const t = Math.max(0, Math.min(1, ((x - ax) * dx + (z - az) * dz) / L2)); if (Math.hypot(ax + dx * t - x, az + dz * t - z) < (bat ? 3.2 : 2.2)) return true; } return false; };
+      this.spots = this.spots.filter((q) => q.bay || q.twoWheel || q.display || !near(q.x, q.z));
+      let acc = step / 2;
+      for (let i = 0; i + 3 < P.length; i += 2) {
+        const ax = P[i], az = P[i + 1], dx = P[i + 2] - ax, dz = P[i + 3] - az, L = Math.hypot(dx, dz);
+        for (; acc < L; acc += step) {
+          if (rnd() < 0.15) continue;
+          const x = ax + (dx * acc) / L, z = az + (dz * acc) / L;
+          const heading = bat ? Math.atan2(A.n[0], A.n[1]) + (rnd() < 0.15 ? Math.PI : 0) : Math.atan2(A.n[1], -A.n[0]); // (along the kerb, the way its side drives: the kerb on their right)
+          const model = PARKED_MIX[Math.floor(rnd() * PARKED_MIX.length)], spec = MODELS[model];
+          if (bat && (spec.L > 4.9 || spec.W > 2.1)) continue;
+          if (map.buildingAt(x, z) || !this.boxFree(x, z, heading, spec)) continue;
+          this.spots.push({ x, z, heading, model, color: spec.colors[Math.floor(rnd() * spec.colors.length)], vehicle: null, taken: false });
+        }
+        acc -= L;
       }
     }
     // motorbikes at the kerb and bicycles against the walls (placed with the street life): rideable

@@ -1,0 +1,70 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#b8b0a4",
+  "acera": {
+   "col": "#c9c2b6",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0.05,
+  "toldos": 0.3,
+  "lamps": {
+   "every": 45,
+   "kind": "columna"
+  },
+  "walls": [
+   [
+    "#eee2c8",
+    0.42
+   ],
+   [
+    "#f4f1ea",
+    0.4
+   ],
+   [
+    "#ecd9a0",
+    0.18
+   ]
+  ]
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 151,
+   "lado": "der",
+   "en": 3,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 152,
+   "lado": "der",
+   "en": 9,
+   "modelo": "baculo"
+  },
+  {
+   "tipo": "acera",
+   "vista": 152,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 18,
+   "ancho": 0
+  },
+  {
+   "tipo": "suelo",
+   "vista": 152,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 18,
+   "fondo": 8,
+   "material": "tierra",
+   "color": "#d3bf9f"
+  }
+ ]
+}

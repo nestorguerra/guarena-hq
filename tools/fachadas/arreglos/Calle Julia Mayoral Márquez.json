@@ -1,0 +1,363 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 1000,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#bba995",
+  "acera": {
+   "col": "#e0d2b8",
+   "pat": 0
+  },
+  "pots": 0,
+  "toldos": 0.1,
+  "pretil": 0.5,
+  "garage": 0.45,
+  "balc": 0.45,
+  "walls": [
+   [
+    "#f2efe8",
+    0.55
+   ],
+   [
+    "#f1d8c2",
+    0.15
+   ],
+   [
+    "#f2dcb0",
+    0.15
+   ],
+   [
+    "#efe3c8",
+    0.15
+   ]
+  ]
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 130,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "ancho": 2.2
+  },
+  {
+   "tipo": "tapia",
+   "vista": 130,
+   "lado": "der",
+   "lateral": 2.7,
+   "desde": 2,
+   "hasta": 20,
+   "alto": 1.1,
+   "material": "seto",
+   "color": "#3d5a26"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 130,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 20,
+   "fondo": 10,
+   "material": "tierra",
+   "color": "#a8946f"
+  },
+  {
+   "tipo": "suelo",
+   "vista": 130,
+   "lado": "der",
+   "desde": 22,
+   "hasta": 58,
+   "fondo": -6,
+   "material": "hierba",
+   "color": "#9d9a5c"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 130,
+   "lado": "der",
+   "en": 11,
+   "lateral": 5.2,
+   "especie": "olivo",
+   "escala": 0.8
+  },
+  {
+   "tipo": "senal",
+   "vista": 130,
+   "lado": "der",
+   "en": 5.3,
+   "lateral": 6.2,
+   "placas": [
+    "sentido_obligatorio"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "acera",
+   "vista": 131,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 50,
+   "ancho": 2.2
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 131,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 15,
+   "lateral": 3.3
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 131,
+   "lado": "izq",
+   "desde": 15,
+   "hasta": 32,
+   "lateral": 2.9
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 131,
+   "lado": "izq",
+   "desde": 32,
+   "hasta": 50,
+   "lateral": 2.5
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 131,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 18,
+   "modo": "bateria",
+   "lateral": 2.6
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 131,
+   "lado": "der",
+   "desde": 18,
+   "hasta": 34,
+   "modo": "bateria",
+   "lateral": 3.0
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 131,
+   "lado": "der",
+   "desde": 34,
+   "hasta": 50,
+   "modo": "bateria",
+   "lateral": 3.5
+  },
+  {
+   "tipo": "suelo",
+   "vista": 131,
+   "lado": "der",
+   "desde": 3,
+   "hasta": 50,
+   "fondo": -6,
+   "material": "hierba",
+   "color": "#9d9a5c"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 131,
+   "lado": "der",
+   "en": 12.7,
+   "lateral": 5.1,
+   "especie": "acacia",
+   "escala": 0.75
+  },
+  {
+   "tipo": "arbol",
+   "vista": 131,
+   "lado": "der",
+   "en": 29.9,
+   "lateral": 5.6,
+   "especie": "acacia",
+   "escala": 0.75
+  },
+  {
+   "tipo": "farola",
+   "vista": 131,
+   "lado": "der",
+   "en": 6,
+   "lateral": 5.0,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "acera",
+   "vista": 132,
+   "lado": "der",
+   "desde": -5,
+   "hasta": 50,
+   "ancho": 2.2
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 132,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 12,
+   "lateral": 2.3
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 132,
+   "lado": "der",
+   "desde": 12,
+   "hasta": 28,
+   "lateral": 2.6
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 132,
+   "lado": "der",
+   "desde": 28,
+   "hasta": 50,
+   "lateral": 3.1
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 132,
+   "lado": "izq",
+   "desde": -3,
+   "hasta": 3,
+   "modo": "bateria",
+   "lateral": 3.7
+  },
+  {
+   "tipo": "suelo",
+   "vista": 132,
+   "lado": "izq",
+   "desde": -6,
+   "hasta": 4,
+   "fondo": -6,
+   "material": "hierba",
+   "color": "#9d9a5c"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 132,
+   "lado": "izq",
+   "en": 7.1,
+   "lateral": 6.1,
+   "especie": "acacia",
+   "escala": 0.75
+  },
+  {
+   "tipo": "arbol",
+   "vista": 132,
+   "lado": "izq",
+   "en": 62,
+   "lateral": 4.7,
+   "especie": "acacia",
+   "escala": 0.75
+  },
+  {
+   "tipo": "farola",
+   "vista": 132,
+   "lado": "izq",
+   "en": 25.5,
+   "lateral": 5.6,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "cartel",
+   "vista": 130,
+   "lado": "der",
+   "en": 3.5,
+   "lateral": 6,
+   "ancho": 4.0,
+   "alto": 2.2,
+   "color": "#dcdcd6",
+   "texto": "VENTA DE SOLARES RESIDENCIALES",
+   "letra": "#454a50",
+   "mira": "camara",
+   "camara": {
+    "x": 277.74,
+    "z": -410.03,
+    "heading": 16.0
+   }
+  },
+  {
+   "tipo": "mastil",
+   "vista": 131,
+   "lado": "der",
+   "en": 8,
+   "alto": 2.8,
+   "banderas": [
+    "#c8202a"
+   ],
+   "pared": true,
+   "camara": {
+    "x": 293.12,
+    "z": -463.03,
+    "heading": 16.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 130,
+   "lado": "der",
+   "en": 7.3,
+   "lateral": 3.5,
+   "ancho": 1.3,
+   "alto": 1.3,
+   "suelo": 0,
+   "color": "#9a958c",
+   "mira": "camara"
+  },
+  {
+   "tipo": "cartel",
+   "vista": 130,
+   "lado": "der",
+   "en": 5.8,
+   "lateral": 5.1,
+   "ancho": 0.9,
+   "alto": 0.5,
+   "suelo": 0.45,
+   "color": "#e8e5dc",
+   "mira": "camara"
+  },
+  {
+   "tipo": "sin_vado_amarillo",
+   "vista": 130,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 16
+  },
+  {
+   "tipo": "arbol",
+   "vista": 130,
+   "lado": "der",
+   "en": 9.5,
+   "lateral": 6.5,
+   "especie": "adelfa",
+   "escala": 1.3,
+   "nota": "revisión final: el arbusto grande de la isleta"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 130,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 18,
+   "lateral": 4.8,
+   "alto": 0.8,
+   "material": "seto",
+   "color": "#4f6b33",
+   "nota": "revisión final: los arbustos bajos de dentro de la isleta"
+  }
+ ]
+}

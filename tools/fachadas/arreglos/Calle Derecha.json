@@ -1,0 +1,94 @@
+{
+ "calle": {
+  "roadCol": "#d3c1a8",
+  "acera": {
+   "col": "#bfb3a0",
+   "pat": 0
+  }
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 41,
+   "lado": "der",
+   "en": 21,
+   "modelo": "fernandino",
+   "camara": {
+    "x": -145.26,
+    "z": 71.02,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "suelo",
+   "vista": 42,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 4.2,
+   "fondo": 12,
+   "material": "asfalto",
+   "color": "#d4c2a6"
+  },
+  {
+   "tipo": "sin_senales",
+   "vista": 41,
+   "lado": "der",
+   "desde": 15,
+   "hasta": 36,
+   "camara": {
+    "x": -145.26,
+    "z": 71.02,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "tapia",
+   "vista": 40,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 8.14,
+   "alto": 6.0,
+   "material": "cal",
+   "color": "#f3f0e9",
+   "lateral": 0,
+   "camara": {
+    "x": -146.95,
+    "z": -15.84,
+    "heading": 174.36
+   }
+  },
+  {
+   "tipo": "sin_vado_amarillo",
+   "vista": 42,
+   "lado": "ambos",
+   "desde": -2,
+   "hasta": 14
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 42,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 9
+  },
+  {
+   "tipo": "cable",
+   "vista": 41,
+   "en": 20,
+   "alto": 6.5,
+   "camara": {
+    "x": -145.16,
+    "z": 73.22,
+    "heading": 357.9
+   }
+  },
+  {
+   "tipo": "sierra",
+   "vista": 40,
+   "col_desde": 640,
+   "col_hasta": 740,
+   "alto_px": 7,
+   "distancia": 10
+  }
+ ]
+}

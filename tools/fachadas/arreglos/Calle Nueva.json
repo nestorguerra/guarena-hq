@@ -1,0 +1,109 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "toldos": 0,
+  "pots": 0,
+  "lamps": {
+   "every": 999,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#bdb4a6",
+  "acera": {
+   "col": "#efebe5",
+   "pat": 1
+  },
+  "cables": true
+ },
+ "items": [
+  {
+   "tipo": "tapia",
+   "vista": 139,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 9,
+   "lateral": 3.45,
+   "alto": 1.0,
+   "material": "verja",
+   "color": "#3a3a38"
+  },
+  {
+   "tipo": "arbol",
+   "vista": 139,
+   "lado": "der",
+   "en": 3.0,
+   "fondo": 0.6,
+   "especie": "morera",
+   "escala": 0.7
+  },
+  {
+   "tipo": "farola",
+   "vista": 139,
+   "lado": "der",
+   "en": 4.3,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "farola",
+   "vista": 140,
+   "lado": "izq",
+   "en": 23,
+   "modelo": "fernandino"
+  },
+  {
+   "tipo": "paso",
+   "vista": 140,
+   "en": 8
+  },
+  {
+   "tipo": "senal",
+   "vista": 140,
+   "lado": "izq",
+   "en": 3.0,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "senal",
+   "vista": 140,
+   "lado": "der",
+   "en": 4.5,
+   "placas": [
+    "prohibido_estacionar"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "sin_placas",
+   "vista": 140,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 8,
+   "camara": {
+    "x": 110.69,
+    "z": -220.52,
+    "heading": 115.0
+   }
+  },
+  {
+   "tipo": "placa",
+   "vista": 140,
+   "lado": "izq",
+   "en": 2.0,
+   "texto": "TRAVESÍA NUEVA",
+   "fondo": "#4a3f38",
+   "letra": "#d6c08a",
+   "camara": {
+    "x": 110.69,
+    "z": -220.52,
+    "heading": 115.0
+   }
+  }
+ ]
+}

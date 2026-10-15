@@ -3,12 +3,13 @@
 // gas station, cooperative tanks, stadium La Noria, Guardia Civil, Centro de Salud, entry signs, plaza furniture.
 import * as THREE from 'three';
 import { stoneCanvas, flagCanvas, textCanvas, FLOOR_H } from './textures.js';
-import { orientedRect, ringArea, ringCentroid, pointInRing, mulberry32, clamp } from './util.js';
+import { orientedRect, ringArea, ringCentroid, pointInRing, mulberry32, clamp, ringBounds } from './util.js';
+import { SIN_TERRAZA } from './calles_arreglos.js';
 import { shared, makeNightGlowMaterial } from './materials.js';
 import { makeFurnitureGeometries } from './props.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { westPortal, southPortal, northPortal } from './churchdoors.js';
-import { fountain, plazaDetails, updateWater, cultura, mercadoFront, corbacho, pabellonFront, entranceLetters, meridaRoad, avenida, bulevar } from './townplus.js';
+import { fountain, plazaDetails, updateWater, cultura, venueFront, corbacho, pabellonFront, entranceLetters, meridaRoad, avenida, bulevar } from './townplus.js';
 import { buildSchools } from './schools.js';
 import { STYLES as CALLES } from './calles.js';
 import { atrio } from './atrio.js';
@@ -152,6 +153,25 @@ function archPanel(w, h, seg = 12) {
   return new THREE.ShapeGeometry(s, seg);
 }
 
+// a stone material tinted from another's, keeping the clay look's defines (a clone starts again from the standard ones)
+function tinted(m, r, g, b) {
+  const c = m.clone();
+  c.defines = Object.assign({}, m.defines);
+  c.color.setRGB(r, g, b);
+  return c;
+}
+// where a wall of an outline (the edges of church()) stands at x, on one side of it: s = −1 the north one, +1 the south one
+function zAtEdges(edges, x, s) {
+  let best = null;
+  for (const e of edges) {
+    const lo = Math.min(e.a[0], e.b[0]), hi = Math.max(e.a[0], e.b[0]);
+    if (hi - lo < 0.5 || x < lo || x > hi) continue;
+    const z = e.a[1] + ((e.b[1] - e.a[1]) * (x - e.a[0])) / (e.b[0] - e.a[0]);
+    if (best === null || (s > 0 ? z > best : z < best)) best = z;
+  }
+  return best === null ? s * 13.5 : best;
+}
+
 export function buildLandmarks(world, map) {
   return new Landmarks(world, map);
 }
@@ -177,6 +197,7 @@ class Landmarks {
     this.mat = {
       mamp: new THREE.MeshStandardMaterial({ map: tex('mamposteria', 11), roughness: 0.95 }),
       sillar: new THREE.MeshStandardMaterial({ map: tex('sillar', 12), roughness: 0.9 }),
+      revoco: new THREE.MeshStandardMaterial({ map: tex('revoco', 13), roughness: 0.95 }),
       teja: new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85 }),
       cal: new THREE.MeshStandardMaterial({ color: 0xf7f5ef, roughness: 0.95 }),
       dark: new THREE.MeshStandardMaterial({ color: 0x15130f, roughness: 1 }),
@@ -192,7 +213,7 @@ class Landmarks {
     // roof tile texture from facade array would need the array; draw a small canvas instead
     this.mat.teja.map = canvasTex(this.tileCanvas(), true);
     // (claymation: the church, the town hall and the rest worked by hand like the houses: their marks deeper and in the colour)
-    if (STYLE.plastilina) for (const k of ['mamp', 'sillar', 'teja', 'cal', 'white']) this.mat[k].defines = { CLAY_RELIEF: '2.3', CLAY_TONE: '2.4', CLAY_SET: '0', CLAY_TILE: '2.4', CLAY_AMP: '0.012', CLAY_CAV: '0.22' };
+    if (STYLE.plastilina) for (const k of ['mamp', 'sillar', 'revoco', 'teja', 'cal', 'white']) this.mat[k].defines = { CLAY_RELIEF: '2.3', CLAY_TONE: '2.4', CLAY_SET: '0', CLAY_TILE: '2.4', CLAY_AMP: '0.012', CLAY_CAV: '0.22' };
     // (claymation: the church's stones swell from their bed — the relief painted with them, textures.js clayStones)
     if (bumps.mamposteria) { this.mat.mamp.bumpMap = bumps.mamposteria; this.mat.mamp.bumpScale = 5; }
     if (bumps.sillar) { this.mat.sillar.bumpMap = bumps.sillar; this.mat.sillar.bumpScale = 4; }
@@ -282,10 +303,10 @@ class Landmarks {
     buildPools(this);
     corbacho(this);
     pabellonFront(this);
-    avenida(this);
+    if (!(CALLES['Avenida de la Constitución'] || {}).mediana) avenida(this); // (its own, as seen, below — not both: it had two sets of trees and lamps until 2026-10-14)
     // (and the medians of the streets whose captures show one: calles.js mediana)
     for (const [name, st] of Object.entries(CALLES)) if (st.mediana) avenida(this, name, st.mediana);
-    for (const st of Object.values(CALLES)) if (st.bulevar) bulevar(this, st.bulevar);
+    for (const [name, st] of Object.entries(CALLES)) if (st.bulevar) for (const bv of [].concat(st.bulevar)) bulevar(this, bv, name); // (in pieces where crossings break it)
     entranceLetters(this);
     meridaRoad(this);
     this.gasStation();
@@ -307,7 +328,11 @@ class Landmarks {
     const cols = [0xf2efe6, 0xc8202a, 0x1f6b3a, 0x2659a6, 0xe6b422];
     const umbrellaMats = cols.map((c) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.8, side: THREE.DoubleSide }));
     const byColor = umbrellaMats.map(() => []);
+    const noTerrace = SIN_TERRAZA.map((r) => ({ r, bb: ringBounds(r) }));
     for (const b of bars) {
+      // (the Café/Bar El Parque on the EX-338: its capture — view 288, May 2024 — shows its pavement bare, shop fronts under awnings
+      // and no table, chair or sunshade: it keeps its place on the map but puts none out)
+      if (/El Parque$/.test(b.name)) continue;
       // walk from the bar towards the nearest street/plaza to find open ground
       const q = map.nearestEdge(b.x, b.z, 30, (e) => !e.dirt);
       if (!q) continue;
@@ -319,6 +344,7 @@ class Landmarks {
       if (!wide) continue;
       const color = Math.floor(rnd() * cols.length);
       const n = 2 + Math.floor(rnd() * 3);
+      const mute = noTerrace.some((o) => b.x > o.bb[0] - 6 && b.x < o.bb[2] + 6 && b.z > o.bb[1] - 6 && b.z < o.bb[3] + 6 && (pointInRing(b.x, b.z, o.r) || pointInRing(b.x + ux * 3, b.z + uz * 3, o.r))), keep = [tables.length, chairs.length, byColor[color].length, (this.circleColliders || []).length];
       for (let k = 0; k < n; k++) {
         const along = (k - (n - 1) / 2) * 2.6;
         const base = q.edge.walkOnly || plazaNear ? L * 0.5 : Math.max(0.2, L - q.edge.w / 2 - 1.4);
@@ -334,6 +360,9 @@ class Landmarks {
         byColor[color].push([x, z]);
         this.circle(x, z, 0.45, 1);
       }
+      // (none where the captures show none — calles_arreglos.js SIN_TERRAZA: laid as before, the draw unchanged for the
+      // others, then taken back)
+      if (mute) { tables.length = keep[0]; chairs.length = keep[1]; byColor[color].length = keep[2]; if (this.circleColliders) this.circleColliders.length = keep[3]; }
     }
     if (!tables.length) return;
     const mk = (geo, mat, list, rotIdx = -1) => {
@@ -376,24 +405,63 @@ class Landmarks {
     if (!best) return;
     const { L, nx, nz, mx, mz } = best;
     const g = this.frame(mx, mz, nz, -nx); // (local x along the front, z out of it)
-    // the portal
-    const door = new THREE.Mesh(archPanel(1.5, 2.9), M.wood); door.position.set(0, 0, 0.03); g.add(door);
-    for (const s of [-1, 1]) this.put(g, sbox(0.42, 3.3, 0.22, 1), M.sillar, s * 1.05, 1.65, 0.11);
-    const arch = new THREE.Mesh(archRing(0.75, 0.28, 0.22), M.sillar); arch.position.set(0, 2.15, 0.11); g.add(arch);
-    this.put(g, sbox(2.75, 0.32, 0.3, 1), M.sillar, 0, 3.46, 0.15);
-    this.put(g, sbox(1.7, 1.0, 0.24, 1), M.sillar, 0, 4.12, 0.12);
-    const crown = new THREE.Mesh(archPanel(1.7, 0.85), M.sillar); crown.position.set(0, 4.62, 0.24); g.add(crown);
-    const crownRim = new THREE.Mesh(archRing(0.85, 0.16, 0.26), M.sillar); crownRim.position.set(0, 4.62, 0.12); g.add(crownRim);
-    const niche = new THREE.Mesh(archPanel(0.45, 0.8), M.dark); niche.position.set(0, 3.72, 0.25); g.add(niche);
-    // the bell-gable, at the front's south end
-    const ua = [nz, -nx], la = (best.ax - mx) * ua[0] + (best.az - mz) * ua[1], lb = (best.bx - mx) * ua[0] + (best.bz - mz) * ua[1];
-    const sEnd = best.az > best.bz ? la : lb, x = sEnd - Math.sign(sEnd) * 1.3, H = 2 * FLOOR_H;
-    this.put(g, sbox(1.9, 2.6, 0.5, 1.5), M.cal, x, H + 1.3, -0.25);
-    this.put(g, sbox(2.0, 0.12, 0.6, 1), M.sillar, x, H + 2.66, -0.25);
-    const open = new THREE.Mesh(archPanel(0.75, 1.2), M.dark); open.position.set(x, H + 0.8, 0.01); g.add(open);
-    const bell = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.3, 0.45, 10, 1, true), M.bronze); bell.position.set(x, H + 1.45, -0.25); g.add(bell);
-    this.put(g, sbox(0.08, 0.9, 0.08), M.iron, x, H + 3.17, -0.25);
-    this.put(g, sbox(0.45, 0.08, 0.08), M.iron, x, H + 3.32, -0.25);
+    // the portal (the captures, 2026-10-14: at the front's north end, ≈ 2 m from its corner; granite the dark brown-grey of
+    // the town's old stone): an arch of voussoirs between jambs of alternating blocks, a moulded cornice, over it a
+    // cartouche with its niche between volutes, and behind it the whitewashed wall's shaped gable, curving up over the eaves
+    const H = 2 * FLOOR_H, gran = tinted(M.sillar, 0.5, 0.4, 0.34), px = -1.9;
+    const pg = new THREE.Group(); pg.position.set(px, 0, 0); g.add(pg);
+    const door = new THREE.Mesh(archPanel(1.5, 2.9), M.wood); door.position.set(0, 0, 0.03); pg.add(door);
+    const stone = [];
+    for (const s of [-1, 1]) for (let k = 0; k < 4; k++) { const w = k % 2 ? 0.6 : 0.85; stone.push(sbox(w, 0.55, 0.42, 1).translate(s * (0.75 + w / 2), 0.275 + k * 0.55, 0.21)); }
+    stone.push(archRing(0.75, 0.42, 0.42).translate(0, 2.15, 0.21), sbox(0.46, 0.7, 0.5, 1).translate(0, 2.15 + 0.75 + 0.35, 0.25));
+    for (const s of [-1, 1]) stone.push(sbox(0.55, 0.14, 0.46, 1).translate(s * 1.0, 2.15, 0.23));
+    stone.push(sbox(3.0, 0.28, 0.58, 1).translate(0, 3.3, 0.29), sbox(3.2, 0.12, 0.74, 1).translate(0, 3.5, 0.37));
+    stone.push(sbox(1.3, 1.55, 0.34, 1).translate(0, 3.56 + 0.78, 0.2), sbox(1.7, 0.16, 0.46, 1).translate(0, 5.18, 0.26));
+    for (const s of [-1, 1]) { const vo = new THREE.TorusGeometry(0.34, 0.08, 6, 14, Math.PI * 1.5); vo.rotateZ(s > 0 ? -Math.PI * 0.25 : Math.PI * 1.25); stone.push(vo.translate(s * 1.0, 3.95, 0.2)); stone.push(sbox(0.34, 0.5, 0.3, 1).translate(s * 0.95, 3.82, 0.18)); }
+    stone.push(new THREE.SphereGeometry(0.2, 10, 8).translate(0, 5.5, 0.26), sbox(0.18, 0.2, 0.18, 1).translate(0, 5.36, 0.26));
+    { const pm = new THREE.Mesh(mergeGeos(stone), gran); pm.castShadow = true; pm.receiveShadow = true; pg.add(pm); }
+    const niche = new THREE.Mesh(archPanel(0.5, 1.05), M.dark); niche.position.set(0, 3.72, 0.375); pg.add(niche);
+    { const sh = new THREE.Shape(); // (the gable: a shaped profile, a quarter-round either side of a straight top)
+      sh.moveTo(-1.9, 0); sh.lineTo(-1.9, 0.3); sh.quadraticCurveTo(-1.5, 0.35, -1.1, 0.9); sh.quadraticCurveTo(-0.85, 1.4, -0.55, 1.45); sh.lineTo(0.55, 1.45); sh.quadraticCurveTo(0.85, 1.4, 1.1, 0.9); sh.quadraticCurveTo(1.5, 0.35, 1.9, 0.3); sh.lineTo(1.9, 0); sh.closePath();
+      const gm = new THREE.Mesh(new THREE.ExtrudeGeometry(sh, { depth: 0.3, bevelEnabled: false, curveSegments: 8 }), M.cal); gm.position.set(0, H - 0.1, -0.1); gm.castShadow = true; pg.add(gm);
+    }
+    // the grey painted footing along the faces that look at the park and the street (1.1 m, the captures' «zócalo gris corrido»)
+    { const plinth = tinted(M.cal, 0.5, 0.5, 0.49), pr = this.map.buildings[1260].ring, np = pr.length / 2;
+      for (let i = 0; i < np; i++) {
+        const j = (i + 1) % np, ax = pr[i * 2], az = pr[i * 2 + 1], bx = pr[j * 2], bz = pr[j * 2 + 1], el = Math.hypot(bx - ax, bz - az);
+        if (el < 1.5) continue;
+        let ex = (bz - az) / el, ez = -(bx - ax) / el; if (!ccw) { ex = -ex; ez = -ez; }
+        const tl2 = Math.hypot(park[0] - (ax + bx) / 2, park[1] - (az + bz) / 2) || 1;
+        if ((ex * (park[0] - (ax + bx) / 2) + ez * (park[1] - (az + bz) / 2)) / tl2 < 0.25 && ez < 0.6) continue;
+        this.add(sbox(el, 1.1, 0.16, 1.2), plinth, (ax + bx) / 2 + ex * 0.07, 0.55, (az + bz) / 2 + ez * 0.07, Math.atan2(-(bz - az), bx - ax));
+      } }
+    // a wall lantern on the next face along (the captures: an iron bracket and a glass lantern over the footing's line, at the
+    // height of the eaves' first storey), lit at night
+    { const pr = this.map.buildings[1260].ring, np = pr.length / 2;
+      let bestE = null;
+      for (let i = 0; i < np; i++) { const j = (i + 1) % np, ax = pr[i * 2], az = pr[i * 2 + 1], bx = pr[j * 2], bz = pr[j * 2 + 1], el = Math.hypot(bx - ax, bz - az); if (el < 2.5 || (ax + bx) / 2 > mx - 3) continue; if (!bestE || el < bestE.el) bestE = { ax, az, bx, bz, el }; }
+      if (bestE) {
+        let ex = (bestE.bz - bestE.az) / bestE.el, ez = -(bestE.bx - bestE.ax) / bestE.el; if (!ccw) { ex = -ex; ez = -ez; }
+        const lx = (bestE.ax + bestE.bx) / 2, lz = (bestE.az + bestE.bz) / 2, lg = new THREE.Group();
+        lg.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.7), M.iron), 0, 4.3, 0.35));
+        lg.add(at(new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.12, 0.42, 6), makeNightGlowMaterial(0xfff0cc, { dayLevel: 0.85, nightLevel: 2.4 })), 0, 4.28, 0.7));
+        lg.add(at(new THREE.Mesh(new THREE.ConeGeometry(0.24, 0.2, 6), M.iron), 0, 4.6, 0.7));
+        lg.position.set(lx, 0, lz); lg.rotation.y = Math.atan2(ex, ez); lg.traverse((q) => { if (q.isMesh) q.castShadow = true; }); this.root.add(lg);
+        this.world.lampPoints.push(lx + ex * 0.7, 4.3, lz + ez * 0.7);
+      } }
+    // the bell-gable, at the south end of the roof, over the south wall (the captures: toward the right of the front, well past the portal)
+    const x = 7.4;
+    this.put(g, sbox(2.4, 2.6, 0.5, 1.5), M.cal, x, H + 1.3, -0.25);
+    this.put(g, sbox(1.3, 0.55, 0.5, 1.5), M.cal, x, H + 2.88, -0.25);
+    this.put(g, sbox(2.5, 0.12, 0.6, 1), M.sillar, x, H + 2.6, -0.25);
+    for (const s of [-1, 1]) { const open = new THREE.Mesh(archPanel(0.7, 1.2), M.dark); open.position.set(x + s * 0.6, H + 0.8, 0.01); g.add(open); }
+    const bell = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.3, 0.45, 10, 1, true), M.bronze); bell.position.set(x - 0.6, H + 1.45, -0.25); g.add(bell);
+    for (const sx of [-1.1, 1.1]) this.put(g, new THREE.SphereGeometry(0.17, 8, 6), M.sillar, x + sx, H + 2.78, -0.25);
+    this.put(g, new THREE.SphereGeometry(0.19, 8, 6), M.sillar, x, H + 3.3, -0.25);
+    this.put(g, sbox(0.08, 0.9, 0.08), M.iron, x, H + 3.8, -0.25);
+    this.put(g, sbox(0.45, 0.08, 0.08), M.iron, x, H + 3.95, -0.25);
+    // (no palm over the ermita: vegetation.js plants one in the garden behind it, at (−112, 165.9), where the captures show sky)
+    this.claimed.push([-113.2, 164.7, -110.8, 164.7, -110.8, 167.1, -113.2, 167.1]);
     this.poi.ermitaPlazaVieja = { x: mx + nx * 2, z: mz + nz * 2 };
   }
 
@@ -417,7 +485,7 @@ class Landmarks {
         const ix = -(bz - az) / L, iz = (bx - ax) / L; // inward for CCW rings
         for (let s = 4; s < L - 3; s += 9) {
           const x = ax + ((bx - ax) * s) / L + ix * 2.2, z = az + ((bz - az) * s) / L + iz * 2.2;
-          if (!pointInRing(x, z, r) || this.map.buildingAt(x, z)) continue;
+          if (!pointInRing(x, z, r) || this.map.buildingAt(x, z) || this.claims(x, z)) continue;
           // (none before the town hall: its arcade looks onto the bars' terraces, as its photograph shows)
           const af = this.poi.ayto && this.poi.ayto.front;
           if (af && Math.abs((x - af.mx) * af.ux + (z - af.mz) * af.uz) < af.half && ((x - af.mx) * this.poi.ayto.nx + (z - af.mz) * this.poi.ayto.nz) < 10) continue;
@@ -474,88 +542,165 @@ class Landmarks {
       }
       return best;
     };
-    const nw = Math.min(W * 0.52, 9.5);
-    // the foot of the church stands where the Catastro's outline is (the portal must not be walled up behind it)
+    // ---- the body, as the Catastro and the captures give it (2026-10-14; the measures are in docs/hiperrealismo.md): the
+    // outline IS the walls, up to the cornice at 22 m, all in one plane — a block 27 m across. It was a low annex on the
+    // outline and a narrower nave set back on top of it, which showed as a stepped wall from the north (audit n59). Over
+    // its middle the nave's own roof, 18 m wide, between the flat roofs of the aisles' chapels; the tower at the
+    // south-west corner, the polygonal head at the east, and the sacristy, lower, round the head's south side
+    const nw = 9, H = 22;
     const xw = cross('x', 0, (v, b2) => v < b2);
-    const x0 = clamp(xw ? xw.v - 0.05 : -L + 1.2, -L + 0.1, -L + 2.4), xa = L - nw - 1.5; // nave from west facade to apse start
-    const naveLen = xa - x0;
-    // the side doors in the third bay, on the outline: the Mediodía (south) one onto its atrium, the Gospel one shut
-    const xs = x0 + 2.5 + (2.5 * (naveLen - 5)) / 4; // (the middle of the third bay, between its buttresses)
+    const x0 = clamp(xw ? xw.v - 0.05 : -L + 1.2, -L + 0.1, -L + 2.4), xa = L - nw - 1.5; // nave from the west front to the head
+    const BX = [-11.1, -2.35, 6.1, 14.9]; // the flat bands of ashlar up the long walls (PNOA's rhythm, the captures' bands)
+    const WX = [-16.3, -6.9, 1.6, 10.5];  // a window in each bay, high up
+    // the side doors in the third bay, between its bands: the Mediodía (south) one onto its atrium, the Gospel one shut
+    const xs = (BX[1] + BX[2]) / 2;
     const sHit = cross('z', xs, (v, b2) => (south > 0 ? v > b2 : v < b2)), nHit = cross('z', xs, (v, b2) => (south > 0 ? v < b2 : v > b2));
     const doorEdges = new Map();
+    const addDoor = (i, ax, az, at2, wDoor, sp2) => (doorEdges.get(i) || doorEdges.set(i, []).get(i)).push({ s: Math.hypot(at2[0] - ax, at2[1] - az), w: wDoor, spring: sp2 });
     for (const [hit, wDoor, sp2] of [[sHit, 2.3, 3.3], [nHit, 2.2, 3.2]]) {
       if (!hit) continue;
       const i = hit.i, n = ringLocal.length / 2, j = (i + 1) % n;
       const ax = ringLocal[i * 2], az = ringLocal[i * 2 + 1], bx = ringLocal[j * 2], bz = ringLocal[j * 2 + 1];
       const sAlong = Math.hypot(xs - ax, hit.v - az);
       if (sAlong > wDoor && Math.hypot(bx - ax, bz - az) - sAlong > wDoor) {
-        (doorEdges.get(i) || doorEdges.set(i, []).get(i)).push({ s: sAlong, w: wDoor, spring: sp2 });
+        addDoor(i, ax, az, [xs, hit.v], wDoor, sp2);
         const ex = bx - ax, ez = bz - az, el = Math.hypot(ex, ez), side = Math.sign(hit.v) || 1;
         let nx = ez / el, nz = -ex / el; if (Math.sign(nz) !== side) { nx = -nx; nz = -nz; }
         hit.ok = true; hit.nx = nx; hit.nz = nz;
       }
     }
-    const annex = extrudeRing(ringLocal, 0, 8.5, 3.2, true, (i, ax, az, bx, bz) => {
-      // the bit of outline right behind the west front: the front stands over it
-      if (Math.abs((ax + bx) / 2 - x0) < 0.6 && Math.abs(ax - bx) < 0.8 && Math.abs(az - bz) > 1 && Math.max(Math.abs(az), Math.abs(bz)) < nw + 0.5) return 'skip';
-      return doorEdges.get(i) || null;
-    });
-    this.put(g, annex, M.mamp, 0, 0, 0);
-    // nave
-    const H = 19;
-    const nave = sbox(naveLen, H, nw * 2, 3.2);
-    { const ix = Array.from(nave.index.array); ix.splice(6, 6); nave.setIndex(ix); } // (the -x face: drawn below, with its door)
-    this.put(g, nave, M.mamp, x0 + naveLen / 2, H / 2, 0);
-    {
-      const R = 1.3, SP = 3.7, sh = new THREE.Shape();
-      sh.moveTo(-nw, 0); sh.lineTo(-R, 0); sh.lineTo(-R, SP); sh.absarc(0, SP, R, Math.PI, 0, true); sh.lineTo(R, 0); sh.lineTo(nw, 0); sh.lineTo(nw, H); sh.lineTo(-nw, H); sh.closePath();
-      const wf = new THREE.ShapeGeometry(sh, 16), pp = wf.attributes.position, wu = wf.attributes.uv;
-      for (let i = 0; i < pp.count; i++) wu.setXY(i, (nw - pp.getX(i)) / 3.2, pp.getY(i) / 3.2);
-      wf.rotateY(-Math.PI / 2);
-      this.put(g, wf, M.mamp, x0, 0, 0);
+    // the main door at the foot, through the middle plane of the west front
+    if (xw) addDoor(xw.i, ringLocal[xw.i * 2], ringLocal[xw.i * 2 + 1], [xw.v, 0], 2.6, 3.7);
+    // the outline split in two: the main body, and the sacristy (the Catastro's last 14 points, x > 9.5 and z > 7.4). The
+    // head's south side is hidden under the sacristy in the Catastro, so it is drawn as the north's, in mirror
+    const R2 = ringLocal, n2 = R2.length / 2, pt = (i) => [R2[i * 2], R2[i * 2 + 1]];
+    let mainPts = Array.from({ length: n2 }, (_, i) => pt(i)), sacPts = null, mainIdx = (i) => i;
+    if (n2 === 34 && south > 0) {
+      const mir = (i) => [pt(i)[0], -pt(i)[1]];
+      mainPts = [...Array.from({ length: 20 }, (_, i) => pt(i)), mir(11), mir(10), mir(9), [pt(8)[0], pt(33)[1] - (pt(8)[0] - pt(33)[0]) * 0.0293], pt(33)];
+      sacPts = [...Array.from({ length: 15 }, (_, i) => pt(19 + i)), [pt(33)[0], pt(19)[1]]];
+      mainIdx = (i) => (i === 33 ? mainPts.length - 1 : i);
     }
-    // apse: half polygon
-    const apse = new THREE.CylinderGeometry(nw, nw, H - 1, 7, 1, false, 0, Math.PI);
-    const au = apse.attributes.uv; for (let i = 0; i < au.count; i++) au.setXY(i, au.getX(i) * 12, au.getY(i) * (H - 1) / 3.2);
-    const am = this.put(g, apse, M.mamp, xa, (H - 1) / 2, 0);
-    am.rotation.y = 0;
-    // apse roof (half cone) — in the claymation taller, its tiles at their size, so that it hides the nave's stone gable
-    // behind it, as in the user's third picture (a stone triangle stood up out of it like a cone of stones)
-    const aH = STYLE.plastilina ? 6.6 : 4.5;
-    const aroof = new THREE.ConeGeometry(nw + 0.4, aH, 7, 1, true, 0, Math.PI);
-    if (STYLE.plastilina) { const ru = aroof.attributes.uv; for (let i = 0; i < ru.count; i++) ru.setXY(i, ru.getX(i) * 9, ru.getY(i) * 3); }
-    this.put(g, aroof, M.teja, xa, H - 1 + aH / 2, 0);
-    // nave roof
-    const roof = gableRoof(naveLen, nw * 2, 5.2, 0.5);
-    this.put(g, roof, M.teja, x0 + naveLen / 2, H, 0);
-    // east gable end
-    const ge = gableEnd(nw * 2, 5.2);
-    this.put(g, ge, M.mamp, xa + 0.02, H, 0, Math.PI / 2);
-    // buttresses (granite ashlar) — 5 per side
-    for (let k = 0; k <= 4; k++) {
-      const bx = x0 + 2.5 + (k * (naveLen - 5)) / 4;
+    const origIdx = (i) => (sacPts && i === mainPts.length - 1 ? 33 : i);
+    const mainEdges = mainPts.map((a, i) => { const b = mainPts[(i + 1) % mainPts.length], dx = b[0] - a[0], dz = b[1] - a[1], len = Math.hypot(dx, dz); return { i, a, b, dx, dz, len, nx: dz / len, nz: -dx / len, yaw: Math.atan2(-dz, dx), gaps: doorEdges.get(origIdx(i)) || [] }; }).filter((e) => e.len > 0.05);
+    const sacEdges = sacPts ? sacPts.map((a, i) => { const b = sacPts[(i + 1) % sacPts.length], dx = b[0] - a[0], dz = b[1] - a[1], len = Math.hypot(dx, dz); return { i, a, b, dx, dz, len, nx: dz / len, nz: -dx / len, yaw: Math.atan2(-dz, dx), gaps: [] }; }).filter((e) => e.len > 0.05) : [];
+    const doorMap = new Map(); for (const [i, v] of doorEdges) doorMap.set(mainIdx(i), v);
+    // the walls, to the cornice, in the rubble masonry; the flat roofs of the chapels and aisles at the cornice's height
+    this.put(g, extrudeRing(mainPts.flat(), 0, H, 3.2, false, (i) => doorMap.get(i) || null), M.mamp, 0, 0, 0);
+    this.put(g, extrudeRing(mainPts.flat(), H, H, 2.6, true), M.teja, 0, 0, 0);
+    // the stones that are not the rubble: the warm sandstone of the quoins, bands and frames, and the dark footing
+    const quoin = tinted(M.sillar, 1.0, 0.9, 0.78), zocalo = tinted(M.sillar, 0.74, 0.7, 0.66);
+    this.mat.quoin = quoin; this.mat.zocalo = zocalo;
+    // a box along a wall segment (from s0 to s1 along the edge e), its middle at height y, pushed out of the wall by off
+    const along = (e, s0, s1, h, d, y, off, tile) => {
+      const ux = e.dx / e.len, uz = e.dz / e.len, mid = (s0 + s1) / 2, geo = sbox(s1 - s0, h, d, tile);
+      geo.rotateY(e.yaw); geo.translate(e.a[0] + ux * mid + e.nx * off, y, e.a[1] + uz * mid + e.nz * off);
+      return geo;
+    };
+    // the stretches of an edge that are not in a doorway (a door's width and a step either side stay free)
+    const runs = (e) => {
+      const cuts = e.gaps.map((o) => [o.s - o.w / 2 - 1.0, o.s + o.w / 2 + 1.0]).sort((p, q) => p[0] - q[0]), out = []; let s = 0;
+      for (const [c0, c1] of cuts) { if (c0 - s > 0.3) out.push([s, c0]); s = c1; }
+      if (e.len - s > 0.3) out.push([s, e.len]);
+      return out;
+    };
+    // the footing: a battered bank of dark stone along the foot of every wall (the captures' «zarpa»: a metre and a bit
+    // high, leaning back into the wall, a granite coping on it), broken at the doors
+    const foot = [], cope = [];
+    for (const e of mainEdges) {
+      if (e.len < 1.5) continue;
+      for (const [s0, s1] of runs(e)) {
+        const sh = new THREE.Shape(); sh.moveTo(-0.3, 0); sh.lineTo(0.5, 0); sh.lineTo(0.5, 0.42); sh.lineTo(0.12, 1.15); sh.lineTo(-0.3, 1.15); sh.closePath();
+        const ge = new THREE.ExtrudeGeometry(sh, { depth: s1 - s0, bevelEnabled: false });
+        const p = ge.attributes.position, u = ge.attributes.uv;
+        for (let q = 0; q < p.count; q++) u.setXY(q, p.getZ(q) / 1.6 + p.getX(q) * 0.3, p.getY(q) / 1.6);
+        ge.translate(0, 0, -(s1 - s0) / 2); ge.rotateY(Math.atan2(e.dx, e.dz));
+        const ux = e.dx / e.len, uz = e.dz / e.len, mid = (s0 + s1) / 2; ge.translate(e.a[0] + ux * mid, 0, e.a[1] + uz * mid);
+        foot.push(ge);
+        cope.push(along(e, s0, s1, 0.1, 0.56, 1.2, 0.04, 1.2));
+      }
+    }
+    // the sacristy's: a smooth stone base two metres and a bit high, a moulded string course on it (capture 10)
+    for (const e of sacEdges) if (e.len > 1.5) { foot.push(along(e, 0, e.len, 2.2, 0.4, 1.1, 0.12, 1.6)); cope.push(along(e, 0, e.len, 0.2, 0.62, 2.3, 0.12, 1.2)); }
+    this.put(g, mergeGeos(foot), zocalo, 0, 0, 0); this.put(g, mergeGeos(cope), quoin, 0, 0, 0);
+    // the cornice: moulded sandstone, 0.45 m out of the wall, its top at 22.05
+    this.put(g, mergeGeos(mainEdges.filter((e) => e.len > 1).map((e) => along(e, 0, e.len, 0.55, 0.95, H - 0.22, 0.25, 1.2))), quoin, 0, 0, 0);
+    // the corners of the outline: ashlar quoins, the length of both walls a metre and a half either way; the NW block's, two metres
+    // (the captures: big squared granite at every corner, the rubble between)
+    const turn = mainEdges.reduce((s, e) => s + (e.a[0] * e.b[1] - e.b[0] * e.a[1]), 0) > 0 ? 1 : -1;
+    const qs = [];
+    for (let k = 0; k < mainEdges.length; k++) {
+      const e1 = mainEdges[(k + mainEdges.length - 1) % mainEdges.length], e2 = mainEdges[k];
+      const c = (e1.dx * e2.dz - e1.dz * e2.dx) / (e1.len * e2.len);
+      if (c * turn < 0.35) continue; // (a corner that turns less than 20°, or a hollow one: none)
+      const q = 1.1, w2 = e2.a[0] < -20 && e2.a[1] < -10 ? 2.0 : q;
+      qs.push(along(e1, e1.len - Math.min(w2, e1.len), e1.len, H - 0.5, 0.4, (H - 0.5) / 2, 0.02, 1.6), along(e2, 0, Math.min(w2, e2.len), H - 0.5, 0.4, (H - 0.5) / 2, 0.02, 1.6));
+    }
+    // the flat bands up the long walls and a window in each bay: round-headed, with a stone mullion and a carved bracket
+    for (const s of [-1, 1]) for (const bxx of BX) {
+      const z = zAtEdges(mainEdges, bxx, s);
+      qs.push(sbox(2.0, H - 0.5, 0.5, 1.6).translate(bxx, (H - 0.5) / 2, z));
+    }
+    // the tower's string course at 8.6 m round its south and west faces, a row of corbels under it on the west one (the
+    // photograph's «canecillos»; capture 38 shows the moulding across the south face)
+    { const e1 = mainEdges[mainEdges.length - 1], e0 = mainEdges[0];
+      qs.push(along(e1, e1.len - 6.4, e1.len, 0.3, 0.95, 8.6, 0.25, 1.2), along(e0, 0, e0.len, 0.3, 0.95, 8.6, 0.25, 1.2));
+      for (let s = 0.4; s < e0.len - 0.3; s += 0.55) qs.push(along(e0, s, s + 0.3, 0.3, 0.55, 8.3, 0.15, 1));
+    }
+    this.put(g, mergeGeos(qs), quoin, 0, 0, 0);
+    WX.forEach((wx, k) => {
       for (const s of [-1, 1]) {
-        const bt = sbox(1.8, H - 2.5, 2.2, 1.6);
-        this.put(g, bt, M.sillar, bx, (H - 2.5) / 2, s * (nw + 1.05));
-        const cap = sbox(1.8, 1.2, 2.2, 1.6);
-        const cm = this.put(g, cap, M.sillar, bx, H - 2.2, s * (nw + 0.7));
-        cm.rotation.x = s * -0.5;
+        const z = zAtEdges(mainEdges, wx, s), y0 = k === 0 ? 15.1 : 14.6, ry = s > 0 ? 0 : Math.PI;
+        this.put(g, archPanel(1.4, 3.8), M.glass, wx, y0, z + s * 0.03, ry, false);
+        this.put(g, archRing(0.7, 0.26, 0.3), quoin, wx, y0 + 3.8 - 0.7, z + s * 0.12, ry, false);
+        const fr = [sbox(0.26, 3.1, 0.3, 1).translate(-0.83, 1.55, 0), sbox(0.26, 3.1, 0.3, 1).translate(0.83, 1.55, 0), sbox(0.12, 3.2, 0.16, 1).translate(0, 1.6, -0.06), sbox(1.9, 0.16, 0.42, 1).translate(0, -0.08, 0.04), sbox(1.0, 0.9, 0.36, 1).translate(0, -0.62, 0.02)];
+        this.put(g, mergeGeos(fr), quoin, wx, y0, z + s * 0.14, ry, false);
       }
-      // tall window per bay
-      if (k < 4) {
-        const wx = x0 + 2.5 + ((k + 0.5) * (naveLen - 5)) / 4;
-        for (const s of [-1, 1]) {
-          const wp = archPanel(1.5, 5.2);
-          const wm = this.put(g, wp, M.glass, wx, 10.5, s * (nw + 0.03), s > 0 ? 0 : Math.PI, false);
-          const fr = archRing(0.75, 0.25, 0.3);
-          this.put(g, fr, M.sillar, wx, 10.5 + 5.2 - 0.75, s * (nw + 0.1), s > 0 ? 0 : Math.PI, false);
-        }
+    });
+    // the little openings the captures show: two on the tower's south face, four slits and four small windows on the north-west block
+    // (docs/hiperrealismo.md: measured on the photograph), one in the sacristy's east wall
+    const hole = (w, h, x, y, z, ry, arch, grille) => {
+      const p = arch ? archPanel(w, h, 8) : new THREE.PlaneGeometry(w, h).translate(0, h / 2, 0);
+      this.put(g, p, M.dark, x, y, z, ry, false);
+      const fr = [sbox(w + 0.36, 0.16, 0.2, 1).translate(0, -0.08, 0), sbox(0.16, h, 0.2, 1).translate(-(w + 0.16) / 2, h / 2, 0), sbox(0.16, h, 0.2, 1).translate((w + 0.16) / 2, h / 2, 0), sbox(w + 0.36, 0.16, 0.2, 1).translate(0, h + 0.08, 0)];
+      this.put(g, mergeGeos(fr), quoin, x, y, z, ry, false);
+      if (grille) for (let q = 1; q < 4; q++) this.put(g, new THREE.BoxGeometry(0.025, h, 0.025).translate(0, h / 2, 0.03), M.iron, x - w / 2 + (q * w) / 4, y, z, ry, false);
+    };
+    hole(0.55, 0.6, -23.3, 5.8, 13.78, 0, false, true); hole(0.5, 0.8, -23.7, 3.6, 13.78, 0, true, false);
+    for (const y of [12.5, 14.9, 17.2, 19.4]) this.put(g, new THREE.PlaneGeometry(0.2, 0.9), M.dark, -26.92, y, -9.6, -Math.PI / 2, false);
+    for (const [x, y] of [[-23.5, 18.6], [-24.5, 15.2], [-23.1, 12.2], [-22.5, 5.6]]) hole(0.6, 0.9, x, y, -11.35, Math.PI, false, false);
+    hole(0.7, 1.4, 24.72 + 0.03, 5.6, 13.2, Math.PI / 2, false, false);
+    // the nave's roof over its middle (20°, the ridge at 25.3), its gables at both ends; the head's roof a fan, a half cone
+    const roof = gableRoof(xa - x0, nw * 2, 3.3, 0.5);
+    this.put(g, roof, M.teja, (x0 + xa) / 2, H, 0);
+    this.put(g, gableEnd(nw * 2, 3.3), M.mamp, xa + 0.02, H, 0, Math.PI / 2);
+    this.put(g, gableEnd(nw * 2, 3.3), M.mamp, x0 - 0.02, H, 0, -Math.PI / 2);
+    const aH = STYLE.plastilina ? 4.2 : 3.8; // (in the claymation a touch taller: the tiles at their size)
+    const aroof = new THREE.ConeGeometry(L - xa + 0.1, aH, 7, 1, true, 0, Math.PI);
+    if (STYLE.plastilina) { const ru = aroof.attributes.uv; for (let i = 0; i < ru.count; i++) ru.setXY(i, ru.getX(i) * 9, ru.getY(i) * 3); }
+    this.put(g, aroof, M.teja, xa, H - 0.1 + aH / 2, 0);
+    // the sacristy's lean-to: its eaves to the south, rising to the nave's wall (a wedge: its two ends in rubble, its slope in tile)
+    if (sacPts) {
+      const HS = 8.4, ex0 = 9.3, ex1 = 25.5, zl = 18.3, zh = 12.3, yl = HS - 0.05, yh = HS + 1.6;
+      this.put(g, extrudeRing(sacPts.flat(), 0, HS, 3.2), M.mamp, 0, 0, 0);
+      const sl = Math.hypot(zl - zh, yh - yl), pos = [ex0, yl, zl, ex1, yl, zl, ex1, yh, zh, ex0, yh, zh];
+      const slope = new THREE.BufferGeometry();
+      slope.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+      slope.setAttribute('uv', new THREE.Float32BufferAttribute([0, 0, (ex1 - ex0) / 2.6, 0, (ex1 - ex0) / 2.6, sl / 2.6, 0, sl / 2.6], 2));
+      slope.setIndex([0, 2, 1, 0, 3, 2]); slope.computeVertexNormals();
+      this.put(g, slope, M.teja, 0, 0, 0);
+      const ends = [];
+      for (const [ex, sg] of [[ex0 + 0.3, -1], [ex1 - 0.3, 1]]) {
+        const tri = new THREE.BufferGeometry(); // (the triangle under the slope at this end)
+        tri.setAttribute('position', new THREE.Float32BufferAttribute([ex, HS, zl - 0.3, ex, HS, zh, ex, yh, zh], 3));
+        tri.setAttribute('uv', new THREE.Float32BufferAttribute([0, 0, 2, 0, 2, 0.5], 2));
+        tri.setIndex(sg > 0 ? [0, 2, 1] : [0, 1, 2]); tri.computeVertexNormals(); ends.push(tri);
       }
+      this.put(g, mergeGeos(ends), M.mamp, 0, 0, 0);
     }
-    // corner quoins (ashlar strips) on the west facade
-    for (const s of [-1, 1]) this.put(g, sbox(1.2, H, 1.2, 1.6), M.sillar, x0 + 0.5, H / 2, s * (nw - 0.5));
-    // west facade: the main portal (its door really opens: churchdoors.js) and the great oculus over it
-    const wP = westPortal(M.sillar);
+    // west front: the great oculus over the main door (its leaves really open: churchdoors.js)
+    const PS = STYLE.plastilina ? quoin : M.sillar; // (the portals' granite as the captures show it: the warm tone of the church's, not grey)
+    const wP = westPortal(PS);
     wP.group.position.set(x0, 0, 0); wP.group.rotation.y = -Math.PI / 2; g.add(wP.group);
     {
       const og = new THREE.Group(); og.position.set(x0 - 0.02, 12.5, 0); og.rotation.y = -Math.PI / 2; g.add(og);
@@ -566,72 +711,59 @@ class Landmarks {
       for (let i = 0; i < 16; i++) { const a2 = ((i + 0.5) / 16) * Math.PI * 2, ar = new THREE.TorusGeometry(0.2, 0.035, 5, 10, Math.PI); ar.rotateZ(a2 - Math.PI / 2); ar.translate(Math.cos(a2) * 1.32, Math.sin(a2) * 1.32, 0.06); parts.push(ar); }
       const om = new THREE.Mesh(mergeGeos(parts), M.sillar); om.castShadow = true; og.add(om);
     }
-    const wge = gableEnd(nw * 2, 5.2);
-    this.put(g, wge, M.mamp, x0 - 0.02, H, 0, -Math.PI / 2);
     // the side portals, on the outline in the third bay: the Mediodía (open: its leaf stands ajar by day), the Gospel one
     const sideP = (hit, make) => {
       if (!hit || !hit.ok) return null;
-      const P = make(M.sillar, { room: Math.abs(hit.v) - nw }); // (behind the door, as far as the nave's wall)
+      const P = make(PS, { room: 2.6 }); // (behind the door, the dark of the church)
       P.group.position.set(xs, 0, hit.v); P.group.rotation.y = Math.atan2(hit.nx, hit.nz);
       g.add(P.group);
       return P;
     };
     const sP = sideP(sHit, southPortal), nP = sideP(nHit, northPortal);
-    // tower at the foot, right of the main door (south-west)
-    const tw = 8.4, TH = 32;
-    const tx = x0 + tw / 2 - 0.4, tz = south * (nw + tw / 2 - 0.2);
-    const stages = [[0, 13, M.mamp], [13, 20.5, M.mamp], [20.5, 27, M.sillar], [27, 30.5, M.sillar]];
-    stages.forEach(([a, bH, mat], i) => {
-      const w = tw - i * 0.5;
-      this.put(g, sbox(w, bH - a, w, 3.2), mat, tx, (a + bH) / 2, tz);
-      // cornice between stages
-      this.put(g, sbox(w + 0.5, 0.45, w + 0.5, 1.6), M.sillar, tx, bH, tz);
-    });
-    // corner quoins stage 1-2
-    for (const sx of [-1, 1]) for (const sz of [-1, 1]) this.put(g, sbox(0.9, 20.5, 0.9, 1.6), M.sillar, tx + sx * (tw / 2 - 0.35), 10.25, tz + sz * (tw / 2 - 0.35));
-    // belfry openings (bells) stage 3 on all sides
-    const bellY = 22.2;
+    // the tower, at the south-west corner: its body is the block's own, to the cornice (x −26.34 → −19.0, z 6.16 → 13.54);
+    // over it the belfry, 5.7 m square, and over that the upper body, the pedestal, the stone spire with its ball and its
+    // cross, 41.5 m in all (the photograph's; it was a 7.4 m shaft of stages under a dome of red tile, at 37 m)
+    const tx = -22.6, tz = 9.6;
+    const tw = 5.7, bellY = 26.0;
+    this.put(g, sbox(tw, 9.2, tw, 3.2), M.mamp, tx, H + 4.6, tz);
+    const tq = [];
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) tq.push(sbox(0.8, 9.2, 0.8, 1.6).translate(tx + sx * (tw / 2 - 0.3), H + 4.6, tz + sz * (tw / 2 - 0.3)));
+    tq.push(sbox(tw + 0.7, 0.45, tw + 0.7, 1.6).translate(tx, 31.2 + 0.0, tz));          // the belfry's cornice
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) { tq.push(sbox(0.5, 0.3, 0.5, 1).translate(tx + sx * (tw / 2 + 0.1), 31.6, tz + sz * (tw / 2 + 0.1))); }
+    this.put(g, mergeGeos(tq), quoin, 0, 0, 0);
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) this.put(g, new THREE.SphereGeometry(0.3, 10, 8), M.sillar, tx + sx * (tw / 2 + 0.1), 32.0, tz + sz * (tw / 2 + 0.1));
+    this.put(g, sbox(2.4, 4.05, 2.4, 3.2), M.sillar, tx, 31.45 + 2.025, tz);
+    this.put(g, sbox(3.0, 0.3, 3.0, 1.6), quoin, tx, 35.5 + 0.1, tz);
+    this.put(g, sbox(1.2, 1.65, 1.2, 1.6), quoin, tx, 35.75 + 0.825, tz);
+    { const sp = new THREE.ConeGeometry(0.72, 2.0, 4, 1); sp.rotateY(Math.PI / 4); this.put(g, sp, M.sillar, tx, 37.4 + 1.0, tz); }
+    this.put(g, new THREE.SphereGeometry(0.22, 10, 8), M.sillar, tx, 39.55, tz);
+    this.put(g, sbox(0.1, 1.9, 0.1), M.iron, tx, 40.5, tz);
+    this.put(g, sbox(0.8, 0.1, 0.1), M.iron, tx, 40.9, tz);
+    this.put(g, sbox(0.5, 0.18, 0.05), M.iron, tx + 0.28, 41.4, tz); // (the vane)
+    // the belfry's openings, two arches a face, and a small one a face in the upper body; the bells hang in the two nearer faces
     for (let side = 0; side < 4; side++) {
-      const a = (side * Math.PI) / 2;
-      const w = tw - 2 * 0.5;
-      for (const off of [-1.5, 1.5]) {
-        const op = new THREE.Mesh(archPanel(1.6, 3.6), M.dark);
-        const d = w / 2 + 0.02;
+      const a = (side * Math.PI) / 2, d = tw / 2 + 0.02;
+      for (const off of [-1.45, 1.45]) {
+        const op = new THREE.Mesh(archPanel(1.4, 3.0), M.dark);
         op.position.set(tx + Math.sin(a) * d + Math.cos(a) * off, bellY, tz + Math.cos(a) * d - Math.sin(a) * off);
-        op.rotation.y = a;
-        g.add(op);
+        op.rotation.y = a; g.add(op);
         if (side % 2 === 0) {
           const bell = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.6, 1.0, 12, 1, true), M.bronze);
-          bell.position.set(tx + Math.sin(a) * (d - 0.8) + Math.cos(a) * off, bellY + 2.4, tz + Math.cos(a) * (d - 0.8) - Math.sin(a) * off);
+          bell.position.set(tx + Math.sin(a) * (d - 0.8) + Math.cos(a) * off, bellY + 1.7, tz + Math.cos(a) * (d - 0.8) - Math.sin(a) * off);
           g.add(bell);
           this.animated.push({ kind: 'bell', mesh: bell, phase: off });
         }
       }
-      // upper stage small openings
-      const op2 = new THREE.Mesh(archPanel(1.2, 2.2), M.dark);
-      const d2 = (tw - 1.5) / 2 + 0.02;
-      op2.position.set(tx + Math.sin(a) * d2, 28, tz + Math.cos(a) * d2);
-      op2.rotation.y = a;
-      g.add(op2);
+      const op2 = new THREE.Mesh(archPanel(0.8, 1.6), M.dark), d2 = 1.2 + 0.02;
+      op2.position.set(tx + Math.sin(a) * d2, 32.3, tz + Math.cos(a) * d2); op2.rotation.y = a; g.add(op2);
     }
-    // dome + lantern + cross
-    const dome = new THREE.SphereGeometry(3.1, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2);
-    this.put(g, dome, M.teja, tx, 30.7, tz);
-    this.put(g, new THREE.CylinderGeometry(0.6, 0.7, 1.6, 8), M.sillar, tx, 34.2, tz);
-    this.put(g, new THREE.SphereGeometry(0.45, 10, 6), M.sillar, tx, 35.3, tz);
-    this.put(g, sbox(0.12, 2.0, 0.12), M.iron, tx, 36.6, tz);
-    this.put(g, sbox(0.9, 0.12, 0.12), M.iron, tx, 37.0, tz);
-    // pinnacles on the tower corners
-    for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
-      this.put(g, new THREE.ConeGeometry(0.35, 1.6, 6), M.sillar, tx + sx * (tw / 2 - 1.1), 31.4, tz + sz * (tw / 2 - 1.1));
-    }
-    // stork nests on the tower cornice & nave ridge
+    // stork nests on the belfry's cornice & the nave's ridge
     const F = makeFurnitureGeometries();
     const nestMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1 });
-    this.put(g, F.nido, nestMat, tx + 2.2, 30.72, tz - 2.2);
-    this.put(g, F.nido, nestMat, xa - 2, H + 5.1, 0);
+    this.put(g, F.nido, nestMat, tx + 2.0, 31.45, tz - 2.0);
+    this.put(g, F.nido, nestMat, xa - 2, H + 3.4, 0);
     const towerWorld = new THREE.Vector3(tx, 0, tz).applyMatrix4(g.matrixWorld);
-    this.poi.churchTower = { x: towerWorld.x, z: towerWorld.z, top: 31 };
+    this.poi.churchTower = { x: towerWorld.x, z: towerWorld.z, top: 41 };
     // the church's frame and the measures taken from its outline, for the hyperreal model (hiper.js, tools/blender):
     // local x along the axis (east, towards the apse), local z across (south when south > 0), metres
     this.poi.churchFrame = { group: g, cx: ob.cx, cz: ob.cz, rotY: g.rotation.y, L, W, south, x0, xa, nw, xs, H, ring: ringLocal.slice(), portals: [] };
@@ -660,7 +792,7 @@ class Landmarks {
     }
     this.churchDoors = [wP.door, sP && sP.door, nP && nP.door].filter(Boolean);
     this.poi.churchFrame.portals = [wP.group, sP && sP.group, nP && nP.group].filter(Boolean);
-    this.storkSpots = [new THREE.Vector3(tx + 2.2, 31.2, tz - 2.2).applyMatrix4(g.matrixWorld), new THREE.Vector3(xa - 2, H + 5.6, 0).applyMatrix4(g.matrixWorld)];
+    this.storkSpots = [new THREE.Vector3(tx + 2.0, 31.95, tz - 2.0).applyMatrix4(g.matrixWorld), new THREE.Vector3(xa - 2, H + 3.9, 0).applyMatrix4(g.matrixWorld)];
     // collider: full footprint is already claimed
   }
 
@@ -685,19 +817,16 @@ class Landmarks {
       const mx = (ax + bx) / 2, mz = (az + bz) / 2;
       const toP = (pc[0] - mx) * nx + (pc[1] - mz) * nz;
       const score = toP / Math.hypot(pc[0] - mx, pc[1] - mz) + L * 0.01;
-      if (!best || score > best.score) best = { score, ax, az, bx, bz, L, nx, nz, mx, mz };
+      if (!best || score > best.score) best = { score, i, j, ax, az, bx, bz, L, nx, nz, mx, mz };
     }
     const Hb = 11.5;
-    // body: real footprint in granite ashlar
-    const body = extrudeRing(r, 0, Hb, 2.4, true);
-    this.add(body, M.sillar, 0, 0, 0);
-    if (!best) return;
+    if (!best) { this.add(extrudeRing(r, 0, Hb, 2.4, true), M.sillar, 0, 0, 0); return; }
     const { L, nx, nz, mx, mz } = best;
-    const ux = (best.bx - best.ax) / L, uz = (best.bz - best.az) / L;
     const f = new THREE.Group();
     f.position.set(mx + nx * 0.02, 0, mz + nz * 0.02);
-    f.rotation.y = Math.atan2(nx, nz); // local +z = outward normal, local +x = ? (right)
-    this.root.add(f);
+    f.rotation.y = Math.atan2(nx, nz); // local +z = outward normal, local +x along the front
+    this.root.add(f); f.updateMatrixWorld(true);
+    const W = (x, z) => { const v = f.localToWorld(new THREE.Vector3(x, 0, z)); return [v.x, v.z]; };
     // its front as its photograph shows it (2026-10-13): seven bays, symmetrical about the clock — below, three round
     // arches of the arcade (soportal) alternating with four square-headed openings framed in granite, one on each pier
     // and one at each end; above, a balcony running across the three middle bays, a blind recessed panel with a lantern
@@ -707,25 +836,144 @@ class Landmarks {
     const FW = Math.min(L - 0.6, 23);
     const k = FW / 23, A = 6.7 * k, P = 3.35 * k, E = 10.05 * k; // (bay centres: arches 0, ±A; piers ±P; ends ±E)
     const aw = 3.3 * k, ah = 5.0;
+    // ---- the arcade you walk into (the user, 2026-10-13: «dentro de los arcos se puede pasear… la entrada al edificio
+    // está debajo de los arcos»): behind the front wall, a gallery the whole width of the arcade, its ceiling at the
+    // string course, its floor of granite, and at its back the town hall's own door. The body below is the footprint
+    // with the gallery cut out of it; above, the whole footprint. The front wall a slab with its arches and its four
+    // square-headed openings cut through it — you can walk in by any of them.
+    const HG = 5.6, TW = 0.6, D = 4.2, GX = FW / 2 - 0.6; // (ceiling, front wall's thickness, depth to the back wall, half width)
+    const sideA = (f.worldToLocal(new THREE.Vector3(best.ax, 0, best.az)).x > 0 ? 1 : -1);
+    // its end towards Calle Túnel (the 2009 captures 05 and 06): the gallery does not stop at a wall there but opens onto
+    // the street by a big round arch as deep as itself, in the side wall of the corner where the front begins (in this
+    // footprint's order, its east side) — found where that wall reaches the gallery's back
+    let open = null;
+    if (best.j > best.i && best.i >= 2) {
+      const qx = r[best.i - 2], qz = r[best.i - 1];
+      const a = f.worldToLocal(new THREE.Vector3(qx, 0, qz)), c = f.worldToLocal(new THREE.Vector3(best.ax, 0, best.az));
+      const t = (-D - c.z) / (a.z - c.z);
+      if (t > 0 && t < 1) open = { pe: [best.ax + (qx - best.ax) * t, best.az + (qz - best.az) * t], xs: Math.abs(c.x + ((a.x - c.x) * (-D / 2 - c.z)) / (a.z - c.z)), qx, qz };
+    }
+    const notch = [W(sideA * GX, 0), W(sideA * GX, -D), W(-sideA * GX, -D), W(-sideA * GX, 0)].flat();
+    const ringG = open ? [...r.slice(0, best.i), ...open.pe, ...W(-sideA * GX, -D), ...W(-sideA * GX, 0), ...r.slice(best.j)]
+      : best.j > best.i ? [...r.slice(0, best.i + 2), ...notch, ...r.slice(best.j)] : [...r, ...notch];
+    // (its front of granite, as the 2026 photograph shows it; its sides and back lime-washed, the joints barely marked,
+    // as the 2009 captures do: the walls on the front or round the gallery in granite, the rest in render)
+    const facing = (want) => (i, ax, az, bx, bz) => ((f.worldToLocal(new THREE.Vector3((ax + bx) / 2, 0, (az + bz) / 2)).z > -D - 0.1) === want ? null : 'skip');
+    this.add(extrudeRing(ringG, 0, HG, 2.4, false, facing(true)), M.sillar, 0, 0, 0);
+    this.add(extrudeRing(ringG, 0, HG, 2.4, false, facing(false)), M.revoco, 0, 0, 0);
+    this.add(extrudeRing(r, HG, Hb, 2.4, true, facing(true)), M.sillar, 0, 0, 0);
+    this.add(extrudeRing(r, HG, Hb, 2.4, false, facing(false)), M.revoco, 0, 0, 0);
+    const col = this.colliders.find((c) => c.ring === b.ring);
+    if (col) col.ring = ringG; // (what stops you: the body without its gallery…)
+    const holes = [...[-A, 0, A].map((cx) => ({ cx, w: aw, arch: true })), ...[-E, -P, P, E].map((cx) => ({ cx, w: 1.1, h: 2.6 }))].sort((p, q) => p.cx - q.cx);
+    // (the front wall runs to the corner on the open side: its end is the corner pier)
+    const xL = open && sideA < 0 ? -open.xs : -FW / 2, xR = open && sideA > 0 ? open.xs : FW / 2;
+    const sh = new THREE.Shape(); sh.moveTo(xL, 0);
+    for (const o of holes) {
+      const x0 = o.cx - o.w / 2, x1 = o.cx + o.w / 2;
+      sh.lineTo(x0, 0);
+      if (o.arch) { sh.lineTo(x0, ah - o.w / 2); sh.absarc(o.cx, ah - o.w / 2, o.w / 2, Math.PI, 0, true); }
+      else { sh.lineTo(x0, o.h); sh.lineTo(x1, o.h); }
+      sh.lineTo(x1, 0);
+    }
+    sh.lineTo(xR, 0); sh.lineTo(xR, HG); sh.lineTo(xL, HG); sh.closePath();
+    const fw = new THREE.ExtrudeGeometry(sh, { depth: TW, bevelEnabled: false, curveSegments: 18 });
+    const fuv = fw.attributes.uv; for (let q = 0; q < fuv.count; q++) fuv.setXY(q, fuv.getX(q) / 2.4, fuv.getY(q) / 2.4);
+    const front = new THREE.Mesh(fw, M.sillar); front.position.z = -TW; front.castShadow = true; front.receiveShadow = true; f.add(front);
+    // (…and its front wall between the openings: a pier at a time)
+    let px = xL;
+    for (const o of [...holes, { cx: xR, w: 0 }]) {
+      const x0 = o.cx - o.w / 2;
+      if (x0 - px > 0.05) this.colliders.push({ ring: [W(px, 0), W(x0, 0), W(x0, -TW), W(px, -TW)].flat(), h: 6 });
+      px = o.cx + o.w / 2;
+    }
+    // the gallery: its coffered ceiling, its granite floor, its lanterns hung from the arches' keys
+    const g0 = open && sideA < 0 ? TW - open.xs : -GX, g1 = open && sideA > 0 ? open.xs - TW : GX; // (its ends: to the side wall where open)
+    const ceil = new THREE.Mesh(new THREE.PlaneGeometry(g1 - g0, D - TW), M.cal); ceil.rotation.x = Math.PI / 2; ceil.position.set((g0 + g1) / 2, HG - 0.01, -(D + TW) / 2); f.add(ceil);
+    for (let bx2 = g0 + 1.6; bx2 < g1 - 0.5; bx2 += 3.2) f.add(at(new THREE.Mesh(sbox(0.3, 0.28, D - TW, 1), M.sillar), bx2, HG - 0.14, -(D + TW) / 2));
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(g1 - g0, D), M.sillar); floor.rotation.x = -Math.PI / 2; floor.position.set((g0 + g1) / 2, 0.03, -D / 2); floor.receiveShadow = true; f.add(floor);
+    // the side wall where the gallery opens: a slab with its round arch (3.1 m wide, its key at 4.75 m, as capture 06
+    // measures it), a plain moulding round it and the impost band at its springing; above, as over the front's side
+    // arches, a blind panel with its lantern; the string course carried round; further back, two narrow windows one over
+    // the other, the lower one grilled
+    if (open) {
+      const sx = best.ax, sz = best.az, Ls = Math.hypot(open.qx - sx, open.qz - sz);
+      const ux = (open.qx - sx) / Ls, uz = (open.qz - sz) / Ls, onx = -uz, onz = ux; // (along it from the front corner; out)
+      const e = new THREE.Group();
+      e.position.set(sx + onx * 0.02, 0, sz + onz * 0.02);
+      e.rotation.y = Math.atan2(onx, onz); // local +z = out of the wall, local +x = back along it from the front corner
+      this.root.add(e); e.updateMatrixWorld(true);
+      const We = (x, z) => { const v = e.localToWorld(new THREE.Vector3(x, 0, z)); return [v.x, v.z]; };
+      const De = Math.hypot(open.pe[0] - sx, open.pe[1] - sz), sc = (TW + De) / 2, sw = 3.1, sk = 4.75, ssp = sk - sw / 2;
+      const ss = new THREE.Shape(); ss.moveTo(TW, 0);
+      ss.lineTo(sc - sw / 2, 0); ss.lineTo(sc - sw / 2, ssp); ss.absarc(sc, ssp, sw / 2, Math.PI, 0, true); ss.lineTo(sc + sw / 2, 0);
+      ss.lineTo(De, 0); ss.lineTo(De, HG); ss.lineTo(TW, HG); ss.closePath();
+      const sg = new THREE.ExtrudeGeometry(ss, { depth: TW, bevelEnabled: false, curveSegments: 18 });
+      const suv = sg.attributes.uv; for (let q = 0; q < suv.count; q++) suv.setXY(q, suv.getX(q) / 2.4, suv.getY(q) / 2.4);
+      const side = new THREE.Mesh(sg, M.revoco); side.position.z = -TW; side.castShadow = true; side.receiveShadow = true; e.add(side);
+      for (const [p0, p1] of [[TW, sc - sw / 2], [sc + sw / 2, De]]) if (p1 - p0 > 0.05) this.colliders.push({ ring: [We(p0, 0), We(p1, 0), We(p1, -TW), We(p0, -TW)].flat(), h: 6 });
+      e.add(at(new THREE.Mesh(archRing(sw / 2, 0.22, 0.16), M.revoco), sc, ssp, 0.06));
+      for (const [p0, p1] of [[0, sc - sw / 2 - 0.22], [sc + sw / 2 + 0.22, Ls - 0.3]]) e.add(at(new THREE.Mesh(sbox(p1 - p0, 0.2, 0.12, 1), M.revoco), (p0 + p1) / 2, ssp, 0.04));
+      e.add(at(new THREE.Mesh(sbox(Ls, 0.45, 0.3, 1.6), M.revoco), Ls / 2, 5.9, 0.1));
+      e.add(at(new THREE.Mesh(sbox(1.9, 2.6, 0.12, 1), M.revoco), sc, 7.9, -0.04));
+      e.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.4, 0.26), M.iron), sc, 9.0, 0.45));
+      e.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.45), M.iron), sc, 9.25, 0.22));
+      for (const [y0, y1, grille] of [[1.0, 2.9, true], [6.6, 8.4, false]]) {
+        const wx = Math.min(9.0, Ls - 1.2), hh2 = y1 - y0;
+        e.add(at(new THREE.Mesh(new THREE.PlaneGeometry(0.7, hh2), M.glass), wx, (y0 + y1) / 2, 0.03));
+        e.add(at(new THREE.Mesh(sbox(0.9, 0.12, 0.16, 1), M.revoco), wx, y0 - 0.06, 0.06));
+        if (grille) for (let q = 0; q < 5; q++) e.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.025, hh2, 0.025), M.iron), wx - 0.28 + q * 0.14, (y0 + y1) / 2, 0.1));
+      }
+      // just past the arch, the tall barred window the 2009 capture 93 shows from the mouth of the Túnel (its columns 490–555:
+      // 4.0 to 5.3 m along the wall from the corner, from the pavement to ≈ 3.9 m): a grille of bars in a frame, the sill on a block
+      { const wx2 = De + 0.75, ww = 1.15, wy0 = 0.35, wy1 = 3.85, wh = wy1 - wy0;
+        e.add(at(new THREE.Mesh(new THREE.PlaneGeometry(ww, wh), M.glass), wx2, (wy0 + wy1) / 2, 0.03));
+        e.add(at(new THREE.Mesh(mergeGeos([sbox(ww + 0.3, 0.14, 0.2, 1).translate(0, -0.07, 0.04), sbox(0.14, wh, 0.12, 1).translate(-ww / 2 - 0.07, wh / 2, 0.03), sbox(0.14, wh, 0.12, 1).translate(ww / 2 + 0.07, wh / 2, 0.03), sbox(ww + 0.3, 0.14, 0.14, 1).translate(0, wh + 0.07, 0.03)]), M.revoco), wx2, wy0, 0));
+        for (let q = 0; q <= 8; q++) e.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.025, wh, 0.025), M.iron), wx2 - ww / 2 + 0.07 + (q * (ww - 0.14)) / 8, (wy0 + wy1) / 2, 0.1));
+        for (const fy of [0.3, 0.62]) e.add(at(new THREE.Mesh(new THREE.BoxGeometry(ww, 0.025, 0.025), M.iron), wx2, wy0 + wh * fy, 0.1));
+      }
+      // the cornice along the whole side, as the capture shows it (a moulded course on corbels, its columns 600–750 to the top):
+      // the front's, 0.95 m out, carried back to the far corner
+      { const cn = [sbox(Ls, 0.7, 1.2, 1.6).translate(Ls / 2, Hb - 0.2, 0.35)];
+        for (let q = 0.5; q < Ls - 0.3; q += 0.9) cn.push(sbox(0.3, 0.32, 0.7, 1).translate(q, Hb - 0.72, 0.38));
+        const cm = new THREE.Mesh(mergeGeos(cn), M.sillar); cm.castShadow = true; cm.receiveShadow = true; e.add(cm); }
+    }
+    // the back wall's openings: the town hall's own door behind the middle arch — two leaves of dark wood in a granite
+    // frame with its lintel and cornice — and a door either side, behind the side arches, and grilled windows
+    const doorAt = (cx, w, h, main) => {
+      const dz = -D + 0.03;
+      for (const sd of [-1, 1]) {
+        const leaf = new THREE.Mesh(new THREE.PlaneGeometry(w / 2 - 0.02, h), M.wood); leaf.position.set(cx + sd * (w / 4), h / 2, dz); f.add(leaf);
+        for (let q = 0; q < 3; q++) f.add(at(new THREE.Mesh(new THREE.BoxGeometry(w / 2 - 0.25, h / 3 - 0.25, 0.04), M.wood), cx + sd * (w / 4), h / 6 + (q * h) / 3, dz + 0.03)); // (its panels)
+        f.add(at(new THREE.Mesh(sbox(0.32, h + 0.3, 0.2, 1), M.sillar), cx + sd * (w / 2 + 0.16), (h + 0.3) / 2, dz + 0.08));
+      }
+      f.add(at(new THREE.Mesh(sbox(w + 0.64, 0.38, 0.24, 1), M.sillar), cx, h + 0.3 + 0.19, dz + 0.1));
+      if (main) f.add(at(new THREE.Mesh(sbox(w + 1.0, 0.18, 0.4, 1), M.sillar), cx, h + 0.95, dz + 0.18));
+    };
+    doorAt(0, 2.1, 3.3, true);
+    for (const cx of [-A, A]) doorAt(cx, 1.3, 2.6, false);
+    for (const cx of [-P, P, -E, E]) {
+      const win = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.5), M.glass); win.position.set(cx, 1.9, -D + 0.03); f.add(win);
+      for (let q = 0; q < 6; q++) f.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.025, 1.5, 0.025), M.iron), cx - 0.45 + q * 0.18, 1.9, -D + 0.1));
+    }
     for (const cx of [-A, 0, A]) {
-      const pnl = new THREE.Mesh(archPanel(aw, ah), M.dark); pnl.position.set(cx, 0, 0.02); f.add(pnl);
       const ring = new THREE.Mesh(archRing(aw / 2, 0.35, 0.5), M.sillar); ring.position.set(cx, ah - aw / 2, 0.25); f.add(ring);
-      const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.42, 0.28), M.iron); lamp.position.set(cx, ah - aw / 2 - 0.55, 0.3); f.add(lamp);
+      const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.42, 0.28), M.iron); lamp.position.set(cx, ah - 0.75, -TW / 2); f.add(lamp);
+      f.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.3, 0.03), M.iron), cx, ah - 0.4, -TW / 2));
+      const lp = W(cx, -TW / 2); this.world.lampPoints && this.world.lampPoints.push(lp[0], ah - 0.8, lp[1]);
     }
     // Tuscan pilasters either side of each arch, and the square-headed openings between them and at the ends
     for (const cx of [-A, 0, A]) for (const sd of [-1, 1]) f.add(at(new THREE.Mesh(sbox(0.45, 5.6, 0.45, 1.2), M.sillar), cx + sd * (aw / 2 + 0.28), 2.8, 0.25));
     for (const cx of [-E, -P, P, E]) {
-      const op = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.3), M.dark); op.position.set(cx, 1.15 + 0.3, 0.03); f.add(op);
       for (const sd of [-1, 1]) f.add(at(new THREE.Mesh(sbox(0.22, 2.6, 0.2, 1), M.sillar), cx + sd * 0.66, 1.6, 0.1));
       f.add(at(new THREE.Mesh(sbox(1.55, 0.25, 0.22, 1), M.sillar), cx, 2.95, 0.11));
     }
-    f.add(at(new THREE.Mesh(sbox(FW, 0.35, 0.6, 1.6), M.sillar), 0, 0.17, 0.3)); // (the granite step along the arcade)
+    f.add(at(new THREE.Mesh(sbox(FW, 0.1, 0.6, 1.6), M.sillar), 0, 0.05, 0.3)); // (the granite step along the arcade, low: you walk over it)
     f.add(at(new THREE.Mesh(sbox(FW, 0.6, 0.7, 1.6), M.sillar), 0, 5.9, 0.3));
-    // upper floor
+    // upper floor (its balcony doors dark in their granite frames, no shutters: the 2026 photograph)
     const door = (cx) => {
       const op = new THREE.Mesh(new THREE.PlaneGeometry(1.3, 2.6), M.glass); op.position.set(cx, 7.9, 0.03); f.add(op);
-      const sh = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 2.55), M.wood);
-      for (const sd of [-1, 1]) { const m = sh.clone(); m.position.set(cx + sd * 0.96, 7.9, 0.04); f.add(m); }
+      for (const sd of [-1, 1]) f.add(at(new THREE.Mesh(sbox(0.22, 2.75, 0.16, 1), M.sillar), cx + sd * 0.76, 7.95, 0.08));
       f.add(at(new THREE.Mesh(sbox(1.9, 0.3, 0.3, 1), M.sillar), cx, 9.35, 0.15)); // (its moulded hood)
     };
     const railing = (cx, w) => {
@@ -767,22 +1015,31 @@ class Landmarks {
     const hh = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.3, 0.02), M.iron); hh.geometry.translate(0, 0.13, 0); hh.position.set(0, Hb + 2.45, 0.53); f.add(hh);
     const mh = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.45, 0.02), M.iron); mh.geometry.translate(0, 0.21, 0); mh.position.set(0, Hb + 2.45, 0.54); f.add(mh);
     this.animated.push({ kind: 'clock', hh, mh });
-    // flags on the balcony: Spain, Extremadura, EU
-    ['es', 'ex', 'eu'].forEach((k, i) => {
+    // flags on the balcony: four, on slanting poles ≈ 2.8 m apart (the 2026 photograph and the 2009 capture 05 count four), from the
+    // west: the town's, Extremadura, Spain, the EU. The town's is not in textures.js: a hanging cloth of crimson over navy, as the
+    // photograph's first flag reads (its colours sampled; its arms, if it has any, are not seen)
+    const muniFlag = () => {
+      const c = document.createElement('canvas'); c.width = 192; c.height = 128;
+      const x = c.getContext('2d'); x.fillStyle = '#a3243c'; x.fillRect(0, 0, 192, 52); x.fillStyle = '#1b3d7d'; x.fillRect(0, 52, 192, 76);
+      return c;
+    };
+    ['mu', 'ex', 'es', 'eu'].forEach((k, i) => {
+      const fx = -4.2 + i * 2.8;
       const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 2.4, 6), M.iron);
-      pole.position.set(-1.6 + i * 1.6, 8.5, 1.3); pole.rotation.x = 0.6; f.add(pole);
+      pole.position.set(fx, 8.5, 1.3); pole.rotation.x = 0.6; f.add(pole);
       const fg = new THREE.PlaneGeometry(1.35, 0.9, 12, 4);
       fg.translate(0.675, -0.45, 0);
-      const fm = new THREE.MeshStandardMaterial({ map: canvasTex(flagCanvas(k)), side: THREE.DoubleSide, roughness: 0.8 });
+      const fm = new THREE.MeshStandardMaterial({ map: canvasTex(k === 'mu' ? muniFlag() : flagCanvas(k)), side: THREE.DoubleSide, roughness: 0.8 });
       const flag = new THREE.Mesh(fg, fm);
-      flag.position.set(-1.6 + i * 1.6, 9.45, 1.95); f.add(flag);
+      flag.position.set(fx, 9.45, 1.95); f.add(flag);
       this.flags.push({ mesh: flag, base: fg.attributes.position.array.slice(), phase: i });
     });
     // sign
     const s = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.9), new THREE.MeshStandardMaterial({ map: canvasTex(aytoPlaque()), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(-E, 4.1, 0.05); f.add(s); // (over the end opening)
     this.poi.ayto = { x: mx + nx * 4, z: mz + nz * 4, nx, nz, front: { mx, mz, ux: -nz, uz: nx, half: FW / 2 + 1 } };
-    // in under the arcade by the middle arch (venues.js: the hall, the stairs, the Salón de Plenos)
-    (this.poi.venues || (this.poi.venues = [])).push({ kind: 'ayto', name: 'Ayuntamiento de Guareña', sub: 'Casa Consistorial · Plaza de España', x: mx + nx * 1.3, z: mz + nz * 1.3, fx: mx - nx * 3, fz: mz - nz * 3, seed: 9 });
+    // in through its own door, at the back of the arcade (venues.js: the hall, the stairs, the Salón de Plenos)
+    const dIn = W(0, -D + 1.2), dBack = W(0, -D - 3);
+    (this.poi.venues || (this.poi.venues = [])).push({ kind: 'ayto', name: 'Ayuntamiento de Guareña', sub: 'Casa Consistorial · Plaza de España', x: dIn[0], z: dIn[1], fx: dBack[0], fz: dBack[1], seed: 9 });
   }
 
   // ================================================================ Iglesia de San Gregorio (Plaza de San Gregorio)
@@ -932,7 +1189,50 @@ class Landmarks {
     this.overrides.set(b.id, { style: 'color', tint: [0.96, 0.86, 0.66], minFloors: 2 });
     const c = ringCentroid(b.ring);
     this.poi.mercado = { x: c[0], z: c[1] };
-    mercadoFront(this, c[0], c[1]);
+    // its front as the 2009 captures show it (225): a round arch for the entrance, its surround and two pilasters in ochre
+    // against the lime-washed wall, and over it a crest of ochre with a panel of blue and white tiles — no classical
+    // portal with a pediment and a fan-light, no board with its name (venueFront: the door, and the entry for the Interiors)
+    venueFront(this, {
+      kind: 'mercado', name: 'Mercado de Abastos', sub: 'Desde 1925', x: c[0], z: c[1], seed: 31, doorStyle: 'none',
+      override: { minFloors: 2 },
+      extra: (g) => {
+        const M = this.mat, ocher = tinted(M.cal, 0.46, 0.28, 0.07), recess = tinted(M.cal, 0.5, 0.49, 0.46);
+        const pl = (m, x, y, z) => { m.position.set(x, y, z); return m; };
+        g.add(pl(new THREE.Mesh(archPanel(2.4, 3.5), recess), 0, 0, 0.03)); // (a recess, painted pale, as the capture shows it)
+        const oc = [archRing(1.2, 0.42, 0.28).translate(0, 2.3, 0.14), sbox(0.42, 2.3, 0.28, 1).translate(-1.41, 1.15, 0.14), sbox(0.42, 2.3, 0.28, 1).translate(1.41, 1.15, 0.14)];
+        for (const sx of [-1, 1]) oc.push(sbox(0.5, 5.4, 0.22, 1).translate(sx * 2.45, 2.7, 0.11), sbox(0.7, 0.2, 0.3, 1).translate(sx * 2.45, 5.5, 0.15), sbox(0.62, 0.16, 0.3, 1).translate(sx * 1.41, 2.3, 0.15));
+        oc.push(sbox(5.9, 0.3, 0.42, 1).translate(0, 5.55, 0.2), sbox(0.5, 0.5, 0.3, 1).translate(0, 3.55, 0.15));
+        { const sh = new THREE.Shape(); // (the crest: a scalloped top over the entrance)
+          sh.moveTo(-2.6, 0); sh.lineTo(-2.6, 0.4); sh.quadraticCurveTo(-2.1, 0.5, -1.6, 0.95); sh.quadraticCurveTo(-1.2, 1.5, -0.6, 1.5); sh.lineTo(0.6, 1.5); sh.quadraticCurveTo(1.2, 1.5, 1.6, 0.95); sh.quadraticCurveTo(2.1, 0.5, 2.6, 0.4); sh.lineTo(2.6, 0); sh.closePath();
+          oc.push(new THREE.ExtrudeGeometry(sh, { depth: 0.3, bevelEnabled: false, curveSegments: 8 }).translate(0, 5.7, 0.05)); }
+        const om = new THREE.Mesh(mergeGeos(oc), ocher); om.castShadow = true; om.receiveShadow = true; g.add(om);
+        const tc = document.createElement('canvas'); tc.width = 256; tc.height = 96; const tx = tc.getContext('2d');
+        tx.fillStyle = '#f4f1ea'; tx.fillRect(0, 0, 256, 96);
+        for (let i = 0; i < 4; i++) for (let j = 0; j < 2; j++) { const x0 = i * 64, y0 = j * 48; tx.strokeStyle = '#2c5da8'; tx.lineWidth = 3; tx.strokeRect(x0 + 3, y0 + 3, 58, 42); tx.fillStyle = '#2c5da8'; for (let k = 0; k < 4; k++) { const a = k * Math.PI / 2 + Math.PI / 4; tx.beginPath(); tx.ellipse(x0 + 32 + Math.cos(a) * 10, y0 + 24 + Math.sin(a) * 10, 7, 4, a, 0, 6.283); tx.fill(); } tx.fillStyle = '#7fa6dd'; tx.beginPath(); tx.arc(x0 + 32, y0 + 24, 4, 0, 6.283); tx.fill(); }
+        const tt = new THREE.CanvasTexture(tc); tt.colorSpace = THREE.SRGBColorSpace;
+        g.add(pl(new THREE.Mesh(new THREE.PlaneGeometry(2.4, 0.9), new THREE.MeshStandardMaterial({ map: tt, roughness: 0.4 })), 0, 6.45, 0.37));
+        // the flight of granite steps up to the entrance, between the pilasters (the 2009 captures 224 and 225: three risers of
+        // ≈ 0.18 m — twenty pixels each at 3.3 m — and the door's sill ≈ 0.55 m over the pavement), the treads ≈ 0.35 m deep
+        const sb = [];
+        for (let k = 0; k < 3; k++) sb.push(sbox(4.4, 0.18 * (3 - k), 0.35 * (k + 1), 1).translate(0, (0.18 * (3 - k)) / 2, (0.35 * (k + 1)) / 2));
+        const sm = new THREE.Mesh(mergeGeos(sb), M.sillar); sm.castShadow = true; sm.receiveShadow = true; g.add(sm);
+      },
+    });
+    // the cast-iron pump of the Plaza de Abastos (capture 224: a dark column ≈ 1.6 m with a ball on its head on a round stone
+    // foot, its spout towards the square; seen 7.3 m ahead and 11 m to the left of the camera as fitted, that is here, in the square)
+    {
+      const M = this.mat, pg = new THREE.Group(); pg.position.set(195.6, 0, -6.5);
+      pg.add(at(new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.48, 0.28, 12), M.sillar), 0, 0.14, 0));
+      pg.add(at(new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.16, 1.2, 10), M.iron), 0, 0.88, 0));
+      pg.add(at(new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.08, 10), M.iron), 0, 1.05, 0));
+      pg.add(at(new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.12, 0.1, 10), M.iron), 0, 1.53, 0));
+      pg.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.13, 10, 8), M.iron), 0, 1.66, 0));
+      pg.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.36), M.iron), 0, 1.0, 0.24));
+      pg.add(at(new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.12, 0.05), M.iron), 0, 0.93, 0.4));
+      pg.traverse((q) => { if (q.isMesh) { q.castShadow = true; q.receiveShadow = true; } });
+      this.root.add(pg);
+      this.circle(195.6, -6.5, 0.4, 1.7);
+    }
   }
 
   // ================================================================ Plaza de España: cast-iron lamps, benches, trees
@@ -942,18 +1242,21 @@ class Landmarks {
     const r = plaza.ring;
     const [cx, cz] = ringCentroid(r);
     const M = this.mat;
-    // fernandina lamp: 4 arms
-    const lampG = new THREE.Group();
-    const post = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.16, 4.2, 10), M.iron); post.position.y = 2.1; lampG.add(post);
-    const base = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.34, 0.9, 10), M.iron); base.position.y = 0.45; lampG.add(base);
+    // its lamps as its captures show them (views 1, 2: 2026-10-14): tall grey cast iron, four lanterns, each standing in
+    // the middle of a round stone bench — the black fernandinas of before were the town's street model
+    const lampG = new THREE.Group(), grey = new THREE.MeshStandardMaterial({ color: 0x8c9092, roughness: 0.45, metalness: 0.6 });
+    const post = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.18, 5.0, 12), grey); post.position.y = 2.5; lampG.add(post);
+    const base = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.38, 1.0, 12), grey); base.position.y = 0.5; lampG.add(base);
+    const seat = new THREE.Mesh(new THREE.CylinderGeometry(1.2, 1.25, 0.45, 28), M.sillar); seat.position.y = 0.225; lampG.add(seat);
+    const lip = new THREE.Mesh(new THREE.CylinderGeometry(1.28, 1.28, 0.07, 28), M.sillar); lip.position.y = 0.48; lampG.add(lip);
     const heads = [];
     for (let k = 0; k < 4; k++) {
       const a = (k / 4) * Math.PI * 2;
-      const arm = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.05, 0.05), M.iron); arm.position.set(Math.cos(a) * 0.45, 4.1, Math.sin(a) * 0.45); arm.rotation.y = -a; lampG.add(arm);
+      const arm = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.06, 0.06), grey); arm.position.set(Math.cos(a) * 0.45, 4.9, Math.sin(a) * 0.45); arm.rotation.y = -a; lampG.add(arm);
       const lan = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.12, 0.5, 6), makeNightGlowMaterial(0xfff0cc, { dayLevel: 0.85, nightLevel: 2.4 }));
-      lan.position.set(Math.cos(a) * 0.9, 4.25, Math.sin(a) * 0.9); lampG.add(lan);
-      const cap = new THREE.Mesh(new THREE.ConeGeometry(0.28, 0.25, 6), M.iron); cap.position.set(Math.cos(a) * 0.9, 4.6, Math.sin(a) * 0.9); lampG.add(cap);
-      heads.push([Math.cos(a) * 0.9, 4.25, Math.sin(a) * 0.9]);
+      lan.position.set(Math.cos(a) * 0.9, 5.05, Math.sin(a) * 0.9); lampG.add(lan);
+      const cap = new THREE.Mesh(new THREE.ConeGeometry(0.28, 0.25, 6), grey); cap.position.set(Math.cos(a) * 0.9, 5.4, Math.sin(a) * 0.9); lampG.add(cap);
+      heads.push([Math.cos(a) * 0.9, 5.05, Math.sin(a) * 0.9]);
     }
     lampG.traverse((m) => { if (m.isMesh) { m.castShadow = true; } });
     const spots = [];
@@ -962,9 +1265,11 @@ class Landmarks {
       if (pointInRing(gx, gz, r) && !this.map.buildingAt(gx, gz) && !this.map.roadAt(gx, gz, 1.5)) spots.push([gx, gz]);
     }
     const fu = this.map.pois.find((q) => q.kind === 'amenity:fountain' && pointInRing(q.x, q.z, r)); // (not by the fountain)
-    for (const [lx, lz] of spots.filter(([sx, sz]) => !fu || Math.hypot(sx - fu.x, sz - fu.z) > 8).slice(0, 8)) {
+    // (the four nearest the middle of the square, clear of the fountain: no forest of them)
+    const near = spots.filter(([sx, sz]) => !fu || Math.hypot(sx - fu.x, sz - fu.z) > 8).sort((p, q) => Math.hypot(p[0] - cx, p[1] - cz) - Math.hypot(q[0] - cx, q[1] - cz));
+    for (const [lx, lz] of near.slice(0, 4)) {
       const l = lampG.clone(); l.position.set(lx, 0, lz); this.root.add(l);
-      this.circle(lx, lz, 0.35, 4);
+      this.circle(lx, lz, 1.25, 0.6); this.circle(lx, lz, 0.35, 4);
       for (const h of heads) this.world.lampPoints.push(lx + h[0], h[1], lz + h[2]);
     }
     this.poi.plaza = { x: cx, z: cz };
@@ -1114,8 +1419,9 @@ class Landmarks {
     const t = shared.uTime.value;
     updateWater(this, dt, night);
     // floodlights on the stone monuments at night (Santa María's walls and tower glow warm)
-    for (const k of ['mamp', 'sillar']) {
+    for (const k of ['mamp', 'sillar', 'quoin', 'zocalo']) {
       const m = this.mat[k];
+      if (!m) continue;
       if (!m.emissiveMap && m.map) { m.emissiveMap = m.map; m.emissive.setRGB(1, 0.8, 0.56); m.needsUpdate = true; }
       m.emissiveIntensity = night * 0.34;
     }

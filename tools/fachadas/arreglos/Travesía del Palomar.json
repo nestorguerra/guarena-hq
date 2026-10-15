@@ -1,0 +1,138 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "arboles": null,
+  "lamps": {
+   "every": 25,
+   "kind": "pared"
+  },
+  "road": "asfalto",
+  "roadCol": "#c4b6a2",
+  "acera": {
+   "col": "#d8c4b4",
+   "pat": 0
+  },
+  "tramos": [
+   {
+    "x": 295.5,
+    "z": -164.5,
+    "r": 45,
+    "lado": "E",
+    "acera": {
+     "col": "#85817e",
+     "pat": 0
+    }
+   }
+  ],
+  "pots": 0.03,
+  "toldos": 0
+ },
+ "items": [
+  {
+   "tipo": "paso",
+   "vista": 145,
+   "en": -13.5,
+   "lateral": 9,
+   "camara": {
+    "x": 287.71,
+    "z": -124.18,
+    "heading": 190.0
+   },
+   "nota": "Paso de peatones en la Calle Nueva, a 13,5 m por delante y 9 m a la izquierda del eje de la cámara corregida de la vista 145 (la real, rumbo 10, 2,2 m más atrás que la GPS): el paso solo mira a su derecha, por eso aquí la cámara va invertida (rumbo 190) y la distancia en negativo."
+  },
+  {
+   "tipo": "senal",
+   "vista": 145,
+   "lado": "der",
+   "en": 4.7,
+   "lateral": 1.6,
+   "placas": [
+    "ceda"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": 287.71,
+    "z": -124.18,
+    "heading": 10.0
+   },
+   "nota": "Ceda el paso en un poste pegado a la esquina norte del muro 2265, de cara a quien sale de la calleja."
+  },
+  {
+   "tipo": "senal",
+   "vista": 145,
+   "lado": "izq",
+   "en": 18.0,
+   "lateral": 0.8,
+   "placas": [
+    "direccion_prohibida"
+   ],
+   "mira": "camara",
+   "camara": {
+    "x": 287.71,
+    "z": -124.18,
+    "heading": 10.0
+   },
+   "nota": "Dirección prohibida en la boca de la travesía, junto a la esquina de 2344, de cara a quien llega desde la Calle Nueva."
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 146,
+   "lado": "izq",
+   "desde": 2,
+   "hasta": 42,
+   "camara": {
+    "x": 287.66,
+    "z": -145.76,
+    "heading": 10.9
+   }
+  },
+  {
+   "tipo": "amarillo",
+   "vista": 146,
+   "lado": "der",
+   "desde": 2,
+   "hasta": 42,
+   "camara": {
+    "x": 287.66,
+    "z": -145.76,
+    "heading": 10.9
+   }
+  },
+  {
+   "tipo": "sin_farolas",
+   "vista": 145,
+   "lado": "ambos",
+   "desde": 3,
+   "hasta": 9
+  },
+  {
+   "tipo": "poste",
+   "vista": 145,
+   "lado": "izq",
+   "en": 3.8,
+   "lateral": 4.0,
+   "modelo": "madera",
+   "alto": 7.5,
+   "camara": {
+    "x": 287.73,
+    "z": -124.24,
+    "heading": 8.6
+   }
+  },
+  {
+   "tipo": "cable",
+   "vista": 145,
+   "en": 4.5,
+   "alto": 6.5,
+   "camara": {
+    "x": 287.73,
+    "z": -124.24,
+    "heading": 8.6
+   }
+  }
+ ]
+}

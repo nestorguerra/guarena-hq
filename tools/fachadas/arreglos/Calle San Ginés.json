@@ -1,0 +1,17 @@
+{"calle": {"lineas": {"centro": false, "bordes": false, "aparcamiento": false}, "road": "asfalto", "roadCol": "#96928f", "acera": {"col": "#aaa59f", "pat": 0}, "lamps": {"every": 45, "kind": "pared"}, "pots": 0, "cables": true, "arboles": null, "toldos": 0, "tramos": [{"x": 3.5, "z": -427.1, "r": 14, "road": "asfalto", "col": "#d0c3a9"}, {"x": -17.1, "z": -434.6, "r": 14, "road": "asfalto", "col": "#d0c3a9"}]},
+ "items": [
+  {"tipo": "acera", "vista": 99, "lado": "izq", "desde": 0, "hasta": 70, "ancho": 0},
+  {"tipo": "acera", "vista": 99, "lado": "der", "desde": 0, "hasta": 70, "ancho": 0},
+  {"tipo": "sin_arboles", "vista": 99, "lado": "izq", "desde": 0, "hasta": 70, "fondo": 12},
+  {"tipo": "sin_arboles", "vista": 99, "lado": "der", "desde": 0, "hasta": 70, "fondo": 12},
+  {"tipo": "sin_senales", "vista": 99, "lado": "ambos", "desde": 0, "hasta": 70},
+  {"tipo": "sin_contenedores", "vista": 99, "lado": "ambos", "desde": 0, "hasta": 70},
+  {"tipo": "farola", "vista": 100, "lado": "der", "en": 28, "modelo": "pared", "lateral": 3.0},
+  {"tipo": "acera", "vista": 118, "lado": "izq", "desde": 0, "hasta": 10, "ancho": 1.0},
+  {"tipo": "acera", "vista": 118, "lado": "izq", "desde": 10, "hasta": 45, "ancho": 0},
+  {"tipo": "sin_arboles", "vista": 118, "lado": "der", "desde": 0, "hasta": 60, "fondo": 40},
+  {"tipo": "arbol", "vista": 118, "lado": "der", "en": 13, "especie": "cipres", "escala": 0.45, "lateral": 8.8},
+  {"tipo": "sin_senales", "vista": 118, "lado": "der", "desde": 0, "hasta": 30},
+  {"tipo": "farola", "vista": 119, "lado": "der", "en": 11, "modelo": "columna"},
+  {"tipo": "contenedores", "vista": 119, "lado": "izq", "en": 29, "tipos": ["papel", "envases", "organico"], "acera": false}
+ ]}

@@ -1,0 +1,10 @@
+{"calle": {"lineas": {"centro": false, "bordes": false, "aparcamiento": false}, "arboles": null, "lamps": {"every": 25, "kind": "columna"}, "road": "asfalto", "roadCol": "#b8a38c", "acera": {"col": "#cbc5ba", "pat": 0}, "pots": 0, "toldos": false, "pretil": 0.9, "garage": 0.33, "balc": 0.33, "walls": [["#f2e4d8", 1.0]]},
+ "items": [
+ {"tipo": "farola", "vista": 110, "lado": "der", "en": 8.1, "modelo": "globo", "camara": {"x": 214.32, "z": -487.02, "heading": 14.0}},
+ {"tipo": "aparcamiento", "vista": 109, "lado": "izq", "desde": 2, "hasta": 52, "modo": "cordon", "camara": {"x": 198.08, "z": -434.91, "heading": 14.0}},
+ {"tipo": "aparcamiento", "vista": 110, "lado": "izq", "desde": -2, "hasta": 33, "modo": "cordon", "camara": {"x": 214.32, "z": -487.02, "heading": 14.0}},
+ {"tipo": "aparcamiento", "vista": 110, "lado": "der", "desde": 0, "hasta": 33, "modo": "cordon", "camara": {"x": 214.32, "z": -487.02, "heading": 14.0}},
+ {"tipo": "farola", "vista": 109, "lado": "izq", "en": 13.5, "modelo": "globo"},
+ {"tipo": "sin_farolas", "vista": 109, "lado": "ambos", "desde": -10, "hasta": 60},
+ {"tipo": "sin_farolas", "vista": 110, "lado": "ambos", "desde": -20, "hasta": 60}
+]}

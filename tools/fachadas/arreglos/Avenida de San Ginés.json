@@ -1,0 +1,233 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#b7a690",
+  "lamps": {
+   "every": 70,
+   "kind": "pared"
+  },
+  "pots": 0
+ },
+ "items": [
+  {
+   "tipo": "acera",
+   "vista": 95,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 8,
+   "ancho": 0
+  },
+  {
+   "tipo": "acera",
+   "vista": 95,
+   "lado": "der",
+   "desde": 8,
+   "hasta": 65,
+   "ancho": 1.2
+  },
+  {
+   "tipo": "sin_arboles",
+   "vista": 95,
+   "lado": "izq",
+   "desde": 40,
+   "hasta": 120,
+   "fondo": 40
+  },
+  {
+   "tipo": "arbol",
+   "vista": 95,
+   "lado": "izq",
+   "en": 60,
+   "fondo": 14,
+   "especie": "pino",
+   "escala": 1.2
+  },
+  {
+   "tipo": "arbol",
+   "vista": 95,
+   "lado": "izq",
+   "en": 80,
+   "fondo": 20,
+   "especie": "platano"
+  },
+  {
+   "tipo": "farola",
+   "vista": 95,
+   "lado": "der",
+   "en": 9,
+   "modelo": "pared",
+   "lateral": 2.3
+  },
+  {
+   "tipo": "suelo",
+   "vista": 96,
+   "lado": "izq",
+   "desde": 0,
+   "hasta": 70,
+   "fondo": 22,
+   "material": "grava",
+   "color": "#b8a88e",
+   "camara": {
+    "x": -149.94,
+    "z": -341.61,
+    "heading": 74.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 96,
+   "lado": "izq",
+   "en": 62,
+   "especie": "palmera",
+   "lateral": 15,
+   "camara": {
+    "x": -149.94,
+    "z": -341.61,
+    "heading": 74.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 96,
+   "lado": "izq",
+   "en": 56,
+   "especie": "palmera",
+   "lateral": 21,
+   "camara": {
+    "x": -149.94,
+    "z": -341.61,
+    "heading": 74.0
+   }
+  },
+  {
+   "tipo": "arbol",
+   "vista": 96,
+   "lado": "izq",
+   "en": 16,
+   "especie": "ciruelo",
+   "lateral": 16,
+   "camara": {
+    "x": -149.94,
+    "z": -341.61,
+    "heading": 74.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 96,
+   "lado": "der",
+   "en": 6.5,
+   "modelo": "pared",
+   "lateral": 10.3,
+   "camara": {
+    "x": -149.94,
+    "z": -341.61,
+    "heading": 74.0
+   }
+  },
+  {
+   "tipo": "farola",
+   "vista": 97,
+   "lado": "izq",
+   "en": 5,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "senal",
+   "vista": 97,
+   "lado": "der",
+   "en": 5,
+   "placas": [
+    "paso_peatones"
+   ],
+   "mira": "camara"
+  },
+  {
+   "tipo": "tapia",
+   "vista": 97,
+   "lado": "der",
+   "desde": 0,
+   "hasta": 18,
+   "alto": 2.0,
+   "material": "malla",
+   "color": "#9aa0a6",
+   "lateral": 3.6
+  },
+  {
+   "tipo": "farola",
+   "vista": 98,
+   "lado": "izq",
+   "en": 38,
+   "modelo": "globo"
+  },
+  {
+   "tipo": "farola",
+   "vista": 98,
+   "lado": "der",
+   "en": 15,
+   "modelo": "globo",
+   "lateral": 20.5
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 96,
+   "lado": "izq",
+   "desde": -2,
+   "hasta": 0,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 96,
+   "lado": "izq",
+   "desde": 1,
+   "hasta": 3,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 96,
+   "lado": "izq",
+   "desde": 4,
+   "hasta": 6,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 97,
+   "lado": "der",
+   "desde": -2,
+   "hasta": 0,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 97,
+   "lado": "der",
+   "desde": 1,
+   "hasta": 3,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 97,
+   "lado": "der",
+   "desde": 4,
+   "hasta": 6,
+   "modo": "cordon"
+  },
+  {
+   "tipo": "aparcamiento",
+   "vista": 97,
+   "lado": "der",
+   "desde": 7,
+   "hasta": 9,
+   "modo": "cordon"
+  }
+ ]
+}

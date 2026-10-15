@@ -1,0 +1,200 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "acera": {
+   "col": "#ada08e",
+   "pat": 0
+  },
+  "walls": [
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e6cbb2",
+    0.05
+   ],
+   [
+    "#e0c29a",
+    0.05
+   ],
+   [
+    "#e0c29a",
+    0.05
+   ],
+   [
+    "#e0c29a",
+    0.05
+   ],
+   [
+    "#e0c29a",
+    0.05
+   ],
+   [
+    "#f3ead2",
+    0.05
+   ],
+   [
+    "#f3ead2",
+    0.05
+   ],
+   [
+    "#f3ead2",
+    0.05
+   ],
+   [
+    "#f3ead2",
+    0.05
+   ],
+   [
+    "#f4efe6",
+    0.05
+   ],
+   [
+    "#f4efe6",
+    0.05
+   ],
+   [
+    "#f4efe6",
+    0.05
+   ],
+   [
+    "#e2c4b6",
+    0.05
+   ],
+   [
+    "#b9977b",
+    0.05
+   ],
+   [
+    "#b47d73",
+    0.05
+   ]
+  ],
+  "plinth": [
+   {
+    "kind": "azulejo",
+    "col": "#a87a60",
+    "h": 0.9,
+    "share": 0.1
+   },
+   {
+    "kind": "azulejo",
+    "col": "#a87a60",
+    "h": 0.9,
+    "share": 0.1
+   },
+   {
+    "kind": "azulejo",
+    "col": "#a87a60",
+    "h": 0.9,
+    "share": 0.1
+   },
+   {
+    "kind": "piedra",
+    "col": "#9a8670",
+    "h": 0.9,
+    "share": 0.1
+   },
+   {
+    "kind": "azulejo",
+    "col": "#cfb18f",
+    "h": 0.6,
+    "share": 0.1
+   },
+   {
+    "kind": null,
+    "share": 0.1
+   },
+   {
+    "kind": null,
+    "share": 0.1
+   },
+   {
+    "kind": null,
+    "share": 0.1
+   },
+   {
+    "kind": null,
+    "share": 0.1
+   },
+   {
+    "kind": null,
+    "share": 0.1
+   }
+  ],
+  "firme": "liso"
+ },
+ "items": [
+  {
+   "tipo": "casa",
+   "vista": 188,
+   "lado": "izq",
+   "lateral": 3,
+   "desde": 17,
+   "hasta": 30,
+   "fondo": 10,
+   "plantas": 2,
+   "color": "#efe9dc",
+   "camara": {
+    "x": 978.67,
+    "z": 312.31,
+    "heading": 0.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 187,
+   "lado": "izq",
+   "en": 10.4,
+   "lateral": 6.78,
+   "ancho": 0.78,
+   "alto": 0.52,
+   "suelo": 5.2,
+   "color": "#e9e9e6",
+   "mira": "calle",
+   "camara": {
+    "x": 979.0,
+    "z": 248.35,
+    "heading": 180.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 187,
+   "lado": "izq",
+   "en": 12.6,
+   "lateral": 6.78,
+   "ancho": 0.78,
+   "alto": 0.52,
+   "suelo": 5.2,
+   "color": "#e9e9e6",
+   "mira": "calle",
+   "camara": {
+    "x": 979.0,
+    "z": 248.35,
+    "heading": 180.0
+   }
+  }
+ ]
+}

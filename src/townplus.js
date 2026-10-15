@@ -157,7 +157,7 @@ export function plazaDetails(L) {
   const bedM = new THREE.MeshStandardMaterial({ color: 0x3e6b2c, roughness: 0.9 }), soil = new THREE.MeshStandardMaterial({ color: 0x5a3e28, roughness: 1 });
   const flowers = [new THREE.MeshStandardMaterial({ color: 0xd8283a, roughness: 0.8 }), new THREE.MeshStandardMaterial({ color: 0xe86aa0, roughness: 0.8 }), new THREE.MeshStandardMaterial({ color: 0xf2f0ea, roughness: 0.8 })];
   const r = mulberry32(31);
-  for (let k = 0; k < 4; k++) {
+  for (let k = 0; k < 0; k++) { // (none: its captures show the square's paving there, 2026-10-14 — views 1, 2)
     const a = (k / 4) * Math.PI * 2 + Math.PI / 4, d = F.r + 7.5, x = F.x + Math.sin(a) * d, z = F.z + Math.cos(a) * d;
     if (!pointInRing(x, z, ring) || map.buildingAt(x, z) || map.roadAt(x, z, 1.5)) continue;
     const rim = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.35, 0.42, 24), L.mat.sillar); rim.position.set(x, 0.21, z); rim.castShadow = true; g.add(rim);
@@ -386,19 +386,21 @@ function palmRoad(L, res) {
 
 // ---------------------------------------------------------------- the Pabellón Municipal La Encina
 // its name over the doors (the town's blue), a canopy over the way in, the band of polycarbonate high along the front,
-// the three flags by the door
+// the three flags by the door. The way in is on the south front, at the Avenida's, by the corner where its lobby stands
+// (view 223, May 2024); the long north wall along the Dámaso Fernández del Pozo's road is blind at its west end (view 221)
 export function pabellonFront(L) {
   const p = L.map.areas.find((a) => /La Encina/.test(a.name) && a.kind === 'leisure:sports_centre');
   const [x, z] = p ? ringCentroid(p.ring) : llTo(L.map, 38.8560056, -6.0904921);
   venueFront(L, {
     kind: 'pabellon', name: 'Pabellón Municipal La Encina', sub: 'Polideportivo cubierto', x, z, seed: 51, glassDoor: true, doorW: 2.6, doorH: 2.6,
+    door: [1020, 452], // (a point on the Avenida by the south-west corner: the door lands on the south wall ≈ 7 m from that corner)
     sign: 'PABELLÓN MUNICIPAL LA ENCINA', signBg: '#1f5fa8', signFg: '#ffffff', signFont: 'bold 74px Arial, sans-serif', signY: 4.0, signW: 9.0, signH: 1.0,
     frameMat: new THREE.MeshStandardMaterial({ color: 0x1f5fa8, roughness: 0.5 }),
     override: { style: 'nave', tint: [0.93, 0.95, 0.98], minFloors: 3 },
     extra: (g) => {
       const can = new THREE.Mesh(new THREE.BoxGeometry(6.0, 0.2, 2.4), new THREE.MeshStandardMaterial({ color: 0xe8e8e4, roughness: 0.6 })); can.position.set(0, 3.0, 1.2); g.add(can);
       for (const sx of [-1, 1]) { const post = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 3.0, 8), new THREE.MeshStandardMaterial({ color: 0x9aa0a4, roughness: 0.4, metalness: 0.6 })); post.position.set(sx * 2.8, 1.5, 2.3); g.add(post); }
-      const band = new THREE.Mesh(new THREE.PlaneGeometry(22, 1.3), new THREE.MeshStandardMaterial({ color: 0xf2f0e6, emissive: 0xe8e4d0, emissiveIntensity: 0.25, roughness: 0.4 })); band.position.set(0, 6.6, 0.05); g.add(band);
+      const band = new THREE.Mesh(new THREE.PlaneGeometry(22, 1.3), new THREE.MeshStandardMaterial({ color: 0xf2f0e6, emissive: 0xe8e4d0, emissiveIntensity: 0.25, roughness: 0.4 })); band.position.set(4, 6.6, 0.05); g.add(band); // (its band starts at the corner, 7 m west of the door: it ran 11 m either way)
       for (const [i, kind] of [[-1, 'es'], [0, 'ex'], [1, 'eu']]) {
         const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.06, 7, 8), new THREE.MeshStandardMaterial({ color: 0xd8dce0, roughness: 0.3, metalness: 0.8 })); pole.position.set(5.2 + i * 1.1, 3.5, 3.0); g.add(pole);
         const t = new THREE.CanvasTexture(flagCanvas(kind)); t.colorSpace = THREE.SRGBColorSpace;
@@ -665,16 +667,50 @@ export function doubleLamp() {
   }
   return { iron: merged(parts), glow: merged(heads) };
 }
+// the newer streets' median lamp: a galvanised column of nine metres, an arm out over each carriageway, a flat lantern
+// at each end (calles_medianas.js farolas: the Calle Don Benito's)
+export function baculoLamp(sides = [-1, 1]) { // (sides [1]: one arm only)
+  const parts = [], heads = [];
+  const post = new THREE.CylinderGeometry(0.06, 0.11, 9.0, 10); post.translate(0, 4.5, 0); parts.push(post);
+  const base = new THREE.CylinderGeometry(0.15, 0.17, 0.45, 10); base.translate(0, 0.22, 0); parts.push(base);
+  for (const s of sides) {
+    const pts = []; for (let i = 0; i <= 8; i++) { const t = i / 8; pts.push(new THREE.Vector3(s * 1.6 * t, 8.55 + 0.45 * Math.sin(t * Math.PI / 2), 0)); }
+    parts.push(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 10, 0.045, 6, false));
+    const h = new THREE.BoxGeometry(0.72, 0.13, 0.3); h.translate(s * 1.85, 9.03, 0); parts.push(h);
+    const gl = new THREE.BoxGeometry(0.58, 0.03, 0.22); gl.translate(s * 1.85, 8.95, 0); heads.push(gl);
+  }
+  return { iron: merged(parts), glow: merged(heads) };
+}
+// the red-leaved plum of the newer medians (Prunus cerasifera 'Pissardii'): the fruit tree, its leaves purple
+const PLUM = [0.95, 0.16, 0.62];
+// a clipped hedge down a median, low, in pieces a hand apart, its gaps where a tree stands (t: [s, …] along P)
+function medianHedge(extra, P, cum, s0, s1, trees, { h = 0.7, step = 1.8 } = {}) {
+  const t = {};
+  for (let s = s0; s <= s1; s += step) {
+    if (trees.some((q) => Math.abs(q - s) < 1.1)) continue;
+    polySample(P, cum, s, t);
+    extra.push({ kind: 'seto', x: t.x, z: t.z, s: step / 2, sy: h / 1.2, rot: Math.atan2(-t.dz, t.dx), onRoad: true, pad: 0.2, trunk: 0 });
+  }
+}
+// Where the captures stand the lamps of a median, where the map's data (calles_medianas.js: one every 30 m from the first
+// tree) has them elsewhere: the Calle Don Benito's, from views 173 and 54 (May 2024). In 173 the nearest lamp is 15 m
+// ahead of the camera, at x ≈ 658, and the next two at x ≈ 623 and 588 (they stand 35 m apart, the third just visible); in
+// 54 the nearest is 18 m ahead, at x ≈ 518, and the next at x ≈ 483: one row, a lamp every 35 m at x = 483 + 35 k, running on
+// across the pieces of the median (the gap between its two pieces, x 567–590, has none)
+const BULEVAR_FAROLAS = { 'Calle Don Benito': { x0: 483, x1: 700, cada: 35 } };
 // a boulevard's median, where the captures show one on a carriageway the map has as one (calles.js bulevar; its strip
-// of setts and kerbs: ground.js): its young trees and its wooden benches
-export function bulevar(L, bv) {
+// of setts and kerbs: ground.js): its young trees — one kind, or kinds in turn ('ciruelo': the red-leaved plum) — its
+// wooden benches, its lamps, its low hedge
+export function bulevar(L, bv, name = '') {
   const extra = L.world.extraTrees || (L.world.extraTrees = []), P = [], cum = [0];
   for (const [x, z] of bv.pts) { if (P.length) cum.push(cum[cum.length - 1] + Math.hypot(x - P[P.length - 2], z - P[P.length - 1])); P.push(x, z); }
-  const s0 = (bv.desde || 0) + 2, s1 = (bv.hasta ?? cum[cum.length - 1]) - 2, t = {};
+  const s0 = (bv.desde || 0) + 2, s1 = (bv.hasta ?? cum[cum.length - 1]) - 2, t = {}, kinds = [].concat(bv.arbol || 'morera'), at = [];
   let k = 0;
   for (let s = s0; s <= s1; s += bv.cada || 8, k++) {
     polySample(P, cum, s, t);
-    extra.push({ kind: bv.arbol || 'morera', x: t.x, z: t.z, s: bv.escala || 0.7, onRoad: true });
+    const sp = kinds[k % kinds.length], plum = sp === 'ciruelo';
+    extra.push({ kind: plum ? 'frutal' : sp, x: t.x, z: t.z, s: (bv.escala || 0.7) * (plum ? 1.25 : 1), onRoad: true, ...(plum ? { tint: PLUM } : {}) });
+    at.push(s);
     if (bv.bancos && k % 2 === 1 && s + 3 < s1) {
       polySample(P, cum, s + 3.2, t);
       const bench = benchGeo(), iron = new THREE.MeshStandardMaterial({ color: 0x1e2a24, roughness: 0.55, metalness: 0.5 }), wood = new THREE.MeshStandardMaterial({ color: 0x8a5a34, roughness: 0.7 });
@@ -682,6 +718,40 @@ export function bulevar(L, bv) {
       for (const [geo, mat] of [[bench.iron, iron], [bench.wood, wood]]) { const m = new THREE.Mesh(geo, mat); m.position.set(t.x, 0.12, t.z); m.rotation.y = a; m.castShadow = true; L.root.add(m); }
       L.circle(t.x, t.z, 0.6, 1);
       L.world.spawnSpots.push({ kind: 'bench', x: t.x, z: t.z, ang: a });
+    }
+  }
+  if (bv.seto) medianHedge(extra, P, cum, s0, s1, at);
+  // its lamps: one every so many metres, half-way between two trees, its arms across the carriageways
+  if (bv.farolas) {
+    const every = bv.farolas.cada || 30, sp = bv.cada || 8, spots = [], row = BULEVAR_FAROLAS[name];
+    if (row) { // (as the captures place them: where the median crosses each x of the row — it runs west to east —, a tree's width clear)
+      const sAtX = (x) => { for (let i = 0; i < cum.length - 1; i++) { const xa = P[i * 2], xb = P[i * 2 + 2]; if (xa !== xb && (xa - x) * (xb - x) <= 0) return cum[i] + ((cum[i + 1] - cum[i]) * (x - xa)) / (xb - xa); } return null; };
+      for (let x = row.x0; x <= row.x1; x += row.cada) {
+        let s = sAtX(x);
+        if (s === null || s < s0 || s > s1) continue;
+        const near = at.reduce((a, b) => (Math.abs(b - s) < Math.abs(a - s) ? b : a), Infinity);
+        if (Math.abs(near - s) < 1.2) s += (s >= near ? 1 : -1) * (1.5 - Math.abs(near - s));
+        polySample(P, cum, s, t);
+        spots.push([t.x, t.z, t.dx, t.dz]);
+      }
+    } else for (let s = s0 + Math.min(every / 2, (s1 - s0) / 2); s <= s1; s += every) {
+      const q = at.length ? at.reduce((a, b) => (Math.abs(b - s) < Math.abs(a - s) ? b : a)) : s;
+      const sl = Math.min(s1, Math.max(s0, q + (q <= s ? sp / 2 : -sp / 2)));
+      polySample(P, cum, sl, t);
+      spots.push([t.x, t.z, t.dx, t.dz]);
+    }
+    if (spots.length) {
+      const { iron, glow } = baculoLamp();
+      const im = new THREE.InstancedMesh(iron, new THREE.MeshStandardMaterial({ color: 0x9ea4a6, roughness: 0.42, metalness: 0.65 }), spots.length);
+      const gm = new THREE.InstancedMesh(glow, new THREE.MeshStandardMaterial({ color: 0xfff6e6, emissive: 0xfff0d0, emissiveIntensity: 1.2 }), spots.length);
+      const o = new THREE.Object3D();
+      spots.forEach(([x, z, dx, dz], i) => {
+        o.position.set(x, 0, z); o.rotation.y = Math.atan2(dx, dz); o.updateMatrix(); im.setMatrixAt(i, o.matrix); gm.setMatrixAt(i, o.matrix);
+        for (const sx of [-1, 1]) L.world.lampPoints.push(x + dz * sx * 1.85, 8.9, z - dx * sx * 1.85);
+        L.circle(x, z, 0.16, 9);
+      });
+      im.castShadow = true;
+      L.root.add(im, gm);
     }
   }
 }
@@ -696,7 +766,7 @@ export function avenida(L, name = 'Avenida de la Constitución', own = null) {
   for (const e of av) {
     for (let s = 2; s < e.len - 2; s += 3) {
       const p = polySample(e.pts, e.cum, s, {});
-      const q = map.nearestEdge(p.x, p.z, 30, (o) => o !== e && o.name === 'Avenida de la Constitución' && o.drive);
+      const q = map.nearestEdge(p.x, p.z, 30, (o) => o !== e && o.name === name && o.drive); // (the street's own other carriageway)
       if (!q) continue;
       const qp = polySample(q.edge.pts, q.edge.cum, q.s, {});
       if (Math.abs(qp.dx * p.dx + qp.dz * p.dz) < 0.85) continue; // (only a carriageway running alongside)
@@ -712,6 +782,8 @@ export function avenida(L, name = 'Avenida de la Constitución', own = null) {
         if (n % every === 0) extra.push({ kind: own.arbol || 'morera', x: mx, z: mz, s: own.escala || 0.8, pad: Math.max(0.2, Math.min(0.8, mw / 2 - 0.5)) }); // (a narrow median's trees close to the kerbs, as they stand)
         if (own.farolas && n % 10 === 5 && mw >= 1.6) lampAt.push([mx, mz, Math.atan2(p.dx, p.dz)]);
         if (own.bancos && mw >= 2.4 && n % 9 === 4) benches.push([mx + p.dz * 0.8, mz - p.dx * 0.8, Math.atan2(-p.dz, p.dx)]);
+        // (a garden median: a low clipped hedge down it between the trees — the Alberquilla's)
+        if (own.seto && n % every !== 0 && mw >= 1.6) extra.push({ kind: 'seto', x: mx, z: mz, s: 1.45, sy: 0.6, rot: Math.atan2(-p.dz, p.dx), pad: 0.2, trunk: 0 });
         continue;
       }
       if (n % 3 === 0) extra.push({ kind: mw >= 4 ? (n % 12 === 0 ? 'palmera' : 'naranjo') : 'adelfa', x: mx, z: mz, s: mw >= 4 ? 0.95 : 0.8 });
@@ -719,7 +791,21 @@ export function avenida(L, name = 'Avenida de la Constitución', own = null) {
       if (mw >= 5.5 && n % 13 === 8) benches.push([mx + p.dz * 1.2, mz - p.dx * 1.2, Math.atan2(-p.dz, p.dx)]);
     }
   }
-  if (lampAt.length) {
+  // (its lamps: the town's black double lamp, or as seen — mediana.farolas 'baculo' a grey column with an arm over each
+  // carriageway, 'baculo1' with one curved arm)
+  const bac = own && typeof own.farolas === 'string' && own.farolas.startsWith('baculo');
+  if (lampAt.length && bac) {
+    const one = own.farolas === 'baculo1', { iron, glow } = baculoLamp(one ? [1] : [-1, 1]);
+    const im = new THREE.InstancedMesh(iron, new THREE.MeshStandardMaterial({ color: 0xa9adaf, roughness: 0.42, metalness: 0.65 }), lampAt.length);
+    const gm = new THREE.InstancedMesh(glow, new THREE.MeshStandardMaterial({ color: 0xfff6e6, emissive: 0xfff0d0, emissiveIntensity: 1.2 }), lampAt.length);
+    const o = new THREE.Object3D();
+    lampAt.forEach(([x, z, a], i) => {
+      o.position.set(x, 0, z); o.rotation.y = a + (i % 2 ? Math.PI : 0); o.updateMatrix(); im.setMatrixAt(i, o.matrix); gm.setMatrixAt(i, o.matrix); // (one arm: over each carriageway in turn)
+      for (const sx of one ? [i % 2 ? -1 : 1] : [-1, 1]) L.world.lampPoints.push(x + Math.cos(a) * sx * 1.85, 8.9, z - Math.sin(a) * sx * 1.85);
+      L.circle(x, z, 0.16, 9);
+    });
+    im.castShadow = true; L.root.add(im, gm);
+  } else if (lampAt.length) {
     const { iron, glow } = doubleLamp();
     const im = new THREE.InstancedMesh(iron, L.mat.iron || new THREE.MeshStandardMaterial({ color: 0x26282a, roughness: 0.5, metalness: 0.5 }), lampAt.length);
     const gm = new THREE.InstancedMesh(glow, new THREE.MeshStandardMaterial({ color: 0xfff4d8, emissive: 0xffe8b0, emissiveIntensity: 1.2 }), lampAt.length);

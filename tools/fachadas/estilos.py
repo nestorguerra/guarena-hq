@@ -33,6 +33,16 @@ CENTRO = {'Calle Atrás', 'Calle Bronca', 'Calle Castillejos', 'Calle Cañadilla
           'Calle Grande', 'Calle Herreros', 'Calle Hornillos', 'Calle Malfeitos', 'Calle Pajares', 'Calle Pozo Dulce',
           'Calle Pozo Pajares', 'Calle Túnel', 'Calle de Don Juan Durán', 'Calle de Santa María', 'Calle de la Cuesta',
           'Plaza Vieja', 'Plaza de España', 'Plaza de Santa María', 'Plaza de los Castillejos'}
+# what the audit of 2026-10-13 found to put right in a street's style, as its captures show it (tools/fachadas/arreglos/
+# <street>.json "calle": lineas, arboles, lamps, road, roadCol, acera, tramos, pots, toldos, pretil, garage, balc,
+# walls, desconchada…), merged over the profile's and the touches below
+FIX = {}
+import glob as _glob
+for _f in sorted(_glob.glob(os.path.join(REPO, 'tools', 'fachadas', 'arreglos', '*.json'))):
+    try:
+        _d = json.load(open(_f))
+        if isinstance(_d, dict) and isinstance(_d.get('calle'), dict): FIX[os.path.basename(_f)[:-5]] = _d['calle']
+    except Exception as _e: print('arreglos ilegible', _f, _e)
 # touched up by hand, after looking (kept through every regeneration)
 MANUAL = {
     # (setts only on its west stretch, Plaza la Parada–Malfeitos; asphalt beyond)
@@ -67,6 +77,15 @@ MANUAL = {
     # trees and wooden benches, down the middle of the wide carriageway the map has beside it — no name, 18 m)
     'Calle Castillejos': {'mediana': None, 'bulevar': {'pts': [[-67.3, -115.3], [-71.5, -114.0], [-74.3, -112.8], [-77.1, -111.8], [-79.9, -110.6], [-81.2, -108.0], [-82.5, -105.3], [-84.1, -102.8], [-85.6, -100.2], [-87.1, -97.6], [-88.6, -95.0], [-90.0, -92.3], [-91.3, -89.6], [-92.7, -86.9], [-94.0, -84.3], [-95.5, -81.7], [-97.0, -79.1], [-99.3, -73.1]],
                                                       'desde': 9, 'hasta': 49, 'ancho': 3.0, 'col': '#c9c5bd', 'arbol': 'morera', 'cada': 8, 'escala': 0.65, 'bancos': True}},
+    # (its eastern stretch, by the crossing with Miguel Hernández, a dual carriageway — the map has both — with a garden
+    # median: a low clipped hedge and young trees, no lamps nor benches on it)
+    'Calle Alberquilla': {'mediana': {'arbol': 'morera', 'cada': 7, 'escala': 0.55, 'seto': True, 'farolas': False, 'bancos': False}},
+    # (the old whitewash peeling off a share of their houses, as their notes have it — desconchada: share, how much 1–3, and
+    # what shows under it, calles.js; the houses seen one by one have their own, calles_casas.js)
+    'Calle Atrás': {'desconchada': {'share': 0.25, 'nivel': 2, 'bajo': 'ocre'}},
+    'Calle Hornillos': {'desconchada': {'share': 0.3, 'nivel': 2, 'bajo': 'gris'}},
+    'Calle Fuentes': {'desconchada': {'share': 0.25, 'nivel': 2, 'bajo': 'ocre'}},
+    'Calle Bronca': {'desconchada': {'share': 0.25, 'nivel': 1, 'bajo': 'gris'}},
     # (its orange trees round the square, and a big magnolia)
     'Plaza de España': {'arboles': {'kind': 'naranjo', 'every': 9}},
     # (Santa María's atrium — atrio.js lays it as a pedestrian area: its two pines are its own, no ring of orange trees)
@@ -203,9 +222,12 @@ for f in sorted(os.listdir(SRC)):
     name = d.get('street') or f[:-5]
     if name in CENTRO: st['tapias'] = True
     st.update(MANUAL.get(name, {}))
+    st.update(FIX.get(name, {}))
     out[name] = st
 # (the touches for places without a profile of their own: the market's square, say)
 for k, v in MANUAL.items():
+    if k not in out: out[k] = dict(v)
+for k, v in FIX.items():
     if k not in out: out[k] = dict(v)
 js = ['// The styles of the town\'s streets and squares, written from the user\'s Google Maps captures of each (2026-10-12/13) — see',
       '// calles.js. Made by tools/fachadas/estilos.py from the street profiles, then read and touched up by hand. Nothing',

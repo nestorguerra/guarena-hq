@@ -1,0 +1,156 @@
+{
+ "calle": {
+  "lineas": {
+   "centro": false,
+   "bordes": false,
+   "aparcamiento": false
+  },
+  "road": "asfalto",
+  "roadCol": "#cfb9a1",
+  "acera": {
+   "col": "#c4bcb0",
+   "pat": 0
+  },
+  "arboles": null,
+  "pots": 0.02,
+  "toldos": 0,
+  "pretil": 0.3,
+  "lamps": {
+   "every": 45,
+   "kind": "pared"
+  },
+  "reja": {
+   "share": 0.7,
+   "col": "#1e1e1e",
+   "buche": 0.0
+  }
+ },
+ "items": [
+  {
+   "tipo": "farola",
+   "vista": 252,
+   "lado": "der",
+   "en": 14.5,
+   "modelo": "pared"
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 14.0,
+   "lateral": 6.0,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 12.5,
+   "lateral": 6.04,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 11.0,
+   "lateral": 6.08,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 9.5,
+   "lateral": 6.12,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 8.0,
+   "lateral": 6.16,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 6.5,
+   "lateral": 6.19,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  },
+  {
+   "tipo": "cartel",
+   "vista": 253,
+   "lado": "der",
+   "en": 5.3,
+   "lateral": 6.2,
+   "ancho": 1.5,
+   "alto": 0.7,
+   "suelo": 0,
+   "color": "#cdb28a",
+   "mira": "calle",
+   "camara": {
+    "x": 202.66,
+    "z": 368.86,
+    "heading": 100.0
+   }
+  }
+ ]
+}
