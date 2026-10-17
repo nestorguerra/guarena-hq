@@ -47,30 +47,30 @@
   {
    "kit": "vivienda_bano",
    "revisor": "Decision API A",
-   "fecha": "2026-10-17T14:19:40.032724+00:00",
+   "fecha": "2026-10-17T15:22:39.508065+00:00",
    "puntos": {
-    "densidad": 2.57,
-    "coherencia": 2.55,
-    "iluminacion": 2.81,
-    "variedad": 2.82,
-    "lectura_funcional": 2.71
+    "densidad": 2.73,
+    "coherencia": 2.8,
+    "iluminacion": 3.15,
+    "variedad": 2.88,
+    "lectura_funcional": 2.96
    },
-   "media": 2.692,
+   "media": 2.904,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_bano_A.json"
   },
   {
    "kit": "vivienda_bano",
    "revisor": "Decision API B",
-   "fecha": "2026-10-17T14:19:39.897597+00:00",
+   "fecha": "2026-10-17T15:22:39.522795+00:00",
    "puntos": {
-    "densidad": 2.56,
-    "coherencia": 2.71,
-    "iluminacion": 2.84,
-    "variedad": 2.75,
-    "lectura_funcional": 2.71
+    "densidad": 2.62,
+    "coherencia": 2.67,
+    "iluminacion": 2.93,
+    "variedad": 2.79,
+    "lectura_funcional": 2.76
    },
-   "media": 2.714,
+   "media": 2.754,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_bano_B.json"
   },
@@ -437,30 +437,30 @@
   {
    "kit": "vivienda_taller",
    "revisor": "Decision API A",
-   "fecha": "2026-10-17T14:20:07.763227+00:00",
+   "fecha": "2026-10-17T15:19:55.371852+00:00",
    "puntos": {
-    "densidad": 2.67,
-    "coherencia": 2.7,
-    "iluminacion": 2.83,
-    "variedad": 2.72,
-    "lectura_funcional": 2.37
+    "densidad": 2.8,
+    "coherencia": 2.82,
+    "iluminacion": 3.45,
+    "variedad": 2.63,
+    "lectura_funcional": 2.51
    },
-   "media": 2.658,
+   "media": 2.842,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_taller_A.json"
   },
   {
    "kit": "vivienda_taller",
    "revisor": "Decision API B",
-   "fecha": "2026-10-17T14:20:10.749483+00:00",
+   "fecha": "2026-10-17T15:19:55.530564+00:00",
    "puntos": {
-    "densidad": 2.6,
-    "coherencia": 2.64,
-    "iluminacion": 3.05,
-    "variedad": 2.68,
-    "lectura_funcional": 2.47
+    "densidad": 2.94,
+    "coherencia": 2.9,
+    "iluminacion": 3.41,
+    "variedad": 2.63,
+    "lectura_funcional": 2.83
    },
-   "media": 2.688,
+   "media": 2.942,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_taller_B.json"
   },
@@ -532,7 +532,7 @@
   "puntuaciones_formales": {
    "evaluaciones": 34,
    "aprobadas": 0,
-   "media_min": 2.658,
+   "media_min": 2.754,
    "media_max": 3.246,
    "fuente": "OpenAI Decisions gpt-6-luna; dos peticiones independientes por ficha",
    "rubrica": "rubrica_viviendas",
@@ -550,5 +550,27 @@
   "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
   "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
   "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "calidad_4_2026_10_17": {
+  "objetivo": 4,
+  "estado": "en_curso",
+  "tanda1": {
+   "kits": [
+    "taller",
+    "bano"
+   ],
+   "medias": {
+    "taller": {
+     "A": 2.842,
+     "B": 2.942
+    },
+    "bano": {
+     "A": 2.904,
+     "B": 2.754
+    }
+   },
+   "umbral_superado": false
+  },
+  "resto": "Notas de la versión anterior: pendientes de reevaluar después del ajuste compartido de materiales."
  }
 }

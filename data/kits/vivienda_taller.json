@@ -43,9 +43,9 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante",
-   "pared": "*",
+   "regla": "junto_a",
+   "obj": "va_estante_taller",
+   "de": "va_banco",
    "cantidad": [
     1,
     1
@@ -55,18 +55,8 @@
   },
   {
    "zona": "estancia",
-   "regla": "pared",
-   "obj": "panel_herramientas",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ]
-  },
-  {
-   "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_caja_almacen",
+   "obj": "va_cajas_apiladas",
    "pared": "*",
    "cantidad": [
     0,
@@ -78,7 +68,7 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_estante",
+   "obj": "va_estante_taller",
    "pared": "*",
    "cantidad": [
     0,
@@ -87,6 +77,27 @@
    "obligatorio": false,
    "preferir": true,
    "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "tal_llaves_juego",
+    "tal_martillo",
+    "tal_caja_herramientas",
+    "tal_trapos",
+    "tal_rollo_papel_taller",
+    "fe_niveles_metros",
+    "fe_tijeras_poda",
+    "fe_guantes_trabajo"
+   ],
+   "en": [
+    "va_banco"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
   },
   {
    "zona": "estancia",
@@ -128,8 +139,7 @@
     "tal_rollo_papel_taller"
    ],
    "en": [
-    "va_banco",
-    "va_estante"
+    "va_estante_taller"
    ],
    "por_soporte": [
     3,

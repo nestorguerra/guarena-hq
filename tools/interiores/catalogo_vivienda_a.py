@@ -28,7 +28,22 @@ def objetos():
     out.append(objeto('va_alto_cocina','Armario alto sobre encimera',.56,.5,.25,None,12,partes=[caja(.56,.5,.25,y=1.65,z=.125,tinte='madera'),caja(.18,.015,.025,y=1.44,z=.26,c=METAL,m='metal')],soporte='pared'))
     out.append(objeto('va_banera','Bañera doméstica',1.45,.58,.67,None,65,'ceramica',partes=[caja(1.45,.5,.67,c=BLANCO,m='ceramica'),caja(1.28,.014,.49,y=.51,c='#88a3ae',m='ceramica'),caja(1.47,.045,.06,y=.53,z=-.31,c=BLANCO,m='ceramica'),caja(1.47,.045,.06,y=.53,z=.31,c=BLANCO,m='ceramica'),cil(.012,.012,.15,x=-.6,y=.56,z=-.23)],categoria='mueble'))
     out.append(objeto('va_cesto_ropa','Cesto de ropa sucia',.38,.56,.32,None,3,partes=[caja(.38,.56,.32,c='#b79d73',m='tela'),caja(.3,.06,.24,y=.57,c='#9caaa4',m='tela')],categoria='mueble'))
-    banco=copiar('tal_banco_trabajo','va_banco','Banco de bricolaje doméstico',escala=.65);out.append(banco)
+    # Un puesto de trabajo a altura real: tablero, balda, tornillo y panel integrado.
+    p=[caja(1.28,.065,.56,y=.87,c='#b38c59',m='madera'),caja(1.18,.04,.44,y=.24,c='#5f756a',m='metal'),caja(1.18,.82,.025,y=1.48,z=-.265,c='#435a52',m='madera')]
+    for x in [-.57,.57]:
+        for z in [-.22,.22]:p.append(caja(.055,.82,.055,x=x,y=.41,z=z,c='#53645d',m='metal'))
+    for i in range(7):
+        x=-.48+i*.16
+        p += [caja(.023,.19,.026,x=x,y=1.42,z=-.23,c=['#b15e39','#c7b06d','#8ea7ae'][i%3],m='plastico'),caja(.012,.16,.018,x=x,y=1.59,z=-.23,c='#b6bfc0',m='metal')]
+    p += [caja(.18,.07,.16,x=.42,y=.94,z=.12,c='#637b7b',m='metal'),caja(.075,.13,.13,x=.47,y=1.02,z=.14,c='#546b6b',m='metal'),cil(.012,.012,.24,x=.42,y=.96,z=.2,c='#b4b8b2',r=[0,0,90]),caja(.3,.12,.12,x=-.32,y=.32,c='#b17b47',m='papel'),caja(.32,.025,.16,x=-.32,y=.39,c='#684c34',m='madera')]
+    for x in [-.32,.16]:p.append(caja(.13,.045,.04,x=x,y=1.7,z=-.23,c='#b7bfbb',m='metal'))
+    p += [caja(.03,.14,.025,x=.48,y=1.48,z=-.23,c='#b65c3b',m='plastico',r=[0,0,16]),caja(.03,.14,.025,x=.54,y=1.48,z=-.23,c='#b65c3b',m='plastico',r=[0,0,-16])]
+    out.append(objeto('va_banco','Banco de bricolaje con panel y tornillo',1.28,1.9,.56,None,44,'metal',partes=p,superficies=[dict(y=.9025,margen=.05)]))
+    p=[caja(.7,.025,.32,y=.02,c='#566d62',m='metal')]
+    for x in [-.335,.335]:
+        for z in [-.145,.145]:p.append(caja(.025,1.7,.025,x=x,z=z,c='#647c71',m='metal'))
+    for y in [.42,.84,1.26,1.7]:p.append(caja(.7,.025,.32,y=y,c='#748a7e',m='metal'))
+    out.append(objeto('va_estante_taller','Estante metálico del taller',.7,1.72,.32,None,19,'metal',partes=p,superficies=[dict(y=y+.0125,margen=.035) for y in [.42,.84,1.26]]))
     costura=mesa('va_costura','Mesa con máquina de coser',.9,.45)
     costura['partes'] += [caja(.32,.025,.19,y=.775,c='#525b62',m='metal'),caja(.09,.23,.17,x=.12,y=.9,c='#565b60',m='metal'),caja(.31,.065,.16,y=1.015,c='#565b60',m='metal'),caja(.045,.13,.1,x=-.13,y=.94,c='#565b60',m='metal'),cil(.008,.008,.055,x=-.13,y=.845,c=METAL),cil(.055,.055,.025,x=.18,y=.94,c=METAL,r=[0,0,90])]
     out.append(costura)
@@ -71,6 +86,15 @@ def objetos():
         out.append(objeto('va_reserva_'+str(i),nombre+' en tarro',.112,.2,.112,None,.7,'comida',partes=p,soporte='superficie',categoria='decoracion'))
     for i,col in enumerate(['#c47856','#81946c','#bea65c']):
         out.append(objeto('va_conserva_'+str(i),'Lata de conserva doméstica',.095,.12,.095,None,.4,'comida',partes=[cil(.045,.045,.11,c=col,m='comida'),cil(.047,.047,.008,y=.114,c='#abb0a8',m='metal'),caja(.06,.04,.003,y=.06,z=.044,c='#e5d6b5',m='papel')],soporte='superficie',categoria='decoracion'))
+    muebles={o['id']:o for o in out}
+    lav=muebles['va_lavabo'];lav['partes']=[caja(.48,.7,.35,c='#567e78',m='madera'),caja(.52,.06,.39,y=.75,c='#e7e2d4',m='ceramica'),caja(.29,.015,.23,y=.785,c='#9bb5b4',m='ceramica'),cil(.012,.012,.17,y=.865,z=-.15,c='#aab5b2'),caja(.025,.025,.11,y=.94,z=-.11,c='#aab5b2',m='metal')]
+    for x in [-.12,.12]:lav['partes'] += [caja(.225,.5,.015,x=x,y=.4,z=.182,c='#6b9188',m='madera'),caja(.06,.014,.025,x=x,y=.6,z=.2,c='#b9b09a',m='metal')]
+    arm=muebles['va_armario_bano'];arm['partes']=[caja(.4,1.4,.25,c='#82664b',m='madera'),caja(.35,1.05,.016,y=.63,z=.133,c='#b79870',m='madera'),caja(.02,.18,.025,x=.12,y=.76,z=.15,c='#b7b5a7',m='metal')]
+    esp=muebles['va_espejo'];esp['partes']=[caja(.46,.59,.03,y=1.5,z=.015,c='#4b6962',m='madera'),caja(.405,.525,.008,y=1.5,z=.035,c='#9bb8bc',m='metal'),caja(.46,.025,.06,y=1.19,z=.03,c='#b7b09d',m='metal')]
+    cep=muebles['va_cepillero'];cep['partes']=[cil(.045,.039,.1,c='#688d8d',m='ceramica')]
+    for i,x in enumerate([-.022,0,.022]):cep['partes'] += [caja(.008,.11,.009,x=x,y=.13,c=['#b9705e','#879c71','#c1b37c'][i],m='plastico'),caja(.012,.028,.015,x=x,y=.186,c='#e3dece',m='tela')]
+    jab=muebles['va_jabonera'];jab['partes']=[cil(.06,.055,.022,c='#afa88e',m='ceramica'),caja(.075,.025,.048,y=.034,c='#d6c49e',m='comida')]
+    out.append(objeto('va_alfombrilla_bano','Alfombrilla de algodón del lavabo',.65,.014,.43,None,.4,'tela',partes=[caja(.65,.012,.43,c='#536f72',m='tela'),caja(.58,.002,.36,y=.013,c='#72918f',m='tela')],categoria='decoracion'))
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_a',objetos())

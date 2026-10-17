@@ -56,18 +56,6 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_inodoro",
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
-   ],
-   "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
    "obj": "va_ducha",
    "pared": "*",
    "cantidad": [
@@ -79,14 +67,27 @@
   },
   {
    "zona": "estancia",
-   "regla": "pared",
-   "obj": "va_toallero",
-   "pared": "*",
+   "regla": "junto_a",
+   "obj": "va_inodoro",
+   "de": "va_ducha",
    "cantidad": [
     1,
-    2
+    1
    ],
-   "obligatorio": true
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_toallero",
+   "de": "va_lavabo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
   },
   {
    "zona": "estancia",
@@ -101,9 +102,9 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "va_armario_bano",
-   "pared": "*",
+   "de": "va_lavabo",
    "cantidad": [
     0,
     1
@@ -135,6 +136,38 @@
    ],
    "obligatorio": false,
    "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_alfombrilla_bano",
+   "de": "va_lavabo",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "lados": [
+    "frente"
+   ],
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_cepillero",
+    "va_jabonera",
+    "va_jabonera"
+   ],
+   "en": [
+    "va_lavabo"
+   ],
+   "por_soporte": [
+    1,
+    1
+   ]
   },
   {
    "zona": "estancia",
@@ -213,7 +246,6 @@
     "prod_esponjas"
    ],
    "en": [
-    "va_lavabo",
     "va_armario_bano"
    ],
    "por_soporte": [

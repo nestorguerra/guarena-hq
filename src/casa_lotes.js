@@ -34,7 +34,7 @@ export function agruparCasa(h) {
     for(const o of candidatos) {
       const m=o.material,t=m.map,slot=atlas&&slots.get(t?.uuid),map=slot?atlas:t;
       const key=JSON.stringify([map?.uuid,m.normalMap?.uuid,m.defines||null,!!o.userData.lamp,m.roughness,m.metalness,m.side,m.transparent,m.opacity,m.alphaTest,m.depthWrite,m.emissive.getHex(),m.emissiveIntensity,m.emissiveMap?.uuid,o.castShadow,o.receiveShadow]);
-      if(!bins.has(key)){const material=m.clone();material.color.set(0xffffff);material.vertexColors=true;if(slot)material.map=atlas;bins.set(key,{material,geos:[],originales:[],cast:o.castShadow,receive:o.receiveShadow});}
+      if(!bins.has(key)){const material=m.clone();material.defines={...m.defines};material.color.set(0xffffff);material.vertexColors=true;if(slot)material.map=atlas;bins.set(key,{material,geos:[],originales:[],cast:o.castShadow,receive:o.receiveShadow});}
       const bin=bins.get(key),g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();
       g.applyMatrix4(inv.clone().multiply(o.matrixWorld));
       const n=g.attributes.position.count,old=g.attributes.color,col=new Float32Array(n*3);

@@ -365,7 +365,7 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
   const SX0 = 2.0, SX1 = 3.12, SZ0 = 5.0, SZ1 = 9.4; // stairs: x range, bottom → top along +z
   const NSTEP = 17;
   // --- materials
-  const mWall = (t) => B.mat('wall' + t, () => std(t,{roughness:.92,defines:{CLAY_TONE:.25,CLAY_CAV:.025,CLAY_RELIEF:.45,CLAY_AMP:.0006}}));
+  const mWall = (t) => B.mat('wall' + t, () => std(t,{roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
   const mOut = B.mat('wallout', () => texMat('white_rough_plaster', 0xf4f0e6, 0.95));
   const mWood = B.mat('wood', () => texMat('herringbone_parquet', 0xffffff, 0.6));
   const mTile = B.mat('tile', () => texMat('floor_tiles_06', 0xffffff, 0.45));

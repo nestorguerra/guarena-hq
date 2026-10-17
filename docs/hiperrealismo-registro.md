@@ -1047,3 +1047,7 @@ Los arreglos del revisor, por su orden:
 - Las evaluaciones de Decision API se conservan, incluidas las rondas desfavorables. No equivalen a verificación funcional ni aprobación del usuario. La publicación solicitada es una versión de prueba; no se afirma superado el objetivo formal de 4/5.
 - Evidencia reproducible: `tools/interiores/casas_pruebas.py --tanda 5`, `validar.py --casas 200 --exigir-todas`, `integracion.py --colisiones` y `integracion.py --paquete`; informes en `data/interiores/validacion/` y fichas en `data/interiores/fichas/`.
 - Se conservan las claves de guardado HQ, Evolución y fija. Las pruebas de partida, caja fuerte, siesta y decoración usan datos ficticios en contexto privado; no se modifican partidas reales del usuario.
+
+## 2026-10-17 · calidad visual por tandas hasta 4/5
+
+El usuario solicita mejorar primero las habitaciones peor puntuadas, composición y contraste, validar y desplegar cada tanda. Tanda 1: taller y baño. Se mantienen rúbrica, umbral y semillas; las capturas registran sus cámaras. Se añaden superficies serenas, revestimientos con huecos recortados, banco a escala doméstica, almacenaje de herramientas y detalle/contraste de lavabo, espejo y armario. La evaluación debe conservar resultados desfavorables y solo declarará 4/5 cuando ambos evaluadores lo alcancen.

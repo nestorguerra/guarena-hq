@@ -211,5 +211,16 @@ export async function probarCasas(opts = {}) {
       }finally{tirar(h);}
     });
   }
+  if(opts.tanda>=6)await caso('los revestimientos dejan libres los huecos de puertas y ventanas',async()=>{
+    const {panosPared}=await import('/src/acabados_vivienda.js');
+    const huecos=[[.8,1.7,0,2.1],[2,2.8,.92,2.08]],p=panosPared(0,4,0,2.95,huecos);
+    const area=p.reduce((a,q)=>a+(q[1]-q[0])*(q[3]-q[2]),0);
+    exigir(Math.abs(area-(4*2.95-.9*2.1-.8*1.16))<1e-8,'el revestimiento cambia el área de los huecos');
+    for(const q of p)for(const h of huecos)exigir(Math.min(q[1],h[1])<=Math.max(q[0],h[0])||Math.min(q[3],h[3])<=Math.max(q[2],h[2]),'un paño tapa un hueco');
+  });
+  if(opts.tanda>=6)await caso('los lotes conservan el acabado sereno de los materiales domésticos',()=>{
+    const h=H.buildVecino(3244,{x:-9700,z:-9700});
+    try{let n=0;h.group.traverse(o=>{if(o.isMesh&&o.material?.defines?.CLAY_RELIEF===.12)n++;});exigir(n>0,'la agrupación ha perdido los parámetros de relieve y contraste del material');}finally{tirar(h);}
+  });
   return { pruebas, errores };
 }

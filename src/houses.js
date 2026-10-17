@@ -12,6 +12,7 @@ import { KITS, OBJETOS } from './interiores_datos.js';
 import { caja, construir } from './objetos.js';
 import { rot, mapaPaso, partes } from './interiores_geo.js';
 import { agruparCasa } from './casa_lotes.js';
+import { revestirEstancia } from './acabados_vivienda.js';
 
 // Una sola correspondencia para montaje, inventario y pruebas. Annie usa otro constructor.
 export function kitDeEstancia(tipo, perfil) {
@@ -285,7 +286,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // ---- materials
   const woodTint = { dark: 0xffffff, pale: 0xf0d4b0, white: 0xf4f2ee, walnut: 0xb89070 }[S.wood];
   const M = {
-    wall: (i) => B.mat('wall' + i, () => ['moderno', 'lujo', 'alegre', 'joven'].includes(prof.style) ? std(S.walls[i % S.walls.length], {roughness:.92,defines:{CLAY_TONE:.25,CLAY_CAV:.025,CLAY_RELIEF:.45,CLAY_AMP:.0006}}) : texMat('painted_plaster_wall', S.walls[i % S.walls.length], 0.9)),
+    wall: (i) => B.mat('wall' + i, () => ['moderno', 'lujo', 'alegre', 'joven'].includes(prof.style) ? std(S.walls[i % S.walls.length], {roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}) : texMat('painted_plaster_wall', S.walls[i % S.walls.length], 0.9)),
     out: B.mat('wallout', () => texMat('white_rough_plaster', 0xf4f0e6, 0.95)),
     ceil: B.mat('ceil', () => texMat('painted_plaster_wall', 0xf8f6f0, 0.95)),
     wood: B.mat('furnwood', () => S.wood === 'white' ? std(0xf2f0ea, { roughness: 0.5 }) : texMat('dark_wood', woodTint, 0.6)),
@@ -558,7 +559,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // patio walls (over them, the roofs of the neighbours)
   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
   B.view('b', -hw, 3.2, D1, hw, 40, D);
-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && rm.type !== 'bano' && rm.type !== 'cocina') {
+  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && rm.type !== 'bano' && rm.type !== 'cocina' && !(rm.type==='taller'&&prof.id!=='artista')) {
     // tiled skirting 1.1 m high round the room (skipping doors)
     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
       const along = side === 's' || side === 'n';
@@ -1134,6 +1135,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
+    revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
     const porKit = amueblarEstancia(rm);
     if (!porKit) switch (rm.type) {
       case 'salon':

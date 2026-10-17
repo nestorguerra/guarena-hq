@@ -99,11 +99,11 @@
   }
  ],
  "contratos": {
-  "pruebas": 20,
+  "pruebas": 22,
   "errores": 0
  },
  "catalogo": {
-  "objetos": 1791,
+  "objetos": 1793,
   "kits": 40,
   "errores": 0,
   "avisos": 0
@@ -112,10 +112,10 @@
  "habitaciones_sinteticas": 1166,
  "errores_casas": 0,
  "maximos_sinteticas": {
-  "triangulos": 41886,
+  "triangulos": 49172,
   "mallas": 59,
   "luces": 9,
-  "montaje_ms": 143.5
+  "montaje_ms": 145.3
  },
  "casas_pueblo": 22,
  "habitaciones_pueblo": 132,
@@ -169,7 +169,8 @@
   "recorridos": 64,
   "recorridos_annie": 32,
   "tuneles": 0,
-  "escapes": 0
+  "escapes": 0,
+  "nota": "Evidencia de la versión base c0c4f53; el barrido no se repite en esta tanda visual. Las acciones y la geometría se validan de nuevo."
  },
  "regeneracion": {
   "archivos": 21,
@@ -205,7 +206,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.658,
+   "minimo": 2.754,
    "maximo": 3.246
   },
   "hashes_fichas_validos": true,
@@ -215,8 +216,8 @@
     "B": 2.998
    },
    "bano": {
-    "A": 2.692,
-    "B": 2.714
+    "A": 2.904,
+    "B": 2.754
    },
    "cocina": {
     "A": 2.948,
@@ -267,8 +268,8 @@
     "B": 3.028
    },
    "taller": {
-    "A": 2.658,
-    "B": 2.688
+    "A": 2.842,
+    "B": 2.942
    },
    "trastero": {
     "A": 2.812,
@@ -279,11 +280,61 @@
     "B": 2.994
    }
   },
-  "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad."
+  "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
+  "objetivo_4": "en curso; tanda 1 evaluada, resto conserva línea base anterior"
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
   "tipo": "versión de prueba autorizada",
   "estado_al_generar": "previo a commit y despliegue; consultar Actions y guarena-revision en la página servida"
+ },
+ "calidad_tanda1": {
+  "fecha": "2026-10-17",
+  "tanda": 1,
+  "objetivo": 4,
+  "estado": "mejora_parcial_objetivo_no_alcanzado",
+  "base": "c0c4f5315d913d07332fc9e7b2439e36d0923d3b",
+  "contratos": 22,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 49172,
+   "mallas": 59,
+   "luces": 9,
+   "montaje_ms": 145.3
+  },
+  "kits": {
+   "taller": {
+    "antes": {
+     "A": 2.658,
+     "B": 2.688
+    },
+    "ahora": {
+     "A": 2.842,
+     "B": 2.942
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   },
+   "bano": {
+    "antes": {
+     "A": 2.692,
+     "B": 2.714
+    },
+    "ahora": {
+     "A": 2.904,
+     "B": 2.754
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0,
+   "partida_ficticia_conservada": true
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda1_2026-10-17.md",
+  "pendiente": "Riqueza y actividad de reparación en taller; detalle y composición del baño; objetivo 4/5 en todas las salas."
  }
 }

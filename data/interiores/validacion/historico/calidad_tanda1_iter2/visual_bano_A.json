@@ -1,0 +1,224 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_5d90808f022144608bef5a6cbcf3d63e",
+ "request_sha256": "9ce7bb3cbe1178acfad4f30f1de4ccb9b605f251376380c470988806222b5def",
+ "fecha": "2026-10-17T15:16:30.095625+00:00",
+ "kit": "bano",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_bano.jpg",
+ "ficha_sha256": "0d6adb598b1765414faf87e5049f33295e5339eb63f76342229c46e187343471",
+ "referencias": [
+  {
+   "titulo": "Bathroom, Interior of apartment in Brisbane, 2025, 07.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_07.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_07.jpg/960px-Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Bathroom, Interior of apartment in Brisbane, 2025, 08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_08.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_08.jpg/960px-Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.63,
+  "coherencia": 2.65,
+  "iluminacion": 3.02,
+  "variedad": 2.82,
+  "lectura_funcional": 2.84
+ },
+ "media": 2.792,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.63,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.36
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.62
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.68
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.65,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.36
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.58
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.63
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.02,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.71
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.13
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.73
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.82,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.19
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.77
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.8
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.84,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.15
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.83
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.85
+  }
+ ],
+ "uso": {
+  "input_tokens": 4856,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4856
+ }
+}

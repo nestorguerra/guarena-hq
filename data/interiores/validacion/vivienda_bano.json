@@ -91,10 +91,10 @@
    "seed": 1,
    "W": 6.2,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "1a571d7",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "8aaea3a2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -110,18 +110,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -145,29 +145,39 @@
     },
     {
      "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
      "n": 5
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
-     "n": 2
+     "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.55,
-     "libre_m2": 10.56
+     "alcanzable_m2": 10.42,
+     "libre_m2": 10.42
     }
    },
    "luz": {
-    "estancia": 0.125
+    "estancia": 0.113
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1214,
-   "mallas": 13,
-   "luces": 2,
+   "triangulos": 1276,
+   "mallas": 14,
+   "luces": 3,
    "determinista": true
   },
   {
@@ -177,9 +187,9 @@
    "W": 5.9,
    "D": 2.1999999999999997,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "700e31e2",
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "51c2f4a9",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -195,12 +205,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -230,19 +240,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.44,
-     "libre_m2": 5.44
+     "alcanzable_m2": 4.72,
+     "libre_m2": 4.72
     }
    },
    "luz": {
@@ -250,8 +270,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1358,
-   "mallas": 13,
+   "triangulos": 1212,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -262,10 +282,10 @@
    "seed": 3,
    "W": 5,
    "D": 1.9,
-   "guardias": 8,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "6fe9d79a",
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "c6607c6",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -281,18 +301,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -311,19 +331,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.6,
-     "libre_m2": 3.6
+     "alcanzable_m2": 3.49,
+     "libre_m2": 3.49
     }
    },
    "luz": {
@@ -331,8 +361,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1214,
-   "mallas": 13,
+   "triangulos": 994,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -344,9 +374,9 @@
    "W": 4.4,
    "D": 3.6999999999999997,
    "guardias": 8,
-   "objetos": 16,
+   "objetos": 15,
    "distintos": 14,
-   "hash": "50d770ea",
+   "hash": "c19d4ab",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -362,12 +392,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -397,19 +427,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.48,
-     "libre_m2": 8.48
+     "alcanzable_m2": 8.23,
+     "libre_m2": 8.23
     }
    },
    "luz": {
@@ -417,8 +457,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1970,
-   "mallas": 13,
+   "triangulos": 1114,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -429,10 +469,10 @@
    "seed": 5,
    "W": 6.5,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 16,
+   "guardias": 8,
+   "objetos": 15,
    "distintos": 13,
-   "hash": "77213be3",
+   "hash": "79b63906",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -448,18 +488,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -483,19 +523,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.93,
-     "libre_m2": 10.93
+     "alcanzable_m2": 11.09,
+     "libre_m2": 11.09
     }
    },
    "luz": {
@@ -503,8 +553,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2306,
-   "mallas": 13,
+   "triangulos": 1252,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -516,9 +566,9 @@
    "W": 3.5,
    "D": 3.0999999999999996,
    "guardias": 8,
-   "objetos": 13,
-   "distintos": 13,
-   "hash": "a8a31a81",
+   "objetos": 12,
+   "distintos": 12,
+   "hash": "f21a8cea",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -534,12 +584,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -569,19 +619,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.99,
-     "libre_m2": 3.99
+     "alcanzable_m2": 4,
+     "libre_m2": 4
     }
    },
    "luz": {
@@ -589,8 +649,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2872,
-   "mallas": 12,
+   "triangulos": 992,
+   "mallas": 10,
    "luces": 1,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -602,9 +662,9 @@
    "W": 4.7,
    "D": 1.9,
    "guardias": 7,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "53b07482",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "88b82699",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -620,12 +680,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -650,19 +710,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.31,
-     "libre_m2": 3.31
+     "alcanzable_m2": 3.49,
+     "libre_m2": 3.49
     }
    },
    "luz": {
@@ -670,8 +740,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1708,
-   "mallas": 14,
+   "triangulos": 1054,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -683,9 +753,9 @@
    "W": 5.9,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "5d1272b1",
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "99aa77d2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -701,12 +771,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -736,19 +806,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 3
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.54,
-     "libre_m2": 11.54
+     "alcanzable_m2": 10.99,
+     "libre_m2": 10.99
     }
    },
    "luz": {
@@ -756,8 +836,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1452,
-   "mallas": 12,
+   "triangulos": 1276,
+   "mallas": 14,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -771,7 +851,7 @@
    "guardias": 7,
    "objetos": 14,
    "distintos": 13,
-   "hash": "a121fadf",
+   "hash": "be90edac",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -787,12 +867,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -817,19 +897,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.81,
-     "libre_m2": 2.81
+     "alcanzable_m2": 2.41,
+     "libre_m2": 2.41
     }
    },
    "luz": {
@@ -837,7 +927,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 902,
+   "triangulos": 1082,
    "mallas": 13,
    "luces": 2,
    "determinista": true,
@@ -850,9 +940,9 @@
    "W": 3.8000000000000003,
    "D": 2.5,
    "guardias": 7,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "54821a5",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "d0ed513d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -868,12 +958,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -898,19 +988,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.03,
-     "libre_m2": 4.03
+     "alcanzable_m2": 3.91,
+     "libre_m2": 3.91
     }
    },
    "luz": {
@@ -918,8 +1018,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 928,
-   "mallas": 14,
+   "triangulos": 1008,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -933,7 +1033,7 @@
    "guardias": 8,
    "objetos": 14,
    "distintos": 13,
-   "hash": "937750d0",
+   "hash": "ca077e3c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -949,12 +1049,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -984,19 +1084,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.05,
-     "libre_m2": 4.05
+     "alcanzable_m2": 3.6,
+     "libre_m2": 3.6
     }
    },
    "luz": {
@@ -1004,8 +1114,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1008,
-   "mallas": 12,
+   "triangulos": 1102,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1017,9 +1127,9 @@
    "W": 6.2,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "9fd22ad2",
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "2c762d38",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1035,12 +1145,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1070,19 +1180,29 @@
     },
     {
      "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
      "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.4,
-     "libre_m2": 12.4
+     "alcanzable_m2": 11.63,
+     "libre_m2": 11.63
     }
    },
    "luz": {
@@ -1090,8 +1210,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2856,
-   "mallas": 12,
+   "triangulos": 1324,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1103,9 +1223,9 @@
    "W": 6.2,
    "D": 1.9,
    "guardias": 8,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "70216ea2",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "a44c6b38",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1121,12 +1241,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1156,19 +1276,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.05,
-     "libre_m2": 4.05
+     "alcanzable_m2": 3.69,
+     "libre_m2": 3.69
     }
    },
    "luz": {
@@ -1176,11 +1306,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2130,
-   "mallas": 15,
+   "triangulos": 1238,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
-   "diferencia_con_semilla_1": 0.944
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_bano",
@@ -1188,10 +1318,10 @@
    "seed": 14,
    "W": 6.2,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "653b5f12",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "74213dc8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1207,18 +1337,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -1242,31 +1372,41 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.21,
-     "libre_m2": 12.21
+     "alcanzable_m2": 11.95,
+     "libre_m2": 11.95
     }
    },
    "luz": {
-    "estancia": 0.118
+    "estancia": 0.116
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1452,
+   "triangulos": 1188,
    "mallas": 12,
-   "luces": 3,
+   "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 0.941
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_bano",
@@ -1275,9 +1415,9 @@
    "W": 3.5,
    "D": 3.6999999999999997,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "fd20cf47",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "e92bd901",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1293,12 +1433,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1328,19 +1468,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.59,
-     "libre_m2": 5.59
+     "alcanzable_m2": 5.78,
+     "libre_m2": 5.78
     }
    },
    "luz": {
@@ -1348,8 +1498,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2982,
-   "mallas": 13,
+   "triangulos": 1064,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1360,10 +1510,10 @@
    "seed": 16,
    "W": 6.2,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 15,
-   "hash": "96d348dd",
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "d3d0b8f2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1379,18 +1529,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -1414,29 +1564,39 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
-     "obj": "vb_plafon",
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
      "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.12,
-     "libre_m2": 7.12
+     "alcanzable_m2": 7.16,
+     "libre_m2": 7.16
     }
    },
    "luz": {
-    "estancia": 0.145
+    "estancia": 0.226
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1098,
-   "mallas": 15,
-   "luces": 2,
+   "triangulos": 1282,
+   "mallas": 11,
+   "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1447,9 +1607,9 @@
    "W": 6.2,
    "D": 2.1999999999999997,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "97c694a7",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "b01e087b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1465,12 +1625,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1500,19 +1660,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.55,
-     "libre_m2": 5.55
+     "alcanzable_m2": 5.12,
+     "libre_m2": 5.12
     }
    },
    "luz": {
@@ -1520,8 +1690,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2306,
-   "mallas": 13,
+   "triangulos": 1248,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1533,9 +1703,9 @@
    "W": 4.1,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "87f51f80",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "ab7c2487",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1551,12 +1721,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1586,19 +1756,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.14,
-     "libre_m2": 4.14
+     "alcanzable_m2": 4.48,
+     "libre_m2": 4.48
     }
    },
    "luz": {
@@ -1606,8 +1786,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1982,
-   "mallas": 13,
+   "triangulos": 1092,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1618,10 +1798,10 @@
    "seed": 19,
    "W": 5.6,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "610ca46",
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "eec010ec",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1637,18 +1817,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -1672,19 +1852,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.4,
-     "libre_m2": 7.4
+     "alcanzable_m2": 7.55,
+     "libre_m2": 7.55
     }
    },
    "luz": {
@@ -1692,8 +1882,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1100,
-   "mallas": 16,
+   "triangulos": 1166,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1705,9 +1895,9 @@
    "W": 6.2,
    "D": 2.5,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "394f211d",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "a78d6898",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1723,12 +1913,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1758,19 +1948,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.07,
-     "libre_m2": 7.07
+     "alcanzable_m2": 6.73,
+     "libre_m2": 6.73
     }
    },
    "luz": {
@@ -1778,8 +1978,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1434,
-   "mallas": 15,
+   "triangulos": 1358,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1791,9 +1991,9 @@
    "W": 5.6,
    "D": 2.1999999999999997,
    "guardias": 8,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "63a0a1d9",
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "48436649",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1809,12 +2009,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -1844,19 +2044,29 @@
     },
     {
      "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
      "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.22,
-     "libre_m2": 4.22
+     "alcanzable_m2": 5.07,
+     "libre_m2": 5.07
     }
    },
    "luz": {
@@ -1864,7 +2074,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1322,
+   "triangulos": 1166,
    "mallas": 13,
    "luces": 2,
    "determinista": true,
@@ -1877,778 +2087,9 @@
    "W": 4.4,
    "D": 2.5,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "46d2809e",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.31,
-     "libre_m2": 4.31
-    }
-   },
-   "luz": {
-    "estancia": 0.203
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1024,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 23,
-   "W": 4.4,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "21b4822f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.11,
-     "libre_m2": 4.11
-    }
-   },
-   "luz": {
-    "estancia": 0.203
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1414,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 24,
-   "W": 5.300000000000001,
-   "D": 2.8,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "2929263d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.54,
-     "libre_m2": 6.54
-    }
-   },
-   "luz": {
-    "estancia": 0.15
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2092,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 25,
-   "W": 7.7,
-   "D": 2.8,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "5f0185a3",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.87,
-     "libre_m2": 11.87
-    }
-   },
-   "luz": {
-    "estancia": 0.171
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2306,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 26,
-   "W": 6.5,
-   "D": 2.8,
-   "guardias": 8,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "c2a56ccc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.58,
-     "libre_m2": 9.58
-    }
-   },
-   "luz": {
-    "estancia": 0.201
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2896,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 27,
-   "W": 6.5,
-   "D": 2.8,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 15,
-   "hash": "2d6a669e",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.99,
-     "libre_m2": 8.99
-    }
-   },
-   "luz": {
-    "estancia": 0.201
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1178,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 28,
-   "W": 7.1,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 12,
-   "hash": "f7bc3aac",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.59,
-     "libre_m2": 12.59
-    }
-   },
-   "luz": {
-    "estancia": 0.171
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1588,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 29,
-   "W": 5.9,
-   "D": 1.9,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "99e6f87a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.51,
-     "libre_m2": 3.51
-    }
-   },
-   "luz": {
-    "estancia": 0.172
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2226,
-   "mallas": 15,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 30,
-   "W": 3.8000000000000003,
-   "D": 2.5,
-   "guardias": 8,
    "objetos": 15,
-   "distintos": 13,
-   "hash": "fae12d65",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.96,
-     "libre_m2": 3.96
-    }
-   },
-   "luz": {
-    "estancia": 0.227
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1212,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 31,
-   "W": 5,
-   "D": 2.8,
-   "guardias": 9,
-   "objetos": 17,
    "distintos": 14,
-   "hash": "ad098ec6",
+   "hash": "beb79cba",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2664,265 +2105,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_ducha",
      "n": 1
     },
     {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.64,
-     "libre_m2": 6.64
-    }
-   },
-   "luz": {
-    "estancia": 0.168
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2044,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 32,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "31659852",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
      "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.97,
-     "libre_m2": 6.97
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2170,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 33,
-   "W": 4.1,
-   "D": 2.1999999999999997,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "4472eccf",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
      "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.6,
-     "libre_m2": 3.6
-    }
-   },
-   "luz": {
-    "estancia": 0.23
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2102,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 34,
-   "W": 7.4,
-   "D": 3.0999999999999996,
-   "guardias": 8,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "214d23f5",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
      "n": 1
     },
     {
@@ -2952,2303 +2140,21 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 13.16,
-     "libre_m2": 13.16
-    }
-   },
-   "luz": {
-    "estancia": 0.164
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3168,
-   "mallas": 16,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 35,
-   "W": 7.4,
-   "D": 3.4,
-   "guardias": 8,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "3d6c618f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
+     "obj": "va_alfombrilla_bano",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_armario_bano",
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
      "n": 4
     },
     {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.38,
-     "libre_m2": 15.38
-    }
-   },
-   "luz": {
-    "estancia": 0.151
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1672,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 36,
-   "W": 3.5,
-   "D": 2.8,
-   "guardias": 7,
-   "objetos": 17,
-   "distintos": 17,
-   "hash": "dc9e74b2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 9
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.37,
-     "libre_m2": 4.37
-    }
-   },
-   "luz": {
-    "estancia": 0.098
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 856,
-   "mallas": 14,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 37,
-   "W": 7.1,
-   "D": 2.8,
-   "guardias": 8,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "f731f929",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.72,
-     "libre_m2": 10.72
-    }
-   },
-   "luz": {
-    "estancia": 0.185
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1144,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 38,
-   "W": 3.2,
-   "D": 2.8,
-   "guardias": 7,
-   "objetos": 13,
-   "distintos": 13,
-   "hash": "5e08bbea",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.84,
-     "libre_m2": 3.84
-    }
-   },
-   "luz": {
-    "estancia": 0.115
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 808,
-   "mallas": 14,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 39,
-   "W": 7.7,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "bf966d4f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.71,
-     "libre_m2": 9.71
-    }
-   },
-   "luz": {
-    "estancia": 0.183
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2670,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 40,
-   "W": 5.6,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "fd513a68",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6,
-     "libre_m2": 6
-    }
-   },
-   "luz": {
-    "estancia": 0.162
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3560,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 41,
-   "W": 3.8000000000000003,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "bed8a62a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.24,
-     "libre_m2": 4.24
-    }
-   },
-   "luz": {
-    "estancia": 0.227
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1896,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 42,
-   "W": 5.300000000000001,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "798e5440",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.71,
-     "libre_m2": 5.71
-    }
-   },
-   "luz": {
-    "estancia": 0.161
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3576,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 43,
-   "W": 4.1,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "c2d3430a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.54,
-     "libre_m2": 5.54
-    }
-   },
-   "luz": {
-    "estancia": 0.182
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1046,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 44,
-   "W": 3.8000000000000003,
-   "D": 2.1999999999999997,
-   "guardias": 7,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "626b5f78",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 2.98,
-     "libre_m2": 2.98
-    }
-   },
-   "luz": {
-    "estancia": 0.245
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2526,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 45,
-   "W": 7.7,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 15,
-   "hash": "1672fc21",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.84,
-     "libre_m2": 9.84
-    }
-   },
-   "luz": {
-    "estancia": 0.183
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1178,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.944
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 46,
-   "W": 4.1,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "f909ff21",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.71,
-     "libre_m2": 3.71
-    }
-   },
-   "luz": {
-    "estancia": 0.215
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2638,
-   "mallas": 15,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 47,
-   "W": 7.4,
-   "D": 2.8,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 14,
-   "hash": "f44c46ed",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.31,
-     "libre_m2": 11.31
-    }
-   },
-   "luz": {
-    "estancia": 0.178
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2330,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 48,
-   "W": 5.6,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "d16c84df",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.84,
-     "libre_m2": 8.84
-    }
-   },
-   "luz": {
-    "estancia": 0.139
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1476,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.938
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 49,
-   "W": 3.5,
-   "D": 3.4,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "c33793f5",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.47,
-     "libre_m2": 4.47
-    }
-   },
-   "luz": {
-    "estancia": 0.085
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1234,
-   "mallas": 11,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 50,
-   "W": 6.2,
-   "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "4fca93c7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.82,
-     "libre_m2": 5.82
-    }
-   },
-   "luz": {
-    "estancia": 0.242
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1450,
-   "mallas": 11,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 51,
-   "W": 3.5,
-   "D": 1.9,
-   "guardias": 7,
-   "objetos": 15,
-   "distintos": 15,
-   "hash": "7a73cbf6",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 0.55,
-     "libre_m2": 1.54
-    }
-   },
-   "luz": {
-    "estancia": 0.117
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 830,
-   "mallas": 13,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 52,
-   "W": 4.1,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "676dbfde",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.44,
-     "libre_m2": 3.44
-    }
-   },
-   "luz": {
-    "estancia": 0.215
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1026,
-   "mallas": 15,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 53,
-   "W": 3.5,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "8f0e3122",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.5,
-     "libre_m2": 3.5
-    }
-   },
-   "luz": {
-    "estancia": 0.105
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 866,
-   "mallas": 13,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 54,
-   "W": 5.9,
-   "D": 3.0999999999999996,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "63148ef0",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.92,
-     "libre_m2": 9.92
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1068,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 55,
-   "W": 5.9,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "137a9dd7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 9
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.75,
-     "libre_m2": 6.75
-    }
-   },
-   "luz": {
-    "estancia": 0.153
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1098,
-   "mallas": 15,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 56,
-   "W": 4.4,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "991beebc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.96,
-     "libre_m2": 3.96
-    }
-   },
-   "luz": {
-    "estancia": 0.203
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1404,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 57,
-   "W": 5.9,
-   "D": 2.5,
-   "guardias": 8,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "85bae5cc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.23,
-     "libre_m2": 6.23
-    }
-   },
-   "luz": {
-    "estancia": 0.153
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1994,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 58,
-   "W": 4.7,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "238c01b3",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.45,
-     "libre_m2": 4.45
-    }
-   },
-   "luz": {
-    "estancia": 0.191
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1296,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 59,
-   "W": 6.5,
-   "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "7fe24e3a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.9,
-     "libre_m2": 5.9
-    }
-   },
-   "luz": {
-    "estancia": 0.231
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1154,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 60,
-   "W": 5.300000000000001,
-   "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "d69c0d06",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.06,
-     "libre_m2": 4.06
-    }
-   },
-   "luz": {
-    "estancia": 0.172
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2198,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_bano",
-   "tipologia": "bano",
-   "seed": 61,
-   "W": 4.4,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "32b7b8ba",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_lavabo",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_espejo",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_inodoro",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_ducha",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_toallero",
-     "n": 2
-    },
-    {
-     "entrada": 5,
-     "obj": "va_papel",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_armario_bano",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_banera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cesto_ropa",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
-    },
-    {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -5264,8 +2170,3712 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1022,
+   "triangulos": 1116,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 23,
+   "W": 4.4,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "ccd14377",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.98,
+     "libre_m2": 3.98
+    }
+   },
+   "luz": {
+    "estancia": 0.203
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1176,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 24,
+   "W": 5.300000000000001,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "7e46a31d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.97,
+     "libre_m2": 6.97
+    }
+   },
+   "luz": {
+    "estancia": 0.15
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1152,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 25,
+   "W": 7.7,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "c48cd238",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.91,
+     "libre_m2": 11.91
+    }
+   },
+   "luz": {
+    "estancia": 0.171
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1322,
    "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 26,
+   "W": 6.5,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "94d71c07",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.57,
+     "libre_m2": 9.57
+    }
+   },
+   "luz": {
+    "estancia": 0.201
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1238,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 27,
+   "W": 6.5,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "b52d4c61",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.39,
+     "libre_m2": 9.39
+    }
+   },
+   "luz": {
+    "estancia": 0.201
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1310,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 28,
+   "W": 7.1,
+   "D": 3.0999999999999996,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "33b15d41",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.41,
+     "libre_m2": 12.41
+    }
+   },
+   "luz": {
+    "estancia": 0.171
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1356,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 29,
+   "W": 5.9,
+   "D": 1.9,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "3fc197db",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.6,
+     "libre_m2": 3.6
+    }
+   },
+   "luz": {
+    "estancia": 0.172
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1154,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 30,
+   "W": 3.8000000000000003,
+   "D": 2.5,
+   "guardias": 7,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "291d56ca",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.12,
+     "libre_m2": 4.12
+    }
+   },
+   "luz": {
+    "estancia": 0.227
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 980,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 31,
+   "W": 5,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "b375206a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.54,
+     "libre_m2": 6.54
+    }
+   },
+   "luz": {
+    "estancia": 0.168
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1178,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 32,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "9b943c7b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.84,
+     "libre_m2": 6.84
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1092,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 33,
+   "W": 4.1,
+   "D": 2.1999999999999997,
+   "guardias": 7,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "f41213b6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.52,
+     "libre_m2": 3.52
+    }
+   },
+   "luz": {
+    "estancia": 0.23
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1018,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 34,
+   "W": 7.4,
+   "D": 3.0999999999999996,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "29fe96df",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.14,
+     "libre_m2": 13.14
+    }
+   },
+   "luz": {
+    "estancia": 0.164
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1296,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 35,
+   "W": 7.4,
+   "D": 3.4,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "d1e72bd5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.11,
+     "libre_m2": 15.11
+    }
+   },
+   "luz": {
+    "estancia": 0.151
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1284,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 36,
+   "W": 3.5,
+   "D": 2.8,
+   "guardias": 7,
+   "objetos": 11,
+   "distintos": 11,
+   "hash": "fecc9820",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.12,
+     "libre_m2": 4.12
+    }
+   },
+   "luz": {
+    "estancia": 0.098
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 898,
+   "mallas": 11,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 37,
+   "W": 7.1,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "307bed59",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.62,
+     "libre_m2": 10.62
+    }
+   },
+   "luz": {
+    "estancia": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1310,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 38,
+   "W": 3.2,
+   "D": 2.8,
+   "guardias": 7,
+   "objetos": 11,
+   "distintos": 11,
+   "hash": "6373c885",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.62,
+     "libre_m2": 3.62
+    }
+   },
+   "luz": {
+    "estancia": 0.115
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 958,
+   "mallas": 11,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 39,
+   "W": 7.7,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "271992f9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.68,
+     "libre_m2": 9.68
+    }
+   },
+   "luz": {
+    "estancia": 0.183
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1296,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 40,
+   "W": 5.6,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "fee3d99",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.09,
+     "libre_m2": 6.09
+    }
+   },
+   "luz": {
+    "estancia": 0.162
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1166,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 41,
+   "W": 3.8000000000000003,
+   "D": 2.5,
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "490e4619",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.09,
+     "libre_m2": 4.09
+    }
+   },
+   "luz": {
+    "estancia": 0.227
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 994,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 42,
+   "W": 5.300000000000001,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "3a7d106d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.36,
+     "libre_m2": 5.36
+    }
+   },
+   "luz": {
+    "estancia": 0.161
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1140,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 43,
+   "W": 4.1,
+   "D": 3.0999999999999996,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "b9e05a7e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.47,
+     "libre_m2": 5.47
+    }
+   },
+   "luz": {
+    "estancia": 0.182
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1152,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 44,
+   "W": 3.8000000000000003,
+   "D": 2.1999999999999997,
+   "guardias": 7,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "3721cc70",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.51,
+     "libre_m2": 3.51
+    }
+   },
+   "luz": {
+    "estancia": 0.245
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1020,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 45,
+   "W": 7.7,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "e41e6bf8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.48,
+     "libre_m2": 9.48
+    }
+   },
+   "luz": {
+    "estancia": 0.183
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1262,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 46,
+   "W": 4.1,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "c2f47543",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.44,
+     "libre_m2": 3.44
+    }
+   },
+   "luz": {
+    "estancia": 0.215
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1114,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 47,
+   "W": 7.4,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "c9c56b84",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.28,
+     "libre_m2": 11.28
+    }
+   },
+   "luz": {
+    "estancia": 0.178
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1370,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 48,
+   "W": 5.6,
+   "D": 3.0999999999999996,
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "44669fc7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.04,
+     "libre_m2": 9.04
+    }
+   },
+   "luz": {
+    "estancia": 0.139
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1224,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 49,
+   "W": 3.5,
+   "D": 3.4,
+   "guardias": 8,
+   "objetos": 10,
+   "distintos": 10,
+   "hash": "9dcfdf92",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.53,
+     "libre_m2": 4.53
+    }
+   },
+   "luz": {
+    "estancia": 0.085
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 968,
+   "mallas": 10,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 50,
+   "W": 6.2,
+   "D": 2.1999999999999997,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "5eba16bd",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.11,
+     "libre_m2": 5.11
+    }
+   },
+   "luz": {
+    "estancia": 0.242
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1284,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 51,
+   "W": 3.5,
+   "D": 1.9,
+   "guardias": 7,
+   "objetos": 11,
+   "distintos": 11,
+   "hash": "76ee16e4",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 1.7,
+     "libre_m2": 1.7
+    }
+   },
+   "luz": {
+    "estancia": 0.117
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 956,
+   "mallas": 10,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 52,
+   "W": 4.1,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "27798669",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.72,
+     "libre_m2": 3.72
+    }
+   },
+   "luz": {
+    "estancia": 0.215
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1092,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 53,
+   "W": 3.5,
+   "D": 2.5,
+   "guardias": 7,
+   "objetos": 13,
+   "distintos": 13,
+   "hash": "91d08d30",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.5,
+     "libre_m2": 3.5
+    }
+   },
+   "luz": {
+    "estancia": 0.105
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 924,
+   "mallas": 12,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 54,
+   "W": 5.9,
+   "D": 3.0999999999999996,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "8e89e0b8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.32,
+     "libre_m2": 9.32
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1140,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 55,
+   "W": 5.9,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "8ef54792",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.56,
+     "libre_m2": 6.56
+    }
+   },
+   "luz": {
+    "estancia": 0.153
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1142,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 56,
+   "W": 4.4,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "850ecbf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.89,
+     "libre_m2": 3.89
+    }
+   },
+   "luz": {
+    "estancia": 0.203
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1136,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 57,
+   "W": 5.9,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "5c73ace0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.5,
+     "libre_m2": 6.5
+    }
+   },
+   "luz": {
+    "estancia": 0.153
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1198,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 58,
+   "W": 4.7,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "6fa288f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.7,
+     "libre_m2": 4.7
+    }
+   },
+   "luz": {
+    "estancia": 0.191
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1210,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 59,
+   "W": 6.5,
+   "D": 2.1999999999999997,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "49d8f4e4",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.96,
+     "libre_m2": 5.96
+    }
+   },
+   "luz": {
+    "estancia": 0.231
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1342,
+   "mallas": 11,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 60,
+   "W": 5.300000000000001,
+   "D": 2.1999999999999997,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "c37570d6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.46,
+     "libre_m2": 4.46
+    }
+   },
+   "luz": {
+    "estancia": 0.172
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1152,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_bano",
+   "tipologia": "bano",
+   "seed": 61,
+   "W": 4.4,
+   "D": 2.5,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "7d929014",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_espejo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_ducha",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_inodoro",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_toallero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_papel",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_armario_bano",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alfombrilla_bano",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.33,
+     "libre_m2": 4.33
+    }
+   },
+   "luz": {
+    "estancia": 0.203
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1088,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5276,10 +5886,10 @@
    "seed": 62,
    "W": 7.1,
    "D": 1.9,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "52289f73",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "b7d7a737",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5295,18 +5905,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5330,19 +5940,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 4
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 5
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.01,
-     "libre_m2": 5.01
+     "alcanzable_m2": 4.97,
+     "libre_m2": 4.97
     }
    },
    "luz": {
@@ -5350,8 +5970,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1154,
-   "mallas": 13,
+   "triangulos": 1276,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5362,10 +5982,10 @@
    "seed": 63,
    "W": 3.5,
    "D": 2.8,
-   "guardias": 8,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "1b6abd51",
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 12,
+   "hash": "530677ff",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5381,18 +6001,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5411,19 +6031,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.51,
-     "libre_m2": 4.51
+     "alcanzable_m2": 4.35,
+     "libre_m2": 4.35
     }
    },
    "luz": {
@@ -5431,8 +6061,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1288,
-   "mallas": 14,
+   "triangulos": 912,
+   "mallas": 12,
    "luces": 1,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5443,10 +6073,10 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "d2932866",
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "72523f64",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5462,18 +6092,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5497,19 +6127,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.13,
-     "libre_m2": 3.13
+     "alcanzable_m2": 3.09,
+     "libre_m2": 3.09
     }
    },
    "luz": {
@@ -5517,11 +6157,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1034,
-   "mallas": 13,
+   "triangulos": 1270,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 0.941
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_bano",
@@ -5530,9 +6170,9 @@
    "W": 7.4,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 19,
-   "distintos": 17,
-   "hash": "5e0188f8",
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "18821f9c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5548,12 +6188,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -5583,19 +6223,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.98,
-     "libre_m2": 10.98
+     "alcanzable_m2": 10.96,
+     "libre_m2": 10.96
     }
    },
    "luz": {
@@ -5603,8 +6253,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1184,
-   "mallas": 16,
+   "triangulos": 1296,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5615,10 +6265,10 @@
    "seed": 66,
    "W": 5.9,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "c8f4f684",
+   "guardias": 8,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "6396e357",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5634,18 +6284,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5669,19 +6319,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.13,
-     "libre_m2": 11.13
+     "alcanzable_m2": 11.35,
+     "libre_m2": 11.35
     }
    },
    "luz": {
@@ -5689,8 +6349,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1072,
-   "mallas": 14,
+   "triangulos": 1126,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5702,9 +6362,9 @@
    "W": 5.6,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "b270277e",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "562343a6",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5720,12 +6380,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -5755,19 +6415,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.46,
-     "libre_m2": 10.46
+     "alcanzable_m2": 10.04,
+     "libre_m2": 10.04
     }
    },
    "luz": {
@@ -5775,8 +6445,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2660,
-   "mallas": 14,
+   "triangulos": 1202,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5787,10 +6457,10 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "f6c7f852",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "7e866c79",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5806,18 +6476,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5841,19 +6511,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.09,
-     "libre_m2": 5.09
+     "alcanzable_m2": 4.69,
+     "libre_m2": 4.69
     }
    },
    "luz": {
@@ -5861,8 +6541,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1072,
-   "mallas": 14,
+   "triangulos": 1248,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5873,10 +6553,10 @@
    "seed": 69,
    "W": 7.7,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 18,
-   "distintos": 15,
-   "hash": "4650f89d",
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "c54592ff",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5892,18 +6572,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -5927,19 +6607,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.53,
-     "libre_m2": 13.53
+     "alcanzable_m2": 13.94,
+     "libre_m2": 13.94
     }
    },
    "luz": {
@@ -5947,8 +6637,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2142,
-   "mallas": 15,
+   "triangulos": 1296,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5959,10 +6649,10 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "666058a1",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "376d7e64",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5978,18 +6668,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -6013,19 +6703,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.63,
-     "libre_m2": 8.63
+     "alcanzable_m2": 8.22,
+     "libre_m2": 8.22
     }
    },
    "luz": {
@@ -6033,8 +6733,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1084,
-   "mallas": 14,
+   "triangulos": 1200,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6045,10 +6745,10 @@
    "seed": 71,
    "W": 5,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "42e66240",
+   "guardias": 8,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "9e3b417b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6064,18 +6764,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -6099,19 +6799,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.28,
-     "libre_m2": 6.28
+     "alcanzable_m2": 6.41,
+     "libre_m2": 6.41
     }
    },
    "luz": {
@@ -6119,8 +6829,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1404,
-   "mallas": 12,
+   "triangulos": 1136,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6131,10 +6841,10 @@
    "seed": 72,
    "W": 7.7,
    "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "f933b5ba",
+   "guardias": 8,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "9a91bfb4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6150,18 +6860,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -6185,19 +6895,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.79,
-     "libre_m2": 7.79
+     "alcanzable_m2": 7.62,
+     "libre_m2": 7.62
     }
    },
    "luz": {
@@ -6205,8 +6925,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1706,
-   "mallas": 13,
+   "triangulos": 1416,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6218,9 +6938,9 @@
    "W": 3.5,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 14,
-   "distintos": 14,
-   "hash": "8ccd402d",
+   "objetos": 12,
+   "distintos": 12,
+   "hash": "9e25aaea",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6236,12 +6956,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6271,19 +6991,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 5
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.98,
-     "libre_m2": 4.98
+     "alcanzable_m2": 4.65,
+     "libre_m2": 4.65
     }
    },
    "luz": {
@@ -6291,8 +7021,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1668,
-   "mallas": 12,
+   "triangulos": 994,
+   "mallas": 11,
    "luces": 1,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6304,9 +7034,9 @@
    "W": 6.5,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 19,
-   "distintos": 17,
-   "hash": "ee80f35a",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "d4ed8752",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6322,12 +7052,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6357,19 +7087,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.82,
-     "libre_m2": 12.82
+     "alcanzable_m2": 12.32,
+     "libre_m2": 12.32
     }
    },
    "luz": {
@@ -6377,8 +7117,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1206,
-   "mallas": 15,
+   "triangulos": 1234,
+   "mallas": 11,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6390,9 +7130,9 @@
    "W": 7.4,
    "D": 3.0999999999999996,
    "guardias": 8,
-   "objetos": 19,
-   "distintos": 17,
-   "hash": "5534adf0",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "5252b14c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6408,12 +7148,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6443,19 +7183,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.24,
-     "libre_m2": 13.24
+     "alcanzable_m2": 13.27,
+     "libre_m2": 13.27
     }
    },
    "luz": {
@@ -6463,8 +7213,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1468,
-   "mallas": 14,
+   "triangulos": 1296,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6476,9 +7226,9 @@
    "W": 4.7,
    "D": 2.1999999999999997,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "b5dde468",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "a77f9a05",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6494,12 +7244,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6529,19 +7279,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.36,
-     "libre_m2": 3.36
+     "alcanzable_m2": 2.96,
+     "libre_m2": 2.96
     }
    },
    "luz": {
@@ -6549,8 +7309,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1010,
-   "mallas": 13,
+   "triangulos": 1088,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6562,9 +7322,9 @@
    "W": 7.4,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "e03a02bc",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "2ac71528",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6580,12 +7340,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6615,19 +7375,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.12,
-     "libre_m2": 15.12
+     "alcanzable_m2": 15.17,
+     "libre_m2": 15.17
     }
    },
    "luz": {
@@ -6635,8 +7405,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1444,
-   "mallas": 14,
+   "triangulos": 1298,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6647,10 +7417,10 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.1999999999999997,
-   "guardias": 9,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "54b5c9d2",
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "370f66af",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6666,18 +7436,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -6701,19 +7471,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 7
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.86,
-     "libre_m2": 6.86
+     "alcanzable_m2": 6.14,
+     "libre_m2": 6.14
     }
    },
    "luz": {
@@ -6721,8 +7501,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2794,
-   "mallas": 15,
+   "triangulos": 1322,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6734,9 +7514,9 @@
    "W": 6.8,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "d24685ea",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "7fc17fbf",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6752,12 +7532,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6787,19 +7567,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 6
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.4,
-     "libre_m2": 10.4
+     "alcanzable_m2": 10.03,
+     "libre_m2": 10.03
     }
    },
    "luz": {
@@ -6807,8 +7597,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1444,
-   "mallas": 14,
+   "triangulos": 1296,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6820,9 +7610,9 @@
    "W": 7.1,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "1c747695",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "fe226d13",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6838,12 +7628,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
@@ -6873,19 +7663,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 8
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.56,
-     "libre_m2": 14.56
+     "alcanzable_m2": 14.42,
+     "libre_m2": 14.42
     }
    },
    "luz": {
@@ -6893,8 +7693,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1182,
-   "mallas": 15,
+   "triangulos": 1344,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -6905,10 +7705,10 @@
    "seed": 81,
    "W": 7.4,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 15,
+   "guardias": 8,
+   "objetos": 14,
    "distintos": 12,
-   "hash": "e4c788e6",
+   "hash": "2b302bc8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6924,18 +7724,18 @@
     },
     {
      "entrada": 2,
-     "obj": "va_inodoro",
+     "obj": "va_ducha",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_ducha",
+     "obj": "va_inodoro",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_toallero",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 5,
@@ -6959,19 +7759,29 @@
     },
     {
      "entrada": 9,
-     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
-     "n": 3
+     "obj": "va_alfombrilla_bano",
+     "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_cepillero|va_jabonera|va_jabonera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.1,
-     "libre_m2": 9.1
+     "alcanzable_m2": 9.12,
+     "libre_m2": 9.12
     }
    },
    "luz": {
@@ -6979,8 +7789,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1428,
-   "mallas": 12,
+   "triangulos": 1238,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1

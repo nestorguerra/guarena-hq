@@ -3,6 +3,7 @@ import { amueblar, filtroHogar } from './locales.js';
 import { construir, caja } from './objetos.js';
 import { OBJETOS } from './interiores_datos.js';
 import { rot, mapaPaso, partes } from './interiores_geo.js';
+import { revestirEstancia } from './acabados_vivienda.js';
 
 export function amueblarAnnie(B, seed, segs0, segs1) {
   const f=.09, estancias=[], rooms=[], tv=[];
@@ -15,6 +16,7 @@ export function amueblarAnnie(B, seed, segs0, segs1) {
   ];
   for(const [ri,s] of specs.entries()) {
     const [x0,z0,x1,z1]=s.rect,ox=(x0+x1)/2,oz=z0+f,y=s.lv*3.1,W=x1-x0-2*f,D=z1-z0-2*f;
+    revestirEstancia(B,{type:s.tipo,x0,z0,x1,z1,lv:s.lv,open:[...s.puertas.map(([side,a,b])=>({side,a,b,door:true})),...(s.ventanas||[]).map(([side,a,b])=>({side,a,b,door:false}))]},{seed:seed+ri,perfil:'annie',estilo:'alegre',altura:s.lv?2.75:2.95,inset:.086});
     const libres=[];
     for(const [side,a,b] of [...s.puertas,...(s.ventanas||[])]){
       const puerta=s.puertas.some(q=>q[0]===side&&q[1]===a),d=puerta?1:.38,ancho=(b-a)/2+(puerta?.15:.05);

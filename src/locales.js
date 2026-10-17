@@ -173,10 +173,16 @@ export function amueblar(kit, seed = 1, ctx = null) {
           const lx=lado==='derecha'?rb.x1+b.w/2+.04:lado==='izquierda'?rb.x0-b.w/2-.04:(rb.x0+rb.x1)/2;
           const lz=lado==='frente'?rb.z1+b.d/2+.06:rb.z0+b.d/2;
           const [dx,dz]=rot(lx,lz,ref.ry), ry=ref.ry+(lado==='frente'&&e.mira_ref?Math.PI:0);
-          const [x,z]=origen(obj,ref.x+dx,ref.z+dz,ry), it={obj,x,y:0,z,ry}, v=volumen(it);
-          if(dentro(v,Z)&&libre(v)&&!cierra([it])) {poner(obj,Z.id,'junto_a',x,0,z,ry);ok=true;break;}
+          let [x,z]=origen(obj,ref.x+dx,ref.z+dz,ry);
+          if(OBJETOS[obj].soporte==='pared'){
+            const [bx,bz]=rot(0,b.z0,ry),sn=Math.sin(ry),cs=Math.cos(ry);
+            if(Math.abs(sn)>.5)x=(sn>0?Z.x0:Z.x1)+sn*.003-bx;
+            else z=(cs>0?Z.z0:Z.z1)+cs*.003-bz;
+          }
+          const it={obj,x,y:0,z,ry}, v=volumen(it);
+          if(dentro(v,Z)&&libre(v)&&!cierra([it])) {poner(obj,Z.id,OBJETOS[obj].soporte==='pared'?'pared':'junto_a',x,0,z,ry);ok=true;break;}
         }
-        if(!ok) {if(e.si_no!==false) reglas.contra_pared({...e,pared:'*',cantidad:1},Z);break;}
+        if(!ok) {if(e.si_no!==false) (OBJETOS[obj].soporte==='pared'?reglas.pared:reglas.contra_pared)({...e,pared:'*',cantidad:1},Z);break;}
       }
     },
     // the counter's modules, end to end along a line (the kit's own design: never moved, never refused)

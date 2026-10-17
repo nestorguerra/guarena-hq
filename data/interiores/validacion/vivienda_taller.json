@@ -93,8 +93,8 @@
    "D": 4.3,
    "guardias": 4,
    "objetos": 16,
-   "distintos": 10,
-   "hash": "2a916901",
+   "distintos": 11,
+   "hash": "2a566fd5",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -105,28 +105,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 9
+     "n": 8
     },
     {
      "entrada": 6,
@@ -136,8 +136,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.95,
-     "libre_m2": 17.95
+     "alcanzable_m2": 17.43,
+     "libre_m2": 17.43
     }
    },
    "luz": {
@@ -145,7 +145,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3098,
+   "triangulos": 4622,
    "mallas": 10,
    "luces": 3,
    "determinista": true
@@ -157,9 +157,9 @@
    "W": 5.9,
    "D": 2.8,
    "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "885e0a10",
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "cd956639",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -170,28 +170,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
+     "n": 8
     },
     {
      "entrada": 6,
@@ -201,8 +201,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.07,
-     "libre_m2": 9.07
+     "alcanzable_m2": 8.84,
+     "libre_m2": 8.84
     }
    },
    "luz": {
@@ -210,7 +210,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3850,
+   "triangulos": 5102,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -223,273 +223,9 @@
    "W": 5,
    "D": 2.5,
    "guardias": 4,
-   "objetos": 21,
-   "distintos": 14,
-   "hash": "5e7a11c9",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.93,
-     "libre_m2": 5.93
-    }
-   },
-   "luz": {
-    "estancia": 0.181
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4816,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 4,
-   "W": 4.4,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "2022ca99",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 13.81,
-     "libre_m2": 13.81
-    }
-   },
-   "luz": {
-    "estancia": 0.107
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3008,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 5,
-   "W": 6.5,
-   "D": 4.3,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "ff90c232",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 19.01,
-     "libre_m2": 19.01
-    }
-   },
-   "luz": {
-    "estancia": 0.077
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3886,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 6,
-   "W": 3.5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "9df0720e",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.62,
-     "libre_m2": 7.62
-    }
-   },
-   "luz": {
-    "estancia": 0.154
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3576,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 7,
-   "W": 4.7,
-   "D": 2.5,
-   "guardias": 3,
    "objetos": 14,
    "distintos": 12,
-   "hash": "f1acadc7",
+   "hash": "b0d36ce1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -500,2439 +236,22 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 8
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.85,
-     "libre_m2": 5.85
-    }
-   },
-   "luz": {
-    "estancia": 0.191
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3924,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 8,
-   "W": 5.9,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 13,
-   "hash": "42ab22ba",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.42,
-     "libre_m2": 18.42
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3282,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 9,
-   "W": 4.1,
-   "D": 2.5,
-   "guardias": 3,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "cf545f52",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 8
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.6,
-     "libre_m2": 4.6
-    }
-   },
-   "luz": {
-    "estancia": 0.215
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2444,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 10,
-   "W": 3.8000000000000003,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 12,
-   "hash": "86c00968",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.86,
-     "libre_m2": 6.86
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6712,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 11,
-   "W": 5,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 12,
-   "hash": "a7874b3f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.47,
-     "libre_m2": 8.47
-    }
-   },
-   "luz": {
-    "estancia": 0.155
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4872,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 12,
-   "W": 6.2,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 12,
-   "hash": "20a75db6",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 21.01,
-     "libre_m2": 21.01
-    }
-   },
-   "luz": {
-    "estancia": 0.061
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4038,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 13,
-   "W": 6.2,
-   "D": 2.8,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "529ad5b7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.86,
-     "libre_m2": 9.86
-    }
-   },
-   "luz": {
-    "estancia": 0.209
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6662,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.95
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 14,
-   "W": 6.2,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "e5e99867",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 19.49,
-     "libre_m2": 19.49
-    }
-   },
-   "luz": {
-    "estancia": 0.082
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5698,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 15,
-   "W": 3.5,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "ae75a6e",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.95,
-     "libre_m2": 9.95
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3868,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 16,
-   "W": 6.2,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 23,
-   "distintos": 13,
-   "hash": "b5cd2e3d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.84,
-     "libre_m2": 12.84
-    }
-   },
-   "luz": {
-    "estancia": 0.118
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6086,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 17,
-   "W": 6.2,
-   "D": 2.8,
-   "guardias": 4,
-   "objetos": 23,
-   "distintos": 14,
-   "hash": "25444832",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.6,
-     "libre_m2": 9.6
-    }
-   },
-   "luz": {
-    "estancia": 0.209
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5326,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 18,
-   "W": 4.1,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "a4a6bf92",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.6,
-     "libre_m2": 8.6
-    }
-   },
-   "luz": {
-    "estancia": 0.143
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6312,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 19,
-   "W": 5.6,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 12,
-   "hash": "7a052a36",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.25,
-     "libre_m2": 14.25
-    }
-   },
-   "luz": {
-    "estancia": 0.108
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4826,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 20,
-   "W": 6.2,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "1e6b6a1d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.39,
-     "libre_m2": 11.39
-    }
-   },
-   "luz": {
-    "estancia": 0.113
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6602,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 21,
-   "W": 5.6,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "585b8cb4",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.07,
-     "libre_m2": 10.07
-    }
-   },
-   "luz": {
-    "estancia": 0.139
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6278,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 22,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 12,
-   "hash": "720f494b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.24,
-     "libre_m2": 8.24
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5412,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 23,
-   "W": 4.4,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 15,
-   "hash": "8242ab25",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.26,
-     "libre_m2": 7.26
-    }
-   },
-   "luz": {
-    "estancia": 0.172
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5112,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 24,
-   "W": 5.300000000000001,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 23,
-   "distintos": 12,
-   "hash": "f5bcb991",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 17
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.08,
-     "libre_m2": 12.08
-    }
-   },
-   "luz": {
-    "estancia": 0.118
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5350,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 25,
-   "W": 7.7,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 14,
-   "hash": "db190418",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 19.04,
-     "libre_m2": 19.04
-    }
-   },
-   "luz": {
-    "estancia": 0.078
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5734,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 26,
-   "W": 6.5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 12,
-   "hash": "e274e1ed",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.3,
-     "libre_m2": 17.3
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3514,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 27,
-   "W": 6.5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 11,
-   "hash": "ec404999",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.22,
-     "libre_m2": 17.22
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6690,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 28,
-   "W": 7.1,
-   "D": 4.3,
-   "guardias": 4,
-   "objetos": 16,
-   "distintos": 11,
-   "hash": "de7d713",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 9
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 21.08,
-     "libre_m2": 21.08
-    }
-   },
-   "luz": {
-    "estancia": 0.069
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2354,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 29,
-   "W": 5.9,
-   "D": 2.5,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "5a25a784",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.74,
-     "libre_m2": 7.74
-    }
-   },
-   "luz": {
-    "estancia": 0.153
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5538,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 30,
-   "W": 3.8000000000000003,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "c84d6c30",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.86,
-     "libre_m2": 6.86
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6784,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 31,
-   "W": 5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "f6763162",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.42,
-     "libre_m2": 12.42
-    }
-   },
-   "luz": {
-    "estancia": 0.119
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6360,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 32,
-   "W": 4.4,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 15,
-   "hash": "99489fff",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.73,
-     "libre_m2": 12.73
-    }
-   },
-   "luz": {
-    "estancia": 0.112
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5572,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 33,
-   "W": 4.1,
-   "D": 2.8,
-   "guardias": 3,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "608fbbec",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 8
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.43,
-     "libre_m2": 5.43
-    }
-   },
-   "luz": {
-    "estancia": 0.198
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1964,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 34,
-   "W": 7.4,
-   "D": 4.3,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "b986e8ad",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 22.14,
-     "libre_m2": 22.14
-    }
-   },
-   "luz": {
-    "estancia": 0.059
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5622,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 35,
-   "W": 7.4,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "b4f78cae",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 24.06,
-     "libre_m2": 24.06
-    }
-   },
-   "luz": {
-    "estancia": 0.061
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5478,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 36,
-   "W": 3.5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 11,
-   "hash": "168146e1",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.55,
-     "libre_m2": 7.55
-    }
-   },
-   "luz": {
-    "estancia": 0.154
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4496,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 37,
-   "W": 7.1,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 13,
-   "hash": "149c09c9",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.32,
-     "libre_m2": 17.32
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5702,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 38,
-   "W": 3.2,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 12,
-   "hash": "f275cde8",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 16
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.65,
-     "libre_m2": 6.65
-    }
-   },
-   "luz": {
-    "estancia": 0.18
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6024,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 39,
-   "W": 7.7,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 24,
-   "distintos": 16,
-   "hash": "4b0bc189",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 17
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 16.97,
-     "libre_m2": 16.97
-    }
-   },
-   "luz": {
-    "estancia": 0.146
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6282,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 40,
-   "W": 5.6,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 14,
-   "hash": "c72806a7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.54,
-     "libre_m2": 11.54
-    }
-   },
-   "luz": {
-    "estancia": 0.128
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4342,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 41,
-   "W": 3.8000000000000003,
-   "D": 3.1,
-   "guardias": 3,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "4a991b87",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 8
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.12,
-     "libre_m2": 6.12
-    }
-   },
-   "luz": {
-    "estancia": 0.193
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5344,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 42,
-   "W": 5.300000000000001,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 15,
-   "hash": "788cbb52",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.61,
-     "libre_m2": 10.61
-    }
-   },
-   "luz": {
-    "estancia": 0.128
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6446,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 43,
-   "W": 4.1,
-   "D": 4.3,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 14,
-   "hash": "6c8bf2da",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.46,
-     "libre_m2": 10.46
-    }
-   },
-   "luz": {
-    "estancia": 0.129
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4176,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 44,
-   "W": 3.8000000000000003,
-   "D": 3.1,
-   "guardias": 3,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "99697142",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
@@ -2948,16 +267,16 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.03,
-     "libre_m2": 6.03
+     "alcanzable_m2": 5.42,
+     "libre_m2": 5.42
     }
    },
    "luz": {
-    "estancia": 0.193
+    "estancia": 0.181
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2956,
+   "triangulos": 3936,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2966,13 +285,13 @@
   {
    "kit": "vivienda_taller",
    "tipologia": "otra_estancia",
-   "seed": 45,
-   "W": 7.7,
-   "D": 3.4,
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.9,
    "guardias": 4,
-   "objetos": 21,
-   "distintos": 14,
-   "hash": "1ab5ae13",
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "3c274a11",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2983,94 +302,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 16.98,
-     "libre_m2": 16.98
-    }
-   },
-   "luz": {
-    "estancia": 0.146
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3554,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 46,
-   "W": 4.1,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 12,
-   "hash": "e59a00a7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
+     "n": 8
     },
     {
      "entrada": 6,
@@ -3080,16 +333,16 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.46,
-     "libre_m2": 7.46
+     "alcanzable_m2": 13.27,
+     "libre_m2": 13.27
     }
    },
    "luz": {
-    "estancia": 0.167
+    "estancia": 0.107
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4148,
+   "triangulos": 1676,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3098,13 +351,13 @@
   {
    "kit": "vivienda_taller",
    "tipologia": "otra_estancia",
-   "seed": 47,
-   "W": 7.4,
-   "D": 4,
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.3,
    "guardias": 4,
-   "objetos": 17,
-   "distintos": 12,
-   "hash": "cf95915b",
+   "objetos": 16,
+   "distintos": 10,
+   "hash": "f9a0796d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3115,22 +368,1464 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.46,
+     "libre_m2": 18.46
+    }
+   },
+   "luz": {
+    "estancia": 0.077
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2846,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 6,
+   "W": 3.5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "c4381064",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.78,
+     "libre_m2": 6.78
+    }
+   },
+   "luz": {
+    "estancia": 0.154
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3848,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 7,
+   "W": 4.7,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "b272aab5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.48,
+     "libre_m2": 5.48
+    }
+   },
+   "luz": {
+    "estancia": 0.191
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2540,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 8,
+   "W": 5.9,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "3f14801",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.03,
+     "libre_m2": 18.03
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5070,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 9,
+   "W": 4.1,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 8,
+   "hash": "8b317d19",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.55,
+     "libre_m2": 4.55
+    }
+   },
+   "luz": {
+    "estancia": 0.215
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2228,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 10,
+   "W": 3.8000000000000003,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 10,
+   "hash": "c12f9ccf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.18,
+     "libre_m2": 6.18
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4196,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 11,
+   "W": 5,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "c355ab5f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.11,
+     "libre_m2": 8.11
+    }
+   },
+   "luz": {
+    "estancia": 0.155
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3944,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 12,
+   "W": 6.2,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "c038354a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 20.61,
+     "libre_m2": 20.61
+    }
+   },
+   "luz": {
+    "estancia": 0.075
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4842,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 13,
+   "W": 6.2,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "298ce1b9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.46,
+     "libre_m2": 9.46
+    }
+   },
+   "luz": {
+    "estancia": 0.135
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4018,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 14,
+   "W": 6.2,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "2f19be21",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 19.15,
+     "libre_m2": 19.15
+    }
+   },
+   "luz": {
+    "estancia": 0.076
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2666,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 15,
+   "W": 3.5,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "2dfc64df",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.41,
+     "libre_m2": 9.41
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3356,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 16,
+   "W": 6.2,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 13,
+   "hash": "1af01494",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.49,
+     "libre_m2": 12.49
+    }
+   },
+   "luz": {
+    "estancia": 0.118
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3478,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 17,
+   "W": 6.2,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "4f26ca6a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.34,
+     "libre_m2": 9.34
+    }
+   },
+   "luz": {
+    "estancia": 0.209
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5030,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 18,
+   "W": 4.1,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "895e8e45",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.11,
+     "libre_m2": 8.11
+    }
+   },
+   "luz": {
+    "estancia": 0.143
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5124,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 19,
+   "W": 5.6,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "2ce56e9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.7,
+     "libre_m2": 13.7
+    }
+   },
+   "luz": {
+    "estancia": 0.108
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2942,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 20,
+   "W": 6.2,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "d35c83a9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.08,
+     "libre_m2": 11.08
+    }
+   },
+   "luz": {
+    "estancia": 0.113
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1930,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 21,
+   "W": 5.6,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "f387e46",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.67,
+     "libre_m2": 9.67
+    }
+   },
+   "luz": {
+    "estancia": 0.139
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4582,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 22,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "3488f675",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.71,
+     "libre_m2": 7.71
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3096,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 23,
+   "W": 4.4,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "1ee62ade",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.96,
+     "libre_m2": 6.96
+    }
+   },
+   "luz": {
+    "estancia": 0.172
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3548,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 24,
+   "W": 5.300000000000001,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "4222e9f2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.68,
+     "libre_m2": 11.68
+    }
+   },
+   "luz": {
+    "estancia": 0.118
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3702,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 25,
+   "W": 7.7,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 9,
+   "hash": "817067ab",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.66,
+     "libre_m2": 18.66
+    }
+   },
+   "luz": {
+    "estancia": 0.078
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3574,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 26,
+   "W": 6.5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "c853d1eb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.81,
+     "libre_m2": 16.81
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3278,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 27,
+   "W": 6.5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "43cb402d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
@@ -3146,8 +1841,1313 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.16,
-     "libre_m2": 20.16
+     "alcanzable_m2": 16.88,
+     "libre_m2": 16.88
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2678,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 28,
+   "W": 7.1,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 13,
+   "hash": "e3039ba8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 20.68,
+     "libre_m2": 20.68
+    }
+   },
+   "luz": {
+    "estancia": 0.069
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4662,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 29,
+   "W": 5.9,
+   "D": 2.5,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "66897b6e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.4,
+     "libre_m2": 7.4
+    }
+   },
+   "luz": {
+    "estancia": 0.153
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5326,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 30,
+   "W": 3.8000000000000003,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "95bfd670",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.24,
+     "libre_m2": 6.24
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2916,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 31,
+   "W": 5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "96e2fbb9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.08,
+     "libre_m2": 12.08
+    }
+   },
+   "luz": {
+    "estancia": 0.119
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2608,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 32,
+   "W": 4.4,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "501e9c20",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.15,
+     "libre_m2": 12.15
+    }
+   },
+   "luz": {
+    "estancia": 0.112
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3796,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 33,
+   "W": 4.1,
+   "D": 2.8,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 8,
+   "hash": "11bc4f0f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.3,
+     "libre_m2": 5.3
+    }
+   },
+   "luz": {
+    "estancia": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1216,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 34,
+   "W": 7.4,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "af185bbb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 21.73,
+     "libre_m2": 21.73
+    }
+   },
+   "luz": {
+    "estancia": 0.059
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1998,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 35,
+   "W": 7.4,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 10,
+   "hash": "83644282",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 23.74,
+     "libre_m2": 23.74
+    }
+   },
+   "luz": {
+    "estancia": 0.061
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2022,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 36,
+   "W": 3.5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 10,
+   "hash": "2429fcd7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.98,
+     "libre_m2": 6.98
+    }
+   },
+   "luz": {
+    "estancia": 0.154
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2824,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 37,
+   "W": 7.1,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "2f6bc14b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.8,
+     "libre_m2": 16.8
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3250,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 38,
+   "W": 3.2,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 10,
+   "hash": "4646b587",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.32,
+     "libre_m2": 6.32
+    }
+   },
+   "luz": {
+    "estancia": 0.18
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4592,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 39,
+   "W": 7.7,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "d24266b7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.59,
+     "libre_m2": 16.59
+    }
+   },
+   "luz": {
+    "estancia": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2758,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 40,
+   "W": 5.6,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "95a8ef2f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.04,
+     "libre_m2": 11.04
+    }
+   },
+   "luz": {
+    "estancia": 0.128
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2986,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 41,
+   "W": 3.8000000000000003,
+   "D": 3.1,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 8,
+   "hash": "badc9a60",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.75,
+     "libre_m2": 5.75
+    }
+   },
+   "luz": {
+    "estancia": 0.193
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1560,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 42,
+   "W": 5.300000000000001,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "7b73272b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.23,
+     "libre_m2": 10.23
+    }
+   },
+   "luz": {
+    "estancia": 0.128
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4398,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 43,
+   "W": 4.1,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "1f6c29d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.01,
+     "libre_m2": 10.01
+    }
+   },
+   "luz": {
+    "estancia": 0.129
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2896,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 44,
+   "W": 3.8000000000000003,
+   "D": 3.1,
+   "guardias": 3,
+   "objetos": 9,
+   "distintos": 7,
+   "hash": "3c257109",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.71,
+     "libre_m2": 5.71
+    }
+   },
+   "luz": {
+    "estancia": 0.193
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1544,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 45,
+   "W": 7.7,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 9,
+   "hash": "b3b220fc",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.59,
+     "libre_m2": 16.59
+    }
+   },
+   "luz": {
+    "estancia": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3874,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 46,
+   "W": 4.1,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "e41b8e39",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.04,
+     "libre_m2": 7.04
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3180,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 47,
+   "W": 7.4,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "f0647f22",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 19.77,
+     "libre_m2": 19.77
     }
    },
    "luz": {
@@ -3168,9 +3168,9 @@
    "W": 5.6,
    "D": 4.3,
    "guardias": 4,
-   "objetos": 18,
-   "distintos": 13,
-   "hash": "d55c491d",
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "98186b06",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3181,28 +3181,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
+     "n": 8
     },
     {
      "entrada": 6,
@@ -3212,8 +3212,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.84,
-     "libre_m2": 15.84
+     "alcanzable_m2": 15.43,
+     "libre_m2": 15.43
     }
    },
    "luz": {
@@ -3221,7 +3221,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3730,
+   "triangulos": 3234,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -3234,9 +3234,9 @@
    "W": 3.5,
    "D": 4.9,
    "guardias": 4,
-   "objetos": 19,
-   "distintos": 11,
-   "hash": "1fad28b1",
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "11e00988",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3247,28 +3247,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
+     "n": 9
     },
     {
      "entrada": 6,
@@ -3278,8 +3278,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.98,
-     "libre_m2": 9.98
+     "alcanzable_m2": 9.43,
+     "libre_m2": 9.43
     }
    },
    "luz": {
@@ -3287,7 +3287,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4648,
+   "triangulos": 3396,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3300,9 +3300,9 @@
    "W": 6.2,
    "D": 2.8,
    "guardias": 4,
-   "objetos": 17,
-   "distintos": 11,
-   "hash": "1ed54b53",
+   "objetos": 16,
+   "distintos": 9,
+   "hash": "9f078ffb",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3313,23 +3313,1795 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.33,
+     "libre_m2": 9.33
+    }
+   },
+   "luz": {
+    "estancia": 0.209
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3954,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 51,
+   "W": 3.5,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 10,
+   "hash": "7c0c96c7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.31,
+     "libre_m2": 3.31
+    }
+   },
+   "luz": {
+    "estancia": 0.105
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2176,
+   "mallas": 9,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 52,
+   "W": 4.1,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "ea27c8bb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.25,
+     "libre_m2": 7.25
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3160,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 53,
+   "W": 3.5,
+   "D": 3.4,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "f5527386",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.55,
+     "libre_m2": 5.55
+    }
+   },
+   "luz": {
+    "estancia": 0.085
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1904,
+   "mallas": 9,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 54,
+   "W": 5.9,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "788bf5b0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.01,
+     "libre_m2": 18.01
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4946,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 55,
+   "W": 5.9,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "b0ecef09",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.9,
+     "libre_m2": 11.9
+    }
+   },
+   "luz": {
+    "estancia": 0.122
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4042,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 56,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "815886f2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.87,
+     "libre_m2": 7.87
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3112,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 57,
+   "W": 5.9,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "e2791d06",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.71,
+     "libre_m2": 11.71
+    }
+   },
+   "luz": {
+    "estancia": 0.122
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3494,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 58,
+   "W": 4.7,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "2469548c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.43,
+     "libre_m2": 7.43
+    }
+   },
+   "luz": {
+    "estancia": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4756,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 59,
+   "W": 6.5,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "c60c3d12",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.76,
+     "libre_m2": 11.76
+    }
+   },
+   "luz": {
+    "estancia": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2246,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 60,
+   "W": 5.300000000000001,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "13b233cb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.01,
+     "libre_m2": 9.01
+    }
+   },
+   "luz": {
+    "estancia": 0.139
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3970,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 61,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "b5e575bb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.89,
+     "libre_m2": 7.89
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3164,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 62,
+   "W": 7.1,
+   "D": 2.5,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "db40f8fa",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.41,
+     "libre_m2": 9.41
+    }
+   },
+   "luz": {
+    "estancia": 0.199
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5802,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 63,
+   "W": 3.5,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "5d81d7f7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.41,
+     "libre_m2": 6.41
+    }
+   },
+   "luz": {
+    "estancia": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3056,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 64,
+   "W": 4.7,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "71ac1efa",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.63,
+     "libre_m2": 6.63
+    }
+   },
+   "luz": {
+    "estancia": 0.177
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3608,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 65,
+   "W": 7.4,
+   "D": 3.7,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "579673bb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.67,
+     "libre_m2": 17.67
+    }
+   },
+   "luz": {
+    "estancia": 0.073
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3294,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 66,
+   "W": 5.9,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "804e627c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.02,
+     "libre_m2": 18.02
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4690,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 67,
+   "W": 5.6,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "3917f13f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.21,
+     "libre_m2": 18.21
+    }
+   },
+   "luz": {
+    "estancia": 0.082
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5546,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 68,
+   "W": 5.9,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "d90c1f06",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.86,
+     "libre_m2": 8.86
+    }
+   },
+   "luz": {
+    "estancia": 0.143
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3558,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 69,
+   "W": 7.7,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 9,
+   "hash": "ef5bdc6c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 20.7,
+     "libre_m2": 20.7
+    }
+   },
+   "luz": {
+    "estancia": 0.081
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2950,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 70,
+   "W": 5.300000000000001,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 8,
+   "hash": "5485c47c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.74,
+     "libre_m2": 12.74
+    }
+   },
+   "luz": {
+    "estancia": 0.108
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2970,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 71,
+   "W": 5,
+   "D": 4,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "da7d2a9b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.9,
+     "libre_m2": 11.9
+    }
+   },
+   "luz": {
+    "estancia": 0.119
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4052,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 72,
+   "W": 7.7,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "a903f234",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.21,
+     "libre_m2": 14.21
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4118,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 73,
+   "W": 3.5,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "e66fdbb0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 9
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.11,
+     "libre_m2": 9.11
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4760,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 74,
+   "W": 6.5,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 9,
+   "hash": "66ff0912",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 20.32,
+     "libre_m2": 20.32
+    }
+   },
+   "luz": {
+    "estancia": 0.08
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2518,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 75,
+   "W": 7.4,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "ca53650f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 21.75,
+     "libre_m2": 21.75
+    }
+   },
+   "luz": {
+    "estancia": 0.059
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2254,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 76,
+   "W": 4.7,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 9,
+   "hash": "804ce862",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.15,
+     "libre_m2": 6.15
+    }
+   },
+   "luz": {
+    "estancia": 0.177
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4516,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 77,
+   "W": 7.4,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 19,
+   "distintos": 11,
+   "hash": "7a6b5909",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_banco",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
     },
     {
      "entrada": 5,
@@ -3344,1780 +5116,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.86,
-     "libre_m2": 9.86
-    }
-   },
-   "luz": {
-    "estancia": 0.209
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2650,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 51,
-   "W": 3.5,
-   "D": 2.5,
-   "guardias": 3,
-   "objetos": 12,
-   "distintos": 10,
-   "hash": "f0df0749",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 7
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.55,
-     "libre_m2": 3.55
-    }
-   },
-   "luz": {
-    "estancia": 0.105
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2620,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 52,
-   "W": 4.1,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 13,
-   "hash": "920ddf28",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.61,
-     "libre_m2": 7.61
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5712,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 53,
-   "W": 3.5,
-   "D": 3.4,
-   "guardias": 3,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "5a98b984",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 9
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.24,
-     "libre_m2": 6.24
-    }
-   },
-   "luz": {
-    "estancia": 0.085
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3308,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 54,
-   "W": 5.9,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "a929fa66",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.41,
-     "libre_m2": 18.41
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8170,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 55,
-   "W": 5.9,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 12,
-   "hash": "b51f01b8",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.05,
-     "libre_m2": 12.05
-    }
-   },
-   "luz": {
-    "estancia": 0.122
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2902,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 56,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 14,
-   "hash": "dfedffee",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.42,
-     "libre_m2": 8.42
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5136,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 57,
-   "W": 5.9,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 13,
-   "hash": "fae6c04",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.28,
-     "libre_m2": 12.28
-    }
-   },
-   "luz": {
-    "estancia": 0.122
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5910,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 58,
-   "W": 4.7,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "63989dc2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.03,
-     "libre_m2": 8.03
-    }
-   },
-   "luz": {
-    "estancia": 0.163
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6692,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 59,
-   "W": 6.5,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 12,
-   "hash": "2a53ff6c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.09,
-     "libre_m2": 12.09
-    }
-   },
-   "luz": {
-    "estancia": 0.185
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5346,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 60,
-   "W": 5.300000000000001,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 14,
-   "hash": "7d4017d3",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.31,
-     "libre_m2": 9.31
-    }
-   },
-   "luz": {
-    "estancia": 0.139
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5366,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 61,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 11,
-   "hash": "e75322ff",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.33,
-     "libre_m2": 8.33
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3888,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 62,
-   "W": 7.1,
-   "D": 2.5,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 14,
-   "hash": "72a8ce68",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 11
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.78,
-     "libre_m2": 9.78
-    }
-   },
-   "luz": {
-    "estancia": 0.199
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4734,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 63,
-   "W": 3.5,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 13,
-   "hash": "f92a13b6",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.33,
-     "libre_m2": 6.33
-    }
-   },
-   "luz": {
-    "estancia": 0.163
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3760,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 64,
-   "W": 4.7,
-   "D": 2.8,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "df1ade83",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.87,
-     "libre_m2": 6.87
-    }
-   },
-   "luz": {
-    "estancia": 0.177
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4936,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 65,
-   "W": 7.4,
-   "D": 3.7,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 12,
-   "hash": "ca2b3dff",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.2,
-     "libre_m2": 18.2
-    }
-   },
-   "luz": {
-    "estancia": 0.073
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4214,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 66,
-   "W": 5.9,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "60be142d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.42,
-     "libre_m2": 18.42
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5738,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 67,
-   "W": 5.6,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 18,
-   "distintos": 13,
-   "hash": "8d9e4d05",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.74,
-     "libre_m2": 18.74
-    }
-   },
-   "luz": {
-    "estancia": 0.082
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4882,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 68,
-   "W": 5.9,
-   "D": 2.8,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "b6a2ef",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.18,
-     "libre_m2": 9.18
-    }
-   },
-   "luz": {
-    "estancia": 0.143
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5654,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 69,
-   "W": 7.7,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "70522c8b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 21.13,
-     "libre_m2": 21.13
-    }
-   },
-   "luz": {
-    "estancia": 0.081
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3930,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 70,
-   "W": 5.300000000000001,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "e4cdce97",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 13.19,
-     "libre_m2": 13.19
-    }
-   },
-   "luz": {
-    "estancia": 0.108
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5218,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 71,
-   "W": 5,
-   "D": 4,
-   "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "3a8696be",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.42,
-     "libre_m2": 12.42
-    }
-   },
-   "luz": {
-    "estancia": 0.119
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4476,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 72,
-   "W": 7.7,
-   "D": 3.1,
-   "guardias": 4,
-   "objetos": 21,
-   "distintos": 12,
-   "hash": "e2daf32c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.9,
-     "libre_m2": 14.9
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4874,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 73,
-   "W": 3.5,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 12,
-   "hash": "da80e000",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 16
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.97,
-     "libre_m2": 9.97
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7668,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 74,
-   "W": 6.5,
-   "D": 4.6,
-   "guardias": 4,
-   "objetos": 22,
-   "distintos": 13,
-   "hash": "378af27",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 15
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 20.72,
-     "libre_m2": 20.72
-    }
-   },
-   "luz": {
-    "estancia": 0.08
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4350,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 75,
-   "W": 7.4,
-   "D": 4.3,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 13,
-   "hash": "1f9335fc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 22.14,
-     "libre_m2": 22.14
-    }
-   },
-   "luz": {
-    "estancia": 0.059
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6694,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 76,
-   "W": 4.7,
-   "D": 2.8,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 14,
-   "hash": "7fb845ea",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.55,
-     "libre_m2": 6.55
-    }
-   },
-   "luz": {
-    "estancia": 0.177
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4312,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_taller",
-   "tipologia": "otra_estancia",
-   "seed": 77,
-   "W": 7.4,
-   "D": 4.9,
-   "guardias": 4,
-   "objetos": 20,
-   "distintos": 12,
-   "hash": "6c9dfbcc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_banco",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
-    },
-    {
-     "entrada": 6,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 26.1,
-     "libre_m2": 26.1
+     "alcanzable_m2": 25.4,
+     "libre_m2": 25.4
     }
    },
    "luz": {
@@ -5125,7 +5125,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7010,
+   "triangulos": 4218,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5138,9 +5138,9 @@
    "W": 6.8,
    "D": 2.8,
    "guardias": 4,
-   "objetos": 22,
-   "distintos": 15,
-   "hash": "771c04a6",
+   "objetos": 19,
+   "distintos": 12,
+   "hash": "7faa0398",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5151,28 +5151,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 14
+     "n": 10
     },
     {
      "entrada": 6,
@@ -5182,8 +5182,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.02,
-     "libre_m2": 11.02
+     "alcanzable_m2": 10.32,
+     "libre_m2": 10.32
     }
    },
    "luz": {
@@ -5191,7 +5191,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8102,
+   "triangulos": 4290,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5204,9 +5204,9 @@
    "W": 6.8,
    "D": 3.7,
    "guardias": 4,
-   "objetos": 20,
-   "distintos": 12,
-   "hash": "ab177e9c",
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "af4ea74",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5217,28 +5217,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
-     "n": 0
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 13
+     "n": 7
     },
     {
      "entrada": 6,
@@ -5248,8 +5248,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.39,
-     "libre_m2": 16.39
+     "alcanzable_m2": 15.92,
+     "libre_m2": 15.92
     }
    },
    "luz": {
@@ -5257,7 +5257,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7166,
+   "triangulos": 2790,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5270,9 +5270,9 @@
    "W": 7.1,
    "D": 4.6,
    "guardias": 4,
-   "objetos": 20,
-   "distintos": 12,
-   "hash": "1ed32f2e",
+   "objetos": 17,
+   "distintos": 10,
+   "hash": "2d01b746",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5283,28 +5283,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 12
+     "n": 8
     },
     {
      "entrada": 6,
@@ -5314,8 +5314,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 22.97,
-     "libre_m2": 22.97
+     "alcanzable_m2": 22.59,
+     "libre_m2": 22.59
     }
    },
    "luz": {
@@ -5323,7 +5323,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6418,
+   "triangulos": 2750,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5336,9 +5336,9 @@
    "W": 7.4,
    "D": 3.4,
    "guardias": 4,
-   "objetos": 19,
-   "distintos": 13,
-   "hash": "c0add1e8",
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "599b2f6b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5349,28 +5349,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "panel_herramientas",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_caja_almacen",
+     "obj": "va_estante_taller",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_estante",
-     "n": 1
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
     },
     {
      "entrada": 5,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 11
+     "n": 8
     },
     {
      "entrada": 6,
@@ -5380,8 +5380,8 @@
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.2,
-     "libre_m2": 16.2
+     "alcanzable_m2": 15.49,
+     "libre_m2": 15.49
     }
    },
    "luz": {
@@ -5389,7 +5389,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5126,
+   "triangulos": 3914,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
