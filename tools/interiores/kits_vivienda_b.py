@@ -38,8 +38,8 @@ def generar():
                pared('vb_armario_ninos',espacio_frontal=[.7,.6]),pared(mesa_id,silla_frontal=silla),
                junto('vb_estante_ninos',mesa_id,False,buscar_refs=True),
                pared('vb_cama_ninos',False,area_min=20,habitacion=['ninos']),
-               E('suelo_libre','vb_alfombra',cantidad=[0,1],preferir=True,area_min=12),
-               E('pared',['poster_enmarcado','fotos_familia','cuadro_paisaje'],pared='*',cantidad=[1,3])]
+               E('suelo_libre','vb_alfombra_juego',cantidad=[0,1],preferir=True,area_min=12),
+               E('pared','vb_dibujos_ninos',pared='*',sobre_de='vb_cama_ninos',cantidad=[0,1],preferir=True,si_no=False)]
             soportes=['vb_mesita',mesa_id,'vb_estante_ninos']
         if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=[mesa_id,'vb_estante_ninos'],cantidad=[1,1],obligatorio=True)]
         if id=='joven':p += [pared('guitarra_soporte',False),E('sobre','vb_ordenador',en=[mesa_id],cantidad=[1,1])]

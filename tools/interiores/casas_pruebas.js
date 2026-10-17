@@ -607,5 +607,48 @@ export async function probarCasas(opts = {}) {
       exigir(amueblar(id,37,{W:2,D:7,H:2.75,funciones:true,libres}).P.filter(p=>p.regla!=='techo').length===0,'el fallback fuerza piezas dentro de una reserva total');
     }finally{delete KITS[id];}
   });
+  if(opts.tanda>=14)await caso('identidad infantil conserva dibujos distintos y variación textil al montar',()=>{
+    const grupos=[],crear=(obj,seed,paleta)=>{const g=construir([{obj,x:0,y:0,z:0,ry:0,seed,paleta}],{domestico:true});grupos.push(g);return g;};
+    const mapas=g=>{const out=[];g.traverse(o=>{if(o.isMesh&&o.material.map)out.push(o.material.map);});return out;};
+    try{
+      const a=mapas(crear('vb_dibujos_ninos',1)),b=mapas(crear('vb_dibujos_ninos',18));
+      exigir(a.length===3&&new Set(a).size===3,'la galería reutiliza una textura para dibujos distintos');
+      exigir(new Set(a.map(t=>t.image.toDataURL())).size===3,'las tres texturas dibujan la misma imagen');
+      exigir(b.length===3&&a.every((t,i)=>t===b[i]),'la misma lámina/semilla equivalente pierde la caché');
+      const rugs=[1,2,3].map(seed=>mapas(crear('vb_alfombra_juego',seed)));
+      exigir(rugs.every(a=>a.length===1)&&new Set(rugs.map(a=>a[0].image.toDataURL())).size===3,'la alfombra pierde sus tres paletas');
+      const colores=g=>{const out=[];g.traverse(o=>{if(o.isMesh&&o.geometry.attributes.color)out.push(Array.from(o.geometry.attributes.color.array));});return JSON.stringify(out);};
+      const paleta={tela:['#aa3333','#3344aa']};
+      exigir(colores(crear('vb_cama_ninos',2,paleta))!==colores(crear('vb_cama_ninos',3,paleta)),'la colcha ignora la tela de la casa');
+      for(const [id,ref] of [['vb_cama_ninos','vb_cama_individual'],['vb_alfombra_juego','vb_alfombra']]){
+        const a=caja(id),b=caja(ref);for(const k of ['x0','x1','y0','y1','z0','z1'])exigir(Math.abs(a[k]-b[k])<.00001,id+': cambia la envolvente '+k);
+      }
+    }finally{
+      // Geometrías y materiales de lámina son propios; caché de texturas y mate son compartidos.
+      for(const g of grupos)g.traverse(o=>{if(o.isMesh){o.geometry.dispose();if(o.material.map)o.material.dispose();}});
+    }
+  });
+  if(opts.tanda>=14)await caso('galería infantil sigue la cama y respeta paredes bloqueadas',()=>{
+    const id='__infantil_galeria',K=KITS.vivienda_ninos,galeria=K.objetos.find(e=>e.obj==='vb_dibujos_ninos');
+    exigir(galeria,'falta la entrada de galería');
+    try{
+      for(const pared of ['N','S','E','W']){
+        KITS[id]={...K,objetos:[{zona:'estancia',regla:'contra_pared',obj:'vb_cama_ninos',pared,cantidad:1,centrado:true},galeria]};
+        const ctx={W:4,D:4,H:2.75,funciones:true},A=amueblar(id,37,ctx),c=A.P.find(p=>p.obj==='vb_cama_ninos'),g=A.P.find(p=>p.obj==='vb_dibujos_ninos');
+        exigir(c&&g,pared+': no coloca cama y galería en pared libre');
+        exigir(g.v.y0>c.v.y1&&g.v.y1<2.1&&g.v.hw<=c.v.hw,pared+': galería invade cama o sale de escala');
+        exigir(Math.abs(Math.sin(g.ry-c.ry))<.001&&Math.cos(g.ry-c.ry)>.99,pared+': galería mira al lado incorrecto');
+        exigir(Math.abs((g.v.cx-c.v.cx)*Math.cos(c.ry)-(g.v.cz-c.v.cz)*Math.sin(c.ry))<.001,pared+': galería descentrada');
+        const b=caja(g.obj),lx=(b.x0+b.x1)/2,lz=b.z0,x=g.x+lx*Math.cos(g.ry)+lz*Math.sin(g.ry),z=g.z-lx*Math.sin(g.ry)+lz*Math.cos(g.ry),Z=A.zonas.estancia;
+        const apoyo=Math.min(Math.abs(x-Z.x0),Math.abs(x-Z.x1),Math.abs(z-Z.z0),Math.abs(z-Z.z1));
+        exigir(apoyo<.01,pared+': galería flotando lejos de pared');
+        const B=amueblar(id,37,{...ctx,libres:[g.v]});
+        exigir(B.P.some(p=>p.obj==='vb_cama_ninos')&&!B.P.some(p=>p.obj==='vb_dibujos_ninos'),pared+': galería invade hueco o se dispersa');
+        exigir(JSON.stringify(A.P)===JSON.stringify(amueblar(id,37,ctx).P),'galería no reproducible');
+      }
+      KITS[id]={...K,objetos:[galeria]};
+      exigir(amueblar(id,37,{W:4,D:4,H:2.75}).P.length===0,'galería huérfana sin cama');
+    }finally{delete KITS[id];}
+  });
   return { pruebas, errores };
 }

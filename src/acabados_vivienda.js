@@ -23,7 +23,7 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
     // Color a escala infantil; los paños conservan todos los huecos de la casa.
     const y=(rm.lv||0)*3.1,r=mulberry32(seed*347+rm.x0*13+rm.z0*53);
     const mat=c=>B.mat('infantil_'+c,()=>std(c,{roughness:.94,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
-    const color=['#a0b3ad','#b6a68e','#98aeb8'][Math.floor(r()*3)],limite=.92;
+    const color=['#718d82','#aa895b','#6e879b'][Math.floor(r()*3)],limite=.92;
     for(const side of ['s','n','w','e']) {
       const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
       const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);

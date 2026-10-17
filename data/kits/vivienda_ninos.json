@@ -114,7 +114,7 @@
   {
    "zona": "estancia",
    "regla": "suelo_libre",
-   "obj": "vb_alfombra",
+   "obj": "vb_alfombra_juego",
    "cantidad": [
     0,
     1
@@ -125,16 +125,15 @@
   {
    "zona": "estancia",
    "regla": "pared",
-   "variantes": [
-    "poster_enmarcado",
-    "fotos_familia",
-    "cuadro_paisaje"
-   ],
+   "obj": "vb_dibujos_ninos",
    "pared": "*",
+   "sobre_de": "vb_cama_ninos",
    "cantidad": [
-    1,
-    3
-   ]
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
   },
   {
    "zona": "estancia",

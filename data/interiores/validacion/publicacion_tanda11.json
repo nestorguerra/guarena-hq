@@ -1,0 +1,156 @@
+{
+ "commit": "b7ea0fe663ee33cde3f7ececc619fde27696f855",
+ "ci": {
+  "id": 39062348387,
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39062348387",
+  "conclusion": "success"
+ },
+ "pages": {
+  "id": 39062538910,
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39062538910",
+  "conclusion": "success"
+ },
+ "publico": {
+  "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=b7ea0fe663ee33cde3f7ececc619fde27696f855",
+  "revision_esperada": "b7ea0fe663ee33cde3f7ececc619fde27696f855",
+  "alcance": "paquete Pages: ocho vecinos, Annie, tres comercios y persistencia",
+  "errores": [],
+  "http_status": 200,
+  "revision_servida": "b7ea0fe663ee33cde3f7ececc619fde27696f855",
+  "carga_partida": {
+   "dinero": 321,
+   "banco": 700,
+   "decoracion": [
+    {
+     "id": "cuadro",
+     "x": 0,
+     "y": 4.7,
+     "z": 4.9,
+     "ry": 3.141592653589793,
+     "seed": 23
+    }
+   ],
+   "evo": "{\"testigo\":\"evo\"}",
+   "fija": "{\"testigo\":\"fija\"}"
+  },
+  "entradas": [
+   {
+    "seed": 2786,
+    "plano": "pasillo",
+    "plantas": 1,
+    "entrada_ms": 187.8,
+    "habitaciones": 6
+   },
+   {
+    "seed": 3244,
+    "plano": "dosPlantas",
+    "plantas": 2,
+    "entrada_ms": 122.8,
+    "habitaciones": 6
+   },
+   {
+    "seed": 1594,
+    "plano": "dosPlantas",
+    "plantas": 2,
+    "entrada_ms": 123.1,
+    "habitaciones": 6
+   },
+   {
+    "seed": 1689,
+    "plano": "pasillo",
+    "plantas": 1,
+    "entrada_ms": 77.8,
+    "habitaciones": 7
+   },
+   {
+    "seed": 2132,
+    "plano": "pasillo",
+    "plantas": 1,
+    "entrada_ms": 113.8,
+    "habitaciones": 7
+   },
+   {
+    "seed": 1639,
+    "plano": "lateral",
+    "plantas": 1,
+    "entrada_ms": 84,
+    "habitaciones": 4
+   },
+   {
+    "seed": 5157,
+    "plano": "pasillo",
+    "plantas": 1,
+    "entrada_ms": 138.1,
+    "habitaciones": 7
+   },
+   {
+    "seed": 3627,
+    "plano": "lateral",
+    "plantas": 1,
+    "entrada_ms": 63,
+    "habitaciones": 5
+   }
+  ],
+  "annie": {
+   "entrada_ms": 85.6,
+   "kits": 5,
+   "personalizadas": [
+    "dormitorio"
+   ],
+   "acciones": [
+    "exit",
+    "mirror",
+    "bed",
+    "safe",
+    "tv",
+    "read",
+    "drawer",
+    "eat",
+    "fridge"
+   ],
+   "decoracion": [
+    {
+     "id": "cuadro",
+     "x": 0,
+     "y": 4.7,
+     "z": 4.899999999999636
+    }
+   ],
+   "banco": 700,
+   "siesta": true
+  },
+  "comercios": [
+   {
+    "tipo": "bar",
+    "acciones": 1
+   },
+   {
+    "tipo": "cafeteria",
+    "acciones": 1
+   },
+   {
+    "tipo": "farmacia",
+    "acciones": 1
+   }
+  ],
+  "consola": [],
+  "revision_tras_recarga": "b7ea0fe663ee33cde3f7ececc619fde27696f855",
+  "consola_tras_recarga": [],
+  "recarga_partida": {
+   "dinero": 321,
+   "banco": 700,
+   "decoracion": [
+    {
+     "id": "cuadro",
+     "x": 0,
+     "y": 4.7,
+     "z": 4.9,
+     "ry": 3.141592653589793,
+     "seed": 23
+    }
+   ],
+   "evo": "{\"testigo\":\"evo\"}",
+   "fija": "{\"testigo\":\"fija\"}"
+  }
+ }
+}

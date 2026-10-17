@@ -32,7 +32,29 @@ def objetos():
     for lado in [-1,1]:
         for z in [-.44,.44]:
             cama['partes'] += [caja(.014,.15,.78,x=lado*.412,y=.23,z=z,c='#d4bd98'),caja(.012,.025,.12,x=lado*.419,y=.23,z=z,c='#697e77')]
+    # Cobertor de cinco paños disjuntos dentro del volumen ya validado.
+    # Las bandas toman la tela de la casa; ni huella ni altura cambian.
+    cama['partes'][1]['c']='#d9d3c2'
+    colcha=cama['partes'].pop(3);z=colcha['p'][2]-colcha['d'][2]/2
+    for i,largo in enumerate([.46,.06,.23,.06,.34]):
+        p=copy.deepcopy(colcha);p['d'][2]=largo;p['p'][2]=z+largo/2
+        if i%2:p['c']='#d9cba6';p.pop('tinte',None)
+        else:p['c']='#567c91';p['tinte']='tela'
+        cama['partes'].insert(3+i,p);z+=largo
     out.append(cama)
+    # Una sola galería de dibujos propios sobre el descanso, no una pared de pósters.
+    laminas=[]
+    for i,(x,y) in enumerate([(-.26,1.43),(0,1.48),(.26,1.43)]):
+        laminas += [caja(.235,.315,.003,x=x,y=y,z=.0015,c='#d6cfba',m='papel'),
+                    dict(f='plano',d=[.23,.31],p=[x,y,.0035],c='#e9dfc9',m='papel',tex=dict(tipo='vivienda_dibujo_ninos_b',lamina=i)),
+                    caja(.055,.02,.001,x=x-.045,y=y+.153,z=.0045,c='#b6ad90',m='papel')]
+    out.append(objeto('vb_dibujos_ninos','Dibujos infantiles guardados en la pared',.76,.37,.005,None,.3,'papel',partes=laminas,soporte='pared',categoria='cuadro'))
+    # Mismo volumen y regla de la alfombra de dormitorio; sólo cambia su superficie.
+    juego=copy.deepcopy(next(o for o in out if o['id']=='vb_alfombra'))
+    juego['id']='vb_alfombra_juego';juego['nombre']='Alfombra de juego con circuito'
+    juego['partes'][0].pop('tinte',None);juego['partes'][0]['c']='#647b78'
+    juego['partes'][1]['tex']=dict(tipo='vivienda_juego_ninos_b')
+    out.append(juego)
     # Armario bajo de ropa: cuerpo de 95 × 42 × 150 cm, no una cómoda.
     p=[caja(.95,1.5,.42,c='#cbb591')]
     for x in [-.2345,.2345]:

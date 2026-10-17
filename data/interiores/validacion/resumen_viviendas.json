@@ -99,11 +99,11 @@
   }
  ],
  "contratos": {
-  "pruebas": 49,
+  "pruebas": 51,
   "errores": 0
  },
  "catalogo": {
-  "objetos": 1887,
+  "objetos": 1889,
   "kits": 40,
   "errores": 0,
   "avisos": 0
@@ -112,10 +112,10 @@
  "habitaciones_sinteticas": 1166,
  "errores_casas": 0,
  "maximos_sinteticas": {
-  "triangulos": 70388,
+  "triangulos": 70192,
   "mallas": 60,
   "luces": 9,
-  "montaje_ms": 148.8
+  "montaje_ms": 162.4
  },
  "casas_pueblo": 22,
  "habitaciones_pueblo": 132,
@@ -146,8 +146,8 @@
  },
  "paquete": {
   "errores": 0,
-  "maximo_entrada_ms": 177.5,
-  "annie_entrada_ms": 90.4,
+  "maximo_entrada_ms": 171,
+  "annie_entrada_ms": 87,
   "comercios": [
    {
     "tipo": "bar",
@@ -176,7 +176,7 @@
   "archivos": 21,
   "cambios": [],
   "sha256": {
-   "data/interiores/datos.json": "6e0deda7351e03c2d2f0d5a773c0efb25bc76a91953202a47c236116cbc65ee6",
+   "data/interiores/datos.json": "e23d9f47e952b3eb3d73e031a85ee93e00e2982308e9b444a60e3820dd8b5d68",
    "data/kits/vivienda_bano.json": "5aba80f9775608db25c74d2ee2095061c5e638961366ecda3b70242bb94b6362",
    "data/kits/vivienda_cocina.json": "8231d11513e52e3a29a29e55eaf23f3a85652fb52a0ac6b8a6017b2ad854bb2e",
    "data/kits/vivienda_comedor.json": "515856c8e7e1c76241161ee97e81d9371cc76b4ddea4559e9f68a0d8db010e9e",
@@ -187,7 +187,7 @@
    "data/kits/vivienda_estudio.json": "758fc3ae8bc7e1491f86d98538f079e25542fa98dc5863970da624003b56a049",
    "data/kits/vivienda_joven.json": "38ed95390462eb204b2564413a612eb565a9e71016b3bffaad3faf4f99e98d53",
    "data/kits/vivienda_musica.json": "4aaa56923537a718fe84c912f619ca65bf172a4c2015754fd89e50610c5b521b",
-   "data/kits/vivienda_ninos.json": "26755404e77d73b5a334684c0d22c5abe40fc46773d8ff57a1d333ca2eecd51b",
+   "data/kits/vivienda_ninos.json": "3e4f61d619663308522ba896c762b560eb2bf49379ebb9d798bac428f3561668",
    "data/kits/vivienda_pintura.json": "902f5a6a5f758fca0c0a41d543a311ae7b1e94a7a5ad2c33cf33b37d0786a583",
    "data/kits/vivienda_salon.json": "39fa736a80bd561e82df6a8a536782d5d86e7236053c2e8d78487f3e5e9ea9f2",
    "data/kits/vivienda_taller.json": "81c1daf167eb6fee79cd9d3299587e45c0c7f48d786ce760b8a75af275806b4e",
@@ -195,8 +195,8 @@
    "data/kits/vivienda_trofeos.json": "e6e18eefd473c35326ece26cb0dd5f69927fa8d4c7bca34c6aef4e8b0580e9a3",
    "data/objetos/vivienda.json": "b0f228623fa616b4d33afdfb07d4cf0eb18f7651688cdeb220a2f91be4053d12",
    "data/objetos/vivienda_a.json": "50269ab7a132920728b2c470057755abba7be6dc6bf11a8e56b895307174667c",
-   "data/objetos/vivienda_b.json": "8d1ff06d66356400e3ce7c2f220c988882858def00e84437d5eef20155d3038a",
-   "src/interiores_datos.js": "f534acd0fc0f9ec7a3ac01b0c8c244e2d8b2b323396506c0211645f5afb1f765"
+   "data/objetos/vivienda_b.json": "5f2c99b894a5c0eb0d138876fdca71db722e34bbcfb9c7a06b36863715355920",
+   "src/interiores_datos.js": "4fbdfd8660b979643a793eb5dea4aa059962aba67fc508ff5ddcd59e6e80e79c"
   }
  },
  "revision_visual": {
@@ -206,7 +206,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.944,
+   "minimo": 2.99,
    "maximo": 3.602
   },
   "hashes_fichas_validos": true,
@@ -256,8 +256,8 @@
     "B": 3.244
    },
    "ninos": {
-    "A": 3.13,
-    "B": 2.944
+    "A": 3.328,
+    "B": 3.04
    },
    "pintura": {
     "A": 3.206,
@@ -281,7 +281,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "en curso; kits de la tanda 11: ninos, despensa. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
+  "objetivo_4": "en curso; kits de la tanda 12: ninos. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -844,6 +844,39 @@
    "partida_ficticia_conservada": true
   },
   "revision_independiente": "data/interiores/revision_calidad_tanda11_2026-10-17.md",
+  "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
+ },
+ "calidad_tanda12": {
+  "fecha": "2026-10-17",
+  "tanda": 12,
+  "objetivo": 4,
+  "estado": "mejora_parcial_objetivo_no_alcanzado",
+  "base": "b7ea0fe663ee33cde3f7ececc619fde27696f855",
+  "contratos": 51,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 70192,
+   "mallas": 60,
+   "luces": 9,
+   "montaje_ms": 162.4
+  },
+  "kits": {
+   "ninos": {
+    "ahora": {
+     "A": 3.328,
+     "B": 3.04
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0,
+   "partida_ficticia_conservada": true
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda12_2026-10-17.md",
   "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
  }
 }
