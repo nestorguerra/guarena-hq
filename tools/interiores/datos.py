@@ -90,7 +90,7 @@ def main():
         if e: errs += e; continue
         ids = set()
         for i, it in enumerate(k['objetos']):
-            for oid in ([it['obj']] if it.get('obj') else []) + it.get('variantes', []) + it.get('en', []) + it.get('sillas', {}).get('variantes', []):
+            for oid in ([it['obj']] if it.get('obj') else []) + it.get('variantes', []) + it.get('en', []) + it.get('sillas', {}).get('variantes', []) + ([it['silla_frontal']] if it.get('silla_frontal') else []):
                 if oid not in OBJ: errs.append(f'{kid}: objeto {i} nombra «{oid}», que no está en el catálogo')
                 elif not it.get('en') or oid not in it.get('en', []): ids.add(oid)
             if it['zona'] not in {z['id'] for z in k['zonas']}: errs.append(f'{kid}: objeto {i} en una zona que no existe «{it["zona"]}»')

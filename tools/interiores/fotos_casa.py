@@ -39,7 +39,7 @@ JS = r'''(async () => {
     const vistas=[];
     for (const [k, f] of [[0, 0.12], [1, 0.88]]) {
       let x = rm.x0 + (rm.x1 - rm.x0) * f, z = rm.z0 + (rm.z1 - rm.z0) * f;
-      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo')||p.obj.startsWith('vb_mesa_despacho')||p.obj.startsWith('va_estante_trastero'))));
+      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo')||p.obj.startsWith('vb_mesa_despacho')||p.obj.startsWith('va_estante_trastero')||p.obj.startsWith('va_cocina')||p.obj.startsWith('va_costura'))));
       const hitos=(est?.colocados||[]).filter(p=>p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>.28).map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry),y:y+Math.min(b.h*.65,1.25),w:b.w,peso:Math.min(2,b.w*b.h)+(['va_banco','va_lavabo'].includes(p.obj)?1.5:0)};});
       const suma=hitos.reduce((a,p)=>a+p.peso,0)||1;
       // El segundo ángulo del baño debe documentar la zona húmeda, también en
@@ -55,7 +55,7 @@ JS = r'''(async () => {
         if(!foco&&vistas.length&&Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)<.5)continue;
         const pos=new THREE.Vector3(q.x,y+1.6,q.z),dest=new THREE.Vector3(cx,y+1,cz),dir=dest.clone().sub(pos),dist=dir.length();
         const ray=new THREE.Raycaster(pos,dir.normalize(),0,dist),tapa=ray.intersectObjects(hojas,false).length;
-        if(foco&&(Math.sin(foco.ry)*(q.x-cx)+Math.cos(foco.ry)*(q.z-cz)<.7))continue;
+        if(foco&&(Math.sin(foco.ry)*(q.x-cx)+Math.cos(foco.ry)*(q.z-cz)<(tipo==='costura'?.15:.7)))continue;
         let lectura=0;
         const eje=new THREE.Vector2(cx-q.x,cz-q.z).normalize();
         for(const p of hitos){const dx=p.x-q.x,dz=p.z-q.z,dd=Math.hypot(dx,dz);if(dd<.5||(dx*eje.x+dz*eje.y)/dd<Math.cos(38*Math.PI/180))continue;
@@ -69,8 +69,9 @@ JS = r'''(async () => {
       }
       if(!Number.isFinite(mejor))throw Error('sin cámara libre: '+tipo+'/'+s);
       for (let i = 0; i < 3; i++) g.frame(1 / 30);
-      cam.fov=foco?60:tipo==='bano'?75:68;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + 1.05, cz); cam.updateMatrixWorld(true);
-      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+1.05,cz],fov:cam.fov});
+      const alturaObjetivo=k===0?1.05:1.4;
+      cam.fov=foco?60:tipo==='bano'?75:68;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + alturaObjetivo, cz); cam.updateMatrixWorld(true);
+      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov});
       g.render();
       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
     }

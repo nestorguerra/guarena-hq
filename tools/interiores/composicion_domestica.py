@@ -52,3 +52,65 @@ def mejorar_despacho(out):
         for z in [-.17,.17]:p.append(b(.035,.49,.035,x=x,y=.245,c='#806d54'))
     p += [b(.26,.025,.2,y=.542,c='#7d9693',m='papel'),b(.24,.025,.18,y=.568,c='#c9b88e',m='papel'),b(.22,.025,.17,y=.594,c='#9e7e6a',m='papel')]
     out.append(objeto('vb_mesa_lectura','Mesa auxiliar con libros',.52,.61,.46,None,6,partes=p))
+
+def mejorar_cocina_costura(out):
+    C={o['id']:o for o in out}
+    for id in ['va_cocina','va_encimera','va_nevera','va_lavadora','va_alacena','va_alto_cocina']:
+        for p in C[id]['partes']:
+            if p['f']=='caja' and min(p['d'])>=.02:p['redondeo']=min(.014,min(p['d'])/3)
+    # Campana, mandos y una olla sobre el fuego; todo conserva el plano de trabajo.
+    C['va_cocina']['partes'] += [b(.5,.12,.38,x=-.3,y=1.78,z=-.045,c='#aab5ae',m='metal'),b(.22,.22,.2,x=-.3,y=1.95,z=-.13,c='#bdc5bc',m='metal'),cil(.12,.12,.16,x=-.3,y=1.0,z=.06,c='#698784',m='metal'),cil(.125,.125,.018,x=-.3,y=1.1,z=.06,c='#8d9f96',m='metal'),cil(.024,.024,.025,x=-.3,y=1.12,z=.06,c='#606f68',m='plastico')]
+    for x in [-.46,-.34,-.22,-.1]:C['va_cocina']['partes'].append(cil(.018,.018,.018,x=x,y=.73,z=.276,c='#b8b8a9',m='metal',r=[90,0,0]))
+    grande=copy.deepcopy(C['va_cocina']);grande['id']='va_cocina_amplia';grande['nombre']='Cocina amplia con fregadero, fogones y campana'
+    for p in grande['partes']:
+        if p['f'] in ['caja','plano']:p['d'][0]*=1.55
+        p['p'][0]*=1.55
+    grande['superficies']=[dict(y=.89,margen=.04,ancho=.24,fondo=.38)];out.append(grande)
+    enc=copy.deepcopy(C['va_encimera']);enc['id']='va_encimera_amplia';enc['nombre']='Encimera amplia de preparación'
+    for p in enc['partes']:p['d'][0]*=1.46;p['p'][0]*=1.46
+    out.append(enc)
+    p=[b(1.25,.055,.68,y=.85,c='#d5c6a9',m='piedra'),b(1.12,.71,.56,y=.42,c='#778f84')]
+    for x in [-.36,0,.36]:p += [b(.33,.54,.018,x=x,y=.44,z=.29,c='#94a598'),b(.13,.013,.025,x=x,y=.65,z=.312,c='#c2bcaa',m='metal')]
+    for x in [-.5,.5]:
+        for z in [-.22,.22]:p.append(b(.06,.08,.06,x=x,y=.04,z=z,c='#776c54'))
+    # Tabla y hogaza de pan: una actividad de cocina, sin una hilera de paquetes.
+    p += [b(.35,.018,.23,x=-.32,y=.887,c='#a58155'),dict(f='esfera',d=[.09],p=[-.32,.963,0],c='#bc9764',m='comida',s=[1.9,.75,1])]
+    out.append(objeto('va_isla_cocina','Isla de cocina con tabla y pan',1.25,1.06,.68,None,65,partes=p,superficies=[dict(y=.8775,margen=.05,ancho=.4,fondo=.42)]))
+    # La costura reúne máquina, tela en curso y panel de carretes en el mismo puesto.
+    p=[b(1.25,.05,.58,y=.735,c='#b69970')]
+    for x in [-.54,.54]:
+        for z in [-.22,.22]:p.append(b(.055,.71,.055,x=x,y=.355,z=z,c='#7f765d'))
+    p += [b(.36,.028,.22,x=.27,y=.774,c='#566c68',m='metal'),b(.09,.25,.18,x=.4,y=.91,c='#67817c',m='metal'),b(.34,.07,.17,x=.27,y=1.035,c='#78938b',m='metal'),b(.045,.15,.11,x=.12,y=.94,c='#769087',m='metal'),cil(.005,.005,.06,x=.12,y=.85,c='#b4bbb0',m='metal'),cil(.06,.06,.027,x=.46,y=.94,c='#bdc2b5',m='metal',r=[0,0,90]),b(.96,.4,.025,y=1.44,z=-.27,c='#8d9d8e')]
+    for x in [-.43,.43]:p.append(b(.025,.69,.025,x=x,y=1.095,z=-.27,c='#8d9d8e'))
+    for i in range(7):
+        x=-.4+i*.13
+        p += [cil(.025,.025,.045,x=x,y=1.44,z=-.23,c=['#c4ad86','#8caaa0','#b3928b','#819ba8'][i%4],m='tela',r=[90,0,0]),cil(.03,.03,.008,x=x,y=1.44,z=-.2,c='#d0bc91',m='madera',r=[90,0,0])]
+    for i in range(3):
+        for j in range(3):p.append(b(.12,.012,.12,x=-.45+i*.123,y=.767,z=-.09+j*.123,c=['#97aaa1','#bdac90','#9caab1'][(i+j)%3],m='tela'))
+    p += [b(.37,.3,.018,x=-.327,y=.61,z=.32,c='#a2b4a9',m='tela'),cil(.045,.045,.018,x=-.03,y=.77,z=.12,c='#d0bb83',m='tela')]
+    C['va_costura']['partes']=p;C['va_costura']['superficies']=[dict(y=.76,margen=.035)]
+    for id,nombre in [('bordado','Mesa con bordado en curso'),('patrones','Mesa con patrones de costura')]:
+        o=copy.deepcopy(C['va_costura']);o['id']='va_costura_'+id;o['nombre']=nombre
+        o['partes']=[q for q in o['partes'] if not(q.get('m')=='tela' and q['p'][1]<.8)]
+        if id=='bordado':
+            o['partes'] += [cil(.145,.145,.015,x=-.3,y=.772,c='#aa8757',m='madera'),cil(.126,.126,.012,x=-.3,y=.784,c='#d8ceaf',m='tela'),b(.29,.3,.018,x=-.3,y=.61,z=.32,c='#c5b4b2',m='tela')]
+            for x,z in [(-.34,-.035),(-.3,0),(-.26,.035)]:o['partes'].append(b(.025,.003,.025,x=x,y=.792,z=z,c='#72978b',m='tela'))
+        else:
+            o['partes'] += [b(.35,.005,.26,x=-.32,y=.764,c='#e2dcc9',m='papel',r=[0,8,0]),b(.29,.005,.21,x=-.29,y=.771,z=.03,c='#ccc9b3',m='papel',r=[0,-12,0]),b(.34,.012,.035,x=-.32,y=.781,z=.15,c='#bdab78'),b(.14,.008,.012,x=-.3,y=.783,c='#756b55',m='madera',r=[0,25,0])]
+        out.append(o)
+    p=[b(1.04,.04,.4,y=.04,c='#a99470'),b(1.04,.04,.4,y=1.72,c='#a99470')]
+    for x in [-.5,.5]:p.append(b(.04,1.72,.4,x=x,c='#9a8668'))
+    for y in [.44,.87,1.3]:p.append(b(1.04,.03,.4,y=y,c='#b49e78'))
+    for nivel,y in enumerate([.07,.47,.9,1.33]):
+        for lado,x in enumerate([-.25,.25]):
+            for i in range(3):p.append(b(.43,.075,.32,x=x,y=y+.0375+i*.078,c=['#91a49b','#c2af8b','#9ba9b1','#ba9991'][(nivel+lado+i)%4],m='tela'))
+    out.append(objeto('va_mueble_telas','Estantería de telas y labores dobladas',1.04,1.74,.4,None,30,partes=p,superficies=[dict(y=1.74,margen=.04)]))
+
+def unidades_domesticas(out):
+    # Reutilizar la receta de UNA unidad, nunca la hilera ni el bloque de stock.
+    from catalogo_comercio import SECO, SWEETS, BEBIDAS
+    singular={'Paquetes de ':'Paquete de ','Bolsas de ':'Bolsa de ','Cajas de ':'Caja de ','Cajitas de ':'Cajita de ','Botes de ':'Bote de ','Botellas de ':'Botella de ','Tabletas de ':'Tableta de ','Packs de ':'Pack de ','Briks de ':'Brik de ','Garrafas de ':'Garrafa de '}
+    for k,nombre,unit,nx,nz,dx,dz,h,fondo,c,mu in SECO+SWEETS+BEBIDAS:
+        for plural,uno in singular.items():
+            if nombre.startswith(plural):nombre=uno+nombre[len(plural):];break
+        out.append(objeto('va_alimento_'+k,nombre,dx,h,dz,None,mu,'comida',partes=unit(0,0),soporte='superficie',categoria='alimento'))

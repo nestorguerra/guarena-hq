@@ -32,36 +32,29 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_costura",
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
+   "variantes": [
+    "va_costura",
+    "va_costura_bordado",
+    "va_costura_patrones"
    ],
-   "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "junto_a",
-   "obj": "silla_comedor",
-   "de": "va_costura",
+   "pared": "*",
    "cantidad": [
     1,
     1
    ],
    "obligatorio": true,
    "preferir": true,
-   "lados": [
-    "frente"
-   ],
-   "mira_ref": true
+   "silla_frontal": "silla_comedor"
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante",
-   "pared": "*",
+   "regla": "junto_a",
+   "obj": "va_mueble_telas",
+   "de": [
+    "va_costura",
+    "va_costura_bordado",
+    "va_costura_patrones"
+   ],
    "cantidad": [
     1,
     1
@@ -150,8 +143,7 @@
     "lampara_mesa"
    ],
    "en": [
-    "va_estante",
-    "va_costura"
+    "va_mueble_telas"
    ],
    "por_soporte": [
     3,

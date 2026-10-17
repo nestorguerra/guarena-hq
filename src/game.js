@@ -7,7 +7,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { PLASTILINA, ClayLens, ClayGrade, STUDIO_AO } from './plastilina.js';
-import { prepararLuzVivienda } from './luz_vivienda.js';
+import { prepararLuzVivienda, prepararOclusionVivienda } from './luz_vivienda.js';
 import { STYLE } from './style.js';
 import { Chant } from './chant.js';
 import { MapData } from './mapdata.js';
@@ -806,13 +806,14 @@ export class Game {
   // the scene through whichever pipeline is on (also used by the photo tools with their own cameras)
   renderView(cam) {
     const restaurar=prepararLuzVivienda(this.interior,cam,this.renderer.shadowMap.enabled);
+    const restaurarAO=prepararOclusionVivienda(this.interior,cam,this.gtao,this.grade);
     try {
     if (this.composer) {
       if (this.lens) this.focusLens(cam);
       const rp = this.composer.passes[0], keep = rp.camera; rp.camera = cam; if (this.gtao) this.gtao.camera = cam; this.composer.render(); rp.camera = keep; if (this.gtao) this.gtao.camera = keep;
     }
     else this.renderer.render(this.scene, cam);
-    }finally{restaurar();}
+    }finally{restaurarAO();restaurar();}
   }
   // claymation: the lens focuses on the action — the player (or what they drive) at its distance; in first person, on
   // whatever is in the middle of the view

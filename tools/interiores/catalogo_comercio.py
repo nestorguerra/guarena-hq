@@ -718,5 +718,6 @@ for k, (n_, col, r, n, forma, sy, c2) in {
         'platanos': ('Cajón de plátanos', '#f2d040', 0.022, 6, 'barra', 1.0, '#e8c030'), 'uvas': ('Cajón de uvas', '#8a4a9a', 0.022, 6, 'esfera', 1.0, '#a8c860')}.items():
     cajon('prod_fruta_' + k, n_, col, r, n, forma, sy, 9.0, c2)
 
-json.dump({'version': 1, 'familia': 'comercio', 'categorias': CATEGORIAS, 'objetos': OUT}, open(os.path.join(ROOT, 'data', 'objetos', 'comercio.json'), 'w'), ensure_ascii=False, indent=1)
-print('objetos de comercio:', len(OUT))
+if __name__ == '__main__':
+    json.dump({'version': 1, 'familia': 'comercio', 'categorias': CATEGORIAS, 'objetos': OUT}, open(os.path.join(ROOT, 'data', 'objetos', 'comercio.json'), 'w'), ensure_ascii=False, indent=1)
+    print('objetos de comercio:', len(OUT))

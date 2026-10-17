@@ -232,6 +232,10 @@
      "preferir": {
       "type": "boolean",
       "description": "Intenta el máximo de cantidad; el mínimo conserva los obligatorios."
+     },
+     "silla_frontal": {
+      "type": "string",
+      "description": "Asiento que se coloca y valida delante del mueble contra pared como parte del mismo puesto."
      }
     }
    }

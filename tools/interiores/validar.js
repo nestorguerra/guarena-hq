@@ -26,7 +26,12 @@ export function revisar(h, presupuesto) {
   const recuento = [];
   for (const [ei, e] of K.objetos.entries()) {
     if (L.activas && !L.activas.includes(ei)) continue; // (an entry of another household)
-    const n = porEntrada.get(ei) || 0, Z = L.zonas[e.zona], area = (Z.x1 - Z.x0) * (Z.z1 - Z.z0), largo = Math.max(Z.x1 - Z.x0, Z.z1 - Z.z0);
+    const n = e.silla_frontal?C.filter(c=>c.e===ei&&c.de===null).length:(porEntrada.get(ei)||0), Z = L.zonas[e.zona], area = (Z.x1 - Z.x0) * (Z.z1 - Z.z0), largo = Math.max(Z.x1 - Z.x0, Z.z1 - Z.z0);
+    if(e.silla_frontal){
+      const puestos=C.map((c,i)=>({c,i})).filter(({c})=>c.e===ei&&c.de===null);
+      for(const {i} of puestos)if(C.filter(c=>c.e===ei&&c.obj===e.silla_frontal&&c.de===i).length!==1)err.push(`asiento: entrada ${ei} sin una silla frontal vinculada al puesto ${i}`);
+      if(C.filter(c=>c.e===ei&&c.de!==null).length!==puestos.length)err.push(`asiento: entrada ${ei} con auxiliares sin correspondencia`);
+    }
     let lo = e.obligatorio ? 1 : 0, hi = Infinity;
     if (e.cantidad) { lo = Math.max(lo, e.cantidad[0]); hi = e.cantidad[1]; }
     if (e.regla === 'conjunto' && !e.por_m2) { // (sets so many: the tables counted)

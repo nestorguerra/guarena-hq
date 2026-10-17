@@ -91,73 +91,78 @@
    "seed": 1,
    "W": 6.2,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 26,
-   "distintos": 17,
-   "hash": "92915e69",
+   "guardias": 10,
+   "objetos": 57,
+   "distintos": 38,
+   "hash": "a6d09916",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 12
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 42
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.2,
-     "libre_m2": 11.2
+     "alcanzable_m2": 8.71,
+     "libre_m2": 8.71
     }
    },
    "luz": {
@@ -165,7 +170,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4378,
+   "triangulos": 8790,
    "mallas": 11,
    "luces": 3,
    "hogar": "abuela · antiguo",
@@ -188,68 +193,63 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.6999999999999997,
-   "guardias": 7,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "3421167c",
+   "guardias": 6,
+   "objetos": 34,
+   "distintos": 29,
+   "hash": "6af244d0",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.11,
-     "libre_m2": 5.11
+     "alcanzable_m2": 2.32,
+     "libre_m2": 4.06
     }
    },
    "luz": {
@@ -257,7 +257,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4146,
+   "triangulos": 5194,
    "mallas": 11,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
@@ -281,10 +281,10 @@
    "seed": 3,
    "W": 5,
    "D": 2.4,
-   "guardias": 6,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "32d00c09",
+   "guardias": 5,
+   "objetos": 29,
+   "distintos": 23,
+   "hash": "6c17e33c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -294,50 +294,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 22
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
-    },
-    {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.43,
-     "libre_m2": 4.43
+     "alcanzable_m2": 4.78,
+     "libre_m2": 4.78
     }
    },
    "luz": {
@@ -345,7 +340,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2744,
+   "triangulos": 3940,
    "mallas": 10,
    "luces": 2,
    "hogar": "familia · moderno",
@@ -371,72 +366,72 @@
    "W": 4.4,
    "D": 4.8,
    "guardias": 8,
-   "objetos": 25,
-   "distintos": 18,
-   "hash": "44fbb5b5",
+   "objetos": 56,
+   "distintos": 43,
+   "hash": "1f9d1b90",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 44
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.87,
-     "libre_m2": 9.87
+     "alcanzable_m2": 9.25,
+     "libre_m2": 9.25
     }
    },
    "luz": {
@@ -444,7 +439,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3832,
+   "triangulos": 6504,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -468,73 +463,78 @@
    "seed": 5,
    "W": 6.5,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 33,
-   "distintos": 19,
-   "hash": "8f0df31d",
+   "guardias": 10,
+   "objetos": 67,
+   "distintos": 46,
+   "hash": "aca40824",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 18
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 51
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.52,
-     "libre_m2": 13.52
+     "alcanzable_m2": 11.12,
+     "libre_m2": 11.12
     }
    },
    "luz": {
@@ -542,7 +542,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7422,
+   "triangulos": 9654,
    "mallas": 11,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -566,10 +566,10 @@
    "seed": 6,
    "W": 3.5,
    "D": 3.9,
-   "guardias": 7,
-   "objetos": 18,
-   "distintos": 14,
-   "hash": "44f4122f",
+   "guardias": 6,
+   "objetos": 34,
+   "distintos": 29,
+   "hash": "7dfec810",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -579,55 +579,50 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.15,
-     "libre_m2": 3.15
+     "alcanzable_m2": 3.49,
+     "libre_m2": 3.49
     }
    },
    "luz": {
@@ -635,7 +630,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3236,
+   "triangulos": 4196,
    "mallas": 10,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -660,9 +655,9 @@
    "W": 4.7,
    "D": 2.4,
    "guardias": 5,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "b69bd3a8",
+   "objetos": 32,
+   "distintos": 27,
+   "hash": "6bb85f5f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -672,37 +667,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -718,7 +713,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1876,
+   "triangulos": 4080,
    "mallas": 10,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -744,72 +739,77 @@
    "W": 5.9,
    "D": 4.5,
    "guardias": 8,
-   "objetos": 22,
-   "distintos": 16,
-   "hash": "b6c00f25",
+   "objetos": 56,
+   "distintos": 39,
+   "hash": "8ef1f9df",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 42
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.41,
-     "libre_m2": 12.41
+     "alcanzable_m2": 11.61,
+     "libre_m2": 11.61
     }
    },
    "luz": {
@@ -817,7 +817,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4086,
+   "triangulos": 7806,
    "mallas": 11,
    "luces": 2,
    "hogar": "agricultor · rustico",
@@ -842,9 +842,9 @@
    "W": 4.1,
    "D": 2.4,
    "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "f88a2e70",
+   "objetos": 30,
+   "distintos": 24,
+   "hash": "fa5204d7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -854,37 +854,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -900,7 +900,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1676,
+   "triangulos": 4180,
    "mallas": 10,
    "luces": 2,
    "hogar": "artista · bohemio",
@@ -924,9 +924,9 @@
    "W": 3.8000000000000003,
    "D": 3,
    "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "a1fc8ffe",
+   "objetos": 31,
+   "distintos": 25,
+   "hash": "b4699cb",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -936,37 +936,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -982,7 +982,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2320,
+   "triangulos": 4368,
    "mallas": 10,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -1006,68 +1006,63 @@
    "seed": 11,
    "W": 5,
    "D": 3,
-   "guardias": 6,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "bc104dad",
+   "guardias": 5,
+   "objetos": 33,
+   "distintos": 27,
+   "hash": "5b624372",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
+     "obj": "va_alacena",
+     "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 9
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 26
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.86,
-     "libre_m2": 6.86
+     "alcanzable_m2": 6.72,
+     "libre_m2": 6.72
     }
    },
    "luz": {
@@ -1075,7 +1070,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2904,
+   "triangulos": 4436,
    "mallas": 10,
    "luces": 2,
    "hogar": "matrimonio · rustico",
@@ -1100,82 +1095,87 @@
    "W": 6.2,
    "D": 4.8,
    "guardias": 8,
-   "objetos": 25,
-   "distintos": 16,
-   "hash": "f8e1441f",
+   "objetos": 57,
+   "distintos": 37,
+   "hash": "1335e6fe",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 12
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 43
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
-     "n": 2
+     "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.27,
-     "libre_m2": 15.27
+     "alcanzable_m2": 14.75,
+     "libre_m2": 14.75
     }
    },
    "luz": {
-    "estancia": 0.078
+    "estancia": 0.06
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5070,
+   "triangulos": 6742,
    "mallas": 11,
-   "luces": 2,
+   "luces": 3,
    "hogar": "familia · alegre",
    "contexto_hogar": {
     "perfil": "familia",
@@ -1190,7 +1190,7 @@
     "habitacion": "dorm"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.962
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_cocina",
@@ -1198,73 +1198,63 @@
    "seed": 13,
    "W": 6.2,
    "D": 2.6999999999999997,
-   "guardias": 8,
-   "objetos": 21,
-   "distintos": 15,
-   "hash": "c6f7eb53",
+   "guardias": 6,
+   "objetos": 31,
+   "distintos": 27,
+   "hash": "7f74ff5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 20
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.25,
-     "libre_m2": 5.25
+     "alcanzable_m2": 6.29,
+     "libre_m2": 6.29
     }
    },
    "luz": {
@@ -1272,7 +1262,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3058,
+   "triangulos": 4478,
    "mallas": 11,
    "luces": 3,
    "hogar": "estudiante · joven",
@@ -1297,82 +1287,87 @@
    "W": 6.2,
    "D": 4.199999999999999,
    "guardias": 8,
-   "objetos": 24,
-   "distintos": 15,
-   "hash": "9d5afc7",
+   "objetos": 58,
+   "distintos": 42,
+   "hash": "f8fd4064",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 46
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.5,
-     "libre_m2": 11.5
+     "alcanzable_m2": 10.84,
+     "libre_m2": 10.84
     }
    },
    "luz": {
-    "estancia": 0.072
+    "estancia": 0.093
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3578,
+   "triangulos": 7206,
    "mallas": 11,
-   "luces": 3,
+   "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
     "perfil": "cazador",
@@ -1386,7 +1381,7 @@
     "habitacion": "dorm"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.769
+   "diferencia_con_semilla_1": 0.948
   },
   {
    "kit": "vivienda_cocina",
@@ -1394,73 +1389,63 @@
    "seed": 15,
    "W": 3.5,
    "D": 4.8,
-   "guardias": 8,
-   "objetos": 26,
-   "distintos": 17,
-   "hash": "ee948dfe",
+   "guardias": 6,
+   "objetos": 34,
+   "distintos": 26,
+   "hash": "ee350779",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 14
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.64,
-     "libre_m2": 5.64
+     "alcanzable_m2": 5.57,
+     "libre_m2": 5.57
     }
    },
    "luz": {
@@ -1468,7 +1453,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3700,
+   "triangulos": 4444,
    "mallas": 10,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -1493,72 +1478,72 @@
    "W": 6.2,
    "D": 3.3,
    "guardias": 8,
-   "objetos": 25,
-   "distintos": 17,
-   "hash": "47afba1c",
+   "objetos": 61,
+   "distintos": 45,
+   "hash": "fb4c67b3",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 46
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.11,
-     "libre_m2": 8.11
+     "alcanzable_m2": 7.61,
+     "libre_m2": 7.61
     }
    },
    "luz": {
@@ -1566,7 +1551,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5490,
+   "triangulos": 7022,
    "mallas": 11,
    "luces": 3,
    "hogar": "rico · lujo",
@@ -1591,73 +1576,63 @@
    "seed": 17,
    "W": 6.2,
    "D": 2.6999999999999997,
-   "guardias": 8,
-   "objetos": 29,
-   "distintos": 19,
-   "hash": "9e8f308b",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 27,
+   "hash": "3c54a127",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 14
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.04,
-     "libre_m2": 5.04
+     "alcanzable_m2": 4.93,
+     "libre_m2": 4.93
     }
    },
    "luz": {
@@ -1665,7 +1640,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4430,
+   "triangulos": 5558,
    "mallas": 11,
    "luces": 3,
    "hogar": "agricultor · antiguo",
@@ -1689,68 +1664,63 @@
    "seed": 18,
    "W": 4.1,
    "D": 3.5999999999999996,
-   "guardias": 7,
-   "objetos": 20,
-   "distintos": 16,
-   "hash": "8b64f49b",
+   "guardias": 6,
+   "objetos": 35,
+   "distintos": 30,
+   "hash": "647bcdfb",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.06,
-     "libre_m2": 5.06
+     "alcanzable_m2": 5.2,
+     "libre_m2": 5.2
     }
    },
    "luz": {
@@ -1758,7 +1728,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3284,
+   "triangulos": 4748,
    "mallas": 10,
    "luces": 2,
    "hogar": "artista · alegre",
@@ -1782,72 +1752,72 @@
    "W": 5.6,
    "D": 3.9,
    "guardias": 8,
-   "objetos": 27,
-   "distintos": 17,
-   "hash": "4bc58f06",
+   "objetos": 51,
+   "distintos": 39,
+   "hash": "ce298786",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 15
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 39
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.29,
-     "libre_m2": 8.29
+     "alcanzable_m2": 7.78,
+     "libre_m2": 7.78
     }
    },
    "luz": {
@@ -1855,7 +1825,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6194,
+   "triangulos": 7130,
    "mallas": 11,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -1879,83 +1849,78 @@
    "seed": 20,
    "W": 6.2,
    "D": 3,
-   "guardias": 8,
-   "objetos": 26,
-   "distintos": 18,
-   "hash": "fea28e3d",
+   "guardias": 7,
+   "objetos": 40,
+   "distintos": 29,
+   "hash": "ee2d2121",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 28
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.06,
-     "libre_m2": 6.06
+     "alcanzable_m2": 2.99,
+     "libre_m2": 5.06
     }
    },
    "luz": {
-    "estancia": 0.112
+    "estancia": 0.129
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3922,
+   "triangulos": 5502,
    "mallas": 11,
-   "luces": 3,
+   "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
     "perfil": "matrimonio",
@@ -1977,73 +1942,63 @@
    "seed": 21,
    "W": 5.6,
    "D": 3,
-   "guardias": 8,
-   "objetos": 27,
-   "distintos": 17,
-   "hash": "3f2f6be7",
+   "guardias": 6,
+   "objetos": 35,
+   "distintos": 30,
+   "hash": "9eeaf442",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 15
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.29,
-     "libre_m2": 5.29
+     "alcanzable_m2": 5.81,
+     "libre_m2": 5.81
     }
    },
    "luz": {
@@ -2051,7 +2006,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3678,
+   "triangulos": 4542,
    "mallas": 11,
    "luces": 2,
    "hogar": "familia · moderno",
@@ -2076,68 +2031,63 @@
    "seed": 22,
    "W": 4.4,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 22,
-   "distintos": 15,
-   "hash": "35b54f96",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 34,
+   "hash": "6a22a56f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.41,
-     "libre_m2": 3.41
+     "alcanzable_m2": 3.21,
+     "libre_m2": 3.21
     }
    },
    "luz": {
@@ -2145,7 +2095,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2980,
+   "triangulos": 4668,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -2169,10 +2119,10 @@
    "seed": 23,
    "W": 4.4,
    "D": 3,
-   "guardias": 7,
-   "objetos": 18,
-   "distintos": 14,
-   "hash": "f8ce6ec4",
+   "guardias": 6,
+   "objetos": 35,
+   "distintos": 27,
+   "hash": "149b2b1f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2182,55 +2132,50 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 6
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.15,
-     "libre_m2": 3.15
+     "alcanzable_m2": 2.82,
+     "libre_m2": 2.82
     }
    },
    "luz": {
@@ -2238,7 +2183,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4016,
+   "triangulos": 4984,
    "mallas": 10,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -2262,73 +2207,68 @@
    "seed": 24,
    "W": 5.300000000000001,
    "D": 3.5999999999999996,
-   "guardias": 8,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "f1962e40",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 32,
+   "hash": "71931143",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 26
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.88,
-     "libre_m2": 7.88
+     "alcanzable_m2": 7.55,
+     "libre_m2": 7.55
     }
    },
    "luz": {
@@ -2336,7 +2276,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2790,
+   "triangulos": 4742,
    "mallas": 11,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -2360,73 +2300,78 @@
    "seed": 25,
    "W": 7.7,
    "D": 3.5999999999999996,
-   "guardias": 8,
-   "objetos": 28,
-   "distintos": 19,
-   "hash": "9df8ac78",
+   "guardias": 10,
+   "objetos": 60,
+   "distintos": 39,
+   "hash": "c0da6223",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 46
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.16,
-     "libre_m2": 14.16
+     "alcanzable_m2": 10.95,
+     "libre_m2": 10.95
     }
    },
    "luz": {
@@ -2434,7 +2379,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2846,
+   "triangulos": 7770,
    "mallas": 11,
    "luces": 3,
    "hogar": "rico · lujo",
@@ -2459,73 +2404,78 @@
    "seed": 26,
    "W": 6.5,
    "D": 3.9,
-   "guardias": 8,
-   "objetos": 30,
-   "distintos": 19,
-   "hash": "925bf8b",
+   "guardias": 10,
+   "objetos": 63,
+   "distintos": 42,
+   "hash": "316437e6",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 16
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 48
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.34,
-     "libre_m2": 12.34
+     "alcanzable_m2": 9.3,
+     "libre_m2": 9.3
     }
    },
    "luz": {
@@ -2533,7 +2483,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4982,
+   "triangulos": 9734,
    "mallas": 11,
    "luces": 3,
    "hogar": "agricultor · rustico",
@@ -2558,72 +2508,77 @@
    "W": 6.5,
    "D": 3.5999999999999996,
    "guardias": 8,
-   "objetos": 24,
-   "distintos": 15,
-   "hash": "bd6dcc53",
+   "objetos": 53,
+   "distintos": 37,
+   "hash": "baba73ab",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 40
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.18,
-     "libre_m2": 10.18
+     "alcanzable_m2": 9.79,
+     "libre_m2": 9.79
     }
    },
    "luz": {
@@ -2631,7 +2586,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3490,
+   "triangulos": 6114,
    "mallas": 11,
    "luces": 3,
    "hogar": "artista · bohemio",
@@ -2655,72 +2610,77 @@
    "W": 7.1,
    "D": 4.199999999999999,
    "guardias": 8,
-   "objetos": 24,
-   "distintos": 16,
-   "hash": "53f9582b",
+   "objetos": 54,
+   "distintos": 40,
+   "hash": "a3ad2917",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 41
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.38,
-     "libre_m2": 15.38
+     "alcanzable_m2": 15.27,
+     "libre_m2": 15.27
     }
    },
    "luz": {
@@ -2728,7 +2688,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2926,
+   "triangulos": 7194,
    "mallas": 11,
    "luces": 3,
    "hogar": "abuela · antiguo",
@@ -2752,68 +2712,63 @@
    "seed": 29,
    "W": 5.9,
    "D": 2.4,
-   "guardias": 7,
-   "objetos": 24,
-   "distintos": 18,
-   "hash": "6dc8282a",
+   "guardias": 5,
+   "objetos": 29,
+   "distintos": 28,
+   "hash": "2e93199c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "mesa_camilla",
-     "mesas": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 12
+     "obj": "va_alto_cocina",
+     "n": 1
     },
     {
      "entrada": 11,
+     "obj": "mesa_camilla",
+     "mesas": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 21
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.42,
-     "libre_m2": 3.27
+     "alcanzable_m2": 5.92,
+     "libre_m2": 5.92
     }
    },
    "luz": {
@@ -2821,7 +2776,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3386,
+   "triangulos": 3890,
    "mallas": 11,
    "luces": 2,
    "hogar": "matrimonio · rustico",
@@ -2845,10 +2800,10 @@
    "seed": 30,
    "W": 3.8000000000000003,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "fbf82ffd",
+   "guardias": 5,
+   "objetos": 31,
+   "distintos": 27,
+   "hash": "ce2a5736",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2858,50 +2813,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
-    },
-    {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.55,
-     "libre_m2": 5.55
+     "alcanzable_m2": 5.86,
+     "libre_m2": 5.86
     }
    },
    "luz": {
@@ -2909,7 +2859,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1932,
+   "triangulos": 4204,
    "mallas": 10,
    "luces": 2,
    "hogar": "familia · alegre",
@@ -2934,73 +2884,68 @@
    "seed": 31,
    "W": 5,
    "D": 3.9,
-   "guardias": 8,
-   "objetos": 26,
-   "distintos": 17,
-   "hash": "b67886e7",
+   "guardias": 7,
+   "objetos": 42,
+   "distintos": 32,
+   "hash": "b7a46733",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 14
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 31
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.16,
-     "libre_m2": 7.16
+     "alcanzable_m2": 6.86,
+     "libre_m2": 6.86
     }
    },
    "luz": {
@@ -3008,7 +2953,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3128,
+   "triangulos": 5060,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -3032,73 +2977,68 @@
    "seed": 32,
    "W": 4.4,
    "D": 4.5,
-   "guardias": 8,
-   "objetos": 27,
-   "distintos": 19,
-   "hash": "7aba4cc9",
+   "guardias": 7,
+   "objetos": 45,
+   "distintos": 34,
+   "hash": "b5ed3dfe",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 14
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 33
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.31,
-     "libre_m2": 7.31
+     "alcanzable_m2": 5.96,
+     "libre_m2": 5.96
     }
    },
    "luz": {
@@ -3106,7 +3046,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4972,
+   "triangulos": 6008,
    "mallas": 10,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -3131,9 +3071,9 @@
    "W": 4.1,
    "D": 2.6999999999999997,
    "guardias": 5,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "204594e3",
+   "objetos": 28,
+   "distintos": 22,
+   "hash": "6d523efa",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3143,37 +3083,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 21
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -3189,7 +3129,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2284,
+   "triangulos": 3680,
    "mallas": 10,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -3213,73 +3153,78 @@
    "seed": 34,
    "W": 7.4,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 27,
-   "distintos": 18,
-   "hash": "9c6e67a5",
+   "guardias": 10,
+   "objetos": 67,
+   "distintos": 48,
+   "hash": "3b41c3a8",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 52
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.32,
-     "libre_m2": 17.32
+     "alcanzable_m2": 13.94,
+     "libre_m2": 13.94
     }
    },
    "luz": {
@@ -3287,7 +3232,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4426,
+   "triangulos": 8766,
    "mallas": 11,
    "luces": 3,
    "hogar": "rico · lujo",
@@ -3313,72 +3258,77 @@
    "W": 7.4,
    "D": 4.5,
    "guardias": 8,
-   "objetos": 27,
-   "distintos": 18,
-   "hash": "4e21cc4e",
+   "objetos": 56,
+   "distintos": 40,
+   "hash": "bba366a2",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 42
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.89,
-     "libre_m2": 17.89
+     "alcanzable_m2": 17.25,
+     "libre_m2": 17.25
     }
    },
    "luz": {
@@ -3386,7 +3336,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4734,
+   "triangulos": 7058,
    "mallas": 11,
    "luces": 3,
    "hogar": "agricultor · antiguo",
@@ -3410,10 +3360,10 @@
    "seed": 36,
    "W": 3.5,
    "D": 3.5999999999999996,
-   "guardias": 6,
-   "objetos": 18,
-   "distintos": 14,
-   "hash": "10602cc7",
+   "guardias": 5,
+   "objetos": 31,
+   "distintos": 30,
+   "hash": "a333d60c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3423,50 +3373,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
-    },
-    {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5,
-     "libre_m2": 5
+     "alcanzable_m2": 5.66,
+     "libre_m2": 5.66
     }
    },
    "luz": {
@@ -3474,7 +3419,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3008,
+   "triangulos": 4348,
    "mallas": 10,
    "luces": 1,
    "hogar": "artista · alegre",
@@ -3498,72 +3443,77 @@
    "W": 7.1,
    "D": 3.5999999999999996,
    "guardias": 8,
-   "objetos": 27,
-   "distintos": 17,
-   "hash": "4383c58a",
+   "objetos": 58,
+   "distintos": 38,
+   "hash": "dd9185c7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 45
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.87,
-     "libre_m2": 10.87
+     "alcanzable_m2": 11.4,
+     "libre_m2": 11.41
     }
    },
    "luz": {
@@ -3571,7 +3521,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4514,
+   "triangulos": 7738,
    "mallas": 11,
    "luces": 3,
    "hogar": "abuela · antiguo",
@@ -3596,9 +3546,9 @@
    "W": 3.2,
    "D": 3.5999999999999996,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "e723aba",
+   "objetos": 31,
+   "distintos": 26,
+   "hash": "8ace94c2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3608,37 +3558,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 5
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
@@ -3654,7 +3604,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2084,
+   "triangulos": 4100,
    "mallas": 10,
    "luces": 1,
    "hogar": "matrimonio · antiguo",
@@ -3679,72 +3629,77 @@
    "W": 7.7,
    "D": 3.3,
    "guardias": 8,
-   "objetos": 21,
-   "distintos": 15,
-   "hash": "408ba7c7",
+   "objetos": 57,
+   "distintos": 46,
+   "hash": "fe2d3744",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 44
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.65,
-     "libre_m2": 11.65
+     "alcanzable_m2": 11,
+     "libre_m2": 11
     }
    },
    "luz": {
@@ -3752,7 +3707,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2286,
+   "triangulos": 7674,
    "mallas": 11,
    "luces": 3,
    "hogar": "familia · moderno",
@@ -3777,73 +3732,68 @@
    "seed": 40,
    "W": 5.6,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 25,
-   "distintos": 19,
-   "hash": "9e00e30f",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 33,
+   "hash": "a379f6a0",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 27
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.52,
-     "libre_m2": 6.52
+     "alcanzable_m2": 6.08,
+     "libre_m2": 6.08
     }
    },
    "luz": {
@@ -3851,7 +3801,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4414,
+   "triangulos": 4950,
    "mallas": 11,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -3876,9 +3826,9 @@
    "W": 3.8000000000000003,
    "D": 3,
    "guardias": 5,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "bf4979d0",
+   "objetos": 29,
+   "distintos": 27,
+   "hash": "3851fc95",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3888,37 +3838,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 5
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 21
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -3934,7 +3884,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1944,
+   "triangulos": 4512,
    "mallas": 10,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -3958,73 +3908,63 @@
    "seed": 42,
    "W": 5.300000000000001,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 28,
-   "distintos": 19,
-   "hash": "ca234fb6",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 31,
+   "hash": "430ec247",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 15
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.91,
-     "libre_m2": 5.91
+     "alcanzable_m2": 5.65,
+     "libre_m2": 5.66
     }
    },
    "luz": {
@@ -4032,7 +3972,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5054,
+   "triangulos": 4750,
    "mallas": 11,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -4056,73 +3996,63 @@
    "seed": 43,
    "W": 4.1,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 22,
-   "distintos": 17,
-   "hash": "e5ed781e",
+   "guardias": 6,
+   "objetos": 35,
+   "distintos": 30,
+   "hash": "97ea291d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.21,
-     "libre_m2": 5.21
+     "alcanzable_m2": 5.82,
+     "libre_m2": 5.82
     }
    },
    "luz": {
@@ -4130,7 +4060,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3520,
+   "triangulos": 4640,
    "mallas": 10,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -4156,9 +4086,9 @@
    "W": 3.8000000000000003,
    "D": 3,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "31c0a816",
+   "objetos": 36,
+   "distintos": 30,
+   "hash": "69a830e0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4168,37 +4098,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 5
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 29
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -4214,7 +4144,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2168,
+   "triangulos": 4268,
    "mallas": 10,
    "luces": 2,
    "hogar": "agricultor · rustico",
@@ -4239,72 +4169,77 @@
    "W": 7.7,
    "D": 3.3,
    "guardias": 8,
-   "objetos": 28,
-   "distintos": 18,
-   "hash": "edf987a3",
+   "objetos": 56,
+   "distintos": 39,
+   "hash": "c44f195a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 42
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.22,
-     "libre_m2": 12.22
+     "alcanzable_m2": 10.66,
+     "libre_m2": 10.66
     }
    },
    "luz": {
@@ -4312,7 +4247,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3946,
+   "triangulos": 6474,
    "mallas": 11,
    "luces": 3,
    "hogar": "artista · bohemio",
@@ -4335,10 +4270,10 @@
    "seed": 46,
    "W": 4.1,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 16,
-   "distintos": 12,
-   "hash": "d31553d6",
+   "guardias": 5,
+   "objetos": 31,
+   "distintos": 25,
+   "hash": "dc300a2f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4348,55 +4283,50 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 0
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.85,
-     "libre_m2": 5.85
+     "alcanzable_m2": 6.22,
+     "libre_m2": 6.22
     }
    },
    "luz": {
@@ -4404,7 +4334,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2540,
+   "triangulos": 3764,
    "mallas": 10,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -4429,72 +4359,77 @@
    "W": 7.4,
    "D": 3.5999999999999996,
    "guardias": 8,
-   "objetos": 28,
-   "distintos": 18,
-   "hash": "23983107",
+   "objetos": 59,
+   "distintos": 41,
+   "hash": "4c6f1272",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 44
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.37,
-     "libre_m2": 11.37
+     "alcanzable_m2": 10.92,
+     "libre_m2": 10.92
     }
    },
    "luz": {
@@ -4502,7 +4437,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5578,
+   "triangulos": 7410,
    "mallas": 11,
    "luces": 3,
    "hogar": "matrimonio · rustico",
@@ -4527,72 +4462,77 @@
    "W": 5.6,
    "D": 4.199999999999999,
    "guardias": 8,
-   "objetos": 26,
-   "distintos": 17,
-   "hash": "5aa2814c",
+   "objetos": 54,
+   "distintos": 37,
+   "hash": "9fe3cfda",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 41
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.88,
-     "libre_m2": 10.88
+     "alcanzable_m2": 10.38,
+     "libre_m2": 10.38
     }
    },
    "luz": {
@@ -4600,7 +4540,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3214,
+   "triangulos": 6542,
    "mallas": 11,
    "luces": 2,
    "hogar": "familia · alegre",
@@ -4625,73 +4565,63 @@
    "seed": 49,
    "W": 3.5,
    "D": 4.8,
-   "guardias": 8,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "6182abe3",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 26,
+   "hash": "e411eabd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 26
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.25,
-     "libre_m2": 5.25
+     "alcanzable_m2": 5.68,
+     "libre_m2": 5.68
     }
    },
    "luz": {
@@ -4699,7 +4629,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2272,
+   "triangulos": 4312,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -4723,73 +4653,63 @@
    "seed": 50,
    "W": 6.2,
    "D": 2.6999999999999997,
-   "guardias": 7,
-   "objetos": 18,
-   "distintos": 13,
-   "hash": "d6167748",
+   "guardias": 6,
+   "objetos": 30,
+   "distintos": 24,
+   "hash": "d603f22b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "mesa_camilla",
-     "mesas": 0
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
     },
     {
      "entrada": 11,
+     "obj": "mesa_camilla",
+     "mesas": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 19
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.05,
-     "libre_m2": 8.05
+     "alcanzable_m2": 5.22,
+     "libre_m2": 5.22
     }
    },
    "luz": {
@@ -4797,7 +4717,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3546,
+   "triangulos": 4822,
    "mallas": 11,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -4822,9 +4742,9 @@
    "W": 3.5,
    "D": 2.4,
    "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "d44d4e74",
+   "objetos": 27,
+   "distintos": 23,
+   "hash": "178ac039",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4834,37 +4754,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 20
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
@@ -4880,7 +4800,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3700,
+   "triangulos": 4300,
    "mallas": 10,
    "luces": 1,
    "hogar": "musico · bohemio",
@@ -4904,10 +4824,10 @@
    "seed": 52,
    "W": 4.1,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 24,
-   "distintos": 18,
-   "hash": "9cf55c71",
+   "guardias": 6,
+   "objetos": 34,
+   "distintos": 28,
+   "hash": "b5187f89",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4917,55 +4837,50 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 7,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 22
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.4,
-     "libre_m2": 2.53
+     "alcanzable_m2": 3.16,
+     "libre_m2": 3.32
     }
    },
    "luz": {
@@ -4973,7 +4888,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3388,
+   "triangulos": 4876,
    "mallas": 10,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -4999,9 +4914,9 @@
    "W": 3.5,
    "D": 3.3,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 12,
-   "hash": "373185e8",
+   "objetos": 30,
+   "distintos": 27,
+   "hash": "74d59d42",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5011,37 +4926,37 @@
      "n": 1
     },
     {
-     "entrada": 1,
+     "entrada": 2,
      "obj": "va_encimera",
      "n": 1
     },
     {
-     "entrada": 2,
+     "entrada": 4,
      "obj": "va_nevera",
      "n": 1
     },
     {
-     "entrada": 3,
+     "entrada": 5,
      "obj": "va_alacena",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 6,
      "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 5
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
@@ -5057,7 +4972,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1904,
+   "triangulos": 3988,
    "mallas": 10,
    "luces": 1,
    "hogar": "agricultor · antiguo",
@@ -5082,72 +4997,77 @@
    "W": 5.9,
    "D": 4.199999999999999,
    "guardias": 8,
-   "objetos": 26,
-   "distintos": 16,
-   "hash": "648e6734",
+   "objetos": 56,
+   "distintos": 42,
+   "hash": "eebadb65",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 14
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 44
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.13,
-     "libre_m2": 12.13
+     "alcanzable_m2": 11.68,
+     "libre_m2": 11.68
     }
    },
    "luz": {
@@ -5155,7 +5075,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3398,
+   "triangulos": 6190,
    "mallas": 11,
    "luces": 2,
    "hogar": "artista · alegre",
@@ -5178,73 +5098,68 @@
    "seed": 55,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 21,
-   "distintos": 16,
-   "hash": "68069794",
+   "guardias": 7,
+   "objetos": 41,
+   "distintos": 32,
+   "hash": "21475b8b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 9
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 30
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.8,
-     "libre_m2": 6.8
+     "alcanzable_m2": 6.55,
+     "libre_m2": 6.55
     }
    },
    "luz": {
@@ -5252,7 +5167,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4998,
+   "triangulos": 5650,
    "mallas": 11,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -5276,68 +5191,63 @@
    "seed": 56,
    "W": 4.4,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 19,
-   "distintos": 16,
-   "hash": "753a9439",
+   "guardias": 6,
+   "objetos": 30,
+   "distintos": 23,
+   "hash": "1ff6f030",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 19
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.65,
-     "libre_m2": 3.65
+     "alcanzable_m2": 4.01,
+     "libre_m2": 4.01
     }
    },
    "luz": {
@@ -5345,7 +5255,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4620,
+   "triangulos": 4912,
    "mallas": 10,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
@@ -5369,73 +5279,68 @@
    "seed": 57,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 24,
-   "distintos": 17,
-   "hash": "36fe9105",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 31,
+   "hash": "6f89977b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 26
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.5,
-     "libre_m2": 6.5
+     "alcanzable_m2": 7.47,
+     "libre_m2": 7.47
     }
    },
    "luz": {
@@ -5443,7 +5348,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2994,
+   "triangulos": 4918,
    "mallas": 11,
    "luces": 2,
    "hogar": "familia · moderno",
@@ -5468,68 +5373,63 @@
    "seed": 58,
    "W": 4.7,
    "D": 3,
-   "guardias": 7,
-   "objetos": 23,
-   "distintos": 16,
-   "hash": "7ef1c5d1",
+   "guardias": 6,
+   "objetos": 33,
+   "distintos": 27,
+   "hash": "6fa4593c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.74,
-     "libre_m2": 3.74
+     "alcanzable_m2": 3.81,
+     "libre_m2": 3.81
     }
    },
    "luz": {
@@ -5537,7 +5437,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2192,
+   "triangulos": 4504,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -5561,73 +5461,68 @@
    "seed": 59,
    "W": 6.5,
    "D": 3,
-   "guardias": 8,
-   "objetos": 23,
-   "distintos": 16,
-   "hash": "b27595aa",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 31,
+   "hash": "10c2dd4c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 27
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.59,
-     "libre_m2": 7.59
+     "alcanzable_m2": 6.6,
+     "libre_m2": 6.6
     }
    },
    "luz": {
@@ -5635,7 +5530,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3882,
+   "triangulos": 5674,
    "mallas": 11,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -5659,68 +5554,63 @@
    "seed": 60,
    "W": 5.300000000000001,
    "D": 3,
-   "guardias": 7,
-   "objetos": 22,
-   "distintos": 17,
-   "hash": "a6377a26",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 32,
+   "hash": "6d4df125",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.6,
-     "libre_m2": 5.6
+     "alcanzable_m2": 5.54,
+     "libre_m2": 5.54
     }
    },
    "luz": {
@@ -5728,7 +5618,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3306,
+   "triangulos": 4358,
    "mallas": 11,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -5752,10 +5642,10 @@
    "seed": 61,
    "W": 4.4,
    "D": 3,
-   "guardias": 7,
-   "objetos": 18,
-   "distintos": 13,
-   "hash": "a0aa5385",
+   "guardias": 6,
+   "objetos": 37,
+   "distintos": 31,
+   "hash": "44387c43",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5765,55 +5655,50 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_alto_cocina",
      "n": 0
     },
     {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 7
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 27
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.25,
-     "libre_m2": 3.25
+     "alcanzable_m2": 4.07,
+     "libre_m2": 4.07
     }
    },
    "luz": {
@@ -5821,7 +5706,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3020,
+   "triangulos": 4784,
    "mallas": 10,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -5846,73 +5731,63 @@
    "seed": 62,
    "W": 7.1,
    "D": 2.4,
-   "guardias": 8,
-   "objetos": 27,
-   "distintos": 18,
-   "hash": "789c14ee",
+   "guardias": 6,
+   "objetos": 36,
+   "distintos": 26,
+   "hash": "19525b08",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 12
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 23
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.24,
-     "libre_m2": 4.3
+     "alcanzable_m2": 3.36,
+     "libre_m2": 4.41
     }
    },
    "luz": {
@@ -5920,7 +5795,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5902,
+   "triangulos": 5114,
    "mallas": 11,
    "luces": 3,
    "hogar": "agricultor · rustico",
@@ -5944,10 +5819,10 @@
    "seed": 63,
    "W": 3.5,
    "D": 3.5999999999999996,
-   "guardias": 6,
-   "objetos": 21,
-   "distintos": 17,
-   "hash": "c5f63ec4",
+   "guardias": 5,
+   "objetos": 33,
+   "distintos": 30,
+   "hash": "6c426230",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5957,50 +5832,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 7,
+     "obj": "va_alto_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 26
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.2,
-     "libre_m2": 5.2
+     "alcanzable_m2": 5.56,
+     "libre_m2": 5.56
     }
    },
    "luz": {
@@ -6008,7 +5878,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3452,
+   "triangulos": 4204,
    "mallas": 10,
    "luces": 1,
    "hogar": "artista · bohemio",
@@ -6031,10 +5901,10 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.6999999999999997,
-   "guardias": 6,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "8c8bdd08",
+   "guardias": 5,
+   "objetos": 33,
+   "distintos": 25,
+   "hash": "8194db9e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6044,50 +5914,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 8
+     "entrada": 7,
+     "obj": "va_alto_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 25
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.33,
-     "libre_m2": 5.33
+     "alcanzable_m2": 5.99,
+     "libre_m2": 5.99
     }
    },
    "luz": {
@@ -6095,7 +5960,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2464,
+   "triangulos": 4120,
    "mallas": 10,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -6119,73 +5984,78 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.5999999999999996,
-   "guardias": 8,
-   "objetos": 30,
-   "distintos": 19,
-   "hash": "1d41528d",
+   "guardias": 10,
+   "objetos": 61,
+   "distintos": 43,
+   "hash": "9269f059",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 16
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 46
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.41,
-     "libre_m2": 13.41
+     "alcanzable_m2": 11.25,
+     "libre_m2": 11.25
     }
    },
    "luz": {
@@ -6193,7 +6063,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4026,
+   "triangulos": 9442,
    "mallas": 11,
    "luces": 3,
    "hogar": "matrimonio · rustico",
@@ -6217,73 +6087,78 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 24,
-   "distintos": 17,
-   "hash": "27499bb8",
+   "guardias": 10,
+   "objetos": 65,
+   "distintos": 48,
+   "hash": "f30f2472",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 51
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.3,
-     "libre_m2": 12.3
+     "alcanzable_m2": 8.55,
+     "libre_m2": 8.93
     }
    },
    "luz": {
@@ -6291,7 +6166,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3810,
+   "triangulos": 8770,
    "mallas": 11,
    "luces": 2,
    "hogar": "familia · alegre",
@@ -6316,73 +6191,78 @@
    "seed": 67,
    "W": 5.6,
    "D": 4.5,
-   "guardias": 8,
-   "objetos": 24,
-   "distintos": 15,
-   "hash": "15b32cf0",
+   "guardias": 10,
+   "objetos": 63,
+   "distintos": 43,
+   "hash": "486dedfb",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 49
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12,
-     "libre_m2": 12
+     "alcanzable_m2": 8.2,
+     "libre_m2": 8.2
     }
    },
    "luz": {
@@ -6390,7 +6270,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2870,
+   "triangulos": 8410,
    "mallas": 11,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -6414,68 +6294,63 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.6999999999999997,
-   "guardias": 7,
-   "objetos": 23,
-   "distintos": 18,
-   "hash": "442f483a",
+   "guardias": 5,
+   "objetos": 29,
+   "distintos": 26,
+   "hash": "f2b20c3f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "mesa_camilla",
-     "mesas": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "obj": "va_alto_cocina",
+     "n": 1
     },
     {
      "entrada": 11,
+     "obj": "mesa_camilla",
+     "mesas": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 21
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.86,
-     "libre_m2": 4.86
+     "alcanzable_m2": 7.5,
+     "libre_m2": 7.5
     }
    },
    "luz": {
@@ -6483,7 +6358,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4442,
+   "triangulos": 4438,
    "mallas": 11,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -6508,72 +6383,77 @@
    "W": 7.7,
    "D": 3.9,
    "guardias": 8,
-   "objetos": 25,
-   "distintos": 15,
-   "hash": "fbfd9e23",
+   "objetos": 51,
+   "distintos": 36,
+   "hash": "4f6704c4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 12
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 38
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.64,
-     "libre_m2": 15.64
+     "alcanzable_m2": 15.13,
+     "libre_m2": 15.13
     }
    },
    "luz": {
@@ -6581,7 +6461,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3250,
+   "triangulos": 6754,
    "mallas": 11,
    "luces": 3,
    "hogar": "musico · bohemio",
@@ -6606,72 +6486,72 @@
    "W": 5.300000000000001,
    "D": 3.9,
    "guardias": 8,
-   "objetos": 23,
-   "distintos": 16,
-   "hash": "8a891c57",
+   "objetos": 50,
+   "distintos": 39,
+   "hash": "beefd5b2",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 10
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 38
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.25,
-     "libre_m2": 8.25
+     "alcanzable_m2": 7.98,
+     "libre_m2": 7.98
     }
    },
    "luz": {
@@ -6679,7 +6559,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3486,
+   "triangulos": 6486,
    "mallas": 11,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -6704,73 +6584,68 @@
    "seed": 71,
    "W": 5,
    "D": 3.9,
-   "guardias": 8,
-   "objetos": 29,
-   "distintos": 19,
-   "hash": "4a5d0d41",
+   "guardias": 7,
+   "objetos": 42,
+   "distintos": 33,
+   "hash": "2760ba03",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 16
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 29
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.5,
-     "libre_m2": 8.5
+     "alcanzable_m2": 6.31,
+     "libre_m2": 6.31
     }
    },
    "luz": {
@@ -6778,7 +6653,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5028,
+   "triangulos": 6056,
    "mallas": 10,
    "luces": 2,
    "hogar": "agricultor · antiguo",
@@ -6802,73 +6677,78 @@
    "seed": 72,
    "W": 7.7,
    "D": 3,
-   "guardias": 8,
-   "objetos": 28,
-   "distintos": 20,
-   "hash": "1a493ed8",
+   "guardias": 10,
+   "objetos": 62,
+   "distintos": 41,
+   "hash": "4d584be5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 48
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.07,
-     "libre_m2": 10.07
+     "alcanzable_m2": 6.71,
+     "libre_m2": 7.21
     }
    },
    "luz": {
@@ -6876,7 +6756,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5130,
+   "triangulos": 9062,
    "mallas": 11,
    "luces": 3,
    "hogar": "artista · alegre",
@@ -6899,68 +6779,63 @@
    "seed": 73,
    "W": 3.5,
    "D": 4.5,
-   "guardias": 7,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "32b5b698",
+   "guardias": 6,
+   "objetos": 32,
+   "distintos": 27,
+   "hash": "e9649074",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
+     "obj": "va_alacena",
+     "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 6
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 22
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.14,
-     "libre_m2": 4.14
+     "alcanzable_m2": 5,
+     "libre_m2": 5
     }
    },
    "luz": {
@@ -6968,7 +6843,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3204,
+   "triangulos": 5796,
    "mallas": 10,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -6992,73 +6867,78 @@
    "seed": 74,
    "W": 6.5,
    "D": 4.5,
-   "guardias": 8,
-   "objetos": 27,
-   "distintos": 17,
-   "hash": "7850710c",
+   "guardias": 10,
+   "objetos": 62,
+   "distintos": 38,
+   "hash": "6ea83ed5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 47
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.88,
-     "libre_m2": 14.88
+     "alcanzable_m2": 12.16,
+     "libre_m2": 12.16
     }
    },
    "luz": {
@@ -7066,7 +6946,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4986,
+   "triangulos": 9266,
    "mallas": 11,
    "luces": 3,
    "hogar": "matrimonio · antiguo",
@@ -7090,73 +6970,78 @@
    "seed": 75,
    "W": 7.4,
    "D": 4.199999999999999,
-   "guardias": 8,
-   "objetos": 30,
-   "distintos": 18,
-   "hash": "e3e76312",
+   "guardias": 10,
+   "objetos": 60,
+   "distintos": 40,
+   "hash": "468ebd7f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 15
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 44
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.69,
-     "libre_m2": 16.69
+     "alcanzable_m2": 13.98,
+     "libre_m2": 13.99
     }
    },
    "luz": {
@@ -7164,7 +7049,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2842,
+   "triangulos": 8446,
    "mallas": 11,
    "luces": 3,
    "hogar": "familia · moderno",
@@ -7189,10 +7074,10 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.6999999999999997,
-   "guardias": 6,
-   "objetos": 20,
-   "distintos": 15,
-   "hash": "7129223a",
+   "guardias": 5,
+   "objetos": 32,
+   "distintos": 25,
+   "hash": "f1c8f7f5",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7202,50 +7087,45 @@
      "n": 1
     },
     {
-     "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
      "entrada": 2,
-     "obj": "va_nevera",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_encimera",
+     "obj": "va_lavadora",
      "n": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 11
+     "entrada": 7,
+     "obj": "va_alto_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 24
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.39,
-     "libre_m2": 5.39
+     "alcanzable_m2": 5.72,
+     "libre_m2": 5.72
     }
    },
    "luz": {
@@ -7253,7 +7133,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4064,
+   "triangulos": 4060,
    "mallas": 10,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -7278,72 +7158,77 @@
    "W": 7.4,
    "D": 4.8,
    "guardias": 8,
-   "objetos": 28,
-   "distintos": 18,
-   "hash": "4c9607f",
+   "objetos": 62,
+   "distintos": 40,
+   "hash": "8d21abd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 0
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 47
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.76,
-     "libre_m2": 18.76
+     "alcanzable_m2": 18.16,
+     "libre_m2": 18.16
     }
    },
    "luz": {
@@ -7351,7 +7236,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3438,
+   "triangulos": 8102,
    "mallas": 11,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -7375,73 +7260,68 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.6999999999999997,
-   "guardias": 8,
-   "objetos": 22,
-   "distintos": 17,
-   "hash": "bd89ddcd",
+   "guardias": 7,
+   "objetos": 42,
+   "distintos": 28,
+   "hash": "b01339df",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 9
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 29
     },
     {
-     "entrada": 11,
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.55,
-     "libre_m2": 6.55
+     "alcanzable_m2": 5.58,
+     "libre_m2": 5.58
     }
    },
    "luz": {
@@ -7449,7 +7329,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3306,
+   "triangulos": 5366,
    "mallas": 11,
    "luces": 3,
    "hogar": "musico · bohemio",
@@ -7473,73 +7353,78 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.5999999999999996,
-   "guardias": 8,
-   "objetos": 26,
-   "distintos": 17,
-   "hash": "632a7ed9",
+   "guardias": 10,
+   "objetos": 65,
+   "distintos": 50,
+   "hash": "13a7fac8",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 0
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 0
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 50
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.83,
-     "libre_m2": 11.83
+     "alcanzable_m2": 8.43,
+     "libre_m2": 8.43
     }
    },
    "luz": {
@@ -7547,7 +7432,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3374,
+   "triangulos": 8750,
    "mallas": 11,
    "luces": 3,
    "hogar": "rico · lujo",
@@ -7572,73 +7457,78 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.5,
-   "guardias": 8,
-   "objetos": 23,
-   "distintos": 16,
-   "hash": "c3b90860",
+   "guardias": 10,
+   "objetos": 65,
+   "distintos": 48,
+   "hash": "1b4cfa0f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
      "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "mesa_camilla",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 9
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 50
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.38,
-     "libre_m2": 17.38
+     "alcanzable_m2": 13.46,
+     "libre_m2": 13.46
     }
    },
    "luz": {
@@ -7646,7 +7536,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4718,
+   "triangulos": 9398,
    "mallas": 11,
    "luces": 3,
    "hogar": "agricultor · rustico",
@@ -7670,73 +7560,78 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 28,
-   "distintos": 19,
-   "hash": "3864ef1e",
+   "guardias": 10,
+   "objetos": 69,
+   "distintos": 52,
+   "hash": "f1a2609a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
-     "entrada": 0,
-     "obj": "va_cocina",
-     "n": 1
-    },
-    {
      "entrada": 1,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_nevera",
+     "obj": "va_cocina_amplia",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_alacena",
+     "obj": "va_encimera_amplia",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_lavadora",
+     "obj": "va_nevera",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_alto_cocina",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_encimera",
-     "n": 1
-    },
-    {
-     "entrada": 7,
      "obj": "va_alacena",
      "n": 1
     },
     {
+     "entrada": 6,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alto_cocina",
+     "n": 1
+    },
+    {
      "entrada": 9,
+     "obj": "va_encimera_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_mesa_comedor",
      "mesas": 1
     },
     {
-     "entrada": 10,
-     "obj": "prod_atun|prod_sardinillas|prod_mejillon",
-     "n": 13
+     "entrada": 13,
+     "obj": "va_isla_cocina",
+     "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 14,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 53
+    },
+    {
+     "entrada": 15,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.09,
-     "libre_m2": 11.09
+     "alcanzable_m2": 8.44,
+     "libre_m2": 8.44
     }
    },
    "luz": {
@@ -7744,7 +7639,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3454,
+   "triangulos": 8834,
    "mallas": 11,
    "luces": 3,
    "hogar": "artista · bohemio",

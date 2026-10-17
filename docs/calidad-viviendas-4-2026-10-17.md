@@ -47,3 +47,18 @@ La revisión estática final observa sombras más suaves, volumen conservado y a
 Ensayo acotado en el M1, calidad alta, 960×540, tres baños, doce imágenes medidas por muestra tras cuatro de calentamiento: base 4,8/13,1/13,4 ms; luz final 7,3/14,8/15,1 ms, máximo observado 19,1 ms. Es coste de render sincronizado; no una medida general de FPS ni de todos los equipos. El ensayo inicial discreto se conserva aparte. Los conteos de memoria de la base repiten el estado final de su serie, por lo que no prueban estabilidad temporal ni ausencia de fugas GPU.
 
 Pasan juego fuente, paquete y control de marcas. Datos y modelos son idénticos por hash a la tanda 3: su barrido de 200 casas sigue siendo evidencia geométrica; no se presenta como una nueva ejecución de este render. La integración de esta tanda sí vuelve a probar las 22 casas reales, entradas, Annie, comercios y partida ficticia. API de sombras comprobada contra [la fuente de three.js r170](https://github.com/mrdoob/three.js/blob/r170/src/lights/LightShadow.js). Publicación pendiente de commit, Actions y comprobación pública.
+
+
+Tanda 4 publicada y verificada: commit 189929e, validación 39048780754 y Pages 39048994637 en verde. La integración pública relee ese commit, conserva la partida ficticia 321/700 tras recarga y termina sin errores.
+
+## Tanda 5: cocina y costura
+
+Los módulos de cocina tienen campana, olla, mandos y dimensiones adaptadas a la sala. La isla conserva cuatro apoyos distintos. Costura incorpora labores de patchwork, bordado o patrones, textiles y panel de carretes. El puesto contra pared se acepta junto con su silla frontal; si falta espacio se prueba otra posición. La validación cuenta el puesto una vez y exige su asiento vinculado. Se conserva el fallo real de asiento alejado en 2606 y el falso exceso del primer contador, corregidos con contratos positivos y negativos.
+
+Se detectó que los alimentos domésticos reutilizaban facings de ocho unidades y bloques de stock comercial. Cocina, comedor y despensa usan ahora 57 recetas unitarias existentes, con su masa individual. Importar el generador comercial no escribe archivos; ejecutar su catálogo produce exactamente los mismos bytes. Se corrigen intervalos de superficie sin cobertura junto a 14/10/10,5 m², sin modificar mínimos.
+
+La oclusión ambiental exterior de 2 m ennegrecía el suelo bajo las sillas. Comparar la misma vista con el efecto desactivado y acotado confirmó su contribución. Las viviendas usan radio 0,85 m, grosor 0,6 m y escala 1,4, mezcla 0,85; los valores anteriores se restauran después de cada vista y los demás edificios conservan su perfil. El primer candidato de radio 0,55 era demasiado plano y se ajustó antes de la ficha final. El revisor confirma las manchas eliminadas y las tres sillas visibles; persiste contraste suave y variedad limitada.
+
+Las cámaras mantienen semillas y altura 1,6 m. La general mira a 1,4 m, antes 1,05 m; costura admite una vista lateral frontal más cercana al eje para no exigir situarse donde está la silla. Estos cambios de evidencia se declaran y no equivalen a mejorar geometría. Todas las evaluaciones finales e intermedias de esta tanda conservan su imagen exacta por hash.
+
+Notas finales A/B: cocina 2,988/3,016 y costura 3,422/3,610. No llegan a 4. Pasan 30 contratos, 200 casas/1166 habitaciones,81 semillas de cocina/costura/despensa/comedor/taller, integración fuente/paquete y marcas, más regeneración de 21 archivos sin diferencias. Los máximos y recibos están en validacion/calidad_tanda5.json. Las otras 15 fichas siguen siendo evidencia de sus versiones anteriores; no certifican este render compartido. Publicación pendiente de commit, Actions y prueba pública.

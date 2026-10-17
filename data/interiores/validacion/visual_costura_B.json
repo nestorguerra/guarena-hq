@@ -2,13 +2,14 @@
  "estado": "evaluado",
  "proveedor": "OpenAI Decisions",
  "modelo": "gpt-6-luna",
- "request_id": "req_ca697041c22e41f1a258d74f7eac728c",
- "request_sha256": "f5d95058a687266b222691e4ad2370353e6add455fecf1ac3617abf4bddca1d6",
- "fecha": "2026-10-17T14:20:12.320297+00:00",
+ "request_id": "req_ad4740c3a1d2497d9c35239f332f5a5b",
+ "request_sha256": "2027de31fe200e00f0e1f9c202b7a0c47b32fc53813aa5ed5ae2e92912426a95",
+ "fecha": "2026-10-17T16:42:29.893233+00:00",
  "kit": "costura",
  "revisor": "B",
  "ficha": "data/interiores/fichas/casa_costura.jpg",
- "ficha_sha256": "02eb6fdf263bb10b91ed070adaeb5c4ceb58d3979b2844d331d7f32b64fad25b",
+ "ficha_sha256": "110c0e738b26893409696945e1a7b01c5158dfb02e5648f091093895de7b946b",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/110c0e738b26893409696945e1a7b01c5158dfb02e5648f091093895de7b946b.jpg",
  "referencias": [
   {
    "titulo": "Campbell House Spokane Sewing Room 2018.jpg",
@@ -34,19 +35,19 @@
   "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
  },
  "puntuaciones": {
-  "densidad": 2.89,
-  "coherencia": 2.94,
-  "iluminacion": 3.22,
-  "variedad": 2.92,
-  "lectura_funcional": 2.83
+  "densidad": 3.31,
+  "coherencia": 4.03,
+  "iluminacion": 4.13,
+  "variedad": 3.11,
+  "lectura_funcional": 3.47
  },
- "media": 2.96,
+ "media": 3.61,
  "supera_umbral": false,
  "respuestas": [
   {
    "type": "score",
    "name": "densidad",
-   "score": 1.89,
+   "score": 2.31,
    "probabilities": [
     {
      "value": 0,
@@ -56,96 +57,63 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.12
+     "probability": 0.02
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.87
+     "probability": 0.66
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.01
+     "probability": 0.31
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.0
+     "probability": 0.01
     }
    ],
-   "confidence": 0.89
+   "confidence": 0.71
   },
   {
    "type": "score",
    "name": "coherencia",
-   "score": 1.94,
+   "score": 3.03,
    "probabilities": [
     {
      "value": 0,
      "label": "1",
-     "probability": 0.01
+     "probability": 0.0
     },
     {
      "value": 1,
      "label": "2",
-     "probability": 0.15
+     "probability": 0.01
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.74
+     "probability": 0.16
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.09
+     "probability": 0.62
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.01
-    }
-   ],
-   "confidence": 0.77
-  },
-  {
-   "type": "score",
-   "name": "iluminacion",
-   "score": 2.22,
-   "probabilities": [
-    {
-     "value": 0,
-     "label": "1",
-     "probability": 0.01
-    },
-    {
-     "value": 1,
-     "label": "2",
-     "probability": 0.06
-    },
-    {
-     "value": 2,
-     "label": "3",
-     "probability": 0.64
-    },
-    {
-     "value": 3,
-     "label": "4",
-     "probability": 0.28
-    },
-    {
-     "value": 4,
-     "label": "5",
-     "probability": 0.01
+     "probability": 0.21
     }
    ],
    "confidence": 0.68
   },
   {
    "type": "score",
-   "name": "variedad",
-   "score": 1.92,
+   "name": "iluminacion",
+   "score": 3.13,
    "probabilities": [
     {
      "value": 0,
@@ -155,58 +123,91 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.11
+     "probability": 0.01
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.86
+     "probability": 0.12
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.03
+     "probability": 0.6
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.0
+     "probability": 0.27
     }
    ],
-   "confidence": 0.88
+   "confidence": 0.66
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 2.11,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.8
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.14
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.83
   },
   {
    "type": "score",
    "name": "lectura_funcional",
-   "score": 1.83,
+   "score": 2.47,
    "probabilities": [
     {
      "value": 0,
      "label": "1",
-     "probability": 0.01
+     "probability": 0.0
     },
     {
      "value": 1,
      "label": "2",
-     "probability": 0.16
+     "probability": 0.01
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.82
+     "probability": 0.52
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.01
+     "probability": 0.46
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.0
+     "probability": 0.01
     }
    ],
-   "confidence": 0.84
+   "confidence": 0.59
   }
  ],
  "uso": {

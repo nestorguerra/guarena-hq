@@ -75,7 +75,9 @@ def mejorar_bano_taller(out):
     out += [marco,motor]
     for o in [base,marco,motor]:
         amplio=copy.deepcopy(o);amplio['id']=o['id']+'_amplio';amplio['nombre']=o['nombre']+' de mayor longitud'
-        for p in amplio['partes']:p['d'][0]*=1.32;p['p'][0]*=1.32
+        for p in amplio['partes']:
+            if p['f'] in ['caja','plano']:p['d'][0]*=1.32
+            p['p'][0]*=1.32
         for sup in amplio.get('superficies',[]):
             if 'ancho' in sup:sup['ancho']*=1.32
         out.append(amplio)

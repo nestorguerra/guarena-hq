@@ -91,58 +91,53 @@
    "seed": 1,
    "W": 6.2,
    "D": 4.1,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 24,
-   "hash": "10b58d42",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "89e62036",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.08,
-     "libre_m2": 16.08
+     "alcanzable_m2": 15.4,
+     "libre_m2": 15.4
     }
    },
    "luz": {
@@ -150,7 +145,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2242,
+   "triangulos": 6970,
    "mallas": 16,
    "luces": 3,
    "determinista": true
@@ -161,58 +156,53 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 34,
-   "distintos": 24,
-   "hash": "1a6f2736",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "ba8c8996",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 25
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.54,
-     "libre_m2": 7.54
+     "alcanzable_m2": 7.2,
+     "libre_m2": 7.2
     }
    },
    "luz": {
@@ -220,7 +210,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2670,
+   "triangulos": 6642,
    "mallas": 14,
    "luces": 2,
    "determinista": true,
@@ -232,53 +222,48 @@
    "seed": 3,
    "W": 5,
    "D": 2.3,
-   "guardias": 4,
-   "objetos": 31,
-   "distintos": 22,
-   "hash": "e685efb0",
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "3f991abf",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.07,
-     "libre_m2": 5.07
+     "alcanzable_m2": 4.05,
+     "libre_m2": 4.05
     }
    },
    "luz": {
@@ -286,8 +271,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2228,
-   "mallas": 15,
+   "triangulos": 7442,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -298,1100 +283,45 @@
    "seed": 4,
    "W": 4.4,
    "D": 5,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 22,
-   "hash": "d37bcf8f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.98,
-     "libre_m2": 12.98
-    }
-   },
-   "luz": {
-    "estancia": 0.105
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2316,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 5,
-   "W": 6.5,
-   "D": 4.4,
-   "guardias": 5,
-   "objetos": 33,
-   "distintos": 23,
-   "hash": "e1d5a3ea",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.38,
-     "libre_m2": 18.38
-    }
-   },
-   "luz": {
-    "estancia": 0.078
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2134,
-   "mallas": 16,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 6,
-   "W": 3.5,
-   "D": 4.1,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 21,
-   "hash": "e4971c9d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.44,
-     "libre_m2": 6.44
-    }
-   },
-   "luz": {
-    "estancia": 0.152
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2090,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 7,
-   "W": 4.7,
-   "D": 2.3,
    "guardias": 4,
-   "objetos": 28,
-   "distintos": 19,
-   "hash": "21af153a",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "2acf649b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.57,
-     "libre_m2": 4.57
-    }
-   },
-   "luz": {
-    "estancia": 0.201
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2052,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 8,
-   "W": 5.9,
-   "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 22,
-   "hash": "13c153b3",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
      "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 18.13,
-     "libre_m2": 18.13
-    }
-   },
-   "luz": {
-    "estancia": 0.084
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1788,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 9,
-   "W": 4.1,
-   "D": 2.3,
-   "guardias": 4,
-   "objetos": 26,
-   "distintos": 19,
-   "hash": "7962beac",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.85,
-     "libre_m2": 3.85
-    }
-   },
-   "luz": {
-    "estancia": 0.225
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1646,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 10,
-   "W": 3.8000000000000003,
-   "D": 3.1999999999999997,
-   "guardias": 4,
-   "objetos": 27,
-   "distintos": 18,
-   "hash": "e899e399",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.19,
-     "libre_m2": 6.19
-    }
-   },
-   "luz": {
-    "estancia": 0.187
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1862,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 11,
-   "W": 5,
-   "D": 2.9,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 21,
-   "hash": "2806580f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
      "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.72,
-     "libre_m2": 6.72
-    }
-   },
-   "luz": {
-    "estancia": 0.163
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2534,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 12,
-   "W": 6.2,
-   "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 25,
-   "hash": "c3e22589",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
      "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 19.32,
-     "libre_m2": 19.32
-    }
-   },
-   "luz": {
-    "estancia": 0.077
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2124,
-   "mallas": 11,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 13,
-   "W": 6.2,
-   "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 22,
-   "hash": "ab89970",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.61,
-     "libre_m2": 7.61
-    }
-   },
-   "luz": {
-    "estancia": 0.22
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2488,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 14,
-   "W": 6.2,
-   "D": 4.4,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 18,
-   "hash": "41acef9f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.59,
-     "libre_m2": 17.59
-    }
-   },
-   "luz": {
-    "estancia": 0.074
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2242,
-   "mallas": 16,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.969
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 15,
-   "W": 3.5,
-   "D": 5,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "55299d8b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.08,
-     "libre_m2": 9.08
-    }
-   },
-   "luz": {
-    "estancia": 0.13
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1960,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 16,
-   "W": 6.2,
-   "D": 3.5,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 20,
-   "hash": "560b4e4c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 12.59,
-     "libre_m2": 12.59
-    }
-   },
-   "luz": {
-    "estancia": 0.113
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2304,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 17,
-   "W": 6.2,
-   "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 33,
-   "distintos": 22,
-   "hash": "d0e81e14",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 24
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.61,
-     "libre_m2": 7.61
-    }
-   },
-   "luz": {
-    "estancia": 0.22
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2104,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 18,
-   "W": 4.1,
-   "D": 3.8,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 24,
-   "hash": "fec60f55",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.76,
-     "libre_m2": 7.76
-    }
-   },
-   "luz": {
-    "estancia": 0.141
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2308,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 19,
-   "W": 5.6,
-   "D": 3.8,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 23,
-   "hash": "78aa8fab",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -1403,12 +333,987 @@
     }
    },
    "luz": {
+    "estancia": 0.105
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7662,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.4,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "652b41bf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.85,
+     "libre_m2": 17.85
+    }
+   },
+   "luz": {
+    "estancia": 0.078
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7264,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 6,
+   "W": 3.5,
+   "D": 4.1,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "a57a395b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.21,
+     "libre_m2": 6.21
+    }
+   },
+   "luz": {
+    "estancia": 0.152
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7306,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 7,
+   "W": 4.7,
+   "D": 2.3,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "801fbcf5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.01,
+     "libre_m2": 4.01
+    }
+   },
+   "luz": {
+    "estancia": 0.201
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7358,
+   "mallas": 12,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 8,
+   "W": 5.9,
+   "D": 4.699999999999999,
+   "guardias": 4,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "b39f3b0b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.42,
+     "libre_m2": 17.42
+    }
+   },
+   "luz": {
+    "estancia": 0.084
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6552,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 9,
+   "W": 4.1,
+   "D": 2.3,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "16331bda",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.73,
+     "libre_m2": 2.73
+    }
+   },
+   "luz": {
+    "estancia": 0.225
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6430,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 10,
+   "W": 3.8000000000000003,
+   "D": 3.1999999999999997,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "5f257769",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5,
+     "libre_m2": 5
+    }
+   },
+   "luz": {
+    "estancia": 0.187
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6250,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 11,
+   "W": 5,
+   "D": 2.9,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "fac0e3cb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.16,
+     "libre_m2": 6.16
+    }
+   },
+   "luz": {
+    "estancia": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6724,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 12,
+   "W": 6.2,
+   "D": 4.699999999999999,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "67c20444",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.34,
+     "libre_m2": 18.34
+    }
+   },
+   "luz": {
+    "estancia": 0.08
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6898,
+   "mallas": 15,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 13,
+   "W": 6.2,
+   "D": 2.5999999999999996,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "f8fd419d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.03,
+     "libre_m2": 7.07
+    }
+   },
+   "luz": {
+    "estancia": 0.22
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7440,
+   "mallas": 11,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.933
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 14,
+   "W": 6.2,
+   "D": 4.4,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "27ae90bf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.02,
+     "libre_m2": 17.02
+    }
+   },
+   "luz": {
+    "estancia": 0.074
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7374,
+   "mallas": 14,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.933
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 15,
+   "W": 3.5,
+   "D": 5,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "62c2fff4",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.44,
+     "libre_m2": 8.44
+    }
+   },
+   "luz": {
+    "estancia": 0.13
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6460,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 16,
+   "W": 6.2,
+   "D": 3.5,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "69c8749b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.98,
+     "libre_m2": 11.98
+    }
+   },
+   "luz": {
+    "estancia": 0.119
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6474,
+   "mallas": 14,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 17,
+   "W": 6.2,
+   "D": 2.5999999999999996,
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "a180b8b6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.78,
+     "libre_m2": 6.78
+    }
+   },
+   "luz": {
+    "estancia": 0.22
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6838,
+   "mallas": 16,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 18,
+   "W": 4.1,
+   "D": 3.8,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "e8d01687",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.96,
+     "libre_m2": 6.96
+    }
+   },
+   "luz": {
+    "estancia": 0.141
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6996,
+   "mallas": 16,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 19,
+   "W": 5.6,
+   "D": 3.8,
+   "guardias": 4,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "4f8711de",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.23,
+     "libre_m2": 12.23
+    }
+   },
+   "luz": {
     "estancia": 0.114
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1984,
-   "mallas": 13,
+   "triangulos": 6832,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1419,58 +1324,53 @@
    "seed": 20,
    "W": 6.2,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 23,
-   "hash": "6ce94539",
+   "guardias": 4,
+   "objetos": 11,
+   "distintos": 9,
+   "hash": "b6ce570e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
      "n": 2
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.14,
-     "libre_m2": 11.14
+     "alcanzable_m2": 10.59,
+     "libre_m2": 10.59
     }
    },
    "luz": {
@@ -1478,8 +1378,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1794,
-   "mallas": 14,
+   "triangulos": 6568,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1490,58 +1390,53 @@
    "seed": 21,
    "W": 5.6,
    "D": 2.9,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 20,
-   "hash": "4c9e515",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "73bef760",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.31,
-     "libre_m2": 8.31
+     "alcanzable_m2": 7.67,
+     "libre_m2": 7.67
     }
    },
    "luz": {
@@ -1549,8 +1444,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2296,
-   "mallas": 12,
+   "triangulos": 6990,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1561,58 +1456,53 @@
    "seed": 22,
    "W": 4.4,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 20,
-   "hash": "d1ac46d6",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "4019df7b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.37,
-     "libre_m2": 6.37
+     "alcanzable_m2": 5.93,
+     "libre_m2": 5.93
     }
    },
    "luz": {
@@ -1620,8 +1510,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1812,
-   "mallas": 11,
+   "triangulos": 7426,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1632,58 +1522,53 @@
    "seed": 23,
    "W": 4.4,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 22,
-   "hash": "35e1971e",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "a65136ea",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
+     "n": 6
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.02,
-     "libre_m2": 7.02
+     "alcanzable_m2": 5.67,
+     "libre_m2": 5.67
     }
    },
    "luz": {
@@ -1691,8 +1576,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2666,
-   "mallas": 12,
+   "triangulos": 7426,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1703,58 +1588,53 @@
    "seed": 24,
    "W": 5.300000000000001,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 20,
-   "hash": "5f8dc7f1",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "bc914fe4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.68,
-     "libre_m2": 11.68
+     "alcanzable_m2": 10.83,
+     "libre_m2": 10.83
     }
    },
    "luz": {
@@ -1762,8 +1642,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1694,
-   "mallas": 12,
+   "triangulos": 7626,
+   "mallas": 14,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1774,58 +1654,53 @@
    "seed": 25,
    "W": 7.7,
    "D": 3.5,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "124c99e",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "8cf3f378",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.79,
-     "libre_m2": 16.79
+     "alcanzable_m2": 15.93,
+     "libre_m2": 15.93
     }
    },
    "luz": {
@@ -1833,8 +1708,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1818,
-   "mallas": 14,
+   "triangulos": 6712,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1845,58 +1720,53 @@
    "seed": 26,
    "W": 6.5,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 33,
-   "distintos": 22,
-   "hash": "6d45efaf",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "4bd8b5a1",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 6
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.29,
-     "libre_m2": 15.29
+     "alcanzable_m2": 14.82,
+     "libre_m2": 14.82
     }
    },
    "luz": {
@@ -1904,8 +1774,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2366,
-   "mallas": 12,
+   "triangulos": 7060,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1916,58 +1786,53 @@
    "seed": 27,
    "W": 6.5,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 35,
-   "distintos": 25,
-   "hash": "509d49fb",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "e8c3272e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 25
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.15,
-     "libre_m2": 15.15
+     "alcanzable_m2": 14.73,
+     "libre_m2": 14.73
     }
    },
    "luz": {
@@ -1975,8 +1840,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2878,
-   "mallas": 16,
+   "triangulos": 7494,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -1987,58 +1852,53 @@
    "seed": 28,
    "W": 7.1,
    "D": 4.1,
-   "guardias": 5,
-   "objetos": 27,
-   "distintos": 19,
-   "hash": "3b8bcec1",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "81a56196",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.96,
-     "libre_m2": 18.96
+     "alcanzable_m2": 18.41,
+     "libre_m2": 18.41
     }
    },
    "luz": {
@@ -2046,7 +1906,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1452,
+   "triangulos": 6756,
    "mallas": 11,
    "luces": 3,
    "determinista": true,
@@ -2058,53 +1918,48 @@
    "seed": 29,
    "W": 5.9,
    "D": 2.3,
-   "guardias": 4,
-   "objetos": 28,
-   "distintos": 23,
-   "hash": "794468c9",
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 9,
+   "hash": "ddd596b8",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
+     "n": 3
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.37,
-     "libre_m2": 6.37
+     "alcanzable_m2": 5.88,
+     "libre_m2": 5.88
     }
    },
    "luz": {
@@ -2112,8 +1967,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1646,
-   "mallas": 12,
+   "triangulos": 6406,
+   "mallas": 16,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2124,53 +1979,48 @@
    "seed": 30,
    "W": 3.8000000000000003,
    "D": 3.1999999999999997,
-   "guardias": 4,
-   "objetos": 28,
-   "distintos": 20,
-   "hash": "2cc0612c",
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "61767756",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.22,
-     "libre_m2": 6.22
+     "alcanzable_m2": 5,
+     "libre_m2": 5
     }
    },
    "luz": {
@@ -2178,8 +2028,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1852,
-   "mallas": 13,
+   "triangulos": 6674,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2190,58 +2040,53 @@
    "seed": 31,
    "W": 5,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 18,
-   "hash": "3f23bc13",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "668880d9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 17
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.49,
-     "libre_m2": 10.49
+     "alcanzable_m2": 10.17,
+     "libre_m2": 10.17
     }
    },
    "luz": {
@@ -2249,7 +2094,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2002,
+   "triangulos": 6670,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -2261,58 +2106,53 @@
    "seed": 32,
    "W": 4.4,
    "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 20,
-   "hash": "def83df6",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "f7fd2e75",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 17
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.9,
-     "libre_m2": 11.9
+     "alcanzable_m2": 11.42,
+     "libre_m2": 11.42
     }
    },
    "luz": {
@@ -2320,8 +2160,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1858,
-   "mallas": 10,
+   "triangulos": 6888,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2332,53 +2172,48 @@
    "seed": 33,
    "W": 4.1,
    "D": 2.5999999999999996,
-   "guardias": 4,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "c4f180ae",
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "2572f113",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.11,
-     "libre_m2": 4.11
+     "alcanzable_m2": 3.67,
+     "libre_m2": 3.67
     }
    },
    "luz": {
@@ -2386,8 +2221,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1946,
-   "mallas": 12,
+   "triangulos": 7126,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2398,58 +2233,53 @@
    "seed": 34,
    "W": 7.4,
    "D": 4.4,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 24,
-   "hash": "d44700cf",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "6e3f36a7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 21.62,
-     "libre_m2": 21.62
+     "alcanzable_m2": 21.34,
+     "libre_m2": 21.34
     }
    },
    "luz": {
@@ -2457,8 +2287,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2218,
-   "mallas": 16,
+   "triangulos": 6748,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2469,58 +2299,53 @@
    "seed": 35,
    "W": 7.4,
    "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 18,
-   "hash": "6e1894ea",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "ed670cc0",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 23.75,
-     "libre_m2": 23.75
+     "alcanzable_m2": 23.12,
+     "libre_m2": 23.12
     }
    },
    "luz": {
@@ -2528,8 +2353,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1956,
-   "mallas": 11,
+   "triangulos": 6914,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2540,53 +2365,48 @@
    "seed": 36,
    "W": 3.5,
    "D": 3.8,
-   "guardias": 4,
-   "objetos": 31,
-   "distintos": 25,
-   "hash": "e7dc94c8",
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "acf8f81e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.78,
-     "libre_m2": 6.78
+     "alcanzable_m2": 5.98,
+     "libre_m2": 5.98
     }
    },
    "luz": {
@@ -2594,8 +2414,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2200,
-   "mallas": 13,
+   "triangulos": 7190,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2606,58 +2426,53 @@
    "seed": 37,
    "W": 7.1,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 22,
-   "hash": "82ef1760",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "7d2e7e08",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
+     "n": 3
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.91,
-     "libre_m2": 16.91
+     "alcanzable_m2": 16.48,
+     "libre_m2": 16.48
     }
    },
    "luz": {
@@ -2665,7 +2480,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1800,
+   "triangulos": 6780,
    "mallas": 11,
    "luces": 3,
    "determinista": true,
@@ -2677,53 +2492,48 @@
    "seed": 38,
    "W": 3.2,
    "D": 3.8,
-   "guardias": 4,
-   "objetos": 24,
-   "distintos": 18,
-   "hash": "443b0fc4",
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "dd3d68c6",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 17
+     "n": 3
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.92,
-     "libre_m2": 5.92
+     "alcanzable_m2": 5.08,
+     "libre_m2": 5.08
     }
    },
    "luz": {
@@ -2731,7 +2541,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1618,
+   "triangulos": 6514,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -2743,58 +2553,53 @@
    "seed": 39,
    "W": 7.7,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "5b3d4508",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "109a038d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
+     "n": 6
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.71,
-     "libre_m2": 14.71
+     "alcanzable_m2": 14.14,
+     "libre_m2": 14.14
     }
    },
    "luz": {
@@ -2802,8 +2607,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2336,
-   "mallas": 14,
+   "triangulos": 7732,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -2814,50 +2619,1010 @@
    "seed": 40,
    "W": 5.6,
    "D": 3.5,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 20,
-   "hash": "4cca9320",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "2268140d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
+     "obj": "vb_armario",
      "n": 1
     },
     {
      "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.59,
+     "libre_m2": 10.59
+    }
+   },
+   "luz": {
+    "estancia": 0.125
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6670,
+   "mallas": 16,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 41,
+   "W": 3.8000000000000003,
+   "D": 2.9,
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "4a479efa",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
      "obj": "vb_armario",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.58,
+     "libre_m2": 4.58
+    }
+   },
+   "luz": {
+    "estancia": 0.204
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6496,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 42,
+   "W": 5.300000000000001,
+   "D": 3.1999999999999997,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "c1d52de3",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.18,
+     "libre_m2": 8.18
+    }
+   },
+   "luz": {
+    "estancia": 0.136
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6478,
+   "mallas": 16,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 43,
+   "W": 4.1,
+   "D": 4.1,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "c5c983ea",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.98,
+     "libre_m2": 7.98
+    }
+   },
+   "luz": {
+    "estancia": 0.134
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6748,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 44,
+   "W": 3.8000000000000003,
+   "D": 2.9,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "6b2730cb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.26,
+     "libre_m2": 4.26
+    }
+   },
+   "luz": {
+    "estancia": 0.204
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6568,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 45,
+   "W": 7.7,
+   "D": 3.1999999999999997,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "5dfbe926",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.14,
+     "libre_m2": 14.14
+    }
+   },
+   "luz": {
+    "estancia": 0.154
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6592,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 46,
+   "W": 4.1,
+   "D": 3.1999999999999997,
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "d623addd",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.13,
+     "libre_m2": 6.13
+    }
+   },
+   "luz": {
+    "estancia": 0.177
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6524,
+   "mallas": 15,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 47,
+   "W": 7.4,
+   "D": 3.8,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "55dd84c5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.4,
+     "libre_m2": 17.4
+    }
+   },
+   "luz": {
+    "estancia": 0.074
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6772,
+   "mallas": 13,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 48,
+   "W": 5.6,
+   "D": 4.4,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "ff08b2c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.66,
+     "libre_m2": 14.66
+    }
+   },
+   "luz": {
+    "estancia": 0.096
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6610,
+   "mallas": 16,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 49,
+   "W": 3.5,
+   "D": 5,
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "7b4e9c36",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.44,
+     "libre_m2": 8.44
+    }
+   },
+   "luz": {
+    "estancia": 0.13
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6472,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 50,
+   "W": 6.2,
+   "D": 2.5999999999999996,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "d465bc8a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.26,
+     "libre_m2": 7.26
+    }
+   },
+   "luz": {
+    "estancia": 0.22
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6734,
+   "mallas": 12,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.933
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 51,
+   "W": 3.5,
+   "D": 2.3,
+   "guardias": 3,
+   "objetos": 10,
+   "distintos": 10,
+   "hash": "db517871",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.35,
+     "libre_m2": 2.35
+    }
+   },
+   "luz": {
+    "estancia": 0.109
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6398,
+   "mallas": 12,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 52,
+   "W": 4.1,
+   "D": 3.5,
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "9d960569",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 6
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.39,
+     "libre_m2": 6.39
+    }
+   },
+   "luz": {
+    "estancia": 0.161
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6768,
+   "mallas": 11,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 53,
+   "W": 3.5,
+   "D": 3.5,
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "c6d12540",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.47,
+     "libre_m2": 5.47
+    }
+   },
+   "luz": {
+    "estancia": 0.082
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7052,
+   "mallas": 15,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 54,
+   "W": 5.9,
+   "D": 4.4,
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "8dba153f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.9,
+     "libre_m2": 15.9
+    }
+   },
+   "luz": {
+    "estancia": 0.091
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7552,
+   "mallas": 13,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_costura",
+   "tipologia": "otra_estancia",
+   "seed": 55,
+   "W": 5.9,
+   "D": 3.5,
+   "guardias": 4,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "76b6aa9a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_costura|va_costura_bordado|va_costura",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_mueble_telas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_armario",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje|fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
+    },
+    {
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
@@ -2869,1052 +3634,12 @@
     }
    },
    "luz": {
-    "estancia": 0.125
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2178,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 41,
-   "W": 3.8000000000000003,
-   "D": 2.9,
-   "guardias": 4,
-   "objetos": 26,
-   "distintos": 20,
-   "hash": "d671b11f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.11,
-     "libre_m2": 5.11
-    }
-   },
-   "luz": {
-    "estancia": 0.204
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2144,
-   "mallas": 15,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 42,
-   "W": 5.300000000000001,
-   "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 21,
-   "hash": "e4816c3d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.7,
-     "libre_m2": 8.7
-    }
-   },
-   "luz": {
-    "estancia": 0.136
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2138,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 43,
-   "W": 4.1,
-   "D": 4.1,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "fa819c9a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.78,
-     "libre_m2": 8.78
-    }
-   },
-   "luz": {
-    "estancia": 0.134
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2210,
-   "mallas": 12,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 44,
-   "W": 3.8000000000000003,
-   "D": 2.9,
-   "guardias": 4,
-   "objetos": 26,
-   "distintos": 21,
-   "hash": "544695a6",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.28,
-     "libre_m2": 5.28
-    }
-   },
-   "luz": {
-    "estancia": 0.204
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1884,
-   "mallas": 11,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 45,
-   "W": 7.7,
-   "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 33,
-   "distintos": 21,
-   "hash": "780366b3",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.72,
-     "libre_m2": 14.72
-    }
-   },
-   "luz": {
-    "estancia": 0.154
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2298,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 46,
-   "W": 4.1,
-   "D": 3.1999999999999997,
-   "guardias": 4,
-   "objetos": 24,
-   "distintos": 20,
-   "hash": "d88c00da",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 16
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.48,
-     "libre_m2": 6.48
-    }
-   },
-   "luz": {
-    "estancia": 0.177
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1504,
-   "mallas": 13,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 47,
-   "W": 7.4,
-   "D": 3.8,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 22,
-   "hash": "1c200914",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.53,
-     "libre_m2": 17.53
-    }
-   },
-   "luz": {
-    "estancia": 0.074
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1938,
-   "mallas": 14,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 48,
-   "W": 5.6,
-   "D": 4.4,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "bb14b43d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.24,
-     "libre_m2": 15.24
-    }
-   },
-   "luz": {
-    "estancia": 0.096
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2150,
-   "mallas": 17,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 49,
-   "W": 3.5,
-   "D": 5,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 23,
-   "hash": "cf34458c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.01,
-     "libre_m2": 9.01
-    }
-   },
-   "luz": {
-    "estancia": 0.13
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2972,
-   "mallas": 14,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 50,
-   "W": 6.2,
-   "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 27,
-   "distintos": 22,
-   "hash": "7f446f63",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.18,
-     "libre_m2": 8.18
-    }
-   },
-   "luz": {
-    "estancia": 0.22
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2104,
-   "mallas": 13,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 51,
-   "W": 3.5,
-   "D": 2.3,
-   "guardias": 4,
-   "objetos": 26,
-   "distintos": 20,
-   "hash": "68316c82",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 2.76,
-     "libre_m2": 2.76
-    }
-   },
-   "luz": {
-    "estancia": 0.109
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1980,
-   "mallas": 11,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 52,
-   "W": 4.1,
-   "D": 3.5,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 24,
-   "hash": "1d53eb86",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.81,
-     "libre_m2": 6.81
-    }
-   },
-   "luz": {
-    "estancia": 0.161
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2290,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 53,
-   "W": 3.5,
-   "D": 3.5,
-   "guardias": 4,
-   "objetos": 25,
-   "distintos": 21,
-   "hash": "5ae530c9",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.1,
-     "libre_m2": 6.1
-    }
-   },
-   "luz": {
-    "estancia": 0.082
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 1372,
-   "mallas": 13,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 54,
-   "W": 5.9,
-   "D": 4.4,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 22,
-   "hash": "1fb95422",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 16.51,
-     "libre_m2": 16.51
-    }
-   },
-   "luz": {
-    "estancia": 0.091
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2398,
-   "mallas": 16,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_costura",
-   "tipologia": "otra_estancia",
-   "seed": 55,
-   "W": 5.9,
-   "D": 3.5,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 20,
-   "hash": "5a66d712",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_costura",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_armario",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
-    },
-    {
-     "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_lampara_trabajo",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.76,
-     "libre_m2": 11.76
-    }
-   },
-   "luz": {
     "estancia": 0.119
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2166,
-   "mallas": 14,
+   "triangulos": 6480,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -3925,58 +3650,53 @@
    "seed": 56,
    "W": 4.4,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 27,
-   "distintos": 20,
-   "hash": "f2847cc6",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "a737800b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.77,
-     "libre_m2": 6.77
+     "alcanzable_m2": 6.24,
+     "libre_m2": 6.24
     }
    },
    "luz": {
@@ -3984,8 +3704,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2042,
-   "mallas": 12,
+   "triangulos": 6646,
+   "mallas": 10,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -3996,58 +3716,53 @@
    "seed": 57,
    "W": 5.9,
    "D": 3.5,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 19,
-   "hash": "99cf5c67",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "5ee04b7d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 24
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.5,
-     "libre_m2": 11.5
+     "alcanzable_m2": 11.37,
+     "libre_m2": 11.37
     }
    },
    "luz": {
@@ -4055,8 +3770,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2392,
-   "mallas": 13,
+   "triangulos": 6938,
+   "mallas": 12,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4067,53 +3782,48 @@
    "seed": 58,
    "W": 4.7,
    "D": 2.9,
-   "guardias": 4,
-   "objetos": 25,
-   "distintos": 19,
-   "hash": "1b5b4c4d",
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "33dbfa63",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.75,
-     "libre_m2": 6.75
+     "alcanzable_m2": 6.43,
+     "libre_m2": 6.43
     }
    },
    "luz": {
@@ -4121,8 +3831,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1718,
-   "mallas": 12,
+   "triangulos": 7024,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4133,58 +3843,53 @@
    "seed": 59,
    "W": 6.5,
    "D": 2.9,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 20,
-   "hash": "e622c07",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "b45deea5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
+     "n": 3
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.2,
-     "libre_m2": 10.2
+     "alcanzable_m2": 9.54,
+     "libre_m2": 9.54
     }
    },
    "luz": {
@@ -4192,7 +3897,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1824,
+   "triangulos": 6528,
    "mallas": 11,
    "luces": 3,
    "determinista": true,
@@ -4204,58 +3909,53 @@
    "seed": 60,
    "W": 5.300000000000001,
    "D": 2.9,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 23,
-   "hash": "c0543d8a",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "36167732",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.63,
-     "libre_m2": 7.63
+     "alcanzable_m2": 7.08,
+     "libre_m2": 7.08
     }
    },
    "luz": {
@@ -4263,8 +3963,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2200,
-   "mallas": 13,
+   "triangulos": 6810,
+   "mallas": 14,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4275,58 +3975,53 @@
    "seed": 61,
    "W": 4.4,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 24,
-   "hash": "b79e2cf0",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "f7d33c3f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 24
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.54,
-     "libre_m2": 6.54
+     "alcanzable_m2": 5.98,
+     "libre_m2": 5.98
     }
    },
    "luz": {
@@ -4334,8 +4029,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2206,
-   "mallas": 10,
+   "triangulos": 6744,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4346,58 +4041,53 @@
    "seed": 62,
    "W": 7.1,
    "D": 2.3,
-   "guardias": 5,
-   "objetos": 34,
-   "distintos": 24,
-   "hash": "5d45911c",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "e56f48a2",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 24
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.76,
-     "libre_m2": 7.76
+     "alcanzable_m2": 7.25,
+     "libre_m2": 7.25
     }
    },
    "luz": {
@@ -4405,8 +4095,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2094,
-   "mallas": 14,
+   "triangulos": 7288,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4417,53 +4107,48 @@
    "seed": 63,
    "W": 3.5,
    "D": 3.5,
-   "guardias": 4,
-   "objetos": 28,
-   "distintos": 23,
-   "hash": "2e347e5f",
+   "guardias": 3,
+   "objetos": 11,
+   "distintos": 11,
+   "hash": "31354273",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.73,
-     "libre_m2": 5.73
+     "alcanzable_m2": 4.85,
+     "libre_m2": 4.85
     }
    },
    "luz": {
@@ -4471,8 +4156,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2342,
-   "mallas": 12,
+   "triangulos": 6670,
+   "mallas": 10,
    "luces": 1,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4483,53 +4168,48 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.5999999999999996,
-   "guardias": 4,
-   "objetos": 29,
-   "distintos": 20,
-   "hash": "6a2e82af",
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "80275a80",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.86,
-     "libre_m2": 5.86
+     "alcanzable_m2": 5.43,
+     "libre_m2": 5.43
     }
    },
    "luz": {
@@ -4537,7 +4217,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1934,
+   "triangulos": 6688,
    "mallas": 12,
    "luces": 2,
    "determinista": true,
@@ -4549,58 +4229,53 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "bb3ec640",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "9d0f957c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
+     "n": 2
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.06,
-     "libre_m2": 18.06
+     "alcanzable_m2": 17.37,
+     "libre_m2": 17.37
     }
    },
    "luz": {
@@ -4608,8 +4283,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1814,
-   "mallas": 12,
+   "triangulos": 7230,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4620,58 +4295,53 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.4,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "d375be29",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "5335de07",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.95,
-     "libre_m2": 15.95
+     "alcanzable_m2": 15.4,
+     "libre_m2": 15.4
     }
    },
    "luz": {
@@ -4679,7 +4349,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1788,
+   "triangulos": 6696,
    "mallas": 11,
    "luces": 2,
    "determinista": true,
@@ -4691,58 +4361,53 @@
    "seed": 67,
    "W": 5.6,
    "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 23,
-   "hash": "3c1bae48",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "7bd8c762",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.73,
-     "libre_m2": 16.73
+     "alcanzable_m2": 16.3,
+     "libre_m2": 16.3
     }
    },
    "luz": {
@@ -4750,8 +4415,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2598,
-   "mallas": 14,
+   "triangulos": 6766,
+   "mallas": 16,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4762,58 +4427,53 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "43d491d1",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "fb3f8dcc",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.36,
-     "libre_m2": 7.36
+     "alcanzable_m2": 6.79,
+     "libre_m2": 6.79
     }
    },
    "luz": {
@@ -4821,8 +4481,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1602,
-   "mallas": 14,
+   "triangulos": 7276,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4833,58 +4493,53 @@
    "seed": 69,
    "W": 7.7,
    "D": 4.1,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 22,
-   "hash": "de59da4e",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "483d6b49",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 21,
-     "libre_m2": 21
+     "alcanzable_m2": 20.34,
+     "libre_m2": 20.34
     }
    },
    "luz": {
@@ -4892,8 +4547,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2704,
-   "mallas": 13,
+   "triangulos": 7214,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4904,58 +4559,53 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 4.1,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 25,
-   "hash": "21be9a4e",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "47cdbcf4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.56,
-     "libre_m2": 12.56
+     "alcanzable_m2": 12.41,
+     "libre_m2": 12.41
     }
    },
    "luz": {
@@ -4963,8 +4613,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2262,
-   "mallas": 14,
+   "triangulos": 6768,
+   "mallas": 11,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -4975,58 +4625,53 @@
    "seed": 71,
    "W": 5,
    "D": 3.8,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 20,
-   "hash": "cd8a1877",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "bccb78ff",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 17
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.33,
-     "libre_m2": 10.33
+     "alcanzable_m2": 9.7,
+     "libre_m2": 9.7
     }
    },
    "luz": {
@@ -5034,7 +4679,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1702,
+   "triangulos": 6766,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5046,58 +4691,53 @@
    "seed": 72,
    "W": 7.7,
    "D": 2.9,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 23,
-   "hash": "2a6756cf",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "778a0a32",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.39,
-     "libre_m2": 12.39
+     "alcanzable_m2": 11.53,
+     "libre_m2": 11.53
     }
    },
    "luz": {
@@ -5105,8 +4745,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1888,
-   "mallas": 13,
+   "triangulos": 7170,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5117,58 +4757,53 @@
    "seed": 73,
    "W": 3.5,
    "D": 4.699999999999999,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 24,
-   "hash": "4cfe59a6",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "d64c9a1f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 22
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.71,
-     "libre_m2": 7.71
+     "alcanzable_m2": 8,
+     "libre_m2": 8
     }
    },
    "luz": {
@@ -5176,8 +4811,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2588,
-   "mallas": 15,
+   "triangulos": 6772,
+   "mallas": 13,
    "luces": 2,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5188,58 +4823,53 @@
    "seed": 74,
    "W": 6.5,
    "D": 4.4,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 22,
-   "hash": "d832ecd0",
+   "guardias": 4,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "6946fb64",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 6
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.7,
-     "libre_m2": 18.7
+     "alcanzable_m2": 18.12,
+     "libre_m2": 18.12
     }
    },
    "luz": {
@@ -5247,8 +4877,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2176,
-   "mallas": 13,
+   "triangulos": 6714,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5259,58 +4889,53 @@
    "seed": 75,
    "W": 7.4,
    "D": 4.4,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 23,
-   "hash": "a9e33ba8",
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "d5a2a1e0",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 5
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 19
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 22,
-     "libre_m2": 22
+     "alcanzable_m2": 21.54,
+     "libre_m2": 21.54
     }
    },
    "luz": {
@@ -5318,11 +4943,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2010,
-   "mallas": 14,
+   "triangulos": 7504,
+   "mallas": 13,
    "luces": 3,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.933
   },
   {
    "kit": "vivienda_costura",
@@ -5330,53 +4955,48 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.5999999999999996,
-   "guardias": 4,
-   "objetos": 26,
-   "distintos": 18,
-   "hash": "58e5610b",
+   "guardias": 3,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "1733621e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 18
+     "n": 4
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.96,
-     "libre_m2": 5.96
+     "alcanzable_m2": 4.85,
+     "libre_m2": 4.85
     }
    },
    "luz": {
@@ -5384,7 +5004,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 1588,
+   "triangulos": 7240,
    "mallas": 13,
    "luces": 2,
    "determinista": true,
@@ -5396,58 +5016,53 @@
    "seed": 77,
    "W": 7.4,
    "D": 5,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 21,
-   "hash": "3e746b4c",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "b5d6cbd7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 1
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 3
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 25.47,
-     "libre_m2": 25.47
+     "alcanzable_m2": 25.02,
+     "libre_m2": 25.02
     }
    },
    "luz": {
@@ -5455,8 +5070,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2332,
-   "mallas": 13,
+   "triangulos": 6494,
+   "mallas": 12,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5467,58 +5082,53 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.5999999999999996,
-   "guardias": 5,
-   "objetos": 34,
-   "distintos": 24,
-   "hash": "2ad8a7d",
+   "guardias": 4,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "9a76cf80",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
-     "n": 2
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
+     "n": 4
     },
     {
      "entrada": 6,
-     "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 24
-    },
-    {
-     "entrada": 7,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.02,
-     "libre_m2": 9.02
+     "alcanzable_m2": 8.75,
+     "libre_m2": 8.75
     }
    },
    "luz": {
@@ -5526,8 +5136,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2994,
-   "mallas": 14,
+   "triangulos": 6492,
+   "mallas": 11,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5538,58 +5148,53 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.5,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 22,
-   "hash": "a6634822",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "27723bd4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 2
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 21
+     "n": 5
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.44,
-     "libre_m2": 14.44
+     "alcanzable_m2": 13.98,
+     "libre_m2": 13.98
     }
    },
    "luz": {
@@ -5597,8 +5202,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2062,
-   "mallas": 16,
+   "triangulos": 6666,
+   "mallas": 14,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5609,58 +5214,53 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.4,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 22,
-   "hash": "f396add6",
+   "guardias": 4,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "d50af849",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 23
+     "n": 3
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.67,
-     "libre_m2": 20.67
+     "alcanzable_m2": 20.22,
+     "libre_m2": 20.22
     }
    },
    "luz": {
@@ -5668,8 +5268,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2464,
-   "mallas": 13,
+   "triangulos": 7128,
+   "mallas": 11,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1
@@ -5680,58 +5280,53 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.1999999999999997,
-   "guardias": 5,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "5de0bd19",
+   "guardias": 4,
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "cf820927",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_costura",
+     "obj": "va_costura|va_costura_bordado|va_costura",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "va_mueble_telas",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_armario",
      "n": 1
     },
     {
-     "entrada": 4,
+     "entrada": 3,
      "obj": "sillon_orejero",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 4,
      "obj": "cuadro_paisaje|fotos_familia",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 5,
      "obj": "pila_jerseys_rojo|pila_jerseys_azul_mari",
-     "n": 20
+     "n": 6
     },
     {
-     "entrada": 7,
+     "entrada": 6,
      "obj": "vb_lampara_trabajo",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.12,
-     "libre_m2": 14.12
+     "alcanzable_m2": 13.42,
+     "libre_m2": 13.42
     }
    },
    "luz": {
@@ -5739,8 +5334,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2128,
-   "mallas": 13,
+   "triangulos": 6984,
+   "mallas": 11,
    "luces": 3,
    "determinista": true,
    "diferencia_con_semilla_1": 1

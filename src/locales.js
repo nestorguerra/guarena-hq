@@ -223,7 +223,20 @@ export function amueblar(kit, seed = 1, ctx = null) {
           const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + 0.01);
           const [x, z] = origen(obj, pw.eje === 'z' ? off : c, pw.eje === 'z' ? c : off, pw.ry);
           const it = { obj, x, y: 0, z, ry: pw.ry }, v = volumen(it);
-          if (dentro(v, Z) && libre(v) && !cierra([it])) { poner(obj, Z.id, 'contra_pared', x, 0, z, pw.ry); cursores[key] = s + b.w + 0.03; ok = true; break; }
+          if (!dentro(v,Z)||!libre(v))continue;
+          // Un puesto de trabajo se acepta junto con su asiento frontal. Si no
+          // cabe, se prueba otro hueco: la silla no acaba en otra pared.
+          let silla=null;
+          if(e.silla_frontal){
+            const sb=caja(e.silla_frontal),[dx,dz]=rot((b.x0+b.x1)/2,b.z1+sb.d/2+.06,pw.ry);
+            const [sx,sz]=origen(e.silla_frontal,x+dx,z+dz,pw.ry+Math.PI);
+            silla={obj:e.silla_frontal,x:sx,y:0,z:sz,ry:pw.ry+Math.PI};const sv=volumen(silla);
+            if(!dentro(sv,Z)||!libre(sv)||hunde(silla,it)>.005)continue;
+          }
+          if(cierra(silla?[it,silla]:[it]))continue;
+          const puesto=poner(obj,Z.id,'contra_pared',x,0,z,pw.ry);
+          if(silla){const asiento=poner(silla.obj,Z.id,'junto_a',silla.x,0,silla.z,silla.ry);asiento.de=P.indexOf(puesto);}
+          cursores[key]=s+b.w+.03;ok=true;break;
         }
         if (!ok) break;
         puestos++;

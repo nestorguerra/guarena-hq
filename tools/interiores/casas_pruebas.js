@@ -4,7 +4,7 @@ import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { filtroHogar, amueblar } from '/src/locales.js';
 import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
 import * as THREE from 'three';
-import { construir } from '/src/objetos.js';
+import { construir, caja } from '/src/objetos.js';
 
 const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
 const tirar = (h) => h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
@@ -245,6 +245,33 @@ export async function probarCasas(opts = {}) {
     const a=muestra(-.001),b=muestra(.001);
     exigir(a.every((v,i)=>Math.abs(v.i-b[i].i)<.02),'un desplazamiento de 2 mm intercambia bruscamente las intensidades');
     exigir([...a,...b].every(v=>v.s<.01),'la sombra cambia de origen sin desvanecerse en el cruce');
+  });
+  if(opts.tanda>=9)await caso('las cocinas usan unidades domésticas sin bloques de stock comercial',()=>{
+    for(const seed of [2786,3244,1594]){
+      const h=H.buildVecino(seed,{x:-9700,z:-9700});
+      try{const e=h.estancias.find(e=>e.kit==='vivienda_cocina');exigir(e&&!e.colocados.some(p=>p.obj.startsWith('prod_')),seed+': una cocina contiene hileras o bloques de stock de tienda');}finally{tirar(h);}
+    }
+    const a=caja('va_alimento_arroz');exigir(a.w<.12&&a.d<.08,'la unidad de arroz conserva la envolvente del lote comercial');
+  });
+  if(opts.tanda>=9)await caso('costura conserva el asiento frente al puesto de trabajo',()=>{
+    for(const seed of [2606,4216,3981]){const h=H.buildVecino(seed,{x:-9700,z:-9700});try{const e=h.estancias.find(e=>e.kit==='vivienda_costura'),m=e?.colocados.find(p=>p.obj.startsWith('va_costura')),s=e?.colocados.find(p=>p.obj==='silla_comedor');exigir(m&&s&&Math.hypot(m.x-s.x,m.z-s.z)<1.1,seed+': asiento alejado del puesto de costura');exigir(Math.sin(m.ry)*(s.x-m.x)+Math.cos(m.ry)*(s.z-m.z)>.35,seed+': silla detrás del puesto');exigir(m.regla==='contra_pared',seed+': panel de carretes sin pared detrás');}finally{tirar(h);}}
+  });
+  if(opts.tanda>=9)await caso('la oclusión doméstica conserva el exterior y restaura cada vista',async()=>{
+    const {prepararOclusionVivienda}=await import('/src/luz_vivienda.js');
+    const U={radius:{value:2},thickness:{value:2.5},scale:{value:1.7}},ao={enabled:true,gtaoMaterial:{uniforms:U}},grade={uniforms:{uAO:{value:1}}},cam={position:{x:0,z:0}};
+    const fuera=prepararOclusionVivienda({kind:'bar'},cam,ao,grade);exigir(U.radius.value===2&&grade.uniforms.uAO.value===1,'el comercio cambia');fuera();
+    const fin=prepararOclusionVivienda({kind:'vecino',origin:{x:0,z:0}},cam,ao,grade);exigir(U.radius.value===.85&&grade.uniforms.uAO.value===.85,'no se acota la sombra de contacto');fin();
+    exigir(U.radius.value===2&&U.thickness.value===2.5&&U.scale.value===1.7&&grade.uniforms.uAO.value===1,'la siguiente vista hereda ajustes domésticos');
+    ao.enabled=false;prepararOclusionVivienda({kind:'annie'},cam,ao,grade)();exigir(U.radius.value===2&&grade.uniforms.uAO.value===1,'se altera la oclusión desactivada');
+  });
+  if(opts.tanda>=9)await caso('los umbrales de superficie conservan los muebles esenciales',()=>{
+    for(const [kit,limite,ids] of [['cocina',14,['va_cocina','va_cocina_amplia']],['bano',10,['va_lavabo','va_lavabo_amplio']],['taller',10.5,['va_banco','va_banco_carpinteria','va_banco_mecanica','va_banco_amplio','va_banco_carpinteria_amplio','va_banco_mecanica_amplio']]]){
+      for(const area of [limite-.0005,limite,limite+.0005]){const A=amueblar('vivienda_'+kit,37,{W:4,D:area/4,H:2.75});exigir(A.P.filter(p=>ids.includes(p.obj)).length===1,kit+'/'+area+': falta el mueble esencial en el umbral');}
+    }
+    const patas=OBJETOS.va_isla_cocina.partes.filter(p=>p.f==='caja'&&p.d[1]===.08&&p.p[1]===.04);exigir(new Set(patas.map(p=>p.p[0]+':'+p.p[2])).size===4,'la isla no tiene cuatro apoyos distintos');
+  });
+  if(opts.tanda>=9)await caso('el puesto con silla se cuenta una vez y exige su asiento vinculado',()=>{
+    const h=H.buildVecino(2606);try{const e=h.estancias.find(e=>e.kit==='vivienda_costura'),pres={interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}},r=revisar({local:e,group:{traverse(){}}},pres);exigir(!r.errores.length,r.errores.join('; '));const roto={...e,colocados:e.colocados.map(p=>p.obj==='silla_comedor'?{...p,de:null}:p)},rr=revisar({local:roto,group:{traverse(){}}},pres);exigir(rr.errores.some(e=>e.startsWith('asiento:')),'se acepta el puesto sin silla');}finally{tirar(h);}
   });
   return { pruebas, errores };
 }

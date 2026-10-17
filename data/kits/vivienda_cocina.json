@@ -39,7 +39,21 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cocina_amplia",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14
   },
   {
    "zona": "estancia",
@@ -47,14 +61,35 @@
    "obj": "va_encimera",
    "de": [
     "va_cocina",
-    "va_encimera"
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
    ],
    "cantidad": [
     1,
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_encimera_amplia",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14
   },
   {
    "zona": "estancia",
@@ -62,7 +97,9 @@
    "obj": "va_nevera",
    "de": [
     "va_cocina",
-    "va_encimera"
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
    ],
    "cantidad": [
     1,
@@ -104,15 +141,32 @@
    "cantidad": [
     0,
     1
-   ]
+   ],
+   "preferir": true,
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 14
   },
   {
    "zona": "estancia",
    "regla": "junto_a",
-   "obj": "va_encimera",
+   "obj": "va_encimera_amplia",
    "de": [
     "va_cocina",
-    "va_encimera"
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
    ],
    "cantidad": [
     0,
@@ -120,7 +174,7 @@
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 12
+   "area_min": 18
   },
   {
    "zona": "estancia",
@@ -133,7 +187,7 @@
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 16
+   "area_min": 20
   },
   {
    "zona": "estancia",
@@ -185,105 +239,76 @@
   },
   {
    "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "va_isla_cocina",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 22
+  },
+  {
+   "zona": "estancia",
    "regla": "sobre",
    "variantes": [
-    "prod_atun",
-    "prod_sardinillas",
-    "prod_mejillones",
-    "prod_tomate_frito",
-    "prod_maiz",
-    "prod_judias_verdes",
-    "prod_garbanzos_bote",
-    "prod_pimientos_piquillo",
-    "prod_aceitunas",
-    "prod_pepinillos",
-    "prod_mermelada",
-    "prod_miel",
-    "prod_crema_cacao",
-    "prod_melocoton_almibar",
-    "prod_aceite_oliva",
-    "prod_aceite_girasol",
-    "prod_garrafa_aceite",
-    "prod_vinagre",
-    "prod_arroz",
-    "prod_arroz_integral",
-    "prod_espaguetis",
-    "prod_macarrones",
-    "prod_lentejas",
-    "prod_garbanzos_seco",
-    "prod_harina",
-    "prod_azucar",
-    "prod_sal",
-    "prod_cafe_molido",
-    "prod_infusiones",
-    "prod_galletas_maria",
-    "prod_galletas_chocolate",
-    "prod_galletas_crackers",
-    "prod_cereales_a",
-    "prod_cereales_b",
-    "prod_cereales_c",
-    "prod_pan_molde",
-    "prod_snack_patatas",
-    "prod_snack_aperitivos",
-    "prod_chocolate_tabletas",
-    "prod_magdalenas",
-    "prod_perrunillas",
-    "prod_chicles",
-    "prod_caramelos",
-    "prod_agua_15",
-    "prod_agua_gas",
-    "prod_cola_15",
-    "prod_naranja_15",
-    "prod_limon_15",
-    "prod_cerveza_pack",
-    "prod_vino_tinto",
-    "prod_vino_blanco",
-    "prod_vino_rosado",
-    "prod_zumo_naranja",
-    "prod_zumo_melocoton",
-    "prod_leche_entera",
-    "prod_leche_semi",
-    "prod_leche_desnatada",
-    "prod_lavavajillas",
-    "prod_papel_cocina",
-    "prod_servilletas",
-    "prod_esponjas",
-    "prod_yogur_natural",
-    "prod_yogur_fresa",
-    "prod_yogur_limon",
-    "prod_mantequilla",
-    "prod_queso_lonchas",
-    "prod_huevos",
-    "prod_nata",
-    "prod_zumo_fresco",
-    "prod_bandeja_carne",
-    "prod_bandeja_pollo",
-    "prod_fiambre_loncheado",
-    "prod_quesito_untable",
-    "prod_agua_fria",
-    "prod_naranja_fria",
-    "prod_zumo_frio",
-    "prod_cola_fria",
-    "prod_cerveza_fria",
-    "prod_isotonica_fria",
-    "prod_baguettes",
-    "prod_hogazas",
-    "prod_bollos",
-    "prod_pan_molde_artesano",
-    "prod_fruta_melocotones",
-    "prod_fruta_melones",
-    "prod_fruta_naranjas",
-    "prod_fruta_manzanas_rojas",
-    "prod_fruta_manzanas_verdes",
-    "prod_fruta_limones",
-    "prod_fruta_tomates",
-    "prod_fruta_cebollas",
-    "prod_fruta_patatas",
-    "prod_fruta_lechugas",
-    "prod_fruta_pimientos",
-    "prod_fruta_zanahorias",
-    "prod_fruta_platanos",
-    "prod_fruta_uvas",
+    "va_alimento_atun",
+    "va_alimento_sardinillas",
+    "va_alimento_mejillones",
+    "va_alimento_tomate_frito",
+    "va_alimento_maiz",
+    "va_alimento_judias_verdes",
+    "va_alimento_garbanzos_bote",
+    "va_alimento_pimientos_piquillo",
+    "va_alimento_aceitunas",
+    "va_alimento_pepinillos",
+    "va_alimento_mermelada",
+    "va_alimento_miel",
+    "va_alimento_crema_cacao",
+    "va_alimento_melocoton_almibar",
+    "va_alimento_aceite_oliva",
+    "va_alimento_aceite_girasol",
+    "va_alimento_garrafa_aceite",
+    "va_alimento_vinagre",
+    "va_alimento_arroz",
+    "va_alimento_arroz_integral",
+    "va_alimento_espaguetis",
+    "va_alimento_macarrones",
+    "va_alimento_lentejas",
+    "va_alimento_garbanzos_seco",
+    "va_alimento_harina",
+    "va_alimento_azucar",
+    "va_alimento_sal",
+    "va_alimento_cafe_molido",
+    "va_alimento_infusiones",
+    "va_alimento_galletas_maria",
+    "va_alimento_galletas_chocolate",
+    "va_alimento_galletas_crackers",
+    "va_alimento_cereales_a",
+    "va_alimento_cereales_b",
+    "va_alimento_cereales_c",
+    "va_alimento_pan_molde",
+    "va_alimento_snack_patatas",
+    "va_alimento_snack_aperitivos",
+    "va_alimento_chocolate_tabletas",
+    "va_alimento_magdalenas",
+    "va_alimento_perrunillas",
+    "va_alimento_chicles",
+    "va_alimento_caramelos",
+    "va_alimento_agua_15",
+    "va_alimento_agua_gas",
+    "va_alimento_cola_15",
+    "va_alimento_naranja_15",
+    "va_alimento_limon_15",
+    "va_alimento_cerveza_pack",
+    "va_alimento_vino_tinto",
+    "va_alimento_vino_blanco",
+    "va_alimento_vino_rosado",
+    "va_alimento_zumo_naranja",
+    "va_alimento_zumo_melocoton",
+    "va_alimento_leche_entera",
+    "va_alimento_leche_semi",
+    "va_alimento_leche_desnatada",
     "bandeja",
     "azucarero",
     "taza_cafe",
@@ -297,8 +322,10 @@
    ],
    "en": [
     "va_encimera",
+    "va_encimera_amplia",
     "va_alacena",
-    "va_lavadora"
+    "va_lavadora",
+    "va_isla_cocina"
    ],
    "por_soporte": [
     3,

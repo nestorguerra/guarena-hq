@@ -1,0 +1,49 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 5,
+ "objetivo": 4,
+ "estado": "mejora_parcial_objetivo_no_alcanzado",
+ "base": "189929e203a5f5366a3fc040ad80b1513761a7f1",
+ "contratos": 30,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 69334,
+  "mallas": 59,
+  "luces": 9,
+  "montaje_ms": 160.3
+ },
+ "kits": {
+  "cocina": {
+   "ahora": {
+    "A": 2.988,
+    "B": 3.016
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  },
+  "costura": {
+   "ahora": {
+    "A": 3.422,
+    "B": 3.61
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0,
+  "partida_ficticia_conservada": true
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda5_2026-10-17.md",
+ "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo.",
+ "laboratorios_adicionales": [
+  "vivienda_despensa",
+  "vivienda_comedor",
+  "vivienda_taller"
+ ],
+ "semillas_por_laboratorio": 81,
+ "cocina_y_comedor": "Los alimentos son recetas de una unidad, no facings de tienda.",
+ "revision_codigo": "data/interiores/revision_codigo_tanda5_2026-10-17.md"
+}
