@@ -6,12 +6,12 @@ def b(w,h,d,**kw):
 
 def mejorar_almacen(out):
     # Las baldas contienen pertenencias del hogar, no hileras de envases de tienda.
-    for variante,col in enumerate(['#617a72','#6e7f8c','#8b755b']):
+    for variante,col in enumerate(['#536e66','#556d7b','#7b6248']):
         p=[]
         for x in [-.57,.57]:
             for z in [-.2,.2]:p.append(b(.035,2.04,.035,x=x,z=z,c=col,m='metal'))
-        for y in [.09,.56,1.03,1.5,2.02]:p.append(b(1.18,.035,.45,y=y,c='#a08b69'))
-        for x,y,w,h,c in [(-.29,.3,.49,.38,'#a98b66'),(.3,.27,.45,.32,'#788e89'),(-.29,.78,.46,.4,'#be9d70'),(.3,1.25,.45,.4,'#b39167')]:
+        for y in [.09,.56,1.03,1.5,2.02]:p.append(b(1.18,.035,.45,y=y,c='#8c704b'))
+        for x,y,w,h,c in [(-.29,.3,.49,.38,'#a17b51'),(.3,.27,.45,.32,'#67867d'),(-.29,.78,.46,.4,'#b28d5f'),(.3,1.25,.45,.4,'#94734f')]:
             p += [b(w,h,.36,x=x,y=y,z=.015,c=c,m='papel'),b(w+.02,.025,.37,x=x,y=y+h/2,c='#c3af89',m='papel'),caja(.15,.055,.004,x=x,y=y,z=.2,c='#e3dbc6',m='papel')]
         if variante==0:
             # Maleta guardada, asa, cierres y rollo de alfombra.

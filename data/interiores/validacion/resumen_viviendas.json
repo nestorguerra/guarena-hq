@@ -103,7 +103,7 @@
   "errores": 0
  },
  "catalogo": {
-  "objetos": 1872,
+  "objetos": 1876,
   "kits": 40,
   "errores": 0,
   "avisos": 0
@@ -115,7 +115,7 @@
   "triangulos": 69334,
   "mallas": 59,
   "luces": 9,
-  "montaje_ms": 160.3
+  "montaje_ms": 162.2
  },
  "casas_pueblo": 22,
  "habitaciones_pueblo": 132,
@@ -146,8 +146,8 @@
  },
  "paquete": {
   "errores": 0,
-  "maximo_entrada_ms": 208.2,
-  "annie_entrada_ms": 90.4,
+  "maximo_entrada_ms": 199.5,
+  "annie_entrada_ms": 89.5,
   "comercios": [
    {
     "tipo": "bar",
@@ -176,7 +176,7 @@
   "archivos": 21,
   "cambios": [],
   "sha256": {
-   "data/interiores/datos.json": "a2056ff58334b9d0017172f19851618435a8193534d0918af41829b1dba7f029",
+   "data/interiores/datos.json": "5af1425d0433a23982b32b77a10ec559855db0e28593216d1fb3e1af21010b8f",
    "data/kits/vivienda_bano.json": "7bc2273d29d86d7f3e0492747369f2a08783de54822be47861fe399dbf619abd",
    "data/kits/vivienda_cocina.json": "e05ceafc5d1c98270ba44ac76341a3c9aec087de98a82a3c6f7453abfd8a2a87",
    "data/kits/vivienda_comedor.json": "515856c8e7e1c76241161ee97e81d9371cc76b4ddea4559e9f68a0d8db010e9e",
@@ -191,12 +191,12 @@
    "data/kits/vivienda_pintura.json": "902f5a6a5f758fca0c0a41d543a311ae7b1e94a7a5ad2c33cf33b37d0786a583",
    "data/kits/vivienda_salon.json": "39fa736a80bd561e82df6a8a536782d5d86e7236053c2e8d78487f3e5e9ea9f2",
    "data/kits/vivienda_taller.json": "81c1daf167eb6fee79cd9d3299587e45c0c7f48d786ce760b8a75af275806b4e",
-   "data/kits/vivienda_trastero.json": "a99888c30f3b2d00fb44806c46ba2697f22a7d069e4efb643fd0dba9085ce370",
+   "data/kits/vivienda_trastero.json": "693e12169c64393a63dc605dbfdc4c1f70366435df1a8d91a6522c7aa25b2b70",
    "data/kits/vivienda_trofeos.json": "e6e18eefd473c35326ece26cb0dd5f69927fa8d4c7bca34c6aef4e8b0580e9a3",
    "data/objetos/vivienda.json": "b0f228623fa616b4d33afdfb07d4cf0eb18f7651688cdeb220a2f91be4053d12",
-   "data/objetos/vivienda_a.json": "0e6b84d6e075226f23ccfde5c8efa3f38597ba042f2189f8f0fe9c0eb549af87",
+   "data/objetos/vivienda_a.json": "83208d8d8ce8b6cf2dd7c17005b9b65fd978368bd08d6bece45b8d18c0639b0a",
    "data/objetos/vivienda_b.json": "1fc19839e8d4ac994092d5aaae1e148b753d40255855a9ea608d0d62057048dd",
-   "src/interiores_datos.js": "16cfd14b5dfc7e266b6e411a164f670a0d44395cecd8614c6051d41db6abdb3c"
+   "src/interiores_datos.js": "5b94981a58a8a38762b153b7ca51b4fadc75131de4f85f6837d1cfe81b8e8f39"
   }
  },
  "revision_visual": {
@@ -206,7 +206,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.814,
+   "minimo": 2.858,
    "maximo": 3.61
   },
   "hashes_fichas_validos": true,
@@ -272,8 +272,8 @@
     "B": 3.218
    },
    "trastero": {
-    "A": 2.814,
-    "B": 2.894
+    "A": 2.966,
+    "B": 2.858
    },
    "trofeos": {
     "A": 2.992,
@@ -281,7 +281,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "en curso; kits de la tanda 5: cocina, costura. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
+  "objetivo_4": "en curso; kits de la tanda 6: trastero. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -579,6 +579,39 @@
    "partida_ficticia_conservada": true
   },
   "revision_independiente": "data/interiores/revision_calidad_tanda5_2026-10-17.md",
+  "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
+ },
+ "calidad_tanda6": {
+  "fecha": "2026-10-17",
+  "tanda": 6,
+  "objetivo": 4,
+  "estado": "mejora_parcial_objetivo_no_alcanzado",
+  "base": "6d4c9b54ab031e46b416505b5ec7507dedb71c1a",
+  "contratos": 30,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 69334,
+   "mallas": 59,
+   "luces": 9,
+   "montaje_ms": 162.2
+  },
+  "kits": {
+   "trastero": {
+    "ahora": {
+     "A": 2.966,
+     "B": 2.858
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0,
+   "partida_ficticia_conservada": true
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda6_2026-10-17.md",
   "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
  }
 }

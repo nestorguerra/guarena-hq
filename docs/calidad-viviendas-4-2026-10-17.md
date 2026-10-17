@@ -62,3 +62,12 @@ La oclusión ambiental exterior de 2 m ennegrecía el suelo bajo las sillas. Com
 Las cámaras mantienen semillas y altura 1,6 m. La general mira a 1,4 m, antes 1,05 m; costura admite una vista lateral frontal más cercana al eje para no exigir situarse donde está la silla. Estos cambios de evidencia se declaran y no equivalen a mejorar geometría. Todas las evaluaciones finales e intermedias de esta tanda conservan su imagen exacta por hash.
 
 Notas finales A/B: cocina 2,988/3,016 y costura 3,422/3,610. No llegan a 4. Pasan 30 contratos, 200 casas/1166 habitaciones,81 semillas de cocina/costura/despensa/comedor/taller, integración fuente/paquete y marcas, más regeneración de 21 archivos sin diferencias. Los máximos y recibos están en validacion/calidad_tanda5.json. Las otras 15 fichas siguen siendo evidencia de sus versiones anteriores; no certifican este render compartido. Publicación pendiente de commit, Actions y prueba pública.
+
+
+La tanda5 se publicó como 6d4c9b54ab031e46b416505b5ec7507dedb71c1a. CI39050839250 y Pages39050995955 completadas; la prueba pública relee ese commit, conserva la partida ficticia321/700 tras recarga y acaba sin errores.
+
+## Tanda6: pertenencias del trastero
+
+Bicicleta, escalera con útiles, ventilador y cesto de temporada, modelados con primitivas existentes; estanterías y cajas con mayor contraste. La revisión independiente detectó uniones pendientes en pedestal, pedales y pata de cabra: corregidas y releídas. Tres semillas canónicas1594/3886/4589 seleccionan bicicleta; no se afirma cobertura visual de escalera. El objetivo de cámara cambia al elemento principal, a0,85m, con distancia2,1m y FOV68; altura de observación1,6m. Se penalizan obstáculos opacos delante del foco. La primera vista1594 sigue parcialmente obstruida, con cobertura complementaria en la general.
+
+Notas A/B2,966/2,858: objetivo4/5 pendiente. La ficha también incorpora los ajustes compartidos de render de tanda5; no todo cambio de nota se atribuye a las pertenencias. Se conservan los recibos anteriores e imágenes exactas. Pasan30contratos,200casas/1166habitaciones,81semillas del trastero, integración fuente y paquete, marcas y regeneración de21archivos sin diferencias. Revisión visual independiente sin aprobación formal4. Publicación pendiente de commit, Actions y prueba pública.

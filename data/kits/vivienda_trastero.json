@@ -33,6 +33,21 @@
    "zona": "estancia",
    "regla": "contra_pared",
    "variantes": [
+    "va_bicicleta_guardada",
+    "va_escalera_guardada"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
     "va_estante_trastero_0",
     "va_estante_trastero_1",
     "va_estante_trastero_2"
@@ -48,7 +63,7 @@
   {
    "zona": "estancia",
    "regla": "junto_a",
-   "obj": "va_cajas_apiladas",
+   "obj": "va_cesto_temporada",
    "de": [
     "va_estante_trastero_0",
     "va_estante_trastero_1",
@@ -59,6 +74,18 @@
     1
    ],
    "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_ventilador_guardado",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
    "preferir": true
   },
   {

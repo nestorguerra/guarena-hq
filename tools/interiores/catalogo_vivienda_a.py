@@ -101,6 +101,8 @@ def objetos():
     mejorar_almacen(out)
     mejorar_cocina_costura(out)
     unidades_domesticas(out)
+    from pertenencias_domesticas import pertenencias
+    pertenencias(out)
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_a',objetos())
