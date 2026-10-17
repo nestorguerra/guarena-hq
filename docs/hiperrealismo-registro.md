@@ -1098,3 +1098,5 @@ Se integra colocación atómica del frente de cocina, respetando referencias inm
 ## 2026-10-18 · Aislar el contrato de recogida en CI
 
 CI agota la espera durante el vuelo con SwiftShader, antes del contrato nuevo de recogida. Se registra el driver y se usa la reanudación existente sólo cuando se pide --sin-intro; CI lo solicita en baja. No cambia producto ni criterios de recompensa/recarga. Fuente y paquete M1 y 14 casos CPU independientes pasan; CI sigue pendiente. Las capturas y la introducción de las pruebas M1 mantienen su evidencia aparte.
+
+Tanda 14 publicada como `feb5ca0`: CI 39076081332 y Pages 39076312316 pasan. Integración pública exacta con ocho casas, Annie, tres comercios, recarga y botín real persistente, sin errores. La prueba estricta conserva el límite de 1.500 ms y pasa antes del mundo completo. Se cambia el orden del ensayo; no se demuestra una causa ni una mejora de rendimiento. El objetivo visual de 4/5 continúa abierto. Biblioteca B privada pendiente. Recibo: `validacion/publicacion_tanda14.json`.
