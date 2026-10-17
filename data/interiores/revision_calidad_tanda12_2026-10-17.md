@@ -104,3 +104,8 @@ Conclusión limitada: no observo una regresión visible que bloquee esta paleta;
 ## Verificaciones de raíz
 
 La captura final y sus dos evaluaciones corresponden al candidato integrado, incluidos los tres colores de zócalo. Las puntuaciones son 3,328/3,040 y el objetivo no está alcanzado. Pasan los 51 contratos, incluida rasterización real de las tres láminas y prueba de la caché; la ficha usa las mismas cámaras que T11. Las cifras de la validación final se registran en calidad_tanda12.json. Las pruebas de ocultación detalladas de T11 conservan valor como evidencia previa de las mismas envolventes; no se presentan como nuevas ejecuciones T12.
+
+
+## Publicación verificada
+
+Commit `f667142e230a7f52d746f4b69901b1fdfe429bf2`. CI 39063117668 y Pages 39063319918 completados con éxito para esa revisión. La prueba pública confirmó la revisión antes y después de recargar, ocho viviendas, Annie (caja, siesta y decoración), acciones disponibles en tres comercios y persistencia de partida. Cero errores de consola o de integración. Las acciones de comercio se comprobaron disponibles; no se realizaron compras. Evidencia: `validacion/publicacion_tanda12.json`.

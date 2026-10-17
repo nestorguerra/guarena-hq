@@ -68,3 +68,20 @@ El commit `6d34cc384fca3590a00e2cb3286c7e9da7382db8` está publicado y verificad
 El informe público devuelve la misma revisión servida y cero errores registrados. Prueba ocho viviendas, Annie con cinco kits y dormitorio personalizado, caja fuerte, siesta y decoración; también bar, cafetería y farmacia. La recarga conserva 321 € de dinero, 700 € de banco, decoración y los testigos de las partidas Evolución y fija. Evidencia: `.cache/perf-beta/integracion_publica.json`, incorporada al registro JSON de rendimiento.
 
 Esta prueba pública acredita integración, no una nueva medición de velocidad: el instrumento adelanta la introducción y no ejecutó colisiones exhaustivas. La carga medida sigue en 22,28 %, por debajo del 25 %; el replay sigue rechazado como comparación causal. El objetivo visual 4/5 y la beta completa permanecen pendientes.
+
+
+## Segunda tanda de carga: suelo fotográfico separado
+
+Candidato sobre T12 (`f667142e230a7f52d746f4b69901b1fdfe429bf2`): Pages descarga las doce imágenes de suelo sólo si el modo Realista las pide. Plastilina no las usa. Las copias portátil y multijugador mantienen esos recursos integrados; las tres variantes conservan los bytes originales. No cambia el JavaScript del juego. El contrato de recursos se incorpora a CI y Pages.
+
+En el M1, tres rondas alternadas con caché vacía, red emulada de 12 Mbps/40 ms, introducción completa y calidad alta manual (DPR 1,5) dan **49,859 → 36,9215 s**, reducción de mediana **25,948 %**. Rangos 49,5194–51,4922 s y 36,3212–39,1716 s. Es el resultado acumulado contra la base original `3e93087815607c7286959d0913df367dd87f039d`, no el efecto causal aislado de este último cambio. El servidor local no aplica compresión de Pages; no se garantizan estos tiempos en Internet u otros equipos. Las seis ejecuciones originales, configuración e identidades se guardan en `data/rendimiento/carga_suelo_2026-10-17/mediciones`.
+
+Compatibilidad en el candidato actual: introducción y control en ambos estilos; Plastilina hace cero peticiones de suelo y Realista recibe las doce JPEG y la iglesia con HTTP 200, tamaño exacto y sin errores JS/WebGL. Las capturas fueron inspeccionadas directamente; no constituyen una evaluación artística ni equivalencia de pose entre estilos.
+
+La prueba de ausencia por HTTP devuelve 404 para un albedo y una normal: sólo sus capas son planas, las otras diez responden 200 y conservan detalle, la iglesia carga y el jugador se mueve con entrada real. Cero errores inesperados JS, WebGL o transporte. El 404 opcional de rótulos privados se conserva y se registra aparte, como corresponde al paquete público. No se han probado peticiones pendientes indefinidamente ni todas las combinaciones de recursos ausentes.
+
+La primera versión del servidor de ensayo falló con nueve errores de transporte y queda archivada íntegra; no se cuenta como validación. La segunda amplía la cola y usa HTTP persistente, manteniendo los controles estrictos. El éxito de la segunda no demuestra por sí solo la causa única de los fallos anteriores. Los scripts de `data/rendimiento/carga_suelo_2026-10-17` son copias de auditoría de instrumentos privados, con sus rutas originales; las pruebas mantenidas del repositorio están en `tools/perf/tests`.
+
+El paquete integrado y su publicación se verifican por separado. Esta tanda no resuelve el replay causal de fluidez ni el objetivo visual 4/5.
+
+El build integrado coincide byte a byte con los tres HTML y todos los recursos externos del candidato medido. Pasan los contratos de bytes normal y split, marcas, y la integración del paquete (ocho vecinos, Annie, tres comercios, recarga de partida). Los contratos split se ejecutan sobre la copia física aislada anterior de la misma modificación de build; no prueban comportamiento jugable split. Evidencias y SHA-256 en la carpeta de esta tanda.

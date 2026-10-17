@@ -1,0 +1,22 @@
+{
+ "rounds": 3,
+ "adaptive": false,
+ "load_network_mbps": 12.0,
+ "control_ms": {
+  "before": 49859,
+  "after": 36921.5
+ },
+ "control_ms_range": {
+  "before": [
+   49519.39999997616,
+   51492.19999998808
+  ],
+  "after": [
+   36321.19999998808,
+   39171.60000002384
+  ]
+ },
+ "load_reduction_percent": 25.948173850257728,
+ "ready_method": "normal_intro_no_fast_forward",
+ "load_25_percent": true
+}

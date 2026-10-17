@@ -39,6 +39,8 @@ jobs:
           # (lo que el juego descarga aparte, al pedirlo: Santa María por dentro en alta definición)
           if [ -d dist/assets ]; then cp -r dist/assets _site/assets; fi
           touch _site/.nojekyll
+      - name: Recursos de suelo e iglesia en Pages, portable y multijugador
+        run: python3 tools/perf/tests/carga_assets.py
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

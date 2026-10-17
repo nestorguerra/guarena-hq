@@ -153,7 +153,14 @@ def main():
     # page — it would weigh tens of MB more —, always beside it, in dist/assets (the published copy carries it there; a
     # page that cannot fetch it keeps the old church). The drone's pictures of the way in too (src/intro.js): the page
     # asks for them by name in its first lines, so that one shows at once, long before the page itself has arrived
-    LAZY = ('hq/iglesia.glb', 'hq/interior/', 'intro.jpg', 'intro_real.jpg', 'intro_cerca.jpg', 'intro_real_cerca.jpg')
+    # Photographic ground is unused by Plastilina. Pages fetches the same JPEGs
+    # when Realista requests them; portable/multiplayer retain embedded copies.
+    ground_photos = tuple('tex/' + name + suffix + '.jpg'
+                          for name in ('asphalt_02', 'dirty_concrete', 'dry_ground_01',
+                                       'gravel_floor_02', 'sparse_grass', 'withered_grass')
+                          for suffix in ('_d', '_n'))
+    pages_external = ('hq/iglesia.glb',) + ground_photos
+    LAZY = pages_external + ('hq/interior/', 'intro.jpg', 'intro_real.jpg', 'intro_cerca.jpg', 'intro_real_cerca.jpg')
     lazy = [rel for rel in asset_files if rel.startswith(LAZY)]
     asset_files = [rel for rel in asset_files if not rel.startswith(LAZY)]
     for sub in ('data', 'assets'):
@@ -199,14 +206,17 @@ def main():
         page += f'<script>window.GUARENA_MP_URL = {json.dumps(mp_url.rstrip("/"))};</script>\n'
     page += '<script type="module">\n' + js + '\n</script>\n'
     # Pages serves assets beside test.html. The portable artifact and production
-    # multiplayer server cannot serve those files, so retain their embedded church.
+    # multiplayer server cannot serve those files, so retain their embedded copies.
     standalone = page
     if not split:
-        with open(os.path.join(src_assets, 'hq', 'iglesia.glb'), 'rb') as f:
-            church_entry = json.dumps({'hq/iglesia.glb': b85(f.read())}, separators=(',', ':'))[1:-1]
+        standalone_assets = {}
+        for rel in pages_external:
+            with open(os.path.join(src_assets, rel), 'rb') as f:
+                standalone_assets[rel] = b85(f.read())
+        standalone_entries = json.dumps(standalone_assets, separators=(',', ':'))[1:-1]
         anchor = '<script type="application/json" id="assetdata">{'
         assert page.count(anchor) == 1
-        standalone = page.replace(anchor, anchor + church_entry + ',', 1)
+        standalone = page.replace(anchor, anchor + standalone_entries + ',', 1)
     fn = os.path.join(ROOT, 'dist', 'guarena-hq.html')  # (dist/guarena.html is the fixed version's page, dist/guarena-evolucion.html Evolución's)
     with open(fn, 'w', encoding='utf-8') as f:
         # declare UTF-8 first thing: without it a host that sends no charset shows «GuareÃ±a» instead of «Guareña»

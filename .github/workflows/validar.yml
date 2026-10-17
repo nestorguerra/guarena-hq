@@ -36,6 +36,8 @@ jobs:
         run: node --test tools/interiores/luz_ambiente_pruebas.mjs
       - name: Empaquetar el juego
         run: python3 tools/build.py
+      - name: Recursos de suelo e iglesia en Pages, portable y multijugador
+        run: python3 tools/perf/tests/carga_assets.py
       - name: Marcas y marcadores en la copia publicable (R-07, V-02)
         run: python3 tools/rotulos/rotulos.py validar dist/test.html
       - name: Entidades y emparejamiento (R-02, R-04)

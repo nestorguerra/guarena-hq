@@ -1,0 +1,287 @@
+{
+ "plastilina": {
+  "quality": "alta",
+  "pr": 1,
+  "control": true,
+  "ground": {
+   "on": false,
+   "normals": false,
+   "albedo": null,
+   "normal": null
+  },
+  "church": false,
+  "resources": [],
+  "errors": [],
+  "glError": 0,
+  "screenshot_sha256": "67859ccd127153cabb2a43f21d45aa4b1622856789d6b1905c98159f03ac6bba"
+ },
+ "real": {
+  "quality": "alta",
+  "pr": 1,
+  "control": true,
+  "ground": {
+   "on": true,
+   "normals": true,
+   "albedo": {
+    "width": 1024,
+    "height": 1024,
+    "depth": 6,
+    "bytes": 25165824,
+    "sha256": "615ac44085e6186dc04421da4e1609695cb42f8b1bbf39cb7568d4710b98b03c"
+   },
+   "normal": {
+    "width": 512,
+    "height": 512,
+    "depth": 6,
+    "bytes": 6291456,
+    "sha256": "ea86153cb78e97c29b85837dd7ef097d3bc8a0ec1597959474ca1048c06a453c"
+   }
+  },
+  "church": true,
+  "resources": [
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/iglesia.glb",
+    "bytes": 10084432,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/asphalt_02_d.jpg",
+    "bytes": 379841,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/dirty_concrete_d.jpg",
+    "bytes": 277181,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/dry_ground_01_d.jpg",
+    "bytes": 269446,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/gravel_floor_02_d.jpg",
+    "bytes": 121599,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/sparse_grass_d.jpg",
+    "bytes": 236092,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/asphalt_02_n.jpg",
+    "bytes": 70714,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/dirty_concrete_n.jpg",
+    "bytes": 75830,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/withered_grass_d.jpg",
+    "bytes": 369220,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/sparse_grass_n.jpg",
+    "bytes": 117192,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/gravel_floor_02_n.jpg",
+    "bytes": 166622,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/dry_ground_01_n.jpg",
+    "bytes": 56208,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/tex/withered_grass_n.jpg",
+    "bytes": 113403,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/cal_diff.jpg",
+    "bytes": 1137256,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/cal_rough.jpg",
+    "bytes": 19128,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/granito_diff.jpg",
+    "bytes": 209698,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/cal_nor.jpg",
+    "bytes": 2037368,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/granito_rough.jpg",
+    "bytes": 46013,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/suelo_rough.jpg",
+    "bytes": 87816,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/suelo_nor.jpg",
+    "bytes": 550009,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/granito_nor.jpg",
+    "bytes": 558552,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/suelo_diff.jpg",
+    "bytes": 1704348,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/vidrio_diff.jpg",
+    "bytes": 78623,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/madera_diff.jpg",
+    "bytes": 225851,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/madera_nor.jpg",
+    "bytes": 74266,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/madera_rough.jpg",
+    "bytes": 25181,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/terciopelo_diff.jpg",
+    "bytes": 14413,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/terciopelo_nor.jpg",
+    "bytes": 45504,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/dorado_diff.jpg",
+    "bytes": 32447,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/terciopelo_rough.jpg",
+    "bytes": 16980,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/dorado_nor.jpg",
+    "bytes": 107631,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/dorado_rough.jpg",
+    "bytes": 14344,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/talla_diff.jpg",
+    "bytes": 101721,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/talla_nor.jpg",
+    "bytes": 182027,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/talla_rough.jpg",
+    "bytes": 57800,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/azul_diff.jpg",
+    "bytes": 35606,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/plata_diff.jpg",
+    "bytes": 7236,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/plata_rough.jpg",
+    "bytes": 7663,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/azul_rough.jpg",
+    "bytes": 9899,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/blanco_diff.jpg",
+    "bytes": 4218,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/lino_diff.jpg",
+    "bytes": 50555,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/lino_nor.jpg",
+    "bytes": 53883,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/lino_rough.jpg",
+    "bytes": 11636,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/marmol_diff.jpg",
+    "bytes": 52710,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/marmol_rough.jpg",
+    "bytes": 12777,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/hierro_diff.jpg",
+    "bytes": 5807,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/hierro_rough.jpg",
+    "bytes": 4485,
+    "status": 200
+   },
+   {
+    "url": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/assets/hq/interior/tex/ojo_diff.jpg",
+    "bytes": 5117,
+    "status": 200
+   }
+  ],
+  "errors": [],
+  "glError": 0,
+  "screenshot_sha256": "cb96d475c02dce97e8de5def3507039f30bea71a2437d9db53f4ba39b23482c0"
+ }
+}
