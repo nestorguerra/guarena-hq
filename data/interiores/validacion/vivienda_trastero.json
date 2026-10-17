@@ -91,16 +91,16 @@
    "seed": 1,
    "W": 6.2,
    "D": 4.3,
-   "guardias": 10,
-   "objetos": 35,
-   "distintos": 19,
-   "hash": "1c16cb58",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 10,
+   "hash": "589905a4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -110,22 +110,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -140,24 +140,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.88,
-     "libre_m2": 14.88
+     "alcanzable_m2": 14.13,
+     "libre_m2": 14.13
     }
    },
    "luz": {
@@ -165,7 +160,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7422,
+   "triangulos": 14178,
    "mallas": 10,
    "luces": 3,
    "determinista": true
@@ -176,16 +171,16 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 32,
-   "distintos": 21,
-   "hash": "a44fac3d",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 9,
+   "hash": "642e7008",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -195,22 +190,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -219,25 +209,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.98,
-     "libre_m2": 6.98
+     "alcanzable_m2": 7.19,
+     "libre_m2": 7.19
     }
    },
    "luz": {
@@ -245,7 +235,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6994,
+   "triangulos": 10246,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -257,16 +247,16 @@
    "seed": 3,
    "W": 5,
    "D": 2.5,
-   "guardias": 7,
-   "objetos": 35,
-   "distintos": 21,
-   "hash": "387b2cca",
+   "guardias": 5,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "fd3cf16a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -276,22 +266,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -300,20 +280,20 @@
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
+     "n": 3
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.35,
-     "libre_m2": 5.35
+     "alcanzable_m2": 5.46,
+     "libre_m2": 5.46
     }
    },
    "luz": {
@@ -321,7 +301,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7080,
+   "triangulos": 7780,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -333,16 +313,16 @@
    "seed": 4,
    "W": 4.4,
    "D": 4.9,
-   "guardias": 10,
-   "objetos": 36,
-   "distintos": 20,
-   "hash": "47d2e3e4",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "4beda322",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -352,22 +332,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -382,24 +362,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.94,
-     "libre_m2": 11.94
+     "alcanzable_m2": 10.4,
+     "libre_m2": 10.4
     }
    },
    "luz": {
@@ -407,7 +382,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6600,
+   "triangulos": 11072,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -419,16 +394,16 @@
    "seed": 5,
    "W": 6.5,
    "D": 4.3,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 20,
-   "hash": "e543b807",
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "f8a704b1",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -438,22 +413,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -468,24 +443,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.16,
-     "libre_m2": 16.16
+     "alcanzable_m2": 15.71,
+     "libre_m2": 15.71
     }
    },
    "luz": {
@@ -493,7 +463,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8750,
+   "triangulos": 12430,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -505,16 +475,16 @@
    "seed": 6,
    "W": 3.5,
    "D": 4,
-   "guardias": 9,
-   "objetos": 36,
-   "distintos": 19,
-   "hash": "6cf069b",
+   "guardias": 7,
+   "objetos": 11,
+   "distintos": 9,
+   "hash": "e175a758",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -524,22 +494,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -548,25 +508,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
+     "n": 3
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.22,
-     "libre_m2": 5.22
+     "alcanzable_m2": 5.13,
+     "libre_m2": 5.13
     }
    },
    "luz": {
@@ -574,7 +534,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4624,
+   "triangulos": 9416,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -586,16 +546,16 @@
    "seed": 7,
    "W": 4.7,
    "D": 2.5,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 17,
-   "hash": "52e5de5e",
+   "guardias": 4,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "d65abeb4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -605,34 +565,29 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.44,
-     "libre_m2": 5.44
+     "alcanzable_m2": 4.89,
+     "libre_m2": 4.89
     }
    },
    "luz": {
@@ -640,11 +595,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6628,
+   "triangulos": 8624,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.938
   },
   {
    "kit": "vivienda_trastero",
@@ -653,15 +608,15 @@
    "W": 5.9,
    "D": 4.6,
    "guardias": 9,
-   "objetos": 33,
-   "distintos": 18,
-   "hash": "75e059e5",
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "8f8db6e3",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -671,22 +626,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -701,24 +656,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.93,
-     "libre_m2": 15.93
+     "alcanzable_m2": 14.96,
+     "libre_m2": 14.96
     }
    },
    "luz": {
@@ -726,7 +676,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5894,
+   "triangulos": 12730,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -738,16 +688,16 @@
    "seed": 9,
    "W": 4.1,
    "D": 2.5,
-   "guardias": 5,
-   "objetos": 32,
-   "distintos": 20,
-   "hash": "253e16c8",
+   "guardias": 4,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "de49bc37",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -757,34 +707,29 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.06,
-     "libre_m2": 4.06
+     "alcanzable_m2": 3.95,
+     "libre_m2": 3.95
     }
    },
    "luz": {
@@ -792,7 +737,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8304,
+   "triangulos": 8120,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -804,16 +749,16 @@
    "seed": 10,
    "W": 3.8000000000000003,
    "D": 3.4,
-   "guardias": 7,
-   "objetos": 34,
-   "distintos": 20,
-   "hash": "f56bf5a0",
+   "guardias": 5,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "eb6caee7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -823,22 +768,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -847,20 +782,20 @@
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.84,
-     "libre_m2": 5.84
+     "alcanzable_m2": 6.21,
+     "libre_m2": 6.21
     }
    },
    "luz": {
@@ -868,7 +803,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7572,
+   "triangulos": 10976,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -880,16 +815,16 @@
    "seed": 11,
    "W": 5,
    "D": 3.1,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 20,
-   "hash": "2b62375a",
+   "guardias": 7,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "34580e5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -899,22 +834,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -923,25 +848,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
+     "n": 5
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.46,
-     "libre_m2": 6.55
+     "alcanzable_m2": 7.3,
+     "libre_m2": 7.3
     }
    },
    "luz": {
@@ -949,7 +874,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8756,
+   "triangulos": 8952,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -961,16 +886,16 @@
    "seed": 12,
    "W": 6.2,
    "D": 4.9,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 19,
-   "hash": "fc9b5ba4",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "2463c0d4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -980,22 +905,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -1010,24 +935,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.27,
-     "libre_m2": 18.27
+     "alcanzable_m2": 17.78,
+     "libre_m2": 17.78
     }
    },
    "luz": {
@@ -1035,11 +955,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9158,
+   "triangulos": 13862,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.882
   },
   {
    "kit": "vivienda_trastero",
@@ -1048,15 +968,15 @@
    "W": 6.2,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 39,
-   "distintos": 21,
-   "hash": "e6199bf1",
+   "objetos": 14,
+   "distintos": 10,
+   "hash": "de7c5c1c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -1066,103 +986,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 28
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.48,
-     "libre_m2": 7.48
-    }
-   },
-   "luz": {
-    "estancia": 0.209
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5406,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.974
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 14,
-   "W": 6.2,
-   "D": 4.6,
-   "guardias": 10,
-   "objetos": 33,
-   "distintos": 21,
-   "hash": "cbfc8527",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
      "n": 1
     },
     {
@@ -1177,32 +1011,27 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 21
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.56,
-     "libre_m2": 16.56
+     "alcanzable_m2": 7.34,
+     "libre_m2": 7.34
     }
    },
    "luz": {
-    "estancia": 0.076
+    "estancia": 0.209
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7406,
+   "triangulos": 8782,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1211,19 +1040,19 @@
   {
    "kit": "vivienda_trastero",
    "tipologia": "otra_estancia",
-   "seed": 15,
-   "W": 3.5,
-   "D": 4.9,
+   "seed": 14,
+   "W": 6.2,
+   "D": 4.6,
    "guardias": 9,
-   "objetos": 32,
-   "distintos": 21,
-   "hash": "4d2e5eb7",
+   "objetos": 18,
+   "distintos": 14,
+   "hash": "284797c2",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -1233,22 +1062,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -1257,25 +1086,101 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
+     "n": 8
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.52,
-     "libre_m2": 8.52
+     "alcanzable_m2": 16.23,
+     "libre_m2": 16.23
+    }
+   },
+   "luz": {
+    "estancia": 0.082
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11834,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.944
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 15,
+   "W": 3.5,
+   "D": 4.9,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "22660018",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.55,
+     "libre_m2": 7.55
     }
    },
    "luz": {
@@ -1283,7 +1188,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8216,
+   "triangulos": 7972,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -1295,16 +1200,16 @@
    "seed": 16,
    "W": 6.2,
    "D": 3.4,
-   "guardias": 10,
-   "objetos": 31,
-   "distintos": 19,
-   "hash": "69063b9e",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "eceb0e19",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -1314,22 +1219,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -1344,24 +1249,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 20
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.22,
-     "libre_m2": 10.22
+     "alcanzable_m2": 10.77,
+     "libre_m2": 10.77
     }
    },
    "luz": {
@@ -1369,11 +1269,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7290,
+   "triangulos": 12522,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.938
   },
   {
    "kit": "vivienda_trastero",
@@ -1381,16 +1281,16 @@
    "seed": 17,
    "W": 6.2,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 34,
-   "distintos": 21,
-   "hash": "a97b665d",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 9,
+   "hash": "c9f2622e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -1400,22 +1300,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -1424,25 +1319,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
+     "n": 3
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.29,
-     "libre_m2": 8.29
+     "alcanzable_m2": 7.63,
+     "libre_m2": 7.63
     }
    },
    "luz": {
@@ -1450,11 +1345,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5906,
+   "triangulos": 8906,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
-   "diferencia_con_semilla_1": 0.971
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_trastero",
@@ -1462,431 +1357,16 @@
    "seed": 18,
    "W": 4.1,
    "D": 3.7,
-   "guardias": 9,
-   "objetos": 33,
-   "distintos": 20,
-   "hash": "55799759",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.17,
-     "libre_m2": 7.17
-    }
-   },
-   "luz": {
-    "estancia": 0.143
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4648,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 19,
-   "W": 5.6,
-   "D": 4,
-   "guardias": 10,
-   "objetos": 33,
-   "distintos": 19,
-   "hash": "4948cd89",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.41,
-     "libre_m2": 11.41
-    }
-   },
-   "luz": {
-    "estancia": 0.108
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7818,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 20,
-   "W": 6.2,
-   "D": 3.1,
-   "guardias": 10,
-   "objetos": 39,
-   "distintos": 19,
-   "hash": "41dd69b6",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.86,
-     "libre_m2": 8.86
-    }
-   },
-   "luz": {
-    "estancia": 0.113
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5022,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 21,
-   "W": 5.6,
-   "D": 3.1,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 19,
-   "hash": "db37491a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.74,
-     "libre_m2": 8.74
-    }
-   },
-   "luz": {
-    "estancia": 0.139
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5466,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 22,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 20,
-   "hash": "ee8ec71c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.22,
-     "libre_m2": 6.22
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7276,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 23,
-   "W": 4.4,
-   "D": 3.1,
    "guardias": 7,
-   "objetos": 33,
-   "distintos": 20,
-   "hash": "47fb00d9",
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "c36b0a7f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -1896,98 +1376,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.6,
-     "libre_m2": 6.6
-    }
-   },
-   "luz": {
-    "estancia": 0.172
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5804,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 24,
-   "W": 5.300000000000001,
-   "D": 3.7,
-   "guardias": 10,
-   "objetos": 35,
-   "distintos": 20,
-   "hash": "a1ef5168",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -2002,2598 +1396,11 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.34,
-     "libre_m2": 10.34
-    }
-   },
-   "luz": {
-    "estancia": 0.118
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8962,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 25,
-   "W": 7.7,
-   "D": 3.7,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 19,
-   "hash": "d518326c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 16.16,
-     "libre_m2": 16.16
-    }
-   },
-   "luz": {
-    "estancia": 0.078
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8718,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 26,
-   "W": 6.5,
-   "D": 4,
-   "guardias": 10,
-   "objetos": 38,
-   "distintos": 19,
-   "hash": "16685879",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.03,
-     "libre_m2": 15.03
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6958,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 27,
-   "W": 6.5,
-   "D": 4,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 20,
-   "hash": "ac5b15a2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.08,
-     "libre_m2": 15.08
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7386,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 28,
-   "W": 7.1,
-   "D": 4.3,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 21,
-   "hash": "3124d9ec",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 19.1,
-     "libre_m2": 19.1
-    }
-   },
-   "luz": {
-    "estancia": 0.069
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8138,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 29,
-   "W": 5.9,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 34,
-   "distintos": 20,
-   "hash": "2cfcdb3a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.84,
-     "libre_m2": 5.84
-    }
-   },
-   "luz": {
-    "estancia": 0.153
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4854,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 30,
-   "W": 3.8000000000000003,
-   "D": 3.4,
-   "guardias": 7,
-   "objetos": 33,
-   "distintos": 18,
-   "hash": "83d283cb",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.95,
-     "libre_m2": 5.95
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7820,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 31,
-   "W": 5,
-   "D": 4,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 18,
-   "hash": "5e147e6c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.18,
-     "libre_m2": 10.23
-    }
-   },
-   "luz": {
-    "estancia": 0.119
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 10092,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 32,
-   "W": 4.4,
-   "D": 4.6,
-   "guardias": 10,
-   "objetos": 36,
-   "distintos": 20,
-   "hash": "2db3d5cc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 10.72,
-     "libre_m2": 10.72
-    }
-   },
-   "luz": {
-    "estancia": 0.112
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8004,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 33,
-   "W": 4.1,
-   "D": 2.8,
-   "guardias": 5,
-   "objetos": 31,
-   "distintos": 19,
-   "hash": "dfc7b8bc",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.34,
-     "libre_m2": 5.34
-    }
-   },
-   "luz": {
-    "estancia": 0.198
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7216,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 34,
-   "W": 7.4,
-   "D": 4.3,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 19,
-   "hash": "a010f260",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 20.13,
-     "libre_m2": 20.13
-    }
-   },
-   "luz": {
-    "estancia": 0.059
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 10014,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 35,
-   "W": 7.4,
-   "D": 4.6,
-   "guardias": 10,
-   "objetos": 39,
-   "distintos": 19,
-   "hash": "acc721ed",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 21.89,
-     "libre_m2": 21.89
-    }
-   },
-   "luz": {
-    "estancia": 0.061
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11034,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 36,
-   "W": 3.5,
-   "D": 4,
-   "guardias": 9,
-   "objetos": 34,
-   "distintos": 19,
-   "hash": "5ae1b6f1",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.95,
-     "libre_m2": 5.95
-    }
-   },
-   "luz": {
-    "estancia": 0.154
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6540,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 37,
-   "W": 7.1,
-   "D": 3.7,
-   "guardias": 10,
-   "objetos": 36,
-   "distintos": 22,
-   "hash": "6dba84c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.89,
-     "libre_m2": 14.89
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 9190,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 38,
-   "W": 3.2,
-   "D": 4,
-   "guardias": 7,
-   "objetos": 31,
-   "distintos": 18,
-   "hash": "e76b601b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.82,
-     "libre_m2": 5.82
-    }
-   },
-   "luz": {
-    "estancia": 0.18
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6012,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 39,
-   "W": 7.7,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 32,
-   "distintos": 17,
-   "hash": "e6bcd25c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 20
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.57,
-     "libre_m2": 14.57
-    }
-   },
-   "luz": {
-    "estancia": 0.146
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4558,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 40,
-   "W": 5.6,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 31,
-   "distintos": 19,
-   "hash": "1c30a572",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 20
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.91,
-     "libre_m2": 8.91
-    }
-   },
-   "luz": {
-    "estancia": 0.128
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5118,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 41,
-   "W": 3.8000000000000003,
-   "D": 3.1,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 17,
-   "hash": "e3b84b51",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.65,
-     "libre_m2": 5.65
-    }
-   },
-   "luz": {
-    "estancia": 0.193
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8364,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 42,
-   "W": 5.300000000000001,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 20,
-   "hash": "4e1ee6a9",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.17,
-     "libre_m2": 8.17
-    }
-   },
-   "luz": {
-    "estancia": 0.128
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6518,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 43,
-   "W": 4.1,
-   "D": 4.3,
-   "guardias": 9,
-   "objetos": 37,
-   "distintos": 17,
-   "hash": "c084188f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.91,
-     "libre_m2": 8.91
-    }
-   },
-   "luz": {
-    "estancia": 0.129
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8352,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 44,
-   "W": 3.8000000000000003,
-   "D": 3.1,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "b7dedfd0",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 21
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.82,
-     "libre_m2": 5.82
-    }
-   },
-   "luz": {
-    "estancia": 0.193
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7384,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 45,
-   "W": 7.7,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 38,
-   "distintos": 18,
-   "hash": "3b7ed686",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.72,
-     "libre_m2": 14.72
-    }
-   },
-   "luz": {
-    "estancia": 0.146
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5866,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 46,
-   "W": 4.1,
-   "D": 3.4,
-   "guardias": 7,
-   "objetos": 31,
-   "distintos": 19,
-   "hash": "145c8990",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.55,
-     "libre_m2": 6.55
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8224,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 47,
-   "W": 7.4,
-   "D": 4,
-   "guardias": 10,
-   "objetos": 35,
-   "distintos": 20,
-   "hash": "a68e4e1b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.31,
-     "libre_m2": 17.31
-    }
-   },
-   "luz": {
-    "estancia": 0.075
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8150,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 48,
-   "W": 5.6,
-   "D": 4.3,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 18,
-   "hash": "a9f26c75",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 13.09,
-     "libre_m2": 13.09
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6194,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.973
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 49,
-   "W": 3.5,
-   "D": 4.9,
-   "guardias": 9,
-   "objetos": 33,
-   "distintos": 20,
-   "hash": "a1088653",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.81,
-     "libre_m2": 7.84
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8276,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 50,
-   "W": 6.2,
-   "D": 2.8,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 18,
-   "hash": "578654e7",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.01,
-     "libre_m2": 8.01
-    }
-   },
-   "luz": {
-    "estancia": 0.209
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 5578,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 51,
-   "W": 3.5,
-   "D": 2.5,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 18,
-   "hash": "b9259186",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 2.98,
-     "libre_m2": 2.98
-    }
-   },
-   "luz": {
-    "estancia": 0.105
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4352,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 52,
-   "W": 4.1,
-   "D": 3.4,
-   "guardias": 7,
-   "objetos": 33,
-   "distintos": 20,
-   "hash": "d899b3fe",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.69,
-     "libre_m2": 6.69
-    }
-   },
-   "luz": {
-    "estancia": 0.167
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8720,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 53,
-   "W": 3.5,
-   "D": 3.4,
-   "guardias": 5,
-   "objetos": 33,
-   "distintos": 18,
-   "hash": "232b24b2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.26,
-     "libre_m2": 5.26
-    }
-   },
-   "luz": {
-    "estancia": 0.085
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 8040,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 54,
-   "W": 5.9,
-   "D": 4.6,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 19,
-   "hash": "6c8f9ebe",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.57,
-     "libre_m2": 15.57
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7322,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 55,
-   "W": 5.9,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 18,
-   "hash": "330da90c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 9.57,
-     "libre_m2": 9.57
-    }
-   },
-   "luz": {
-    "estancia": 0.122
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 6954,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 56,
-   "W": 4.4,
-   "D": 3.4,
-   "guardias": 9,
-   "objetos": 33,
-   "distintos": 21,
-   "hash": "dc946c68",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4605,11 +1412,11 @@
     }
    },
    "luz": {
-    "estancia": 0.158
+    "estancia": 0.143
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9860,
+   "triangulos": 9580,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -4618,19 +1425,19 @@
   {
    "kit": "vivienda_trastero",
    "tipologia": "otra_estancia",
-   "seed": 57,
-   "W": 5.9,
-   "D": 3.4,
-   "guardias": 10,
-   "objetos": 38,
-   "distintos": 19,
-   "hash": "d8558fb",
+   "seed": 19,
+   "W": 5.6,
+   "D": 4,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "97de55a0",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -4640,22 +1447,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -4670,32 +1477,27 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.54,
-     "libre_m2": 9.54
+     "alcanzable_m2": 11.35,
+     "libre_m2": 11.35
     }
    },
    "luz": {
-    "estancia": 0.122
+    "estancia": 0.108
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8766,
+   "triangulos": 13174,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4704,19 +1506,19 @@
   {
    "kit": "vivienda_trastero",
    "tipologia": "otra_estancia",
-   "seed": 58,
-   "W": 4.7,
+   "seed": 20,
+   "W": 6.2,
    "D": 3.1,
    "guardias": 9,
-   "objetos": 32,
-   "distintos": 19,
-   "hash": "23afec57",
+   "objetos": 17,
+   "distintos": 13,
+   "hash": "f416f8d5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -4726,103 +1528,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.23,
-     "libre_m2": 6.23
-    }
-   },
-   "luz": {
-    "estancia": 0.163
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3248,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 59,
-   "W": 6.5,
-   "D": 3.1,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 19,
-   "hash": "da27b3db",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
      "n": 1
     },
     {
@@ -4837,53 +1558,48 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.68,
-     "libre_m2": 10.68
+     "alcanzable_m2": 8.67,
+     "libre_m2": 8.67
     }
    },
    "luz": {
-    "estancia": 0.185
+    "estancia": 0.113
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9470,
+   "triangulos": 12990,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.941
   },
   {
    "kit": "vivienda_trastero",
    "tipologia": "otra_estancia",
-   "seed": 60,
-   "W": 5.300000000000001,
+   "seed": 21,
+   "W": 5.6,
    "D": 3.1,
-   "guardias": 9,
-   "objetos": 30,
-   "distintos": 20,
-   "hash": "1a6fe5c8",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "65baf38a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -4893,22 +1609,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -4917,17 +1628,88 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 20
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.41,
+     "libre_m2": 7.41
+    }
+   },
+   "luz": {
+    "estancia": 0.139
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9066,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 22,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 7,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "dfd6e62d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4939,11 +1721,2849 @@
     }
    },
    "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7884,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 23,
+   "W": 4.4,
+   "D": 3.1,
+   "guardias": 5,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "278cce84",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.72,
+     "libre_m2": 6.72
+    }
+   },
+   "luz": {
+    "estancia": 0.172
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8388,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 24,
+   "W": 5.300000000000001,
+   "D": 3.7,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "21f71b24",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.76,
+     "libre_m2": 8.76
+    }
+   },
+   "luz": {
+    "estancia": 0.118
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11614,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 25,
+   "W": 7.7,
+   "D": 3.7,
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "9ce93a65",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.73,
+     "libre_m2": 15.73
+    }
+   },
+   "luz": {
+    "estancia": 0.078
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11598,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 26,
+   "W": 6.5,
+   "D": 4,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "e6454cbf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.06,
+     "libre_m2": 15.06
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13782,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 27,
+   "W": 6.5,
+   "D": 4,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 14,
+   "hash": "5f753198",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.4,
+     "libre_m2": 14.4
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13082,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 28,
+   "W": 7.1,
+   "D": 4.3,
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "891cad99",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.61,
+     "libre_m2": 18.61
+    }
+   },
+   "luz": {
+    "estancia": 0.069
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12430,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 29,
+   "W": 5.9,
+   "D": 2.5,
+   "guardias": 7,
+   "objetos": 13,
+   "distintos": 9,
+   "hash": "5e978209",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.09,
+     "libre_m2": 6.09
+    }
+   },
+   "luz": {
+    "estancia": 0.153
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9670,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 30,
+   "W": 3.8000000000000003,
+   "D": 3.4,
+   "guardias": 5,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "dfc74385",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.27,
+     "libre_m2": 6.27
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7712,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 31,
+   "W": 5,
+   "D": 4,
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "24b4927e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.6,
+     "libre_m2": 9.6
+    }
+   },
+   "luz": {
+    "estancia": 0.119
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11912,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 32,
+   "W": 4.4,
+   "D": 4.6,
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "df4d8f57",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.26,
+     "libre_m2": 10.26
+    }
+   },
+   "luz": {
+    "estancia": 0.112
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12892,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 33,
+   "W": 4.1,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "2db5ce90",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.02,
+     "libre_m2": 5.02
+    }
+   },
+   "luz": {
+    "estancia": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 10700,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 34,
+   "W": 7.4,
+   "D": 4.3,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "90b69868",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 19.4,
+     "libre_m2": 19.4
+    }
+   },
+   "luz": {
+    "estancia": 0.059
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12430,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 35,
+   "W": 7.4,
+   "D": 4.6,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "6544efcc",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 21.51,
+     "libre_m2": 21.51
+    }
+   },
+   "luz": {
+    "estancia": 0.061
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11562,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 36,
+   "W": 3.5,
+   "D": 4,
+   "guardias": 7,
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "4130f7d9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.25,
+     "libre_m2": 6.25
+    }
+   },
+   "luz": {
+    "estancia": 0.154
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8448,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 37,
+   "W": 7.1,
+   "D": 3.7,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "8d326f78",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.61,
+     "libre_m2": 14.61
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13846,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 38,
+   "W": 3.2,
+   "D": 4,
+   "guardias": 5,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "b718029",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.91,
+     "libre_m2": 5.91
+    }
+   },
+   "luz": {
+    "estancia": 0.18
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8676,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 39,
+   "W": 7.7,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 12,
+   "hash": "e6a2f79d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.9,
+     "libre_m2": 13.9
+    }
+   },
+   "luz": {
+    "estancia": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12782,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 40,
+   "W": 5.6,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "93c2001d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.41,
+     "libre_m2": 8.41
+    }
+   },
+   "luz": {
+    "estancia": 0.128
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11838,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 41,
+   "W": 3.8000000000000003,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 9,
+   "distintos": 8,
+   "hash": "cbc95afb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.45,
+     "libre_m2": 5.45
+    }
+   },
+   "luz": {
+    "estancia": 0.193
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9156,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 42,
+   "W": 5.300000000000001,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "fccfce67",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.96,
+     "libre_m2": 7.96
+    }
+   },
+   "luz": {
+    "estancia": 0.128
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11838,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 43,
+   "W": 4.1,
+   "D": 4.3,
+   "guardias": 8,
+   "objetos": 12,
+   "distintos": 8,
+   "hash": "725bba21",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.58,
+     "libre_m2": 7.58
+    }
+   },
+   "luz": {
+    "estancia": 0.129
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9148,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 44,
+   "W": 3.8000000000000003,
+   "D": 3.1,
+   "guardias": 4,
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "ffa1bcd5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.45,
+     "libre_m2": 5.45
+    }
+   },
+   "luz": {
+    "estancia": 0.193
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9068,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 45,
+   "W": 7.7,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "ae9ec2c1",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.28,
+     "libre_m2": 14.28
+    }
+   },
+   "luz": {
+    "estancia": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11674,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 46,
+   "W": 4.1,
+   "D": 3.4,
+   "guardias": 5,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "2f2fb733",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.98,
+     "libre_m2": 6.98
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8876,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 47,
+   "W": 7.4,
+   "D": 4,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 12,
+   "hash": "2e929e03",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.82,
+     "libre_m2": 16.82
+    }
+   },
+   "luz": {
+    "estancia": 0.075
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14894,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 48,
+   "W": 5.6,
+   "D": 4.3,
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "c5be4edc",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.67,
+     "libre_m2": 12.67
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11658,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 49,
+   "W": 3.5,
+   "D": 4.9,
+   "guardias": 8,
+   "objetos": 12,
+   "distintos": 8,
+   "hash": "14680277",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 3
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.86,
+     "libre_m2": 7.86
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8792,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 50,
+   "W": 6.2,
+   "D": 2.8,
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "d98c3331",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.2,
+     "libre_m2": 8.2
+    }
+   },
+   "luz": {
+    "estancia": 0.135
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9398,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 51,
+   "W": 3.5,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 6,
+   "distintos": 6,
+   "hash": "1125f6b6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 2
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.66,
+     "libre_m2": 3.66
+    }
+   },
+   "luz": {
+    "estancia": 0.105
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4952,
+   "mallas": 9,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 52,
+   "W": 4.1,
+   "D": 3.4,
+   "guardias": 5,
+   "objetos": 9,
+   "distintos": 7,
+   "hash": "4b777306",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 2
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.85,
+     "libre_m2": 6.85
+    }
+   },
+   "luz": {
+    "estancia": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8744,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 53,
+   "W": 3.5,
+   "D": 3.4,
+   "guardias": 4,
+   "objetos": 9,
+   "distintos": 8,
+   "hash": "d89b3dc6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.48,
+     "libre_m2": 5.48
+    }
+   },
+   "luz": {
+    "estancia": 0.085
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7652,
+   "mallas": 9,
+   "luces": 1,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 54,
+   "W": 5.9,
+   "D": 4.6,
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "7f6fb076",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.27,
+     "libre_m2": 15.27
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12514,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 55,
+   "W": 5.9,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "94752e94",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.53,
+     "libre_m2": 10.53
+    }
+   },
+   "luz": {
+    "estancia": 0.122
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11950,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 56,
+   "W": 4.4,
+   "D": 3.4,
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 9,
+   "hash": "301a8ef8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.09,
+     "libre_m2": 6.09
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9252,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 57,
+   "W": 5.9,
+   "D": 3.4,
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "8b749654",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.87,
+     "libre_m2": 8.87
+    }
+   },
+   "luz": {
+    "estancia": 0.122
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12046,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 58,
+   "W": 4.7,
+   "D": 3.1,
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 9,
+   "hash": "b1bc19d9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.78,
+     "libre_m2": 5.78
+    }
+   },
+   "luz": {
+    "estancia": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9468,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 59,
+   "W": 6.5,
+   "D": 3.1,
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "e0cf384d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.82,
+     "libre_m2": 9.84
+    }
+   },
+   "luz": {
+    "estancia": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12062,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 60,
+   "W": 5.300000000000001,
+   "D": 3.1,
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "a2b31ba",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.27,
+     "libre_m2": 7.27
+    }
+   },
+   "luz": {
     "estancia": 0.139
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8994,
+   "triangulos": 8022,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4955,16 +4575,16 @@
    "seed": 61,
    "W": 4.4,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 18,
-   "hash": "72fdeb2b",
+   "guardias": 7,
+   "objetos": 12,
+   "distintos": 9,
+   "hash": "8c5eeae9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -4974,22 +4594,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -4998,25 +4608,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.4,
-     "libre_m2": 6.4
+     "alcanzable_m2": 6.56,
+     "libre_m2": 6.56
     }
    },
    "luz": {
@@ -5024,11 +4634,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4172,
+   "triangulos": 9500,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.938
   },
   {
    "kit": "vivienda_trastero",
@@ -5036,16 +4646,16 @@
    "seed": 62,
    "W": 7.1,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 34,
-   "distintos": 20,
-   "hash": "f682d89b",
+   "guardias": 8,
+   "objetos": 14,
+   "distintos": 10,
+   "hash": "7929b430",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5055,22 +4665,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5079,25 +4684,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.69,
-     "libre_m2": 7.69
+     "alcanzable_m2": 8.09,
+     "libre_m2": 8.09
     }
    },
    "luz": {
@@ -5105,7 +4710,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6834,
+   "triangulos": 9834,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5117,16 +4722,16 @@
    "seed": 63,
    "W": 3.5,
    "D": 3.7,
-   "guardias": 7,
-   "objetos": 33,
-   "distintos": 19,
-   "hash": "e2795dcc",
+   "guardias": 5,
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "a18aba77",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5136,22 +4741,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -5160,20 +4755,20 @@
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.94,
-     "libre_m2": 5.94
+     "alcanzable_m2": 5.85,
+     "libre_m2": 5.85
     }
    },
    "luz": {
@@ -5181,7 +4776,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5996,
+   "triangulos": 8164,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5193,16 +4788,16 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.8,
-   "guardias": 7,
-   "objetos": 37,
-   "distintos": 19,
-   "hash": "15654918",
+   "guardias": 5,
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "d6d1910f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5212,22 +4807,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -5236,20 +4821,20 @@
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 28
+     "n": 6
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.86,
-     "libre_m2": 5.86
+     "alcanzable_m2": 6.15,
+     "libre_m2": 6.15
     }
    },
    "luz": {
@@ -5257,7 +4842,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6188,
+   "triangulos": 8904,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5269,16 +4854,16 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.7,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 22,
-   "hash": "20b6116b",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "b7e24909",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5288,22 +4873,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5318,24 +4903,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.1,
-     "libre_m2": 16.1
+     "alcanzable_m2": 15.87,
+     "libre_m2": 15.87
     }
    },
    "luz": {
@@ -5343,7 +4923,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6810,
+   "triangulos": 11122,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5355,16 +4935,16 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.6,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 19,
-   "hash": "5654f292",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 13,
+   "hash": "146c28",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5374,22 +4954,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5404,24 +4984,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 26
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.07,
-     "libre_m2": 16.07
+     "alcanzable_m2": 15.58,
+     "libre_m2": 15.58
     }
    },
    "luz": {
@@ -5429,11 +5004,11 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3610,
+   "triangulos": 13078,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.941
   },
   {
    "kit": "vivienda_trastero",
@@ -5441,16 +5016,16 @@
    "seed": 67,
    "W": 5.6,
    "D": 4.9,
-   "guardias": 10,
-   "objetos": 39,
-   "distintos": 18,
-   "hash": "a1a099db",
+   "guardias": 9,
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "ceff4c04",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5460,22 +5035,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5490,24 +5065,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 28
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.9,
-     "libre_m2": 15.9
+     "alcanzable_m2": 15.62,
+     "libre_m2": 15.62
     }
    },
    "luz": {
@@ -5515,7 +5085,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8238,
+   "triangulos": 12186,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5527,16 +5097,16 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 32,
-   "distintos": 18,
-   "hash": "ad0d297f",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 9,
+   "hash": "60d79c64",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5546,22 +5116,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5570,25 +5135,25 @@
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
+     "n": 4
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.15,
-     "libre_m2": 7.15
+     "alcanzable_m2": 6.4,
+     "libre_m2": 6.4
     }
    },
    "luz": {
@@ -5596,7 +5161,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4642,
+   "triangulos": 8026,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5608,16 +5173,16 @@
    "seed": 69,
    "W": 7.7,
    "D": 4,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 21,
-   "hash": "888357d4",
+   "guardias": 9,
+   "objetos": 21,
+   "distintos": 14,
+   "hash": "8a795cb8",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5627,22 +5192,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5657,24 +5222,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.32,
-     "libre_m2": 18.32
+     "alcanzable_m2": 17.93,
+     "libre_m2": 17.93
     }
    },
    "luz": {
@@ -5682,7 +5242,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8234,
+   "triangulos": 11922,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5694,16 +5254,16 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 4,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 20,
-   "hash": "aeb42783",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "12bbfc13",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5713,22 +5273,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5743,24 +5303,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.32,
-     "libre_m2": 11.32
+     "alcanzable_m2": 10.27,
+     "libre_m2": 10.27
     }
    },
    "luz": {
@@ -5768,7 +5323,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8822,
+   "triangulos": 12030,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5780,16 +5335,16 @@
    "seed": 71,
    "W": 5,
    "D": 4,
-   "guardias": 10,
-   "objetos": 36,
-   "distintos": 20,
-   "hash": "99d83462",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "38a61bde",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5799,22 +5354,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5829,24 +5384,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.42,
-     "libre_m2": 9.42
+     "alcanzable_m2": 9.61,
+     "libre_m2": 9.61
     }
    },
    "luz": {
@@ -5854,7 +5404,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7336,
+   "triangulos": 12336,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5866,16 +5416,16 @@
    "seed": 72,
    "W": 7.7,
    "D": 3.1,
-   "guardias": 10,
-   "objetos": 37,
-   "distintos": 18,
-   "hash": "390145cc",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "c1748152",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5885,22 +5435,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -5915,24 +5465,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.58,
-     "libre_m2": 12.58
+     "alcanzable_m2": 11.67,
+     "libre_m2": 11.71
     }
    },
    "luz": {
@@ -5940,7 +5485,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8014,
+   "triangulos": 12822,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5952,16 +5497,16 @@
    "seed": 73,
    "W": 3.5,
    "D": 4.9,
-   "guardias": 9,
-   "objetos": 35,
-   "distintos": 17,
-   "hash": "81be9621",
+   "guardias": 8,
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "ff98d506",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -5971,103 +5516,17 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 25
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.45,
-     "libre_m2": 7.45
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7488,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_trastero",
-   "tipologia": "otra_estancia",
-   "seed": 74,
-   "W": 6.5,
-   "D": 4.6,
-   "guardias": 10,
-   "objetos": 35,
-   "distintos": 19,
-   "hash": "f802321c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
      "n": 1
     },
     {
@@ -6082,24 +5541,100 @@
     },
     {
      "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 4
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.07,
+     "libre_m2": 8.07
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8604,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "vivienda_trastero",
+   "tipologia": "otra_estancia",
+   "seed": 74,
+   "W": 6.5,
+   "D": 4.6,
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "6b3d586c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 1,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 23
+     "entrada": 2,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 3,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_utiles_guardados",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.04,
-     "libre_m2": 18.05
+     "alcanzable_m2": 17.79,
+     "libre_m2": 17.79
     }
    },
    "luz": {
@@ -6107,7 +5642,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7706,
+   "triangulos": 12830,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6119,16 +5654,16 @@
    "seed": 75,
    "W": 7.4,
    "D": 4.3,
-   "guardias": 10,
-   "objetos": 36,
-   "distintos": 18,
-   "hash": "8f2147c5",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 12,
+   "hash": "9bf9e88a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6138,22 +5673,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6168,24 +5703,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 24
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.56,
-     "libre_m2": 19.56
+     "alcanzable_m2": 19.09,
+     "libre_m2": 19.09
     }
    },
    "luz": {
@@ -6193,7 +5723,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6078,
+   "triangulos": 12006,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6205,16 +5735,16 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.8,
-   "guardias": 7,
-   "objetos": 31,
-   "distintos": 20,
-   "hash": "c6876244",
+   "guardias": 5,
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "5a2dfa85",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6224,22 +5754,12 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
@@ -6248,20 +5768,20 @@
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 8,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
+     "n": 5
     },
     {
-     "entrada": 10,
+     "entrada": 9,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.2,
-     "libre_m2": 6.2
+     "alcanzable_m2": 6.08,
+     "libre_m2": 6.08
     }
    },
    "luz": {
@@ -6269,7 +5789,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 6212,
+   "triangulos": 9168,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -6281,16 +5801,16 @@
    "seed": 77,
    "W": 7.4,
    "D": 4.9,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 19,
-   "hash": "5167fa7d",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "48c4ff5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6300,22 +5820,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6330,24 +5850,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 23.37,
-     "libre_m2": 23.37
+     "alcanzable_m2": 23.07,
+     "libre_m2": 23.07
     }
    },
    "luz": {
@@ -6355,7 +5870,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7958,
+   "triangulos": 13090,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6367,16 +5882,16 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.8,
-   "guardias": 10,
-   "objetos": 33,
-   "distintos": 20,
-   "hash": "4dce357",
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 11,
+   "hash": "9db93cf3",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6386,22 +5901,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6416,24 +5931,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 21
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.27,
-     "libre_m2": 8.27
+     "alcanzable_m2": 8.2,
+     "libre_m2": 8.2
     }
    },
    "luz": {
@@ -6441,7 +5951,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7114,
+   "triangulos": 12354,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6453,16 +5963,16 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.7,
-   "guardias": 10,
-   "objetos": 33,
-   "distintos": 19,
-   "hash": "c5dfe297",
+   "guardias": 9,
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "15cbc463",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6472,22 +5982,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6502,24 +6012,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 5
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 21
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.79,
-     "libre_m2": 13.79
+     "alcanzable_m2": 13.48,
+     "libre_m2": 13.48
     }
    },
    "luz": {
@@ -6527,7 +6032,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5306,
+   "triangulos": 12502,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6539,16 +6044,16 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.6,
-   "guardias": 10,
-   "objetos": 39,
-   "distintos": 17,
-   "hash": "92f8724c",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 11,
+   "hash": "bc9d1ba7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6558,22 +6063,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6588,24 +6093,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 27
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.32,
-     "libre_m2": 20.32
+     "alcanzable_m2": 19.88,
+     "libre_m2": 19.88
     }
    },
    "luz": {
@@ -6613,7 +6113,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7770,
+   "triangulos": 11350,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6625,16 +6125,16 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.4,
-   "guardias": 10,
-   "objetos": 34,
-   "distintos": 17,
-   "hash": "a3ed05a2",
+   "guardias": 9,
+   "objetos": 19,
+   "distintos": 12,
+   "hash": "180ecc29",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
@@ -6644,22 +6144,22 @@
     },
     {
      "entrada": 2,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_utiles_guardados",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante",
+     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -6674,24 +6174,19 @@
     },
     {
      "entrada": 8,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 8
     },
     {
      "entrada": 9,
-     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
-     "n": 22
-    },
-    {
-     "entrada": 10,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.67,
-     "libre_m2": 13.67
+     "alcanzable_m2": 12.74,
+     "libre_m2": 12.74
     }
    },
    "luz": {
@@ -6699,7 +6194,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7190,
+   "triangulos": 13750,
    "mallas": 10,
    "luces": 3,
    "determinista": true,

@@ -97,6 +97,8 @@ def objetos():
     jab=muebles['va_jabonera'];jab['partes']=[cil(.06,.055,.022,c='#afa88e',m='ceramica'),caja(.075,.025,.048,y=.034,c='#d6c49e',m='comida')]
     out.append(objeto('va_alfombrilla_bano','Alfombrilla de algodón del lavabo',.65,.014,.43,None,.4,'tela',partes=[caja(.65,.012,.43,c='#536f72',m='tela'),caja(.58,.002,.36,y=.013,c='#72918f',m='tela')],categoria='decoracion'))
     mejorar_bano_taller(out)
+    from composicion_domestica import mejorar_almacen
+    mejorar_almacen(out)
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_a',objetos())

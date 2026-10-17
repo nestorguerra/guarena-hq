@@ -26,8 +26,9 @@ def generar():
     taller=[pared(bancos,area_max=10.499),pared([id+'_amplio' for id in bancos],area_min=10.5),junto('va_estante_taller',todos_bancos,True),pared('va_cajas_apiladas',False),pared('va_estante_taller',False,area_min=12),E('sobre',sueltos,en=todos_bancos,por_soporte=[1,2])]+adornos(herramientas,['va_estante_taller'])
     kit('taller','Taller doméstico de bricolaje','otra_estancia',taller,mood['taller'],fondo=(2.5,5))
     almacen= herramientas+['caja_carton','caja_archivo','vb_cesto','vb_ropa','vb_colcha']
-    trastero=[pared('va_estante_alto'),pared('va_cajas_apiladas'),pared('va_cajas_apiladas',False),pared('va_estante_alto',False),pared('va_cajas_apiladas',False,area_min=12),pared('va_estante',False),pared('va_caja_almacen',False,area_min=12),pared('va_cajas_apiladas',False,area_min=18),E('suelo_libre','va_cajas_apiladas',cantidad=[1,1],obligatorio=True,area_min=14)]+adornos(almacen,['va_estante','va_estante_alto'])
-    trastero[-2]['por_soporte']=[10,16]
+    estantes=['va_estante_trastero_0','va_estante_trastero_1','va_estante_trastero_2']
+    trastero=[pared(estantes),junto('va_cajas_apiladas',estantes,True),pared(estantes,area_min=10),pared(estantes,False,area_min=18),pared('va_utiles_guardados',False),pared('va_cajas_apiladas',False,area_min=16),pared('va_caja_almacen',False,area_min=12),E('suelo_libre','va_cajas_apiladas',cantidad=[1,1],obligatorio=True,area_min=14)]+adornos(almacen,estantes)
+    trastero[-2]['por_soporte']=[2,4]
     kit('trastero','Trastero de la vivienda','otra_estancia',trastero,mood['trastero'],fondo=(2.5,5))
     telas=[k for k,o in C.items() if o['soporte']=='superficie' and k.startswith(('va_hilo','va_tela','pila_camiseta','pila_pantalon','pila_jersey'))]+['va_tijeras','va_cinta_metrica','va_alfiletero','va_botones','va_agujas','va_patrones','va_dedal','va_retales','va_bastidor','va_cierre','va_caja_hilos','va_ovillo','vb_colcha','vb_ropa','vb_cesto','lampara_mesa']
     costura=[pared('va_costura'),junto('silla_comedor','va_costura',True,lados=['frente'],mira_ref=True),pared('va_estante'),pared('vb_armario',False),pared('sillon_orejero',False,area_min=14),E('pared',['cuadro_paisaje','fotos_familia'],pared='*',cantidad=[1,2])]+adornos(telas,['va_estante','va_costura'])

@@ -142,18 +142,22 @@ function textura(tex, seed) {
 
 // ---------------------------------------------------------------- a batch of placed objects → meshes
 const MATS = {};
-function mat(f) {
-  if (MATS[f]) return MATS[f];
-  return (MATS[f] = f === 'metal' ? new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.38, metalness: 0.55 })
+const ACABADO_DOMESTICO={CLAY_TONE:.14,CLAY_CAV:.02,CLAY_RELIEF:.32,CLAY_AMP:.0008};
+function mat(f, domestico) {
+  const key=(domestico?'casa:':'')+f;
+  if (MATS[key]) return MATS[key];
+  const material = f === 'metal' ? new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.38, metalness: 0.55 })
     : f === 'cristal' ? new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.08, metalness: 0.1, transparent: true, opacity: 0.45, depthWrite: false })
       : f.startsWith('luz') ? new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.4, emissive: new THREE.Color(f.slice(4) || '#ffffff'), emissiveIntensity: 0.9 }) // (it glows its own colour: a bulb white, a screen blue, a pilot red)
-        : new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78, metalness: 0 }));
+        : new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78, metalness: 0 });
+  if(domestico)material.defines={...ACABADO_DOMESTICO};
+  return MATS[key]=material;
 }
 const _c = new THREE.Color();
 // items: [{ obj, x, y, z, ry, seed, paleta? }] in world metres → THREE.Group. paleta (a house's style): { tela, madera }
 // colour the parts marked tinte 'tela' (one of the fabrics, the same for all of a piece) or 'madera'. A part marked aparte
 // is a mesh of its own (the telly's screen, switched on and off): group.userData.aparte = [{ i (the item), mesh }]
-export function construir(items) {
+export function construir(items, {domestico=false}={}) {
   const bins = { mate: [], metal: [], cristal: [] }, extra = [], aparte = [];
   const M = new THREE.Matrix4(), Q = new THREE.Quaternion(), S = new THREE.Vector3(1, 1, 1), P = new THREE.Vector3(), Y = new THREE.Vector3(0, 1, 0);
   for (const [ii, it] of items.entries()) {
@@ -165,7 +169,7 @@ export function construir(items) {
         const t = textura(it.titulo && p.tex.rotulo_local ? { ...p.tex, titulo: it.titulo } : p.tex, it.seed || 1); // (a sign of the business: its own name)
         if (t) {
           const g = parteGeo(p); g.applyMatrix4(M);
-          const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ map: t, roughness: 0.7, alphaTest: RECORTE.has(p.tex.tipo) ? 0.5 : 0, emissive: p.luz ? 0xffffff : 0x000000, emissiveMap: p.luz ? t : null, emissiveIntensity: p.luz ? 0.5 : 0, side: p.f === 'plano' ? THREE.FrontSide : THREE.FrontSide }));
+          const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ map: t, roughness: 0.7, alphaTest: RECORTE.has(p.tex.tipo) ? 0.5 : 0, emissive: p.luz ? 0xffffff : 0x000000, emissiveMap: p.luz ? t : null, emissiveIntensity: p.luz ? 0.5 : 0, side: THREE.FrontSide, ...(domestico?{defines:{...ACABADO_DOMESTICO}}:{}) }));
           m.castShadow = false; m.receiveShadow = true; extra.push(m);
           continue;
         }
@@ -190,7 +194,7 @@ export function construir(items) {
   const group = new THREE.Group();
   for (const [f, list] of Object.entries(bins)) {
     if (!list.length) continue;
-    const m = new THREE.Mesh(mergeGeometries(list, false), mat(f));
+    const m = new THREE.Mesh(mergeGeometries(list, false), mat(f,domestico));
     m.castShadow = f !== 'cristal' && !f.startsWith('luz'); m.receiveShadow = true;
     group.add(m);
   }

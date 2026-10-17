@@ -45,7 +45,7 @@ export function amueblarAnnie(B, seed, segs0, segs1) {
     };
     B.segs=s.lv?segs1:segs0;
     const items=A.P.map((p,i)=>({obj:p.obj,x:B.ox+ox+p.x,y:y+(p.y||0),z:B.oz+oz+p.z,ry:p.ry,seed:seed+ri*97+i,paleta:{madera:'#b58d70',tela:['#a9bdc9','#d6a5b5','#d2c7ad']}}));
-    const g=construir(items);B.extra.push(g);
+    const g=construir(items,{domestico:true});B.extra.push(g);
     for(const [i,p] of A.P.entries()){
       const o=OBJETOS[p.obj],bb=caja(p.obj);
       if(p.sop==null&&!['pared','techo'].includes(p.regla)&&o.clase!=='PICKUP'&&bb.h>=.3){const [dx,dz]=rot((bb.x0+bb.x1)/2,(bb.z0+bb.z1)/2,p.ry);B.footprint(bb.w,bb.d,ox+p.x+dx,oz+p.z+dz,p.ry,Math.min(bb.h,2.2));}

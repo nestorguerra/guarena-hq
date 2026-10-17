@@ -47,6 +47,8 @@ def objetos():
     osito.append(dict(f='esfera',d=[.013],p=[0,.203,.053],c='#6f5648',m='tela'))
     out.append(objeto('vb_osito','Osito de peluche',.18,.28,.14,None,.25,'tela',partes=osito,soporte='superficie',categoria='decoracion'))
     out.append(objeto('vb_bloques','Bloques de construcción de colores',.22,.13,.17,None,.35,'madera',partes=[caja(.07,.07,.07,x=-.07,y=.035,c='#ba645c'),caja(.07,.12,.07,y=.06,c='#799aaa'),caja(.07,.07,.07,x=.07,y=.035,c='#bda15f')],soporte='superficie',categoria='decoracion'))
+    from composicion_domestica import mejorar_despacho
+    mejorar_despacho(out)
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())

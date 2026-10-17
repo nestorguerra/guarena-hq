@@ -24,7 +24,12 @@ def generar():
     for id,nombre in [('estudio','Estudio para leer y trabajar'),('despacho','Despacho doméstico')]:
         p=[pared('vb_escritorio'),junto('silla_comedor','vb_escritorio',True,lados=['frente'],mira_ref=True),pared('estanteria_libros'),pared('vb_comoda',False),pared('sillon_orejero',False,area_min=11),pared('estanteria_libros',False,area_min=16),E('pared',['cuadro_paisaje','fotos_familia','poster_enmarcado'],pared='*',cantidad=[1,3]),E('sobre','vb_ordenador',en=['vb_escritorio'],cantidad=[1,1])]
         if id=='despacho':p += [pared('caja_fuerte_pequena',botin='cajaFuerte')]
-        p+=adornos(papeles,['vb_escritorio','vb_comoda','estanteria_libros'])
+        if id=='despacho':
+            mesas=['vb_mesa_despacho_0','vb_mesa_despacho_1','vb_mesa_despacho_2']
+            p[0]=pared(mesas);p[1]=junto('vb_silla_despacho',mesas,True,lados=['frente'],mira_ref=True)
+            p[-2]=E('sobre','vb_ordenador',en=mesas,cantidad=[1,1])
+            p += [junto('vb_mesa_lectura','sillon_orejero',lados=['derecha','izquierda']),E('suelo_libre','vb_alfombra',cantidad=[0,1],preferir=True,area_min=13)]
+        p+=adornos([x for x in papeles if x!='vb_ordenador'] if id=='despacho' else papeles,(mesas if id=='despacho' else ['vb_escritorio'])+['vb_comoda','estanteria_libros'])
         kit(id,nombre,'otra_estancia',p,mood[id],fondo=(2.1,5))
     musica=[pared('piano_pared'),junto('banqueta_piano','piano_pared',lados=['frente'],mira_ref=True),pared('guitarra_soporte'),pared('guitarra_soporte',False,botin='guitarra'),pared('vb_altavoz'),pared('vb_altavoz',False,botin='altavoz'),pared('estanteria_libros',False),pared('vb_escritorio',False),E('sobre','vb_vinilos',en=['vb_escritorio'],cantidad=[0,1],botin='vinilos'),E('pared',['poster_enmarcado','cuadro_paisaje'],pared='*',cantidad=[1,3])]+adornos(papeles+['vb_vinilos','vb_partituras','vb_auriculares','vb_metronomo'],['vb_escritorio','estanteria_libros'])
     kit('musica','Cuarto de música','otra_estancia',musica,mood['musica'],fondo=(2.1,5))

@@ -25,3 +25,11 @@ Se completan las dos salas iniciales con cantos redondeados opcionales, bañera 
 Las cámaras documentan uso y conjunto a altura de jugador. Una primera ficha no mostraba el WC del baño 2786; se conserva su evaluación en historico/calidad_tanda2_cobertura_parcial. La cámara secundaria apunta ahora al conjunto sanitario, sin cambiar las semillas. El revisor independiente confirma que ya puede examinarlo. La mejora de cobertura también afecta a las notas: no se atribuye al mobiliario toda la variación.
 
 Resultado final: taller A/B 3,154/3,218; baño A/B 3,036/2,854. Ninguno llega a 4. Pasan 23 contratos, 200 casas/1166 habitaciones y 81 distribuciones de cada kit, además de juego fuente, paquete y control de marcas. Máximos: 56190 triángulos, 59 mallas, nueve luces y 158,5 ms. Regeneración determinista sin diferencias. Publicación de prueba autorizada por tanda; el commit y la revisión pública se registran tras publicarse.
+
+Tanda 2 publicada y verificada: commit 6a214fb, validación 39046360726 y Pages 39046553694 en verde. La integración pública relee ese commit, entra en casas y comercios y conserva caja, siesta y partida ficticia tras recargar, sin errores.
+
+## Tanda 3: trastero y despacho
+
+El trastero incorpora estanterías de tamaño doméstico con cajas, maletas, textiles y archivos integrados, útiles largos y almacenaje adaptado al área. El despacho incorpora mesas con cajonera y lámpara, silla tapizada y rincón de lectura. Suelos y revestimientos reducen los estampados dominantes. Los muebles por kit de todas las casas usan un relieve artesanal más contenido; este cambio compartido requiere reevaluar las otras fichas antes de atribuirles calidad de la versión actual.
+
+Las mismas semillas muestran uso y conjunto, a altura de jugador. Resultado: trastero A/B 3,082/2,894; despacho 3,322/3,304. Continúan por debajo de 4. El revisor independiente considera suficiente la cobertura de estas muestras, sin defecto importante nuevo; señala contraste de blancos, repetición y ajuste visual del despacho 2665. Las imágenes no certifican colisiones ni acceso, que se comprueban por separado. Las pruebas y sus máximos exactos quedan en validacion/calidad_tanda3.json. Pendiente registrar publicación una vez servida.

@@ -1079,7 +1079,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const cxz = L((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2), frente = L((b.x0 + b.x1) / 2, b.z1 + 0.5);
       const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
       if (deBotin.has(i)) {
-        const g = construir([it]); B.extra.push(g);
+        const g = construir([it],{domestico:true}); B.extra.push(g);
         const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95,sala:rm.id }); // (its storey by the floor it is on, not by how high it hangs)
         if (li && li.def.crack) li.label = 'Forzar la caja fuerte';
         return;
@@ -1169,7 +1169,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   }
   // the rooms furnished from their kits: built together (a mesh per material); the tellies get their screens
   if (enCasa.length) {
-    const g = construir(enCasa);
+    const g = construir(enCasa,{domestico:true});
     B.extra.push(g);
     for (const q of pendientes) { const a = g.userData.aparte.find((x) => x.i === q.i); if (a) q.fn(a.mesh); }
   }

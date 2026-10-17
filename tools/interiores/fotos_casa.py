@@ -39,7 +39,7 @@ JS = r'''(async () => {
     const vistas=[];
     for (const [k, f] of [[0, 0.12], [1, 0.88]]) {
       let x = rm.x0 + (rm.x1 - rm.x0) * f, z = rm.z0 + (rm.z1 - rm.z0) * f;
-      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo'))));
+      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo')||p.obj.startsWith('vb_mesa_despacho')||p.obj.startsWith('va_estante_trastero'))));
       const hitos=(est?.colocados||[]).filter(p=>p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>.28).map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry),y:y+Math.min(b.h*.65,1.25),w:b.w,peso:Math.min(2,b.w*b.h)+(['va_banco','va_lavabo'].includes(p.obj)?1.5:0)};});
       const suma=hitos.reduce((a,p)=>a+p.peso,0)||1;
       // El segundo ángulo del baño debe documentar la zona húmeda, también en

@@ -32,7 +32,11 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "vb_escritorio",
+   "variantes": [
+    "vb_mesa_despacho_0",
+    "vb_mesa_despacho_1",
+    "vb_mesa_despacho_2"
+   ],
    "pared": "*",
    "cantidad": [
     1,
@@ -44,8 +48,12 @@
   {
    "zona": "estancia",
    "regla": "junto_a",
-   "obj": "silla_comedor",
-   "de": "vb_escritorio",
+   "obj": "vb_silla_despacho",
+   "de": [
+    "vb_mesa_despacho_0",
+    "vb_mesa_despacho_1",
+    "vb_mesa_despacho_2"
+   ],
    "cantidad": [
     1,
     1
@@ -126,7 +134,9 @@
    "regla": "sobre",
    "obj": "vb_ordenador",
    "en": [
-    "vb_escritorio"
+    "vb_mesa_despacho_0",
+    "vb_mesa_despacho_1",
+    "vb_mesa_despacho_2"
    ],
    "cantidad": [
     1,
@@ -145,6 +155,33 @@
    "obligatorio": true,
    "preferir": true,
    "botin": "cajaFuerte"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_mesa_lectura",
+   "de": "sillon_orejero",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "lados": [
+    "derecha",
+    "izquierda"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "vb_alfombra",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 13
   },
   {
    "zona": "estancia",
@@ -194,12 +231,13 @@
     "lampara_mesa",
     "vb_cuaderno",
     "vb_despertador",
-    "vb_ordenador",
     "movil",
     "cartera"
    ],
    "en": [
-    "vb_escritorio",
+    "vb_mesa_despacho_0",
+    "vb_mesa_despacho_1",
+    "vb_mesa_despacho_2",
     "vb_comoda",
     "estanteria_libros"
    ],

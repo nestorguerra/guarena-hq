@@ -91,21 +91,21 @@
    "seed": 1,
    "W": 6.2,
    "D": 4.2,
-   "guardias": 6,
-   "objetos": 37,
-   "distintos": 28,
-   "hash": "29e49133",
+   "guardias": 9,
+   "objetos": 39,
+   "distintos": 26,
+   "hash": "6db58420",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -131,7 +131,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -140,19 +140,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 24
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.28,
-     "libre_m2": 16.28
+     "alcanzable_m2": 15.06,
+     "libre_m2": 15.06
     }
    },
    "luz": {
@@ -160,8 +170,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4554,
-   "mallas": 21,
+   "triangulos": 7002,
+   "mallas": 15,
    "luces": 3,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -183,21 +193,21 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 23,
-   "distintos": 20,
-   "hash": "11bf3923",
+   "guardias": 6,
+   "objetos": 24,
+   "distintos": 21,
+   "hash": "17b14612",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -218,7 +228,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -227,19 +237,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 13
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.18,
-     "libre_m2": 6.18
+     "alcanzable_m2": 5,
+     "libre_m2": 5
     }
    },
    "luz": {
@@ -247,8 +267,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2852,
-   "mallas": 16,
+   "triangulos": 5604,
+   "mallas": 12,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -272,20 +292,20 @@
    "W": 5,
    "D": 2.1,
    "guardias": 4,
-   "objetos": 25,
-   "distintos": 23,
-   "hash": "345d8b2a",
+   "objetos": 24,
+   "distintos": 20,
+   "hash": "8a926ab9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -310,19 +330,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.15,
-     "libre_m2": 4.15
+     "alcanzable_m2": 3.09,
+     "libre_m2": 3.09
     }
    },
    "luz": {
@@ -330,8 +355,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2454,
-   "mallas": 15,
+   "triangulos": 5134,
+   "mallas": 17,
    "luces": 2,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -355,21 +380,21 @@
    "seed": 4,
    "W": 4.4,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 37,
-   "distintos": 26,
-   "hash": "c51eda6a",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 30,
+   "hash": "9115ee04",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -395,7 +420,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -404,19 +429,29 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 26
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.83,
-     "libre_m2": 11.83
+     "alcanzable_m2": 11.5,
+     "libre_m2": 11.5
     }
    },
    "luz": {
@@ -424,8 +459,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3708,
-   "mallas": 18,
+   "triangulos": 7342,
+   "mallas": 17,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -448,21 +483,21 @@
    "seed": 5,
    "W": 6.5,
    "D": 4.2,
-   "guardias": 6,
-   "objetos": 36,
-   "distintos": 24,
-   "hash": "bbc01cec",
+   "guardias": 9,
+   "objetos": 41,
+   "distintos": 26,
+   "hash": "82815b84",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -488,7 +523,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -497,19 +532,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 23
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.98,
-     "libre_m2": 16.98
+     "alcanzable_m2": 16.04,
+     "libre_m2": 16.04
     }
    },
    "luz": {
@@ -517,7 +562,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3356,
+   "triangulos": 7016,
    "mallas": 16,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -541,21 +586,21 @@
    "seed": 6,
    "W": 3.5,
    "D": 3.9,
-   "guardias": 5,
-   "objetos": 23,
-   "distintos": 20,
-   "hash": "9724ce0",
+   "guardias": 6,
+   "objetos": 25,
+   "distintos": 21,
+   "hash": "131d3093",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -585,19 +630,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 14
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.98,
-     "libre_m2": 5.98
+     "alcanzable_m2": 5.33,
+     "libre_m2": 5.33
     }
    },
    "luz": {
@@ -605,8 +660,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3076,
-   "mallas": 14,
+   "triangulos": 6122,
+   "mallas": 13,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -632,18 +687,18 @@
    "guardias": 5,
    "objetos": 27,
    "distintos": 23,
-   "hash": "b139ddb2",
+   "hash": "72e4f371",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -659,7 +714,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -673,19 +728,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
+     "obj": "vb_mesa_lectura",
+     "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 18
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.73,
-     "libre_m2": 3.73
+     "alcanzable_m2": 2.72,
+     "libre_m2": 2.72
     }
    },
    "luz": {
@@ -693,8 +753,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2510,
-   "mallas": 19,
+   "triangulos": 5042,
+   "mallas": 13,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -718,21 +778,21 @@
    "seed": 8,
    "W": 5.9,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 31,
-   "distintos": 24,
-   "hash": "556eccef",
+   "guardias": 9,
+   "objetos": 40,
+   "distintos": 26,
+   "hash": "ec4eb669",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -767,19 +827,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 20
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 27
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.31,
-     "libre_m2": 18.31
+     "alcanzable_m2": 17.32,
+     "libre_m2": 17.32
     }
    },
    "luz": {
@@ -787,8 +857,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4282,
-   "mallas": 17,
+   "triangulos": 7204,
+   "mallas": 14,
    "luces": 2,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -812,20 +882,20 @@
    "W": 4.1,
    "D": 2.1,
    "guardias": 4,
-   "objetos": 25,
-   "distintos": 18,
-   "hash": "1bf01026",
+   "objetos": 21,
+   "distintos": 17,
+   "hash": "f2d0450c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -850,19 +920,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 17
+     "obj": "vb_mesa_lectura",
+     "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 13
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.17,
-     "libre_m2": 3.17
+     "alcanzable_m2": 2.45,
+     "libre_m2": 2.45
     }
    },
    "luz": {
@@ -870,8 +945,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2186,
-   "mallas": 13,
+   "triangulos": 4476,
+   "mallas": 12,
    "luces": 2,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
@@ -893,21 +968,21 @@
    "seed": 10,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
-   "objetos": 23,
-   "distintos": 18,
-   "hash": "aea45865",
+   "guardias": 6,
+   "objetos": 28,
+   "distintos": 24,
+   "hash": "9cbfe889",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -928,7 +1003,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -937,19 +1012,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 14
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.38,
-     "libre_m2": 4.38
+     "alcanzable_m2": 3.2,
+     "libre_m2": 3.2
     }
    },
    "luz": {
@@ -957,8 +1037,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2764,
-   "mallas": 13,
+   "triangulos": 6370,
+   "mallas": 16,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -981,21 +1061,21 @@
    "seed": 11,
    "W": 5,
    "D": 2.7,
-   "guardias": 5,
-   "objetos": 26,
-   "distintos": 19,
-   "hash": "79f88993",
+   "guardias": 8,
+   "objetos": 25,
+   "distintos": 22,
+   "hash": "7944ce50",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1025,19 +1105,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 17
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.85,
-     "libre_m2": 5.85
+     "alcanzable_m2": 5.05,
+     "libre_m2": 5.05
     }
    },
    "luz": {
@@ -1045,7 +1135,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2572,
+   "triangulos": 5596,
    "mallas": 14,
    "luces": 2,
    "hogar": "matrimonio · rustico",
@@ -1069,21 +1159,21 @@
    "seed": 12,
    "W": 6.2,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 24,
-   "hash": "4ab96c9f",
+   "guardias": 9,
+   "objetos": 42,
+   "distintos": 28,
+   "hash": "76f3850e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1118,19 +1208,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.34,
-     "libre_m2": 19.34
+     "alcanzable_m2": 18.17,
+     "libre_m2": 18.17
     }
    },
    "luz": {
@@ -1138,7 +1238,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3630,
+   "triangulos": 7518,
    "mallas": 15,
    "luces": 3,
    "hogar": "familia · alegre",
@@ -1163,21 +1263,21 @@
    "seed": 13,
    "W": 6.2,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 24,
-   "distintos": 20,
-   "hash": "7e20d80a",
+   "guardias": 6,
+   "objetos": 28,
+   "distintos": 23,
+   "hash": "e0ed1824",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1198,7 +1298,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 2
     },
     {
      "entrada": 7,
@@ -1207,19 +1307,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 14
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.6,
-     "libre_m2": 6.6
+     "alcanzable_m2": 5.34,
+     "libre_m2": 5.34
     }
    },
    "luz": {
@@ -1227,8 +1337,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2880,
-   "mallas": 12,
+   "triangulos": 5974,
+   "mallas": 17,
    "luces": 3,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -1243,7 +1353,7 @@
     "habitacion": "dorm"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.974
   },
   {
    "kit": "vivienda_despacho",
@@ -1251,21 +1361,21 @@
    "seed": 14,
    "W": 6.2,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 26,
-   "hash": "a371cc96",
+   "guardias": 7,
+   "objetos": 38,
+   "distintos": 28,
+   "hash": "986b595d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1300,29 +1410,39 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.91,
-     "libre_m2": 17.91
+     "alcanzable_m2": 16.68,
+     "libre_m2": 16.68
     }
    },
    "luz": {
-    "estancia": 0.075
+    "estancia": 0.085
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4628,
-   "mallas": 16,
-   "luces": 3,
+   "triangulos": 6930,
+   "mallas": 15,
+   "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
     "perfil": "cazador",
@@ -1336,7 +1456,7 @@
     "habitacion": "dorm"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.923
   },
   {
    "kit": "vivienda_despacho",
@@ -1344,21 +1464,21 @@
    "seed": 15,
    "W": 3.5,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 25,
-   "hash": "7a0225f0",
+   "guardias": 7,
+   "objetos": 38,
+   "distintos": 29,
+   "hash": "b6cffefd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1393,19 +1513,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.46,
-     "libre_m2": 8.46
+     "alcanzable_m2": 7.3,
+     "libre_m2": 7.3
     }
    },
    "luz": {
@@ -1413,7 +1543,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3410,
+   "triangulos": 7418,
    "mallas": 13,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -1437,21 +1567,21 @@
    "seed": 16,
    "W": 6.2,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 39,
-   "distintos": 27,
-   "hash": "4cba33f3",
+   "guardias": 8,
+   "objetos": 38,
+   "distintos": 28,
+   "hash": "5626b91c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1477,7 +1607,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 2
     },
     {
      "entrada": 7,
@@ -1491,19 +1621,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.72,
-     "libre_m2": 10.72
+     "alcanzable_m2": 9.77,
+     "libre_m2": 9.77
     }
    },
    "luz": {
@@ -1511,8 +1651,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4502,
-   "mallas": 13,
+   "triangulos": 7290,
+   "mallas": 15,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -1536,21 +1676,21 @@
    "seed": 17,
    "W": 6.2,
    "D": 2.7,
-   "guardias": 6,
-   "objetos": 40,
+   "guardias": 9,
+   "objetos": 38,
    "distintos": 28,
-   "hash": "c46e5082",
+   "hash": "8b416c4d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1585,19 +1725,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 23
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.88,
-     "libre_m2": 7.88
+     "alcanzable_m2": 6.87,
+     "libre_m2": 6.87
     }
    },
    "luz": {
@@ -1605,8 +1755,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4204,
-   "mallas": 20,
+   "triangulos": 6858,
+   "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · antiguo",
    "contexto_hogar": {
@@ -1629,21 +1779,21 @@
    "seed": 18,
    "W": 4.1,
    "D": 3.6,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 22,
-   "hash": "e570aab7",
+   "guardias": 7,
+   "objetos": 27,
+   "distintos": 24,
+   "hash": "4e128e44",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1673,19 +1823,29 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 14
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.16,
-     "libre_m2": 7.16
+     "alcanzable_m2": 6.17,
+     "libre_m2": 6.17
     }
    },
    "luz": {
@@ -1693,8 +1853,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2564,
-   "mallas": 16,
+   "triangulos": 5868,
+   "mallas": 18,
    "luces": 2,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -1716,21 +1876,21 @@
    "seed": 19,
    "W": 5.6,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 36,
-   "distintos": 22,
-   "hash": "614e011b",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 26,
+   "hash": "49419649",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1756,7 +1916,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -1765,19 +1925,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 25
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.22,
-     "libre_m2": 11.22
+     "alcanzable_m2": 10.61,
+     "libre_m2": 10.61
     }
    },
    "luz": {
@@ -1785,8 +1955,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3516,
-   "mallas": 18,
+   "triangulos": 7052,
+   "mallas": 22,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -1809,21 +1979,21 @@
    "seed": 20,
    "W": 6.2,
    "D": 3,
-   "guardias": 6,
-   "objetos": 41,
-   "distintos": 27,
-   "hash": "1c154198",
+   "guardias": 9,
+   "objetos": 40,
+   "distintos": 29,
+   "hash": "80c862b1",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1849,7 +2019,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 2
     },
     {
      "entrada": 7,
@@ -1858,19 +2028,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.85,
-     "libre_m2": 9.85
+     "alcanzable_m2": 8.82,
+     "libre_m2": 8.82
     }
    },
    "luz": {
@@ -1878,8 +2058,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4368,
-   "mallas": 18,
+   "triangulos": 7214,
+   "mallas": 13,
    "luces": 3,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -1902,21 +2082,21 @@
    "seed": 21,
    "W": 5.6,
    "D": 2.7,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 21,
-   "hash": "e3ca2fd8",
+   "guardias": 8,
+   "objetos": 31,
+   "distintos": 26,
+   "hash": "66c44682",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -1937,7 +2117,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -1946,19 +2126,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 18
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.3,
-     "libre_m2": 7.3
+     "alcanzable_m2": 6.39,
+     "libre_m2": 6.39
     }
    },
    "luz": {
@@ -1966,8 +2156,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2516,
-   "mallas": 16,
+   "triangulos": 5640,
+   "mallas": 18,
    "luces": 2,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -1991,21 +2181,21 @@
    "seed": 22,
    "W": 4.4,
    "D": 3,
-   "guardias": 5,
-   "objetos": 27,
-   "distintos": 22,
-   "hash": "38c6b30a",
+   "guardias": 8,
+   "objetos": 26,
+   "distintos": 21,
+   "hash": "f2d5ab9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2026,7 +2216,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -2035,19 +2225,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.94,
-     "libre_m2": 5.94
+     "alcanzable_m2": 5.35,
+     "libre_m2": 5.35
     }
    },
    "luz": {
@@ -2055,8 +2255,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2540,
-   "mallas": 16,
+   "triangulos": 5508,
+   "mallas": 12,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -2079,21 +2279,21 @@
    "seed": 23,
    "W": 4.4,
    "D": 3,
-   "guardias": 5,
-   "objetos": 24,
+   "guardias": 6,
+   "objetos": 23,
    "distintos": 19,
-   "hash": "6b764857",
+   "hash": "deb02479",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2123,19 +2323,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 13
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.26,
-     "libre_m2": 6.26
+     "alcanzable_m2": 5.24,
+     "libre_m2": 5.24
     }
    },
    "luz": {
@@ -2143,8 +2353,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2748,
-   "mallas": 12,
+   "triangulos": 5458,
+   "mallas": 11,
    "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -2167,21 +2377,21 @@
    "seed": 24,
    "W": 5.300000000000001,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 40,
-   "distintos": 25,
-   "hash": "f2d50bf5",
+   "guardias": 7,
+   "objetos": 37,
+   "distintos": 29,
+   "hash": "118732eb",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2216,19 +2426,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 30
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.36,
-     "libre_m2": 10.36
+     "alcanzable_m2": 9.14,
+     "libre_m2": 9.14
     }
    },
    "luz": {
@@ -2236,7 +2456,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3786,
+   "triangulos": 7398,
    "mallas": 15,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -2260,21 +2480,21 @@
    "seed": 25,
    "W": 7.7,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 38,
-   "distintos": 25,
-   "hash": "7c40b261",
+   "guardias": 10,
+   "objetos": 39,
+   "distintos": 31,
+   "hash": "83540f0e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2314,19 +2534,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 25
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.65,
-     "libre_m2": 14.65
+     "alcanzable_m2": 14.24,
+     "libre_m2": 14.24
     }
    },
    "luz": {
@@ -2334,8 +2564,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4004,
-   "mallas": 16,
+   "triangulos": 7576,
+   "mallas": 14,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -2359,21 +2589,21 @@
    "seed": 26,
    "W": 6.5,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 42,
-   "distintos": 26,
-   "hash": "57d8ca3f",
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 29,
+   "hash": "4926779e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2399,7 +2629,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 2
     },
     {
      "entrada": 7,
@@ -2408,19 +2638,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 29
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.63,
-     "libre_m2": 15.63
+     "alcanzable_m2": 14.82,
+     "libre_m2": 14.82
     }
    },
    "luz": {
@@ -2428,8 +2668,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3976,
-   "mallas": 20,
+   "triangulos": 7522,
+   "mallas": 17,
    "luces": 3,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -2452,21 +2692,21 @@
    "seed": 27,
    "W": 6.5,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 28,
-   "hash": "9cd68d29",
+   "guardias": 7,
+   "objetos": 42,
+   "distintos": 30,
+   "hash": "8e256217",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2492,7 +2732,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -2501,19 +2741,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.77,
-     "libre_m2": 13.77
+     "alcanzable_m2": 13.16,
+     "libre_m2": 13.16
     }
    },
    "luz": {
@@ -2521,8 +2771,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4096,
-   "mallas": 14,
+   "triangulos": 7602,
+   "mallas": 20,
    "luces": 3,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
@@ -2544,21 +2794,21 @@
    "seed": 28,
    "W": 7.1,
    "D": 4.2,
-   "guardias": 6,
-   "objetos": 40,
-   "distintos": 27,
-   "hash": "dc036118",
+   "guardias": 9,
+   "objetos": 39,
+   "distintos": 28,
+   "hash": "b94e686",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2584,7 +2834,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -2593,19 +2843,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.26,
-     "libre_m2": 19.26
+     "alcanzable_m2": 18.35,
+     "libre_m2": 18.35
     }
    },
    "luz": {
@@ -2613,8 +2873,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4360,
-   "mallas": 20,
+   "triangulos": 7552,
+   "mallas": 14,
    "luces": 3,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -2637,21 +2897,21 @@
    "seed": 29,
    "W": 5.9,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 24,
-   "hash": "571d74ed",
+   "guardias": 6,
+   "objetos": 32,
+   "distintos": 23,
+   "hash": "775a2374",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2681,19 +2941,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 19
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 20
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.6,
-     "libre_m2": 4.6
+     "alcanzable_m2": 3.66,
+     "libre_m2": 3.66
     }
    },
    "luz": {
@@ -2701,8 +2966,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3226,
-   "mallas": 17,
+   "triangulos": 6168,
+   "mallas": 18,
    "luces": 2,
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
@@ -2725,21 +2990,21 @@
    "seed": 30,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
+   "guardias": 6,
    "objetos": 25,
-   "distintos": 20,
-   "hash": "185ae5d1",
+   "distintos": 22,
+   "hash": "b8563e77",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2760,7 +3025,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -2769,19 +3034,24 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 15
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.4,
-     "libre_m2": 4.4
+     "alcanzable_m2": 3.2,
+     "libre_m2": 3.2
     }
    },
    "luz": {
@@ -2789,8 +3059,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2256,
-   "mallas": 12,
+   "triangulos": 5620,
+   "mallas": 14,
    "luces": 2,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -2814,21 +3084,21 @@
    "seed": 31,
    "W": 5,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 25,
-   "hash": "e4959a20",
+   "guardias": 9,
+   "objetos": 40,
+   "distintos": 29,
+   "hash": "4e161b1b",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2854,7 +3124,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 2
     },
     {
      "entrada": 7,
@@ -2863,19 +3133,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 29
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 27
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.69,
-     "libre_m2": 10.69
+     "alcanzable_m2": 9.95,
+     "libre_m2": 9.95
     }
    },
    "luz": {
@@ -2883,8 +3163,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3964,
-   "mallas": 14,
+   "triangulos": 6558,
+   "mallas": 15,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -2907,21 +3187,21 @@
    "seed": 32,
    "W": 4.4,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 37,
+   "guardias": 9,
+   "objetos": 41,
    "distintos": 27,
-   "hash": "64edc816",
+   "hash": "1b4b4580",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -2947,7 +3227,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -2956,19 +3236,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 27
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.77,
-     "libre_m2": 11.77
+     "alcanzable_m2": 10.89,
+     "libre_m2": 10.89
     }
    },
    "luz": {
@@ -2976,8 +3266,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4074,
-   "mallas": 15,
+   "triangulos": 7954,
+   "mallas": 17,
    "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -3000,21 +3290,21 @@
    "seed": 33,
    "W": 4.1,
    "D": 2.7,
-   "guardias": 5,
+   "guardias": 6,
    "objetos": 25,
-   "distintos": 21,
-   "hash": "89a870e2",
+   "distintos": 23,
+   "hash": "3fe9d3dd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3044,19 +3334,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.87,
-     "libre_m2": 3.87
+     "alcanzable_m2": 2.98,
+     "libre_m2": 2.98
     }
    },
    "luz": {
@@ -3064,8 +3359,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2726,
-   "mallas": 18,
+   "triangulos": 5962,
+   "mallas": 16,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -3088,21 +3383,21 @@
    "seed": 34,
    "W": 7.4,
    "D": 4.2,
-   "guardias": 7,
-   "objetos": 43,
-   "distintos": 27,
-   "hash": "408c4834",
+   "guardias": 10,
+   "objetos": 40,
+   "distintos": 29,
+   "hash": "d561d9f5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3128,7 +3423,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -3142,19 +3437,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 29
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.92,
-     "libre_m2": 19.92
+     "alcanzable_m2": 18.91,
+     "libre_m2": 18.91
     }
    },
    "luz": {
@@ -3162,8 +3467,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4162,
-   "mallas": 23,
+   "triangulos": 7574,
+   "mallas": 13,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -3187,21 +3492,21 @@
    "seed": 35,
    "W": 7.4,
    "D": 4.5,
-   "guardias": 6,
+   "guardias": 9,
    "objetos": 38,
-   "distintos": 27,
-   "hash": "dbe5373",
+   "distintos": 29,
+   "hash": "f85d621e",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3227,7 +3532,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -3236,19 +3541,29 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 25
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 22.04,
-     "libre_m2": 22.04
+     "alcanzable_m2": 21.41,
+     "libre_m2": 21.41
     }
    },
    "luz": {
@@ -3256,8 +3571,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3940,
-   "mallas": 20,
+   "triangulos": 7678,
+   "mallas": 17,
    "luces": 3,
    "hogar": "agricultor · antiguo",
    "contexto_hogar": {
@@ -3280,21 +3595,21 @@
    "seed": 36,
    "W": 3.5,
    "D": 3.6,
-   "guardias": 5,
-   "objetos": 23,
-   "distintos": 19,
-   "hash": "6d4b5bd4",
+   "guardias": 6,
+   "objetos": 25,
+   "distintos": 21,
+   "hash": "2257c452",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3315,7 +3630,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -3324,19 +3639,24 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 14
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.37,
-     "libre_m2": 5.37
+     "alcanzable_m2": 4.75,
+     "libre_m2": 4.75
     }
    },
    "luz": {
@@ -3344,7 +3664,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2692,
+   "triangulos": 5716,
    "mallas": 14,
    "luces": 1,
    "hogar": "artista · alegre",
@@ -3367,21 +3687,21 @@
    "seed": 37,
    "W": 7.1,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 38,
-   "distintos": 26,
-   "hash": "cf366a88",
+   "guardias": 9,
+   "objetos": 45,
+   "distintos": 30,
+   "hash": "27ffbb49",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3407,7 +3727,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -3416,19 +3736,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.06,
-     "libre_m2": 15.06
+     "alcanzable_m2": 14.73,
+     "libre_m2": 14.73
     }
    },
    "luz": {
@@ -3436,8 +3766,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3692,
-   "mallas": 16,
+   "triangulos": 7564,
+   "mallas": 14,
    "luces": 3,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -3460,21 +3790,21 @@
    "seed": 38,
    "W": 3.2,
    "D": 3.6,
-   "guardias": 5,
+   "guardias": 6,
    "objetos": 24,
-   "distintos": 21,
-   "hash": "3397007",
+   "distintos": 22,
+   "hash": "41d5f7f4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3495,7 +3825,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -3504,19 +3834,24 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 15
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.32,
-     "libre_m2": 4.32
+     "alcanzable_m2": 3.63,
+     "libre_m2": 3.63
     }
    },
    "luz": {
@@ -3524,7 +3859,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2726,
+   "triangulos": 5644,
    "mallas": 13,
    "luces": 1,
    "hogar": "matrimonio · antiguo",
@@ -3548,21 +3883,21 @@
    "seed": 39,
    "W": 7.7,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 42,
-   "distintos": 24,
-   "hash": "59f1e506",
+   "guardias": 7,
+   "objetos": 37,
+   "distintos": 28,
+   "hash": "5f0f07cd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3588,7 +3923,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 2
     },
     {
      "entrada": 7,
@@ -3597,19 +3932,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 29
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.06,
-     "libre_m2": 15.06
+     "alcanzable_m2": 14.16,
+     "libre_m2": 14.16
     }
    },
    "luz": {
@@ -3617,8 +3962,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3580,
-   "mallas": 26,
+   "triangulos": 6728,
+   "mallas": 16,
    "luces": 3,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -3642,21 +3987,21 @@
    "seed": 40,
    "W": 5.6,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 37,
-   "distintos": 26,
-   "hash": "5190bd35",
+   "guardias": 9,
+   "objetos": 44,
+   "distintos": 29,
+   "hash": "24e18397",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3691,19 +4036,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 31
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.91,
-     "libre_m2": 9.91
+     "alcanzable_m2": 8.7,
+     "libre_m2": 8.7
     }
    },
    "luz": {
@@ -3711,8 +4066,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3950,
-   "mallas": 19,
+   "triangulos": 6952,
+   "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -3735,21 +4090,21 @@
    "seed": 41,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
-   "objetos": 28,
-   "distintos": 21,
-   "hash": "cd4d7ff4",
+   "guardias": 6,
+   "objetos": 24,
+   "distintos": 23,
+   "hash": "b783f374",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3779,19 +4134,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 17
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 12
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.71,
-     "libre_m2": 4.71
+     "alcanzable_m2": 3.48,
+     "libre_m2": 3.48
     }
    },
    "luz": {
@@ -3799,7 +4159,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2814,
+   "triangulos": 5538,
    "mallas": 15,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -3823,114 +4183,21 @@
    "seed": 42,
    "W": 5.300000000000001,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 27,
-   "hash": "6e826532",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "vb_escritorio",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "estanteria_libros",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_comoda",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "estanteria_libros",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_ordenador",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.83,
-     "libre_m2": 8.83
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 4096,
-   "mallas": 14,
-   "luces": 2,
-   "hogar": "musico · bohemio",
-   "contexto_hogar": {
-    "perfil": "musico",
-    "estilo": "bohemio",
-    "botin": [
-     "guitarra",
-     "altavoz",
-     "vinilos",
-     "cartera"
-    ],
-    "habitacion": "dorm"
-   },
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despacho",
-   "tipologia": "otra_estancia",
-   "seed": 43,
-   "W": 4.1,
-   "D": 4.2,
    "guardias": 7,
    "objetos": 43,
-   "distintos": 26,
-   "hash": "ee087354",
+   "distintos": 29,
+   "hash": "a65bab04",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -3964,25 +4231,138 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "caja_fuerte_pequena",
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 30
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.61,
-     "libre_m2": 8.61
+     "alcanzable_m2": 8.06,
+     "libre_m2": 8.06
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7024,
+   "mallas": 20,
+   "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 43,
+   "W": 4.1,
+   "D": 4.2,
+   "guardias": 10,
+   "objetos": 37,
+   "distintos": 30,
+   "hash": "b0c9d2a5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "caja_fuerte_pequena",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 24
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.78,
+     "libre_m2": 7.78
     }
    },
    "luz": {
@@ -3990,8 +4370,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4456,
-   "mallas": 20,
+   "triangulos": 7012,
+   "mallas": 14,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -4016,20 +4396,20 @@
    "W": 3.8000000000000003,
    "D": 2.7,
    "guardias": 4,
-   "objetos": 23,
-   "distintos": 19,
-   "hash": "f2b23197",
+   "objetos": 28,
+   "distintos": 21,
+   "hash": "ab846575",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4054,19 +4434,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 13
+     "obj": "vb_mesa_lectura",
+     "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 18
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.66,
-     "libre_m2": 4.66
+     "alcanzable_m2": 3.67,
+     "libre_m2": 3.67
     }
    },
    "luz": {
@@ -4074,8 +4459,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2490,
-   "mallas": 15,
+   "triangulos": 4874,
+   "mallas": 13,
    "luces": 2,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -4098,21 +4483,21 @@
    "seed": 45,
    "W": 7.7,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 42,
-   "distintos": 25,
-   "hash": "10113cdc",
+   "guardias": 7,
+   "objetos": 41,
+   "distintos": 29,
+   "hash": "bcfb66e9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4147,19 +4532,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 30
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.87,
-     "libre_m2": 14.87
+     "alcanzable_m2": 14.09,
+     "libre_m2": 14.09
     }
    },
    "luz": {
@@ -4167,8 +4562,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4608,
-   "mallas": 18,
+   "triangulos": 7290,
+   "mallas": 15,
    "luces": 3,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
@@ -4190,21 +4585,21 @@
    "seed": 46,
    "W": 4.1,
    "D": 3,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 17,
-   "hash": "3f55dc6",
+   "guardias": 6,
+   "objetos": 26,
+   "distintos": 24,
+   "hash": "389c32a5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4234,19 +4629,24 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 16
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.17,
-     "libre_m2": 5.17
+     "alcanzable_m2": 4.44,
+     "libre_m2": 4.44
     }
    },
    "luz": {
@@ -4254,7 +4654,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2520,
+   "triangulos": 5964,
    "mallas": 12,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -4278,21 +4678,21 @@
    "seed": 47,
    "W": 7.4,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 35,
-   "distintos": 25,
-   "hash": "639036d4",
+   "guardias": 9,
+   "objetos": 44,
+   "distintos": 29,
+   "hash": "a3de00fd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4327,19 +4727,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 24
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 31
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.84,
-     "libre_m2": 15.84
+     "alcanzable_m2": 15.76,
+     "libre_m2": 15.76
     }
    },
    "luz": {
@@ -4347,8 +4757,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4158,
-   "mallas": 15,
+   "triangulos": 7408,
+   "mallas": 14,
    "luces": 3,
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
@@ -4371,21 +4781,21 @@
    "seed": 48,
    "W": 5.6,
    "D": 4.2,
-   "guardias": 6,
-   "objetos": 36,
-   "distintos": 23,
-   "hash": "3743b4da",
+   "guardias": 7,
+   "objetos": 40,
+   "distintos": 26,
+   "hash": "d97490b7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4420,19 +4830,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.94,
-     "libre_m2": 13.94
+     "alcanzable_m2": 13.2,
+     "libre_m2": 13.2
     }
    },
    "luz": {
@@ -4440,8 +4860,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4092,
-   "mallas": 12,
+   "triangulos": 7146,
+   "mallas": 15,
    "luces": 2,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -4465,21 +4885,21 @@
    "seed": 49,
    "W": 3.5,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 27,
-   "hash": "4ababf6e",
+   "guardias": 9,
+   "objetos": 43,
+   "distintos": 28,
+   "hash": "29f2894f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4505,7 +4925,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -4514,19 +4934,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.19,
-     "libre_m2": 8.19
+     "alcanzable_m2": 7.87,
+     "libre_m2": 7.87
     }
    },
    "luz": {
@@ -4534,7 +4964,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3966,
+   "triangulos": 7794,
    "mallas": 15,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -4558,21 +4988,21 @@
    "seed": 50,
    "W": 6.2,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 23,
-   "distintos": 18,
-   "hash": "90d2f9bf",
+   "guardias": 8,
+   "objetos": 28,
+   "distintos": 23,
+   "hash": "54f911b7",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4602,19 +5032,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 13
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.11,
-     "libre_m2": 7.11
+     "alcanzable_m2": 6.4,
+     "libre_m2": 6.4
     }
    },
    "luz": {
@@ -4622,8 +5062,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2754,
-   "mallas": 15,
+   "triangulos": 5800,
+   "mallas": 14,
    "luces": 3,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -4638,7 +5078,7 @@
     "habitacion": "dorm"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.974
   },
   {
    "kit": "vivienda_despacho",
@@ -4647,20 +5087,20 @@
    "W": 3.5,
    "D": 2.1,
    "guardias": 4,
-   "objetos": 25,
-   "distintos": 22,
-   "hash": "54d245d7",
+   "objetos": 23,
+   "distintos": 19,
+   "hash": "5bf463b4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4685,19 +5125,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
+     "obj": "vb_mesa_lectura",
+     "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.38,
-     "libre_m2": 2.38
+     "alcanzable_m2": 1.66,
+     "libre_m2": 1.66
     }
    },
    "luz": {
@@ -4705,8 +5150,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2516,
-   "mallas": 16,
+   "triangulos": 5030,
+   "mallas": 13,
    "luces": 1,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -4729,21 +5174,21 @@
    "seed": 52,
    "W": 4.1,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 24,
-   "distintos": 19,
-   "hash": "bedf6efb",
+   "guardias": 9,
+   "objetos": 27,
+   "distintos": 23,
+   "hash": "2c9b7df4",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4764,7 +5209,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -4778,19 +5223,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 13
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.89,
-     "libre_m2": 5.89
+     "alcanzable_m2": 5.52,
+     "libre_m2": 5.52
     }
    },
    "luz": {
@@ -4798,8 +5253,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2352,
-   "mallas": 12,
+   "triangulos": 6134,
+   "mallas": 13,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -4823,21 +5278,21 @@
    "seed": 53,
    "W": 3.5,
    "D": 3.3,
-   "guardias": 5,
-   "objetos": 26,
-   "distintos": 18,
-   "hash": "d9a31e72",
+   "guardias": 6,
+   "objetos": 24,
+   "distintos": 21,
+   "hash": "cc330650",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4858,7 +5313,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -4867,19 +5322,24 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 17
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.66,
-     "libre_m2": 4.66
+     "alcanzable_m2": 3.77,
+     "libre_m2": 3.77
     }
    },
    "luz": {
@@ -4887,7 +5347,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2268,
+   "triangulos": 5592,
    "mallas": 12,
    "luces": 1,
    "hogar": "agricultor · antiguo",
@@ -4911,21 +5371,21 @@
    "seed": 54,
    "W": 5.9,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 38,
-   "distintos": 26,
-   "hash": "e734ed0e",
+   "guardias": 9,
+   "objetos": 43,
+   "distintos": 28,
+   "hash": "19c18d76",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -4960,19 +5420,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 26
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.78,
-     "libre_m2": 16.78
+     "alcanzable_m2": 15.46,
+     "libre_m2": 15.46
     }
    },
    "luz": {
@@ -4980,8 +5450,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4032,
-   "mallas": 18,
+   "triangulos": 7580,
+   "mallas": 16,
    "luces": 2,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -5003,21 +5473,21 @@
    "seed": 55,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 31,
-   "distintos": 26,
-   "hash": "1ffb0169",
+   "guardias": 9,
+   "objetos": 38,
+   "distintos": 29,
+   "hash": "17685b88",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5043,7 +5513,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -5052,19 +5522,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 21
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.37,
-     "libre_m2": 10.37
+     "alcanzable_m2": 9.37,
+     "libre_m2": 9.37
     }
    },
    "luz": {
@@ -5072,8 +5552,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3366,
-   "mallas": 15,
+   "triangulos": 7536,
+   "mallas": 18,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -5096,21 +5576,21 @@
    "seed": 56,
    "W": 4.4,
    "D": 3,
-   "guardias": 5,
-   "objetos": 27,
-   "distintos": 21,
-   "hash": "1111fb90",
+   "guardias": 8,
+   "objetos": 28,
+   "distintos": 23,
+   "hash": "9efd782c",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5140,19 +5620,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 18
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 17
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.05,
-     "libre_m2": 6.05
+     "alcanzable_m2": 5.24,
+     "libre_m2": 5.24
     }
    },
    "luz": {
@@ -5160,8 +5650,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2402,
-   "mallas": 13,
+   "triangulos": 5530,
+   "mallas": 11,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -5184,21 +5674,21 @@
    "seed": 57,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 34,
-   "distintos": 25,
-   "hash": "f83ef88f",
+   "guardias": 8,
+   "objetos": 42,
+   "distintos": 30,
+   "hash": "bb535f4a",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5224,7 +5714,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -5233,19 +5723,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 23
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.27,
-     "libre_m2": 10.27
+     "alcanzable_m2": 9.94,
+     "libre_m2": 9.94
     }
    },
    "luz": {
@@ -5253,8 +5753,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3570,
-   "mallas": 15,
+   "triangulos": 7574,
+   "mallas": 13,
    "luces": 2,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -5278,21 +5778,21 @@
    "seed": 58,
    "W": 4.7,
    "D": 3,
-   "guardias": 5,
+   "guardias": 6,
    "objetos": 26,
-   "distintos": 22,
-   "hash": "e678eeb",
+   "distintos": 21,
+   "hash": "8dba4b38",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5313,7 +5813,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -5322,19 +5822,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.44,
-     "libre_m2": 6.44
+     "alcanzable_m2": 6.03,
+     "libre_m2": 6.03
     }
    },
    "luz": {
@@ -5342,7 +5852,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2608,
+   "triangulos": 5584,
    "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -5366,21 +5876,21 @@
    "seed": 59,
    "W": 6.5,
    "D": 2.7,
-   "guardias": 6,
-   "objetos": 42,
-   "distintos": 32,
-   "hash": "b1d9d20e",
+   "guardias": 9,
+   "objetos": 40,
+   "distintos": 29,
+   "hash": "9f225fb5",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5406,7 +5916,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -5415,19 +5925,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 29
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 27
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.58,
-     "libre_m2": 8.58
+     "alcanzable_m2": 7.82,
+     "libre_m2": 7.82
     }
    },
    "luz": {
@@ -5435,8 +5955,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4414,
-   "mallas": 17,
+   "triangulos": 7560,
+   "mallas": 12,
    "luces": 3,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -5459,21 +5979,21 @@
    "seed": 60,
    "W": 5.300000000000001,
    "D": 2.7,
-   "guardias": 5,
+   "guardias": 8,
    "objetos": 25,
-   "distintos": 19,
-   "hash": "cb38c618",
+   "distintos": 21,
+   "hash": "4905acdc",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5494,7 +6014,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -5503,19 +6023,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 12
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.65,
-     "libre_m2": 6.65
+     "alcanzable_m2": 5.74,
+     "libre_m2": 5.74
     }
    },
    "luz": {
@@ -5523,8 +6053,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2322,
-   "mallas": 15,
+   "triangulos": 5744,
+   "mallas": 16,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -5547,21 +6077,21 @@
    "seed": 61,
    "W": 4.4,
    "D": 3,
-   "guardias": 6,
-   "objetos": 29,
-   "distintos": 21,
-   "hash": "8bdb3414",
+   "guardias": 7,
+   "objetos": 23,
+   "distintos": 20,
+   "hash": "3d21ff1d",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5582,7 +6112,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -5596,19 +6126,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 18
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 12
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.52,
-     "libre_m2": 5.52
+     "alcanzable_m2": 4.61,
+     "libre_m2": 4.61
     }
    },
    "luz": {
@@ -5616,8 +6156,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2548,
-   "mallas": 14,
+   "triangulos": 5868,
+   "mallas": 12,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -5641,21 +6181,21 @@
    "seed": 62,
    "W": 7.1,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 26,
-   "distintos": 21,
-   "hash": "58b7155",
+   "guardias": 8,
+   "objetos": 33,
+   "distintos": 27,
+   "hash": "abefbf31",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5685,19 +6225,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 15
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 20
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.5,
-     "libre_m2": 6.5
+     "alcanzable_m2": 5.61,
+     "libre_m2": 5.61
     }
    },
    "luz": {
@@ -5705,8 +6255,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2826,
-   "mallas": 15,
+   "triangulos": 6322,
+   "mallas": 17,
    "luces": 3,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -5729,108 +6279,21 @@
    "seed": 63,
    "W": 3.5,
    "D": 3.6,
-   "guardias": 5,
+   "guardias": 6,
    "objetos": 26,
-   "distintos": 19,
-   "hash": "f57ce352",
+   "distintos": 22,
+   "hash": "fce01801",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "estanteria_libros",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_comoda",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_ordenador",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 0.34,
-     "libre_m2": 4.76
-    }
-   },
-   "luz": {
-    "estancia": 0.166
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 2542,
-   "mallas": 17,
-   "luces": 2,
-   "hogar": "artista · bohemio",
-   "contexto_hogar": {
-    "perfil": "artista",
-    "estilo": "bohemio",
-    "botin": [
-     "cuadro",
-     "portatil",
-     "cartera"
-    ],
-    "habitacion": "dorm2"
-   },
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despacho",
-   "tipologia": "otra_estancia",
-   "seed": 64,
-   "W": 4.7,
-   "D": 2.4,
-   "guardias": 5,
-   "objetos": 30,
-   "distintos": 23,
-   "hash": "2fa94951",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "vb_escritorio",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5860,19 +6323,116 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 19
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 15
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.26,
+     "libre_m2": 4.26
+    }
+   },
+   "luz": {
+    "estancia": 0.08
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5494,
+   "mallas": 17,
+   "luces": 1,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 64,
+   "W": 4.7,
+   "D": 2.4,
+   "guardias": 6,
+   "objetos": 26,
+   "distintos": 24,
+   "hash": "d8398185",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 3
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.49,
-     "libre_m2": 4.49
+     "alcanzable_m2": 3.47,
+     "libre_m2": 3.47
     }
    },
    "luz": {
@@ -5880,8 +6440,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2708,
-   "mallas": 16,
+   "triangulos": 6100,
+   "mallas": 19,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -5904,21 +6464,21 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 36,
-   "distintos": 27,
-   "hash": "b277db80",
+   "guardias": 9,
+   "objetos": 45,
+   "distintos": 28,
+   "hash": "1dcddfcd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -5944,7 +6504,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -5953,19 +6513,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 23
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 32
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.39,
-     "libre_m2": 16.39
+     "alcanzable_m2": 15.18,
+     "libre_m2": 15.18
     }
    },
    "luz": {
@@ -5973,8 +6543,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4470,
-   "mallas": 15,
+   "triangulos": 7792,
+   "mallas": 14,
    "luces": 3,
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
@@ -5997,21 +6567,21 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 40,
-   "distintos": 25,
-   "hash": "a1140bd8",
+   "guardias": 9,
+   "objetos": 42,
+   "distintos": 26,
+   "hash": "966f7743",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6037,7 +6607,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -6046,19 +6616,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.2,
-     "libre_m2": 16.2
+     "alcanzable_m2": 16.05,
+     "libre_m2": 16.05
     }
    },
    "luz": {
@@ -6066,8 +6646,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4002,
-   "mallas": 15,
+   "triangulos": 6788,
+   "mallas": 16,
    "luces": 2,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -6091,21 +6671,21 @@
    "seed": 67,
    "W": 5.6,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 36,
-   "distintos": 27,
-   "hash": "c26bfaba",
+   "guardias": 9,
+   "objetos": 38,
+   "distintos": 29,
+   "hash": "99358bdd",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6131,7 +6711,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 3
+     "n": 1
     },
     {
      "entrada": 7,
@@ -6140,19 +6720,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 24
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.82,
-     "libre_m2": 16.82
+     "alcanzable_m2": 15.67,
+     "libre_m2": 15.67
     }
    },
    "luz": {
@@ -6160,8 +6750,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3922,
-   "mallas": 17,
+   "triangulos": 7200,
+   "mallas": 12,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -6184,21 +6774,21 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 26,
-   "distintos": 21,
-   "hash": "d01fdf0c",
+   "guardias": 8,
+   "objetos": 28,
+   "distintos": 22,
+   "hash": "e5e89468",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6219,7 +6809,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -6228,19 +6818,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 16
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 17
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.31,
-     "libre_m2": 6.31
+     "alcanzable_m2": 5.42,
+     "libre_m2": 5.42
     }
    },
    "luz": {
@@ -6248,8 +6848,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2624,
-   "mallas": 16,
+   "triangulos": 5392,
+   "mallas": 14,
    "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -6272,21 +6872,21 @@
    "seed": 69,
    "W": 7.7,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 38,
-   "distintos": 25,
-   "hash": "778262c6",
+   "guardias": 7,
+   "objetos": 34,
+   "distintos": 23,
+   "hash": "41e04cf9",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6312,7 +6912,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -6321,19 +6921,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 20
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.35,
-     "libre_m2": 19.35
+     "alcanzable_m2": 18.39,
+     "libre_m2": 18.39
     }
    },
    "luz": {
@@ -6341,8 +6951,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3916,
-   "mallas": 14,
+   "triangulos": 7340,
+   "mallas": 16,
    "luces": 3,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -6365,21 +6975,21 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 3.9,
-   "guardias": 7,
+   "guardias": 10,
    "objetos": 39,
-   "distintos": 25,
-   "hash": "6ac864d9",
+   "distintos": 28,
+   "hash": "f02efbdf",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6419,19 +7029,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.29,
-     "libre_m2": 11.29
+     "alcanzable_m2": 10.13,
+     "libre_m2": 10.13
     }
    },
    "luz": {
@@ -6439,8 +7059,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4442,
-   "mallas": 13,
+   "triangulos": 7116,
+   "mallas": 12,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -6464,21 +7084,21 @@
    "seed": 71,
    "W": 5,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 40,
-   "distintos": 27,
-   "hash": "ebad2c60",
+   "guardias": 7,
+   "objetos": 43,
+   "distintos": 28,
+   "hash": "be50b9c1",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6513,19 +7133,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 28
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.42,
-     "libre_m2": 10.42
+     "alcanzable_m2": 9.9,
+     "libre_m2": 9.9
     }
    },
    "luz": {
@@ -6533,8 +7163,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4344,
-   "mallas": 18,
+   "triangulos": 7124,
+   "mallas": 16,
    "luces": 2,
    "hogar": "agricultor · antiguo",
    "contexto_hogar": {
@@ -6557,21 +7187,21 @@
    "seed": 72,
    "W": 7.7,
    "D": 2.7,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 22,
-   "hash": "6c03fabe",
+   "guardias": 7,
+   "objetos": 41,
+   "distintos": 29,
+   "hash": "48c077ec",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6597,7 +7227,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -6606,19 +7236,29 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 27
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.48,
-     "libre_m2": 10.48
+     "alcanzable_m2": 10.1,
+     "libre_m2": 10.1
     }
    },
    "luz": {
@@ -6626,8 +7266,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4000,
-   "mallas": 14,
+   "triangulos": 6946,
+   "mallas": 17,
    "luces": 3,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -6649,21 +7289,21 @@
    "seed": 73,
    "W": 3.5,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 32,
-   "distintos": 23,
-   "hash": "e4723eb6",
+   "guardias": 7,
+   "objetos": 40,
+   "distintos": 30,
+   "hash": "dc1ad000",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6689,7 +7329,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 1
     },
     {
      "entrada": 7,
@@ -6698,19 +7338,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 21
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.84,
-     "libre_m2": 7.84
+     "alcanzable_m2": 7.9,
+     "libre_m2": 7.9
     }
    },
    "luz": {
@@ -6718,7 +7368,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3568,
+   "triangulos": 7240,
    "mallas": 14,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -6742,21 +7392,124 @@
    "seed": 74,
    "W": 6.5,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 35,
-   "distintos": 23,
-   "hash": "201b3370",
+   "guardias": 9,
+   "objetos": 41,
+   "distintos": 31,
+   "hash": "70c7cad1",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 3
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.56,
+     "libre_m2": 17.56
+    }
+   },
+   "luz": {
+    "estancia": 0.079
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 8224,
+   "mallas": 14,
+   "luces": 3,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 75,
+   "W": 7.4,
+   "D": 4.2,
+   "guardias": 7,
+   "objetos": 38,
+   "distintos": 28,
+   "hash": "8d35fe5e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6791,112 +7544,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 23
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 25
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.93,
-     "libre_m2": 18.93
-    }
-   },
-   "luz": {
-    "estancia": 0.079
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 3774,
-   "mallas": 15,
-   "luces": 3,
-   "hogar": "matrimonio · antiguo",
-   "contexto_hogar": {
-    "perfil": "matrimonio",
-    "estilo": "antiguo",
-    "botin": [
-     "joyero",
-     "colchon",
-     "cartera",
-     "lata"
-    ],
-    "habitacion": "dorm"
-   },
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despacho",
-   "tipologia": "otra_estancia",
-   "seed": 75,
-   "W": 7.4,
-   "D": 4.2,
-   "guardias": 6,
-   "objetos": 41,
-   "distintos": 26,
-   "hash": "e365f97a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "vb_escritorio",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "silla_comedor",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "estanteria_libros",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "vb_comoda",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "sillon_orejero",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "estanteria_libros",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_ordenador",
-     "n": 1
-    },
-    {
-     "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 30
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 20.17,
-     "libre_m2": 20.17
+     "alcanzable_m2": 19.06,
+     "libre_m2": 19.06
     }
    },
    "luz": {
@@ -6904,7 +7574,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3832,
+   "triangulos": 7530,
    "mallas": 14,
    "luces": 3,
    "hogar": "familia · moderno",
@@ -6929,21 +7599,21 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 25,
-   "distintos": 22,
-   "hash": "e1e773db",
+   "guardias": 6,
+   "objetos": 28,
+   "distintos": 21,
+   "hash": "380529e8",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -6964,7 +7634,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -6973,19 +7643,24 @@
     },
     {
      "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
      "n": 16
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.42,
-     "libre_m2": 4.42
+     "alcanzable_m2": 2.05,
+     "libre_m2": 3.08
     }
    },
    "luz": {
@@ -6993,8 +7668,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 2652,
-   "mallas": 12,
+   "triangulos": 5704,
+   "mallas": 20,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -7017,21 +7692,21 @@
    "seed": 77,
    "W": 7.4,
    "D": 4.8,
-   "guardias": 6,
-   "objetos": 38,
-   "distintos": 25,
-   "hash": "35787635",
+   "guardias": 9,
+   "objetos": 43,
+   "distintos": 29,
+   "hash": "fb9c34dc",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -7057,7 +7732,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 2
     },
     {
      "entrada": 7,
@@ -7066,19 +7741,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 23.78,
-     "libre_m2": 23.78
+     "alcanzable_m2": 23.34,
+     "libre_m2": 23.34
     }
    },
    "luz": {
@@ -7086,7 +7771,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3436,
+   "triangulos": 7240,
    "mallas": 14,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -7110,21 +7795,21 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.7,
-   "guardias": 6,
-   "objetos": 38,
-   "distintos": 26,
-   "hash": "3c153461",
+   "guardias": 7,
+   "objetos": 41,
+   "distintos": 27,
+   "hash": "5a2fc503",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -7150,7 +7835,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 2
     },
     {
      "entrada": 7,
@@ -7159,19 +7844,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.5,
-     "libre_m2": 9.5
+     "alcanzable_m2": 8.96,
+     "libre_m2": 8.96
     }
    },
    "luz": {
@@ -7179,8 +7874,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4048,
-   "mallas": 14,
+   "triangulos": 7394,
+   "mallas": 19,
    "luces": 3,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -7203,21 +7898,21 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.6,
-   "guardias": 7,
-   "objetos": 37,
-   "distintos": 26,
-   "hash": "6ddd086e",
+   "guardias": 10,
+   "objetos": 40,
+   "distintos": 28,
+   "hash": "76c8fb2f",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -7243,7 +7938,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 1
+     "n": 3
     },
     {
      "entrada": 7,
@@ -7257,19 +7952,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 25
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.5,
-     "libre_m2": 14.5
+     "alcanzable_m2": 13.06,
+     "libre_m2": 13.06
     }
    },
    "luz": {
@@ -7277,8 +7982,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4184,
-   "mallas": 16,
+   "triangulos": 7156,
+   "mallas": 14,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -7302,21 +8007,21 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 39,
-   "distintos": 26,
-   "hash": "4a05f85d",
+   "guardias": 7,
+   "objetos": 43,
+   "distintos": 28,
+   "hash": "12296a07",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -7351,19 +8056,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 27
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.92,
-     "libre_m2": 20.92
+     "alcanzable_m2": 20.31,
+     "libre_m2": 20.31
     }
    },
    "luz": {
@@ -7371,8 +8086,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4132,
-   "mallas": 14,
+   "triangulos": 7536,
+   "mallas": 18,
    "luces": 3,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -7395,21 +8110,21 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 35,
-   "distintos": 24,
-   "hash": "218725b9",
+   "guardias": 7,
+   "objetos": 44,
+   "distintos": 30,
+   "hash": "65da6270",
    "errores": [],
    "avisos": [],
    "recuento": [
     {
      "entrada": 0,
-     "obj": "vb_escritorio",
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
      "n": 1
     },
     {
      "entrada": 1,
-     "obj": "silla_comedor",
+     "obj": "vb_silla_despacho",
      "n": 1
     },
     {
@@ -7435,7 +8150,7 @@
     {
      "entrada": 6,
      "obj": "cuadro_paisaje|fotos_familia|poster_enma",
-     "n": 2
+     "n": 3
     },
     {
      "entrada": 7,
@@ -7444,19 +8159,29 @@
     },
     {
      "entrada": 9,
-     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
-     "n": 23
+     "obj": "vb_mesa_lectura",
+     "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.41,
-     "libre_m2": 14.41
+     "alcanzable_m2": 13.16,
+     "libre_m2": 13.16
     }
    },
    "luz": {
@@ -7464,8 +8189,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3966,
-   "mallas": 15,
+   "triangulos": 8270,
+   "mallas": 19,
    "luces": 3,
    "hogar": "artista · bohemio",
    "contexto_hogar": {

@@ -32,7 +32,11 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_estante_alto",
+   "variantes": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
    "pared": "*",
    "cantidad": [
     1,
@@ -43,9 +47,13 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "va_cajas_apiladas",
-   "pared": "*",
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
    "cantidad": [
     1,
     1
@@ -56,19 +64,41 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_cajas_apiladas",
+   "variantes": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
    "pared": "*",
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
-   "preferir": true
+   "preferir": true,
+   "area_min": 18
   },
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_estante_alto",
+   "obj": "va_utiles_guardados",
    "pared": "*",
    "cantidad": [
     0,
@@ -88,19 +118,7 @@
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 12
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
+   "area_min": 16
   },
   {
    "zona": "estancia",
@@ -114,19 +132,6 @@
    "obligatorio": false,
    "preferir": true,
    "area_min": 12
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_cajas_apiladas",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true,
-   "area_min": 18
   },
   {
    "zona": "estancia",
@@ -184,12 +189,13 @@
     "vb_colcha"
    ],
    "en": [
-    "va_estante",
-    "va_estante_alto"
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
    ],
    "por_soporte": [
-    10,
-    16
+    2,
+    4
    ]
   },
   {
