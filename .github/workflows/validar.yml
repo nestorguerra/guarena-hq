@@ -72,8 +72,8 @@ jobs:
         run: python3 tools/interiores/validar.py --semillas 1,2,3,4,5
       - name: Contratos funcionales de las viviendas
         run: python3 tools/interiores/casas_pruebas.py --tanda 16
+      - name: Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)
+        run: python3 tools/interiores/validar.py --casas ${{ github.event_name == 'pull_request' && '30' || '200' }} --exigir-todas
       - name: Recoger objetos próximos y conservar su recompensa al recargar
         # Contrato mecánico desde reanudación en baja. La cinemática y las fichas se prueban en el M1.
         run: python3 tools/interiores/botin_pruebas.py --calidad baja --sin-intro --informe /tmp/botin-ci.json
-      - name: Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)
-        run: python3 tools/interiores/validar.py --casas ${{ github.event_name == 'pull_request' && '30' || '200' }} --exigir-todas
