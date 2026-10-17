@@ -1,0 +1,537 @@
+{
+ "tipologia": "cocina",
+ "nombre": "Cocina de una casa del pueblo",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.4,
+   4.8
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cocina",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_max": 14,
+   "grupo_pared": "frente_trabajo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cocina_amplia",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14,
+   "grupo_pared": "frente_trabajo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_encimera",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_max": 14,
+   "buscar_refs": true,
+   "grupo_pared": "frente_trabajo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_encimera_amplia",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14,
+   "buscar_refs": true,
+   "grupo_pared": "frente_trabajo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_nevera",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "grupo_pared": "frente_trabajo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina",
+   "pared": "*",
+   "sobre_de": "va_encimera",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ],
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_amplio",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ],
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_liso",
+   "pared": "*",
+   "sobre_de": "va_encimera",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "moderno",
+    "joven",
+    "lujo"
+   ],
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_liso_amplio",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "moderno",
+    "joven",
+    "lujo"
+   ],
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_abierto",
+   "pared": "*",
+   "sobre_de": "va_encimera",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "!antiguo",
+    "!rustico",
+    "!moderno",
+    "!joven",
+    "!lujo"
+   ],
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_abierto_amplio",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "!antiguo",
+    "!rustico",
+    "!moderno",
+    "!joven",
+    "!lujo"
+   ],
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_lavadora",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_alacena",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_encimera_amplia",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 18,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_alacena",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 20
+  },
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "mesa_camilla",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 13,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "va_mesa_comedor",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 13,
+   "estilo": [
+    "!antiguo",
+    "!rustico"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "va_isla_cocina",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "area_min": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_alimento_atun",
+    "va_alimento_sardinillas",
+    "va_alimento_mejillones",
+    "va_alimento_tomate_frito",
+    "va_alimento_maiz",
+    "va_alimento_judias_verdes",
+    "va_alimento_garbanzos_bote",
+    "va_alimento_pimientos_piquillo",
+    "va_alimento_aceitunas",
+    "va_alimento_pepinillos",
+    "va_alimento_mermelada",
+    "va_alimento_miel",
+    "va_alimento_crema_cacao",
+    "va_alimento_melocoton_almibar",
+    "va_alimento_aceite_oliva",
+    "va_alimento_aceite_girasol",
+    "va_alimento_garrafa_aceite",
+    "va_alimento_vinagre",
+    "va_alimento_arroz",
+    "va_alimento_arroz_integral",
+    "va_alimento_espaguetis",
+    "va_alimento_macarrones",
+    "va_alimento_lentejas",
+    "va_alimento_garbanzos_seco",
+    "va_alimento_harina",
+    "va_alimento_azucar",
+    "va_alimento_sal",
+    "va_alimento_cafe_molido",
+    "va_alimento_infusiones",
+    "va_alimento_galletas_maria",
+    "va_alimento_galletas_chocolate",
+    "va_alimento_galletas_crackers",
+    "va_alimento_cereales_a",
+    "va_alimento_cereales_b",
+    "va_alimento_cereales_c",
+    "va_alimento_pan_molde",
+    "va_alimento_snack_patatas",
+    "va_alimento_snack_aperitivos",
+    "va_alimento_chocolate_tabletas",
+    "va_alimento_magdalenas",
+    "va_alimento_perrunillas",
+    "va_alimento_chicles",
+    "va_alimento_caramelos",
+    "va_alimento_agua_15",
+    "va_alimento_agua_gas",
+    "va_alimento_cola_15",
+    "va_alimento_naranja_15",
+    "va_alimento_limon_15",
+    "va_alimento_cerveza_pack",
+    "va_alimento_vino_tinto",
+    "va_alimento_vino_blanco",
+    "va_alimento_vino_rosado",
+    "va_alimento_zumo_naranja",
+    "va_alimento_zumo_melocoton",
+    "va_alimento_leche_entera",
+    "va_alimento_leche_semi",
+    "va_alimento_leche_desnatada",
+    "bandeja",
+    "azucarero",
+    "taza_cafe",
+    "taza_desayuno",
+    "plato_cafe",
+    "plato_llano",
+    "vaso_agua",
+    "cucharilla",
+    "frutero",
+    "servilletero"
+   ],
+   "en": [
+    "va_encimera",
+    "va_encimera_amplia",
+    "va_alacena",
+    "va_lavadora",
+    "va_isla_cocina"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_lampara_trabajo",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Cocina-rafax.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Cocina-rafax.JPG",
+   "autor": "Rafael Ortega Díaz",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Compact modern fitted kitchen by Steinbeck-Reeves Design.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Compact_modern_fitted_kitchen_by_Steinbeck-Reeves_Design.jpg",
+   "autor": "Steinbeck-Reeves Design",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Cuisine salon.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Cuisine_salon.jpg",
+   "autor": "douglaspperkins",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Humble kitchen08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Humble_kitchen08.jpg",
+   "autor": "Korman",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Kitchen sukaldea.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kitchen_sukaldea.jpg",
+   "autor": "Gorkaazk",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Modern kitchen gnangarra.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Modern_kitchen_gnangarra.JPG",
+   "autor": "User:Gnangarra",
+   "licencia": "CC BY 2.5 au"
+  },
+  {
+   "titulo": "My Kitchen Panoramic.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:My_Kitchen_Panoramic.jpg",
+   "autor": "Oli R",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Terrytown Louisiana Kitchen Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Terrytown_Louisiana_Kitchen_Interior.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Tukwila - Nelsen Family Residence kitchen 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Tukwila_-_Nelsen_Family_Residence_kitchen_01.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "POL Kuchnia 0001.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:POL_Kuchnia_0001.JPG",
+   "autor": "Alina Zienowicz Ala z",
+   "licencia": "CC BY-SA 3.0"
+  }
+ ]
+}

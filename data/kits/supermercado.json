@@ -1,0 +1,1387 @@
+{
+ "tipologia": "alimentacion",
+ "nombre": "Supermercado",
+ "nota": "El supermercado de pueblo: la frutería y el pan en la entrada, las cajas con su cinta a la derecha, pasillos de góndolas con conservas, arroz, pasta, aceite, galletas, bebidas y limpieza, neveras murales de lácteos y bebidas, congeladores de isla, el mostrador de charcutería y quesos y el almacén al fondo. Marcas inventadas o sin marca. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   9.0,
+   11.4
+  ],
+  "fondo": [
+   15.0,
+   18.0
+  ],
+  "alto": 3.2
+ },
+ "variables": {
+  "xk": "W/2-1.6",
+  "xq": "W/2-3.6",
+  "nT": "Math.floor((D-10.8)/2.04+1e-6)",
+  "nA": "Math.ceil(nT/2)",
+  "zA1": "5.9+1.2+nA*2.04+0.02",
+  "zf": "D-3.7",
+  "za": "D-2.9"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f0eee6",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#c9c6bd",
+ "puntos": {
+  "dependiente": [
+   "xk+0.8",
+   "3.8"
+  ],
+  "mostrador": [
+   "xk-0.9",
+   "3.8"
+  ]
+ },
+ "pedir": "Pagar en caja",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "xq",
+    "2.2"
+   ]
+  },
+  {
+   "id": "fruteria",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "2.2",
+    "xq",
+    "5.9"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xk-0.5",
+    "1.8",
+    "xk+0.5",
+    "5.7"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "xk+0.52",
+    "1.8",
+    "W/2",
+    "5.7"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xq",
+    "1.8",
+    "xk-0.52",
+    "5.9"
+   ]
+  },
+  {
+   "id": "gond_a",
+   "publica": true,
+   "rect": [
+    "-W/2+0.45",
+    "5.9",
+    "W/2-0.45",
+    "zA1"
+   ]
+  },
+  {
+   "id": "gond_b",
+   "publica": true,
+   "rect": [
+    "-W/2+0.45",
+    "zA1-1.2",
+    "W/2-0.45",
+    "zf"
+   ]
+  },
+  {
+   "id": "pared_oeste",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "5.9",
+    "-W/2+0.5",
+    "D-4.1"
+   ]
+  },
+  {
+   "id": "pared_este",
+   "publica": false,
+   "rect": [
+    "W/2-0.5",
+    "5.9",
+    "W/2",
+    "D-4.8"
+   ]
+  },
+  {
+   "id": "neveras",
+   "publica": true,
+   "rect": [
+    "-W/2+3.1",
+    "zf",
+    "W/2-3.1",
+    "D"
+   ]
+  },
+  {
+   "id": "deli",
+   "publica": false,
+   "rect": [
+    "W/2-1.9",
+    "D-4.0",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "deli_frente",
+   "publica": true,
+   "rect": [
+    "W/2-3.0",
+    "D-4.0",
+    "W/2-1.9",
+    "D-0.3"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "za",
+    "-W/2+3.0",
+    "D"
+   ]
+  },
+  {
+   "id": "caja_1",
+   "publica": false,
+   "rect": [
+    "xk-0.5",
+    "1.8",
+    "xk+0.5",
+    "3.75"
+   ]
+  },
+  {
+   "id": "caja_2",
+   "publica": false,
+   "rect": [
+    "xk-0.5",
+    "3.75",
+    "xk+0.5",
+    "5.7"
+   ]
+  },
+  {
+   "id": "s_fruta",
+   "publica": false,
+   "rect": [
+    "-W/2+2.2",
+    "3.1",
+    "-W/2+3.8",
+    "3.7"
+   ]
+  },
+  {
+   "id": "s_pan",
+   "publica": false,
+   "rect": [
+    "-W/2+0.2",
+    "4.2",
+    "-W/2+1.8",
+    "4.8"
+   ]
+  },
+  {
+   "id": "s_conservas",
+   "publica": false,
+   "rect": [
+    "-W/4-0.8",
+    "6.4",
+    "-W/4+0.8",
+    "7.0"
+   ]
+  },
+  {
+   "id": "s_dulces",
+   "publica": false,
+   "rect": [
+    "W/4-0.8",
+    "6.4",
+    "W/4+0.8",
+    "7.0"
+   ]
+  },
+  {
+   "id": "s_bebidas",
+   "publica": false,
+   "rect": [
+    "-W/4-0.8",
+    "zA1+0.7",
+    "-W/4+0.8",
+    "zA1+1.3"
+   ]
+  },
+  {
+   "id": "s_limpieza",
+   "publica": false,
+   "rect": [
+    "W/4-0.8",
+    "zA1+0.7",
+    "W/4+0.8",
+    "zA1+1.3"
+   ]
+  },
+  {
+   "id": "s_lacteos",
+   "publica": false,
+   "rect": [
+    "-1.8",
+    "D-3.6",
+    "-0.2",
+    "D-3.0"
+   ]
+  },
+  {
+   "id": "s_congelados",
+   "publica": false,
+   "rect": [
+    "0.2",
+    "D-3.6",
+    "1.8",
+    "D-3.0"
+   ]
+  },
+  {
+   "id": "s_charcuteria",
+   "publica": false,
+   "rect": [
+    "W/2-3.0",
+    "D-4.4",
+    "W/2-1.4",
+    "D-3.8"
+   ]
+  },
+  {
+   "id": "luces_frente",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "5.9"
+   ]
+  },
+  {
+   "id": "luces_campo",
+   "publica": false,
+   "rect": [
+    "-W/2+0.45",
+    "5.9",
+    "W/2-0.45",
+    "zf"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "za"
+   ],
+   "a": [
+    "-W/2+3.0",
+    "za"
+   ],
+   "puerta": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "-W/2+3.0",
+    "za"
+   ],
+   "a": [
+    "-W/2+3.0",
+    "D"
+   ]
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "caja_super_modulo",
+   "eje": "z",
+   "linea": [
+    "xk",
+    "1.8",
+    "5.7"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "cesta_compra_llena",
+   "en": [
+    "caja_super_modulo"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "separador_cinta",
+   "en": [
+    "caja_super_modulo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "suelo_libre",
+   "obj": "silla_cajera",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "cartel_oferta_2x1",
+   "variantes": [
+    "cartel_oferta_2x1",
+    "cartel_oferta_3x2"
+   ],
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja_1",
+   "regla": "techo",
+   "obj": "numero_caja_1",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja_2",
+   "regla": "techo",
+   "obj": "numero_caja_2",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "prod_garrafa_aceite",
+    "prod_detergente_polvo",
+    "prod_leche_entera",
+    "prod_arroz"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "variantes": [
+    "palet_madera",
+    "transpaleta",
+    "palet_agua"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "variantes": [
+    "pila_cajones_vacios",
+    "carretilla_mano"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "obj": "caja_carton",
+   "cantidad": [
+    1,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "deli",
+   "regla": "modulos",
+   "obj": "mostrador_charcuteria_modulo",
+   "eje": "z",
+   "linea": [
+    "W/2-1.5",
+    "D-4.0",
+    "D-0.3"
+   ],
+   "mira": "-x",
+   "obligatorio": true,
+   "vende": [
+    "torta",
+    "migas",
+    "bocadillo"
+   ]
+  },
+  {
+   "zona": "deli",
+   "regla": "sobre",
+   "obj": "balanza_comercial",
+   "en": [
+    "mostrador_charcuteria_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "deli",
+   "regla": "sobre",
+   "obj": "cortadora_fiambre",
+   "en": [
+    "mostrador_charcuteria_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "deli",
+   "regla": "pared",
+   "obj": "pizarra_charcuteria",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "deli",
+   "regla": "techo",
+   "obj": "jamon_colgado",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_charcuteria",
+   "regla": "techo",
+   "obj": "cartel_seccion_charcuteria",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "neveras",
+   "regla": "contra_pared",
+   "variantes": [
+    "nevera_lacteos",
+    "nevera_bebidas_super"
+   ],
+   "pared": "N",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "neveras",
+   "regla": "sobre",
+   "variantes": [
+    "prod_yogur_natural",
+    "prod_yogur_fresa",
+    "prod_yogur_limon",
+    "prod_mantequilla",
+    "prod_queso_lonchas",
+    "prod_huevos",
+    "prod_nata",
+    "prod_zumo_fresco",
+    "prod_bandeja_carne",
+    "prod_bandeja_pollo",
+    "prod_fiambre_loncheado",
+    "prod_quesito_untable"
+   ],
+   "en": [
+    "nevera_lacteos"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "neveras",
+   "regla": "sobre",
+   "variantes": [
+    "prod_agua_fria",
+    "prod_naranja_fria",
+    "prod_zumo_frio",
+    "prod_cola_fria",
+    "prod_cerveza_fria",
+    "prod_isotonica_fria"
+   ],
+   "en": [
+    "nevera_bebidas_super"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "agua",
+    "refresco",
+    "zumo"
+   ]
+  },
+  {
+   "zona": "neveras",
+   "regla": "suelo_libre",
+   "obj": "congelador_isla",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_lacteos",
+   "regla": "techo",
+   "obj": "cartel_seccion_lacteos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_congelados",
+   "regla": "techo",
+   "obj": "cartel_seccion_congelados",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "neveras",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "neveras",
+   "regla": "pared",
+   "obj": "extintor_super",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "pila_cestas",
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "carrito_compra",
+   "pared": "S",
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "obj": "torre_latas_maiz",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "maiz"
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "palet_agua",
+    "palet_refrescos",
+    "palet_leche",
+    "palet_aceite",
+    "palet_detergente"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "obj": "torre_latas_tomate",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida_super",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "extintor_super",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "camara_cupula",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fruteria",
+   "regla": "contra_pared",
+   "obj": "expositor_pan",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fruteria",
+   "regla": "sobre",
+   "variantes": [
+    "prod_baguettes",
+    "prod_hogazas",
+    "prod_bollos",
+    "prod_pan_molde_artesano"
+   ],
+   "en": [
+    "expositor_pan"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "pan"
+  },
+  {
+   "zona": "fruteria",
+   "regla": "contra_pared",
+   "obj": "mesa_fruteria",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fruteria",
+   "regla": "conjunto",
+   "obj": "mesa_fruteria",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fruteria",
+   "regla": "sobre",
+   "variantes": [
+    "prod_fruta_melocotones",
+    "prod_fruta_melones",
+    "prod_fruta_naranjas",
+    "prod_fruta_manzanas_rojas",
+    "prod_fruta_manzanas_verdes",
+    "prod_fruta_limones",
+    "prod_fruta_tomates",
+    "prod_fruta_cebollas",
+    "prod_fruta_patatas",
+    "prod_fruta_lechugas",
+    "prod_fruta_pimientos",
+    "prod_fruta_zanahorias",
+    "prod_fruta_platanos",
+    "prod_fruta_uvas"
+   ],
+   "en": [
+    "mesa_fruteria"
+   ],
+   "por_soporte": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "fruta",
+    "melon"
+   ]
+  },
+  {
+   "zona": "fruteria",
+   "regla": "pared",
+   "obj": "pizarra_fruteria",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "fruteria",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "s_fruta",
+   "regla": "techo",
+   "obj": "cartel_seccion_fruta",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_pan",
+   "regla": "techo",
+   "obj": "cartel_seccion_pan",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_caja",
+   "regla": "suelo_libre",
+   "obj": "expositor_dulces",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_caja",
+   "regla": "sobre",
+   "variantes": [
+    "prod_chocolate_tabletas",
+    "prod_magdalenas",
+    "prod_perrunillas",
+    "prod_chicles",
+    "prod_caramelos"
+   ],
+   "en": [
+    "expositor_dulces"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "chocolate",
+    "magdalenas",
+    "perrunillas"
+   ]
+  },
+  {
+   "zona": "gond_a",
+   "regla": "filas",
+   "obj": "gondola_super",
+   "eje": "x",
+   "pasillo": 1.2,
+   "margen": [
+    1.0,
+    1.0
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gond_b",
+   "regla": "filas",
+   "obj": "gondola_super",
+   "eje": "x",
+   "pasillo": 1.2,
+   "margen": [
+    1.0,
+    1.0
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "contra_pared",
+   "obj": "estanteria_super_pared",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "contra_pared",
+   "obj": "estanteria_super_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "gond_a",
+   "regla": "sobre",
+   "variantes": [
+    "prod_atun",
+    "prod_sardinillas",
+    "prod_mejillones",
+    "prod_tomate_frito",
+    "prod_maiz",
+    "prod_judias_verdes",
+    "prod_garbanzos_bote",
+    "prod_pimientos_piquillo",
+    "prod_aceitunas",
+    "prod_pepinillos",
+    "prod_mermelada",
+    "prod_miel",
+    "prod_crema_cacao",
+    "prod_melocoton_almibar",
+    "prod_aceite_oliva",
+    "prod_aceite_girasol",
+    "prod_garrafa_aceite",
+    "prod_vinagre",
+    "prod_arroz",
+    "prod_arroz_integral",
+    "prod_espaguetis",
+    "prod_macarrones",
+    "prod_lentejas",
+    "prod_garbanzos_seco",
+    "prod_harina",
+    "prod_azucar",
+    "prod_sal",
+    "prod_cafe_molido",
+    "prod_infusiones",
+    "prod_galletas_maria",
+    "prod_galletas_chocolate",
+    "prod_galletas_crackers",
+    "prod_cereales_a",
+    "prod_cereales_b",
+    "prod_cereales_c",
+    "prod_pan_molde",
+    "prod_snack_patatas",
+    "prod_snack_aperitivos"
+   ],
+   "en": [
+    "gondola_super"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "gond_b",
+   "regla": "sobre",
+   "variantes": [
+    "prod_agua_15",
+    "prod_agua_gas",
+    "prod_cola_15",
+    "prod_naranja_15",
+    "prod_limon_15",
+    "prod_cerveza_pack",
+    "prod_vino_tinto",
+    "prod_vino_blanco",
+    "prod_vino_rosado",
+    "prod_zumo_naranja",
+    "prod_zumo_melocoton",
+    "prod_leche_entera",
+    "prod_leche_semi",
+    "prod_leche_desnatada",
+    "prod_detergente_liquido",
+    "prod_detergente_polvo",
+    "prod_suavizante",
+    "prod_lavavajillas",
+    "prod_lejia",
+    "prod_limpiacristales",
+    "prod_fregasuelos",
+    "prod_papel_higienico",
+    "prod_papel_cocina",
+    "prod_servilletas",
+    "prod_bolsas_basura",
+    "prod_gel_ducha",
+    "prod_champu_super",
+    "prod_dentifrico",
+    "prod_compresas",
+    "prod_esponjas"
+   ],
+   "en": [
+    "gondola_super"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "sobre",
+   "variantes": [
+    "prod_snack_aperitivos",
+    "prod_snack_patatas",
+    "prod_pan_molde",
+    "prod_cereales_c",
+    "prod_cereales_b",
+    "prod_cereales_a",
+    "prod_galletas_crackers",
+    "prod_galletas_chocolate",
+    "prod_galletas_maria",
+    "prod_infusiones",
+    "prod_cafe_molido",
+    "prod_sal",
+    "prod_azucar",
+    "prod_harina",
+    "prod_garbanzos_seco",
+    "prod_lentejas",
+    "prod_macarrones",
+    "prod_espaguetis",
+    "prod_arroz_integral",
+    "prod_arroz",
+    "prod_vinagre",
+    "prod_garrafa_aceite",
+    "prod_aceite_girasol",
+    "prod_aceite_oliva",
+    "prod_melocoton_almibar",
+    "prod_crema_cacao",
+    "prod_miel",
+    "prod_mermelada",
+    "prod_pepinillos",
+    "prod_aceitunas",
+    "prod_pimientos_piquillo",
+    "prod_garbanzos_bote",
+    "prod_judias_verdes",
+    "prod_maiz",
+    "prod_tomate_frito",
+    "prod_mejillones",
+    "prod_sardinillas",
+    "prod_atun",
+    "prod_chocolate_tabletas",
+    "prod_magdalenas",
+    "prod_perrunillas",
+    "prod_chicles",
+    "prod_caramelos"
+   ],
+   "en": [
+    "estanteria_super_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "sobre",
+   "variantes": [
+    "prod_esponjas",
+    "prod_compresas",
+    "prod_dentifrico",
+    "prod_champu_super",
+    "prod_gel_ducha",
+    "prod_bolsas_basura",
+    "prod_servilletas",
+    "prod_papel_cocina",
+    "prod_papel_higienico",
+    "prod_fregasuelos",
+    "prod_limpiacristales",
+    "prod_lejia",
+    "prod_lavavajillas",
+    "prod_suavizante",
+    "prod_detergente_polvo",
+    "prod_detergente_liquido",
+    "prod_leche_desnatada",
+    "prod_leche_semi",
+    "prod_leche_entera",
+    "prod_zumo_melocoton",
+    "prod_zumo_naranja",
+    "prod_vino_rosado",
+    "prod_vino_blanco",
+    "prod_vino_tinto",
+    "prod_cerveza_pack",
+    "prod_limon_15",
+    "prod_naranja_15",
+    "prod_cola_15",
+    "prod_agua_gas",
+    "prod_agua_15"
+   ],
+   "en": [
+    "estanteria_super_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "pared",
+   "obj": "espejo_convexo",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "s_conservas",
+   "regla": "techo",
+   "obj": "cartel_seccion_conservas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_dulces",
+   "regla": "techo",
+   "obj": "cartel_seccion_dulces",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_bebidas",
+   "regla": "techo",
+   "obj": "cartel_seccion_bebidas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "s_limpieza",
+   "regla": "techo",
+   "obj": "cartel_seccion_limpieza",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_frente",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_campo",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "cantidad": [
+    6,
+    6
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   6,
+   9
+  ],
+  "temperatura_k": [
+   3800,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 09:00-14:30,17:00-21:00",
+  "vida": [
+   "cestas junto a la puerta",
+   "cajas de fruta recién puestas",
+   "oferta de latas",
+   "la cola de la caja"
+  ],
+  "cerrado": "persiana bajada, las neveras encendidas"
+ },
+ "minimo_objetos_distintos": 80,
+ "moodboard": [
+  {
+   "titulo": "Supermercado Princesa, nº 519 - interior.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado_Princesa,_n%C2%BA_519_-_interior.JPG",
+   "autor": "Eduardo P",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Supermercado-Aceite de oliva-2009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado-Aceite_de_oliva-2009.jpg",
+   "autor": "Tamorlan",
+   "licencia": "CC BY 3.0"
+  },
+  {
+   "titulo": "Magalluf supermarket (26652599141).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Magalluf_supermarket_(26652599141).jpg",
+   "autor": "Bryan Ledgard",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "SPAR supermarket interior Son Moro Cala Millor Mallorca.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:SPAR_supermarket_interior_Son_Moro_Cala_Millor_Mallorca.jpg",
+   "autor": "Steffen Mokosch",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "SPAR supermarket Mallorca Delicatessen display Son Moro Cala Millor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:SPAR_supermarket_Mallorca_Delicatessen_display_Son_Moro_Cala_Millor.jpg",
+   "autor": "Steffen Mokosch",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of Supeco supermarket in Centro Comercial El Arcangel shopping centre in Córdoba, Spain (55068007519).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Supeco_supermarket_in_Centro_Comercial_El_Arcangel_shopping_centre_in_C%C3%B3rdoba,_Spain_(55068007519).jpg",
+   "autor": "Philip Mallis from Melbourne",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Supermercado.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado.jpg",
+   "autor": "OS2Warp",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Supermercado vazio 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado_vazio_01.jpg",
+   "autor": "Sintegrity",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Supermercado vazio 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado_vazio_02.jpg",
+   "autor": "Sintegrity",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Supermarket produce scale.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermarket_produce_scale.JPG",
+   "autor": "Piotrus (Piotr Konieczny aka Prokonsul Piotrus Talk)",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior de un Supermercado Ley, Mazatlán, 21 de octubre de 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_un_Supermercado_Ley,_Mazatl%C3%A1n,_21_de_octubre_de_2022.jpg",
+   "autor": "El Nuevo Doge",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Supermercado Violeta.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Supermercado_Violeta.jpg",
+   "autor": "TiagoLubiana",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of Supeco supermarket in Centro Comercial El Arcangel shopping centre in Córdoba, Spain (55068114865).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Supeco_supermarket_in_Centro_Comercial_El_Arcangel_shopping_centre_in_C%C3%B3rdoba,_Spain_(55068114865).jpg",
+   "autor": "Philip Mallis from Melbourne",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

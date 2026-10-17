@@ -1,0 +1,214 @@
+{
+ "control_ms": 51492.19999998808,
+ "navigation": [
+  {
+   "bytes": 31915358,
+   "encoded": 31915058,
+   "decoded": 31915058,
+   "response_ms": 22168.899999976158,
+   "dom_ms": 23489.399999976158
+  }
+ ],
+ "motor": [
+  [
+   23533,
+   "inicio",
+   0
+  ],
+  [
+   23589,
+   "Leyendo el callejero de Guareña…",
+   0.03
+  ],
+  [
+   23702,
+   "Encalando fachadas…",
+   0.106
+  ],
+  [
+   25217,
+   "Empedrando calles…",
+   0.176
+  ],
+  [
+   27820,
+   "Levantando la torre de Santa María…",
+   0.232
+  ],
+  [
+   29117,
+   "Colocando tejas árabes…",
+   0.288
+  ],
+  [
+   30394,
+   "Midiendo las aceras…",
+   0.372
+  ],
+  [
+   30973,
+   "Arando los campos de las Vegas…",
+   0.4
+  ],
+  [
+   31553,
+   "Plantando olivos y encinas…",
+   0.512
+  ],
+  [
+   32595,
+   "Levantando baldosas…",
+   0.568
+  ],
+  [
+   32619,
+   "Encendiendo las farolas…",
+   0.61
+  ],
+  [
+   33463,
+   "Despertando a las cigüeñas…",
+   0.694
+  ],
+  [
+   33550,
+   "done",
+   0.75
+  ],
+  [
+   33551,
+   "Poniendo el sol sobre las Vegas…",
+   0.78
+  ],
+  [
+   33596,
+   "Aparcando coches en doble fila…",
+   0.84
+  ],
+  [
+   33694,
+   "Repartiendo encargos por el pueblo…",
+   0.92
+  ],
+  [
+   33910,
+   "Encendiendo el motor…",
+   0.97
+  ],
+  [
+   36571,
+   "Vistiendo a los vecinos…",
+   0.99
+  ],
+  [
+   36581,
+   "¡Listo!",
+   1
+  ]
+ ],
+ "intro": {
+  "start": 36585,
+  "figure": 39019,
+  "skin": 39025,
+  "street": 39395,
+  "flight": 39796
+ },
+ "world": {
+  "start": 0,
+  "Encalando fachadas…": 1516,
+  "Empedrando calles…": 2603,
+  "soldar": 351,
+  "grietas": 369,
+  "Levantando la torre de Santa María…": 1297,
+  "Colocando tejas árabes…": 1277,
+  "bordillos": 75,
+  "tapias": 182,
+  "Midiendo las aceras…": 580,
+  "Arando los campos de las Vegas…": 580,
+  "Plantando olivos y encinas…": 1042,
+  "Levantando baldosas…": 24,
+  "Encendiendo las farolas…": 844,
+  "Despertando a las cigüeñas…": 87
+ },
+ "quality": "alta",
+ "pr": 1.5,
+ "machine": null,
+ "resources": [
+  {
+   "name": "https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap",
+   "bytes": 1047,
+   "ms": 373.30000001192093
+  },
+  {
+   "name": "http://localhost:8920/.cache/perf-beta/base/assets/intro.jpg",
+   "bytes": 599741,
+   "ms": 880.3999999761581
+  },
+  {
+   "name": "http://localhost:8920/.cache/perf-beta/base/assets/intro_cerca.jpg",
+   "bytes": 597341,
+   "ms": 838.8000000119209
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js/+esm",
+   "bytes": 2491,
+   "ms": 630.8999999761581
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm",
+   "bytes": 176973,
+   "ms": 910.8000000119209
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js/+esm",
+   "bytes": 3207,
+   "ms": 531.8999999761581
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/RenderPass.js/+esm",
+   "bytes": 1171,
+   "ms": 637.0999999642372
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js/+esm",
+   "bytes": 1255,
+   "ms": 528.8000000119209
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/objects/Sky.js/+esm",
+   "bytes": 2967,
+   "ms": 530.6000000238419
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js/+esm",
+   "bytes": 14826,
+   "ms": 557.4000000357628
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js/+esm",
+   "bytes": 1872,
+   "ms": 562.5
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/meshopt_decoder.module.js/+esm",
+   "bytes": 6435,
+   "ms": 576.1999999880791
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js/+esm",
+   "bytes": 4764,
+   "ms": 583.6999999880791
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js/+esm",
+   "bytes": 9072,
+   "ms": 645.6999999880791
+  },
+  {
+   "name": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js/+esm",
+   "bytes": 1225,
+   "ms": 526.3000000119209
+  }
+ ],
+ "errors": []
+}

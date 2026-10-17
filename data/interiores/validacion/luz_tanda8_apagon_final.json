@@ -1,0 +1,371 @@
+{
+ "status": "captured_and_invariants_checked_not_visually_approved",
+ "started_utc": "2026-10-17T18:20:22.538485+00:00",
+ "url": "http://localhost:8920/dist/test.html?estilo=plastilina",
+ "package": "dist/test.html",
+ "package_sha256": "9dde78039bac2bfef9556f6a3ee704984f7c32b44bab4c06679f2cea38ce2c6a",
+ "instrument_sha256": "741f8c0a4fa59f61b443233aa7f14d97d093ebea5ab9438f9411ff308860c11b",
+ "shared_instrument_sha256": "9db4a4811fd0569ca7d1ce36b7e6dd9b15e5fcd85465c1018c995fb2be7d05e8",
+ "source_report": ".cache/calidad/tanda8/capturas/report.json",
+ "source_report_sha256": "56f943eb1ae0b6105c101b10ab2ad72bcd3b900242b6307448997ff55bcb6490",
+ "baseline": {
+  "file": ".cache/calidad/tanda8/capturas/before_trastero_blackout_night.png",
+  "sha256": "c9d99b3998b612f20bc58984664f587c27fdff348f609ea5e6972379c9fb23d4"
+ },
+ "initial_candidate": {
+  "file": ".cache/calidad/tanda8/capturas/after_trastero_blackout_night.png",
+  "sha256": "5e36c31106abe258534af2320008becea24dc0601e7ab1f26bf44b4c5e2d5807",
+  "finding": "Too dark: retain original evidence"
+ },
+ "expected_factors_when_powered_false": {
+  "environment": 1,
+  "bounce": 1
+ },
+ "root_sources": {
+  "src/game.js": "d76a693fe8f56cf590aaf172f1896ebb091db956b787d366304c5620a3b68717",
+  "src/luz_vivienda.js": "5587af50a61802f14aede19fe82e2984179592b19a46b2d26a3b4ecd7694cf96"
+ },
+ "errors": [],
+ "street_fixture": {
+  "door": {
+   "seed": 2786,
+   "name": "Casa de Paco y Mari",
+   "x": 874.3220378230882,
+   "z": 43.15859094801093,
+   "fx": 874.4201718684549,
+   "fz": 46.90730668932021
+  },
+  "camera": {
+   "x": 874.2042769686482,
+   "y": 1.65,
+   "z": 38.6601320584398,
+   "objetivo": [
+    874.3377392703469,
+    1.25,
+    43.75838546662042
+   ],
+   "fov": 60
+  },
+  "mapping": "Existing street door; interior model uses the explicitly recorded fixture seed"
+ },
+ "entry": {
+  "seed": 3886,
+  "kit": "vivienda_trastero",
+  "planta": 1,
+  "entrance": {
+   "x": -5202.4285583781075,
+   "z": -5198.8
+  },
+  "windowAttached": true,
+  "clearGlass": true,
+  "life": true
+ },
+ "after_final": {
+  "hour": 23,
+  "night": 1,
+  "quality": "alta",
+  "qualityMode": "manual",
+  "dynRes": false,
+  "exposure": 0.9,
+  "weather": {
+   "cover": 0.42,
+   "over": 0,
+   "rain": 0,
+   "snow": 0,
+   "fog": 0,
+   "fogFar": 3000,
+   "storm": 0,
+   "wind": 0,
+   "windX": 0,
+   "windZ": 0,
+   "flash": 0
+  },
+  "environment": {
+   "forced": true,
+   "updates": 1,
+   "replaced": false,
+   "intensity": 0.45,
+   "timer": 3
+  },
+  "window": {
+   "active": true,
+   "clearGlass": true,
+   "emissive": 0,
+   "outdoor": {
+    "sun": 0.9,
+    "hemi": 1.3
+   },
+   "renderedPasses": [
+    {
+     "main": false,
+     "ambient": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 1.3,
+      "sun": 0.9
+     }
+    }
+   ]
+  },
+  "renderAmbient": {
+   "before": {
+    "environment": 0.45,
+    "bounce": 0,
+    "hemi": 0.23399999999999999,
+    "sun": 0.108
+   },
+   "viewBefore": {
+    "environment": 0.45,
+    "bounce": 0,
+    "hemi": 0.23399999999999999,
+    "sun": 0.108
+   },
+   "insideMain": [
+    {
+     "main": true,
+     "ambient": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     }
+    }
+   ],
+   "viewAfter": {
+    "environment": 0.45,
+    "bounce": 0,
+    "hemi": 0.23399999999999999,
+    "sun": 0.108
+   },
+   "after": {
+    "environment": 0.45,
+    "bounce": 0,
+    "hemi": 0.23399999999999999,
+    "sun": 0.108
+   }
+  },
+  "state": {
+   "kind": "vecino",
+   "profile": "estudiante",
+   "profileSeed": 3886,
+   "layout": "dosPlantas",
+   "powered": false,
+   "origin": {
+    "x": -5200,
+    "z": -5200
+   },
+   "rooms": [
+    {
+     "id": "salon",
+     "type": "salon",
+     "lv": 0,
+     "x0": -5203.628558378108,
+     "z0": -5200,
+     "x1": -5196.371441621892,
+     "z1": -5196.207699004934
+    },
+    {
+     "id": "hall",
+     "type": "hall",
+     "lv": 0,
+     "x0": -5198.671441621892,
+     "z0": -5196.207699004934,
+     "x1": -5196.371441621892,
+     "z1": -5189.192571379756
+    },
+    {
+     "id": "cocina",
+     "type": "cocina",
+     "lv": 0,
+     "x0": -5203.628558378108,
+     "z0": -5196.207699004934,
+     "x1": -5198.671441621892,
+     "z1": -5191.998622429827
+    },
+    {
+     "id": "bano",
+     "type": "bano",
+     "lv": 0,
+     "x0": -5203.628558378108,
+     "z0": -5191.998622429827,
+     "x1": -5198.671441621892,
+     "z1": -5189.192571379756
+    },
+    {
+     "id": "A0",
+     "type": "dormJoven",
+     "lv": 1,
+     "x0": -5203.628558378108,
+     "z0": -5200,
+     "x1": -5196.371441621892,
+     "z1": -5195.007699004933
+    },
+    {
+     "id": "A1",
+     "type": "estudio",
+     "lv": 1,
+     "x0": -5203.628558378108,
+     "z0": -5195.007699004933,
+     "x1": -5198.671441621892,
+     "z1": -5192.707699004934
+    },
+    {
+     "id": "A2",
+     "type": "trastero",
+     "lv": 1,
+     "x0": -5203.628558378108,
+     "z0": -5192.707699004934,
+     "x1": -5198.671441621892,
+     "z1": -5189.192571379756
+    },
+    {
+     "id": "rellano",
+     "type": "hall",
+     "lv": 1,
+     "x0": -5198.671441621892,
+     "z0": -5195.007699004933,
+     "x1": -5196.371441621892,
+     "z1": -5189.192571379756
+    }
+   ],
+   "life": {
+    "attached": true,
+    "t": 0,
+    "tvOn": true,
+    "people": [
+     {
+      "i": 0,
+      "state": "host",
+      "x": -5202.4285583781075,
+      "y": 0,
+      "z": -5197.1,
+      "heading": 3.141592653589793,
+      "visible": true
+     }
+    ]
+   },
+   "houseLights": [
+    {
+     "position": [
+      -5200,
+      2.62,
+      -5198.103849502467
+     ],
+     "intensity": 0,
+     "distance": 13.639762336945909,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5197.521441621892,
+      2.62,
+      -5192.7001351923445
+     ],
+     "intensity": 0,
+     "distance": 7.015127625176682,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5201.15,
+      2.62,
+      -5194.10316071738
+     ],
+     "intensity": 0,
+     "distance": 11.876304811097345,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5201.15,
+      2.62,
+      -5190.595596904792
+     ],
+     "intensity": 0,
+     "distance": 9.696962272316487,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5200,
+      5.52,
+      -5197.503849502466
+     ],
+     "intensity": 0,
+     "distance": 15.649691617881476,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5201.15,
+      5.52,
+      -5193.857699004933
+     ],
+     "intensity": 0,
+     "distance": 8.779137276842274,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5201.15,
+      5.52,
+      -5190.9501351923445
+     ],
+     "intensity": 0,
+     "distance": 10.85321661189714,
+     "decay": 1.6
+    },
+    {
+     "position": [
+      -5197.521441621892,
+      5.52,
+      -5192.100135192345
+     ],
+     "intensity": 0,
+     "distance": 6,
+     "decay": 1.6
+    }
+   ]
+  },
+  "bloom": {
+   "strength": 0.6,
+   "threshold": 0.85,
+   "radius": 0.6
+  },
+  "canvas": [
+   1920,
+   1080
+  ],
+  "pr": 1.5,
+  "camera": {
+   "fov": 68,
+   "position": [
+    -5201.645711675622,
+    4.7,
+    -5190.598622429828
+   ],
+   "rotation": [
+    -0.3969568364896918,
+    -0.3923207288357448,
+    -0.15892673304988883,
+    "XYZ"
+   ],
+   "near": 0.25,
+   "far": 4200,
+   "aspect": 1.7777777777777777
+  },
+  "scene_samples": 4,
+  "composer_samples": 0,
+  "direct": true,
+  "gl_error": 0,
+  "errors": [],
+  "name": "trastero_blackout_night",
+  "file": "after_final_trastero_blackout_night.png",
+  "sha256": "1b013cd7d16cc974a0b5a285c948d29d46d3b59b7a4b44bc6a4f631314214ad3"
+ },
+ "comparability": {
+  "different_invariants": []
+ },
+ "private_context_disposed": true,
+ "finished_utc": "2026-10-17T18:20:48.129256+00:00"
+}

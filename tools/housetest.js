@@ -42,7 +42,8 @@ export async function house(door, opts = {}) {
     // upstairs: only where there is an upper floor (inside the walls of that storey)
     let bx0 = b.x0, bx1 = b.x1, bz0 = b.z0, bz1 = b.z1;
     if (lv) { const S = levels[lv].segs; bx0 = bz0 = Infinity; bx1 = bz1 = -Infinity; for (let i = 0; i < S.length; i += 6) { bx0 = Math.min(bx0, S[i], S[i + 2]); bx1 = Math.max(bx1, S[i], S[i + 2]); bz0 = Math.min(bz0, S[i + 1], S[i + 3]); bz1 = Math.max(bz1, S[i + 1], S[i + 3]); } }
-    for (let x = bx0 + 0.4; x < bx1 - 0.3; x += opts.step || 0.8) {
+    const runsInicial=out.runs;
+    planta: for (let x = bx0 + 0.4; x < bx1 - 0.3; x += opts.step || 0.8) {
       for (let z = bz0 + 0.4; z < bz1 - 0.3; z += opts.step || 0.8) {
         for (const dt of [1 / 60, 1 / 20]) {
           for (const h of dirs) {
@@ -55,7 +56,7 @@ export async function house(door, opts = {}) {
             G.cam.yaw = h + Math.PI; p.heading = h;
             bot.moveY = 1; bot.moveX = 0; bot.sprint = true;
             let px = p.pos.x, pz = p.pos.z;
-            for (let f = 0; f < Math.round(1.1 / dt); f++) {
+            for (let f = 0; f < Math.round((opts.duracion || 1.1) / dt); f++) {
               try { G.frame(dt); } catch (e) { out.error = String(e).slice(0, 200); break; }
               const col = H.levels ? H.levels[H.level] : G.map.collider;
               const c = crosses(col, px, pz, p.pos.x, p.pos.z);
@@ -67,6 +68,7 @@ export async function house(door, opts = {}) {
             out.runs++;
             bot.moveY = 0; bot.sprint = false;
             if (!G.interior) { out.left = true; await I.enter(door, { mode: door.owner ? 'owner' : 'visit', silent: true }); if (I.life) { I.life.dispose(); I.life = null; } }
+            if(opts.maxRunsPorPlanta&&out.runs-runsInicial>=opts.maxRunsPorPlanta)break planta;
           }
         }
         await yieldNow();

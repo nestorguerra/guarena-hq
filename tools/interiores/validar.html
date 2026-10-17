@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Validar interiores</title>
+<!-- The interiors' validator without the game (tools/interiores/validar.py): the kits are laid out and checked, nothing is
+     drawn, so no WebGL is needed — it runs in any headless Chrome, CI's included. -->
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module">
+  await import('/tools/interiores/validar.js');
+  window.__listo = true;
+</script>

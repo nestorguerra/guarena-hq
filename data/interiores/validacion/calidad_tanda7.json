@@ -1,0 +1,64 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 7,
+ "objetivo": 4,
+ "estado": "objetivo_no_alcanzado_sin_mejora_uniforme",
+ "base": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+ "contratos": 33,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 70556,
+  "mallas": 59,
+  "luces": 9,
+  "montaje_ms": 171
+ },
+ "kits": {
+  "cocina": {
+   "ahora": {
+    "A": 2.934,
+    "B": 2.942
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  },
+  "bano": {
+   "ahora": {
+    "A": 2.986,
+    "B": 2.972
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  },
+  "trastero": {
+   "ahora": {
+    "A": 2.868,
+    "B": 2.934
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0,
+  "partida_ficticia_conservada": true
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda7_2026-10-17.md",
+ "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo.",
+ "revision_codigo": "data/interiores/revision_codigo_tanda7_2026-10-17.md",
+ "wc_frontal": {
+  "reserva_m": [
+   0.6,
+   0.65
+  ],
+  "contrato_regresion": "33 contratos, cero fallos; detecta ocupacion deliberada en 3244",
+  "semillas_verificadas": [
+   2786,
+   3244,
+   1594
+  ],
+  "limite": "Hueco fisico y paso general; no certificacion normativa de accesibilidad"
+ },
+ "capturas": "Camaras secundarias corregidas para cobertura. No se atribuyen diferencias de notas solo al juego."
+}

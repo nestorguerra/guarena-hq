@@ -1,0 +1,1138 @@
+{
+ "tipologia": "bar",
+ "nombre": "Bar de pueblo",
+ "nota": "El bar de toda la vida de un pueblo de Extremadura: barra larga con taburetes, vitrina de tapas, jamón en el jamonero y jamones colgados, botelleros, la tele con el fútbol, la tragaperras y la máquina de tabaco, la diana, el futbolín al fondo, la cabeza de ciervo y los carteles de la feria; pocas mesas y las servilletas por el suelo junto a la barra.",
+ "superficie": {
+  "ancho": [
+   6.6,
+   9.0
+  ],
+  "fondo": [
+   9.6,
+   13.5
+  ],
+  "alto": 3.2
+ },
+ "variables": {
+  "xc": "W/2-1.95",
+  "z0": "1.7",
+  "z1": "D-3.8",
+  "zf": "D-2.6"
+ },
+ "paso_libre": 0.9,
+ "pared": "#e8dcc4",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#c9b9a0",
+ "puntos": {
+  "dependiente": [
+   "xc+0.75",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.95",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir en la barra",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "xc-0.4",
+    "1.1"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "trasbarra",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "zf"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.1",
+    "xc-1.35",
+    "zf-1.1"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": true,
+   "rect": [
+    "-W/2+2.25",
+    "zf-1.1",
+    "xc-0.35",
+    "D"
+   ]
+  },
+  {
+   "id": "aseo",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "D-2.4",
+    "-W/2+2.1",
+    "D"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "xc-0.35",
+    "zf",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2+2.1",
+    "D-2.4"
+   ],
+   "a": [
+    "-W/2+2.1",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "-W/2",
+    "D-2.4"
+   ],
+   "a": [
+    "-W/2+2.1",
+    "D-2.4"
+   ],
+   "puerta": [
+    0.55,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xc-0.35",
+    "zf"
+   ],
+   "a": [
+    "xc-0.35",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "xc-0.35",
+    "zf"
+   ],
+   "a": [
+    "W/2",
+    "zf"
+   ],
+   "puerta": [
+    "0.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "(z0+z1)/2-0.55",
+    "xc-0.3",
+    "(z0+z1)/2+0.55"
+   ],
+   "nota": "el sitio para pedir en la barra, junto a la caja: sin taburetes"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "obj": "barra_modulo",
+   "regla": "modulos",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "vitrina_tapas",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "jamonero",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "tirador_cerveza",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "caja_registradora",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "servilletero",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "por_m": [
+    0.3,
+    0.5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "palillero",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "barra",
+   "obj": "datafono",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "obj": "bote_propinas",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "obj": "cubo_botellines",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "variantes": [
+    "plato_tortilla",
+    "cuenco_aceitunas",
+    "plato_jamon",
+    "jarra_cerveza",
+    "vaso_cana",
+    "copa_vino",
+    "taza_cafe",
+    "servilleta_arrugada",
+    "vaso_tubo"
+   ],
+   "regla": "vida",
+   "en": [
+    "barra_modulo"
+   ],
+   "fraccion": [
+    0.6,
+    0.9
+   ],
+   "por_soporte": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "periodico",
+   "regla": "sobre",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "nota": "el periódico del día, en la punta de la barra"
+  },
+  {
+   "zona": "frente_barra",
+   "obj": "taburete_alto",
+   "regla": "fila",
+   "eje": "z",
+   "linea": [
+    "xc-0.68",
+    "z0+0.3",
+    "z1-0.3"
+   ],
+   "cada": 0.6,
+   "mira": "+x",
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_barra",
+   "obj": "papel_suelo",
+   "regla": "suelo_libre",
+   "cantidad": [
+    2,
+    5
+   ],
+   "obligatorio": true,
+   "nota": "servilletas tiradas al pie de la barra"
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "nevera_bebidas",
+   "regla": "contra_pared",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "lavavajillas",
+   "regla": "contra_pared",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "mueble_trasbarra",
+   "regla": "contra_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "botellero_pared",
+   "regla": "pared",
+   "pared": "E",
+   "cada": 1.25,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "estante_vajilla",
+   "regla": "pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "cafetera_industrial",
+   "regla": "sobre",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "molinillo",
+   "regla": "sobre",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "exprimidor",
+   "regla": "sobre",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "tostadora",
+   "regla": "sobre",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "microondas",
+   "regla": "sobre",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "variantes": [
+    "botella_whisky",
+    "botella_ron",
+    "botella_ginebra",
+    "botella_anis",
+    "botella_brandy",
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "botella_vermut",
+    "botella_licor_hierbas",
+    "botella_pacharan",
+    "botella_agua_mineral",
+    "botella_refresco_cola",
+    "botella_refresco_naranja",
+    "botella_cerveza",
+    "botella_mosto"
+   ],
+   "regla": "sobre",
+   "en": [
+    "botellero_pared"
+   ],
+   "relleno": [
+    0.7,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "variantes": [
+    "taza_cafe",
+    "taza_desayuno",
+    "vaso_cana",
+    "vaso_tubo",
+    "copa_vino",
+    "plato_cafe"
+   ],
+   "regla": "sobre",
+   "en": [
+    "estante_vajilla"
+   ],
+   "relleno": [
+    0.7,
+    0.9
+   ],
+   "todas": true
+  },
+  {
+   "zona": "trasbarra",
+   "obj": "calendario_pared",
+   "regla": "pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "obj": "planta_grande",
+   "regla": "esquina",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "obj": "papelera",
+   "regla": "esquina",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "obj": "perchero",
+   "regla": "esquina",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "obj": "expositor_patatas",
+   "regla": "contra_pared",
+   "pared": "S",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "obj": "revistero",
+   "regla": "contra_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "obj": "mesa_cuadrada",
+   "variantes": [
+    "mesa_cuadrada",
+    "mesa_redonda"
+   ],
+   "regla": "conjunto",
+   "sillas": {
+    "variantes": [
+     "silla_bistro",
+     "silla_madera"
+    ],
+    "n": [
+     2,
+     4
+    ]
+   },
+   "por_m2": [
+    0.06,
+    0.14
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "obj": "mesa_barril",
+   "regla": "conjunto",
+   "sillas": {
+    "variantes": [
+     "taburete_alto"
+    ],
+    "n": [
+     2,
+     3
+    ]
+   },
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "obj": "servilletero",
+   "regla": "sobre",
+   "en": [
+    "mesa_cuadrada",
+    "mesa_redonda"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "variantes": [
+    "vaso_cana",
+    "jarra_cerveza",
+    "plato_tortilla",
+    "cuenco_aceitunas",
+    "copa_vino",
+    "servilleta_arrugada",
+    "taza_cafe",
+    "periodico"
+   ],
+   "regla": "vida",
+   "en": [
+    "mesa_cuadrada",
+    "mesa_redonda",
+    "mesa_barril"
+   ],
+   "fraccion": [
+    0.3,
+    0.6
+   ],
+   "por_soporte": [
+    1,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "variantes": [
+    "cartel_toros",
+    "cabeza_ciervo",
+    "cuadro_foto_antigua",
+    "cuadro_paisaje"
+   ],
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "obj": "pizarra_tapas",
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "obj": "televisor_pared",
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "obj": "lampara_colgante",
+   "regla": "techo",
+   "por_m2": [
+    0.05,
+    0.08
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "obj": "ventilador_techo",
+   "regla": "techo",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "lampara_colgante",
+   "regla": "techo",
+   "por_m": [
+    0.3,
+    0.4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "obj": "jamon_colgado",
+   "regla": "techo",
+   "por_m": [
+    0.3,
+    0.5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "obj": "tragaperras",
+   "regla": "contra_pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "obj": "maquina_tabaco",
+   "regla": "contra_pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "obj": "diana",
+   "regla": "pared",
+   "pared": [
+    "N",
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "obj": "futbolin",
+   "regla": "suelo_libre",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "obj": "reloj_pared",
+   "regla": "pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "obj": "lampara_colgante",
+   "regla": "techo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "inodoro",
+   "regla": "contra_pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "escobilla",
+   "regla": "esquina",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "aseo",
+   "obj": "lavabo",
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "espejo_aseo",
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "lavabo"
+  },
+  {
+   "zona": "aseo",
+   "obj": "dispensador_jabon",
+   "regla": "pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "secamanos",
+   "regla": "pared",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "portarrollos",
+   "regla": "pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "papelera",
+   "regla": "esquina",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "obj": "lampara_colgante",
+   "regla": "techo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "obj": "estanteria_metalica",
+   "regla": "contra_pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "variantes": [
+    "caja_carton",
+    "saco_cafe",
+    "caja_vasos"
+   ],
+   "regla": "sobre",
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.85
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "obj": "barril_cerveza",
+   "regla": "suelo_libre",
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "obj": "caja_bebidas",
+   "regla": "suelo_libre",
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "obj": "fregona_cubo",
+   "regla": "esquina",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "obj": "escoba",
+   "regla": "esquina",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "obj": "lampara_colgante",
+   "regla": "techo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   2700,
+   3400
+  ],
+  "dia": {
+   "intensidad": 0.75
+  },
+  "noche": {
+   "intensidad": 0.95
+  },
+  "minimo_lux_publico": 80
+ },
+ "ambiente": {
+  "sonido": "bar",
+  "horario_defecto": "Mo-Su 08:00-24:00",
+  "vida": [
+   "servilletas en el suelo",
+   "tapas en la barra",
+   "el fútbol en la tele",
+   "la tragaperras sonando"
+  ],
+  "cerrado": "taburetes sobre la barra, persiana bajada",
+  "clientela": {
+   "maximo": 8,
+   "horas": [
+    [
+     8,
+     11,
+     0.2
+    ],
+    [
+     11,
+     14,
+     0.4
+    ],
+    [
+     14,
+     17,
+     0.3
+    ],
+    [
+     17,
+     20,
+     0.35
+    ],
+    [
+     20,
+     24,
+     0.55
+    ]
+   ],
+   "frases": [
+    "Ponme otra caña, que hace un calor que no se puede.",
+    "¿Has visto el partido? Vaya penalti más claro.",
+    "Este año la vendimia viene buena, ya verás.",
+    "Mañana temprano, a por espárragos al pantano.",
+    "Otra ronda, que esta la pago yo.",
+    "¿Echamos una partida de dominó?",
+    "El tractor, otra vez en el taller…",
+    "En la feria de San Gregorio, a ver quién toca este año.",
+    "Qué buenas estaban hoy las migas.",
+    "Como no llueva pronto, este año no hay cosecha.",
+    "Anda, ponnos unos pinchitos."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Interior (Bodega Peñacoba, siglo XV Bar de tapas y restaurante) pic.aa.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_(Bodega_Pe%C3%B1acoba,_siglo_XV_Bar_de_tapas_y_restaurante)_pic.aa.jpg",
+   "autor": "David Adam Kess",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior (Bodega Peñacoba, siglo XV Bar de tapas y restaurante) pic.aa12.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_(Bodega_Pe%C3%B1acoba,_siglo_XV_Bar_de_tapas_y_restaurante)_pic.aa12.jpg",
+   "autor": "David Adam Kess",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "CasaPugaAlmería100.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:CasaPugaAlmer%C3%ADa100.jpg",
+   "autor": "Pablo Enzo",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "La Rentaora Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:La_Rentaora_Interior.jpg",
+   "autor": "Heather Cowper from Bristol, UK",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Palo Santo Cafe, Aranda de Duero, interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Palo_Santo_Cafe,_Aranda_de_Duero,_interior.jpg",
+   "autor": "David Adam Kess",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of Taberna San Ysidro - Madrid - Spain - 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Taberna_San_Ysidro_-_Madrid_-_Spain_-_01.jpg",
+   "autor": "Adam Jones, Ph.D.",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior of Taberna San Ysidro - Madrid - Spain - 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Taberna_San_Ysidro_-_Madrid_-_Spain_-_02.jpg",
+   "autor": "Adam Jones, Ph.D.",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Taberna La Carmencita (Madrid) 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Taberna_La_Carmencita_(Madrid)_01.jpg",
+   "autor": "Luis García (Zaqarbal)",
+   "licencia": "CC BY-SA 3.0 es"
+  },
+  {
+   "titulo": "Taberna Stop - Barrio de las Letras 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Taberna_Stop_-_Barrio_de_las_Letras_03.jpg",
+   "autor": "Triplecaña",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Taberna Stop - Barrio de las Letras 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Taberna_Stop_-_Barrio_de_las_Letras_04.jpg",
+   "autor": "Triplecaña",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Azulejos en la Taberna El Madroño 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Azulejos_en_la_Taberna_El_Madro%C3%B1o_1.jpg",
+   "autor": "Riozujar",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Taberna de Antonio-Sánchez-2009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Taberna_de_Antonio-S%C3%A1nchez-2009.jpg",
+   "autor": "Tamorlan",
+   "licencia": "CC BY 3.0"
+  }
+ ]
+}

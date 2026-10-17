@@ -1,0 +1,37 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 8,
+ "objetivo": 4,
+ "estado": "mejora_de_contraste_acotada_objetivo_no_alcanzado",
+ "base": "44e3de33d69b5cf2a4822bc7abe8ed146fdc7fa8",
+ "cambio": "Ambiente y rebote reducidos durante render doméstico en Plastilina, excepto casas sin electricidad. Restauración al finalizar.",
+ "pruebas_nuevas": {
+  "contratos_luz": 9,
+  "pares_visuales": 8,
+  "apagon_final_paquete": "data/interiores/validacion/luz_tanda8_apagon_final.json",
+  "integracion_paquete_candidato_inicial_errores": 0,
+  "marcas_paquete_final_errores": 0
+ },
+ "evidencia_geometria_previa": "data/interiores/validacion/calidad_tanda7.json; geometría sin cambios y no se repiten 200 casas",
+ "kits": {
+  "cocina": {
+   "A": 3.04,
+   "B": 3.042
+  },
+  "bano": {
+   "A": 3.152,
+   "B": 3.018
+  },
+  "trastero": {
+   "A": 2.938,
+   "B": 2.7
+  }
+ },
+ "revision_independiente": "data/interiores/revision_luz_tanda8_2026-10-17.md",
+ "limites": [
+  "No mejora uniforme de notas. Ninguna alcanza 4.",
+  "Plafón sigue lavado.",
+  "Residente ocluye encimera en comparación nocturna de cocina.",
+  "No se recertifican otras 14 fichas tras el render compartido."
+ ]
+}

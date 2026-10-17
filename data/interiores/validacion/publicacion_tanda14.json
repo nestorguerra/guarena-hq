@@ -1,0 +1,65 @@
+{
+ "tanda": 14,
+ "fecha": "2026-10-17T23:03:41.795728+00:00",
+ "estado": "publicada_y_verificada",
+ "commit": "feb5ca0ae15d638b17312b1cc790268856fb661b",
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=feb5ca0ae15d638b17312b1cc790268856fb661b",
+ "ci": {
+  "run": 39076081332,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39076081332",
+  "arbol_ci_y_head_identico": "26f4b569317df4f487ba8d5a6fd2fe5bc8d6bc4b"
+ },
+ "pages": {
+  "run": 39076312316,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39076312316"
+ },
+ "integracion": {
+  "informe": "data/interiores/validacion/integracion_publica_tanda14.json",
+  "sha256": "e08bf95e8757adab072bed5bd53f2cd8a3ff447b904ed3ee2ef3344ac1c51437",
+  "casas": 8,
+  "consola_errores": 0,
+  "acciones_annie": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "comercios": [
+   {
+    "tipo": "bar",
+    "acciones": 1
+   },
+   {
+    "tipo": "cafeteria",
+    "acciones": 1
+   },
+   {
+    "tipo": "farmacia",
+    "acciones": 1
+   }
+  ],
+  "recarga_conservada": true
+ },
+ "botin_publico": {
+  "informe": "data/interiores/validacion/botin_publico_tanda14.json",
+  "sha256": "61c0b87e47498aea4fac39855535fbb02e577113b765413cffd614b4e9f0498c",
+  "estado": "PASS",
+  "alcance": "selector real, recompensa y recarga; residentes retirados",
+  "cinematica": "omitida por reanudación de pruebas",
+  "guardado_artificial": false
+ },
+ "revision_http_tras_botin": "feb5ca0ae15d638b17312b1cc790268856fb661b",
+ "visual": {
+  "A": 3.552,
+  "B": 3.41,
+  "objetivo_4_alcanzado": false
+ },
+ "limites": "Muestras en M1; no demuestra rendimiento universal ni calidad visual4/5. El contrato público de botín omite cinemática expresamente; la integración pública sí completa el arranque de su instrumento."
+}

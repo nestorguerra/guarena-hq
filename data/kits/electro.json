@@ -1,0 +1,927 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Electrodomésticos e imagen y sonido",
+ "nota": "La tienda de electrodomésticos y electrónica de un pueblo de las Vegas Altas: el mostrador con la caja, los cargadores y los auriculares junto a la puerta; frigoríficos y lavadoras en hilera contra la pared izquierda, cocinas, lavavajillas y estanterías de pequeños aparatos a la derecha; en el centro islas de pequeño electrodoméstico, ventiladores, radios y lámparas; al fondo el muro de televisores sobre el tabique del almacén. Luz fría de tienda. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.6,
+   8.1
+  ],
+  "fondo": [
+   9.9,
+   12.3
+  ],
+  "alto": 3.2
+ },
+ "variables": {
+  "xc": "W/2-1.7",
+  "z0": "1.6",
+  "z1": "4.1",
+  "zp": "D-3.0"
+ },
+ "paso_libre": 0.9,
+ "pared": "#eeeeea",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#c9c9c4",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.95",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir presupuesto o pagar en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "tras",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "1.3",
+    "W/2",
+    "4.4"
+   ]
+  },
+  {
+   "id": "pared_w",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "-W/2+0.95",
+    "zp"
+   ]
+  },
+  {
+   "id": "pared_e",
+   "publica": false,
+   "rect": [
+    "W/2-0.95",
+    "4.9",
+    "W/2",
+    "zp"
+   ]
+  },
+  {
+   "id": "centro",
+   "publica": true,
+   "rect": [
+    "-W/2+0.95",
+    "1.3",
+    "W/2-0.95",
+    "zp-2.3"
+   ]
+  },
+  {
+   "id": "tv",
+   "publica": true,
+   "rect": [
+    "-W/2+0.95",
+    "zp-2.3",
+    "W/2-0.95",
+    "zp"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zp",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "zp"
+   ]
+  },
+  {
+   "id": "luces_almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zp",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zp"
+   ],
+   "a": [
+    "W/2",
+    "zp"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pedir en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "ele_mostrador",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "ele_cargadores_exp",
+   "en": [
+    "ele_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "cargador"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "ele_auriculares_exp",
+   "en": [
+    "ele_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "auriculares"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "ele_linternas_exp",
+   "en": [
+    "ele_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "linterna"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "ele_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "ele_catalogo",
+    "datafono",
+    "ele_radio_despertador",
+    "ele_altavoz_bluetooth",
+    "bote_propinas"
+   ],
+   "en": [
+    "ele_mostrador"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "contra_pared",
+   "obj": "ele_estanteria_baja",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "variantes": [
+    "ele_bombillas_exp",
+    "ele_flexo",
+    "ele_lamparita_mesa",
+    "ele_radio_portatil",
+    "ele_cargadores_exp",
+    "ele_linternas_exp"
+   ],
+   "en": [
+    "ele_estanteria_baja"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tras",
+   "regla": "pared",
+   "obj": "ele_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "suelo_libre",
+   "variantes": [
+    "silla_cajera",
+    "taburete_alto"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_w",
+   "regla": "contra_pared",
+   "variantes": [
+    "ele_frigorifico_combi_blanco",
+    "ele_frigorifico_combi_inox",
+    "ele_frigorifico_combi_negro",
+    "ele_frigorifico_dos_puertas",
+    "ele_frigorifico_americano",
+    "ele_congelador_vertical",
+    "ele_frigorifico_bajo",
+    "ele_arcon_congelador"
+   ],
+   "pared": "W",
+   "cantidad": [
+    3,
+    5
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "sobre",
+   "variantes": [
+    "ele_catalogo",
+    "ele_lamparita_mesa"
+   ],
+   "en": [
+    "ele_arcon_congelador",
+    "ele_frigorifico_bajo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_w",
+   "regla": "contra_pared",
+   "variantes": [
+    "ele_lavadora_blanca",
+    "ele_lavadora_inox",
+    "ele_secadora",
+    "ele_lavasecadora",
+    "ele_lavadora_carga_superior",
+    "ele_lavavajillas_blanco",
+    "ele_lavavajillas_inox"
+   ],
+   "pared": "W",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "sobre",
+   "variantes": [
+    "ele_catalogo",
+    "ele_flexo",
+    "ele_radio_despertador"
+   ],
+   "en": [
+    "ele_lavadora_blanca",
+    "ele_lavadora_inox",
+    "ele_secadora",
+    "ele_lavasecadora",
+    "ele_lavadora_carga_superior"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "pared_e",
+   "regla": "contra_pared",
+   "obj": "ele_estanteria_pequenos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "sobre",
+   "variantes": [
+    "ele_ap_cafetera_goteo",
+    "ele_ap_cafetera_capsulas",
+    "ele_ap_tostadora",
+    "ele_ap_batidora_mano",
+    "ele_ap_robot_cocina",
+    "ele_ap_plancha_ropa",
+    "ele_ap_aspirador_escoba",
+    "ele_ap_hervidor",
+    "ele_ap_freidora_aire",
+    "ele_ap_exprimidor",
+    "ele_ap_picadora",
+    "ele_ap_olla_arroz",
+    "ele_ap_secador_pelo",
+    "ele_ap_afeitadora",
+    "ele_ap_bascula_bano",
+    "ele_ap_batidora_vaso"
+   ],
+   "en": [
+    "ele_estanteria_pequenos"
+   ],
+   "relleno": [
+    0.85,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "contra_pared",
+   "variantes": [
+    "ele_cocina_vitro",
+    "ele_cocina_inox",
+    "ele_torre_horno",
+    "ele_lavavajillas_blanco",
+    "ele_lavavajillas_inox",
+    "ele_frigorifico_bajo"
+   ],
+   "pared": "E",
+   "llenar": true,
+   "todas": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "pared",
+   "obj": "ele_campana_pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "obj": "ele_isla_pequenos",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "ele_ap_cafetera_goteo",
+    "ele_ap_cafetera_capsulas",
+    "ele_ap_tostadora",
+    "ele_ap_batidora_mano",
+    "ele_ap_robot_cocina",
+    "ele_ap_plancha_ropa",
+    "ele_ap_aspirador_escoba",
+    "ele_ap_hervidor",
+    "ele_ap_freidora_aire",
+    "ele_ap_exprimidor",
+    "ele_ap_picadora",
+    "ele_ap_olla_arroz",
+    "ele_ap_secador_pelo",
+    "ele_ap_afeitadora",
+    "ele_ap_bascula_bano",
+    "ele_ap_batidora_vaso"
+   ],
+   "en": [
+    "ele_isla_pequenos"
+   ],
+   "por_soporte": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "ele_radio_clasica",
+    "ele_radio_portatil",
+    "ele_radio_despertador",
+    "ele_equipo_musica",
+    "ele_altavoz_bluetooth"
+   ],
+   "en": [
+    "ele_isla_pequenos"
+   ],
+   "por_soporte": [
+    0,
+    1
+   ],
+   "vende": "radio"
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "ele_ventilador_sobremesa",
+    "ele_lamparita_mesa",
+    "ele_flexo"
+   ],
+   "en": [
+    "ele_isla_pequenos"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "vende": [
+    "ventilador",
+    "lamparita"
+   ]
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "ele_ventilador_pie",
+    "ele_ventilador_torre",
+    "ele_aire_portatil"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "ventilador"
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "obj": "ele_lampara_pie_led",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true,
+   "vende": "lampara"
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "ele_arcon_congelador",
+    "ele_caja_nevera"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "centro",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "ele_carretilla_electro",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "variantes": [
+    "ele_cartel_nevera",
+    "ele_cartel_lavadora",
+    "ele_cartel_tv"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tv",
+   "regla": "pared",
+   "obj": "ele_pared_pantallas",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tv",
+   "regla": "pared",
+   "variantes": [
+    "ele_tv_pared_65",
+    "ele_tv_pared_55",
+    "ele_tv_pared_50",
+    "ele_tv_pared_43",
+    "ele_tv_pared_32"
+   ],
+   "pared": "N",
+   "cada": 1.45,
+   "maximo": 4,
+   "todas": true
+  },
+  {
+   "zona": "tv",
+   "regla": "pared",
+   "obj": "ele_pantalla_ofertas",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tv",
+   "regla": "suelo_libre",
+   "obj": "ele_plinto_tv",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tv",
+   "regla": "sobre",
+   "variantes": [
+    "ele_tv_peana_32",
+    "ele_tv_peana_43",
+    "ele_tv_peana_50"
+   ],
+   "en": [
+    "ele_plinto_tv"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "tele"
+  },
+  {
+   "zona": "tv",
+   "regla": "sobre",
+   "variantes": [
+    "ele_barra_sonido",
+    "ele_altavoz_torre",
+    "ele_equipo_musica"
+   ],
+   "en": [
+    "ele_plinto_tv"
+   ],
+   "por_soporte": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tv",
+   "regla": "suelo_libre",
+   "variantes": [
+    "ele_altavoz_torre",
+    "ele_ventilador_torre"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "ele_ap_robot_cocina",
+    "ele_ap_freidora_aire",
+    "ele_ap_aspirador_escoba",
+    "caja_carton",
+    "ele_ap_cafetera_capsulas"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "variantes": [
+    "ele_caja_lavadora",
+    "ele_caja_nevera",
+    "ele_caja_tv",
+    "ele_caja_cocina"
+   ],
+   "cantidad": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "variantes": [
+    "palet_madera",
+    "transpaleta",
+    "ele_carretilla_electro"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.1,
+    0.13
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_almacen",
+   "regla": "techo",
+   "obj": "regleta_led",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   5,
+   9
+  ],
+  "temperatura_k": [
+   3800,
+   4300
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 10:00-13:45,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "la tele del escaparate encendida",
+   "una lavadora con la etiqueta de oferta",
+   "cajas apiladas junto al almacén",
+   "el catálogo del mes"
+  ],
+  "cerrado": "persiana bajada, las pantallas apagadas"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Household appliances store in tehran.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_1.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 10.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_10.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 11.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_11.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 12.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_12.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_2.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Household appliances store in tehran 3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Household_appliances_store_in_tehran_3.jpg",
+   "autor": "Masod Shahrestani",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Speed Queen washers + dryers in a store.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Speed_Queen_washers_%2B_dryers_in_a_store.jpg",
+   "autor": "Scott Brody",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "The appliances section of a Home Depot store in Blairsville, Ga.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:The_appliances_section_of_a_Home_Depot_store_in_Blairsville,_Ga.jpg",
+   "autor": "Harrison Keely",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Coop kjøkken & hjem 2001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Coop_kj%C3%B8kken_%26_hjem_2001.jpg",
+   "autor": "Coop Norge SA",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Coop kjøkken & hjem 2003.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Coop_kj%C3%B8kken_%26_hjem_2003.jpg",
+   "autor": "Coop Norge SA",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Kuechengeraet 002 2022 05 18.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kuechengeraet_002_2022_05_18.jpg",
+   "autor": "Friedrich Haag",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

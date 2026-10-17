@@ -1,0 +1,1120 @@
+{
+ "tipologia": "gimnasio",
+ "nombre": "Gimnasio",
+ "nota": "El gimnasio de un pueblo de las Vegas Altas en una nave de techo alto: la recepción y la nevera de bebidas junto a la puerta; las cintas, elípticas y bicicletas en fila contra la pared de la izquierda, de cara a las teles; las máquinas de pesas contra la de la derecha; en el centro el suelo para esterillas, pelotas y el saco de boxeo colgado del techo; al fondo el peso libre (soportes de mancuernas, de pesas rusas, rack de sentadilla, bancos, discos) bajo un gran espejo; y el vestuario, con taquillas, duchas y un banco, tras un tabique. La puerta de la calle en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   8.7,
+   10.2
+  ],
+  "fondo": [
+   12.3,
+   14.7
+  ],
+  "alto": 3.4
+ },
+ "variables": {
+  "zv": "D-3.8",
+  "xv": "-W/2+3.8",
+  "zc": "D-4.2"
+ },
+ "paso_libre": 0.9,
+ "pared": "#e6e9eb",
+ "suelo": "concrete_floor_damaged_01",
+ "suelo_color": "#b4b8bb",
+ "puntos": {
+  "dependiente": [
+   "W/2-0.55",
+   "3.3"
+  ],
+  "mostrador": [
+   "W/2-2.7",
+   "3.3"
+  ]
+ },
+ "pedir": "Recepción: cuota, bebidas y entrenar",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2-2.3",
+    "2.0"
+   ]
+  },
+  {
+   "id": "entrada_e",
+   "publica": true,
+   "rect": [
+    "W/2-2.3",
+    "0",
+    "W/2",
+    "2.0"
+   ]
+  },
+  {
+   "id": "recepcion",
+   "publica": false,
+   "rect": [
+    "W/2-2.2",
+    "2.1",
+    "W/2-1.0",
+    "4.5"
+   ]
+  },
+  {
+   "id": "tras_recepcion",
+   "publica": false,
+   "rect": [
+    "W/2-1.0",
+    "2.1",
+    "W/2",
+    "4.5"
+   ]
+  },
+  {
+   "id": "cardio",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "2.1",
+    "-W/2+2.2",
+    "zc"
+   ]
+  },
+  {
+   "id": "boxeo",
+   "publica": true,
+   "rect": [
+    "-W/2+0.5",
+    "0.3",
+    "-W/2+2.4",
+    "2.0"
+   ]
+  },
+  {
+   "id": "centro",
+   "publica": true,
+   "rect": [
+    "-W/2+2.3",
+    "2.1",
+    "W/2-2.5",
+    "zc"
+   ]
+  },
+  {
+   "id": "maquinas",
+   "publica": true,
+   "rect": [
+    "W/2-2.4",
+    "4.9",
+    "W/2",
+    "zc"
+   ]
+  },
+  {
+   "id": "pesolibre",
+   "publica": true,
+   "rect": [
+    "-W/2+3.9",
+    "D-4.0",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "vestuario",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "zv",
+    "xv",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zv"
+   ],
+   "a": [
+    "xv",
+    "zv"
+   ],
+   "puerta": [
+    2.5,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xv",
+    "zv"
+   ],
+   "a": [
+    "xv",
+    "D"
+   ]
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "boxeo",
+   "regla": "techo",
+   "obj": "saco_boxeo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "boxeo",
+   "regla": "suelo_libre",
+   "obj": "guantes_boxeo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "boxeo",
+   "regla": "suelo_libre",
+   "obj": "colchoneta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "recepcion",
+   "regla": "modulos",
+   "obj": "mostrador_gimnasio_modulo",
+   "eje": "z",
+   "linea": [
+    "W/2-1.6",
+    "2.1",
+    "4.5"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "recepcion",
+   "regla": "sobre",
+   "variantes": [
+    "toalla_doblada",
+    "bidon_agua",
+    "bote_caramelos",
+    "bote_proteina_choco",
+    "bote_proteina_vainilla",
+    "bote_proteina_fresa",
+    "datafono"
+   ],
+   "en": [
+    "mostrador_gimnasio_modulo"
+   ],
+   "cantidad": [
+    3,
+    5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_recepcion",
+   "regla": "suelo_libre",
+   "obj": "silla_oficina",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "tras_recepcion",
+   "regla": "pared",
+   "obj": "cartel_clases",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_recepcion",
+   "regla": "pared",
+   "obj": "cartel_tarifas",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_recepcion",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_recepcion",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada_e",
+   "regla": "contra_pared",
+   "obj": "nevera_bebidas",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": [
+    "agua",
+    "isotonica"
+   ]
+  },
+  {
+   "zona": "entrada_e",
+   "regla": "contra_pared",
+   "obj": "estante_suplementos",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada_e",
+   "regla": "sobre",
+   "variantes": [
+    "bote_proteina_choco",
+    "bote_proteina_vainilla",
+    "bote_proteina_fresa"
+   ],
+   "en": [
+    "estante_suplementos"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true
+  },
+  {
+   "zona": "entrada_e",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "fuente_agua",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_normas_gimnasio",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "espejo_gimnasio_alto",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "perchero_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "bascula_gimnasio",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "cardio",
+   "regla": "contra_pared",
+   "obj": "cinta_correr",
+   "pared": "W",
+   "cantidad": [
+    3,
+    3
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "cardio",
+   "regla": "contra_pared",
+   "obj": "eliptica",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "cardio",
+   "regla": "contra_pared",
+   "obj": "bici_estatica",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "cardio",
+   "regla": "contra_pared",
+   "obj": "bici_ciclo_indoor",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "cardio",
+   "regla": "contra_pared",
+   "variantes": [
+    "cinta_correr",
+    "bici_ciclo_indoor",
+    "eliptica",
+    "bici_estatica"
+   ],
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ],
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "cardio",
+   "regla": "pared",
+   "obj": "tv_gimnasio",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cardio",
+   "regla": "pared",
+   "obj": "altavoz_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "cardio",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "maquinas",
+   "regla": "contra_pared",
+   "obj": "multiestacion",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "maquinas",
+   "regla": "contra_pared",
+   "obj": "prensa_piernas",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "maquinas",
+   "regla": "contra_pared",
+   "obj": "polea_alta",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ],
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "maquinas",
+   "regla": "contra_pared",
+   "obj": "pec_deck",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ],
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "maquinas",
+   "regla": "contra_pared",
+   "obj": "remo_maquina",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ],
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "maquinas",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "obj": "estructura_dominadas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "obj": "colchoneta",
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pera_boxeo",
+    "pelota_pilates",
+    "media_pelota_equilibrio",
+    "esterilla_yoga",
+    "step_aerobic",
+    "rodillo_espuma",
+    "comba",
+    "gomas_elasticas",
+    "bolsa_deporte",
+    "guantes_boxeo",
+    "bidon_agua",
+    "bascula_gimnasio"
+   ],
+   "cantidad": [
+    11,
+    12
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "por_m2": [
+    0.05,
+    0.07
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "contra_pared",
+   "obj": "soporte_mancuernas",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "contra_pared",
+   "obj": "soporte_kettlebells",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "contra_pared",
+   "obj": "soporte_balones",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "contra_pared",
+   "obj": "soporte_mancuernas",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "sobre",
+   "variantes": [
+    "mancuerna_2kg",
+    "mancuerna_4kg",
+    "mancuerna_6kg",
+    "mancuerna_8kg",
+    "mancuerna_10kg",
+    "mancuerna_12kg",
+    "mancuerna_14kg",
+    "mancuerna_16kg",
+    "mancuerna_20kg",
+    "mancuerna_24kg",
+    "mancuerna_28kg",
+    "mancuerna_32kg",
+    "mancuerna_36kg",
+    "mancuerna_40kg"
+   ],
+   "en": [
+    "soporte_mancuernas"
+   ],
+   "relleno": [
+    0.96,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "sobre",
+   "variantes": [
+    "pesa_rusa_4kg",
+    "pesa_rusa_8kg",
+    "pesa_rusa_12kg",
+    "pesa_rusa_16kg",
+    "pesa_rusa_20kg",
+    "pesa_rusa_24kg"
+   ],
+   "en": [
+    "soporte_kettlebells"
+   ],
+   "relleno": [
+    0.9,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "sobre",
+   "variantes": [
+    "balon_medicinal_3kg",
+    "balon_medicinal_5kg",
+    "balon_medicinal_8kg"
+   ],
+   "en": [
+    "soporte_balones"
+   ],
+   "relleno": [
+    0.7,
+    0.95
+   ],
+   "todas": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "pared",
+   "obj": "espejo_gimnasio_grande",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "pared",
+   "variantes": [
+    "cartel_sentadilla",
+    "cartel_press"
+   ],
+   "pared": "N",
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "suelo_libre",
+   "obj": "rack_sentadilla",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "interaccion": {
+    "type": "train",
+    "label": "Entrenar una hora"
+   }
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "suelo_libre",
+   "variantes": [
+    "banco_plano",
+    "banco_inclinado",
+    "banco_regulable",
+    "banco_abdominales"
+   ],
+   "cantidad": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "suelo_libre",
+   "obj": "arbol_discos",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "suelo_libre",
+   "variantes": [
+    "barra_olimpica",
+    "barra_z"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "suelo_libre",
+   "variantes": [
+    "disco_1_25kg",
+    "disco_2_5kg",
+    "disco_5kg",
+    "disco_10kg",
+    "disco_15kg",
+    "disco_20kg"
+   ],
+   "cantidad": [
+    5,
+    6
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "esquina",
+   "obj": "ventilador_pie",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pesolibre",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "vestuario",
+   "regla": "contra_pared",
+   "variantes": [
+    "taquilla_metalica",
+    "taquilla_doble",
+    "taquilla_media"
+   ],
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "vestuario",
+   "regla": "sobre",
+   "variantes": [
+    "toalla_doblada",
+    "bolsa_deporte"
+   ],
+   "en": [
+    "taquilla_doble",
+    "taquilla_metalica"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "contra_pared",
+   "obj": "ducha_cabina",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "vestuario",
+   "regla": "suelo_libre",
+   "obj": "banco_vestuario",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "vestuario",
+   "regla": "sobre",
+   "variantes": [
+    "toalla_doblada",
+    "bolsa_deporte",
+    "bidon_agua"
+   ],
+   "en": [
+    "banco_vestuario"
+   ],
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "lavabo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "espejo_aseo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "lavabo"
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "dispensador_jabon",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "secador_pelo_pared",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "dispensador_toallas",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "pared",
+   "obj": "ducha_abierta",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "vestuario",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   6,
+   9
+  ],
+  "temperatura_k": [
+   4000,
+   5000
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "gimnasio",
+  "horario_defecto": "Mo-Su 07:00-22:30",
+  "vida": [
+   "las cintas en marcha",
+   "una toalla sobre el banco",
+   "discos sin recoger",
+   "la tele con el fútbol"
+  ],
+  "cerrado": "la reja bajada y las luces del fondo encendidas"
+ },
+ "minimo_objetos_distintos": 80,
+ "moodboard": [
+  {
+   "titulo": "Club social y deportivo VHG interior 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Club_social_y_deportivo_VHG_interior_01.jpg",
+   "autor": "Natifuzz",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "FitNationInterior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:FitNationInterior.jpg",
+   "autor": "This work was created by Jesse Balay.",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Gimnasio Alex Gorayeb.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Gimnasio_Alex_Gorayeb.JPG",
+   "autor": "Juan Sebastian Quintero Santacruz Caicedo Ricaurte",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Gimnasio Municipal de Maipú.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Gimnasio_Municipal_de_Maip%C3%BA.jpg",
+   "autor": "Jorge Barrios Riquelme",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Gym, GLV1, Nairobi (20250810-LRM 20250810 050004).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Gym,_GLV1,_Nairobi_(20250810-LRM_20250810_050004).jpg",
+   "autor": "Matti Blume",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "GymNation gym interior 2024.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:GymNation_gym_interior_2024.jpg",
+   "autor": "GymNation",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior del gimnasio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_del_gimnasio.jpg",
+   "autor": "Creater1707",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior of a Gym.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Gym.jpg",
+   "autor": "IrishMalcolm",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Sala musculacion PFC.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Sala_musculacion_PFC.png",
+   "autor": "Arzarello",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Viking Glory, gym, 20231209 - 08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Viking_Glory,_gym,_20231209_-_08.jpg",
+   "autor": "AleWi",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

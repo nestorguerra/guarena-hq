@@ -1,0 +1,9055 @@
+{
+ "kit": "banco",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  2442,
+  2459,
+  2476,
+  2561,
+  2612,
+  2646
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 1,
+   "W": 8.4,
+   "D": 12,
+   "guardias": 43,
+   "objetos": 118,
+   "distintos": 60,
+   "hash": "f70fdb5c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 3
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 9
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 2.02,
+     "libre_m2": 2.02
+    },
+    "entrada": {
+     "alcanzable_m2": 3.67,
+     "libre_m2": 3.67
+    },
+    "gestores": {
+     "alcanzable_m2": 19.28,
+     "libre_m2": 19.28
+    },
+    "espera": {
+     "alcanzable_m2": 5.4,
+     "libre_m2": 5.4
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.15,
+     "libre_m2": 9.15
+    }
+   },
+   "luz": {
+    "cajeros": 0.21,
+    "entrada": 0.135,
+    "gestores": 0.15,
+    "espera": 0.173
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 15074,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2,
+   "W": 8.1,
+   "D": 11.4,
+   "guardias": 32,
+   "objetos": 104,
+   "distintos": 51,
+   "hash": "ac962902",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.87
+    },
+    "entrada": {
+     "alcanzable_m2": 4.51,
+     "libre_m2": 4.51
+    },
+    "gestores": {
+     "alcanzable_m2": 17.13,
+     "libre_m2": 17.13
+    },
+    "espera": {
+     "alcanzable_m2": 5.72,
+     "libre_m2": 5.72
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.84,
+     "libre_m2": 8.84
+    }
+   },
+   "luz": {
+    "cajeros": 0.207,
+    "entrada": 0.112,
+    "gestores": 0.234,
+    "espera": 0.174
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13832,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.983
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 3,
+   "W": 8.1,
+   "D": 11.1,
+   "guardias": 39,
+   "objetos": 103,
+   "distintos": 55,
+   "hash": "48356cfb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.87
+    },
+    "entrada": {
+     "alcanzable_m2": 3.56,
+     "libre_m2": 3.56
+    },
+    "gestores": {
+     "alcanzable_m2": 16.92,
+     "libre_m2": 16.92
+    },
+    "espera": {
+     "alcanzable_m2": 4.59,
+     "libre_m2": 4.59
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.55,
+     "libre_m2": 8.55
+    }
+   },
+   "luz": {
+    "cajeros": 0.209,
+    "entrada": 0.117,
+    "gestores": 0.218,
+    "espera": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14036,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.975
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 4,
+   "W": 7.8,
+   "D": 12.6,
+   "guardias": 36,
+   "objetos": 116,
+   "distintos": 56,
+   "hash": "b0a22554",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 11
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 20
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.71,
+     "libre_m2": 1.71
+    },
+    "entrada": {
+     "alcanzable_m2": 3.34,
+     "libre_m2": 3.34
+    },
+    "gestores": {
+     "alcanzable_m2": 17,
+     "libre_m2": 17
+    },
+    "espera": {
+     "alcanzable_m2": 6.95,
+     "libre_m2": 6.95
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 7.88,
+     "libre_m2": 7.88
+    }
+   },
+   "luz": {
+    "cajeros": 0.224,
+    "entrada": 0.125,
+    "gestores": 0.141,
+    "espera": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 16906,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.992
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 5,
+   "W": 8.4,
+   "D": 12.299999999999999,
+   "guardias": 37,
+   "objetos": 115,
+   "distintos": 60,
+   "hash": "ff4bce1c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 8
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 23
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "entrada": {
+     "alcanzable_m2": 3.58,
+     "libre_m2": 3.58
+    },
+    "gestores": {
+     "alcanzable_m2": 19.47,
+     "libre_m2": 19.47
+    },
+    "espera": {
+     "alcanzable_m2": 6.62,
+     "libre_m2": 6.62
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.04,
+     "libre_m2": 9.04
+    }
+   },
+   "luz": {
+    "cajeros": 0.207,
+    "entrada": 0.108,
+    "gestores": 0.137,
+    "espera": 0.152
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14306,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.864
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 6,
+   "W": 7.5,
+   "D": 12,
+   "guardias": 38,
+   "objetos": 102,
+   "distintos": 55,
+   "hash": "39e0ca7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 20
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.58,
+     "libre_m2": 1.58
+    },
+    "entrada": {
+     "alcanzable_m2": 2.78,
+     "libre_m2": 2.78
+    },
+    "gestores": {
+     "alcanzable_m2": 17.05,
+     "libre_m2": 17.05
+    },
+    "espera": {
+     "alcanzable_m2": 5.6,
+     "libre_m2": 5.6
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 6.51,
+     "libre_m2": 6.51
+    }
+   },
+   "luz": {
+    "cajeros": 0.22,
+    "entrada": 0.152,
+    "gestores": 0.22,
+    "espera": 0.208
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13044,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.992
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 7,
+   "W": 7.8,
+   "D": 11.1,
+   "guardias": 36,
+   "objetos": 101,
+   "distintos": 55,
+   "hash": "ba9b6447",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.66,
+     "libre_m2": 1.66
+    },
+    "entrada": {
+     "alcanzable_m2": 3.97,
+     "libre_m2": 3.97
+    },
+    "gestores": {
+     "alcanzable_m2": 13.9,
+     "libre_m2": 13.9
+    },
+    "espera": {
+     "alcanzable_m2": 3.51,
+     "libre_m2": 3.51
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 7.39,
+     "libre_m2": 7.39
+    }
+   },
+   "luz": {
+    "cajeros": 0.22,
+    "entrada": 0.14,
+    "gestores": 0.225,
+    "espera": 0.247
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12408,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 8,
+   "W": 8.1,
+   "D": 12.299999999999999,
+   "guardias": 39,
+   "objetos": 115,
+   "distintos": 62,
+   "hash": "8b20a2df",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 3
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 12
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.82,
+     "libre_m2": 1.82
+    },
+    "entrada": {
+     "alcanzable_m2": 4.4,
+     "libre_m2": 4.4
+    },
+    "gestores": {
+     "alcanzable_m2": 18.12,
+     "libre_m2": 18.12
+    },
+    "espera": {
+     "alcanzable_m2": 6.04,
+     "libre_m2": 6.04
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.06,
+     "libre_m2": 8.06
+    }
+   },
+   "luz": {
+    "cajeros": 0.198,
+    "entrada": 0.102,
+    "gestores": 0.189,
+    "espera": 0.151
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14162,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.983
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 9,
+   "W": 7.8,
+   "D": 11.1,
+   "guardias": 39,
+   "objetos": 105,
+   "distintos": 57,
+   "hash": "14cb9d74",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.74,
+     "libre_m2": 1.74
+    },
+    "entrada": {
+     "alcanzable_m2": 4.3,
+     "libre_m2": 4.3
+    },
+    "gestores": {
+     "alcanzable_m2": 13.72,
+     "libre_m2": 13.72
+    },
+    "espera": {
+     "alcanzable_m2": 4.34,
+     "libre_m2": 4.34
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 7.69,
+     "libre_m2": 7.69
+    }
+   },
+   "luz": {
+    "cajeros": 0.219,
+    "entrada": 0.116,
+    "gestores": 0.226,
+    "espera": 0.19
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12922,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 10,
+   "W": 7.8,
+   "D": 11.7,
+   "guardias": 41,
+   "objetos": 106,
+   "distintos": 58,
+   "hash": "3182be58",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.68,
+     "libre_m2": 1.68
+    },
+    "entrada": {
+     "alcanzable_m2": 4.21,
+     "libre_m2": 4.21
+    },
+    "gestores": {
+     "alcanzable_m2": 16.61,
+     "libre_m2": 16.61
+    },
+    "espera": {
+     "alcanzable_m2": 4.87,
+     "libre_m2": 4.87
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 6.95,
+     "libre_m2": 6.95
+    }
+   },
+   "luz": {
+    "cajeros": 0.214,
+    "entrada": 0.131,
+    "gestores": 0.222,
+    "espera": 0.213
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12282,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 11,
+   "W": 8.1,
+   "D": 11.4,
+   "guardias": 39,
+   "objetos": 105,
+   "distintos": 54,
+   "hash": "9f0df051",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 23
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.86,
+     "libre_m2": 1.86
+    },
+    "entrada": {
+     "alcanzable_m2": 4.44,
+     "libre_m2": 4.44
+    },
+    "gestores": {
+     "alcanzable_m2": 17.61,
+     "libre_m2": 17.61
+    },
+    "espera": {
+     "alcanzable_m2": 6.12,
+     "libre_m2": 6.12
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.65,
+     "libre_m2": 8.65
+    }
+   },
+   "luz": {
+    "cajeros": 0.206,
+    "entrada": 0.113,
+    "gestores": 0.222,
+    "espera": 0.175
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12858,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.983
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 12,
+   "W": 8.4,
+   "D": 12.6,
+   "guardias": 41,
+   "objetos": 107,
+   "distintos": 60,
+   "hash": "7052a86d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 7
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 2.02,
+     "libre_m2": 2.02
+    },
+    "entrada": {
+     "alcanzable_m2": 3.67,
+     "libre_m2": 3.67
+    },
+    "gestores": {
+     "alcanzable_m2": 25.89,
+     "libre_m2": 25.89
+    },
+    "espera": {
+     "alcanzable_m2": 7.02,
+     "libre_m2": 7.02
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.87,
+     "libre_m2": 8.87
+    }
+   },
+   "luz": {
+    "cajeros": 0.204,
+    "entrada": 0.106,
+    "gestores": 0.123,
+    "espera": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13450,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.873
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 13,
+   "W": 8.4,
+   "D": 11.1,
+   "guardias": 37,
+   "objetos": 102,
+   "distintos": 54,
+   "hash": "f22c1d43",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.97,
+     "libre_m2": 1.97
+    },
+    "entrada": {
+     "alcanzable_m2": 4.54,
+     "libre_m2": 4.54
+    },
+    "gestores": {
+     "alcanzable_m2": 17.47,
+     "libre_m2": 17.47
+    },
+    "espera": {
+     "alcanzable_m2": 4.63,
+     "libre_m2": 4.63
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.18,
+     "libre_m2": 9.18
+    }
+   },
+   "luz": {
+    "cajeros": 0.201,
+    "entrada": 0.117,
+    "gestores": 0.224,
+    "espera": 0.179
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12724,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.898
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 14,
+   "W": 8.4,
+   "D": 12.299999999999999,
+   "guardias": 38,
+   "objetos": 101,
+   "distintos": 53,
+   "hash": "b4548f72",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 4
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 19
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 2.02,
+     "libre_m2": 2.02
+    },
+    "entrada": {
+     "alcanzable_m2": 4.54,
+     "libre_m2": 4.54
+    },
+    "gestores": {
+     "alcanzable_m2": 24.61,
+     "libre_m2": 24.61
+    },
+    "espera": {
+     "alcanzable_m2": 5.07,
+     "libre_m2": 5.07
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.22,
+     "libre_m2": 9.22
+    }
+   },
+   "luz": {
+    "cajeros": 0.207,
+    "entrada": 0.132,
+    "gestores": 0.122,
+    "espera": 0.203
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12256,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.864
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 15,
+   "W": 7.5,
+   "D": 12.6,
+   "guardias": 35,
+   "objetos": 109,
+   "distintos": 57,
+   "hash": "765f8ed0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 8
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.52,
+     "libre_m2": 1.52
+    },
+    "entrada": {
+     "alcanzable_m2": 4.08,
+     "libre_m2": 4.08
+    },
+    "gestores": {
+     "alcanzable_m2": 21.09,
+     "libre_m2": 21.09
+    },
+    "espera": {
+     "alcanzable_m2": 6.58,
+     "libre_m2": 6.58
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 6.98,
+     "libre_m2": 6.98
+    }
+   },
+   "luz": {
+    "cajeros": 0.215,
+    "entrada": 0.144,
+    "gestores": 0.204,
+    "espera": 0.192
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14024,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 16,
+   "W": 8.4,
+   "D": 11.7,
+   "guardias": 32,
+   "objetos": 102,
+   "distintos": 54,
+   "hash": "1ccbb73e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "entrada": {
+     "alcanzable_m2": 4.52,
+     "libre_m2": 4.52
+    },
+    "gestores": {
+     "alcanzable_m2": 20.32,
+     "libre_m2": 20.32
+    },
+    "espera": {
+     "alcanzable_m2": 5.85,
+     "libre_m2": 5.85
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.08,
+     "libre_m2": 9.08
+    }
+   },
+   "luz": {
+    "cajeros": 0.196,
+    "entrada": 0.134,
+    "gestores": 0.206,
+    "espera": 0.207
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 11506,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.898
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 17,
+   "W": 8.4,
+   "D": 11.4,
+   "guardias": 40,
+   "objetos": 105,
+   "distintos": 56,
+   "hash": "72ae712",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.93,
+     "libre_m2": 1.93
+    },
+    "entrada": {
+     "alcanzable_m2": 3.54,
+     "libre_m2": 3.54
+    },
+    "gestores": {
+     "alcanzable_m2": 19.39,
+     "libre_m2": 19.39
+    },
+    "espera": {
+     "alcanzable_m2": 4.63,
+     "libre_m2": 4.63
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.38,
+     "libre_m2": 9.38
+    }
+   },
+   "luz": {
+    "cajeros": 0.197,
+    "entrada": 0.114,
+    "gestores": 0.214,
+    "espera": 0.17
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14036,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.89
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 18,
+   "W": 7.8,
+   "D": 12,
+   "guardias": 31,
+   "objetos": 102,
+   "distintos": 54,
+   "hash": "e7701a07",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 8
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 19
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.71,
+     "libre_m2": 1.71
+    },
+    "entrada": {
+     "alcanzable_m2": 4.3,
+     "libre_m2": 4.3
+    },
+    "gestores": {
+     "alcanzable_m2": 20.29,
+     "libre_m2": 20.29
+    },
+    "espera": {
+     "alcanzable_m2": 6.6,
+     "libre_m2": 6.6
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 7.87,
+     "libre_m2": 7.87
+    }
+   },
+   "luz": {
+    "cajeros": 0.211,
+    "entrada": 0.127,
+    "gestores": 0.212,
+    "espera": 0.205
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14030,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.992
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 19,
+   "W": 8.1,
+   "D": 12,
+   "guardias": 33,
+   "objetos": 106,
+   "distintos": 54,
+   "hash": "b9eb9568",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 7
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 3
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.87
+    },
+    "entrada": {
+     "alcanzable_m2": 4.51,
+     "libre_m2": 4.51
+    },
+    "gestores": {
+     "alcanzable_m2": 21.89,
+     "libre_m2": 21.89
+    },
+    "espera": {
+     "alcanzable_m2": 7.51,
+     "libre_m2": 7.51
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.29,
+     "libre_m2": 8.29
+    }
+   },
+   "luz": {
+    "cajeros": 0.219,
+    "entrada": 0.134,
+    "gestores": 0.143,
+    "espera": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13442,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.966
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 20,
+   "W": 8.4,
+   "D": 11.4,
+   "guardias": 36,
+   "objetos": 106,
+   "distintos": 57,
+   "hash": "a7657567",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 3
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "entrada": {
+     "alcanzable_m2": 4.52,
+     "libre_m2": 4.52
+    },
+    "gestores": {
+     "alcanzable_m2": 19.77,
+     "libre_m2": 19.77
+    },
+    "espera": {
+     "alcanzable_m2": 4.65,
+     "libre_m2": 4.65
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.25,
+     "libre_m2": 9.25
+    }
+   },
+   "luz": {
+    "cajeros": 0.198,
+    "entrada": 0.138,
+    "gestores": 0.225,
+    "espera": 0.194
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12234,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.907
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2442,
+   "W": 8.4,
+   "D": 11.1,
+   "guardias": 44,
+   "objetos": 106,
+   "distintos": 58,
+   "hash": "ef41a458",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 5
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 21
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 2.04,
+     "libre_m2": 2.04
+    },
+    "entrada": {
+     "alcanzable_m2": 3.59,
+     "libre_m2": 3.59
+    },
+    "gestores": {
+     "alcanzable_m2": 16.79,
+     "libre_m2": 16.79
+    },
+    "espera": {
+     "alcanzable_m2": 3.59,
+     "libre_m2": 3.59
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.85,
+     "libre_m2": 8.85
+    }
+   },
+   "luz": {
+    "cajeros": 0.201,
+    "entrada": 0.117,
+    "gestores": 0.224,
+    "espera": 0.179
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14332,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.881
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2459,
+   "W": 7.5,
+   "D": 12.6,
+   "guardias": 37,
+   "objetos": 104,
+   "distintos": 57,
+   "hash": "1f15e6f5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 6
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.55,
+     "libre_m2": 1.55
+    },
+    "entrada": {
+     "alcanzable_m2": 4.2,
+     "libre_m2": 4.2
+    },
+    "gestores": {
+     "alcanzable_m2": 20.4,
+     "libre_m2": 20.4
+    },
+    "espera": {
+     "alcanzable_m2": 6.71,
+     "libre_m2": 6.71
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 6.66,
+     "libre_m2": 6.66
+    }
+   },
+   "luz": {
+    "cajeros": 0.234,
+    "entrada": 0.151,
+    "gestores": 0.134,
+    "espera": 0.188
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12600,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2476,
+   "W": 7.8,
+   "D": 11.7,
+   "guardias": 40,
+   "objetos": 111,
+   "distintos": 53,
+   "hash": "79647d3a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 3
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 7
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 23
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.66,
+     "libre_m2": 1.66
+    },
+    "entrada": {
+     "alcanzable_m2": 4.21,
+     "libre_m2": 4.21
+    },
+    "gestores": {
+     "alcanzable_m2": 13.9,
+     "libre_m2": 13.92
+    },
+    "espera": {
+     "alcanzable_m2": 4.45,
+     "libre_m2": 4.45
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 7.81,
+     "libre_m2": 7.81
+    }
+   },
+   "luz": {
+    "cajeros": 0.214,
+    "entrada": 0.131,
+    "gestores": 0.222,
+    "espera": 0.213
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13740,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2561,
+   "W": 8.1,
+   "D": 12,
+   "guardias": 34,
+   "objetos": 105,
+   "distintos": 55,
+   "hash": "38593074",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 8
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 22
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 2
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 0
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.82,
+     "libre_m2": 1.82
+    },
+    "entrada": {
+     "alcanzable_m2": 3.44,
+     "libre_m2": 3.44
+    },
+    "gestores": {
+     "alcanzable_m2": 22.78,
+     "libre_m2": 22.78
+    },
+    "espera": {
+     "alcanzable_m2": 5.38,
+     "libre_m2": 5.38
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.83,
+     "libre_m2": 8.83
+    }
+   },
+   "luz": {
+    "cajeros": 0.219,
+    "entrada": 0.134,
+    "gestores": 0.143,
+    "espera": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13434,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.966
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2612,
+   "W": 8.4,
+   "D": 12.299999999999999,
+   "guardias": 43,
+   "objetos": 114,
+   "distintos": 62,
+   "hash": "da51250d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 3
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 3
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 10
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 5
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 19
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 1
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 1
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 2
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "entrada": {
+     "alcanzable_m2": 3.58,
+     "libre_m2": 3.58
+    },
+    "gestores": {
+     "alcanzable_m2": 20.48,
+     "libre_m2": 20.48
+    },
+    "espera": {
+     "alcanzable_m2": 4.63,
+     "libre_m2": 4.63
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 8.48,
+     "libre_m2": 8.48
+    }
+   },
+   "luz": {
+    "cajeros": 0.207,
+    "entrada": 0.109,
+    "gestores": 0.123,
+    "espera": 0.152
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 15910,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.873
+  },
+  {
+   "kit": "banco",
+   "tipologia": "sucursal_bancaria",
+   "seed": 2646,
+   "W": 8.7,
+   "D": 12,
+   "guardias": 38,
+   "objetos": 105,
+   "distintos": 57,
+   "hash": "83fc424e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "ventanilla_modulo",
+     "n": 5
+    },
+    {
+     "entrada": 1,
+     "obj": "boligrafo_cadena",
+     "n": 5
+    },
+    {
+     "entrada": 2,
+     "obj": "bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "folletos_pila",
+     "n": 3
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "silla_oficina",
+     "n": 5
+    },
+    {
+     "entrada": 6,
+     "obj": "cajero_automatico",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "actualizador_libretas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "dispensador_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "dispensador_gel",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "cartel_horario_banco",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "extintor",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "camara_seguridad",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "mesas": 2
+    },
+    {
+     "entrada": 18,
+     "mesas": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "monitor_pc|monitor_pc_encendido",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "teclado",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "raton_pc",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "telefono_fijo",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "bloc_notas|taza_cafe|portalapices|calcul",
+     "n": 7
+    },
+    {
+     "entrada": 24,
+     "obj": "expositor_folletos",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "archivador_metalico",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "cartel_hipotecas|cartel_ahorro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "expositor_folletos_pared",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "diploma_enmarcado",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_alta",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "panel_led",
+     "n": 4
+    },
+    {
+     "entrada": 32,
+     "obj": "detector_humo",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "silla_espera_fila",
+     "n": 2
+    },
+    {
+     "entrada": 34,
+     "obj": "pantalla_turnos",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "mesa_baja",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "revista|periodico|bote_caramelos",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "sillon_espera",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_alta",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "dispensador_agua",
+     "n": 0
+    },
+    {
+     "entrada": 40,
+     "obj": "panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "foco_empotrable",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "rotulo_banco",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "puerta_camara",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "caja_fuerte",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "archivador_metalico",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_archivadores",
+     "n": 1
+    },
+    {
+     "entrada": 47,
+     "obj": "archivador_azul|archivador_rojo|archivad",
+     "n": 20
+    },
+    {
+     "entrada": 48,
+     "obj": "caja_archivo|planta_pequena|bandeja_docu",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "fotocopiadora",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "impresora_sobremesa",
+     "n": 0
+    },
+    {
+     "entrada": 51,
+     "obj": "trituradora_papel",
+     "n": 1
+    },
+    {
+     "entrada": 52,
+     "obj": "papelera_reciclaje",
+     "n": 0
+    },
+    {
+     "entrada": 53,
+     "obj": "dispensador_agua",
+     "n": 1
+    },
+    {
+     "entrada": 54,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 55,
+     "obj": "aire_acondicionado",
+     "n": 1
+    },
+    {
+     "entrada": 56,
+     "obj": "senal_salida",
+     "n": 1
+    },
+    {
+     "entrada": 57,
+     "obj": "panel_led",
+     "n": 3
+    },
+    {
+     "entrada": 58,
+     "obj": "camara_seguridad",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "cajeros": {
+     "alcanzable_m2": 2.18,
+     "libre_m2": 2.18
+    },
+    "entrada": {
+     "alcanzable_m2": 4.74,
+     "libre_m2": 4.74
+    },
+    "gestores": {
+     "alcanzable_m2": 24.84,
+     "libre_m2": 24.84
+    },
+    "espera": {
+     "alcanzable_m2": 5.15,
+     "libre_m2": 5.15
+    },
+    "ventanillas": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "personal": {
+     "alcanzable_m2": 9.6,
+     "libre_m2": 9.6
+    }
+   },
+   "luz": {
+    "cajeros": 0.231,
+    "entrada": 0.105,
+    "gestores": 0.2,
+    "espera": 0.147
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14114,
+   "mallas": 29,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.966
+  }
+ ]
+}

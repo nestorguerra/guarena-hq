@@ -1,0 +1,12 @@
+{
+ "estado": "PASS fuente y paquete en M1; CI pendiente",
+ "alcance": "Contrato mecánico en perfil bajo; fichas visuales siguen en alta. Mismos criterios de acciones, recompensa y recarga, sin ampliar esperas.",
+ "base_producto": "83a7bc6fdedf2fef2ffb6ca6fefb136daa9dde0a",
+ "archivos_cambiados_frente_congelacion": [
+  ".github/workflows/validar.yml",
+  "tools/interiores/botin_pruebas.py"
+ ],
+ "resto_congelado_identico": 38,
+ "renderer_m1_observado": "ANGLE Metal Renderer Apple M1",
+ "causa_fallo_ci": "Se agotó la espera durante vuelo con escena cargada, sin llegar a la recogida; driver no registrado. La nueva configuración sigue pendiente de CI."
+}

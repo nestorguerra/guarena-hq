@@ -1,0 +1,977 @@
+{
+ "tipologia": "alimentacion",
+ "nombre": "Frutería",
+ "nota": "La frutería de un pueblo de las Vegas Altas: cajones de fruta y verdura en escalones de madera a lo largo de las dos paredes, con toldillos y ristras de ajos y pimientos; en el centro, mesas con melones y cestas; el mostrador con la balanza y la caja a la derecha; sacos de patatas y cebollas junto a la puerta; al fondo las neveras de zumos y agua, y el almacén tras un tabique. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.9,
+   8.1
+  ],
+  "fondo": [
+   9.3,
+   11.4
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-2.0",
+  "z0": "1.5",
+  "z1": "3.9",
+  "zr": "D-2.6",
+  "xs": "-W/2+3.4"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f2eee0",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#cfc6b4",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.9",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pesar y cobrar en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "tras",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "1.3",
+    "W/2",
+    "5.1"
+   ]
+  },
+  {
+   "id": "pared_w",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "-W/2+1.0",
+    "zr"
+   ]
+  },
+  {
+   "id": "pared_e",
+   "publica": false,
+   "rect": [
+    "W/2-1.0",
+    "5.2",
+    "W/2",
+    "zr+0.8"
+   ]
+  },
+  {
+   "id": "centro",
+   "publica": true,
+   "rect": [
+    "-W/2+1.0",
+    "1.3",
+    "W/2-1.0",
+    "zr"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": true,
+   "rect": [
+    "xs",
+    "zr",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zr",
+    "xs",
+    "D"
+   ]
+  },
+  {
+   "id": "luces",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xs",
+    "zr"
+   ],
+   "a": [
+    "xs",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "-W/2",
+    "zr"
+   ],
+   "a": [
+    "xs",
+    "zr"
+   ],
+   "puerta": [
+    1.3,
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pesar y pagar en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "fru_mostrador",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "balanza_comercial",
+   "en": [
+    "fru_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "fru_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "fru_rollo_bolsas",
+   "en": [
+    "fru_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "fru_cuenco_muestra",
+    "fru_cestillo_cambio",
+    "bote_propinas",
+    "datafono"
+   ],
+   "en": [
+    "fru_mostrador"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "fru_rollo_bolsas",
+    "fru_cestillo_cambio",
+    "fru_cuenco_muestra"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.5,
+    0.8
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tras",
+   "regla": "pared",
+   "obj": "fru_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "fru_pizarra_a",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "suelo_libre",
+   "variantes": [
+    "taburete_alto",
+    "silla_cajera"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_w",
+   "regla": "contra_pared",
+   "variantes": [
+    "fru_expositor_escalonado",
+    "fru_expositor_escalonado_verde"
+   ],
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "sobre",
+   "variantes": [
+    "fru_caja_pera_conferencia",
+    "fru_caja_pera_limonera",
+    "fru_caja_ciruela_roja",
+    "fru_caja_ciruela_amarilla",
+    "fru_caja_cerezas",
+    "fru_caja_fresas",
+    "fru_caja_kiwi",
+    "fru_caja_pina",
+    "fru_caja_aguacate",
+    "fru_caja_higos",
+    "fru_caja_granadas",
+    "fru_caja_mandarinas",
+    "fru_caja_pomelos",
+    "fru_caja_uva_verde",
+    "fru_caja_uva_negra",
+    "fru_caja_nectarinas",
+    "fru_caja_albaricoques",
+    "fru_caja_caquis",
+    "fru_caja_manzana_golden",
+    "fru_caja_manzana_fuji",
+    "fru_caja_platano_canario",
+    "fru_caja_mango",
+    "fru_caja_coco",
+    "fru_caja_membrillo",
+    "fru_caja_naranja_zumo",
+    "fru_caja_limon_verna",
+    "fru_caja_calabacin",
+    "fru_caja_berenjena",
+    "fru_caja_pepino",
+    "fru_caja_judias_verdes",
+    "fru_caja_coliflor",
+    "fru_caja_brocoli",
+    "fru_caja_repollo",
+    "fru_caja_lombarda",
+    "fru_caja_esparragos",
+    "fru_caja_champinones",
+    "fru_caja_setas",
+    "fru_caja_remolacha",
+    "fru_caja_puerros",
+    "fru_caja_calabaza",
+    "fru_caja_boniato",
+    "fru_caja_espinacas",
+    "fru_caja_acelgas",
+    "fru_caja_rabanitos"
+   ],
+   "en": [
+    "fru_expositor_escalonado",
+    "fru_expositor_escalonado_verde"
+   ],
+   "relleno": [
+    1.0,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "fruta"
+  },
+  {
+   "zona": "pared_w",
+   "regla": "pared",
+   "variantes": [
+    "fru_toldo_verde",
+    "fru_toldo_rojo"
+   ],
+   "pared": "W",
+   "cada": 1.35,
+   "maximo": 4
+  },
+  {
+   "zona": "pared_w",
+   "regla": "pared",
+   "variantes": [
+    "fru_ristra_ajos",
+    "fru_ristra_pimientos",
+    "fru_estante_cestas"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "contra_pared",
+   "variantes": [
+    "fru_expositor_escalonado_verde",
+    "fru_expositor_escalonado"
+   ],
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "sobre",
+   "variantes": [
+    "fru_caja_apio",
+    "fru_caja_alcachofas",
+    "fru_caja_mazorcas",
+    "fru_caja_guisantes",
+    "fru_caja_pimiento_verde",
+    "fru_caja_pimiento_amarillo",
+    "fru_caja_guindillas",
+    "fru_caja_perejil",
+    "fru_caja_ajos",
+    "fru_caja_cebolla_roja",
+    "fru_caja_cebolleta",
+    "fru_caja_patata_roja",
+    "fru_caja_patata_nueva",
+    "fru_caja_tomate_pera",
+    "fru_caja_tomate_cherry",
+    "fru_caja_tomate_raf",
+    "fru_caja_lechuga_romana",
+    "fru_caja_lechuga_iceberg",
+    "fru_caja_endivias",
+    "fru_caja_canonigos",
+    "fru_caja_rucula",
+    "fru_caja_jengibre",
+    "fru_caja_pera_conferencia",
+    "fru_caja_pera_limonera",
+    "fru_caja_ciruela_roja",
+    "fru_caja_ciruela_amarilla",
+    "fru_caja_cerezas",
+    "fru_caja_fresas",
+    "fru_caja_kiwi",
+    "fru_caja_pina",
+    "fru_caja_aguacate",
+    "fru_caja_higos"
+   ],
+   "en": [
+    "fru_expositor_escalonado",
+    "fru_expositor_escalonado_verde"
+   ],
+   "relleno": [
+    1.0,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_e",
+   "regla": "pared",
+   "variantes": [
+    "fru_toldo_rojo",
+    "fru_toldo_verde"
+   ],
+   "pared": "E",
+   "cada": 1.35,
+   "maximo": 3
+  },
+  {
+   "zona": "pared_e",
+   "regla": "pared",
+   "variantes": [
+    "fru_ristra_pimientos",
+    "fru_ristra_ajos"
+   ],
+   "pared": "E",
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "fru_isla_central",
+    "mesa_fruteria"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "prod_fruta_melones",
+    "fru_caja_melon_piel_sapo",
+    "fru_caja_melon_amarillo",
+    "fru_caja_sandia_mini"
+   ],
+   "en": [
+    "fru_isla_central",
+    "mesa_fruteria"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "obligatorio": true,
+   "vende": "melon"
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "prod_fruta_melocotones",
+    "prod_fruta_naranjas",
+    "prod_fruta_manzanas_rojas",
+    "prod_fruta_manzanas_verdes",
+    "prod_fruta_limones",
+    "prod_fruta_tomates",
+    "prod_fruta_cebollas",
+    "prod_fruta_patatas",
+    "prod_fruta_lechugas",
+    "prod_fruta_pimientos",
+    "prod_fruta_zanahorias",
+    "prod_fruta_platanos",
+    "prod_fruta_uvas"
+   ],
+   "en": [
+    "fru_isla_central",
+    "mesa_fruteria"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "vende": "fruta"
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "fru_caja_granadas",
+    "fru_caja_mandarinas",
+    "fru_caja_pomelos",
+    "fru_caja_uva_verde",
+    "fru_caja_uva_negra",
+    "fru_caja_nectarinas",
+    "fru_caja_albaricoques",
+    "fru_caja_caquis",
+    "fru_caja_manzana_golden",
+    "fru_caja_manzana_fuji",
+    "fru_caja_platano_canario",
+    "fru_caja_mango",
+    "fru_caja_coco",
+    "fru_caja_membrillo",
+    "fru_caja_naranja_zumo",
+    "fru_caja_limon_verna",
+    "fru_caja_calabacin",
+    "fru_caja_berenjena",
+    "fru_caja_pepino",
+    "fru_caja_judias_verdes",
+    "fru_caja_coliflor",
+    "fru_caja_brocoli",
+    "fru_caja_repollo",
+    "fru_caja_lombarda",
+    "fru_caja_esparragos",
+    "fru_caja_champinones",
+    "fru_caja_setas",
+    "fru_caja_remolacha"
+   ],
+   "en": [
+    "fru_isla_central",
+    "mesa_fruteria"
+   ],
+   "por_soporte": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "fru_cesta_naranjas",
+    "fru_cesta_manzanas",
+    "fru_cesta_limones",
+    "fru_sandias_pila"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "fru_saco_patatas",
+    "fru_saco_cebollas",
+    "fru_saco_naranjas",
+    "fru_saco_zanahorias"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "fru_colgador_platanos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "pila_cestas",
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "fru_pila_sacos",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "contra_pared",
+   "obj": "nevera_bebidas_super",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "contra_pared",
+   "obj": "nevera_lacteos",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "sobre",
+   "variantes": [
+    "prod_agua_fria",
+    "prod_naranja_fria",
+    "prod_zumo_frio",
+    "prod_cola_fria",
+    "prod_isotonica_fria",
+    "prod_cerveza_fria"
+   ],
+   "en": [
+    "nevera_bebidas_super"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "zumo",
+    "agua"
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "sobre",
+   "variantes": [
+    "prod_zumo_fresco",
+    "prod_yogur_natural",
+    "prod_yogur_fresa"
+   ],
+   "en": [
+    "nevera_lacteos"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "zumo"
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "fru_pizarra_b",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "fru_cartel_fruta",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "suelo_libre",
+   "variantes": [
+    "fru_carro_cajas",
+    "palet_madera",
+    "pila_cajones_vacios"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "extintor_super",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "fru_rollo_bolsas",
+    "prod_fruta_naranjas",
+    "prod_fruta_patatas"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.85
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pila_cajones_vacios",
+    "fru_saco_patatas",
+    "fru_saco_cebollas",
+    "fru_carro_cajas"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.12,
+    0.15
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   5,
+   9
+  ],
+  "temperatura_k": [
+   3800,
+   4300
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 09:00-14:00,17:00-20:30",
+  "vida": [
+   "cajones recién puestos",
+   "una clienta eligiendo melones",
+   "sacos junto a la puerta",
+   "el racimo de plátanos"
+  ],
+  "cerrado": "persiana bajada, los cajones dentro"
+ },
+ "minimo_objetos_distintos": 80,
+ "moodboard": [
+  {
+   "titulo": "Frutería.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Fruter%C3%ADa.JPG",
+   "autor": "Montilleta",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "SpanishGreengrocerDisplay.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:SpanishGreengrocerDisplay.jpg",
+   "autor": "Martinvl",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Greenrocer's Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Greenrocer%27s_Interior.jpg",
+   "autor": "Jongleur100",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Fruteria en Calle Ayala (Madrid) (27409987181).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Fruteria_en_Calle_Ayala_(Madrid)_(27409987181).jpg",
+   "autor": "moctavio from Miami, USA",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Platanos at a fruit shop in Calahorra.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Platanos_at_a_fruit_shop_in_Calahorra.jpg",
+   "autor": "Jynus",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Garden Fresh Booragoon, 2026 (01).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Garden_Fresh_Booragoon,_2026_(01).jpg",
+   "autor": "Bahnfrend",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Vic Park Fruit & Veg, 2026 (01).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Vic_Park_Fruit_%26_Veg,_2026_(01).jpg",
+   "autor": "Bahnfrend",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Apples & pears, greengrocers display, Redruth, Cornwall - October 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Apples_%26_pears,_greengrocers_display,_Redruth,_Cornwall_-_October_2022.jpg",
+   "autor": "Mutney",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bananas & citrus fruits, greengrocers display, Redruth, Cornwall - October 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bananas_%26_citrus_fruits,_greengrocers_display,_Redruth,_Cornwall_-_October_2022.jpg",
+   "autor": "Mutney",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Primeur du Marais, 61 Rue Saint-Antoine, 75004 Paris, France 12 January 2013.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Primeur_du_Marais,_61_Rue_Saint-Antoine,_75004_Paris,_France_12_January_2013.jpg",
+   "autor": "Quique Olaso from Manises, Spain",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Tomad mucha fruta (4081050032).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Tomad_mucha_fruta_(4081050032).jpg",
+   "autor": "Felipe Gabaldón",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Mercado de la Encarnación 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mercado_de_la_Encarnaci%C3%B3n_01.jpg",
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

@@ -17,6 +17,7 @@ import { installClayChunks, installPillowBoxes } from './plastilina.js';
 import { STYLE, setStyle, LOOKS } from './style.js';
 import { INTRO, introPlan, coverFov, IntroFlight, protagonist, buildAround, nearAt } from './intro.js';
 import { mhTexReady } from './characters.js';
+import { machineHints, initialProfile, automaticQuality } from './rendimiento.js';
 
 // 388 Pueblos: the page this game is the way into (and back to, «Volver a la página web» in the settings). Inside its
 // iframe (?desde=388) the page itself is underneath: it is told to close the game, and it takes you back where you were.
@@ -41,12 +42,10 @@ async function loadMapData() {
 }
 
 function defaultQuality(store) {
-  let saved = null;
-  try { saved = JSON.parse(readSave(store)).quality; } catch (e) { /* ignore */ }
-  if (saved && QUALITY[saved]) return saved;
-  const touch = matchMedia('(pointer: coarse)').matches;
-  if (touch) return 'baja';
-  return (navigator.hardwareConcurrency || 4) >= 8 ? 'alta' : 'media';
+  let saved = {};
+  try { saved = JSON.parse(readSave(store)) || {}; } catch (e) { /* ignore */ }
+  if (!automaticQuality(saved) && QUALITY[saved.quality]) return saved.quality;
+  return initialProfile(machineHints(navigator, null, matchMedia('(pointer: coarse)').matches)).quality;
 }
 
 let game, audio, mode = 'loading', selGender = 'm', selIdx = 0, preview = null, previewDesc = null, custom = {}, editor = null, pendingPreview = null;
@@ -121,10 +120,10 @@ async function boot(hot = {}) {
   else if (!(hot.preset && hot.resume)) { previewDesc = protagonist(game.save); startGame(); }
   let last = performance.now();
   const loop = (now) => {
-    const dt = Math.min(0.1, (now - last) / 1000);
+    const observed = (now - last) / 1000, dt = Math.min(0.1, observed);
     last = now;
     try {
-      if (mode === 'play') { game.frame(dt); if (flight) introTick(dt); }
+      if (mode === 'play') { game.frame(dt, observed); if (flight) introTick(dt); }
       else menuFrame(dt);
     } catch (e) { console.error(e); }
     requestAnimationFrame(loop);
@@ -679,13 +678,13 @@ function showPanel(kind) {
   }
 }
 function settingsHtml() {
-  const q = game.qKey;
+  const q = automaticQuality(game.save) ? 'auto' : game.qKey;
   const times = [['Mañana', 10], ['Tarde', 17], ['Atardecer', 19.9], ['Noche', 23]];
   return `
     <div class="setting"><span>Modo de juego <small style="opacity:.6" id="sModeDesc">${MODE_DESC[game.mode === 'zombis' ? 'zombis' : 'normal']}</small></span><span class="seg" id="sMode"><button data-mode="normal" class="${game.mode !== 'zombis' ? 'on' : ''}">Normal</button><button data-mode="zombis" class="${game.mode === 'zombis' ? 'on' : ''}">Zombis</button></span></div>
-    <div class="setting"><span>Calidad gráfica <small style="opacity:.6">(se aplica al recargar)</small></span><span class="seg" id="sQ">${Object.entries(QUALITY).map(([k, v]) => `<button data-q="${k}" class="${k === q ? 'on' : ''}">${v.name}</button>`).join('')}</span></div>
+    <div class="setting"><span>Calidad gráfica <small style="opacity:.6">(se aplica al recargar)</small></span><span class="seg" id="sQ"><button data-q="auto" class="${q === 'auto' ? 'on' : ''}">Automática</button>${Object.entries(QUALITY).map(([k, v]) => `<button data-q="${k}" class="${k === q ? 'on' : ''}">${v.name}</button>`).join('')}</span></div>
     <div class="setting"><span>Estética <small style="opacity:.6">(se aplica al recargar)</small></span><span class="seg" id="sLook">${LOOKS.map(([id, n]) => `<button data-look="${id}" class="${STYLE.name === id ? 'on' : ''}">${n}</button>`).join('')}</span></div>
-    <div class="setting"><span>Resolución <small style="opacity:.6">(automática: baja un poco solo si el juego va a tirones)</small></span><span class="seg" id="sR"><button data-r="auto" class="${game.save.dynRes !== false ? 'on' : ''}">Automática</button><button data-r="fija" class="${game.save.dynRes === false ? 'on' : ''}">Fija</button></span></div>
+    <div class="setting"><span>Resolución <small style="opacity:.6">(automática: se adapta al rendimiento del equipo)</small></span><span class="seg" id="sR"><button data-r="auto" class="${game.save.dynRes !== false ? 'on' : ''}">Automática</button><button data-r="fija" class="${game.save.dynRes === false ? 'on' : ''}">Fija</button></span></div>
     <div class="setting"><span>Tiempo de Guareña <small style="opacity:.6">(en directo: el tiempo reciente del pueblo, una estimación por cuartos de hora de <a href="https://open-meteo.com/" target="_blank" rel="noopener" style="color:inherit">Open-Meteo.com</a>, CC BY 4.0; se consulta cada 10 min)</small></span><span class="seg" id="sWx"><button data-wx="1" class="${game.save.weatherLive !== false ? 'on' : ''}">En directo</button><button data-wx="0" class="${game.save.weatherLive === false ? 'on' : ''}">Del juego</button></span></div>
     <div class="setting"><span>Hora del día</span><span class="seg" id="sT">${times.map(([n, h]) => `<button data-h="${h}">${n}</button>`).join('')}</span></div>
     <div class="setting"><span>Música de fondo</span><span class="seg" id="sBg"><button data-bg="1" class="${game.save.bgMusic !== false ? 'on' : ''}">Liminal</button><button data-bg="0" class="${game.save.bgMusic === false ? 'on' : ''}">Apagada</button></span></div>
@@ -716,7 +715,7 @@ function bindSettings() {
   document.querySelectorAll('#sQ button').forEach((b) => (b.onclick = () => {
     game.setQuality(b.dataset.q);
     pickIn('sQ', b);
-    offerReload('sQ', b.dataset.q !== game.qKey);
+    offerReload('sQ', true);
   }));
   document.querySelectorAll('#sLook button').forEach((b) => (b.onclick = () => {
     game.save.style = b.dataset.look; game.persist(); // (the looks are built differently from the start)

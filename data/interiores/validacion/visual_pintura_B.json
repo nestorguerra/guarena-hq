@@ -1,0 +1,225 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_3b2da95c5d1e48fd88fd8269e69b9b39",
+ "request_sha256": "29d457ff4af82961657a0f5a013336375f50ee4448cc5b7b9f7e0fb21b0d5ef1",
+ "fecha": "2026-10-17T18:53:47.217040+00:00",
+ "kit": "pintura",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_pintura.jpg",
+ "ficha_sha256": "373d3f891917a77533b3e7b4fd56aea5d1b72903ffcaa8a50628498af1caf458",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/373d3f891917a77533b3e7b4fd56aea5d1b72903ffcaa8a50628498af1caf458.jpg",
+ "referencias": [
+  {
+   "titulo": "Interior of Camille Pissarro s studio at Éragny-sur-Epte - 2026.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg",
+   "autor": "AlexDS05",
+   "licencia": "CC0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg/960px-Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Peter Wegner Studio Interior 2019.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peter_Wegner_Studio_Interior_2019.jpg",
+   "autor": "Smallworldsocial",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Peter_Wegner_Studio_Interior_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.9,
+  "coherencia": 3.51,
+  "iluminacion": 3.66,
+  "variedad": 3.03,
+  "lectura_funcional": 2.72
+ },
+ "media": 3.164,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.9,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.15
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.81
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.83
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 2.51,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.04
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.47
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.43
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.06
+    }
+   ],
+   "confidence": 0.51
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.66,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.02
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.33
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.58
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.06
+    }
+   ],
+   "confidence": 0.62
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 2.03,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.06
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.85
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.88
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.72,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.27
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.71
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.75
+  }
+ ],
+ "uso": {
+  "input_tokens": 4366,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4366
+ }
+}

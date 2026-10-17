@@ -1,0 +1,8 @@
+{
+  "nota": "Presupuestos de rendimiento (backlog V-03). La plataforma mínima del juego es un portátil con gráficos integrados en un navegador (Chrome 120+, WebGL2); los valores marcados como propuesta los fija dirección técnica.",
+  "plataforma_minima": "portátil con gráficos integrados, Chrome 120+, WebGL2, 1080p",
+  "fps_objetivo": 30,
+  "ms_p95": 33.3,
+  "interior": {"triangulos_max": 350000, "mallas_max": 60, "luces_max": 9, "entrada_ms_max": 1500, "propuesta": true},
+  "fisica": {"cuerpos_activos_max": 40, "propuesta": true}
+}

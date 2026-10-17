@@ -1,0 +1,41 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 9,
+ "objetivo": 4,
+ "estado": "mejora_parcial_objetivo_no_alcanzado",
+ "base": "313cf52da64c844941b5723326ad73716e2c00dc",
+ "contratos": 40,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 70578,
+  "mallas": 59,
+  "luces": 9,
+  "montaje_ms": 168.1
+ },
+ "kits": {
+  "cocina": {
+   "ahora": {
+    "A": 3.176,
+    "B": 3.094
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  },
+  "trastero": {
+   "ahora": {
+    "A": 3.252,
+    "B": 3.048
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0,
+  "partida_ficticia_conservada": true
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda9_2026-10-17.md",
+ "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
+}

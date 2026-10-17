@@ -1037,3 +1037,66 @@ Los arreglos del revisor, por su orden:
     falta la luz de sus velas o un foco);
   - la policromía (estofado y encarnaciones), la corona de espinas del Cristo y la cara del Niño, que es de adulto.
 
+
+## 2026-10-17 · Viviendas, acabados y casa de Annie
+
+- El usuario pidió reforzar validación y completar las habitaciones por tandas; después autorizó terminar revisión visual, corregir acabados, actualizar Annie, hacer commits/push y desplegar.
+- Se incorporan 15 kits nuevos y se preservan funciones y perfiles de las 22 casas de vecinos. Annie conserva su plano singular y dormitorio, con cinco habitaciones comunes por kit.
+- Se corrigen materiales demasiado oscuros por una segunda conversión sRGB, caché de dibujos sin semilla, mobiliario de cocinas grandes y cuarto joven, reservas de despensa, luminarias, piano, cornamentas y telas. El kit doméstico conserva paso de 0,8 m y los límites originales de rendimiento.
+- La revisión independiente detectó un error del inventario de Annie y pérdida de control de sus lámparas al agrupar; se corrigieron. Las capturas esperan el fin del vuelo inicial y distinguen taller de pintura.
+- Las evaluaciones de Decision API se conservan, incluidas las rondas desfavorables. No equivalen a verificación funcional ni aprobación del usuario. La publicación solicitada es una versión de prueba; no se afirma superado el objetivo formal de 4/5.
+- Evidencia reproducible: `tools/interiores/casas_pruebas.py --tanda 5`, `validar.py --casas 200 --exigir-todas`, `integracion.py --colisiones` y `integracion.py --paquete`; informes en `data/interiores/validacion/` y fichas en `data/interiores/fichas/`.
+- Se conservan las claves de guardado HQ, Evolución y fija. Las pruebas de partida, caja fuerte, siesta y decoración usan datos ficticios en contexto privado; no se modifican partidas reales del usuario.
+
+## 2026-10-17 · calidad visual por tandas hasta 4/5
+
+El usuario solicita mejorar primero las habitaciones peor puntuadas, composición y contraste, validar y desplegar cada tanda. Tanda 1: taller y baño. Se mantienen rúbrica, umbral y semillas; las capturas registran sus cámaras. Se añaden superficies serenas, revestimientos con huecos recortados, banco a escala doméstica, almacenaje de herramientas y detalle/contraste de lavabo, espejo y armario. La evaluación debe conservar resultados desfavorables y solo declarará 4/5 cuando ambos evaluadores lo alcancen.
+
+Tanda 2: cantos redondeados opcionales con coste real probado, sanitarios con volumen, lavabo amplio y bancos con actividades de bricolaje. La segunda cámara del baño documenta la zona húmeda que antes quedaba fuera de plano. Revisión independiente de cobertura cerrada. Notas finales taller 3,154/3,218; baño 3,036/2,854. Pasan 23 contratos, 200 casas, 81 semillas por kit e integración fuente/paquete. Objetivo 4/5 aún pendiente.
+
+Tanda 3: almacenaje doméstico con pertenencias, puestos de despacho proporcionados y acabados serenos. El relieve de los muebles por kit se reduce solo dentro de las viviendas. Trastero 3,082/2,894; despacho 3,322/3,304: objetivo pendiente. Revisión independiente sin defectos nuevos importantes. Pasan 23 contratos, 200 casas/1166 habitaciones, 81 semillas por kit y fuente/paquete/marcas. Máximos: 57212 triángulos, 59 mallas, nueve luces, 136,8 ms.
+
+Tanda 4: sombras y mezcla continua de luces domésticas. El candidato inicial produjo un salto de brillo al cruzar una puerta; revisión independiente y contrato RED lo reprodujeron. Se corrige antes de publicar: 25 contratos GREEN y repetición del umbral/bisectriz sin salto notable. La revisión estática observa sombras más suaves y volumen conservado. Medias finales baño 3,034/2,974 y trastero 2,814/2,894, aún inferiores a 4. Integración fuente/paquete/marcas en verde. Los datos geométricos no cambian respecto a 059f665.
+
+
+Tanda 5: cocina y costura, alimentos unitarios también en comedor/despensa, puesto con silla frontal validado conjuntamente y sombra de contacto a escala doméstica. Revisión independiente de código y visual sin los defectos concretos detectados abiertos. Se conservan candidatos e incidencias; cocina 2,988/3,016 y costura 3,422/3,610 aún no alcanzan 4. Pasan 30contratos, 200 casas/1166 habitaciones y 81 semillas de los cinco kits afectados. Fuente/paquete/marcas en verde. Evidencia detallada en docs/calidad-viviendas-4-2026-10-17.md.
+
+Tanda6: trastero con pertenencias reconocibles y contraste. Las tres uniones geométricas observadas por el revisor se corrigen. Semillas y evaluación conservadas:2,966/2,858, objetivo pendiente.30contratos,200casas/1166habitaciones,81semillas, fuente/paquete/marcas y regeneración en verde. Detalles y alcance de cámara en docs/calidad-viviendas-4-2026-10-17.md.
+
+
+## 2026-10-17 · Candidata de rendimiento y adaptación silenciosa
+
+Se conserva MSAA en la escena y se elimina de los destinos intermedios de pantalla. El modo automático elige perfil y presupuesto de píxeles mediante capacidades aproximadas del navegador; mide fotogramas para ajustar resolución y efectos con pausa e histéresis. Las elecciones manuales se conservan. La iglesia detallada se descarga bajo demanda en Pages; sigue integrada en portátil y multijugador.
+
+Las mejoras observadas y sus límites se registran en docs/beta-rendimiento-2026-10-17.md: no se considera alcanzado el objetivo global25%,4/5 visual ni beta final. Se mantienen pruebas funcionales, revisión independiente y comprobación pública por tanda.
+
+## 2026-10-17 · Tanda 7 de viviendas
+
+Se ajustan agrupación modular y contraste de cocina, baño y trastero. La revisión de evidencia detecta muebles fuera de plano en cocinas grandes y WC recortado en baño; se corrigen las cámaras sin cambiar semillas ni ocultar los vacíos. Las notas quedan en cocina 2,934/2,942, baño 2,986/2,972 y trastero 2,868/2,934: sin mejora uniforme ni objetivo 4/5 alcanzado. La colocación individual de muebles sigue dispersando el frente de cocina, pendiente de planificación conjunta. Pasan 33 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Evidencia y límites en docs/calidad-viviendas-4-2026-10-17.md.
+
+La revisión visual encuentra espacio frontal insuficiente del WC3244 (8,3 cm). Se bloquea la publicación y se corrige con una reserva de uso; el contrato reproduce el fallo y pasa con la nueva colocación. Evidencia anterior y notas desfavorables conservadas.
+
+
+### 2026-10-17 — Tanda 8, luz doméstica
+
+El relleno del cielo y de la calle se acota en casas durante su render y se restaura después. Ocho pares muestran ganancia diurna moderada, sin certificar 4/5. Se detecta pérdida de lectura en apagón y se corrige excluyendo casas sin electricidad. Permanecen pendientes el plafón lavado y la composición amplia. Notas cocina 3,040/3,042, baño 3,152/3,018 y trastero 2,938/2,700. La evidencia desfavorable no se repite para buscar una nota mejor. Tanda 7 ya publicada como 44e3de3 y verificada en el juego público.
+
+### 2026-10-17 — Tanda 9, frente de cocina y trastero
+
+Se integra colocación atómica del frente de cocina, respetando referencias inmediatas y fallback; trastero incorpora bicicleta de carga, útiles vinculados y mejor contraste. Hallazgos de referencias, eje y bolsa corregidos antes de validar. Revisión independiente acotada sin bloqueo nuevo. Notas cocina 3,176/3,094 y trastero 3,252/3,048; objetivo 4/5 pendiente. Pasan 40 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Tanda 8 publicada como 313cf52 y verificada en juego público sin errores. Detalles y límites en docs/calidad-viviendas-4-2026-10-17.md.
+
+
+## 2026-10-17 · comedor doméstico, tanda 14
+
+- Usuario: continuar calidad visual hasta 4/5, validar y desplegar cada tanda.
+- El comedor incorpora capacidad y servicio reales, guardado de vajilla, acabados tranquilos y pertenencias reconocibles/accesibles. Un selector seguía apuntando al botín retirado; se corrige y se comprueba recogida y recarga sin guardado del instrumento.
+- Revisión independiente estática y visual conservadas; A/B 3,552/3,410. Mejora parcial; 4/5 pendiente. Se declaran las nuevas cámaras FOV 75 y las limitaciones de cobertura; no se finge equivalencia causal con las anteriores.
+- 58 contratos, 200 casas, 81 semillas comedor, 96 recorridos, fuente/paquete, recursos y marcas pasan. La luz del laboratorio se alinea con el foco doméstico real sin rebajar el umbral ni cambiar la luz de las casas.
+- T13 infantil queda retirada por empeorar ambos juicios; evidencia conservada. Siguiente candidata: biblioteca infantil, aún privada y sin aprobación visual. Publicación T14 pendiente de CI y prueba pública. Detalle en docs/calidad-viviendas-4-2026-10-17.md.
+
+
+## 2026-10-18 · Aislar el contrato de recogida en CI
+
+CI agota la espera durante el vuelo con SwiftShader, antes del contrato nuevo de recogida. Se registra el driver y se usa la reanudación existente sólo cuando se pide --sin-intro; CI lo solicita en baja. No cambia producto ni criterios de recompensa/recarga. Fuente y paquete M1 y 14 casos CPU independientes pasan; CI sigue pendiente. Las capturas y la introducción de las pruebas M1 mantienen su evidencia aparte.
+
+Tanda 14 publicada como `feb5ca0`: CI 39076081332 y Pages 39076312316 pasan. Integración pública exacta con ocho casas, Annie, tres comercios, recarga y botín real persistente, sin errores. La prueba estricta conserva el límite de 1.500 ms y pasa antes del mundo completo. Se cambia el orden del ensayo; no se demuestra una causa ni una mejora de rendimiento. El objetivo visual de 4/5 continúa abierto. Biblioteca B privada pendiente. Recibo: `validacion/publicacion_tanda14.json`.

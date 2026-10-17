@@ -343,7 +343,7 @@ export async function live(o = {}) {
   // long interval is the previous frame's work, or the GPU holding the page back)
   let lastStart = 0, tStart = 0, prev = null, finish;
   const ended = new Promise((res) => { finish = res; });
-  G.frame = function (dt) {
+  G.frame = function (dt, observed = dt) {
     const t0 = performance.now();
     if (!tStart) tStart = t0;
     const measuring = t0 - tStart > warm * 1000;
@@ -358,7 +358,7 @@ export async function live(o = {}) {
     for (const k in acc) acc[k] = 0;
     tRender = 0;
     r.info.reset();
-    try { realFrame.call(this, dt); } finally {
+    try { realFrame.call(this, dt, observed); } finally {
       prev = { frame: performance.now() - t0, render: tRender, top: Object.entries(acc).filter(([, v]) => v > 1).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, v]) => `${k} ${r1(v)}`) };
       if (measuring) {
         calls += r.info.render.calls; tris += r.info.render.triangles; nF++;

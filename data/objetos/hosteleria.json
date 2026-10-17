@@ -1,0 +1,7454 @@
+{
+ "version": 1,
+ "familia": "hostelería",
+ "objetos": [
+  {
+   "id": "barra_modulo",
+   "nombre": "Módulo de barra (1,2 m)",
+   "categoria": "barra",
+   "clase": "FIXED",
+   "masa": 450,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      1.02,
+      0.56
+     ],
+     "p": [
+      0,
+      0.51,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.05,
+      0.66
+     ],
+     "p": [
+      0,
+      1.045,
+      0.03
+     ],
+     "c": "#e9e4dc",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.1,
+      0.06
+     ],
+     "p": [
+      0,
+      0.05,
+      0.29
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.025,
+      1.2
+     ],
+     "p": [
+      0,
+      0.22,
+      0.36
+     ],
+     "c": "#b8a46a",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      90
+     ]
+    }
+   ],
+   "motivo_fijo": "estructural",
+   "superficies": [
+    {
+     "y": 1.07,
+     "margen": 0.04
+    }
+   ],
+   "nota": "la barra de obra, con su reposapiés de latón"
+  },
+  {
+   "id": "barra_esquina",
+   "nombre": "Cabeza de barra",
+   "categoria": "barra",
+   "clase": "FIXED",
+   "masa": 300,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      1.02,
+      0.56
+     ],
+     "p": [
+      0,
+      0.51,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.66,
+      0.05,
+      0.66
+     ],
+     "p": [
+      0,
+      1.045,
+      0.03
+     ],
+     "c": "#e9e4dc",
+     "m": "piedra"
+    }
+   ],
+   "motivo_fijo": "estructural",
+   "superficies": [
+    {
+     "y": 1.07,
+     "margen": 0.04
+    }
+   ]
+  },
+  {
+   "id": "cafetera_industrial",
+   "nombre": "Cafetera industrial de dos grupos",
+   "categoria": "maquina_hosteleria",
+   "clase": "FIXED",
+   "masa": 62,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.72,
+      0.42,
+      0.42
+     ],
+     "p": [
+      0,
+      0.21,
+      -0.04
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.72,
+      0.04,
+      0.42
+     ],
+     "p": [
+      0,
+      0.44,
+      -0.04
+     ],
+     "c": "#9aa0a4",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.08,
+      0.05
+     ],
+     "p": [
+      0,
+      0.32,
+      0.195
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.035,
+      0.06
+     ],
+     "p": [
+      -0.16,
+      0.25,
+      0.215
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.035,
+      0.06
+     ],
+     "p": [
+      0.16,
+      0.25,
+      0.215
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.025,
+      0.12
+     ],
+     "p": [
+      0,
+      0.0125,
+      0.22
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.006,
+      0.006,
+      0.16
+     ],
+     "p": [
+      0.3,
+      0.3,
+      0.21
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      30,
+      0,
+      0
+     ]
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "motivo_fijo": "anclado en la realidad",
+   "nota": "conectada al agua y al desagüe"
+  },
+  {
+   "id": "molinillo",
+   "nombre": "Molinillo de café",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "CARRY",
+   "masa": 9,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.34,
+      0.3
+     ],
+     "p": [
+      0,
+      0.17,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.09,
+      0.22
+     ],
+     "p": [
+      0,
+      0.45,
+      0
+     ],
+     "c": "#3a2a20",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.02
+     ],
+     "p": [
+      0,
+      0.57,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "caja_registradora",
+   "nombre": "Caja registradora",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.36,
+      0.12,
+      0.38
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#33363a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.12,
+      0.04
+     ],
+     "p": [
+      0,
+      0.2,
+      -0.08
+     ],
+     "c": "#1f2225",
+     "m": "plastico",
+     "r": [
+      -15,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.24,
+      0.07,
+      0.01
+     ],
+     "p": [
+      0,
+      0.2,
+      -0.055
+     ],
+     "c": "#3b6d8a",
+     "m": "plastico",
+     "luz": true
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "vitrina_bolleria",
+   "nombre": "Vitrina de bollería",
+   "categoria": "vitrina",
+   "clase": "CARRY",
+   "masa": 18,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.8,
+      0.04,
+      0.42
+     ],
+     "p": [
+      0,
+      0.02,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8,
+      0.36,
+      0.42
+     ],
+     "p": [
+      0,
+      0.22,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.045
+     ],
+     "p": [
+      -0.25,
+      0.08,
+      0.05
+     ],
+     "c": "#c98a3c",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.045
+     ],
+     "p": [
+      -0.12,
+      0.08,
+      -0.06
+     ],
+     "c": "#d39a48",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.12,
+      0.05,
+      0.08
+     ],
+     "p": [
+      0.05,
+      0.07,
+      0
+     ],
+     "c": "#a8642c",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.05
+     ],
+     "p": [
+      0.22,
+      0.09,
+      0.04
+     ],
+     "c": "#e0b46a",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.16,
+      0.04,
+      0.1
+     ],
+     "p": [
+      0.1,
+      0.22,
+      0
+     ],
+     "c": "#d8a050",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.04
+     ],
+     "p": [
+      -0.2,
+      0.23,
+      0
+     ],
+     "c": "#b97a34",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "servilletero",
+   "nombre": "Servilletero",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.25,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.13,
+      0.015,
+      0.08
+     ],
+     "p": [
+      0,
+      0.0075,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.12,
+      0.09,
+      0.06
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "papel"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.13,
+      0.1,
+      0.005
+     ],
+     "p": [
+      0,
+      0.06,
+      0.035
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "azucarero",
+   "nombre": "Azucarero dosificador",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.04,
+      0.1
+     ],
+     "p": [
+      0,
+      0.05,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.035,
+      0.03
+     ],
+     "p": [
+      0,
+      0.115,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "palillero",
+   "nombre": "Palillero",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.1,
+   "material": "madera",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.025,
+      0.07
+     ],
+     "p": [
+      0,
+      0.035,
+      0
+     ],
+     "c": "#c8a878",
+     "m": "madera"
+    }
+   ]
+  },
+  {
+   "id": "datafono",
+   "nombre": "Datáfono",
+   "categoria": "informatica",
+   "clase": "PICKUP",
+   "masa": 0.35,
+   "material": "plastico",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.08,
+      0.03,
+      0.17
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#26292c",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.003,
+      0.05
+     ],
+     "p": [
+      0,
+      0.0315,
+      -0.045
+     ],
+     "c": "#4a7a9a",
+     "m": "plastico",
+     "luz": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.002,
+      0.07
+     ],
+     "p": [
+      0,
+      0.031,
+      0.035
+     ],
+     "c": "#3a3d40",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "bote_propinas",
+   "nombre": "Bote de propinas",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.4,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.05,
+      0.05,
+      0.12
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.04,
+      0.02
+     ],
+     "p": [
+      0,
+      0.02,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "tirador_cerveza",
+   "nombre": "Grifo de cerveza",
+   "categoria": "maquina_hosteleria",
+   "clase": "FIXED",
+   "masa": 9,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.32,
+      0.03,
+      0.18
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.05,
+      0.05,
+      0.42
+     ],
+     "p": [
+      0,
+      0.24,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.26,
+      0.08,
+      0.08
+     ],
+     "p": [
+      0,
+      0.42,
+      0.02
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.18
+     ],
+     "p": [
+      -0.07,
+      0.55,
+      0.06
+     ],
+     "c": "#262626",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.18
+     ],
+     "p": [
+      0.07,
+      0.55,
+      0.06
+     ],
+     "c": "#262626",
+     "m": "plastico"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "bandeja",
+   "nombre": "Bandeja",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.4,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.17,
+      0.17,
+      0.015
+     ],
+     "p": [
+      0,
+      0.0075,
+      0
+     ],
+     "c": "#9aa0a4",
+     "m": "metal",
+     "seg": 24
+    }
+   ]
+  },
+  {
+   "id": "taburete_alto",
+   "nombre": "Taburete alto de barra",
+   "categoria": "taburete",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.19,
+      0.19,
+      0.06
+     ],
+     "p": [
+      0,
+      0.75,
+      0
+     ],
+     "c": "#5a3a24",
+     "m": "madera",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.022,
+      0.022,
+      0.72
+     ],
+     "p": [
+      0,
+      0.36,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.2,
+      0.22,
+      0.02
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.13,
+      0.015
+     ],
+     "p": [
+      0,
+      0.3,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal",
+     "seg": 16
+    }
+   ],
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.78,
+      0
+     ],
+     "h": 0.78,
+     "anim": "taburete_alto"
+    }
+   ]
+  },
+  {
+   "id": "mueble_trasbarra",
+   "nombre": "Mueble bajo de trasbarra (1,2 m)",
+   "categoria": "mueble",
+   "clase": "FIXED",
+   "masa": 140,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.86,
+      0.6
+     ],
+     "p": [
+      0,
+      0.43,
+      0
+     ],
+     "c": "#6a4a32",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.04,
+      0.63
+     ],
+     "p": [
+      0,
+      0.88,
+      0.015
+     ],
+     "c": "#d8d2c8",
+     "m": "piedra"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.56,
+      0.7,
+      0.01
+     ],
+     "p": [
+      -0.3,
+      0.43,
+      0.305
+     ],
+     "c": "#5a3e2a",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.56,
+      0.7,
+      0.01
+     ],
+     "p": [
+      0.3,
+      0.43,
+      0.305
+     ],
+     "c": "#5a3e2a",
+     "m": "madera"
+    }
+   ],
+   "motivo_fijo": "estructural",
+   "superficies": [
+    {
+     "y": 0.9,
+     "margen": 0.03
+    }
+   ]
+  },
+  {
+   "id": "botellero_pared",
+   "nombre": "Botellero de pared (3 baldas)",
+   "categoria": "estanteria",
+   "clase": "FIXED",
+   "masa": 22,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.02,
+      0.24
+     ],
+     "p": [
+      0,
+      1.5,
+      0.12
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.02,
+      0.24
+     ],
+     "p": [
+      0,
+      1.85,
+      0.12
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.02,
+      0.24
+     ],
+     "p": [
+      0,
+      2.2,
+      0.12
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.95,
+      0.02
+     ],
+     "p": [
+      0,
+      1.86,
+      0.01
+     ],
+     "c": "#b7a58c",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.4,
+      0.005
+     ],
+     "p": [
+      0,
+      1.7,
+      0.015
+     ],
+     "c": "#d8dde0",
+     "m": "cristal"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad",
+   "superficies": [
+    {
+     "y": 1.51,
+     "fondo": 0.22
+    },
+    {
+     "y": 1.86,
+     "fondo": 0.22
+    },
+    {
+     "y": 2.21,
+     "fondo": 0.22
+    }
+   ]
+  },
+  {
+   "id": "botella_whisky",
+   "nombre": "Botella de whisky",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.1,
+      0.21,
+      0.08000000000000002
+     ],
+     "p": [
+      0,
+      0.105,
+      0
+     ],
+     "c": "#8a4a18",
+     "m": "cristal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.10200000000000001,
+      0.075,
+      0.08200000000000002
+     ],
+     "p": [
+      0,
+      0.096,
+      0
+     ],
+     "c": "#2a1a10",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.05,
+      0.036
+     ],
+     "p": [
+      0,
+      0.22799999999999998,
+      0
+     ],
+     "c": "#8a4a18",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.054
+     ],
+     "p": [
+      0,
+      0.273,
+      0
+     ],
+     "c": "#8a4a18",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.020000000000000004,
+      0.020000000000000004,
+      0.012
+     ],
+     "p": [
+      0,
+      0.297,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_ron",
+   "nombre": "Botella de ron",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.042,
+      0.042,
+      0.21
+     ],
+     "p": [
+      0,
+      0.105,
+      0
+     ],
+     "c": "#6a3a1c",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.043000000000000003,
+      0.043000000000000003,
+      0.075
+     ],
+     "p": [
+      0,
+      0.096,
+      0
+     ],
+     "c": "#262626",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.042,
+      0.036
+     ],
+     "p": [
+      0,
+      0.22799999999999998,
+      0
+     ],
+     "c": "#6a3a1c",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01512,
+      0.01512,
+      0.054
+     ],
+     "p": [
+      0,
+      0.273,
+      0
+     ],
+     "c": "#6a3a1c",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.016800000000000002,
+      0.016800000000000002,
+      0.012
+     ],
+     "p": [
+      0,
+      0.297,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_ginebra",
+   "nombre": "Botella de ginebra",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.04,
+      0.21
+     ],
+     "p": [
+      0,
+      0.105,
+      0
+     ],
+     "c": "#9fc4c8",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.041,
+      0.041,
+      0.075
+     ],
+     "p": [
+      0,
+      0.096,
+      0
+     ],
+     "c": "#2a4a6a",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.04,
+      0.036
+     ],
+     "p": [
+      0,
+      0.22799999999999998,
+      0
+     ],
+     "c": "#9fc4c8",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0144,
+      0.0144,
+      0.054
+     ],
+     "p": [
+      0,
+      0.273,
+      0
+     ],
+     "c": "#9fc4c8",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.016,
+      0.016,
+      0.012
+     ],
+     "p": [
+      0,
+      0.297,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_anis",
+   "nombre": "Botella de anís",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.24,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.09,
+      0.196,
+      0.072
+     ],
+     "p": [
+      0,
+      0.098,
+      0
+     ],
+     "c": "#e8eef0",
+     "m": "cristal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.092,
+      0.07,
+      0.074
+     ],
+     "p": [
+      0,
+      0.08960000000000001,
+      0
+     ],
+     "c": "#c82a2a",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.045,
+      0.033600000000000005
+     ],
+     "p": [
+      0,
+      0.21280000000000002,
+      0
+     ],
+     "c": "#e8eef0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0162,
+      0.0162,
+      0.0504
+     ],
+     "p": [
+      0,
+      0.2548,
+      0
+     ],
+     "c": "#e8eef0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.011200000000000002
+     ],
+     "p": [
+      0,
+      0.2772,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_brandy",
+   "nombre": "Botella de brandy",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.21,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.045,
+      0.045,
+      0.189
+     ],
+     "p": [
+      0,
+      0.0945,
+      0
+     ],
+     "c": "#7a3a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.046,
+      0.046,
+      0.0675
+     ],
+     "p": [
+      0,
+      0.0864,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.045,
+      0.0324
+     ],
+     "p": [
+      0,
+      0.20520000000000002,
+      0
+     ],
+     "c": "#7a3a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0162,
+      0.0162,
+      0.048600000000000004
+     ],
+     "p": [
+      0,
+      0.24570000000000003,
+      0
+     ],
+     "c": "#7a3a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.0108
+     ],
+     "p": [
+      0,
+      0.26730000000000004,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_vino_tinto",
+   "nombre": "Botella de vino tinto",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.038,
+      0.038,
+      0.21
+     ],
+     "p": [
+      0,
+      0.105,
+      0
+     ],
+     "c": "#3a1a24",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.039,
+      0.039,
+      0.075
+     ],
+     "p": [
+      0,
+      0.096,
+      0
+     ],
+     "c": "#e8e0d0",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.038,
+      0.036
+     ],
+     "p": [
+      0,
+      0.22799999999999998,
+      0
+     ],
+     "c": "#3a1a24",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01368,
+      0.01368,
+      0.054
+     ],
+     "p": [
+      0,
+      0.273,
+      0
+     ],
+     "c": "#3a1a24",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0152,
+      0.0152,
+      0.012
+     ],
+     "p": [
+      0,
+      0.297,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_vino_blanco",
+   "nombre": "Botella de vino blanco",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.3,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.038,
+      0.038,
+      0.21
+     ],
+     "p": [
+      0,
+      0.105,
+      0
+     ],
+     "c": "#a8b860",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.039,
+      0.039,
+      0.075
+     ],
+     "p": [
+      0,
+      0.096,
+      0
+     ],
+     "c": "#e8e0d0",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.038,
+      0.036
+     ],
+     "p": [
+      0,
+      0.22799999999999998,
+      0
+     ],
+     "c": "#a8b860",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01368,
+      0.01368,
+      0.054
+     ],
+     "p": [
+      0,
+      0.273,
+      0
+     ],
+     "c": "#a8b860",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0152,
+      0.0152,
+      0.012
+     ],
+     "p": [
+      0,
+      0.297,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_vermut",
+   "nombre": "Botella de vermut",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.24,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.042,
+      0.042,
+      0.196
+     ],
+     "p": [
+      0,
+      0.098,
+      0
+     ],
+     "c": "#5a1a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.043000000000000003,
+      0.043000000000000003,
+      0.07
+     ],
+     "p": [
+      0,
+      0.08960000000000001,
+      0
+     ],
+     "c": "#e8c060",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.042,
+      0.033600000000000005
+     ],
+     "p": [
+      0,
+      0.21280000000000002,
+      0
+     ],
+     "c": "#5a1a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01512,
+      0.01512,
+      0.0504
+     ],
+     "p": [
+      0,
+      0.2548,
+      0
+     ],
+     "c": "#5a1a14",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.016800000000000002,
+      0.016800000000000002,
+      0.011200000000000002
+     ],
+     "p": [
+      0,
+      0.2772,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_licor_hierbas",
+   "nombre": "Botella de licor de hierbas",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.18,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.04,
+      0.182
+     ],
+     "p": [
+      0,
+      0.091,
+      0
+     ],
+     "c": "#3a5a2a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.041,
+      0.041,
+      0.065
+     ],
+     "p": [
+      0,
+      0.08320000000000001,
+      0
+     ],
+     "c": "#f0e6c8",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.04,
+      0.0312
+     ],
+     "p": [
+      0,
+      0.1976,
+      0
+     ],
+     "c": "#3a5a2a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0144,
+      0.0144,
+      0.0468
+     ],
+     "p": [
+      0,
+      0.2366,
+      0
+     ],
+     "c": "#3a5a2a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.016,
+      0.016,
+      0.010400000000000001
+     ],
+     "p": [
+      0,
+      0.2574,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_pacharan",
+   "nombre": "Botella de pacharán",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.21,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.04,
+      0.189
+     ],
+     "p": [
+      0,
+      0.0945,
+      0
+     ],
+     "c": "#6a1a3a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.041,
+      0.041,
+      0.0675
+     ],
+     "p": [
+      0,
+      0.0864,
+      0
+     ],
+     "c": "#f0e6c8",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.04,
+      0.0324
+     ],
+     "p": [
+      0,
+      0.20520000000000002,
+      0
+     ],
+     "c": "#6a1a3a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0144,
+      0.0144,
+      0.048600000000000004
+     ],
+     "p": [
+      0,
+      0.24570000000000003,
+      0
+     ],
+     "c": "#6a1a3a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.016,
+      0.016,
+      0.0108
+     ],
+     "p": [
+      0,
+      0.26730000000000004,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_agua_mineral",
+   "nombre": "Botella de agua",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.12,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.035,
+      0.16799999999999998
+     ],
+     "p": [
+      0,
+      0.08399999999999999,
+      0
+     ],
+     "c": "#cfe6f0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.036000000000000004,
+      0.036000000000000004,
+      0.06
+     ],
+     "p": [
+      0,
+      0.0768,
+      0
+     ],
+     "c": "#2a6ab0",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.035,
+      0.0288
+     ],
+     "p": [
+      0,
+      0.1824,
+      0
+     ],
+     "c": "#cfe6f0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0126,
+      0.0126,
+      0.043199999999999995
+     ],
+     "p": [
+      0,
+      0.2184,
+      0
+     ],
+     "c": "#cfe6f0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.014000000000000002,
+      0.014000000000000002,
+      0.0096
+     ],
+     "p": [
+      0,
+      0.23759999999999998,
+      0
+     ],
+     "c": "#2a6ab0",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_refresco_cola",
+   "nombre": "Botella de refresco de cola",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.06,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.032,
+      0.032,
+      0.154
+     ],
+     "p": [
+      0,
+      0.077,
+      0
+     ],
+     "c": "#2a1410",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.033,
+      0.033,
+      0.055
+     ],
+     "p": [
+      0,
+      0.0704,
+      0
+     ],
+     "c": "#c82020",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.032,
+      0.0264
+     ],
+     "p": [
+      0,
+      0.16720000000000002,
+      0
+     ],
+     "c": "#2a1410",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.011519999999999999,
+      0.011519999999999999,
+      0.039599999999999996
+     ],
+     "p": [
+      0,
+      0.20020000000000002,
+      0
+     ],
+     "c": "#2a1410",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0128,
+      0.0128,
+      0.0088
+     ],
+     "p": [
+      0,
+      0.2178,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_refresco_naranja",
+   "nombre": "Botella de refresco de naranja",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.06,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.032,
+      0.032,
+      0.154
+     ],
+     "p": [
+      0,
+      0.077,
+      0
+     ],
+     "c": "#f08a20",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.033,
+      0.033,
+      0.055
+     ],
+     "p": [
+      0,
+      0.0704,
+      0
+     ],
+     "c": "#1a4aa0",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.032,
+      0.0264
+     ],
+     "p": [
+      0,
+      0.16720000000000002,
+      0
+     ],
+     "c": "#f08a20",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.011519999999999999,
+      0.011519999999999999,
+      0.039599999999999996
+     ],
+     "p": [
+      0,
+      0.20020000000000002,
+      0
+     ],
+     "c": "#f08a20",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.0128,
+      0.0128,
+      0.0088
+     ],
+     "p": [
+      0,
+      0.2178,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_cerveza",
+   "nombre": "Botellín de cerveza",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.0,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.13999999999999999
+     ],
+     "p": [
+      0,
+      0.06999999999999999,
+      0
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.031,
+      0.031,
+      0.05
+     ],
+     "p": [
+      0,
+      0.064,
+      0
+     ],
+     "c": "#e8c040",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.03,
+      0.024
+     ],
+     "p": [
+      0,
+      0.15200000000000002,
+      0
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.010799999999999999,
+      0.010799999999999999,
+      0.036
+     ],
+     "p": [
+      0,
+      0.18200000000000002,
+      0
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.008
+     ],
+     "p": [
+      0,
+      0.198,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "botella_mosto",
+   "nombre": "Botella de mosto",
+   "categoria": "botella",
+   "clase": "PICKUP",
+   "masa": 1.12,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.034,
+      0.034,
+      0.16799999999999998
+     ],
+     "p": [
+      0,
+      0.08399999999999999,
+      0
+     ],
+     "c": "#c89a4a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.035,
+      0.06
+     ],
+     "p": [
+      0,
+      0.0768,
+      0
+     ],
+     "c": "#3a6a2a",
+     "m": "papel"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.034,
+      0.0288
+     ],
+     "p": [
+      0,
+      0.1824,
+      0
+     ],
+     "c": "#c89a4a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012240000000000001,
+      0.012240000000000001,
+      0.043199999999999995
+     ],
+     "p": [
+      0,
+      0.2184,
+      0
+     ],
+     "c": "#c89a4a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.013600000000000001,
+      0.013600000000000001,
+      0.0096
+     ],
+     "p": [
+      0,
+      0.23759999999999998,
+      0
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "estante_vajilla",
+   "nombre": "Estante de tazas y vasos",
+   "categoria": "estanteria",
+   "clase": "FIXED",
+   "masa": 14,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.15,
+      0.15
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      1.42,
+      0.15
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.02,
+      0.3,
+      0.3
+     ],
+     "p": [
+      -0.49,
+      1.29,
+      0.15
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.02,
+      0.3,
+      0.3
+     ],
+     "p": [
+      0.49,
+      1.29,
+      0.15
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad",
+   "superficies": [
+    {
+     "y": 1.16,
+     "fondo": 0.28
+    },
+    {
+     "y": 1.43,
+     "fondo": 0.28
+    }
+   ]
+  },
+  {
+   "id": "taza_cafe",
+   "nombre": "Taza de café",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.18,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.038,
+      0.03,
+      0.065
+     ],
+     "p": [
+      0,
+      0.0325,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.02,
+      0.02,
+      0.008
+     ],
+     "p": [
+      0.045,
+      0.035,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taza_desayuno",
+   "nombre": "Taza de desayuno",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.3,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.048,
+      0.04,
+      0.085
+     ],
+     "p": [
+      0,
+      0.0425,
+      0
+     ],
+     "c": "#f0ece2",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.025,
+      0.01
+     ],
+     "p": [
+      0.056,
+      0.045,
+      0
+     ],
+     "c": "#f0ece2",
+     "m": "ceramica",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plato_cafe",
+   "nombre": "Platillo",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.12,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.06,
+      0.012
+     ],
+     "p": [
+      0,
+      0.006,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica",
+     "seg": 20
+    }
+   ]
+  },
+  {
+   "id": "plato_llano",
+   "nombre": "Plato llano",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.5,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.11,
+      0.02
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica",
+     "seg": 24
+    }
+   ]
+  },
+  {
+   "id": "vaso_cana",
+   "nombre": "Vaso de caña",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.2,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.03,
+      0.12
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "vaso_tubo",
+   "nombre": "Vaso de tubo",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.25,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.15
+     ],
+     "p": [
+      0,
+      0.075,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "copa_vino",
+   "nombre": "Copa de vino",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.15,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.035,
+      0.025,
+      0.08
+     ],
+     "p": [
+      0,
+      0.13,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.09
+     ],
+     "p": [
+      0,
+      0.045,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.004
+     ],
+     "p": [
+      0,
+      0.002,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "lavavajillas",
+   "nombre": "Lavavajillas de barra",
+   "categoria": "electrodomestico",
+   "clase": "FIXED",
+   "masa": 48,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.82,
+      0.6
+     ],
+     "p": [
+      0,
+      0.41,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.05,
+      0.02
+     ],
+     "p": [
+      0,
+      0.7,
+      0.3
+     ],
+     "c": "#2b2b2e",
+     "m": "plastico"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "nevera_bebidas",
+   "nombre": "Nevera de bebidas con puerta de cristal",
+   "categoria": "nevera",
+   "clase": "PUSH_HEAVY",
+   "masa": 92,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.62,
+      1.86,
+      0.62
+     ],
+     "p": [
+      0,
+      0.93,
+      0
+     ],
+     "c": "#2a2e33",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.54,
+      1.5,
+      0.01
+     ],
+     "p": [
+      0,
+      1.0,
+      0.31
+     ],
+     "c": "#9cc8d8",
+     "m": "cristal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.18,
+      0.012
+     ],
+     "p": [
+      0,
+      1.72,
+      0.315
+     ],
+     "c": "#c82020",
+     "m": "plastico",
+     "luz": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.02,
+      0.5
+     ],
+     "p": [
+      0,
+      0.55,
+      0.0
+     ],
+     "c": "#d8dde0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.02,
+      0.5
+     ],
+     "p": [
+      0,
+      0.95,
+      0
+     ],
+     "c": "#d8dde0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.02,
+      0.5
+     ],
+     "p": [
+      0,
+      1.35,
+      0
+     ],
+     "c": "#d8dde0",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.2
+     ],
+     "p": [
+      -0.15,
+      0.66,
+      0.15
+     ],
+     "c": "#c82020",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.2
+     ],
+     "p": [
+      0,
+      0.66,
+      0.15
+     ],
+     "c": "#f08a20",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.2
+     ],
+     "p": [
+      0.15,
+      0.66,
+      0.15
+     ],
+     "c": "#2a6ab0",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.2
+     ],
+     "p": [
+      -0.15,
+      1.06,
+      0.15
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.2
+     ],
+     "p": [
+      0.15,
+      1.06,
+      0.15
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "pizarra_precios",
+   "nombre": "Pizarra de precios",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 3,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.9,
+      0.62,
+      0.025
+     ],
+     "p": [
+      0,
+      1.95,
+      0.0125
+     ],
+     "c": "#5a3a20",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.84,
+      0.56
+     ],
+     "p": [
+      0,
+      1.95,
+      0.027
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "pizarra",
+      "lineas": [
+       "Café solo  1,20",
+       "Café con leche  1,40",
+       "Tostada  1,80",
+       "Caña  1,50",
+       "Tinto  1,50",
+       "Churros  2,00"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "exprimidor",
+   "nombre": "Exprimidor de zumos",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "CARRY",
+   "masa": 7,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.26,
+      0.2,
+      0.3
+     ],
+     "p": [
+      0,
+      0.1,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.25
+     ],
+     "p": [
+      0,
+      0.32,
+      0
+     ],
+     "c": "#d0e8d8",
+     "m": "plastico"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.04
+     ],
+     "p": [
+      0.05,
+      0.47,
+      0
+     ],
+     "c": "#f08a20",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "tostadora",
+   "nombre": "Tostadora de barra",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "CARRY",
+   "masa": 8,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.46,
+      0.24,
+      0.34
+     ],
+     "p": [
+      0,
+      0.12,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.04,
+      0.02
+     ],
+     "p": [
+      0,
+      0.12,
+      0.17
+     ],
+     "c": "#262626",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "microondas",
+   "nombre": "Microondas",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "CARRY",
+   "masa": 13,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.3,
+      0.38
+     ],
+     "p": [
+      0,
+      0.15,
+      0
+     ],
+     "c": "#e8e8e4",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.32,
+      0.22,
+      0.005
+     ],
+     "p": [
+      -0.06,
+      0.15,
+      0.19
+     ],
+     "c": "#1a1c1e",
+     "m": "cristal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.1,
+      0.22,
+      0.005
+     ],
+     "p": [
+      0.19,
+      0.15,
+      0.19
+     ],
+     "c": "#c8ccd0",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "jamonero",
+   "nombre": "Jamonero con jamón",
+   "categoria": "alimento",
+   "clase": "CARRY",
+   "masa": 9,
+   "material": "madera",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.04,
+      0.5
+     ],
+     "p": [
+      0,
+      0.02,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.16,
+      0.04
+     ],
+     "p": [
+      0,
+      0.12,
+      -0.2
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.09
+     ],
+     "p": [
+      0,
+      0.14,
+      0.04
+     ],
+     "c": "#7a2a1c",
+     "m": "comida",
+     "s": [
+      1,
+      0.8,
+      2.2
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.02,
+      0.025,
+      0.12
+     ],
+     "p": [
+      0,
+      0.2,
+      -0.2
+     ],
+     "c": "#c89a6a",
+     "m": "comida",
+     "r": [
+      60,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "televisor_pared",
+   "nombre": "Televisor de pared",
+   "categoria": "pantalla",
+   "clase": "FIXED",
+   "masa": 11,
+   "material": "plastico",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.6,
+      0.05
+     ],
+     "p": [
+      0,
+      2.3,
+      0.06
+     ],
+     "c": "#242424",
+     "m": "plastico"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.94,
+      0.54
+     ],
+     "p": [
+      0,
+      2.3,
+      0.088
+     ],
+     "c": "#ffffff",
+     "m": "plastico",
+     "tex": {
+      "tipo": "pantalla"
+     },
+     "luz": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.2,
+      0.04
+     ],
+     "p": [
+      0,
+      2.3,
+      0.02
+     ],
+     "c": "#2a2a2a",
+     "m": "metal"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "reloj_pared",
+   "nombre": "Reloj de pared",
+   "categoria": "reloj",
+   "clase": "PICKUP",
+   "masa": 0.8,
+   "material": "plastico",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.17,
+      0.17,
+      0.04
+     ],
+     "p": [
+      0,
+      2.35,
+      0.02
+     ],
+     "c": "#f6f2e6",
+     "m": "plastico",
+     "r": [
+      90,
+      0,
+      0
+     ],
+     "tex": {
+      "tipo": "reloj"
+     }
+    }
+   ]
+  },
+  {
+   "id": "calendario_pared",
+   "nombre": "Calendario de la cooperativa",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.2,
+   "material": "papel",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "plano",
+     "d": [
+      0.32,
+      0.46
+     ],
+     "p": [
+      0,
+      1.6,
+      0.005
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "calendario"
+     }
+    }
+   ]
+  },
+  {
+   "id": "expositor_patatas",
+   "nombre": "Expositor de patatas fritas",
+   "categoria": "decoracion",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      1.5,
+      0.35
+     ],
+     "p": [
+      0,
+      0.75,
+      0
+     ],
+     "c": "#c8ccd0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.34,
+      0.3,
+      0.06
+     ],
+     "p": [
+      0,
+      0.4,
+      0.12
+     ],
+     "c": "#e8c040",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.34,
+      0.3,
+      0.06
+     ],
+     "p": [
+      0,
+      0.8,
+      0.12
+     ],
+     "c": "#c82a2a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.34,
+      0.3,
+      0.06
+     ],
+     "p": [
+      0,
+      1.2,
+      0.12
+     ],
+     "c": "#2a6ab0",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "mesa_cuadrada",
+   "nombre": "Mesa cuadrada de bar",
+   "categoria": "mesa",
+   "clase": "PUSH",
+   "masa": 27,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.03,
+      0.7
+     ],
+     "p": [
+      0,
+      0.745,
+      0
+     ],
+     "c": "#e6e0d4",
+     "m": "piedra"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.71
+     ],
+     "p": [
+      0,
+      0.375,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.02,
+      0.06
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.02,
+      0.5
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    }
+   ],
+   "motivo_clase": "encimera de mármol sobre pie de fundición",
+   "superficies": [
+    {
+     "y": 0.76,
+     "margen": 0.05
+    }
+   ]
+  },
+  {
+   "id": "mesa_redonda",
+   "nombre": "Mesa redonda de mármol",
+   "categoria": "mesa",
+   "clase": "PUSH",
+   "masa": 29,
+   "material": "piedra",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.36,
+      0.36,
+      0.03
+     ],
+     "p": [
+      0,
+      0.745,
+      0
+     ],
+     "c": "#ece6dc",
+     "m": "piedra",
+     "seg": 24
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.71
+     ],
+     "p": [
+      0,
+      0.375,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.22,
+      0.24,
+      0.03
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.76,
+     "margen": 0.08
+    }
+   ]
+  },
+  {
+   "id": "mesa_comedor",
+   "nombre": "Mesa de comedor (4)",
+   "categoria": "mesa",
+   "clase": "PUSH",
+   "masa": 34,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.04,
+      0.8
+     ],
+     "p": [
+      0,
+      0.74,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.72,
+      0.06
+     ],
+     "p": [
+      -0.54,
+      0.36,
+      -0.34
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.72,
+      0.06
+     ],
+     "p": [
+      0.54,
+      0.36,
+      -0.34
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.72,
+      0.06
+     ],
+     "p": [
+      -0.54,
+      0.36,
+      0.34
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.06,
+      0.72,
+      0.06
+     ],
+     "p": [
+      0.54,
+      0.36,
+      0.34
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.76,
+     "margen": 0.06
+    }
+   ]
+  },
+  {
+   "id": "silla_bistro",
+   "nombre": "Silla de bar",
+   "categoria": "silla",
+   "clase": "CARRY",
+   "masa": 5.5,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.42,
+      0.04,
+      0.42
+     ],
+     "p": [
+      0,
+      0.46,
+      0
+     ],
+     "c": "#6a4a30",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.45
+     ],
+     "p": [
+      -0.18,
+      0.225,
+      -0.18
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.45
+     ],
+     "p": [
+      0.18,
+      0.225,
+      -0.18
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.45
+     ],
+     "p": [
+      -0.18,
+      0.225,
+      0.18
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.45
+     ],
+     "p": [
+      0.18,
+      0.225,
+      0.18
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.4,
+      0.03
+     ],
+     "p": [
+      0,
+      0.7,
+      -0.2
+     ],
+     "c": "#6a4a30",
+     "m": "madera",
+     "r": [
+      -8,
+      0,
+      0
+     ]
+    }
+   ],
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.48,
+      0.02
+     ],
+     "h": 0.48,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "silla_madera",
+   "nombre": "Silla de madera",
+   "categoria": "silla",
+   "clase": "CARRY",
+   "masa": 5,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.44,
+      0.04,
+      0.44
+     ],
+     "p": [
+      0,
+      0.46,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.44,
+      0.04
+     ],
+     "p": [
+      -0.19,
+      0.22,
+      -0.19
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.44,
+      0.04
+     ],
+     "p": [
+      0.19,
+      0.22,
+      -0.19
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.44,
+      0.04
+     ],
+     "p": [
+      -0.19,
+      0.22,
+      0.19
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.44,
+      0.04
+     ],
+     "p": [
+      0.19,
+      0.22,
+      0.19
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.5,
+      0.04
+     ],
+     "p": [
+      -0.19,
+      0.73,
+      -0.2
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      0.5,
+      0.04
+     ],
+     "p": [
+      0.19,
+      0.73,
+      -0.2
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.42,
+      0.14,
+      0.03
+     ],
+     "p": [
+      0,
+      0.86,
+      -0.2
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    }
+   ],
+   "modificadores": [
+    "SEAT"
+   ],
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.48,
+      0.02
+     ],
+     "h": 0.48,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "revistero",
+   "nombre": "Revistero",
+   "categoria": "mueble",
+   "clase": "CARRY",
+   "masa": 5.5,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.02,
+      0.3
+     ],
+     "p": [
+      0,
+      0.01,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.7,
+      0.02
+     ],
+     "p": [
+      0,
+      0.36,
+      -0.1
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.38,
+      0.3,
+      0.06
+     ],
+     "p": [
+      0,
+      0.5,
+      -0.05
+     ],
+     "c": "#e8e2d4",
+     "m": "papel"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.02,
+     "margen": 0.02
+    }
+   ]
+  },
+  {
+   "id": "periodico",
+   "nombre": "Periódico",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.25,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.012,
+      0.4
+     ],
+     "p": [
+      0,
+      0.006,
+      0
+     ],
+     "c": "#ece8dc",
+     "m": "papel",
+     "tex": {
+      "tipo": "periodico"
+     }
+    }
+   ]
+  },
+  {
+   "id": "revista",
+   "nombre": "Revista",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.2,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.21,
+      0.008,
+      0.28
+     ],
+     "p": [
+      0,
+      0.004,
+      0
+     ],
+     "c": "#c84a3a",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "planta_grande",
+   "nombre": "Planta en maceta grande",
+   "categoria": "planta",
+   "clase": "CARRY",
+   "masa": 18,
+   "material": "ceramica",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.22,
+      0.17,
+      0.42
+     ],
+     "p": [
+      0,
+      0.21,
+      0
+     ],
+     "c": "#b5694a",
+     "m": "ceramica"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.32
+     ],
+     "p": [
+      0,
+      0.82,
+      0
+     ],
+     "c": "#4a7a3a",
+     "m": "madera",
+     "s": [
+      1,
+      1.3,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.2
+     ],
+     "p": [
+      0.15,
+      1.1,
+      0.1
+     ],
+     "c": "#558a40",
+     "m": "madera"
+    }
+   ]
+  },
+  {
+   "id": "planta_pequena",
+   "nombre": "Maceta pequeña",
+   "categoria": "planta",
+   "clase": "PICKUP",
+   "masa": 1.2,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.055,
+      0.12
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#c87a54",
+     "m": "ceramica"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.09
+     ],
+     "p": [
+      0,
+      0.18,
+      0
+     ],
+     "c": "#4f8a3c",
+     "m": "madera"
+    }
+   ]
+  },
+  {
+   "id": "cuadro_paisaje",
+   "nombre": "Cuadro de un paisaje de las Vegas",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 2,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.5,
+      0.03
+     ],
+     "p": [
+      0,
+      1.7,
+      0.015
+     ],
+     "c": "#6a4a2a",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.62,
+      0.42
+     ],
+     "p": [
+      0,
+      1.7,
+      0.031
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "paisaje"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cuadro_foto_antigua",
+   "nombre": "Foto antigua del pueblo",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 1.2,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.38,
+      0.025
+     ],
+     "p": [
+      0,
+      1.75,
+      0.0125
+     ],
+     "c": "#2a2420",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.44,
+      0.32
+     ],
+     "p": [
+      0,
+      1.75,
+      0.026
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "foto"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cartel_toros",
+   "nombre": "Cartel de toros enmarcado",
+   "categoria": "cuadro",
+   "clase": "PICKUP",
+   "masa": 1.5,
+   "material": "papel",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.75,
+      0.02
+     ],
+     "p": [
+      0,
+      1.75,
+      0.01
+     ],
+     "c": "#3a2a1a",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.46,
+      0.7
+     ],
+     "p": [
+      0,
+      1.75,
+      0.021
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "cartel_fiesta"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lampara_colgante",
+   "nombre": "Lámpara colgante",
+   "categoria": "lampara",
+   "clase": "FIXED",
+   "masa": 1.6,
+   "material": "metal",
+   "soporte": "techo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.7
+     ],
+     "p": [
+      0,
+      -0.35,
+      0
+     ],
+     "c": "#262626",
+     "m": "metal"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.2,
+      0.18
+     ],
+     "p": [
+      0,
+      -0.79,
+      0
+     ],
+     "c": "#2f3a34",
+     "m": "metal"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.05
+     ],
+     "p": [
+      0,
+      -0.86,
+      0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "papelera",
+   "nombre": "Papelera",
+   "categoria": "papelera",
+   "clase": "PICKUP",
+   "masa": 1.5,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.13,
+      0.11,
+      0.38
+     ],
+     "p": [
+      0,
+      0.19,
+      0
+     ],
+     "c": "#7a8086",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "perchero",
+   "nombre": "Perchero de pie",
+   "categoria": "perchero",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.02,
+      0.02,
+      1.75
+     ],
+     "p": [
+      0,
+      0.875,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.2,
+      0.22,
+      0.03
+     ],
+     "p": [
+      0,
+      0.015,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01,
+      0.01,
+      0.3
+     ],
+     "p": [
+      0,
+      1.7,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera",
+     "r": [
+      0,
+      0,
+      70
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01,
+      0.01,
+      0.3
+     ],
+     "p": [
+      0,
+      1.7,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera",
+     "r": [
+      70,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tragaperras",
+   "nombre": "Máquina tragaperras",
+   "categoria": "maquina_expendedora",
+   "clase": "PUSH_HEAVY",
+   "masa": 88,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      1.7,
+      0.5
+     ],
+     "p": [
+      0,
+      0.85,
+      0
+     ],
+     "c": "#2a1a3a",
+     "m": "metal"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.5,
+      0.5
+     ],
+     "p": [
+      0,
+      1.25,
+      0.252
+     ],
+     "c": "#ffffff",
+     "m": "plastico",
+     "tex": {
+      "tipo": "tragaperras"
+     },
+     "luz": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.06,
+      0.15
+     ],
+     "p": [
+      0,
+      0.85,
+      0.3
+     ],
+     "c": "#c8a040",
+     "m": "metal"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "maquina_tabaco",
+   "nombre": "Máquina de tabaco",
+   "categoria": "maquina_expendedora",
+   "clase": "PUSH_HEAVY",
+   "masa": 120,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      1.75,
+      0.45
+     ],
+     "p": [
+      0,
+      0.875,
+      0
+     ],
+     "c": "#3a3e44",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.9,
+      0.01
+     ],
+     "p": [
+      0,
+      1.15,
+      0.23
+     ],
+     "c": "#c8ccd0",
+     "m": "plastico",
+     "luz": true
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.2,
+      0.1,
+      0.05
+     ],
+     "p": [
+      0,
+      0.55,
+      0.24
+     ],
+     "c": "#262626",
+     "m": "metal"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ]
+  },
+  {
+   "id": "carta_menu",
+   "nombre": "Carta",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.15,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.16,
+      0.01,
+      0.24
+     ],
+     "p": [
+      0,
+      0.005,
+      0
+     ],
+     "c": "#6a2a1c",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "atril_menu",
+   "nombre": "Pizarra de menú del día",
+   "categoria": "decoracion",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.85,
+      0.02
+     ],
+     "p": [
+      0,
+      0.425,
+      0.09
+     ],
+     "c": "#2a2a26",
+     "m": "madera",
+     "r": [
+      -12,
+      0,
+      0
+     ],
+     "tex": {
+      "tipo": "menu_dia"
+     }
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.85,
+      0.02
+     ],
+     "p": [
+      0,
+      0.425,
+      -0.09
+     ],
+     "c": "#2a2a26",
+     "m": "madera",
+     "r": [
+      12,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.66,
+      0.04,
+      0.05
+     ],
+     "p": [
+      0,
+      0.84,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    }
+   ]
+  },
+  {
+   "id": "cucharilla",
+   "nombre": "Cucharilla",
+   "categoria": "cubiertos",
+   "clase": "PICKUP",
+   "masa": 0.02,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.012,
+      0.004,
+      0.11
+     ],
+     "p": [
+      0,
+      0.002,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "plato_churros",
+   "nombre": "Ración de churros",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 0.5,
+   "material": "comida",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.09,
+      0.015
+     ],
+     "p": [
+      0,
+      0.0075,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.14
+     ],
+     "p": [
+      -0.03,
+      0.025,
+      0
+     ],
+     "c": "#d8a050",
+     "m": "comida",
+     "r": [
+      90,
+      20,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.14
+     ],
+     "p": [
+      0.02,
+      0.025,
+      0
+     ],
+     "c": "#d09848",
+     "m": "comida",
+     "r": [
+      90,
+      -15,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plato_tostada",
+   "nombre": "Tostada con tomate",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 0.55,
+   "material": "comida",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.09,
+      0.015
+     ],
+     "p": [
+      0,
+      0.0075,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.14,
+      0.02,
+      0.08
+     ],
+     "p": [
+      0,
+      0.025,
+      0
+     ],
+     "c": "#c8904a",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.12,
+      0.006,
+      0.06
+     ],
+     "p": [
+      0,
+      0.038,
+      0
+     ],
+     "c": "#c8402a",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "vaso_agua",
+   "nombre": "Vaso de agua",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.25,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.033,
+      0.028,
+      0.1
+     ],
+     "p": [
+      0,
+      0.05,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "servilleta_arrugada",
+   "nombre": "Servilleta arrugada",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.01,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "esfera",
+     "d": [
+      0.025
+     ],
+     "p": [
+      0,
+      0.02,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "papel",
+     "s": [
+      1.2,
+      0.7,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lavabo",
+   "nombre": "Lavabo",
+   "categoria": "sanitario",
+   "clase": "FIXED",
+   "masa": 18,
+   "material": "ceramica",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.16,
+      0.42
+     ],
+     "p": [
+      0,
+      0.8,
+      0.21
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.08,
+      0.06,
+      0.62
+     ],
+     "p": [
+      0,
+      0.36,
+      0.18
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.16
+     ],
+     "p": [
+      0,
+      0.95,
+      0.06
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      30,
+      0,
+      0
+     ]
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "inodoro",
+   "nombre": "Inodoro",
+   "categoria": "sanitario",
+   "clase": "FIXED",
+   "masa": 30,
+   "material": "ceramica",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.17,
+      0.13,
+      0.4
+     ],
+     "p": [
+      0,
+      0.2,
+      0.08
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.38,
+      0.17
+     ],
+     "p": [
+      0,
+      0.6,
+      -0.22
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.18,
+      0.18,
+      0.03
+     ],
+     "p": [
+      0,
+      0.415,
+      0.08
+     ],
+     "c": "#f8f6f0",
+     "m": "plastico"
+    }
+   ],
+   "modificadores": [
+    "USE",
+    "SEAT"
+   ],
+   "motivo_fijo": "anclado en la realidad",
+   "asientos": [
+    {
+     "p": [
+      0,
+      0.42,
+      0.08
+     ],
+     "h": 0.42,
+     "anim": "silla"
+    }
+   ]
+  },
+  {
+   "id": "dispensador_jabon",
+   "nombre": "Dispensador de jabón",
+   "categoria": "limpieza",
+   "clase": "FIXED",
+   "masa": 0.6,
+   "material": "plastico",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.1,
+      0.2,
+      0.09
+     ],
+     "p": [
+      0,
+      1.15,
+      0.045
+     ],
+     "c": "#e8ecef",
+     "m": "plastico"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "secamanos",
+   "nombre": "Secamanos",
+   "categoria": "pequeño_electrodomestico",
+   "clase": "FIXED",
+   "masa": 4,
+   "material": "metal",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.28,
+      0.24,
+      0.16
+     ],
+     "p": [
+      0,
+      1.3,
+      0.08
+     ],
+     "c": "#e6e8ea",
+     "m": "metal"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "espejo_aseo",
+   "nombre": "Espejo del aseo",
+   "categoria": "espejo",
+   "clase": "FIXED",
+   "masa": 5,
+   "material": "cristal",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.5,
+      0.7,
+      0.012
+     ],
+     "p": [
+      0,
+      1.55,
+      0.006
+     ],
+     "c": "#c8d6dc",
+     "m": "cristal"
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "portarrollos",
+   "nombre": "Portarrollos",
+   "categoria": "limpieza",
+   "clase": "FIXED",
+   "masa": 0.4,
+   "material": "metal",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.05,
+      0.05,
+      0.1
+     ],
+     "p": [
+      0,
+      0.65,
+      0.06
+     ],
+     "c": "#f4f2ec",
+     "m": "papel",
+     "r": [
+      0,
+      0,
+      90
+     ]
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "escobilla",
+   "nombre": "Escobilla del váter",
+   "categoria": "limpieza",
+   "clase": "PICKUP",
+   "masa": 0.3,
+   "material": "plastico",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.05,
+      0.05,
+      0.12
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#e8e8e8",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      0.3
+     ],
+     "p": [
+      0,
+      0.25,
+      0
+     ],
+     "c": "#e8e8e8",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "caja_bebidas",
+   "nombre": "Caja de botellines",
+   "categoria": "caja",
+   "clase": "CARRY",
+   "masa": 12,
+   "material": "plastico",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.28,
+      0.3
+     ],
+     "p": [
+      0,
+      0.14,
+      0
+     ],
+     "c": "#c82a2a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.04
+     ],
+     "p": [
+      -0.1,
+      0.3,
+      0
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.03,
+      0.03,
+      0.04
+     ],
+     "p": [
+      0.1,
+      0.3,
+      0
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.28,
+     "margen": 0.02
+    }
+   ]
+  },
+  {
+   "id": "barril_cerveza",
+   "nombre": "Barril de cerveza",
+   "categoria": "barril",
+   "clase": "PUSH",
+   "masa": 60,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.2,
+      0.2,
+      0.55
+     ],
+     "p": [
+      0,
+      0.275,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.21,
+      0.21,
+      0.03
+     ],
+     "p": [
+      0,
+      0.06,
+      0
+     ],
+     "c": "#9aa0a4",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.21,
+      0.21,
+      0.03
+     ],
+     "p": [
+      0,
+      0.5,
+      0
+     ],
+     "c": "#9aa0a4",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.04,
+      0.04,
+      0.05
+     ],
+     "p": [
+      0,
+      0.575,
+      0
+     ],
+     "c": "#2b2b2e",
+     "m": "metal"
+    }
+   ]
+  },
+  {
+   "id": "estanteria_metalica",
+   "nombre": "Estantería metálica de almacén",
+   "categoria": "estanteria",
+   "clase": "PUSH",
+   "masa": 32,
+   "material": "metal",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.8,
+      0.04
+     ],
+     "p": [
+      -0.48,
+      0.9,
+      -0.18
+     ],
+     "c": "#8a9096",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.8,
+      0.04
+     ],
+     "p": [
+      0.48,
+      0.9,
+      -0.18
+     ],
+     "c": "#8a9096",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.8,
+      0.04
+     ],
+     "p": [
+      -0.48,
+      0.9,
+      0.18
+     ],
+     "c": "#8a9096",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.04,
+      1.8,
+      0.04
+     ],
+     "p": [
+      0.48,
+      0.9,
+      0.18
+     ],
+     "c": "#8a9096",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.4
+     ],
+     "p": [
+      0,
+      0.15,
+      0
+     ],
+     "c": "#9aa0a6",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.4
+     ],
+     "p": [
+      0,
+      0.7,
+      0
+     ],
+     "c": "#9aa0a6",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.4
+     ],
+     "p": [
+      0,
+      1.25,
+      0
+     ],
+     "c": "#9aa0a6",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.02,
+      0.4
+     ],
+     "p": [
+      0,
+      1.78,
+      0
+     ],
+     "c": "#9aa0a6",
+     "m": "metal"
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.16,
+     "fondo": 0.38
+    },
+    {
+     "y": 0.71,
+     "fondo": 0.38
+    },
+    {
+     "y": 1.26,
+     "fondo": 0.38
+    }
+   ]
+  },
+  {
+   "id": "fregona_cubo",
+   "nombre": "Fregona y cubo",
+   "categoria": "limpieza",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "plastico",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.15,
+      0.13,
+      0.26
+     ],
+     "p": [
+      0,
+      0.13,
+      0
+     ],
+     "c": "#2a6ab0",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.01,
+      0.01,
+      1.3
+     ],
+     "p": [
+      0.05,
+      0.65,
+      0
+     ],
+     "c": "#c8c8c8",
+     "m": "metal",
+     "r": [
+      0,
+      0,
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "escoba",
+   "nombre": "Escoba",
+   "categoria": "limpieza",
+   "clase": "PICKUP",
+   "masa": 0.7,
+   "material": "plastico",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      1.25
+     ],
+     "p": [
+      0,
+      0.7,
+      0
+     ],
+     "c": "#3a6a2a",
+     "m": "plastico",
+     "r": [
+      0,
+      0,
+      6
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.28,
+      0.08,
+      0.06
+     ],
+     "p": [
+      0,
+      0.04,
+      0
+     ],
+     "c": "#e8c040",
+     "m": "plastico"
+    }
+   ]
+  },
+  {
+   "id": "caja_carton",
+   "nombre": "Caja de cartón",
+   "categoria": "caja",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.36,
+      0.26,
+      0.3
+     ],
+     "p": [
+      0,
+      0.13,
+      0
+     ],
+     "c": "#b88a58",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "saco_cafe",
+   "nombre": "Saco de café",
+   "categoria": "alimento",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "tela",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.36,
+      0.18
+     ],
+     "p": [
+      0,
+      0.18,
+      0
+     ],
+     "c": "#a07a4a",
+     "m": "tela"
+    }
+   ]
+  },
+  {
+   "id": "caja_vasos",
+   "nombre": "Caja de vasos",
+   "categoria": "caja",
+   "clase": "CARRY",
+   "masa": 7,
+   "material": "papel",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.4,
+      0.22,
+      0.3
+     ],
+     "p": [
+      0,
+      0.11,
+      0
+     ],
+     "c": "#d8c8a8",
+     "m": "papel"
+    }
+   ]
+  },
+  {
+   "id": "diana",
+   "nombre": "Diana de dardos",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 2.5,
+   "material": "tela",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.6,
+      0.6,
+      0.02
+     ],
+     "p": [
+      0,
+      1.73,
+      0.01
+     ],
+     "c": "#3a2416",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.225,
+      0.225,
+      0.035
+     ],
+     "p": [
+      0,
+      1.73,
+      0.0375
+     ],
+     "c": "#242424",
+     "m": "tela",
+     "r": [
+      90,
+      0,
+      0
+     ],
+     "seg": 24
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.45,
+      0.45
+     ],
+     "p": [
+      0,
+      1.73,
+      0.0555
+     ],
+     "c": "#ffffff",
+     "m": "tela",
+     "tex": {
+      "tipo": "diana"
+     }
+    }
+   ],
+   "nota": "a 1,73 m del suelo, como manda el reglamento"
+  },
+  {
+   "id": "futbolin",
+   "nombre": "Futbolín",
+   "categoria": "mueble",
+   "clase": "PUSH",
+   "masa": 70,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      0.04,
+      0.75
+     ],
+     "p": [
+      0,
+      0.74,
+      0
+     ],
+     "c": "#2a3a6a",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      1.3,
+      0.66
+     ],
+     "p": [
+      0,
+      0.762,
+      0
+     ],
+     "c": "#ffffff",
+     "m": "plastico",
+     "tex": {
+      "tipo": "futbolin"
+     },
+     "r": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      0.18,
+      0.03
+     ],
+     "p": [
+      0,
+      0.81,
+      0.36
+     ],
+     "c": "#2a3a6a",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.4,
+      0.18,
+      0.03
+     ],
+     "p": [
+      0,
+      0.81,
+      -0.36
+     ],
+     "c": "#2a3a6a",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.18,
+      0.75
+     ],
+     "p": [
+      0.685,
+      0.81,
+      0
+     ],
+     "c": "#2a3a6a",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.03,
+      0.18,
+      0.75
+     ],
+     "p": [
+      -0.685,
+      0.81,
+      0
+     ],
+     "c": "#2a3a6a",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.72,
+      0.07
+     ],
+     "p": [
+      -0.62,
+      0.36,
+      -0.3
+     ],
+     "c": "#262626",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.72,
+      0.07
+     ],
+     "p": [
+      -0.62,
+      0.36,
+      0.3
+     ],
+     "c": "#262626",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.72,
+      0.07
+     ],
+     "p": [
+      0.62,
+      0.36,
+      -0.3
+     ],
+     "c": "#262626",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.72,
+      0.07
+     ],
+     "p": [
+      0.62,
+      0.36,
+      0.3
+     ],
+     "c": "#262626",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      -0.6,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      -0.6,
+      0.86,
+      -0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.6,
+      0.835,
+      0.0
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      -0.42857142857142855,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      -0.42857142857142855,
+      0.86,
+      0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.42857142857142855,
+      0.835,
+      -0.15
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.42857142857142855,
+      0.835,
+      0.15
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      -0.2571428571428571,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      -0.2571428571428571,
+      0.86,
+      -0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.2571428571428571,
+      0.835,
+      -0.19999999999999998
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.2571428571428571,
+      0.835,
+      0.0
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.2571428571428571,
+      0.835,
+      0.19999999999999998
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.86,
+      0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.835,
+      -0.24
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.835,
+      -0.12
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.835,
+      0.0
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.835,
+      0.12
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      -0.08571428571428574,
+      0.835,
+      0.24
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      0.08571428571428574,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      0.08571428571428574,
+      0.86,
+      -0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.08571428571428574,
+      0.835,
+      -0.24
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.08571428571428574,
+      0.835,
+      -0.12
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.08571428571428574,
+      0.835,
+      0.0
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.08571428571428574,
+      0.835,
+      0.12
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.08571428571428574,
+      0.835,
+      0.24
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      0.25714285714285723,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      0.25714285714285723,
+      0.86,
+      0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.25714285714285723,
+      0.835,
+      -0.19999999999999998
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.25714285714285723,
+      0.835,
+      0.0
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.25714285714285723,
+      0.835,
+      0.19999999999999998
+     ],
+     "c": "#c8202a",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      0.4285714285714285,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      0.4285714285714285,
+      0.86,
+      -0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.4285714285714285,
+      0.835,
+      -0.15
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.4285714285714285,
+      0.835,
+      0.15
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.008,
+      1.12
+     ],
+     "p": [
+      0.6,
+      0.86,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.018,
+      0.018,
+      0.1
+     ],
+     "p": [
+      0.6,
+      0.86,
+      0.53
+     ],
+     "c": "#262626",
+     "m": "goma",
+     "r": [
+      90,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.025,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.6,
+      0.835,
+      0.0
+     ],
+     "c": "#2a5ac8",
+     "m": "plastico"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "nota": "el de toda la vida, rojos contra azules"
+  },
+  {
+   "id": "cabeza_ciervo",
+   "nombre": "Cabeza de ciervo disecada",
+   "categoria": "decoracion",
+   "clase": "CARRY",
+   "masa": 9,
+   "material": "tela",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.3,
+      0.4,
+      0.03
+     ],
+     "p": [
+      0,
+      2.05,
+      0.015
+     ],
+     "c": "#5a3a20",
+     "m": "madera"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.07,
+      0.09,
+      0.2
+     ],
+     "p": [
+      0,
+      2.0,
+      0.12
+     ],
+     "c": "#7a5634",
+     "m": "tela",
+     "r": [
+      70,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.13,
+      0.15,
+      0.26
+     ],
+     "p": [
+      0,
+      2.08,
+      0.26
+     ],
+     "c": "#7a5634",
+     "m": "tela",
+     "r": [
+      -20,
+      0,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.07,
+      0.1
+     ],
+     "p": [
+      0,
+      2.03,
+      0.42
+     ],
+     "c": "#3a2a1a",
+     "m": "tela"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.016,
+      0.42
+     ],
+     "p": [
+      -0.1,
+      2.36,
+      0.24
+     ],
+     "c": "#d8c8a8",
+     "m": "madera",
+     "r": [
+      0,
+      0,
+      28
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.016,
+      0.42
+     ],
+     "p": [
+      0.1,
+      2.36,
+      0.24
+     ],
+     "c": "#d8c8a8",
+     "m": "madera",
+     "r": [
+      0,
+      0,
+      -28
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.01,
+      0.16
+     ],
+     "p": [
+      -0.2,
+      2.43,
+      0.28
+     ],
+     "c": "#d8c8a8",
+     "m": "madera",
+     "r": [
+      0,
+      0,
+      70
+     ]
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.008,
+      0.01,
+      0.16
+     ],
+     "p": [
+      0.2,
+      2.43,
+      0.28
+     ],
+     "c": "#d8c8a8",
+     "m": "madera",
+     "r": [
+      0,
+      0,
+      -70
+     ]
+    }
+   ],
+   "nota": "trofeo de montería, de las que cuelgan en los bares de Extremadura"
+  },
+  {
+   "id": "ventilador_techo",
+   "nombre": "Ventilador de techo con luz",
+   "categoria": "lampara",
+   "clase": "FIXED",
+   "masa": 6,
+   "material": "metal",
+   "soporte": "techo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.015,
+      0.015,
+      0.3
+     ],
+     "p": [
+      0,
+      -0.15,
+      0
+     ],
+     "c": "#d8c8a0",
+     "m": "metal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.1,
+      0.12
+     ],
+     "p": [
+      0,
+      -0.36,
+      0
+     ],
+     "c": "#d8c8a0",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.2,
+      0.012,
+      0.13
+     ],
+     "p": [
+      0,
+      -0.4,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.13,
+      0.012,
+      1.2
+     ],
+     "p": [
+      0,
+      -0.4,
+      0
+     ],
+     "c": "#8a5a36",
+     "m": "madera"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.07
+     ],
+     "p": [
+      0,
+      -0.49,
+      0
+     ],
+     "c": "#fff3d6",
+     "m": "cristal",
+     "luz": true
+    }
+   ],
+   "motivo_fijo": "anclado en la realidad"
+  },
+  {
+   "id": "vitrina_tapas",
+   "nombre": "Vitrina refrigerada de tapas",
+   "categoria": "vitrina",
+   "clase": "CARRY",
+   "masa": 22,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.08,
+      0.4
+     ],
+     "p": [
+      0,
+      0.04,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.0,
+      0.22,
+      0.36
+     ],
+     "p": [
+      0,
+      0.19,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.26,
+      0.03,
+      0.22
+     ],
+     "p": [
+      -0.33,
+      0.095,
+      0
+     ],
+     "c": "#e8c860",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.26,
+      0.03,
+      0.22
+     ],
+     "p": [
+      0,
+      0.095,
+      0
+     ],
+     "c": "#efe6c8",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.26,
+      0.03,
+      0.22
+     ],
+     "p": [
+      0.33,
+      0.095,
+      0
+     ],
+     "c": "#9a5a2a",
+     "m": "comida"
+    }
+   ],
+   "modificadores": [
+    "USE"
+   ],
+   "nota": "tortilla, ensaladilla y croquetas"
+  },
+  {
+   "id": "mesa_barril",
+   "nombre": "Mesa de barril",
+   "categoria": "mueble",
+   "clase": "PUSH",
+   "masa": 38,
+   "material": "madera",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.3,
+      0.28,
+      0.95
+     ],
+     "p": [
+      0,
+      0.475,
+      0
+     ],
+     "c": "#7a4a26",
+     "m": "madera",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.302,
+      0.302,
+      0.04
+     ],
+     "p": [
+      0,
+      0.25,
+      0
+     ],
+     "c": "#3a3a3a",
+     "m": "metal",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.302,
+      0.302,
+      0.04
+     ],
+     "p": [
+      0,
+      0.75,
+      0
+     ],
+     "c": "#3a3a3a",
+     "m": "metal",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.36,
+      0.36,
+      0.04
+     ],
+     "p": [
+      0,
+      0.97,
+      0
+     ],
+     "c": "#5e3b22",
+     "m": "madera",
+     "seg": 20
+    }
+   ],
+   "superficies": [
+    {
+     "y": 0.99,
+     "margen": 0.03
+    }
+   ],
+   "nota": "un tonel de vino como mesa alta"
+  },
+  {
+   "id": "plato_tortilla",
+   "nombre": "Tapa de tortilla",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 0.35,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.075,
+      0.065,
+      0.012
+     ],
+     "p": [
+      0,
+      0.006,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica",
+     "seg": 18
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.035,
+      0.06
+     ],
+     "p": [
+      0,
+      0.03,
+      0
+     ],
+     "c": "#e8c860",
+     "m": "comida",
+     "r": [
+      0,
+      20,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cuenco_aceitunas",
+   "nombre": "Cuenco de aceitunas",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 0.3,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.055,
+      0.035,
+      0.04
+     ],
+     "p": [
+      0,
+      0.02,
+      0
+     ],
+     "c": "#c87a3a",
+     "m": "ceramica",
+     "seg": 16
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.012
+     ],
+     "p": [
+      -0.02,
+      0.04,
+      0
+     ],
+     "c": "#6a7a2a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.012
+     ],
+     "p": [
+      0.015,
+      0.04,
+      0.01
+     ],
+     "c": "#6a7a2a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.012
+     ],
+     "p": [
+      0,
+      0.04,
+      -0.02
+     ],
+     "c": "#6a7a2a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.012
+     ],
+     "p": [
+      0.02,
+      0.04,
+      -0.015
+     ],
+     "c": "#6a7a2a",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.012
+     ],
+     "p": [
+      -0.01,
+      0.04,
+      0.02
+     ],
+     "c": "#6a7a2a",
+     "m": "comida"
+    }
+   ]
+  },
+  {
+   "id": "plato_jamon",
+   "nombre": "Plato de jamón",
+   "categoria": "alimento",
+   "clase": "PICKUP",
+   "masa": 0.4,
+   "material": "ceramica",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.1,
+      0.09,
+      0.014
+     ],
+     "p": [
+      0,
+      0.007,
+      0
+     ],
+     "c": "#f4f2ec",
+     "m": "ceramica",
+     "seg": 20
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.004,
+      0.04
+     ],
+     "p": [
+      -0.03,
+      0.016,
+      0
+     ],
+     "c": "#a8343a",
+     "m": "comida",
+     "r": [
+      0,
+      10,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.004,
+      0.04
+     ],
+     "p": [
+      0.03,
+      0.016,
+      0.01
+     ],
+     "c": "#a8343a",
+     "m": "comida",
+     "r": [
+      0,
+      -25,
+      0
+     ]
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.07,
+      0.004,
+      0.04
+     ],
+     "p": [
+      0,
+      0.016,
+      -0.035
+     ],
+     "c": "#a8343a",
+     "m": "comida",
+     "r": [
+      0,
+      50,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jarra_cerveza",
+   "nombre": "Jarra de cerveza",
+   "categoria": "vajilla",
+   "clase": "PICKUP",
+   "masa": 0.6,
+   "material": "cristal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.045,
+      0.042,
+      0.15
+     ],
+     "p": [
+      0,
+      0.075,
+      0
+     ],
+     "c": "#e8a62a",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.044,
+      0.044,
+      0.025
+     ],
+     "p": [
+      0,
+      0.162,
+      0
+     ],
+     "c": "#fbf6ea",
+     "m": "comida"
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.015,
+      0.09,
+      0.03
+     ],
+     "p": [
+      0.055,
+      0.08,
+      0
+     ],
+     "c": "#bcd6dc",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "cubo_botellines",
+   "nombre": "Cubo de botellines con hielo",
+   "categoria": "recipiente",
+   "clase": "CARRY",
+   "masa": 6,
+   "material": "metal",
+   "soporte": "superficie",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.12,
+      0.1,
+      0.2
+     ],
+     "p": [
+      0,
+      0.1,
+      0
+     ],
+     "c": "#c3c7ca",
+     "m": "metal",
+     "seg": 18
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.09
+     ],
+     "p": [
+      -0.04,
+      0.24,
+      0.03
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.09
+     ],
+     "p": [
+      0.04,
+      0.24,
+      0.02
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.09
+     ],
+     "p": [
+      0,
+      0.24,
+      -0.05
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.012,
+      0.012,
+      0.09
+     ],
+     "p": [
+      0.05,
+      0.24,
+      -0.04
+     ],
+     "c": "#5a3a10",
+     "m": "cristal"
+    }
+   ]
+  },
+  {
+   "id": "jamon_colgado",
+   "nombre": "Jamón colgado",
+   "categoria": "alimento",
+   "clase": "CARRY",
+   "masa": 7.5,
+   "material": "comida",
+   "soporte": "techo",
+   "partes": [
+    {
+     "f": "cil",
+     "d": [
+      0.004,
+      0.004,
+      0.35
+     ],
+     "p": [
+      0,
+      -0.175,
+      0
+     ],
+     "c": "#d8c8a8",
+     "m": "tela"
+    },
+    {
+     "f": "cil",
+     "d": [
+      0.025,
+      0.02,
+      0.12
+     ],
+     "p": [
+      0,
+      -0.41,
+      0
+     ],
+     "c": "#d8c8a8",
+     "m": "comida"
+    },
+    {
+     "f": "cono",
+     "d": [
+      0.1,
+      0.42
+     ],
+     "p": [
+      0,
+      -0.68,
+      0
+     ],
+     "c": "#7a3a24",
+     "m": "comida"
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.11
+     ],
+     "p": [
+      0,
+      -0.9,
+      0
+     ],
+     "c": "#8a4a2c",
+     "m": "comida",
+     "s": [
+      1,
+      0.6,
+      0.8
+     ]
+    }
+   ],
+   "nota": "curándose colgado del techo, sobre la barra"
+  },
+  {
+   "id": "pizarra_tapas",
+   "nombre": "Pizarra de tapas",
+   "categoria": "decoracion",
+   "clase": "PICKUP",
+   "masa": 3,
+   "material": "madera",
+   "soporte": "pared",
+   "partes": [
+    {
+     "f": "caja",
+     "d": [
+      0.7,
+      0.9,
+      0.025
+     ],
+     "p": [
+      0,
+      1.9,
+      0.0125
+     ],
+     "c": "#5a3a20",
+     "m": "madera"
+    },
+    {
+     "f": "plano",
+     "d": [
+      0.64,
+      0.84
+     ],
+     "p": [
+      0,
+      1.9,
+      0.027
+     ],
+     "c": "#ffffff",
+     "m": "papel",
+     "tex": {
+      "tipo": "pizarra",
+      "lineas": [
+       "TAPAS",
+       "Tortilla  2,00",
+       "Ensaladilla  2,00",
+       "Croquetas  2,50",
+       "Migas  3,00",
+       "Pringá  2,50",
+       "Pinchito  2,00"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "papel_suelo",
+   "nombre": "Servilletas tiradas al suelo",
+   "categoria": "papel",
+   "clase": "PICKUP",
+   "masa": 0.02,
+   "material": "papel",
+   "soporte": "suelo",
+   "partes": [
+    {
+     "f": "esfera",
+     "d": [
+      0.02
+     ],
+     "p": [
+      -0.06,
+      0.012,
+      0.02
+     ],
+     "c": "#f4f2ec",
+     "m": "papel",
+     "s": [
+      1.3,
+      0.5,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.02
+     ],
+     "p": [
+      0.05,
+      0.012,
+      -0.03
+     ],
+     "c": "#f4f2ec",
+     "m": "papel",
+     "s": [
+      1.3,
+      0.5,
+      1
+     ]
+    },
+    {
+     "f": "esfera",
+     "d": [
+      0.02
+     ],
+     "p": [
+      0.0,
+      0.012,
+      0.05
+     ],
+     "c": "#f4f2ec",
+     "m": "papel",
+     "s": [
+      1.3,
+      0.5,
+      1
+     ]
+    }
+   ],
+   "nota": "las servilletas al suelo, como en todo bar que se precie"
+  }
+ ]
+}

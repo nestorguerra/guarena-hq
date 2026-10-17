@@ -82,6 +82,8 @@ export class Seats {
     this.cur = s;
     s.taken = true;
     if (s.kind === 'terraza' && s.bar && s.bar.cd <= 0) this.callWaiter(s);
+    // inside a bar or a café (src/locales.js): the barman asks from the counter and puts it in front of you
+    if (s.kind === 'local' && s.sirve) this.localOrder = { seat: s, state: 'wait', t: 1.2 + Math.random() * 1.5 };
     if (s.kind === 'fresco' && s.grp) { g.peds.say(s.grp.members[0] || { x: s.x, z: s.z }, pick(['¡Siéntate, {hijo|hija}, siéntate!', 'Anda, siéntate un ratino con nosotros.', '¡Mira quién viene a tomar el fresco!']), true); }
     if (g.net && g.net.active) g.net.send({ t: 'ev', k: 'chat', text: s.kind === 'terraza' ? '(se sienta en la terraza)' : '(se sienta)' });
   }
@@ -89,6 +91,7 @@ export class Seats {
     const g = this.game, s = this.cur;
     if (s) s.taken = false;
     this.cur = null;
+    this.localOrder = null;
     this.closeMenu();
     if (this.waiter && this.waiter.state !== 'leave') this.waiterLeave();
     g.player.standUp();
@@ -117,13 +120,14 @@ export class Seats {
   }
   closeMenu() { this.menuOpen = false; if (this.ui) this.ui.hidden = true; }
   choose(i) {
-    const g = this.game, p = g.player, it = MENU[i], w = this.waiter;
+    const g = this.game, p = g.player, it = MENU[i], w = this.waiter || this.localOrder;
     if (!it || !w) return;
     const price = Math.max(1, Math.round(it.price * PERK.price * 10) / 10);
     if (p.money < price) { g.hud.notify('No te llega. El camarero pone mala cara.', 'info', 3); return; }
     this.closeMenu();
     w.order = { ...it, price };
     g.peds.say({ x: p.pos.x, z: p.pos.z, y: 0 }, it.say, true);
+    if (w === this.localOrder) { w.state = 'pour'; w.t = 3 + Math.random() * 2.5; if (g.shops) g.shops.say('¡Marchando!', 1600); return; }
     g.peds.say(w, '¡Marchando!', true);
     if (g.net && g.net.active) g.net.send({ t: 'ev', k: 'chat', text: `(pide ${it.name.toLowerCase()})` });
     w.state = 'fetch'; w.goal = { x: w.bar.x, z: w.bar.z };
@@ -143,7 +147,19 @@ export class Seats {
     w.bar.cd = 30;
     g.persist();
   }
-  addCup(kind, x, z) {
+  serveLocal(L) {
+    const g = this.game, p = g.player, it = L.order, s = L.seat;
+    if (!it || p.money < it.price) return;
+    p.money -= it.price;
+    p.health = Math.min(100, p.health + it.hp);
+    if (it.stamina) p.stamina = 1;
+    g.audio.sfx('money', { vol: 0.5 });
+    g.hud.notify(`${it.name}: −${it.price.toFixed(it.price % 1 ? 2 : 0).replace('.', ',')} € · +${it.hp} de salud`, 'ok', 3.5);
+    if (g.shops) g.shops.say(pick(SERVE), 2400);
+    if (s.mesaY != null) this.addCup(it.cup, s.x + (s.tx - s.x) * 0.75, s.z + (s.tz - s.z) * 0.75, s.mesaY);
+    g.persist();
+  }
+  addCup(kind, x, z, y = 0.74) {
     const g = this.game, M = this.mats, grp = new THREE.Group();
     if (kind === 'beer' || kind === 'wine' || kind === 'soda') {
       const glass = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.03, 0.13, 12), M.glass); glass.position.y = 0.065; grp.add(glass);
@@ -156,7 +172,7 @@ export class Seats {
       const pl = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.1, 0.014, 18), M.plate); grp.add(pl);
       const f = new THREE.Mesh(new THREE.SphereGeometry(0.06, 10, 6, 0, Math.PI * 2, 0, Math.PI / 2), M.food); f.position.y = 0.01; f.scale.y = 0.5; grp.add(f);
     }
-    grp.position.set(x, 0.74, z);
+    grp.position.set(x, y, z);
     g.scene.add(grp);
     this.cups.push({ grp, t: 90 });
   }
@@ -170,8 +186,12 @@ export class Seats {
       if (input.hit('ArrowDown') || input.gpPressed(13)) { this.sel = (this.sel + 1) % MENU.length; this.renderMenu(); }
       if (input.hit('ArrowUp') || input.gpPressed(12)) { this.sel = (this.sel + MENU.length - 1) % MENU.length; this.renderMenu(); }
       if (input.hit('KeyE') || input.hit('Enter') || input.gpPressed(0)) { this.choose(this.sel); return; }
-      if (input.hit('Escape') || input.gpPressed(1)) { this.closeMenu(); g.peds.say(this.waiter || { x: p.pos.x, z: p.pos.z }, 'Nada, nada, gracias.', true); if (this.waiter) this.waiterLeave(); }
+      if (input.hit('Escape') || input.gpPressed(1)) { this.closeMenu(); g.peds.say(this.waiter || { x: p.pos.x, z: p.pos.z }, 'Nada, nada, gracias.', true); if (this.waiter) this.waiterLeave(); if (this.localOrder) this.localOrder.state = 'done'; }
     }
+    // the order inside: asked from the counter, then served where you sit
+    const L = this.localOrder;
+    if (L && L.state === 'wait' && (L.t -= dt) <= 0) { L.state = 'ask'; if (g.shops) g.shops.say(pick(GREET), 2200); this.openMenu(); }
+    else if (L && L.state === 'pour' && (L.t -= dt) <= 0) { L.state = 'done'; this.serveLocal(L); }
     const w = this.waiter;
     if (!w) return;
     const o = w.char.object;

@@ -1,0 +1,3452 @@
+{
+ "version": 1,
+ "puertas": 125,
+ "interiores": 128,
+ "errores": [],
+ "interiors": [
+  {
+   "interior_id": "tienda:bar:844",
+   "puerta": {
+    "x": -48.71,
+    "z": -105.58
+   },
+   "building_id": 3090,
+   "poi_id": 32,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar",
+   "superficie_m2": 103,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:farmacia:861",
+   "puerta": {
+    "x": -66.29,
+    "z": -161.76
+   },
+   "building_id": 3120,
+   "poi_id": 33,
+   "osm": "amenity:pharmacy",
+   "tipologia": "tienda_especializada",
+   "nombre": "Farmacia",
+   "superficie_m2": 56.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "farmacia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:878",
+   "puerta": {
+    "x": 504.84,
+    "z": 127.21
+   },
+   "building_id": 2488,
+   "poi_id": 34,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Supermercado",
+   "superficie_m2": 169.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:restaurante:895",
+   "puerta": {
+    "x": 26.28,
+    "z": -403.7
+   },
+   "building_id": 4150,
+   "poi_id": 35,
+   "osm": "amenity:fast_food",
+   "tipologia": "tienda_especializada",
+   "nombre": "Casa de comidas",
+   "superficie_m2": 126.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "restaurante",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:929",
+   "puerta": {
+    "x": 298.41,
+    "z": -22.05
+   },
+   "building_id": 2054,
+   "poi_id": 37,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Supermercado La Espiga",
+   "superficie_m2": 142.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:963",
+   "puerta": {
+    "x": -45.95,
+    "z": -503.61
+   },
+   "building_id": 4170,
+   "poi_id": 39,
+   "osm": "amenity:pub",
+   "tipologia": "bar",
+   "nombre": "Bar El Cruce",
+   "superficie_m2": 88.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:980",
+   "puerta": {
+    "x": -229.09,
+    "z": -457.13
+   },
+   "building_id": null,
+   "poi_id": 40,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar La Parada",
+   "superficie_m2": 82.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:farmacia:997",
+   "puerta": {
+    "x": 472.18,
+    "z": -76.68
+   },
+   "building_id": 2450,
+   "poi_id": 41,
+   "osm": "amenity:pharmacy",
+   "tipologia": "tienda_especializada",
+   "nombre": "Farmacia del Centro",
+   "superficie_m2": 61.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "farmacia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1031",
+   "puerta": {
+    "x": 697.13,
+    "z": -220.12
+   },
+   "building_id": 1721,
+   "poi_id": 43,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Mesón El Jamón",
+   "superficie_m2": 114.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:1048",
+   "puerta": {
+    "x": 180.15,
+    "z": 114.24
+   },
+   "building_id": 3399,
+   "poi_id": 44,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Supermercado El Trigal",
+   "superficie_m2": 147.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1065",
+   "puerta": {
+    "x": -53.91,
+    "z": -493.25
+   },
+   "building_id": 4171,
+   "poi_id": 45,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar Los Arcos",
+   "superficie_m2": 108.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:1082",
+   "puerta": {
+    "x": 113.31,
+    "z": -145.15
+   },
+   "building_id": 3460,
+   "poi_id": 46,
+   "osm": "amenity:post_office",
+   "tipologia": "tienda_especializada",
+   "nombre": "Oficina",
+   "superficie_m2": 90.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1099",
+   "puerta": {
+    "x": 43.26,
+    "z": -406.55
+   },
+   "building_id": 4218,
+   "poi_id": 47,
+   "osm": "amenity:pub",
+   "tipologia": "bar",
+   "nombre": "Bar El Rincón",
+   "superficie_m2": 92.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1116",
+   "puerta": {
+    "x": -206.92,
+    "z": -324.24
+   },
+   "building_id": 4028,
+   "poi_id": 48,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Taberna La Bota",
+   "superficie_m2": 102.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1133",
+   "puerta": {
+    "x": 36.92,
+    "z": -423.47
+   },
+   "building_id": 4158,
+   "poi_id": 49,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar La Fuente",
+   "superficie_m2": 85.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:1150",
+   "puerta": {
+    "x": 169.42,
+    "z": 110.75
+   },
+   "building_id": 3398,
+   "poi_id": 50,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar El Paseo",
+   "superficie_m2": 97.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2340",
+   "puerta": {
+    "x": 388.47,
+    "z": 385
+   },
+   "building_id": 565,
+   "poi_id": 120,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Mesón La Encina",
+   "superficie_m2": 93.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:2357",
+   "puerta": {
+    "x": -96.58,
+    "z": 325.82
+   },
+   "building_id": 1248,
+   "poi_id": 121,
+   "osm": "office:company",
+   "tipologia": "tienda_especializada",
+   "nombre": "Empresa",
+   "superficie_m2": 93.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2374",
+   "puerta": {
+    "x": -325,
+    "z": -408.41
+   },
+   "building_id": 4470,
+   "poi_id": 122,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar El Pilar",
+   "superficie_m2": 78.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2391",
+   "puerta": {
+    "x": -318.9,
+    "z": -422.5
+   },
+   "building_id": 4470,
+   "poi_id": 123,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar Las Eras",
+   "superficie_m2": 69.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:cafeteria:2425",
+   "puerta": {
+    "x": 409.97,
+    "z": -113.1
+   },
+   "building_id": 2314,
+   "poi_id": 125,
+   "osm": "amenity:cafe",
+   "tipologia": "cafeteria",
+   "nombre": "Cafetería",
+   "superficie_m2": 100.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "cafeteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2442",
+   "puerta": {
+    "x": 122.55,
+    "z": 78.11
+   },
+   "building_id": 3400,
+   "poi_id": 126,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco",
+   "superficie_m2": 93.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2459",
+   "puerta": {
+    "x": 162.07,
+    "z": 108.59
+   },
+   "building_id": 3391,
+   "poi_id": 127,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco del Valle",
+   "superficie_m2": 94.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2476",
+   "puerta": {
+    "x": 88.03,
+    "z": 78.63
+   },
+   "building_id": 3159,
+   "poi_id": 128,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco La Encina",
+   "superficie_m2": 91.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:joyeria:2493",
+   "puerta": {
+    "x": 72.58,
+    "z": 75.76
+   },
+   "building_id": 3202,
+   "poi_id": 129,
+   "osm": "shop:optician",
+   "tipologia": "tienda_especializada",
+   "nombre": "Óptica",
+   "superficie_m2": 84.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:2510",
+   "puerta": {
+    "x": 105,
+    "z": 84.19
+   },
+   "building_id": 3160,
+   "poi_id": 130,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Moda y Complementos",
+   "superficie_m2": 72,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:joyeria:2527",
+   "puerta": {
+    "x": 95.46,
+    "z": 69.6
+   },
+   "building_id": 3272,
+   "poi_id": 131,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 77.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:electro:2544",
+   "puerta": {
+    "x": 68.98,
+    "z": 51.35
+   },
+   "building_id": 3265,
+   "poi_id": 132,
+   "osm": "shop:appliance",
+   "tipologia": "tienda_especializada",
+   "nombre": "Electrodomésticos",
+   "superficie_m2": 70.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "electro",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2561",
+   "puerta": {
+    "x": 83.68,
+    "z": 62.95
+   },
+   "building_id": 3273,
+   "poi_id": 133,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco Campo Verde",
+   "superficie_m2": 97.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:joyeria:2578",
+   "puerta": {
+    "x": 77.27,
+    "z": 56.65
+   },
+   "building_id": 3273,
+   "poi_id": 134,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 66.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:2595",
+   "puerta": {
+    "x": 26.14,
+    "z": 47.83
+   },
+   "building_id": 3198,
+   "poi_id": 135,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Modas La Plaza",
+   "superficie_m2": 76.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2612",
+   "puerta": {
+    "x": 20.24,
+    "z": 35.85
+   },
+   "building_id": 3259,
+   "poi_id": 136,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Caja La Dehesa",
+   "superficie_m2": 103.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:2629",
+   "puerta": {
+    "x": 28.4,
+    "z": 38.43
+   },
+   "building_id": 3260,
+   "poi_id": 137,
+   "osm": "office:insurance",
+   "tipologia": "tienda_especializada",
+   "nombre": "Seguros",
+   "superficie_m2": 96.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:banco:2646",
+   "puerta": {
+    "x": 17.99,
+    "z": 44.18
+   },
+   "building_id": 3197,
+   "poi_id": 138,
+   "osm": "amenity:bank",
+   "tipologia": "tienda_especializada",
+   "nombre": "Banco Horizonte",
+   "superficie_m2": 104.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "banco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2663",
+   "puerta": {
+    "x": 7.54,
+    "z": 40.39
+   },
+   "building_id": 3196,
+   "poi_id": 139,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Taberna El Tonel",
+   "superficie_m2": 86.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2680",
+   "puerta": {
+    "x": 6.83,
+    "z": 31
+   },
+   "building_id": 3258,
+   "poi_id": 140,
+   "osm": "shop:lottery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Administración de lotería",
+   "superficie_m2": 58.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2714",
+   "puerta": {
+    "x": -50.78,
+    "z": 31.94
+   },
+   "building_id": 3057,
+   "poi_id": 142,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 67.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:2731",
+   "puerta": {
+    "x": -49.81,
+    "z": 24.48
+   },
+   "building_id": 3056,
+   "poi_id": 143,
+   "osm": "amenity:casino",
+   "tipologia": "bar",
+   "nombre": "Bar La Dehesa",
+   "superficie_m2": 88.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:farmacia:2748",
+   "puerta": {
+    "x": -56,
+    "z": 58.3
+   },
+   "building_id": 3060,
+   "poi_id": 144,
+   "osm": "amenity:pharmacy",
+   "tipologia": "tienda_especializada",
+   "nombre": "Farmacia de la Plaza",
+   "superficie_m2": 67.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "farmacia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ferreteria:2765",
+   "puerta": {
+    "x": -51.14,
+    "z": 63.75
+   },
+   "building_id": 3011,
+   "poi_id": 145,
+   "osm": "shop:hardware",
+   "tipologia": "tienda_especializada",
+   "nombre": "Ferretería",
+   "superficie_m2": 92.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ferreteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:cafeteria:2782",
+   "puerta": {
+    "x": -82.76,
+    "z": 10.62
+   },
+   "building_id": 3054,
+   "poi_id": 146,
+   "osm": "amenity:cafe",
+   "tipologia": "cafeteria",
+   "nombre": "Cafetería La Espiga",
+   "superficie_m2": 95.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "cafeteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:2816",
+   "puerta": {
+    "x": -209.11,
+    "z": -128.99
+   },
+   "building_id": 2980,
+   "poi_id": 148,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Alimentación La Vega",
+   "superficie_m2": 181.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2833",
+   "puerta": {
+    "x": 810.07,
+    "z": -7.4
+   },
+   "building_id": 1859,
+   "poi_id": 149,
+   "osm": "craft:glaziery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Cristalería",
+   "superficie_m2": 107,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2850",
+   "puerta": {
+    "x": 594.38,
+    "z": -67.12
+   },
+   "building_id": 2728,
+   "poi_id": 150,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 117.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2867",
+   "puerta": {
+    "x": 742.72,
+    "z": -205.94
+   },
+   "building_id": 1720,
+   "poi_id": 151,
+   "osm": "shop:car_parts",
+   "tipologia": "tienda_especializada",
+   "nombre": "Recambios",
+   "superficie_m2": 110.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2884",
+   "puerta": {
+    "x": 689.07,
+    "z": -179.23
+   },
+   "building_id": 1718,
+   "poi_id": 152,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 131.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:2901",
+   "puerta": {
+    "x": 581.94,
+    "z": -94.96
+   },
+   "building_id": 2730,
+   "poi_id": 153,
+   "osm": "shop:car_repair",
+   "tipologia": "tienda_especializada",
+   "nombre": "Taller",
+   "superficie_m2": 122.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:informatica:2918",
+   "puerta": {
+    "x": 455.84,
+    "z": -69.98
+   },
+   "building_id": 2290,
+   "poi_id": 154,
+   "osm": "shop:computer",
+   "tipologia": "tienda_especializada",
+   "nombre": "Informática y Móviles",
+   "superficie_m2": 63,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "informatica",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:fruteria:2935",
+   "puerta": {
+    "x": 442.93,
+    "z": -27.89
+   },
+   "building_id": 2177,
+   "poi_id": 155,
+   "osm": "shop:greengrocer",
+   "tipologia": "alimentacion",
+   "nombre": "Frutería",
+   "superficie_m2": 83.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "fruteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:2952",
+   "puerta": {
+    "x": 174.7,
+    "z": -14.92
+   },
+   "building_id": 3472,
+   "poi_id": 156,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 55.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:2969",
+   "puerta": {
+    "x": 121.92,
+    "z": -55.64
+   },
+   "building_id": 3226,
+   "poi_id": 157,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 54.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:2986",
+   "puerta": {
+    "x": 128.91,
+    "z": -0.13
+   },
+   "building_id": 3230,
+   "poi_id": 158,
+   "osm": "shop:lottery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Administración de lotería",
+   "superficie_m2": 71.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:informatica:3003",
+   "puerta": {
+    "x": 122.36,
+    "z": 0.46
+   },
+   "building_id": 3232,
+   "poi_id": 159,
+   "osm": "shop:computer",
+   "tipologia": "tienda_especializada",
+   "nombre": "Informática El Enchufe",
+   "superficie_m2": 68,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "informatica",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:3020",
+   "puerta": {
+    "x": 123.71,
+    "z": 11.82
+   },
+   "building_id": 3269,
+   "poi_id": 160,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 72.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:joyeria:3054",
+   "puerta": {
+    "x": 123.65,
+    "z": 26.5
+   },
+   "building_id": 3269,
+   "poi_id": 162,
+   "osm": "shop:jewelry",
+   "tipologia": "tienda_especializada",
+   "nombre": "Joyería",
+   "superficie_m2": 75.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "joyeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3071",
+   "puerta": {
+    "x": 129.75,
+    "z": 19
+   },
+   "building_id": 3418,
+   "poi_id": 163,
+   "osm": "shop:variety_store",
+   "tipologia": "tienda_especializada",
+   "nombre": "Bazar",
+   "superficie_m2": 84.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3088",
+   "puerta": {
+    "x": 135.29,
+    "z": 56.07
+   },
+   "building_id": 3413,
+   "poi_id": 164,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Boutique El Paseo",
+   "superficie_m2": 78.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:3105",
+   "puerta": {
+    "x": 140.49,
+    "z": 65.74
+   },
+   "building_id": 3412,
+   "poi_id": 165,
+   "osm": "amenity:dentist",
+   "tipologia": "tienda_especializada",
+   "nombre": "Clínica dental",
+   "superficie_m2": 91.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3122",
+   "puerta": {
+    "x": 150.23,
+    "z": 103.22
+   },
+   "building_id": 3164,
+   "poi_id": 166,
+   "osm": "shop:variety_store",
+   "tipologia": "tienda_especializada",
+   "nombre": "Bazar Todo a Cien",
+   "superficie_m2": 106.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:jugueteria:3139",
+   "puerta": {
+    "x": 163.03,
+    "z": 103.05
+   },
+   "building_id": 3403,
+   "poi_id": 167,
+   "osm": "shop:toys",
+   "tipologia": "tienda_especializada",
+   "nombre": "Juguetería",
+   "superficie_m2": 77.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "jugueteria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3156",
+   "puerta": {
+    "x": 188.24,
+    "z": 55.61
+   },
+   "building_id": 3409,
+   "poi_id": 168,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Calzados El Pilar",
+   "superficie_m2": 69.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:flores:3173",
+   "puerta": {
+    "x": 192.54,
+    "z": 117.49
+   },
+   "building_id": 3392,
+   "poi_id": 169,
+   "osm": "shop:florist",
+   "tipologia": "tienda_especializada",
+   "nombre": "Floristería",
+   "superficie_m2": 68.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "floristeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:panaderia:3190",
+   "puerta": {
+    "x": 190.72,
+    "z": 36.1
+   },
+   "building_id": 3484,
+   "poi_id": 170,
+   "osm": "shop:confectionery",
+   "tipologia": "alimentacion",
+   "nombre": "Panadería y Confitería",
+   "superficie_m2": 69.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "panaderia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:peluqueria:3207",
+   "puerta": {
+    "x": 186.6,
+    "z": 47.42
+   },
+   "building_id": 3409,
+   "poi_id": 171,
+   "osm": "shop:hairdresser",
+   "tipologia": "tienda_especializada",
+   "nombre": "Peluquería",
+   "superficie_m2": 76.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:3224",
+   "puerta": {
+    "x": 185.54,
+    "z": 42.4
+   },
+   "building_id": 3409,
+   "poi_id": 172,
+   "osm": "amenity:driving_school",
+   "tipologia": "tienda_especializada",
+   "nombre": "Autoescuela",
+   "superficie_m2": 93.6,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bar:3241",
+   "puerta": {
+    "x": 183.21,
+    "z": 29.54
+   },
+   "building_id": 3409,
+   "poi_id": 173,
+   "osm": "amenity:bar",
+   "tipologia": "bar",
+   "nombre": "Bar El Chato",
+   "superficie_m2": 78.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:3258",
+   "puerta": {
+    "x": 214.92,
+    "z": 30.13
+   },
+   "building_id": 2121,
+   "poi_id": 174,
+   "osm": "amenity:dentist",
+   "tipologia": "tienda_especializada",
+   "nombre": "Clínica dental",
+   "superficie_m2": 90.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3275",
+   "puerta": {
+    "x": 223.61,
+    "z": 112.44
+   },
+   "building_id": 2037,
+   "poi_id": 175,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Tejidos La Fuente",
+   "superficie_m2": 75.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3292",
+   "puerta": {
+    "x": 209.84,
+    "z": 122.85
+   },
+   "building_id": 1927,
+   "poi_id": 176,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Moda Joven La Vega",
+   "superficie_m2": 77.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3309",
+   "puerta": {
+    "x": 203.44,
+    "z": 121.09
+   },
+   "building_id": 1925,
+   "poi_id": 177,
+   "osm": "shop:clothes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Zapatería Las Eras",
+   "superficie_m2": 65.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3326",
+   "puerta": {
+    "x": 256.69,
+    "z": 137.02
+   },
+   "building_id": 2263,
+   "poi_id": 178,
+   "osm": "shop:shoes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Modas El Arco",
+   "superficie_m2": 84.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3343",
+   "puerta": {
+    "x": 284.57,
+    "z": 143.34
+   },
+   "building_id": 756,
+   "poi_id": 179,
+   "osm": "shop:variety_store",
+   "tipologia": "tienda_especializada",
+   "nombre": "Bazar El Chollo",
+   "superficie_m2": 79.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3360",
+   "puerta": {
+    "x": 302.31,
+    "z": 147.92
+   },
+   "building_id": 761,
+   "poi_id": 180,
+   "osm": "shop:variety_store",
+   "tipologia": "tienda_especializada",
+   "nombre": "Bazar La Estrella",
+   "superficie_m2": 85.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:muebles:3377",
+   "puerta": {
+    "x": 317.54,
+    "z": 143.21
+   },
+   "building_id": 2433,
+   "poi_id": 181,
+   "osm": "shop:furniture",
+   "tipologia": "tienda_especializada",
+   "nombre": "Muebles y Decoración",
+   "superficie_m2": 98.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "muebles",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:muebles:3394",
+   "puerta": {
+    "x": 335.99,
+    "z": 157.88
+   },
+   "building_id": 766,
+   "poi_id": 182,
+   "osm": "shop:furniture",
+   "tipologia": "tienda_especializada",
+   "nombre": "Muebles y Decoración La Vega",
+   "superficie_m2": 95.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "muebles",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:3411",
+   "puerta": {
+    "x": 377.23,
+    "z": 158.3
+   },
+   "building_id": 2424,
+   "poi_id": 183,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Supermercado Las Eras",
+   "superficie_m2": 154.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:peluqueria:3428",
+   "puerta": {
+    "x": 673.21,
+    "z": 10.61
+   },
+   "building_id": 1691,
+   "poi_id": 184,
+   "osm": "shop:beauty",
+   "tipologia": "tienda_especializada",
+   "nombre": "Centro de estética",
+   "superficie_m2": 58.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:perfumeria:3462",
+   "puerta": {
+    "x": 684.99,
+    "z": 239.44
+   },
+   "building_id": 305,
+   "poi_id": 186,
+   "osm": "shop:perfumery",
+   "tipologia": "tienda_especializada",
+   "nombre": "Perfumería",
+   "superficie_m2": 53,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "perfumeria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:panaderia:3479",
+   "puerta": {
+    "x": 734.98,
+    "z": 263.02
+   },
+   "building_id": 347,
+   "poi_id": 187,
+   "osm": "shop:bakery",
+   "tipologia": "alimentacion",
+   "nombre": "Panadería y Confitería",
+   "superficie_m2": 68.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "panaderia",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:ropa:3513",
+   "puerta": {
+    "x": 44.09,
+    "z": -257.68
+   },
+   "building_id": 3357,
+   "poi_id": 189,
+   "osm": "shop:shoes",
+   "tipologia": "tienda_especializada",
+   "nombre": "Complementos La Encina",
+   "superficie_m2": 74.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "ropa",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:3530",
+   "puerta": {
+    "x": 28.98,
+    "z": -282.49
+   },
+   "building_id": 4337,
+   "poi_id": 190,
+   "osm": "shop:tobacco",
+   "tipologia": "tienda_especializada",
+   "nombre": "Estanco",
+   "superficie_m2": 58.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:super:3547",
+   "puerta": {
+    "x": 111.9,
+    "z": -200.79
+   },
+   "building_id": 3425,
+   "poi_id": 191,
+   "osm": "shop:supermarket",
+   "tipologia": "alimentacion",
+   "nombre": "Autoservicio El Cruce",
+   "superficie_m2": 181.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "supermercado",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:3564",
+   "puerta": {
+    "x": -85.73,
+    "z": -80.42
+   },
+   "building_id": 3096,
+   "poi_id": 192,
+   "osm": "amenity:driving_school",
+   "tipologia": "tienda_especializada",
+   "nombre": "Autoescuela",
+   "superficie_m2": 95.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:libreria:3581",
+   "puerta": {
+    "x": -55.59,
+    "z": -76.19
+   },
+   "building_id": 3092,
+   "poi_id": 193,
+   "osm": "shop:books",
+   "tipologia": "tienda_especializada",
+   "nombre": "Librería y Papelería",
+   "superficie_m2": 84.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "libreria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:libreria:3598",
+   "puerta": {
+    "x": -24.14,
+    "z": -32.05
+   },
+   "building_id": 3077,
+   "poi_id": 194,
+   "osm": "shop:books",
+   "tipologia": "tienda_especializada",
+   "nombre": "Librería El Tintero",
+   "superficie_m2": 71.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "libreria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:peluqueria:3615",
+   "puerta": {
+    "x": -162.61,
+    "z": -320.84
+   },
+   "building_id": 4054,
+   "poi_id": 195,
+   "osm": "shop:beauty",
+   "tipologia": "tienda_especializada",
+   "nombre": "Centro de estética",
+   "superficie_m2": 69.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "peluqueria",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:estanco:3632",
+   "puerta": {
+    "x": -163.08,
+    "z": -498.99
+   },
+   "building_id": 4124,
+   "poi_id": 196,
+   "osm": "shop:kiosk",
+   "tipologia": "tienda_especializada",
+   "nombre": "Quiosco",
+   "superficie_m2": 59.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "estanco",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:bazar:3972",
+   "puerta": {
+    "x": 221.45,
+    "z": -367.28
+   },
+   "building_id": 3889,
+   "poi_id": 216,
+   "osm": "shop:variety_store",
+   "tipologia": "tienda_especializada",
+   "nombre": "Bazar El Paseo",
+   "superficie_m2": 79.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "bazar",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:oficina:4448",
+   "puerta": {
+    "x": 499.7,
+    "z": -143.05
+   },
+   "building_id": 2466,
+   "poi_id": 244,
+   "osm": "amenity:clinic",
+   "tipologia": "tienda_especializada",
+   "nombre": "Oficina",
+   "superficie_m2": 87.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "oficina",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:taller:4703",
+   "puerta": {
+    "x": 1001.15,
+    "z": 139.76
+   },
+   "building_id": 4644,
+   "poi_id": 259,
+   "osm": "shop:trade",
+   "tipologia": "tienda_especializada",
+   "nombre": "Almacén",
+   "superficie_m2": 121,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "taller",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:kebab:4839",
+   "puerta": {
+    "x": 21.92,
+    "z": -130.28
+   },
+   "building_id": 3280,
+   "poi_id": 267,
+   "osm": "amenity:fast_food",
+   "tipologia": "restaurante",
+   "nombre": "Kevab Guareña",
+   "superficie_m2": 85.1,
+   "accesible": true,
+   "estado": "basico",
+   "kit": null,
+   "constructor": "shops.js (a mano)"
+  },
+  {
+   "interior_id": "tienda:gimnasio:4856",
+   "puerta": {
+    "x": 58.77,
+    "z": -137.62
+   },
+   "building_id": 3330,
+   "poi_id": 268,
+   "osm": "leisure:fitness_centre",
+   "tipologia": "gimnasio",
+   "nombre": "Gimnasio",
+   "superficie_m2": 135.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": "gimnasio",
+   "constructor": "locales.js (kit)"
+  },
+  {
+   "interior_id": "tienda:armeria:999",
+   "puerta": {
+    "x": 717.67,
+    "z": -109.82
+   },
+   "building_id": 1710,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "tienda_especializada",
+   "nombre": "Armería y Caza Las Vegas",
+   "superficie_m2": 88.2,
+   "accesible": true,
+   "estado": "basico",
+   "kit": null,
+   "constructor": "shops.js (a mano)"
+  },
+  {
+   "interior_id": "vivienda:annie",
+   "puerta": {
+    "x": 112.51,
+    "z": -174.32
+   },
+   "building_id": 3420,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Annie",
+   "superficie_m2": 86.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "interiors.js (Annie): 5 por kit, 1 personalizadas, 6 habitables",
+   "constructor_especial": "buildAnnieHouse",
+   "migracion": "cinco estancias por kit y dormitorio personalizado conservado",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_bano",
+    "vivienda_estudio"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "saloncito",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "banoAlto",
+     "tipo": "bano",
+     "planta": 1,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "estudio",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    },
+    {
+     "sala": "dormitorio",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": null,
+     "kit_esperado": null
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": [
+    "dormitorio"
+   ]
+  },
+  {
+   "interior_id": "iglesia:oeste",
+   "puerta": {
+    "x": -189.28,
+    "z": -50.44
+   },
+   "building_id": null,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Iglesia de Santa María",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "iglesia:sur",
+   "puerta": {
+    "x": -157.67,
+    "z": -45.36
+   },
+   "building_id": null,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Iglesia de Santa María",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "iglesia:norte",
+   "puerta": {
+    "x": -165.79,
+    "z": -72.66
+   },
+   "building_id": null,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Iglesia de Santa María",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:ayto",
+   "puerta": {
+    "x": -30.58,
+    "z": 15.57
+   },
+   "building_id": null,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Ayuntamiento",
+   "superficie_m2": 240,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:sangregorio",
+   "puerta": {
+    "x": 217.17,
+    "z": 22.99
+   },
+   "building_id": null,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Ermita de San Gregorio",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:mercado",
+   "puerta": {
+    "x": 180.76,
+    "z": 9.12
+   },
+   "building_id": 3408,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Mercado de Abastos",
+   "superficie_m2": 396,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:teatro",
+   "puerta": {
+    "x": -102.96,
+    "z": 18.53
+   },
+   "building_id": 2827,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Teatro",
+   "superficie_m2": 450,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:corbacho",
+   "puerta": {
+    "x": 640.62,
+    "z": -238.15
+   },
+   "building_id": 1714,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Casa-palacio de los Corbacho",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "edificio:pabellon",
+   "puerta": {
+    "x": 1043.36,
+    "z": 436.81
+   },
+   "building_id": 95,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "singular",
+   "nombre": "Pabellón",
+   "superficie_m2": null,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "a mano (pieza única)"
+  },
+  {
+   "interior_id": "vivienda:2786",
+   "puerta": {
+    "x": 874.32,
+    "z": 43.16
+   },
+   "building_id": 1786,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Paco y Mari",
+   "superficie_m2": 128.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:3244",
+   "puerta": {
+    "x": 266.91,
+    "z": -151.2
+   },
+   "building_id": 2244,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Marisa la pintora",
+   "superficie_m2": 124.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_pintura",
+    "vivienda_estudio"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "taller",
+     "planta": 1,
+     "kit": "vivienda_pintura",
+     "kit_esperado": "vivienda_pintura"
+    },
+    {
+     "sala": "A2",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:1594",
+   "puerta": {
+    "x": 313.74,
+    "z": 225.13
+   },
+   "building_id": 594,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Sergio",
+   "superficie_m2": 101.8,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_joven",
+    "vivienda_estudio",
+    "vivienda_trastero"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dormJoven",
+     "planta": 1,
+     "kit": "vivienda_joven",
+     "kit_esperado": "vivienda_joven"
+    },
+    {
+     "sala": "A1",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    },
+    {
+     "sala": "A2",
+     "tipo": "trastero",
+     "planta": 1,
+     "kit": "vivienda_trastero",
+     "kit_esperado": "vivienda_trastero"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:1689",
+   "puerta": {
+    "x": 242.72,
+    "z": 274.91
+   },
+   "building_id": 689,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa del tío Blas",
+   "superficie_m2": 157,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_despensa",
+    "vivienda_bano",
+    "vivienda_taller",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "taller",
+     "planta": 0,
+     "kit": "vivienda_taller",
+     "kit_esperado": "vivienda_taller"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2132",
+   "puerta": {
+    "x": 632.68,
+    "z": 194.26
+   },
+   "building_id": 1132,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Ramón el de las perdices",
+   "superficie_m2": 161.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:1639",
+   "puerta": {
+    "x": 255.52,
+    "z": 382.86
+   },
+   "building_id": 639,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Lucía la del coro",
+   "superficie_m2": 109.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
+   ],
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:5157",
+   "puerta": {
+    "x": -25.75,
+    "z": -364.2
+   },
+   "building_id": 4157,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los Barragán",
+   "superficie_m2": 153.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:3627",
+   "puerta": {
+    "x": 565.12,
+    "z": -15.6
+   },
+   "building_id": 2627,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Don Isidro",
+   "superficie_m2": 129.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 5 por kit, 0 personalizadas, 5 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_cocina"
+   ],
+   "estancias_total": 5,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R4",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2606",
+   "puerta": {
+    "x": 187.55,
+    "z": 226.52
+   },
+   "building_id": 1606,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de la señá Rosario",
+   "superficie_m2": 164.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:4007",
+   "puerta": {
+    "x": -127.18,
+    "z": -258.73
+   },
+   "building_id": 3009,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los Moreno",
+   "superficie_m2": 102.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_ninos",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "ninos",
+     "planta": 1,
+     "kit": "vivienda_ninos",
+     "kit_esperado": "vivienda_ninos"
+    },
+    {
+     "sala": "A2",
+     "tipo": "dorm2",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:4204",
+   "puerta": {
+    "x": 8.85,
+    "z": 89.54
+   },
+   "building_id": 3204,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Ramón el de las perdices",
+   "superficie_m2": 156.2,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2268",
+   "puerta": {
+    "x": -119.64,
+    "z": 178.73
+   },
+   "building_id": 1268,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los Barragán",
+   "superficie_m2": 133,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:4216",
+   "puerta": {
+    "x": 43.39,
+    "z": -72.4
+   },
+   "building_id": 3216,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Doña Petra",
+   "superficie_m2": 159.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:4473",
+   "puerta": {
+    "x": 140.67,
+    "z": -25.03
+   },
+   "building_id": 3473,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Juan el del tractor",
+   "superficie_m2": 144.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 5 por kit, 0 personalizadas, 5 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_cocina"
+   ],
+   "estancias_total": 5,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R4",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2720",
+   "puerta": {
+    "x": 743.41,
+    "z": -186.8
+   },
+   "building_id": 1720,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Don Isidro",
+   "superficie_m2": 125.1,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
+   ],
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:3981",
+   "puerta": {
+    "x": -151.25,
+    "z": -84.01
+   },
+   "building_id": 2981,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de Doña Petra",
+   "superficie_m2": 153.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:3429",
+   "puerta": {
+    "x": 342.86,
+    "z": 149.48
+   },
+   "building_id": 2429,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa del tío Blas",
+   "superficie_m2": 140.4,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_despensa",
+    "vivienda_bano",
+    "vivienda_taller",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "taller",
+     "planta": 0,
+     "kit": "vivienda_taller",
+     "kit_esperado": "vivienda_taller"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2728",
+   "puerta": {
+    "x": 707.63,
+    "z": 144.84
+   },
+   "building_id": 1728,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los Barragán",
+   "superficie_m2": 131.3,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
+   ],
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:1679",
+   "puerta": {
+    "x": 378.99,
+    "z": 430.13
+   },
+   "building_id": 679,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa del tío Anselmo",
+   "superficie_m2": 146.7,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:5045",
+   "puerta": {
+    "x": -181.38,
+    "z": -646.93
+   },
+   "building_id": 4045,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los García",
+   "superficie_m2": 102.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_ninos",
+    "vivienda_dormitorio"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "ninos",
+     "planta": 1,
+     "kit": "vivienda_ninos",
+     "kit_esperado": "vivienda_ninos"
+    },
+    {
+     "sala": "A2",
+     "tipo": "dorm2",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:2162",
+   "puerta": {
+    "x": 520,
+    "z": 195.87
+   },
+   "building_id": 1162,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa del tío Anselmo",
+   "superficie_m2": 133.5,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "vivienda:4685",
+   "puerta": {
+    "x": -250,
+    "z": -56.55
+   },
+   "building_id": 3685,
+   "poi_id": null,
+   "osm": null,
+   "tipologia": "vivienda",
+   "nombre": "Casa de los Cienfuegos",
+   "superficie_m2": 103.9,
+   "accesible": true,
+   "estado": "completo",
+   "kit": null,
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despacho"
+   ],
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "bano",
+     "planta": 1,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A2",
+     "tipo": "despacho",
+     "planta": 1,
+     "kit": "vivienda_despacho",
+     "kit_esperado": "vivienda_despacho"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
+  },
+  {
+   "interior_id": "local:141",
+   "puerta": null,
+   "building_id": 3071,
+   "poi_id": 141,
+   "osm": "craft:brewery",
+   "tipologia": "tienda_especializada",
+   "nombre": null,
+   "superficie_m2": null,
+   "accesible": false,
+   "estado": "vacio",
+   "kit": null,
+   "constructor": null
+  },
+  {
+   "interior_id": "local:147",
+   "puerta": null,
+   "building_id": 2827,
+   "poi_id": 147,
+   "osm": "amenity:library",
+   "tipologia": "oficina",
+   "nombre": null,
+   "superficie_m2": null,
+   "accesible": false,
+   "estado": "vacio",
+   "kit": null,
+   "constructor": null
+  },
+  {
+   "interior_id": "local:161",
+   "puerta": null,
+   "building_id": null,
+   "poi_id": 161,
+   "osm": "office:insurance",
+   "tipologia": "oficina",
+   "nombre": null,
+   "superficie_m2": null,
+   "accesible": false,
+   "estado": "vacio",
+   "kit": null,
+   "constructor": null
+  }
+ ],
+ "resumen": {
+  "puertas": 125,
+  "interiores": 128,
+  "por_estado": {
+   "completo": 123,
+   "basico": 2,
+   "vacio": 3
+  }
+ }
+}

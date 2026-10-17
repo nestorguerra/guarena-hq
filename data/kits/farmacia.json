@@ -1,0 +1,936 @@
+{
+ "tipologia": "farmacia",
+ "nombre": "Farmacia",
+ "nota": "La farmacia de un pueblo de las Vegas Altas: un mostrador largo de lado a lado con los dependientes detrás, la pared del fondo con cajones y baldas llenas de cajas de medicamentos, góndolas de parafarmacia, sala de espera con la báscula y el tensiómetro, la pantalla del turno, la cruz verde por dentro, el expositor de folletos y la rebotica al fondo con su nevera. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.4,
+   7.2
+  ],
+  "fondo": [
+   8.4,
+   11.4
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "zm": "D-3.9",
+  "zr": "D-2.2"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f3f5f2",
+ "suelo": "long_white_tiles",
+ "suelo_color": "#dfe3de",
+ "puntos": {
+  "dependiente": [
+   "0",
+   "zm+0.8"
+  ],
+  "mostrador": [
+   "0",
+   "zm-0.75"
+  ]
+ },
+ "pedir": "Pedir en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0.3",
+    "W/2",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "isla",
+   "publica": true,
+   "rect": [
+    "-W/2+0.9",
+    "1.3",
+    "W/2-0.9",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "espera",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "zm-0.9",
+    "W/2",
+    "zm-0.37"
+   ]
+  },
+  {
+   "id": "mostrador",
+   "publica": false,
+   "rect": [
+    "-W/2+1.1",
+    "zm-0.35",
+    "W/2",
+    "zm+0.35"
+   ]
+  },
+  {
+   "id": "trasmostrador",
+   "publica": false,
+   "rect": [
+    "-W/2+2.4",
+    "zm+0.37",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "rebotica",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zr",
+    "-W/2+2.4",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zr"
+   ],
+   "a": [
+    "-W/2+2.4",
+    "zr"
+   ]
+  },
+  {
+   "de": [
+    "-W/2+2.4",
+    "zr"
+   ],
+   "a": [
+    "-W/2+2.4",
+    "D"
+   ],
+   "puerta": [
+    0.2,
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "-W/2",
+    "zm-0.9",
+    "W/2",
+    "zm-0.36"
+   ],
+   "nota": "la cola delante del mostrador: sin muebles"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "mostrador_farmacia",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "-W/2+1.1",
+    "W/2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "monitor_pc_mostrador",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "teclado_mostrador",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "lector_codigo",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "impresora_ticket",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "dosificador_gel_mostrador",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "mampara_metacrilato",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "bandeja_cambio",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "bote_caramelos_farmacia",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "expositor_mostrador",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "cesta_farmacia",
+   "en": [
+    "mostrador_farmacia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "techo",
+   "obj": "pantalla_turno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "techo",
+   "obj": "regleta_led",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "estanteria_medicamentos",
+   "pared": "N",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "obj": "cruz_farmacia_pared",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "estanteria_medicamentos",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "armario_rebotica",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "sobre",
+   "variantes": [
+    "medicamento_analgesico",
+    "medicamento_antiinflamatorio",
+    "medicamento_antibiotico",
+    "medicamento_antihistaminico",
+    "medicamento_antigripal",
+    "medicamento_protector_estomago",
+    "medicamento_vitaminas",
+    "medicamento_pomada",
+    "medicamento_colirio",
+    "medicamento_suero",
+    "medicamento_tiritas",
+    "medicamento_gasas",
+    "medicamento_mascarillas",
+    "medicamento_termometro",
+    "medicamento_pastillas_garganta",
+    "medicamento_melatonina",
+    "medicamento_magnesio",
+    "medicamento_colageno",
+    "jarabe_tos",
+    "bote_vitaminas",
+    "spray_nasal",
+    "gotas_orales"
+   ],
+   "en": [
+    "estanteria_medicamentos"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "suelo_libre",
+   "obj": "silla_madera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.06,
+    0.08
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "sobre",
+   "variantes": [
+    "cubeta_pedido",
+    "caja_carton"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "contra_pared",
+   "obj": "mesa_rebotica",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "sobre",
+   "obj": "balanza_precision",
+   "en": [
+    "mesa_rebotica"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "sobre",
+   "obj": "mortero",
+   "en": [
+    "mesa_rebotica"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "sobre",
+   "obj": "frasco_laboratorio",
+   "en": [
+    "mesa_rebotica"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "sobre",
+   "obj": "cubeta_pedido",
+   "en": [
+    "mesa_rebotica"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "rebotica",
+   "regla": "contra_pared",
+   "obj": "nevera_farmacia",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "rebotica",
+   "regla": "pared",
+   "obj": "lavabo",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "rebotica",
+   "regla": "esquina",
+   "obj": "silla_madera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "rebotica",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "bascula_farmacia",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "contenedor_envases",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "dispensador_gel_pie",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_horario",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_guardia",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "filas",
+   "obj": "gondola_parafarmacia",
+   "eje": "z",
+   "pasillo": 0.95,
+   "margen": [
+    0.7,
+    0.4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "banco_espera",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "tensiometro_automatico",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "silla_espera",
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_parafarmacia_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "folletero_farmacia",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "pantalla_promo",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expendedor_turno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "sobre",
+   "variantes": [
+    "para_agua_termal",
+    "para_mascarilla_facial",
+    "para_contorno_ojos",
+    "para_cepillos_dientes",
+    "para_colonia_bebe",
+    "para_desodorante",
+    "para_chupetes",
+    "para_biberon",
+    "para_papilla",
+    "para_leche_infantil",
+    "para_toallitas_bebe",
+    "para_panales",
+    "para_pasta_dientes",
+    "para_gel_bano",
+    "para_champu",
+    "para_leche_corporal",
+    "para_protector_solar_spray",
+    "para_protector_solar",
+    "para_crema_manos",
+    "para_crema_facial"
+   ],
+   "en": [
+    "gondola_parafarmacia"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "para_crema_facial",
+    "para_crema_manos",
+    "para_protector_solar",
+    "para_protector_solar_spray",
+    "para_leche_corporal",
+    "para_champu",
+    "para_gel_bano",
+    "para_pasta_dientes",
+    "para_panales",
+    "para_toallitas_bebe",
+    "para_leche_infantil",
+    "para_papilla",
+    "para_biberon",
+    "para_chupetes",
+    "para_desodorante",
+    "para_colonia_bebe",
+    "para_cepillos_dientes",
+    "para_contorno_ojos",
+    "para_mascarilla_facial",
+    "para_agua_termal"
+   ],
+   "en": [
+    "estanteria_parafarmacia_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.08,
+    0.1
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3900,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 09:30-14:00,17:00-20:30; Sa 09:30-14:00",
+  "vida": [
+   "el turno parpadea sobre el mostrador",
+   "alguien se toma la tensión",
+   "bolsa de la farmacia sobre el mostrador",
+   "cola ante el mostrador"
+  ],
+  "cerrado": "persiana bajada, la cruz verde encendida",
+  "clientela": {
+   "maximo": 3,
+   "horas": [
+    [
+     9,
+     14,
+     0.55
+    ],
+    [
+     17,
+     20.5,
+     0.5
+    ]
+   ],
+   "frases": [
+    "¿Cuánto se tarda, hijo?",
+    "Hoy hay cola, como siempre.",
+    "A ver si tienen el jarabe del niño.",
+    "Dicen que este año viene fuerte la gripe.",
+    "Yo solo vengo a tomarme la tensión.",
+    "La receta electrónica va muy bien, sí.",
+    "Con este calor no hay quien pare.",
+    "Me han dicho que esto es lo mejor para la tos."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "056 Farmàcia Albinyana, raval de Montserrat 48 (Terrassa), interior modernista.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:056_Farm%C3%A0cia_Albinyana,_raval_de_Montserrat_48_(Terrassa),_interior_modernista.jpg",
+   "autor": "Enric",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "063 Farmàcia Coll, pl. Vella 2 (Terrassa), interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:063_Farm%C3%A0cia_Coll,_pl._Vella_2_(Terrassa),_interior.jpg",
+   "autor": "Enric",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "318 Farmàcia Bolós, rambla de Catalunya 77 (Barcelona).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:318_Farm%C3%A0cia_Bol%C3%B3s,_rambla_de_Catalunya_77_(Barcelona).jpg",
+   "autor": "Enric",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Farmacia store madrid interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Farmacia_store_madrid_interior.jpg",
+   "autor": "Farmaciastore",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Farmacia store madrid mostrador.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Farmacia_store_madrid_mostrador.jpg",
+   "autor": "Farmaciastore",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Farmacia de la Estrella (Barcelona - 2014) 02.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Farmacia_de_la_Estrella_(Barcelona_-_2014)_02.JPG",
+   "autor": "Jordiferrer",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Farmàcia Masó.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Farm%C3%A0cia_Mas%C3%B3.JPG",
+   "autor": "Josep Renalias",
+   "licencia": "CC BY-SA 2.5"
+  },
+  {
+   "titulo": "Farmàcia Puigoriol (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Farm%C3%A0cia_Puigoriol_(2).jpg",
+   "autor": "Gerhidt",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Farmàcia Puigoriol (3).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Farm%C3%A0cia_Puigoriol_(3).jpg",
+   "autor": "Gerhidt",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Antigua Farmacia Zambrano.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Antigua_Farmacia_Zambrano.jpg",
+   "autor": "Triplecaña",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior de farmacia en los años 40.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_farmacia_en_los_a%C3%B1os_40.jpg",
+   "autor": "https://www.acofarma.com/",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Antigua farmacia municipal, Alcázar, Jerez de la Frontera, España, 2015-12-07, DD 85-87 HDR.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Antigua_farmacia_municipal,_Alc%C3%A1zar,_Jerez_de_la_Frontera,_Espa%C3%B1a,_2015-12-07,_DD_85-87_HDR.JPG",
+   "autor": "Diego Delso",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

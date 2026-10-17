@@ -1,0 +1,943 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Librería-papelería",
+ "nota": "La librería-papelería de un pueblo de las Vegas Altas, con luz cálida: librerías de madera hasta el techo con libros de todos los colores, la mesa de novedades junto a la puerta, el expositor de prensa y el revistero, un sillón para hojear, cómics, láminas, juegos de mesa, la pared de la papelería y el material escolar, el mostrador de nogal con la caja y la trastienda con las cajas de libros. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.3,
+   7.8
+  ],
+  "fondo": [
+   10.5,
+   12.6
+  ],
+  "alto": 3.1
+ },
+ "variables": {
+  "xc": "W/2-1.8",
+  "z0": "1.5",
+  "z1": "3.3",
+  "zb": "D-2.3"
+ },
+ "paso_libre": 0.9,
+ "pared": "#efe6d0",
+ "suelo": "herringbone_parquet",
+ "suelo_color": "#b89868",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.75",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pagar en caja",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.4"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.3"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_w",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "1.4",
+    "-W/2+1.0",
+    "4.6"
+   ]
+  },
+  {
+   "id": "novedades",
+   "publica": true,
+   "rect": [
+    "-W/2+1.2",
+    "1.4",
+    "xc-1.4",
+    "4.6"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.4",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "isla",
+   "publica": true,
+   "rect": [
+    "-W/2+1.3",
+    "5.0",
+    "W/2-1.3",
+    "zb"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pagar en el mostrador: sin muebles delante"
+  },
+  {
+   "rect": [
+    "xc+0.35",
+    "(z0+z1)/2-0.45",
+    "xc+1.25",
+    "(z0+z1)/2+0.45"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "mostrador_libreria",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pila_bolsas_papel",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "lector_codigo",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "lampara_lectura",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "tarjetero",
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "variantes": [
+    "lb_pila_novedad_b",
+    "lb_libros_cara_b"
+   ],
+   "en": [
+    "mostrador_libreria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "contra_pared",
+   "obj": "armario_trascaja",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "rotulo_libreria",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "sobre",
+   "variantes": [
+    "caja_libros",
+    "lb_pila_grandes"
+   ],
+   "en": [
+    "armario_trascaja"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_libros",
+    "lb_libros_atlas",
+    "lb_libros_mixtos_a",
+    "lb_papel_folios",
+    "caja_carton"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "torre_cajas_libros",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "carro_libros",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "caja_libros",
+   "pared": "W",
+   "cantidad": [
+    0,
+    3
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escalera_libreria",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_cristal_calido",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "expositor_prensa",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "revistero_giratorio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "plafon_cristal_calido",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_w",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_libreria_a",
+    "cuadro_libreria_b",
+    "cuadro_libreria_c"
+   ],
+   "pared": "W",
+   "cada": 1.15,
+   "maximo": 3,
+   "todas": true,
+   "obligatorio": true,
+   "vende": "cuadro"
+  },
+  {
+   "zona": "frente_w",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros_baja",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros_pared",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_papeleria_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_libros_texto",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros_pared",
+   "pared": "N",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_novedades",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "novedades",
+   "regla": "conjunto",
+   "obj": "mesa_novedades",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true,
+   "vende": "libro"
+  },
+  {
+   "zona": "novedades",
+   "regla": "sobre",
+   "variantes": [
+    "lb_pila_novedad_a",
+    "lb_libros_cara_a",
+    "lb_pila_novedad_b",
+    "lb_libros_cara_b",
+    "lb_pila_novedad_c",
+    "lb_pila_grandes",
+    "lb_libros_cara_c"
+   ],
+   "en": [
+    "mesa_novedades"
+   ],
+   "por_soporte": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_comics",
+    "expositor_laminas",
+    "expositor_papeleria_giratorio",
+    "mesa_juegos_mesa"
+   ],
+   "cantidad": [
+    4,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "comic",
+    "poster",
+    "cuaderno",
+    "parchis"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "sillon_lectura",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "mesa_auxiliar_lectura",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_mochilas",
+    "escalera_libreria"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "obj": "lampara_lectura",
+   "en": [
+    "mesa_auxiliar_lectura"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "isla",
+   "regla": "filas",
+   "obj": "estanteria_libros_isla",
+   "eje": "z",
+   "pasillo": 1.1,
+   "margen": [
+    0.9,
+    0.9
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_crema",
+    "lb_libros_negros",
+    "lb_libros_morados",
+    "lb_libros_azules",
+    "lb_libros_grises",
+    "lb_libros_turquesas",
+    "lb_libros_rojos",
+    "lb_libros_infantiles",
+    "lb_libros_atlas",
+    "lb_libros_bolsillo",
+    "lb_libros_verdes",
+    "lb_libros_ocres",
+    "lb_libros_mixtos_b",
+    "lb_libros_mixtos_a",
+    "lb_libros_granates",
+    "lb_diccionarios",
+    "lb_libros_enciclopedia"
+   ],
+   "en": [
+    "estanteria_libros_pared"
+   ],
+   "relleno": [
+    0.9,
+    0.99
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_w",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_verdes",
+    "lb_libros_mixtos_b",
+    "lb_libros_morados",
+    "lb_comics_c",
+    "lb_libros_azules",
+    "lb_comics_a",
+    "lb_libros_bolsillo",
+    "lb_libros_enciclopedia",
+    "lb_libros_ocres",
+    "lb_comics_d",
+    "lb_libros_infantiles",
+    "lb_comics_b",
+    "lb_libros_granates",
+    "lb_libros_crema",
+    "lb_libros_rojos",
+    "lb_libros_grises",
+    "lb_libros_negros",
+    "lb_libros_turquesas",
+    "lb_diccionarios",
+    "lb_libros_mixtos_a",
+    "lb_libros_atlas"
+   ],
+   "en": [
+    "estanteria_libros_baja"
+   ],
+   "relleno": [
+    0.88,
+    0.99
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_bolsillo",
+    "lb_comics_b",
+    "lb_libros_atlas",
+    "lb_libros_morados",
+    "lb_libros_enciclopedia",
+    "lb_comics_c",
+    "lb_libros_rojos",
+    "lb_diccionarios",
+    "lb_libros_ocres",
+    "lb_comics_d",
+    "lb_libros_azules",
+    "lb_libros_grises",
+    "lb_libros_verdes",
+    "lb_libros_turquesas",
+    "lb_libros_infantiles",
+    "lb_comics_a",
+    "lb_libros_negros",
+    "lb_libros_granates",
+    "lb_libros_crema",
+    "lb_libros_mixtos_b",
+    "lb_libros_mixtos_a"
+   ],
+   "en": [
+    "estanteria_libros_isla"
+   ],
+   "relleno": [
+    0.88,
+    0.99
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "bz_lapices_color",
+    "bz_acuarelas",
+    "lb_agendas",
+    "lb_cuadernos_espiral",
+    "lb_sobres",
+    "lb_carpetas_anillas",
+    "lb_papel_folios",
+    "lb_rotuladores",
+    "lb_estuches",
+    "lb_calculadoras",
+    "bz_pegamentos",
+    "lb_gomas_tijeras",
+    "lb_cuadernos_rojos"
+   ],
+   "en": [
+    "estanteria_papeleria_pared"
+   ],
+   "relleno": [
+    0.85,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "novedades",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "por_m2": [
+    0.08,
+    0.1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   2800,
+   3200
+  ],
+  "dia": {
+   "intensidad": 0.8
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 09:30-14:00,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "un libro abierto sobre la mesa de novedades",
+   "la prensa del día recién puesta",
+   "el sillón junto a la ventana",
+   "cajas de libros de texto sin abrir"
+  ],
+  "cerrado": "reja bajada, la lámpara del mostrador encendida"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Bilbao - Librería Astarloa 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bilbao_-_Librer%C3%ADa_Astarloa_1.jpg",
+   "autor": "Zarateman",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Foto interior librería Arrebato Libros.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Foto_interior_librer%C3%ADa_Arrebato_Libros.jpg",
+   "autor": "Rosanavalon",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior Librería Ávila.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_Librer%C3%ADa_%C3%81vila.jpg",
+   "autor": "Lucia tempesta",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior de Libreria Avila I.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_Libreria_Avila_I.jpg",
+   "autor": "Robert2183",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior de Libreria Avila II.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_Libreria_Avila_II.jpg",
+   "autor": "Robert2183",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Librería Raimundo (23563247948).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Librer%C3%ADa_Raimundo_(23563247948).jpg",
+   "autor": "Emilio J. Rodríguez Posada",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Librería Raimundo (23563252288).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Librer%C3%ADa_Raimundo_(23563252288).jpg",
+   "autor": "Emilio J. Rodríguez Posada",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Librería Raimundo (23563259048).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Librer%C3%ADa_Raimundo_(23563259048).jpg",
+   "autor": "Emilio J. Rodríguez Posada",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Librería de Ávila interior 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Librer%C3%ADa_de_%C3%81vila_interior_01.jpg",
+   "autor": "Roberto Fiadone",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Librería de Ávila interior 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Librer%C3%ADa_de_%C3%81vila_interior_02.jpg",
+   "autor": "Roberto Fiadone",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bookshop interior, Burford - geograph.org.uk - 1671799.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bookshop_interior,_Burford_-_geograph.org.uk_-_1671799.jpg",
+   "autor": "Andy F",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Ennis - The Ennis Bookshop - Interior - geograph.org.uk - 3039800.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Ennis_-_The_Ennis_Bookshop_-_Interior_-_geograph.org.uk_-_3039800.jpg",
+   "autor": "Joseph Mischyshyn",
+   "licencia": "CC BY-SA 2.0"
+  }
+ ]
+}

@@ -1,0 +1,6118 @@
+{
+ "kit": "fruteria",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  2935
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 1,
+   "W": 7.800000000000001,
+   "D": 10.8,
+   "guardias": 40,
+   "objetos": 143,
+   "distintos": 84,
+   "hash": "87eb0c5c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 5
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 33
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 14
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 4
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 6
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.79,
+     "libre_m2": 2.79
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.34,
+     "libre_m2": 1.34
+    },
+    "tras": {
+     "alcanzable_m2": 2.48,
+     "libre_m2": 2.48
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.1,
+     "libre_m2": 0.1
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.27
+    },
+    "centro": {
+     "alcanzable_m2": 20.01,
+     "libre_m2": 20.01
+    },
+    "fondo": {
+     "alcanzable_m2": 2.92,
+     "libre_m2": 2.92
+    },
+    "almacen": {
+     "alcanzable_m2": 2.41,
+     "libre_m2": 2.41
+    },
+    "luces": {
+     "alcanzable_m2": 29.53,
+     "libre_m2": 29.53
+    }
+   },
+   "luz": {
+    "entrada": 0.213,
+    "frente_barra": 0.457,
+    "centro": 0.31,
+    "fondo": 0.069
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 87190,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 2,
+   "W": 7.5,
+   "D": 9.600000000000001,
+   "guardias": 44,
+   "objetos": 132,
+   "distintos": 76,
+   "hash": "17fa9ad",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 10
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 19
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 8
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 4
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 9
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 11
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.81,
+     "libre_m2": 3.86
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.43,
+     "libre_m2": 1.43
+    },
+    "tras": {
+     "alcanzable_m2": 2.26,
+     "libre_m2": 2.26
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "centro": {
+     "alcanzable_m2": 12.24,
+     "libre_m2": 12.24
+    },
+    "fondo": {
+     "alcanzable_m2": 2.23,
+     "libre_m2": 2.23
+    },
+    "almacen": {
+     "alcanzable_m2": 1.83,
+     "libre_m2": 2.02
+    },
+    "luces": {
+     "alcanzable_m2": 21.24,
+     "libre_m2": 21.48
+    }
+   },
+   "luz": {
+    "entrada": 0.245,
+    "frente_barra": 0.517,
+    "centro": 0.392,
+    "fondo": 0.096
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 62618,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 3,
+   "W": 7.5,
+   "D": 9.3,
+   "guardias": 46,
+   "objetos": 116,
+   "distintos": 73,
+   "hash": "c16c72",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 6
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 20
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 3
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 4
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 6
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 10
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.46,
+     "libre_m2": 3.47
+    },
+    "barra": {
+     "alcanzable_m2": 0.15,
+     "libre_m2": 0.15
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 2.74,
+     "libre_m2": 2.74
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "centro": {
+     "alcanzable_m2": 12.65,
+     "libre_m2": 12.65
+    },
+    "fondo": {
+     "alcanzable_m2": 2.29,
+     "libre_m2": 2.29
+    },
+    "almacen": {
+     "alcanzable_m2": 1.74,
+     "libre_m2": 1.74
+    },
+    "luces": {
+     "alcanzable_m2": 21.57,
+     "libre_m2": 21.58
+    }
+   },
+   "luz": {
+    "entrada": 0.193,
+    "frente_barra": 0.434,
+    "centro": 0.379,
+    "fondo": 0.244
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 61744,
+   "mallas": 25,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 4,
+   "W": 7.2,
+   "D": 11.4,
+   "guardias": 45,
+   "objetos": 150,
+   "distintos": 87,
+   "hash": "a50e2206",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 14
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 30
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 15
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 3
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 12
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.85,
+     "libre_m2": 2.85
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 1.9,
+     "libre_m2": 1.9
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.25,
+     "libre_m2": 0.25
+    },
+    "centro": {
+     "alcanzable_m2": 20.65,
+     "libre_m2": 20.65
+    },
+    "fondo": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.2
+    },
+    "almacen": {
+     "alcanzable_m2": 2.26,
+     "libre_m2": 2.26
+    },
+    "luces": {
+     "alcanzable_m2": 27.33,
+     "libre_m2": 27.43
+    }
+   },
+   "luz": {
+    "entrada": 0.217,
+    "frente_barra": 0.475,
+    "centro": 0.291,
+    "fondo": 0.065
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 85358,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 5,
+   "W": 7.800000000000001,
+   "D": 10.8,
+   "guardias": 47,
+   "objetos": 158,
+   "distintos": 88,
+   "hash": "4d51f990",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 11
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 31
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 16
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 8
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 12
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.81,
+     "libre_m2": 2.97
+    },
+    "barra": {
+     "alcanzable_m2": 0.17,
+     "libre_m2": 0.17
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 1.33,
+     "libre_m2": 1.33
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.1,
+     "libre_m2": 0.1
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.27
+    },
+    "centro": {
+     "alcanzable_m2": 22.94,
+     "libre_m2": 22.94
+    },
+    "fondo": {
+     "alcanzable_m2": 2.34,
+     "libre_m2": 2.34
+    },
+    "almacen": {
+     "alcanzable_m2": 1.42,
+     "libre_m2": 1.42
+    },
+    "luces": {
+     "alcanzable_m2": 30.14,
+     "libre_m2": 30.3
+    }
+   },
+   "luz": {
+    "entrada": 0.213,
+    "frente_barra": 0.457,
+    "centro": 0.31,
+    "fondo": 0.069
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 94106,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.842
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 6,
+   "W": 6.9,
+   "D": 10.5,
+   "guardias": 102,
+   "objetos": 140,
+   "distintos": 85,
+   "hash": "3a335d98",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 12
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 23
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 13
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 10
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 9
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.32,
+     "libre_m2": 2.32
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.93,
+     "libre_m2": 0.93
+    },
+    "tras": {
+     "alcanzable_m2": 2.27,
+     "libre_m2": 2.27
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.74,
+     "libre_m2": 0.74
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.1,
+     "libre_m2": 0.1
+    },
+    "centro": {
+     "alcanzable_m2": 15.26,
+     "libre_m2": 15.26
+    },
+    "fondo": {
+     "alcanzable_m2": 2.36,
+     "libre_m2": 2.36
+    },
+    "almacen": {
+     "alcanzable_m2": 1.03,
+     "libre_m2": 1.04
+    },
+    "luces": {
+     "alcanzable_m2": 22.57,
+     "libre_m2": 22.59
+    }
+   },
+   "luz": {
+    "entrada": 0.243,
+    "frente_barra": 0.52,
+    "centro": 0.314,
+    "fondo": 0.084
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 75032,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 7,
+   "W": 7.2,
+   "D": 9.3,
+   "guardias": 45,
+   "objetos": 125,
+   "distintos": 78,
+   "hash": "29cf93fc",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 5
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 21
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 3
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 7
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 3
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 9
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.66,
+     "libre_m2": 2.66
+    },
+    "barra": {
+     "alcanzable_m2": 0.06,
+     "libre_m2": 0.06
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.28,
+     "libre_m2": 1.28
+    },
+    "tras": {
+     "alcanzable_m2": 0.3,
+     "libre_m2": 1.51
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "centro": {
+     "alcanzable_m2": 10.46,
+     "libre_m2": 11.06
+    },
+    "fondo": {
+     "alcanzable_m2": 1.26,
+     "libre_m2": 1.26
+    },
+    "almacen": {
+     "alcanzable_m2": 0.73,
+     "libre_m2": 0.76
+    },
+    "luces": {
+     "alcanzable_m2": 15.39,
+     "libre_m2": 16.64
+    }
+   },
+   "luz": {
+    "entrada": 0.2,
+    "frente_barra": 0.45,
+    "centro": 0.39,
+    "fondo": 0.229
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 67402,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 8,
+   "W": 7.5,
+   "D": 11.100000000000001,
+   "guardias": 77,
+   "objetos": 144,
+   "distintos": 84,
+   "hash": "c23c1f3f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 6
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 29
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 14
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 9
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 10
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.79,
+     "libre_m2": 2.79
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.98,
+     "libre_m2": 0.98
+    },
+    "tras": {
+     "alcanzable_m2": 2.06,
+     "libre_m2": 2.06
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.27
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.34,
+     "libre_m2": 0.34
+    },
+    "centro": {
+     "alcanzable_m2": 17.6,
+     "libre_m2": 17.63
+    },
+    "fondo": {
+     "alcanzable_m2": 2.68,
+     "libre_m2": 2.68
+    },
+    "almacen": {
+     "alcanzable_m2": 2.1,
+     "libre_m2": 2.1
+    },
+    "luces": {
+     "alcanzable_m2": 26.32,
+     "libre_m2": 26.34
+    }
+   },
+   "luz": {
+    "entrada": 0.215,
+    "frente_barra": 0.466,
+    "centro": 0.261,
+    "fondo": 0.071
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 80318,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 9,
+   "W": 7.2,
+   "D": 9.3,
+   "guardias": 39,
+   "objetos": 119,
+   "distintos": 77,
+   "hash": "bc109fe5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 6
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 22
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 3
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.25,
+     "libre_m2": 2.28
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 2.7,
+     "libre_m2": 2.7
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.2,
+     "libre_m2": 0.2
+    },
+    "centro": {
+     "alcanzable_m2": 11.09,
+     "libre_m2": 11.18
+    },
+    "fondo": {
+     "alcanzable_m2": 3.31,
+     "libre_m2": 3.31
+    },
+    "almacen": {
+     "alcanzable_m2": 2.45,
+     "libre_m2": 2.45
+    },
+    "luces": {
+     "alcanzable_m2": 20.47,
+     "libre_m2": 20.6
+    }
+   },
+   "luz": {
+    "entrada": 0.174,
+    "frente_barra": 0.366,
+    "centro": 0.345,
+    "fondo": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 65322,
+   "mallas": 26,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 10,
+   "W": 7.2,
+   "D": 9.9,
+   "guardias": 44,
+   "objetos": 122,
+   "distintos": 75,
+   "hash": "9f5db17b",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 6
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 20
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 7
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 8
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 4
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.73,
+     "libre_m2": 2.73
+    },
+    "barra": {
+     "alcanzable_m2": 0.13,
+     "libre_m2": 0.13
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.45,
+     "libre_m2": 1.45
+    },
+    "tras": {
+     "alcanzable_m2": 2.29,
+     "libre_m2": 2.29
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.41,
+     "libre_m2": 0.41
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    },
+    "centro": {
+     "alcanzable_m2": 11.96,
+     "libre_m2": 11.96
+    },
+    "fondo": {
+     "alcanzable_m2": 3.37,
+     "libre_m2": 3.37
+    },
+    "almacen": {
+     "alcanzable_m2": 1.85,
+     "libre_m2": 1.85
+    },
+    "luces": {
+     "alcanzable_m2": 21.61,
+     "libre_m2": 21.62
+    }
+   },
+   "luz": {
+    "entrada": 0.187,
+    "frente_barra": 0.424,
+    "centro": 0.37,
+    "fondo": 0.215
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 66412,
+   "mallas": 25,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 11,
+   "W": 7.5,
+   "D": 9.600000000000001,
+   "guardias": 44,
+   "objetos": 136,
+   "distintos": 80,
+   "hash": "7f9c221c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 5
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 24
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 8
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 9
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 9
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.57,
+     "libre_m2": 2.57
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.96,
+     "libre_m2": 0.96
+    },
+    "tras": {
+     "alcanzable_m2": 1.73,
+     "libre_m2": 1.73
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.35,
+     "libre_m2": 0.35
+    },
+    "centro": {
+     "alcanzable_m2": 11.47,
+     "libre_m2": 11.47
+    },
+    "fondo": {
+     "alcanzable_m2": 1.06,
+     "libre_m2": 1.06
+    },
+    "almacen": {
+     "alcanzable_m2": 1.4,
+     "libre_m2": 1.4
+    },
+    "luces": {
+     "alcanzable_m2": 17.41,
+     "libre_m2": 17.41
+    }
+   },
+   "luz": {
+    "entrada": 0.245,
+    "frente_barra": 0.517,
+    "centro": 0.392,
+    "fondo": 0.096
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 77868,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 12,
+   "W": 7.800000000000001,
+   "D": 11.4,
+   "guardias": 46,
+   "objetos": 145,
+   "distintos": 92,
+   "hash": "c64e5557",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 4
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 30
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 15
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 8
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 12
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.27,
+     "libre_m2": 4.27
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 2.93,
+     "libre_m2": 2.93
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.3,
+     "libre_m2": 0.3
+    },
+    "centro": {
+     "alcanzable_m2": 25.84,
+     "libre_m2": 25.84
+    },
+    "fondo": {
+     "alcanzable_m2": 0.9,
+     "libre_m2": 0.9
+    },
+    "almacen": {
+     "alcanzable_m2": 1.69,
+     "libre_m2": 1.69
+    },
+    "luces": {
+     "alcanzable_m2": 34.63,
+     "libre_m2": 34.63
+    }
+   },
+   "luz": {
+    "entrada": 0.203,
+    "frente_barra": 0.441,
+    "centro": 0.275,
+    "fondo": 0.062
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 85132,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.938
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 13,
+   "W": 7.800000000000001,
+   "D": 9.600000000000001,
+   "guardias": 50,
+   "objetos": 122,
+   "distintos": 79,
+   "hash": "dfb07eed",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 4
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 21
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 7
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.41,
+     "libre_m2": 2.5
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 1.37,
+     "libre_m2": 1.37
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.19,
+     "libre_m2": 0.19
+    },
+    "centro": {
+     "alcanzable_m2": 14.94,
+     "libre_m2": 14.94
+    },
+    "fondo": {
+     "alcanzable_m2": 1.42,
+     "libre_m2": 1.69
+    },
+    "almacen": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.9
+    },
+    "luces": {
+     "alcanzable_m2": 20.53,
+     "libre_m2": 21.04
+    }
+   },
+   "luz": {
+    "entrada": 0.181,
+    "frente_barra": 0.409,
+    "centro": 0.358,
+    "fondo": 0.207
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 70036,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.958
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 14,
+   "W": 7.800000000000001,
+   "D": 11.100000000000001,
+   "guardias": 44,
+   "objetos": 162,
+   "distintos": 84,
+   "hash": "810ac733",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 12
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 30
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 14
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 10
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 4
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 10
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 12
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.28,
+     "libre_m2": 4.28
+    },
+    "barra": {
+     "alcanzable_m2": 0.15,
+     "libre_m2": 0.15
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.51,
+     "libre_m2": 1.51
+    },
+    "tras": {
+     "alcanzable_m2": 1.63,
+     "libre_m2": 1.63
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.25,
+     "libre_m2": 0.25
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.46,
+     "libre_m2": 0.46
+    },
+    "centro": {
+     "alcanzable_m2": 20.49,
+     "libre_m2": 20.49
+    },
+    "fondo": {
+     "alcanzable_m2": 2.49,
+     "libre_m2": 2.49
+    },
+    "almacen": {
+     "alcanzable_m2": 2.65,
+     "libre_m2": 2.65
+    },
+    "luces": {
+     "alcanzable_m2": 30.82,
+     "libre_m2": 30.82
+    }
+   },
+   "luz": {
+    "entrada": 0.208,
+    "frente_barra": 0.449,
+    "centro": 0.254,
+    "fondo": 0.065
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 91142,
+   "mallas": 27,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.92
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 15,
+   "W": 6.9,
+   "D": 11.4,
+   "guardias": 58,
+   "objetos": 163,
+   "distintos": 89,
+   "hash": "822a05ef",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 12
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 29
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 16
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 9
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 11
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.74,
+     "libre_m2": 2.74
+    },
+    "barra": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.09
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.95,
+     "libre_m2": 0.95
+    },
+    "tras": {
+     "alcanzable_m2": 1.47,
+     "libre_m2": 1.47
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.22,
+     "libre_m2": 0.22
+    },
+    "centro": {
+     "alcanzable_m2": 15.05,
+     "libre_m2": 15.05
+    },
+    "fondo": {
+     "alcanzable_m2": 0.96,
+     "libre_m2": 0.96
+    },
+    "almacen": {
+     "alcanzable_m2": 1.83,
+     "libre_m2": 1.87
+    },
+    "luces": {
+     "alcanzable_m2": 21.79,
+     "libre_m2": 21.83
+    }
+   },
+   "luz": {
+    "entrada": 0.187,
+    "frente_barra": 0.384,
+    "centro": 0.36,
+    "fondo": 0.098
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 88078,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 16,
+   "W": 7.800000000000001,
+   "D": 10.200000000000001,
+   "guardias": 53,
+   "objetos": 133,
+   "distintos": 80,
+   "hash": "5c90085a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 11
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 21
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 8
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 4
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 11
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.49,
+     "libre_m2": 4.49
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.07,
+     "libre_m2": 1.07
+    },
+    "tras": {
+     "alcanzable_m2": 1.96,
+     "libre_m2": 1.96
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.57,
+     "libre_m2": 0.57
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.17,
+     "libre_m2": 0.17
+    },
+    "centro": {
+     "alcanzable_m2": 17.15,
+     "libre_m2": 17.16
+    },
+    "fondo": {
+     "alcanzable_m2": 1.9,
+     "libre_m2": 2.3
+    },
+    "almacen": {
+     "alcanzable_m2": 2.27,
+     "libre_m2": 2.27
+    },
+    "luces": {
+     "alcanzable_m2": 27.13,
+     "libre_m2": 27.54
+    }
+   },
+   "luz": {
+    "entrada": 0.224,
+    "frente_barra": 0.476,
+    "centro": 0.346,
+    "fondo": 0.078
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 74516,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.881
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 17,
+   "W": 7.800000000000001,
+   "D": 9.600000000000001,
+   "guardias": 37,
+   "objetos": 121,
+   "distintos": 74,
+   "hash": "7ea44b0c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 4
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 22
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 7
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 3
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 5
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.15,
+     "libre_m2": 3.17
+    },
+    "barra": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.09
+    },
+    "frente_barra": {
+     "alcanzable_m2": 0.97,
+     "libre_m2": 0.97
+    },
+    "tras": {
+     "alcanzable_m2": 1.94,
+     "libre_m2": 1.94
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.43,
+     "libre_m2": 0.43
+    },
+    "centro": {
+     "alcanzable_m2": 14.57,
+     "libre_m2": 14.57
+    },
+    "fondo": {
+     "alcanzable_m2": 3.22,
+     "libre_m2": 3.22
+    },
+    "almacen": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.95
+    },
+    "luces": {
+     "alcanzable_m2": 24.32,
+     "libre_m2": 24.42
+    }
+   },
+   "luz": {
+    "entrada": 0.237,
+    "frente_barra": 0.498,
+    "centro": 0.382,
+    "fondo": 0.088
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 68324,
+   "mallas": 25,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.895
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 18,
+   "W": 7.2,
+   "D": 10.5,
+   "guardias": 61,
+   "objetos": 141,
+   "distintos": 89,
+   "hash": "8d9ed747",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 6
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 22
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 14
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 6
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 11
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.67,
+     "libre_m2": 3.67
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.04,
+     "libre_m2": 1.04
+    },
+    "tras": {
+     "alcanzable_m2": 2.78,
+     "libre_m2": 2.78
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.58,
+     "libre_m2": 0.58
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "centro": {
+     "alcanzable_m2": 14.37,
+     "libre_m2": 14.37
+    },
+    "fondo": {
+     "alcanzable_m2": 1.52,
+     "libre_m2": 1.52
+    },
+    "almacen": {
+     "alcanzable_m2": 1.47,
+     "libre_m2": 1.47
+    },
+    "luces": {
+     "alcanzable_m2": 22.96,
+     "libre_m2": 22.96
+    }
+   },
+   "luz": {
+    "entrada": 0.192,
+    "frente_barra": 0.403,
+    "centro": 0.377,
+    "fondo": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 82504,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 19,
+   "W": 7.5,
+   "D": 10.5,
+   "guardias": 65,
+   "objetos": 143,
+   "distintos": 86,
+   "hash": "af65f8f1",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 14
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 22
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 15
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 6
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 12
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 4
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 2
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.81,
+     "libre_m2": 2.82
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.21,
+     "libre_m2": 1.21
+    },
+    "tras": {
+     "alcanzable_m2": 1.79,
+     "libre_m2": 1.79
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.74,
+     "libre_m2": 0.74
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.1,
+     "libre_m2": 0.1
+    },
+    "centro": {
+     "alcanzable_m2": 18.21,
+     "libre_m2": 18.21
+    },
+    "fondo": {
+     "alcanzable_m2": 2.22,
+     "libre_m2": 2.22
+    },
+    "almacen": {
+     "alcanzable_m2": 2.35,
+     "libre_m2": 2.35
+    },
+    "luces": {
+     "alcanzable_m2": 27.09,
+     "libre_m2": 27.1
+    }
+   },
+   "luz": {
+    "entrada": 0.226,
+    "frente_barra": 0.484,
+    "centro": 0.296,
+    "fondo": 0.08
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 72598,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.993
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 20,
+   "W": 7.800000000000001,
+   "D": 9.9,
+   "guardias": 46,
+   "objetos": 124,
+   "distintos": 75,
+   "hash": "f431fab5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 5
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 20
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 2
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 2
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 5
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 9
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.32,
+     "libre_m2": 2.32
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.37,
+     "libre_m2": 1.37
+    },
+    "tras": {
+     "alcanzable_m2": 2.24,
+     "libre_m2": 2.24
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.41,
+     "libre_m2": 0.41
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.05,
+     "libre_m2": 0.05
+    },
+    "centro": {
+     "alcanzable_m2": 16.37,
+     "libre_m2": 16.37
+    },
+    "fondo": {
+     "alcanzable_m2": 3.02,
+     "libre_m2": 3.43
+    },
+    "almacen": {
+     "alcanzable_m2": 2.1,
+     "libre_m2": 2.1
+    },
+    "luces": {
+     "alcanzable_m2": 25.29,
+     "libre_m2": 25.7
+    }
+   },
+   "luz": {
+    "entrada": 0.23,
+    "frente_barra": 0.487,
+    "centro": 0.325,
+    "fondo": 0.083
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 64562,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.923
+  },
+  {
+   "kit": "fruteria",
+   "tipologia": "alimentacion",
+   "seed": 2935,
+   "W": 7.5,
+   "D": 11.100000000000001,
+   "guardias": 49,
+   "objetos": 159,
+   "distintos": 94,
+   "hash": "20afcb6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "fru_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "balanza_comercial",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "fru_rollo_bolsas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "fru_cuenco_muestra|fru_cestillo_cambio|b",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "estanteria_metalica",
+     "n": 2
+    },
+    {
+     "entrada": 7,
+     "obj": "caja_carton|fru_rollo_bolsas|fru_cestill",
+     "n": 14
+    },
+    {
+     "entrada": 8,
+     "obj": "fru_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "fru_pizarra_a",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "taburete_alto|silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "fru_expositor_escalonado|fru_expositor_e",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "fru_caja_pera_conferencia|fru_caja_pera_",
+     "n": 31
+    },
+    {
+     "entrada": 13,
+     "obj": "fru_toldo_verde|fru_toldo_rojo",
+     "n": 4
+    },
+    {
+     "entrada": 14,
+     "obj": "fru_ristra_ajos|fru_ristra_pimientos|fru",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "fru_expositor_escalonado_verde|fru_expos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "fru_caja_apio|fru_caja_alcachofas|fru_ca",
+     "n": 15
+    },
+    {
+     "entrada": 17,
+     "obj": "fru_toldo_rojo|fru_toldo_verde",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "fru_ristra_pimientos|fru_ristra_ajos",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "fru_isla_central|mesa_fruteria",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "prod_fruta_melones|fru_caja_melon_piel_s",
+     "n": 9
+    },
+    {
+     "entrada": 21,
+     "obj": "prod_fruta_melocotones|prod_fruta_naranj",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "fru_caja_granadas|fru_caja_mandarinas|fr",
+     "n": 4
+    },
+    {
+     "entrada": 23,
+     "obj": "fru_cesta_naranjas|fru_cesta_manzanas|fr",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "fru_saco_patatas|fru_saco_cebollas|fru_s",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "fru_colgador_platanos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pila_cestas",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "fru_pila_sacos",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_bebidas_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "nevera_lacteos",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "prod_agua_fria|prod_naranja_fria|prod_zu",
+     "n": 11
+    },
+    {
+     "entrada": 33,
+     "obj": "prod_zumo_fresco|prod_yogur_natural|prod",
+     "n": 8
+    },
+    {
+     "entrada": 34,
+     "obj": "fru_pizarra_b",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "fru_cartel_fruta",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fru_carro_cajas|palet_madera|pila_cajone",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "caja_carton|fru_rollo_bolsas|prod_fruta_",
+     "n": 4
+    },
+    {
+     "entrada": 40,
+     "obj": "pila_cajones_vacios|fru_saco_patatas|fru",
+     "n": 3
+    },
+    {
+     "entrada": 41,
+     "obj": "fregona_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 42,
+     "obj": "escoba",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lampara_panel_led",
+     "n": 11
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.8,
+     "libre_m2": 3.8
+    },
+    "barra": {
+     "alcanzable_m2": 0.18,
+     "libre_m2": 0.18
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.44,
+     "libre_m2": 1.44
+    },
+    "tras": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.27
+    },
+    "pared_e": {
+     "alcanzable_m2": 0.11,
+     "libre_m2": 0.11
+    },
+    "centro": {
+     "alcanzable_m2": 18.04,
+     "libre_m2": 18.04
+    },
+    "fondo": {
+     "alcanzable_m2": 1.84,
+     "libre_m2": 1.84
+    },
+    "almacen": {
+     "alcanzable_m2": 2.04,
+     "libre_m2": 2.04
+    },
+    "luces": {
+     "alcanzable_m2": 26.76,
+     "libre_m2": 26.76
+    }
+   },
+   "luz": {
+    "entrada": 0.215,
+    "frente_barra": 0.466,
+    "centro": 0.261,
+    "fondo": 0.071
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 96542,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.994
+  }
+ ]
+}

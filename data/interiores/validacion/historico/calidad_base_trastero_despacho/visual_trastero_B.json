@@ -1,0 +1,224 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_1e13ed810114435db1dd6a24c43387b8",
+ "request_sha256": "f4fa1ba3b08a3eceb20a3c64ccb19f9bb9be30c836f67427b2ac0d46901939ea",
+ "fecha": "2026-10-17T14:20:05.758677+00:00",
+ "kit": "trastero",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_trastero.jpg",
+ "ficha_sha256": "48a9af516de69f1eb64e846bf2b8e3999773ac40d839b24a72c927b70b4f7cc2",
+ "referencias": [
+  {
+   "titulo": "Casa de Estudillo interior 04 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_04_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Casa_de_Estudillo_interior_04_-_storage_room.jpg/960px-Casa_de_Estudillo_interior_04_-_storage_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Casa de Estudillo interior 05 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_05_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Casa_de_Estudillo_interior_05_-_storage_room.jpg/960px-Casa_de_Estudillo_interior_05_-_storage_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.72,
+  "coherencia": 2.69,
+  "iluminacion": 3.36,
+  "variedad": 2.76,
+  "lectura_funcional": 2.66
+ },
+ "media": 2.838,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.72,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.28
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.69
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.73
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.69,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.32
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.62
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.66
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.36,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.04
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.55
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.38
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.6
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.76,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.23
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.75
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.78
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.66,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.31
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.66
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.7
+  }
+ ],
+ "uso": {
+  "input_tokens": 4156,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4156
+ }
+}

@@ -1,0 +1,100 @@
+"""Mobiliario doméstico de dormitorios y habitaciones personales, en metros."""
+from vivienda_base import *
+
+def objetos():
+    out=[]
+    for id,nombre,w,rol in [('vb_cama_doble','Cama de matrimonio compacta',1.35,'cama_doble'),('vb_cama_individual','Cama individual',.85,'cama')]:
+        p=[caja(w,.22,1.82,y=.2,tinte='madera'),caja(w-.03,.17,1.79,y=.395,c='#d2bca4',m='tela',tinte='tela'),caja(w,.65,.055,y=.325,z=-.883,tinte='madera'),caja(w-.04,.035,1.15,y=.497,z=.29,c='#997f95',m='tela',tinte='tela')]
+        for x in [-w/2+.09,w/2-.09]:
+            for z in [-.75,.75]:p.append(caja(.075,.15,.075,x=x,y=.075,z=z,tinte='madera'))
+        for x in ([-w/4,w/4] if rol=='cama_doble' else [0]):p.append(caja(w/2-.12 if rol=='cama_doble' else w-.14,.1,.35,x=x,y=.53,z=-.58,c='#e4decf',m='tela'))
+        out.append(objeto(id,nombre,w,.68,1.82,rol,52,partes=p))
+    # Variante de cama para habitaciones amplias, sin agrandar la de los dormitorios estrechos.
+    c=copy.deepcopy(out[0]);c['id']='vb_cama_amplia';c['nombre']='Cama de matrimonio amplia'
+    for p in c['partes']:p['d'][0]*=1.6/1.35;p['p'][0]*=1.6/1.35
+    out.append(c)
+    out.append(objeto('vb_armario','Armario de dos puertas',.8,1.85,.4,'armario',55,partes=[caja(.8,1.85,.4,tinte='madera'),caja(.008,.18,.02,x=-.04,y=1,z=.215,c=METAL,m='metal'),caja(.008,.18,.02,x=.04,y=1,z=.215,c=METAL,m='metal')]))
+    out.append(objeto('vb_alfombra','Alfombra de dormitorio',1.8,.012,1.3,None,3,partes=[caja(1.8,.012,1.3,c='#958273',m='tela',tinte='tela'),caja(1.65,.002,1.15,y=.013,c='#bba584',m='tela')],categoria='textil'))
+    out.append(cajonera('vb_mesita','Mesita de noche',.32,.5,.28,'mesa',8))
+    out.append(cajonera('vb_comoda','Cómoda con cajones'))
+    out.append(mesa('vb_escritorio','Escritorio doméstico',.95,.45))
+    out.append(mesa('vb_mesa_ninos','Mesa para deberes y juegos',.8,.42,.64))
+    out.append(copiar('silla_comedor','vb_silla_ninos','Silla infantil','silla',.84))
+    out.append(copiar('estanteria_libros','vb_estante_bajo','Estantería baja para cuentos y juguetes','libros',.65))
+    # Variantes infantiles: conservan roles y la cama original de 85 × 182 cm.
+    # No se escalan ni recolorean los muebles compartidos de los otros dormitorios.
+    cama=copy.deepcopy(next(o for o in out if o['id']=='vb_cama_individual'))
+    cama['id']='vb_cama_ninos';cama['nombre']='Cama individual con cajones bajos'
+    # El zócalo se retranquea; colchón, cabecero y huella total siguen iguales.
+    cama['partes'][0]['d'][0]=.81
+    for p in cama['partes']:
+        if p.get('tinte')=='tela':p.pop('tinte');p['c']='#7c9b99'
+    for lado in [-1,1]:
+        for z in [-.44,.44]:
+            cama['partes'] += [caja(.014,.15,.78,x=lado*.412,y=.23,z=z,c='#d4bd98'),caja(.012,.025,.12,x=lado*.419,y=.23,z=z,c='#697e77')]
+    # Cobertor de cinco paños disjuntos dentro del volumen ya validado.
+    # Las bandas toman la tela de la casa; ni huella ni altura cambian.
+    cama['partes'][1]['c']='#d9d3c2'
+    colcha=cama['partes'].pop(3);z=colcha['p'][2]-colcha['d'][2]/2
+    for i,largo in enumerate([.46,.06,.23,.06,.34]):
+        p=copy.deepcopy(colcha);p['d'][2]=largo;p['p'][2]=z+largo/2
+        if i%2:p['c']='#d9cba6';p.pop('tinte',None)
+        else:p['c']='#567c91';p['tinte']='tela'
+        cama['partes'].insert(3+i,p);z+=largo
+    out.append(cama)
+    # Una sola galería de dibujos propios sobre el descanso, no una pared de pósters.
+    laminas=[]
+    for i,(x,y) in enumerate([(-.26,1.43),(0,1.48),(.26,1.43)]):
+        laminas += [caja(.235,.315,.003,x=x,y=y,z=.0015,c='#d6cfba',m='papel'),
+                    dict(f='plano',d=[.23,.31],p=[x,y,.0035],c='#e9dfc9',m='papel',tex=dict(tipo='vivienda_dibujo_ninos_b',lamina=i)),
+                    caja(.055,.02,.001,x=x-.045,y=y+.153,z=.0045,c='#b6ad90',m='papel')]
+    out.append(objeto('vb_dibujos_ninos','Dibujos infantiles guardados en la pared',.76,.37,.005,None,.3,'papel',partes=laminas,soporte='pared',categoria='cuadro'))
+    # Mismo volumen y regla de la alfombra de dormitorio; sólo cambia su superficie.
+    juego=copy.deepcopy(next(o for o in out if o['id']=='vb_alfombra'))
+    juego['id']='vb_alfombra_juego';juego['nombre']='Alfombra de juego con circuito'
+    juego['partes'][0].pop('tinte',None);juego['partes'][0]['c']='#647b78'
+    juego['partes'][1]['tex']=dict(tipo='vivienda_juego_ninos_b')
+    out.append(juego)
+    # Armario bajo de ropa: cuerpo de 95 × 42 × 150 cm, no una cómoda.
+    p=[caja(.95,1.5,.42,c='#cbb591')]
+    for x in [-.2345,.2345]:
+        p += [caja(.451,1.40,.014,x=x,y=.77,z=.217,c='#879e91'),caja(.018,.13,.025,x=x*.18,y=.83,z=.236,c='#d6d0bb',m='metal')]
+    out.append(objeto('vb_armario_ninos','Armario infantil de ropa',.95,1.5,.45,'armario',48,partes=p))
+    # Dos baldas accesibles, huecos para cuentos y cajas integradas bajo la superior.
+    p=[caja(.88,.76,.022,z=-.139,c='#cbb591')]
+    for x in [-.428,.428]:p.append(caja(.024,.76,.3,x=x,c='#cbb591'))
+    for y in [.04,.38,.748]:p.append(caja(.88,.024,.3,y=y,c='#cbb591'))
+    for x in [-.22,.22]:
+        p += [caja(.34,.22,.24,x=x,y=.162,z=.012,c='#a4b1a0',m='tela'),caja(.09,.025,.008,x=x,y=.24,z=.136,c='#677e78')]
+    out.append(objeto('vb_estante_ninos','Guardado bajo de cuentos y juegos',.88,.76,.3,'libros',20,partes=p,superficies=[dict(y=.76,margen=.025)]))
+    out.append(objeto('vb_ordenador','Ordenador doméstico sin marca',.38,.31,.22,None,2,'plastico',partes=[caja(.38,.24,.025,y=.19,z=-.06,c='#57616c',m='plastico'),caja(.34,.2,.005,y=.19,z=-.044,c='#8aabc1',m='cristal'),caja(.04,.08,.04,y=.04,z=-.06,c='#81878e',m='metal'),caja(.32,.018,.13,y=.009,z=.04,c='#69747e',m='plastico')],soporte='superficie',categoria='informatica'))
+    out.append(objeto('vb_caballete','Caballete con lienzo pintado',.72,1.65,.48,None,7,partes=[caja(.045,1.6,.045,x=-.26,y=.8,z=.13,r=[0,0,-8]),caja(.045,1.6,.045,x=.26,y=.8,z=.13,r=[0,0,8]),caja(.05,1.4,.05,y=.7,z=-.18),caja(.72,.045,.12,y=.72,z=.12),dict(f='plano',d=[.62,.54],p=[0,1.05,.19],c='#e8d4b4',m='tela',tex=dict(tipo='vivienda_lienzo_b'))]))
+    out.append(objeto('vb_rifle','Rifle de caza guardado',.12,1.12,.08,None,3.5,'madera',partes=[caja(.09,.34,.045,y=.17,c='#825a3d',m='madera'),caja(.045,.4,.04,y=.52,c='#6b747c',m='metal'),cil(.012,.012,.45,y=.895,c='#697078',m='metal')],categoria='decoracion'))
+    out.append(objeto('vb_armero','Soporte doméstico para armas',.55,1.25,.23,None,14,partes=[caja(.55,.1,.23),caja(.55,1.25,.04,z=-.095),caja(.55,.05,.17,y=.7),caja(.55,.05,.17,y=1.13)]))
+    astas=[caja(.22,.3,.035,y=1.65,z=.0175)]
+    for lado in [-1,1]:
+        astas += [cil(.012,.024,.31,x=lado*.11,y=1.82,z=.09,c='#c6b797',m='hueso',r=[0,0,-lado*27]),cil(.008,.015,.23,x=lado*.19,y=2.03,z=.1,c='#c6b797',m='hueso',r=[0,0,-lado*9])]
+        for x,y,ang in [(.13,1.91,-35),(.2,2.04,40),(.21,2.13,-40)]:
+            astas.append(cil(.004,.011,.12,x=lado*x,y=y,z=.105,c='#c6b797',m='hueso',r=[0,0,lado*ang]))
+    out.append(objeto('vb_cornamenta','Trofeo de caza en tabla',.55,.7,.18,None,3,'madera',partes=astas,soporte='pared',categoria='decoracion'))
+    out.append(objeto('vb_altavoz','Altavoz doméstico',.25,.42,.23,None,5,'madera',partes=[caja(.25,.42,.23,c='#4b505a'),cil(.085,.085,.015,y=.15,z=.122,c='#89929a',m='metal',r=[90,0,0]),cil(.04,.04,.015,y=.33,z=.122,c='#89929a',m='metal',r=[90,0,0])],categoria='mueble'))
+    for id,nombre,w,h,d,forma in [('vinilos','Discos de vinilo',.3,.035,.3,'cil'),('partituras','Partituras abiertas',.3,.015,.23,'caja'),('auriculares','Auriculares',.18,.07,.16,'cil'),('metronomo','Metrónomo',.075,.17,.085,'caja'),('paleta','Paleta con pinturas',.23,.025,.16,'cil'),('pinceles','Bote con pinceles',.07,.23,.07,'cil'),('carboncillos','Caja de carboncillos',.17,.025,.055,'caja'),('acuarelas','Estuche de acuarelas',.2,.025,.12,'caja'),('tubos_oleo','Tubos de óleo',.18,.035,.1,'caja'),('trapo','Trapo de pintura',.21,.02,.15,'caja'),('prismaticos','Prismáticos',.14,.07,.13,'caja'),('brujula','Brújula',.065,.025,.065,'cil'),('linterna','Linterna',.06,.16,.06,'cil'),('bolsa_caza','Bolsa de campo',.27,.2,.16,'caja')]:
+        p=[cil(w/2,w/2,h,c='#777d86') if forma=='cil' else caja(w,h,d,c='#a1846b')]
+        if id=='pinceles':p=[cil(.035,.035,.1,c='#9b7856',m='madera')]+[cil(.003,.003,.18,x=x,y=.17,c='#bd9a69',m='madera') for x in [-.02,0,.02]]
+        if id=='paleta':p+=[cil(.025,.025,.005,x=x,y=.028,c=c,m='pintura') for x,c in [(-.06,'#b85f55'),(0,'#6e9a74'),(.06,'#6186a6')]]
+        out.append(objeto('vb_'+id,nombre,w,h,d,None,.5,'madera',partes=p,soporte='superficie',categoria='decoracion'))
+    for id,nombre,w,h,d,c in [('despertador','Despertador',.13,.11,.05,'#a19881'),('joyero','Joyero',.18,.07,.11,'#886249'),('hucha','Hucha',.11,.12,.09,'#d2959d'),('gafas','Gafas en su funda',.16,.03,.065,'#665e54'),('zapatillas','Zapatillas',.2,.055,.22,'#6f8995'),('ropa','Ropa doblada',.25,.1,.19,'#a6aca0'),('colcha','Colcha doblada',.32,.085,.25,'#9a7f9c'),('cuaderno','Cuaderno y lápiz',.19,.025,.24,'#bca886'),('cesto','Cesto pequeño',.22,.15,.18,'#a88e63'),('cargador','Cargador y cable',.07,.025,.08,'#555c62')]:
+        o=objeto('vb_'+id,nombre,w,h,d,masa=.4,categoria='decoracion',partes=[caja(w,h,d,c=c,m='tela')]);o['soporte']='superficie';out.append(o)
+    out.append(objeto('vb_plafon','Plafón doméstico',.38,.12,.38,None,2,'cristal',partes=[cil(.18,.18,.025,y=-.0125,c='#9c9fa4',m='metal'),cil(.17,.14,.09,y=-.07,c='#eee8db',m='cristal',luz=True)],soporte='techo',clase='FIXED',motivo_fijo='anclado en la realidad',categoria='lampara'))
+    out.append(objeto('vb_lampara_trabajo','Lámpara lineal de trabajo',.8,.13,.18,None,2,'metal',partes=[caja(.8,.035,.18,y=-.0175,c='#9c9fa4',m='metal'),caja(.73,.07,.13,y=-.07,c='#eee8db',m='cristal',luz=True)],soporte='techo',clase='FIXED',motivo_fijo='anclado en la realidad',categoria='lampara'))
+    osito=[dict(f='esfera',d=[.07],p=[0,.11,0],c='#b48d69',m='tela',s=[1,1.2,.85]),dict(f='esfera',d=[.055],p=[0,.21,0],c='#b48d69',m='tela')]
+    for lado in [-1,1]:
+        osito.extend([dict(f='esfera',d=[.023],p=[lado*.043,.25,0],c='#b48d69',m='tela'),dict(f='esfera',d=[.032],p=[lado*.055,.032,.025],c='#a47c58',m='tela'),dict(f='esfera',d=[.006],p=[lado*.018,.222,.048],c='#34363a',m='plastico')])
+    osito.append(dict(f='esfera',d=[.013],p=[0,.203,.053],c='#6f5648',m='tela'))
+    out.append(objeto('vb_osito','Osito de peluche',.18,.28,.14,None,.25,'tela',partes=osito,soporte='superficie',categoria='decoracion'))
+    out.append(objeto('vb_bloques','Bloques de construcción de colores',.22,.13,.17,None,.35,'madera',partes=[caja(.07,.07,.07,x=-.07,y=.035,c='#ba645c'),caja(.07,.12,.07,y=.06,c='#799aaa'),caja(.07,.07,.07,x=.07,y=.035,c='#bda15f')],soporte='superficie',categoria='decoracion'))
+    from composicion_domestica import mejorar_despacho
+    mejorar_despacho(out)
+    return out
+
+if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())

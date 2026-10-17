@@ -1,0 +1,955 @@
+{
+ "tipologia": "sucursal_bancaria",
+ "nombre": "Sucursal bancaria",
+ "nota": "La sucursal de un banco en un pueblo de las Vegas Altas (aquí, el «Banco del Valle», inventado): el cajero y el actualizador de libretas en el vestíbulo, pegados a la pared de la calle; la máquina de turnos y su pantalla; una sala con las mesas de dos o tres gestores (cada una con su sillón detrás y una silla de visita delante), la fila de sillas de espera y los folletos; al fondo, el mostrador de cajas con mampara de cristal, la puerta del personal a un lado, y detrás el puesto de los cajeros, el archivo y la puerta redonda de la cámara acorazada. La puerta de la calle en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   7.5,
+   8.7
+  ],
+  "fondo": [
+   11.1,
+   12.6
+  ],
+  "alto": 3.2
+ },
+ "variables": {
+  "zm": "D-3.4",
+  "xs": "-W/2+6.0",
+  "zh": "D-4.0"
+ },
+ "paso_libre": 0.9,
+ "pared": "#ecebe4",
+ "suelo": "rock_tile_floor",
+ "suelo_color": "#c9c4b8",
+ "puntos": {
+  "dependiente": [
+   "-W/2+1.2",
+   "zm+0.85"
+  ],
+  "mostrador": [
+   "-W/2+1.2",
+   "zm-0.95"
+  ]
+ },
+ "pedir": "Consultar el saldo en ventanilla",
+ "zonas": [
+  {
+   "id": "cajeros",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "-0.95",
+    "1.5"
+   ]
+  },
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-0.95",
+    "0",
+    "W/2",
+    "1.5"
+   ]
+  },
+  {
+   "id": "gestores",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "2.2",
+    "W/2-2.1",
+    "zh"
+   ]
+  },
+  {
+   "id": "espera",
+   "publica": true,
+   "rect": [
+    "W/2-2.0",
+    "1.5",
+    "W/2",
+    "zh"
+   ]
+  },
+  {
+   "id": "ventanillas",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zm-0.55",
+    "xs",
+    "zm+0.55"
+   ]
+  },
+  {
+   "id": "personal",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zm+0.6",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xs",
+    "zm"
+   ],
+   "a": [
+    "W/2",
+    "zm"
+   ],
+   "puerta": [
+    0.25,
+    1.0
+   ]
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "ventanillas",
+   "regla": "modulos",
+   "obj": "ventanilla_modulo",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "-W/2",
+    "xs"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "ventanillas",
+   "regla": "sobre",
+   "obj": "boligrafo_cadena",
+   "en": [
+    "ventanilla_modulo"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "ventanillas",
+   "regla": "sobre",
+   "obj": "bote_caramelos",
+   "en": [
+    "ventanilla_modulo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "ventanillas",
+   "regla": "sobre",
+   "obj": "folletos_pila",
+   "en": [
+    "ventanilla_modulo"
+   ],
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "ventanillas",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "ventanilla_modulo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "fila",
+   "obj": "silla_oficina",
+   "eje": "x",
+   "linea": [
+    "zm+0.92",
+    "-W/2+0.6",
+    "xs-0.6"
+   ],
+   "cada": 1.2,
+   "mira": "-z"
+  },
+  {
+   "zona": "cajeros",
+   "regla": "contra_pared",
+   "obj": "cajero_automatico",
+   "pared": "S",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cajeros",
+   "regla": "contra_pared",
+   "obj": "actualizador_libretas",
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cajeros",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "cajeros",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "dispensador_turnos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "dispensador_gel",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_horario_banco",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "conjunto",
+   "variantes": [
+    "puesto_gerencia",
+    "puesto_oficina"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_visita"
+    ],
+    "n": [
+     1,
+     1
+    ],
+    "lados": [
+     "-z"
+    ]
+   },
+   "cantidad": [
+    2,
+    3
+   ],
+   "giro": [
+    0,
+    180
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "conjunto",
+   "variantes": [
+    "escritorio_gerente",
+    "escritorio_oficina"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_oficina"
+    ],
+    "n": [
+     2,
+     2
+    ],
+    "lados": [
+     "+z",
+     "-z"
+    ]
+   },
+   "cantidad": [
+    0,
+    1
+   ],
+   "giro": [
+    0,
+    180
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "sobre",
+   "variantes": [
+    "monitor_pc",
+    "monitor_pc_encendido"
+   ],
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "sobre",
+   "obj": "teclado",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": 1,
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "sobre",
+   "obj": "raton_pc",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "fraccion": [
+    0.7,
+    1.0
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "sobre",
+   "obj": "telefono_fijo",
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "fraccion": [
+    0.6,
+    1.0
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "vida",
+   "variantes": [
+    "bloc_notas",
+    "taza_cafe",
+    "portalapices",
+    "calculadora",
+    "lampara_escritorio",
+    "bandeja_documentos",
+    "pila_carpetas",
+    "tarjetero_visitas",
+    "cuaderno_citas",
+    "grapadora",
+    "sello_tampon",
+    "portatil",
+    "bote_caramelos",
+    "planta_pequena"
+   ],
+   "en": [
+    "puesto_gerencia",
+    "puesto_oficina",
+    "escritorio_oficina",
+    "escritorio_gerente"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "contra_pared",
+   "obj": "expositor_folletos",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "contra_pared",
+   "obj": "archivador_metalico",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "pared",
+   "variantes": [
+    "cartel_hipotecas",
+    "cartel_ahorro"
+   ],
+   "pared": "W",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "pared",
+   "obj": "expositor_folletos_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "pared",
+   "obj": "diploma_enmarcado",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "gestores",
+   "regla": "techo",
+   "obj": "panel_led",
+   "por_m2": [
+    0.11,
+    0.14
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "gestores",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "contra_pared",
+   "obj": "silla_espera_fila",
+   "pared": "E",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "pared",
+   "obj": "pantalla_turnos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "suelo_libre",
+   "obj": "mesa_baja",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "vida",
+   "variantes": [
+    "revista",
+    "periodico",
+    "bote_caramelos"
+   ],
+   "en": [
+    "mesa_baja"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "suelo_libre",
+   "obj": "sillon_espera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "dispensador_agua",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "techo",
+   "obj": "panel_led",
+   "por_m2": [
+    0.1,
+    0.14
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "techo",
+   "obj": "foco_empotrable",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "pared",
+   "obj": "rotulo_banco",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "pared",
+   "obj": "puerta_camara",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "contra_pared",
+   "obj": "caja_fuerte",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "contra_pared",
+   "obj": "archivador_metalico",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "contra_pared",
+   "obj": "estanteria_archivadores",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "sobre",
+   "variantes": [
+    "archivador_azul",
+    "archivador_rojo",
+    "archivador_verde",
+    "archivador_negro",
+    "archivador_amarillo"
+   ],
+   "en": [
+    "estanteria_archivadores"
+   ],
+   "relleno": [
+    0.7,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "sobre",
+   "variantes": [
+    "caja_archivo",
+    "planta_pequena",
+    "bandeja_documentos"
+   ],
+   "en": [
+    "archivador_metalico"
+   ],
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "contra_pared",
+   "obj": "fotocopiadora",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "sobre",
+   "obj": "impresora_sobremesa",
+   "en": [
+    "archivador_metalico"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "esquina",
+   "obj": "trituradora_papel",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "esquina",
+   "obj": "papelera_reciclaje",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "esquina",
+   "obj": "dispensador_agua",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "pared",
+   "obj": "aire_acondicionado",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "personal",
+   "regla": "techo",
+   "obj": "panel_led",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "personal",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   6,
+   9
+  ],
+  "temperatura_k": [
+   4000,
+   5000
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "banco",
+  "horario_defecto": "Mo-Fr 08:30-14:00; Th 16:30-18:30",
+  "vida": [
+   "la cola del turno",
+   "la libreta por actualizar",
+   "folletos de hipotecas",
+   "el cajero con su pantalla encendida"
+  ],
+  "cerrado": "persiana bajada y el cajero encendido en el vestíbulo",
+  "clientela": {
+   "maximo": 4,
+   "horas": [
+    [
+     8.5,
+     10,
+     0.3
+    ],
+    [
+     10,
+     12,
+     0.45
+    ],
+    [
+     12,
+     14,
+     0.3
+    ],
+    [
+     16.5,
+     18.5,
+     0.25
+    ]
+   ],
+   "frases": [
+    "Llevo media hora con el turno en la mano.",
+    "Dicen que van a cerrar la oficina de la plaza.",
+    "Vengo a actualizar la libreta, como cada mes.",
+    "¿Tú sabes cómo va eso de la banca por internet?",
+    "Mi nieto me dice que ya nadie viene al banco."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Banco de Bilbao (c. Alcalá 16, Madrid) 17.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Banco_de_Bilbao_(c._Alcal%C3%A1_16,_Madrid)_17.jpg",
+   "autor": "Luis García (Zaqarbal)",
+   "licencia": "CC BY-SA 3.0 es"
+  },
+  {
+   "titulo": "Banco de Bilbao (c. Alcalá 16, Madrid) 18.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Banco_de_Bilbao_(c._Alcal%C3%A1_16,_Madrid)_18.jpg",
+   "autor": "Luis García (Zaqarbal)",
+   "licencia": "CC BY-SA 3.0 es"
+  },
+  {
+   "titulo": "Counter, NatWest bank, Market Street, Falmouth, Cornwall - August 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Counter,_NatWest_bank,_Market_Street,_Falmouth,_Cornwall_-_August_2022.jpg",
+   "autor": "Mutney",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK Sheung Wan BOChina branch hall interior VIP service counters desks July 2016 DSC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_Sheung_Wan_BOChina_branch_hall_interior_VIP_service_counters_desks_July_2016_DSC.jpg",
+   "autor": "Tongpoik EAIgIAm",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK Sheung Wan BOChina branch queue number ticket July 2016 DSC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_Sheung_Wan_BOChina_branch_queue_number_ticket_July_2016_DSC.jpg",
+   "autor": "Tongpoik EAIgIAm",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior Sede Banca March Madrid.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_Sede_Banca_March_Madrid.jpg",
+   "autor": "Dante",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior de un Banco Azteca, Mazatlán.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_un_Banco_Azteca,_Mazatl%C3%A1n.jpg",
+   "autor": "El Nuevo Doge",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior of Hamilton National Bank, Chattanooga, Tennessee.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Hamilton_National_Bank,_Chattanooga,_Tennessee.jpg",
+   "autor": "Unknown authorUnknown author",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Interior oficina.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_oficina.JPG",
+   "autor": "Bankinter",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior oficina bankoa grupo abanca con el logotipo destacado.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_oficina_bankoa_grupo_abanca_con_el_logotipo_destacado.jpg",
+   "autor": "Bankoa Grupo ABANCA",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "San Juan, banco 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:San_Juan,_banco_2.jpg",
+   "autor": "LBM1948",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

@@ -1,0 +1,225 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_897a96fe80324307bbd6270995ccf59c",
+ "request_sha256": "d38347d59a69c7e277ac7b6498d5530d02a377f0a6e1d5463b4e4d5f43d8077f",
+ "fecha": "2026-10-17T18:15:46.963937+00:00",
+ "kit": "cocina",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_cocina.jpg",
+ "ficha_sha256": "1f34c47d762fb39dcbf33d7a03580a259dfb321cc154b0580a711bb9758f636a",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/1f34c47d762fb39dcbf33d7a03580a259dfb321cc154b0580a711bb9758f636a.jpg",
+ "referencias": [
+  {
+   "titulo": "Cocina-rafax.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Cocina-rafax.JPG",
+   "autor": "Rafael Ortega Díaz",
+   "licencia": "Public domain",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Cocina-rafax.JPG/960px-Cocina-rafax.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Compact modern fitted kitchen by Steinbeck-Reeves Design.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Compact_modern_fitted_kitchen_by_Steinbeck-Reeves_Design.jpg",
+   "autor": "Steinbeck-Reeves Design",
+   "licencia": "CC BY-SA 3.0",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Compact_modern_fitted_kitchen_by_Steinbeck-Reeves_Design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.98,
+  "coherencia": 3.02,
+  "iluminacion": 3.38,
+  "variedad": 2.88,
+  "lectura_funcional": 2.94
+ },
+ "media": 3.04,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.98,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.03
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.96
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.97
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 2.02,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.09
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.81
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.83
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.38,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.03
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.55
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.39
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.6
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.88,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.83
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.85
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.94,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.07
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.92
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.93
+  }
+ ],
+ "uso": {
+  "input_tokens": 3939,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 3939
+ }
+}

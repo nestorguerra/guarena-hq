@@ -1,0 +1,225 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_4d8cc614fe8f41c1991e192ba0a0679b",
+ "request_sha256": "63aa590b59d52fe1086a595e6a27f677412afd0921a727dc33b9842e09effee1",
+ "fecha": "2026-10-17T18:53:33.959914+00:00",
+ "kit": "despacho",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_despacho.jpg",
+ "ficha_sha256": "d8482f40325712169695f2a1d0ed4e114a873509b2d90320c4cc9df8f5759aae",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/d8482f40325712169695f2a1d0ed4e114a873509b2d90320c4cc9df8f5759aae.jpg",
+ "referencias": [
+  {
+   "titulo": "Big Desk Home Office Carrollton New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Big_Desk_Home_Office_Carrollton_New_Orleans.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Big_Desk_Home_Office_Carrollton_New_Orleans.jpg/960px-Big_Desk_Home_Office_Carrollton_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "MapleSt Central BR Desk, Carrollton, New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg",
+   "autor": "Infrogmation",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg/960px-MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.99,
+  "coherencia": 3.34,
+  "iluminacion": 3.53,
+  "variedad": 2.93,
+  "lectura_funcional": 2.94
+ },
+ "media": 3.146,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.99,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.91
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.93
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 2.34,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.03
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.61
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.35
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.67
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.53,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.03
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.42
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.5
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.04
+    }
+   ],
+   "confidence": 0.54
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.93,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.15
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.78
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.81
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.94,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.11
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.84
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.05
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.87
+  }
+ ],
+ "uso": {
+  "input_tokens": 4337,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4337
+ }
+}

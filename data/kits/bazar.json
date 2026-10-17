@@ -1,0 +1,911 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Bazar («todo a cien»)",
+ "nota": "El bazar de pueblo de «todo a cien»: góndolas y estanterías repletas de menaje, juguetes, papelería, plásticos y accesorios de móvil, paneles de pared con relojes, espejos y cuadros, cestos de ofertas junto a la puerta, la caja con su mostrador pegada a la entrada y el almacén al fondo. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.6,
+   8.1
+  ],
+  "fondo": [
+   10.5,
+   13.2
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-1.7",
+  "z0": "1.5",
+  "z1": "3.9",
+  "zb": "D-2.1"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f1e8cc",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#cdc6b6",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.75",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pagar en caja",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.2"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "puestos",
+   "publica": true,
+   "rect": [
+    "-W/2+0.9",
+    "1.3",
+    "xc-1.35",
+    "4.9"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "isla",
+   "publica": true,
+   "rect": [
+    "-W/2+0.42",
+    "5.0",
+    "W/2-0.42",
+    "zb"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pagar en el mostrador: sin muebles delante"
+  },
+  {
+   "rect": [
+    "xc+0.35",
+    "(z0+z1)/2-0.45",
+    "xc+1.15",
+    "(z0+z1)/2+0.45"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "mostrador_bazar",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pila_bolsas_plastico",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_pilas_mostrador",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_llaveros",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "bote_caramelos",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "calculadora",
+   "en": [
+    "mostrador_bazar"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "contra_pared",
+   "obj": "armario_trascaja",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "rotulo_bazar",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "sobre",
+   "obj": "caja_bazar_grande",
+   "en": [
+    "armario_trascaja"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "suelo_libre",
+   "obj": "silla_madera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_bazar_grande",
+    "caja_carton",
+    "bz_cubos",
+    "bz_toallas",
+    "bz_cestos_ropa"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "torre_cajas_bazar",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "caja_bazar_grande",
+   "pared": "E",
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "taburete_escalon",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_ofertas_bazar",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "obj": "cesta_baratijas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_cojines",
+    "paraguas_cubo",
+    "expositor_cactus"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "cojines",
+    "paraguas",
+    "cactus"
+   ]
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "variantes": [
+    "cubo_peluches",
+    "expositor_cometas",
+    "red_balones"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "peluche",
+    "cometa",
+    "balon"
+   ]
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_lamparitas",
+    "expositor_gafas",
+    "expositor_cuadernos"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "lamparita",
+    "gafas",
+    "cuaderno"
+   ]
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "obj": "expositor_posters",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "poster"
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_precio_bazar",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "panel_relojes",
+    "panel_espejos",
+    "panel_cuadros",
+    "panel_cargadores",
+    "panel_linternas",
+    "panel_cocina",
+    "panel_limpieza"
+   ],
+   "pared": "W",
+   "cada": 1.1,
+   "maximo": 7,
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "reloj",
+    "espejo",
+    "cuadro",
+    "cargador",
+    "linterna"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_bazar_baja",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_bazar_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_bazar_pared",
+   "pared": "N",
+   "llenar": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "isla",
+   "regla": "filas",
+   "obj": "gondola_bazar",
+   "eje": "z",
+   "pasillo": 0.95,
+   "margen": [
+    0.9,
+    0.9
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "sobre",
+   "variantes": [
+    "bz_cuadernos_a4",
+    "bz_barrenos",
+    "bz_ollas",
+    "bz_cubos_azules",
+    "bz_pilas",
+    "bz_pompas",
+    "bz_fiambreras_rojas",
+    "bz_tazas",
+    "bz_jarrones",
+    "bz_puzles",
+    "bz_cargadores",
+    "bz_flores_lilas",
+    "bz_bombillas",
+    "bz_cestos_mimbre",
+    "bz_lapices_color",
+    "bz_cuadernos",
+    "bz_tazas_azules",
+    "bz_pelotas_saltarinas",
+    "bz_marcos",
+    "bz_auriculares",
+    "bz_alargaderas",
+    "bz_toallas",
+    "bz_pegamentos",
+    "bz_flores_artificiales",
+    "bz_cestos_rosa",
+    "bz_cestos_ropa",
+    "bz_cubos",
+    "bz_trapos",
+    "bz_barrenos_naranja",
+    "bz_vasos",
+    "bz_boligrafos",
+    "bz_carpetas",
+    "bz_cochecitos",
+    "bz_acuarelas",
+    "bz_munecas",
+    "bz_vasos_rosa",
+    "bz_velas",
+    "bz_fiambreras",
+    "bz_fundas_movil",
+    "bz_platos"
+   ],
+   "en": [
+    "gondola_bazar"
+   ],
+   "relleno": [
+    0.82,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "bz_pegamentos",
+    "bz_fiambreras",
+    "bz_alargaderas",
+    "bz_lapices_color",
+    "bz_cargadores",
+    "bz_trapos",
+    "bz_puzles",
+    "bz_tazas",
+    "bz_auriculares",
+    "bz_munecas",
+    "bz_cochecitos",
+    "bz_boligrafos",
+    "bz_vasos",
+    "bz_acuarelas",
+    "bz_vasos_rosa",
+    "bz_cuadernos",
+    "bz_cubos",
+    "bz_cubos_azules",
+    "bz_platos",
+    "bz_carpetas",
+    "bz_toallas",
+    "bz_jarrones",
+    "bz_ollas",
+    "bz_pelotas_saltarinas",
+    "bz_fundas_movil",
+    "bz_cestos_ropa",
+    "bz_flores_lilas",
+    "bz_pompas",
+    "bz_pilas",
+    "bz_cestos_mimbre",
+    "bz_marcos",
+    "bz_barrenos",
+    "bz_cestos_rosa",
+    "bz_velas",
+    "bz_flores_artificiales",
+    "bz_tazas_azules",
+    "bz_cuadernos_a4",
+    "bz_bombillas",
+    "bz_fiambreras_rojas",
+    "bz_barrenos_naranja"
+   ],
+   "en": [
+    "estanteria_bazar_baja"
+   ],
+   "relleno": [
+    0.82,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "bz_fiambreras_rojas",
+    "bz_toallas",
+    "bz_marcos",
+    "bz_barrenos_naranja",
+    "bz_pegamentos",
+    "bz_munecas",
+    "bz_lapices_color",
+    "bz_auriculares",
+    "bz_cestos_rosa",
+    "bz_tazas",
+    "bz_barrenos",
+    "bz_cubos_azules",
+    "bz_tazas_azules",
+    "bz_pompas",
+    "bz_ollas",
+    "bz_cestos_mimbre",
+    "bz_velas",
+    "bz_flores_artificiales",
+    "bz_acuarelas",
+    "bz_pelotas_saltarinas",
+    "bz_flores_lilas",
+    "bz_cestos_ropa",
+    "bz_boligrafos",
+    "bz_carpetas",
+    "bz_puzles",
+    "bz_alargaderas",
+    "bz_cuadernos",
+    "bz_vasos",
+    "bz_vasos_rosa",
+    "bz_jarrones",
+    "bz_fundas_movil",
+    "bz_bombillas",
+    "bz_cubos",
+    "bz_fiambreras",
+    "bz_cochecitos",
+    "bz_cuadernos_a4",
+    "bz_platos",
+    "bz_cargadores",
+    "bz_pilas",
+    "bz_trapos"
+   ],
+   "en": [
+    "estanteria_bazar_pared"
+   ],
+   "relleno": [
+    0.82,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "por_m2": [
+    0.09,
+    0.11
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3800,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 09:30-14:00,17:00-21:00; Su 10:00-14:00",
+  "vida": [
+   "cestos de ofertas junto a la puerta",
+   "peluches apilados",
+   "una caja de cartón a medio abrir",
+   "el cartel de «todo a un euro»"
+  ],
+  "cerrado": "reja bajada, las luces del fondo encendidas"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "DFC 3031 A narrow bustling shop aisle packed from floor to ceiling with colorful household goods toiletries and snacks stacked on shelves under a sign in Thai.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:DFC_3031_A_narrow_bustling_shop_aisle_packed_from_floor_to_ceiling_with_colorful_household_goods_toiletries_and_snacks_stacked_on_shelves_under_a_sign_in_Thai.jpg",
+   "autor": "PattayaPatrol",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dollar World store, Lucky One Mall, Karachi.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dollar_World_store,_Lucky_One_Mall,_Karachi.jpg",
+   "autor": "Aslam Sethi",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Food sales counter at Rhodes Brother Ten Cent Store, Seattle, ca 1910 (MOHAI 7393).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Food_sales_counter_at_Rhodes_Brother_Ten_Cent_Store,_Seattle,_ca_1910_(MOHAI_7393).jpg",
+   "autor": "Webster & Stevens",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Interior of a Dollar Tree discount store in Greenville, South Carolina 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Dollar_Tree_discount_store_in_Greenville,_South_Carolina_01.jpg",
+   "autor": "Harrison Keely",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Interior of a Dollar Tree discount store in Greenville, South Carolina 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Dollar_Tree_discount_store_in_Greenville,_South_Carolina_03.jpg",
+   "autor": "Harrison Keely",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Interior of a Dollar Tree discount store in Greenville, South Carolina 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Dollar_Tree_discount_store_in_Greenville,_South_Carolina_04.jpg",
+   "autor": "Harrison Keely",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Interior of a Dollar Tree discount store in Greenville, South Carolina 05.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Dollar_Tree_discount_store_in_Greenville,_South_Carolina_05.jpg",
+   "autor": "Harrison Keely",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Empty Dollar General Market store shelves during COVID-19 pandemic.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Empty_Dollar_General_Market_store_shelves_during_COVID-19_pandemic.jpg",
+   "autor": "TaurusEmerald",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "DGRegisterStore.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:DGRegisterStore.jpg",
+   "autor": "Excel23",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Cuba quota store.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Cuba_quota_store.jpg",
+   "autor": "James Emery from Douglasville, United States",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Vibrant Toy and Stationery Store Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Vibrant_Toy_and_Stationery_Store_Interior.jpg",
+   "autor": "Hihifap39",
+   "licencia": "CC0"
+  }
+ ]
+}

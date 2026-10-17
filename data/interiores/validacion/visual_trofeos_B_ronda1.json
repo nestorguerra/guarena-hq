@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_d37da561d32f4a72a9a716a80616ddb3",
+ "request_sha256": "efd7750e883c13b3b920bdaedb9711f2cdca1ed1eabaf54cbb00d0c54fd73b06",
+ "fecha": "2026-10-17T14:11:14.559136+00:00",
+ "kit": "trofeos",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_trofeos.jpg",
+ "ficha_sha256": "91a4d187d9a5d898ee098ac5e7b41055c6230ba5159ed273321315ad08373bb8",
+ "referencias": [
+  {
+   "titulo": "Antler trophy room panorama (38373754584).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Antler_trophy_room_panorama_%2838373754584%29.jpg",
+   "autor": "Thomas Quine",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Antler_trophy_room_panorama_%2838373754584%29.jpg/960px-Antler_trophy_room_panorama_%2838373754584%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "20080316505DR Gaußig (Doberschau-G) Schloß Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg",
+   "autor": "Jörg Blobelt",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg/960px-20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.86,
+  "coherencia": 2.76,
+  "iluminacion": 3.55,
+  "variedad": 2.64,
+  "lectura_funcional": 1.78
+ },
+ "media": 2.718,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.86,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.68
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.08
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.72
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.76,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.28
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.63
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.67
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.55,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.06
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.35
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.53
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.05
+    }
+   ],
+   "confidence": 0.54
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.64,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.11
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.31
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.43
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.13
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.42
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 0.78,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.44
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.4
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.12
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.35
+  }
+ ],
+ "uso": {
+  "input_tokens": 3919,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 3919
+ }
+}

@@ -1,0 +1,7459 @@
+{
+ "kit": "farmacia",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  861,
+  997,
+  2748
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 1,
+   "W": 6.6000000000000005,
+   "D": 10.5,
+   "guardias": 42,
+   "objetos": 230,
+   "distintos": 76,
+   "hash": "5c89498",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 22
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 96
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.84,
+     "libre_m2": 3.84
+    },
+    "sala": {
+     "alcanzable_m2": 13.45,
+     "libre_m2": 13.45
+    },
+    "isla": {
+     "alcanzable_m2": 8.86,
+     "libre_m2": 8.86
+    },
+    "espera": {
+     "alcanzable_m2": 1.09,
+     "libre_m2": 1.09
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.8,
+     "libre_m2": 6.8
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.145,
+    "sala": 0.162,
+    "isla": 0.226,
+    "espera": 0.219
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 71892,
+   "mallas": 28,
+   "luces": 8,
+   "determinista": true
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 2,
+   "W": 6.6000000000000005,
+   "D": 8.700000000000001,
+   "guardias": 26,
+   "objetos": 140,
+   "distintos": 72,
+   "hash": "d251025e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 30
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 32
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.49,
+     "libre_m2": 3.49
+    },
+    "sala": {
+     "alcanzable_m2": 10.67,
+     "libre_m2": 10.67
+    },
+    "isla": {
+     "alcanzable_m2": 6.85,
+     "libre_m2": 6.85
+    },
+    "espera": {
+     "alcanzable_m2": 0.84,
+     "libre_m2": 0.84
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.72,
+     "libre_m2": 6.72
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.119,
+    "sala": 0.135,
+    "isla": 0.257,
+    "espera": 0.161
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 37044,
+   "mallas": 28,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.957
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 3,
+   "W": 6,
+   "D": 8.4,
+   "guardias": 26,
+   "objetos": 117,
+   "distintos": 71,
+   "hash": "bc006b7d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 31
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 2
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 16
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.66,
+     "libre_m2": 2.66
+    },
+    "sala": {
+     "alcanzable_m2": 9.56,
+     "libre_m2": 9.56
+    },
+    "isla": {
+     "alcanzable_m2": 6.65,
+     "libre_m2": 6.65
+    },
+    "espera": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 5.39,
+     "libre_m2": 5.39
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.144,
+    "sala": 0.163,
+    "isla": 0.322,
+    "espera": 0.2
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 29756,
+   "mallas": 27,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 4,
+   "W": 5.7,
+   "D": 11.4,
+   "guardias": 35,
+   "objetos": 190,
+   "distintos": 69,
+   "hash": "fb767347",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 14
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 8
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 5
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 65
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 50
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.61,
+     "libre_m2": 3.61
+    },
+    "sala": {
+     "alcanzable_m2": 17.55,
+     "libre_m2": 17.55
+    },
+    "isla": {
+     "alcanzable_m2": 12.53,
+     "libre_m2": 12.53
+    },
+    "espera": {
+     "alcanzable_m2": 0.99,
+     "libre_m2": 0.99
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 3.33,
+     "libre_m2": 3.33
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.167,
+    "sala": 0.148,
+    "isla": 0.198,
+    "espera": 0.182
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 55624,
+   "mallas": 28,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 5,
+   "W": 6.6000000000000005,
+   "D": 10.8,
+   "guardias": 42,
+   "objetos": 236,
+   "distintos": 75,
+   "hash": "5c5577fb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 31
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 96
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.32,
+     "libre_m2": 4.32
+    },
+    "sala": {
+     "alcanzable_m2": 15.2,
+     "libre_m2": 15.2
+    },
+    "isla": {
+     "alcanzable_m2": 9.95,
+     "libre_m2": 9.95
+    },
+    "espera": {
+     "alcanzable_m2": 0.84,
+     "libre_m2": 0.84
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.24,
+     "libre_m2": 6.24
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.14,
+    "sala": 0.156,
+    "isla": 0.214,
+    "espera": 0.212
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 69384,
+   "mallas": 27,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.911
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 6,
+   "W": 5.7,
+   "D": 10.2,
+   "guardias": 33,
+   "objetos": 167,
+   "distintos": 74,
+   "hash": "12fc0972",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 16
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 6
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 49
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 41
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.2,
+     "libre_m2": 3.2
+    },
+    "sala": {
+     "alcanzable_m2": 13.47,
+     "libre_m2": 13.47
+    },
+    "isla": {
+     "alcanzable_m2": 9.38,
+     "libre_m2": 9.38
+    },
+    "espera": {
+     "alcanzable_m2": 0.94,
+     "libre_m2": 0.94
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 3.99,
+     "libre_m2": 3.99
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.115,
+    "sala": 0.125,
+    "isla": 0.247,
+    "espera": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 44026,
+   "mallas": 29,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 7,
+   "W": 6,
+   "D": 8.4,
+   "guardias": 25,
+   "objetos": 119,
+   "distintos": 69,
+   "hash": "e936ac5a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 29
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 2
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 16
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 21
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.83,
+     "libre_m2": 3.83
+    },
+    "sala": {
+     "alcanzable_m2": 10.2,
+     "libre_m2": 10.2
+    },
+    "isla": {
+     "alcanzable_m2": 6.06,
+     "libre_m2": 6.06
+    },
+    "espera": {
+     "alcanzable_m2": 0.62,
+     "libre_m2": 0.62
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 5.39,
+     "libre_m2": 5.39
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.143,
+    "sala": 0.162,
+    "isla": 0.32,
+    "espera": 0.195
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 31898,
+   "mallas": 28,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 8,
+   "W": 6.300000000000001,
+   "D": 11.1,
+   "guardias": 39,
+   "objetos": 232,
+   "distintos": 72,
+   "hash": "fd6948ba",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 97
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 41
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 4
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.08,
+     "libre_m2": 4.08
+    },
+    "sala": {
+     "alcanzable_m2": 15.5,
+     "libre_m2": 15.5
+    },
+    "isla": {
+     "alcanzable_m2": 10.03,
+     "libre_m2": 10.03
+    },
+    "espera": {
+     "alcanzable_m2": 1.02,
+     "libre_m2": 1.02
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.15,
+     "libre_m2": 6.15
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.177,
+    "sala": 0.201,
+    "isla": 0.36,
+    "espera": 0.227
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 66546,
+   "mallas": 28,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 9,
+   "W": 5.7,
+   "D": 8.4,
+   "guardias": 28,
+   "objetos": 104,
+   "distintos": 68,
+   "hash": "96098af",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 14
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 2
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 17
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.16,
+     "libre_m2": 3.16
+    },
+    "sala": {
+     "alcanzable_m2": 8.84,
+     "libre_m2": 8.84
+    },
+    "isla": {
+     "alcanzable_m2": 5.55,
+     "libre_m2": 5.55
+    },
+    "espera": {
+     "alcanzable_m2": 0.78,
+     "libre_m2": 0.78
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 4.12,
+     "libre_m2": 4.12
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.171,
+    "sala": 0.195,
+    "isla": 0.361,
+    "espera": 0.215
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 20860,
+   "mallas": 27,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 10,
+   "W": 5.7,
+   "D": 9.3,
+   "guardias": 30,
+   "objetos": 143,
+   "distintos": 73,
+   "hash": "11dda27c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 3
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 32
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 30
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.63,
+     "libre_m2": 3.63
+    },
+    "sala": {
+     "alcanzable_m2": 10.9,
+     "libre_m2": 10.9
+    },
+    "isla": {
+     "alcanzable_m2": 7.14,
+     "libre_m2": 7.14
+    },
+    "espera": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 4.09,
+     "libre_m2": 4.09
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.137,
+    "sala": 0.156,
+    "isla": 0.28,
+    "espera": 0.183
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 36030,
+   "mallas": 28,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 11,
+   "W": 6,
+   "D": 9,
+   "guardias": 28,
+   "objetos": 116,
+   "distintos": 73,
+   "hash": "5072f7d2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 24
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 2
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 16
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.57,
+     "libre_m2": 3.57
+    },
+    "sala": {
+     "alcanzable_m2": 12.66,
+     "libre_m2": 12.66
+    },
+    "isla": {
+     "alcanzable_m2": 8.49,
+     "libre_m2": 8.49
+    },
+    "espera": {
+     "alcanzable_m2": 0.9,
+     "libre_m2": 0.9
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 3.92,
+     "libre_m2": 3.92
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.124,
+    "sala": 0.141,
+    "isla": 0.289,
+    "espera": 0.181
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 28582,
+   "mallas": 28,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 12,
+   "W": 6.6000000000000005,
+   "D": 11.1,
+   "guardias": 38,
+   "objetos": 234,
+   "distintos": 74,
+   "hash": "f5a3069f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 30
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 96
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.36,
+     "libre_m2": 4.36
+    },
+    "sala": {
+     "alcanzable_m2": 16.84,
+     "libre_m2": 16.84
+    },
+    "isla": {
+     "alcanzable_m2": 11.37,
+     "libre_m2": 11.37
+    },
+    "espera": {
+     "alcanzable_m2": 1.06,
+     "libre_m2": 1.06
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.7,
+     "libre_m2": 6.7
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.129,
+    "sala": 0.108,
+    "isla": 0.148,
+    "espera": 0.117
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 67180,
+   "mallas": 27,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.927
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 13,
+   "W": 6.6000000000000005,
+   "D": 8.700000000000001,
+   "guardias": 29,
+   "objetos": 129,
+   "distintos": 69,
+   "hash": "9e9e3393",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 22
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 32
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.94,
+     "libre_m2": 3.94
+    },
+    "sala": {
+     "alcanzable_m2": 11.01,
+     "libre_m2": 11.01
+    },
+    "isla": {
+     "alcanzable_m2": 6.86,
+     "libre_m2": 6.86
+    },
+    "espera": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 7.18,
+     "libre_m2": 7.18
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.119,
+    "sala": 0.135,
+    "isla": 0.257,
+    "espera": 0.161
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 30960,
+   "mallas": 28,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.935
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 14,
+   "W": 6.6000000000000005,
+   "D": 10.8,
+   "guardias": 40,
+   "objetos": 228,
+   "distintos": 72,
+   "hash": "39b6bff9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 97
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 2.99,
+     "libre_m2": 2.99
+    },
+    "sala": {
+     "alcanzable_m2": 14.74,
+     "libre_m2": 14.74
+    },
+    "isla": {
+     "alcanzable_m2": 10.4,
+     "libre_m2": 10.4
+    },
+    "espera": {
+     "alcanzable_m2": 0.84,
+     "libre_m2": 0.84
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.33,
+     "libre_m2": 6.33
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.134,
+    "sala": 0.113,
+    "isla": 0.156,
+    "espera": 0.119
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 63884,
+   "mallas": 27,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.917
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 15,
+   "W": 5.7,
+   "D": 11.4,
+   "guardias": 35,
+   "objetos": 195,
+   "distintos": 70,
+   "hash": "7b44166f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 16
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 8
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 5
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 64
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 50
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.65,
+     "libre_m2": 3.65
+    },
+    "sala": {
+     "alcanzable_m2": 17.51,
+     "libre_m2": 17.51
+    },
+    "isla": {
+     "alcanzable_m2": 12.66,
+     "libre_m2": 12.66
+    },
+    "espera": {
+     "alcanzable_m2": 0.99,
+     "libre_m2": 0.99
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 5.01,
+     "libre_m2": 5.01
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.166,
+    "sala": 0.145,
+    "isla": 0.196,
+    "espera": 0.174
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 60432,
+   "mallas": 28,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 16,
+   "W": 6.6000000000000005,
+   "D": 9.6,
+   "guardias": 36,
+   "objetos": 187,
+   "distintos": 74,
+   "hash": "8740e97a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 29
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 8
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 3
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 64
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 30
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.85,
+     "libre_m2": 3.85
+    },
+    "sala": {
+     "alcanzable_m2": 11.61,
+     "libre_m2": 11.61
+    },
+    "isla": {
+     "alcanzable_m2": 7.4,
+     "libre_m2": 7.4
+    },
+    "espera": {
+     "alcanzable_m2": 1.01,
+     "libre_m2": 1.01
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 5.44,
+     "libre_m2": 5.44
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.107,
+    "sala": 0.121,
+    "isla": 0.254,
+    "espera": 0.18
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 53896,
+   "mallas": 27,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.904
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 17,
+   "W": 6.6000000000000005,
+   "D": 9,
+   "guardias": 29,
+   "objetos": 145,
+   "distintos": 76,
+   "hash": "728261b2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 31
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 32
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.99,
+     "libre_m2": 3.99
+    },
+    "sala": {
+     "alcanzable_m2": 11.98,
+     "libre_m2": 11.98
+    },
+    "isla": {
+     "alcanzable_m2": 7.65,
+     "libre_m2": 7.65
+    },
+    "espera": {
+     "alcanzable_m2": 1.12,
+     "libre_m2": 1.12
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.31,
+     "libre_m2": 6.31
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.185,
+    "sala": 0.203,
+    "isla": 0.314,
+    "espera": 0.244
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 38272,
+   "mallas": 28,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.935
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 18,
+   "W": 5.7,
+   "D": 9.9,
+   "guardias": 31,
+   "objetos": 131,
+   "distintos": 68,
+   "hash": "d254e041",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 14
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 3
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 32
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 30
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.07,
+     "libre_m2": 3.07
+    },
+    "sala": {
+     "alcanzable_m2": 13.76,
+     "libre_m2": 13.76
+    },
+    "isla": {
+     "alcanzable_m2": 10.09,
+     "libre_m2": 10.09
+    },
+    "espera": {
+     "alcanzable_m2": 1.06,
+     "libre_m2": 1.06
+    },
+    "mostrador": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 4.93,
+     "libre_m2": 4.93
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.119,
+    "sala": 0.135,
+    "isla": 0.247,
+    "espera": 0.167
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 33916,
+   "mallas": 27,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 19,
+   "W": 6.300000000000001,
+   "D": 10.2,
+   "guardias": 37,
+   "objetos": 215,
+   "distintos": 71,
+   "hash": "63f529c6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 24
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 0
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 3
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 97
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 30
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.26,
+     "libre_m2": 3.26
+    },
+    "sala": {
+     "alcanzable_m2": 10.38,
+     "libre_m2": 10.38
+    },
+    "isla": {
+     "alcanzable_m2": 5.76,
+     "libre_m2": 5.76
+    },
+    "espera": {
+     "alcanzable_m2": 0.89,
+     "libre_m2": 0.89
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 5.73,
+     "libre_m2": 5.73
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.182,
+    "sala": 0.204,
+    "isla": 0.277,
+    "espera": 0.233
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 60676,
+   "mallas": 27,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.996
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 20,
+   "W": 6.6000000000000005,
+   "D": 9.3,
+   "guardias": 35,
+   "objetos": 178,
+   "distintos": 73,
+   "hash": "329ae551",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 8
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 3
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 64
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 30
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.81,
+     "libre_m2": 3.81
+    },
+    "sala": {
+     "alcanzable_m2": 9.77,
+     "libre_m2": 9.77
+    },
+    "isla": {
+     "alcanzable_m2": 5.62,
+     "libre_m2": 5.62
+    },
+    "espera": {
+     "alcanzable_m2": 0.82,
+     "libre_m2": 0.82
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 7.18,
+     "libre_m2": 7.18
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.171,
+    "sala": 0.188,
+    "isla": 0.287,
+    "espera": 0.236
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 50324,
+   "mallas": 27,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.97
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 861,
+   "W": 6.300000000000001,
+   "D": 9,
+   "guardias": 26,
+   "objetos": 129,
+   "distintos": 69,
+   "hash": "ad5c5fe0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 4
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 2
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 33
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 20
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.06,
+     "libre_m2": 4.06
+    },
+    "sala": {
+     "alcanzable_m2": 11.16,
+     "libre_m2": 11.16
+    },
+    "isla": {
+     "alcanzable_m2": 6.64,
+     "libre_m2": 6.64
+    },
+    "espera": {
+     "alcanzable_m2": 1.01,
+     "libre_m2": 1.01
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.55,
+     "libre_m2": 6.55
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.145,
+    "sala": 0.166,
+    "isla": 0.329,
+    "espera": 0.202
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 33540,
+   "mallas": 27,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 997,
+   "W": 6,
+   "D": 10.2,
+   "guardias": 36,
+   "objetos": 180,
+   "distintos": 71,
+   "hash": "5932ffb6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 2
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 29
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 2
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 1
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 0
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 6
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 1
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 48
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.82,
+     "libre_m2": 3.82
+    },
+    "sala": {
+     "alcanzable_m2": 14.86,
+     "libre_m2": 14.86
+    },
+    "isla": {
+     "alcanzable_m2": 10.13,
+     "libre_m2": 10.13
+    },
+    "espera": {
+     "alcanzable_m2": 0.79,
+     "libre_m2": 0.79
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 3.97,
+     "libre_m2": 3.97
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.161,
+    "sala": 0.147,
+    "isla": 0.204,
+    "espera": 0.155
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 45236,
+   "mallas": 27,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "farmacia",
+   "tipologia": "farmacia",
+   "seed": 2748,
+   "W": 6.6000000000000005,
+   "D": 10.2,
+   "guardias": 39,
+   "objetos": 229,
+   "distintos": 75,
+   "hash": "84195b2f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "mostrador_farmacia",
+     "n": 4
+    },
+    {
+     "entrada": 1,
+     "obj": "monitor_pc_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 2,
+     "obj": "teclado_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "lector_codigo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "impresora_ticket",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "dosificador_gel_mostrador",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "mampara_metacrilato",
+     "n": 2
+    },
+    {
+     "entrada": 8,
+     "obj": "bandeja_cambio",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "bote_caramelos_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "expositor_mostrador",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "cesta_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pantalla_turno",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "regleta_led",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "estanteria_medicamentos",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "cruz_farmacia_pared",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "estanteria_medicamentos",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "armario_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "medicamento_analgesico|medicamento_antii",
+     "n": 23
+    },
+    {
+     "entrada": 20,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "cubeta_pedido|caja_carton",
+     "n": 3
+    },
+    {
+     "entrada": 25,
+     "obj": "mesa_rebotica",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "balanza_precision",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "mortero",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "frasco_laboratorio",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "cubeta_pedido",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "nevera_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 32,
+     "obj": "silla_madera",
+     "n": 0
+    },
+    {
+     "entrada": 33,
+     "obj": "plafon_pequeno",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "bascula_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "contenedor_envases",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "dispensador_gel_pie",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "cartel_horario",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "cartel_guardia",
+     "n": 1
+    },
+    {
+     "entrada": 41,
+     "obj": "lampara_panel_led",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "gondola_parafarmacia",
+     "n": 12
+    },
+    {
+     "entrada": 43,
+     "obj": "banco_espera",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "tensiometro_automatico",
+     "n": 1
+    },
+    {
+     "entrada": 45,
+     "obj": "silla_espera",
+     "n": 2
+    },
+    {
+     "entrada": 46,
+     "obj": "estanteria_parafarmacia_pared",
+     "n": 4
+    },
+    {
+     "entrada": 47,
+     "obj": "folletero_farmacia",
+     "n": 1
+    },
+    {
+     "entrada": 48,
+     "obj": "pantalla_promo",
+     "n": 1
+    },
+    {
+     "entrada": 49,
+     "obj": "expendedor_turno",
+     "n": 1
+    },
+    {
+     "entrada": 50,
+     "obj": "para_agua_termal|para_mascarilla_facial|",
+     "n": 96
+    },
+    {
+     "entrada": 51,
+     "obj": "para_crema_facial|para_crema_manos|para_",
+     "n": 40
+    },
+    {
+     "entrada": 52,
+     "obj": "lampara_panel_led",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.95,
+     "libre_m2": 3.95
+    },
+    "sala": {
+     "alcanzable_m2": 11.57,
+     "libre_m2": 11.57
+    },
+    "isla": {
+     "alcanzable_m2": 7.13,
+     "libre_m2": 7.13
+    },
+    "espera": {
+     "alcanzable_m2": 0.95,
+     "libre_m2": 0.95
+    },
+    "mostrador": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "trasmostrador": {
+     "alcanzable_m2": 6.86,
+     "libre_m2": 6.86
+    },
+    "rebotica": {
+     "alcanzable_m2": 0.6,
+     "libre_m2": 0.6
+    }
+   },
+   "luz": {
+    "entrada": 0.144,
+    "sala": 0.122,
+    "isla": 0.17,
+    "espera": 0.126
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 69566,
+   "mallas": 28,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.996
+  }
+ ]
+}

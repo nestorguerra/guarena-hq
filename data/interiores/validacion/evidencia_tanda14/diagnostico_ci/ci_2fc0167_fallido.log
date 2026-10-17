@@ -1,0 +1,15 @@
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	﻿2026-10-17T22:38:30.6600502Z ##[group]Run python3 tools/interiores/validar.py --casas 30 --exigir-todas
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6601150Z [36;1mpython3 tools/interiores/validar.py --casas 30 --exigir-todas[0m
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6767330Z shell: /usr/bin/bash -e {0}
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6767669Z env:
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6768014Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6768579Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6769164Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6769653Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6770645Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6771171Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:30.6771581Z ##[endgroup]
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:38.8241652Z cobertura: 177 / 177 habitaciones por kit
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:38.8243918Z casas · 30 construidas, 177 estancias por kit, 1 con errores
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:38.8244519Z     1000 cazador rustico ['rendimiento: montaje 4229.5 ms > 1500']
+validate_interiors	Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)	2026-10-17T22:38:38.8350238Z ##[error]Process completed with exit code 1.

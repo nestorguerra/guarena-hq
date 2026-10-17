@@ -1,0 +1,934 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Peluquería",
+ "nota": "La peluquería de un pueblo de las Vegas Altas: la sala de espera y la recepción junto a la puerta, los puestos de peinado con su espejo y su sillón a lo largo de las dos paredes, los lavacabezas y los secadores al fondo y la trastienda de las toallas y los tintes tras un tabique. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.7,
+   7.2
+  ],
+  "fondo": [
+   9.0,
+   11.4
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-1.5",
+  "z0": "1.7",
+  "z1": "3.0",
+  "zs": "3.9",
+  "zl": "D-2.8",
+  "xt": "W/2-2.1",
+  "zt": "D-2.5"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f1e9e4",
+ "suelo": "herringbone_parquet",
+ "suelo_color": "#cdbfae",
+ "puntos": {
+  "dependiente": [
+   "xc+0.6",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.85",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir cita o pagar en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.5"
+   ]
+  },
+  {
+   "id": "espera",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.5",
+    "-W/2+2.0",
+    "3.7"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "tras_caja",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.2"
+   ]
+  },
+  {
+   "id": "est_w",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "zs",
+    "-W/2+1.7",
+    "zl"
+   ]
+  },
+  {
+   "id": "est_e",
+   "publica": true,
+   "rect": [
+    "W/2-1.7",
+    "zs",
+    "W/2",
+    "zl"
+   ]
+  },
+  {
+   "id": "centro",
+   "publica": true,
+   "rect": [
+    "-W/2+1.8",
+    "3.7",
+    "W/2-1.8",
+    "zl"
+   ]
+  },
+  {
+   "id": "lavado",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "zl",
+    "xt",
+    "D"
+   ]
+  },
+  {
+   "id": "pasillo_fondo",
+   "publica": true,
+   "rect": [
+    "xt",
+    "zl",
+    "W/2",
+    "zt"
+   ]
+  },
+  {
+   "id": "trastienda",
+   "publica": false,
+   "rect": [
+    "xt",
+    "zt",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xt",
+    "zt"
+   ],
+   "a": [
+    "xt",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "xt",
+    "zt"
+   ],
+   "a": [
+    "W/2",
+    "zt"
+   ],
+   "puerta": [
+    0.5,
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pagar o pedir cita: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "pel_mostrador_caja",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pel_perfumes_vitrina",
+   "en": [
+    "pel_mostrador_caja"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "perfume"
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "pel_mostrador_caja"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pel_agenda",
+   "en": [
+    "pel_mostrador_caja"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "pel_mostrador_caja"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "variantes": [
+    "bote_propinas",
+    "tarjetero",
+    "bote_caramelos"
+   ],
+   "en": [
+    "pel_mostrador_caja"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "contra_pared",
+   "obj": "pel_expositor_pared",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "sobre",
+   "variantes": [
+    "pel_prod_champu_nutritivo",
+    "pel_prod_champu_rizos",
+    "pel_prod_champu_caspa",
+    "pel_prod_mascarilla_capilar",
+    "pel_prod_serum_puntas",
+    "pel_prod_laca_fijacion",
+    "pel_prod_espuma_volumen",
+    "pel_prod_gel_fijador",
+    "pel_prod_cera_modeladora",
+    "pel_prod_tinte_caja_castano",
+    "pel_prod_tinte_caja_rubio",
+    "pel_prod_tinte_caja_rojo"
+   ],
+   "en": [
+    "pel_expositor_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "pared",
+   "obj": "pel_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "pared",
+   "obj": "pel_cartel_precios",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tras_caja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "espera",
+   "regla": "contra_pared",
+   "obj": "pel_sofa_espera",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "suelo_libre",
+   "obj": "pel_mesa_revistas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "sobre",
+   "variantes": [
+    "revista",
+    "periodico",
+    "pel_botes_pinzas"
+   ],
+   "en": [
+    "pel_mesa_revistas"
+   ],
+   "por_soporte": [
+    1,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "pared",
+   "obj": "pel_revistero_pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "pared",
+   "variantes": [
+    "pel_cartel_peinados_a",
+    "pel_cartel_peinados_b"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "espera",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "perchero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "est_w",
+   "regla": "contra_pared",
+   "variantes": [
+    "pel_estacion_blanca",
+    "pel_estacion_madera",
+    "pel_estacion_negra"
+   ],
+   "pared": "W",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "est_w",
+   "regla": "fila",
+   "obj": "pel_sillon_corte_negro",
+   "eje": "z",
+   "linea": [
+    "-W/2+1.15",
+    "zs+0.48",
+    "zs+1.5"
+   ],
+   "cada": 0.93,
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "est_w",
+   "regla": "fila",
+   "obj": "pel_sillon_corte_rosa",
+   "eje": "z",
+   "linea": [
+    "-W/2+1.15",
+    "zs+2.34",
+    "zl-0.3"
+   ],
+   "cada": 0.93,
+   "mira": "-x"
+  },
+  {
+   "zona": "est_e",
+   "regla": "contra_pared",
+   "variantes": [
+    "pel_estacion_negra",
+    "pel_estacion_blanca",
+    "pel_estacion_madera"
+   ],
+   "pared": "E",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "est_e",
+   "regla": "fila",
+   "obj": "pel_sillon_corte_blanco",
+   "eje": "z",
+   "linea": [
+    "W/2-1.15",
+    "zs+0.48",
+    "zs+1.5"
+   ],
+   "cada": 0.93,
+   "mira": "+x",
+   "obligatorio": true
+  },
+  {
+   "zona": "est_e",
+   "regla": "fila",
+   "obj": "pel_sillon_corte_negro",
+   "eje": "z",
+   "linea": [
+    "W/2-1.15",
+    "zs+2.34",
+    "zl-0.3"
+   ],
+   "cada": 0.93,
+   "mira": "+x"
+  },
+  {
+   "zona": "est_w",
+   "regla": "sobre",
+   "variantes": [
+    "pel_secador_mano",
+    "pel_plancha_pelo",
+    "pel_cepillo_redondo",
+    "pel_peine_cola",
+    "pel_tijeras_estuche",
+    "pel_maquinilla",
+    "pel_champu_rosa",
+    "pel_laca",
+    "pel_pulverizador",
+    "pel_botes_pinzas",
+    "pel_rulos_bandeja"
+   ],
+   "en": [
+    "pel_estacion_blanca",
+    "pel_estacion_madera",
+    "pel_estacion_negra"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "est_e",
+   "regla": "sobre",
+   "variantes": [
+    "pel_secador_mano",
+    "pel_plancha_pelo",
+    "pel_cepillo_redondo",
+    "pel_peine_cola",
+    "pel_tijeras_estuche",
+    "pel_maquinilla",
+    "pel_acondicionador",
+    "pel_laca",
+    "pel_pulverizador",
+    "pel_botes_pinzas",
+    "pel_champu_verde"
+   ],
+   "en": [
+    "pel_estacion_blanca",
+    "pel_estacion_madera",
+    "pel_estacion_negra"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pel_carrito_blanco",
+    "pel_carrito_rosa"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "sobre",
+   "variantes": [
+    "pel_bol_tinte",
+    "pel_tubo_tinte",
+    "pel_capa_corte",
+    "pel_toallas_dobladas",
+    "pel_peine_cola",
+    "pel_tijeras_estuche",
+    "pel_pulverizador"
+   ],
+   "en": [
+    "pel_carrito_blanco",
+    "pel_carrito_rosa"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pel_secador_casco_crema",
+    "pel_secador_casco_rosa"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "lavado",
+   "regla": "contra_pared",
+   "variantes": [
+    "pel_lavacabezas_negro",
+    "pel_lavacabezas_rosa"
+   ],
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "lavado",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "lavado",
+   "regla": "sobre",
+   "variantes": [
+    "pel_toallas_dobladas",
+    "pel_capa_corte",
+    "pel_bol_tinte",
+    "pel_botes_pinzas",
+    "pel_rulos_bandeja",
+    "pel_acondicionador",
+    "pel_champu_verde",
+    "pel_champu_rosa"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.85
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "lavado",
+   "regla": "esquina",
+   "obj": "pel_cesto_ropa",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "lavado",
+   "regla": "esquina",
+   "variantes": [
+    "fregona_cubo",
+    "escoba"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pasillo_fondo",
+   "regla": "pared",
+   "obj": "pel_calentador_toallas",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pasillo_fondo",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trastienda",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trastienda",
+   "regla": "sobre",
+   "variantes": [
+    "pel_caja_tinte",
+    "pel_bidon_oxidante",
+    "caja_carton",
+    "pel_toallas_dobladas"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.85
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trastienda",
+   "regla": "suelo_libre",
+   "variantes": [
+    "pel_esterilizador",
+    "pel_bidon_oxidante"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "trastienda",
+   "regla": "esquina",
+   "obj": "pel_cesto_ropa",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trastienda",
+   "regla": "pared",
+   "obj": "lavabo",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.12,
+    0.15
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3500,
+   4200
+  ],
+  "dia": {
+   "intensidad": 0.85
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Tu-Fr 09:30-13:30,16:30-20:00; Sa 09:00-14:00",
+  "vida": [
+   "pelo recién cortado en el suelo",
+   "una señora bajo el secador",
+   "las revistas de la sala de espera",
+   "toallas calientes"
+  ],
+  "cerrado": "persiana bajada, los espejos apagados",
+  "clientela": {
+   "maximo": 4,
+   "horas": [
+    [
+     9,
+     13,
+     0.5
+    ],
+    [
+     16,
+     20,
+     0.55
+    ]
+   ],
+   "frases": [
+    "Solo las puntas, que me las dejo largas.",
+    "A ver si me arreglas esto antes de la boda del sábado.",
+    "Qué calor hace hoy, ¿verdad?",
+    "Mi hija me tiene dicho que me tiña de caoba.",
+    "No me lo cortes mucho, que luego tarda en crecer.",
+    "¿Has visto lo que ha subido la luz?"
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Cafe Tortoni Peluqueria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Cafe_Tortoni_Peluqueria.jpg",
+   "autor": "Ramon Corvera",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Peluquería Francesa.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Peluquer%C3%ADa_Francesa.JPG",
+   "autor": "Bruno Marambio Márquez",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Xela, Guatemala Peluqueria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Xela,_Guatemala_Peluqueria.jpg",
+   "autor": "Gamdrup",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "175 The Barber Shop, costa de la Pols 5 (Palma).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:175_The_Barber_Shop,_costa_de_la_Pols_5_(Palma).jpg",
+   "autor": "Enric",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Barber Shop - Playa del Carmen, Mexico - August 17, 2014.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Barber_Shop_-_Playa_del_Carmen,_Mexico_-_August_17,_2014.jpg",
+   "autor": "Giorgio Galeotti",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Barber shop Porto.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Barber_shop_Porto.jpg",
+   "autor": "Ramón Peco",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Barber shop in jakarta.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Barber_shop_in_jakarta.jpg",
+   "autor": "Akhlispurnomo",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Interior of a barber shop in Mandaue City (04-23-2023).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_a_barber_shop_in_Mandaue_City_(04-23-2023).jpg",
+   "autor": "PaulGorduiz106",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "The Village Barber Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:The_Village_Barber_Interior.jpg",
+   "autor": "Tessa Bury",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Village Barber Cutting Station.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Village_Barber_Cutting_Station.jpg",
+   "autor": "Tessa Bury",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Ze Barber, Thames Shopping, Newton Aycliffe (25th November 2025).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Ze_Barber,_Thames_Shopping,_Newton_Aycliffe_(25th_November_2025).jpg",
+   "autor": "Mtaylor848",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Barber shop (4682858271).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Barber_shop_(4682858271).jpg",
+   "autor": "jimmyweee",
+   "licencia": "CC BY 2.0"
+  }
+ ]
+}

@@ -1,0 +1,826 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Informática y telefonía",
+ "nota": "La tienda de informática y móviles de un pueblo de las Vegas Altas: el mostrador con las tarjetas SIM y los teléfonos junto a la puerta, mesas con portátiles y móviles de prueba, un puesto de ordenador, estanterías y paneles de accesorios (fundas, cables, auriculares, cargadores) y, al fondo a la derecha, el taller de reparaciones tras un tabique. Marcas inventadas. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.7,
+   7.2
+  ],
+  "fondo": [
+   8.7,
+   10.8
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-1.6",
+  "z0": "1.6",
+  "z1": "4.1",
+  "zr": "D-3.0",
+  "xr": "W/2-2.7"
+ },
+ "paso_libre": 0.9,
+ "pared": "#eef0f2",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#c6c8cc",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.95",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Preguntar por un móvil o un arreglo en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "tras",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "1.3",
+    "W/2",
+    "4.4"
+   ]
+  },
+  {
+   "id": "pared_w",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "-W/2+0.55",
+    "zr"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2+0.55",
+    "1.3",
+    "xc-1.4",
+    "zr"
+   ]
+  },
+  {
+   "id": "sala_e",
+   "publica": true,
+   "rect": [
+    "xc-1.4",
+    "4.4",
+    "W/2",
+    "zr"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": true,
+   "rect": [
+    "-W/2+0.55",
+    "zr",
+    "xr",
+    "D"
+   ]
+  },
+  {
+   "id": "reparacion",
+   "publica": false,
+   "rect": [
+    "xr",
+    "zr",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "xr",
+    "zr"
+   ],
+   "a": [
+    "xr",
+    "D"
+   ],
+   "puerta": [
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xr",
+    "zr"
+   ],
+   "a": [
+    "W/2",
+    "zr"
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.4",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para preguntar en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "inf_mostrador",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "inf_expositor_moviles",
+   "en": [
+    "inf_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "inf_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "inf_exp_sim",
+   "en": [
+    "inf_mostrador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "inf_pendrives_exp",
+    "datafono",
+    "inf_router",
+    "ele_catalogo",
+    "inf_disco_duro"
+   ],
+   "en": [
+    "inf_mostrador"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "contra_pared",
+   "obj": "inf_estanteria_accesorios",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "sobre",
+   "variantes": [
+    "inf_caja_pc",
+    "inf_router",
+    "inf_disco_duro",
+    "inf_pendrives_exp",
+    "inf_movil_negro",
+    "inf_movil_azul"
+   ],
+   "en": [
+    "inf_estanteria_accesorios"
+   ],
+   "relleno": [
+    0.5,
+    0.8
+   ],
+   "todas": true
+  },
+  {
+   "zona": "tras",
+   "regla": "pared",
+   "obj": "inf_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tras",
+   "regla": "suelo_libre",
+   "obj": "silla_oficina",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_w",
+   "regla": "contra_pared",
+   "obj": "inf_estanteria_accesorios",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_w",
+   "regla": "sobre",
+   "variantes": [
+    "inf_acc_auriculares_cable",
+    "inf_acc_cargador_pared",
+    "inf_acc_radio_bolsillo",
+    "inf_acc_linterna_led",
+    "inf_acc_lamparita_usb",
+    "inf_acc_auriculares_bt",
+    "inf_acc_cargador_coche",
+    "inf_acc_fundas_negras",
+    "inf_acc_fundas_color",
+    "inf_acc_protectores_pantalla",
+    "inf_acc_cables_usb",
+    "inf_acc_bateria_externa",
+    "inf_acc_raton",
+    "inf_acc_alfombrilla",
+    "inf_acc_webcam",
+    "inf_acc_memoria_sd",
+    "inf_acc_soporte_movil"
+   ],
+   "en": [
+    "inf_estanteria_accesorios"
+   ],
+   "relleno": [
+    0.9,
+    1.0
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "auriculares",
+    "cargador",
+    "radio",
+    "linterna",
+    "lamparita"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "inf_puesto_pc_exp",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "inf_teclado_raton",
+    "inf_router",
+    "inf_disco_duro"
+   ],
+   "en": [
+    "inf_puesto_pc_exp"
+   ],
+   "por_soporte": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "inf_mesa_exposicion",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "inf_portatil_13",
+    "inf_portatil_15",
+    "inf_portatil_17",
+    "inf_monitor_22",
+    "inf_todo_en_uno"
+   ],
+   "en": [
+    "inf_mesa_exposicion"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "inf_impresora",
+    "inf_teclado_raton",
+    "inf_router",
+    "inf_disco_duro",
+    "inf_monitor_24",
+    "inf_monitor_27"
+   ],
+   "en": [
+    "inf_mesa_exposicion"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "inf_mesa_moviles",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "inf_movil_negro",
+    "inf_movil_azul",
+    "inf_movil_blanco",
+    "inf_movil_rojo",
+    "inf_movil_verde",
+    "inf_movil_plata"
+   ],
+   "en": [
+    "inf_mesa_moviles"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "inf_pendrives_exp",
+    "inf_exp_sim"
+   ],
+   "en": [
+    "inf_mesa_moviles"
+   ],
+   "por_soporte": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "taburete_alto",
+    "silla_visita"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala_e",
+   "regla": "pared",
+   "variantes": [
+    "inf_panel_fundas",
+    "inf_panel_cables",
+    "inf_panel_auriculares"
+   ],
+   "pared": "E",
+   "cada": 1.35,
+   "maximo": 3,
+   "todas": true
+  },
+  {
+   "zona": "sala_e",
+   "regla": "suelo_libre",
+   "variantes": [
+    "inf_torre_pc",
+    "inf_caja_portatil"
+   ],
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala_e",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "variantes": [
+    "inf_cartel_movil",
+    "inf_cartel_portatil",
+    "inf_pantalla_precios"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "variantes": [
+    "inf_panel_cables",
+    "inf_panel_fundas",
+    "inf_panel_auriculares"
+   ],
+   "pared": "N",
+   "cada": 1.35,
+   "maximo": 2,
+   "todas": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "inf_pantalla_pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "extintor_super",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "reparacion",
+   "regla": "contra_pared",
+   "obj": "inf_banco_reparacion",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "sobre",
+   "variantes": [
+    "inf_soldador",
+    "inf_destornilladores",
+    "inf_placa_madre",
+    "inf_movil_abierto",
+    "inf_portatil_13"
+   ],
+   "en": [
+    "inf_banco_reparacion"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "esquina",
+   "obj": "inf_taburete_reparacion",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "contra_pared",
+   "obj": "inf_estanteria_piezas",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "sobre",
+   "variantes": [
+    "inf_caja_pc",
+    "caja_carton",
+    "inf_router",
+    "inf_impresora",
+    "inf_disco_duro",
+    "inf_movil_negro"
+   ],
+   "en": [
+    "inf_estanteria_piezas"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "suelo_libre",
+   "variantes": [
+    "inf_cajonera_piezas",
+    "inf_caja_portatil",
+    "inf_torre_pc"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "reparacion",
+   "regla": "sobre",
+   "variantes": [
+    "inf_destornilladores",
+    "inf_placa_madre"
+   ],
+   "en": [
+    "inf_cajonera_piezas"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "reparacion",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.11,
+    0.14
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   5,
+   9
+  ],
+  "temperatura_k": [
+   4000,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 10:00-14:00,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "un portátil abierto para probar",
+   "el móvil de un cliente en reparación",
+   "los cables enrollados en el panel",
+   "la pantalla de ofertas"
+  ],
+  "cerrado": "persiana bajada, las pantallas apagadas"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "MekiaMarkt (Tienda de Electrónica, Informática y Electrodomésticos).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MekiaMarkt_(Tienda_de_Electr%C3%B3nica,_Inform%C3%A1tica_y_Electrodom%C3%A9sticos).jpg",
+   "autor": "MaikayFernando",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Tienda de Informática en Almería.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Tienda_de_Inform%C3%A1tica_en_Almer%C3%ADa.jpg",
+   "autor": "IgnacioBenavides",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Tienda de informática en Zaragoza.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Tienda_de_inform%C3%A1tica_en_Zaragoza.jpg",
+   "autor": "ÁngelLopezLamana",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Veljekset Keskinen - computer parts.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Veljekset_Keskinen_-_computer_parts.jpg",
+   "autor": "Tiia Monto",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2024-05-25 Mobile phone shelves, Asda, Inverness.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2024-05-25_Mobile_phone_shelves,_Asda,_Inverness.jpg",
+   "autor": "Xeverything11",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Mobile phone shop in Singapore.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mobile_phone_shop_in_Singapore.jpg",
+   "autor": "Maksym Kozlenko",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK 灣仔電腦城 Wanchai Computer Centre mall interior shop night May 2016 DSC 001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_%E7%81%A3%E4%BB%94%E9%9B%BB%E8%85%A6%E5%9F%8E_Wanchai_Computer_Centre_mall_interior_shop_night_May_2016_DSC_001.jpg",
+   "autor": "Tuna Wemns",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK 灣仔電腦城 Wanchai Computer Centre mall interior shop night May 2016 DSC 002.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_%E7%81%A3%E4%BB%94%E9%9B%BB%E8%85%A6%E5%9F%8E_Wanchai_Computer_Centre_mall_interior_shop_night_May_2016_DSC_002.jpg",
+   "autor": "Tuna Wemns",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK CWB 皇室堡 Windsor House computer mall corridor 01.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_CWB_%E7%9A%87%E5%AE%A4%E5%A0%A1_Windsor_House_computer_mall_corridor_01.JPG",
+   "autor": "Mindizrahs",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "HK CWB 皇室堡 Windsor House computer mall corridor 02.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_CWB_%E7%9A%87%E5%AE%A4%E5%A0%A1_Windsor_House_computer_mall_corridor_02.JPG",
+   "autor": "Mindizrahs",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "JiangmenComputerArcade.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:JiangmenComputerArcade.jpg",
+   "autor": "ZHModdlygTalk+",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Mobile telephones for sale at The Phone House, Winschoten (2018).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mobile_telephones_for_sale_at_The_Phone_House,_Winschoten_(2018).jpg",
+   "autor": "Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons.(Want to use this image?)",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

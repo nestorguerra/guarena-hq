@@ -1,0 +1,58 @@
+{
+ "estado": "PASS",
+ "url": "http://localhost:8920/dist/test.html?estilo=plastilina",
+ "alcance": "selector real, recompensa y recarga; residentes retirados",
+ "errores": [],
+ "recogida": {
+  "acciones": [
+   {
+    "id": "joyero",
+    "etiqueta": "Coger: joyero con joyas <small>(≈ 165 €)</small>",
+    "antes": {
+     "dinero": 321,
+     "mochila": 0
+    },
+    "despues": {
+     "dinero": 321,
+     "mochila": 1
+    },
+    "malla_oculta": true
+   },
+   {
+    "id": "lata",
+    "etiqueta": "Coger: lata de galletas con dinero",
+    "antes": {
+     "dinero": 321,
+     "mochila": 1
+    },
+    "despues": {
+     "dinero": 629,
+     "mochila": 1
+    },
+    "malla_oculta": true
+   }
+  ],
+  "dinero": 629,
+  "mochila": [
+   {
+    "id": "joyero",
+    "name": "Joyero con joyas",
+    "value": 201
+   }
+  ],
+  "errores": []
+ },
+ "recarga": {
+  "dinero": 629,
+  "mochila": [
+   {
+    "id": "joyero",
+    "name": "Joyero con joyas",
+    "value": 201
+   }
+  ],
+  "evo": "testigo_evo",
+  "fija": "testigo_fija",
+  "errores": []
+ }
+}

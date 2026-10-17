@@ -1,0 +1,325 @@
+{
+  "scope": "actual main/diagnosticar with fake PrivateTab/CDP; no browser or GPU; no claim about CI failure cause",
+  "sourceSHA": "121da2a38f0ca43c64e1d8e055d1a737b412577006eb2bfd27d35af839a0fcec",
+  "cases": [
+    {
+      "name": "success",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "close"
+      ],
+      "exit": 0,
+      "state": "PASS",
+      "errors": [],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: PASS \u00b7 dos recogidas, recompensa y recarga\n{\"renderizado\": {\"calidad\": \"alta\", \"automatica\": false, \"dpr\": 1, \"tamano\": [1280, 720], \"renderer\": null}, \"cinematica\": \"acelerada con LISTO\"}\n"
+    },
+    {
+      "name": "initial_failure",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: original-initial"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque inicial\", \"errores\": [\"RuntimeError: original-initial\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "pickup_failure",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: original-pickup"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"recogida\", \"errores\": [\"RuntimeError: original-pickup\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "reload_failure",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: original-reload"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque tras recarga\", \"errores\": [\"RuntimeError: original-reload\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "diagnostic_failure",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: original-initial"
+      ],
+      "diagnosticError": "RuntimeError: diagnostic-only",
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque inicial\", \"errores\": [\"RuntimeError: original-initial\"], \"diagnostico_error\": \"RuntimeError: diagnostic-only\"}\n"
+    },
+    {
+      "name": "close_failure_after_success",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: close-only"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"completado\", \"errores\": [\"RuntimeError: close-only\"]}\n"
+    },
+    {
+      "name": "baja_success",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "close"
+      ],
+      "exit": 0,
+      "state": "PASS",
+      "errors": [],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: PASS \u00b7 dos recogidas, recompensa y recarga\n{\"renderizado\": {\"calidad\": \"baja\", \"automatica\": false, \"dpr\": 1, \"tamano\": [1280, 720], \"renderer\": null}, \"cinematica\": \"acelerada con LISTO\"}\n"
+    },
+    {
+      "name": "wrong_initial_profile",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: No se ha aplicado el perfil manual solicitado"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque inicial\", \"errores\": [\"RuntimeError: No se ha aplicado el perfil manual solicitado\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "wrong_reloaded_profile",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: No se conserva el perfil manual al recargar"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque tras recarga\", \"errores\": [\"RuntimeError: No se conserva el perfil manual al recargar\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "auto_initial",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: No se ha aplicado el perfil manual solicitado"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque inicial\", \"errores\": [\"RuntimeError: No se ha aplicado el perfil manual solicitado\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "auto_reloaded",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: No se conserva el perfil manual al recargar"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque tras recarga\", \"errores\": [\"RuntimeError: No se conserva el perfil manual al recargar\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "resume_success",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "introguard1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "introguard2",
+        "close"
+      ],
+      "exit": 0,
+      "state": "PASS",
+      "errors": [],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: PASS \u00b7 dos recogidas, recompensa y recarga\n{\"renderizado\": {\"calidad\": \"baja\", \"automatica\": false, \"dpr\": 1, \"tamano\": [1280, 720], \"renderer\": null}, \"cinematica\": \"omitida por reanudaci\u00f3n de pruebas\"}\n"
+    },
+    {
+      "name": "resume_initial_intro",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "introguard1",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: La reanudaci\u00f3n solicitada sigue mostrando una cinem\u00e1tica"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque inicial\", \"errores\": [\"RuntimeError: La reanudaci\u00f3n solicitada sigue mostrando una cinem\u00e1tica\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    },
+    {
+      "name": "resume_reload_intro",
+      "pass": true,
+      "events": [
+        "enter",
+        "Emulation.setDeviceMetricsOverride",
+        "Page.addScriptToEvaluateOnNewDocument",
+        "Page.navigate",
+        "ready1",
+        "render1",
+        "introguard1",
+        "pickup",
+        "Page.reload",
+        "ready2",
+        "render2",
+        "introguard2",
+        "diagnose",
+        "close"
+      ],
+      "exit": 1,
+      "state": "FAIL",
+      "errors": [
+        "RuntimeError: La recarga no conserva el arranque sin cinem\u00e1tica"
+      ],
+      "diagnosticError": null,
+      "stdout": "Bot\u00edn: FAIL \u00b7 dos recogidas, recompensa y recarga\n{\"etapa\": \"arranque tras recarga\", \"errores\": [\"RuntimeError: La recarga no conserva el arranque sin cinem\u00e1tica\"], \"diagnostico\": {\"documento\": \"complete\", \"estado\": \"loading\", \"errores\": [\"test-only\"]}}\n"
+    }
+  ]
+}

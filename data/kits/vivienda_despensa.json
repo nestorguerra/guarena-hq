@@ -1,0 +1,454 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Despensa doméstica",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   1.9,
+   4.8
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "grupo_pared": "guardado_despensa"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "aparador",
+   "de": "va_estante",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "grupo_pared": "guardado_despensa"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_estante_alto",
+   "de": "aparador",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 8,
+   "buscar_refs": true,
+   "si_no": false,
+   "grupo_pared": "guardado_despensa"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_alacena",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 12,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_estante_alto",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 18,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_tinaja",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_cajas_apiladas",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 9,
+   "area_max": 14,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_cajas_apiladas",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_alimento_garrafa_aceite",
+    "va_alimento_vinagre",
+    "va_alimento_miel",
+    "va_alimento_pimientos_piquillo"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "perfil": [
+    "agricultor",
+    "cazador"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_alimento_pan_molde",
+    "va_alimento_galletas_maria",
+    "va_alimento_cafe_molido",
+    "va_alimento_mermelada",
+    "va_alimento_leche_semi"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "perfil": [
+    "!agricultor",
+    "!cazador"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_reserva_0",
+    "va_reserva_1",
+    "va_reserva_2",
+    "va_reserva_3",
+    "va_reserva_4",
+    "va_reserva_5",
+    "va_conserva_0",
+    "va_conserva_1",
+    "va_conserva_2",
+    "va_alimento_atun",
+    "va_alimento_sardinillas",
+    "va_alimento_mejillones",
+    "va_alimento_tomate_frito",
+    "va_alimento_maiz",
+    "va_alimento_judias_verdes",
+    "va_alimento_garbanzos_bote",
+    "va_alimento_pimientos_piquillo",
+    "va_alimento_aceitunas",
+    "va_alimento_pepinillos",
+    "va_alimento_mermelada",
+    "va_alimento_miel",
+    "va_alimento_crema_cacao",
+    "va_alimento_melocoton_almibar",
+    "va_alimento_arroz",
+    "va_alimento_arroz_integral",
+    "va_alimento_macarrones",
+    "va_alimento_lentejas",
+    "va_alimento_garbanzos_seco",
+    "va_alimento_harina",
+    "va_alimento_azucar",
+    "va_alimento_sal",
+    "va_alimento_cafe_molido",
+    "va_alimento_infusiones",
+    "va_alimento_galletas_maria",
+    "va_alimento_galletas_chocolate",
+    "va_alimento_galletas_crackers",
+    "va_alimento_pan_molde",
+    "va_alimento_chocolate_tabletas",
+    "va_alimento_magdalenas",
+    "va_alimento_perrunillas",
+    "va_alimento_chicles",
+    "va_alimento_caramelos",
+    "va_alimento_agua_gas",
+    "va_alimento_cerveza_pack",
+    "va_alimento_zumo_naranja",
+    "va_alimento_zumo_melocoton",
+    "va_alimento_leche_entera",
+    "va_alimento_leche_semi",
+    "va_alimento_leche_desnatada"
+   ],
+   "en": [
+    "va_estante"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_reserva_0",
+    "va_reserva_1",
+    "va_reserva_2",
+    "va_reserva_3",
+    "va_reserva_4",
+    "va_reserva_5",
+    "va_conserva_0",
+    "va_conserva_1",
+    "va_conserva_2",
+    "va_alimento_atun",
+    "va_alimento_sardinillas",
+    "va_alimento_mejillones",
+    "va_alimento_tomate_frito",
+    "va_alimento_maiz",
+    "va_alimento_judias_verdes",
+    "va_alimento_garbanzos_bote",
+    "va_alimento_pimientos_piquillo",
+    "va_alimento_aceitunas",
+    "va_alimento_pepinillos",
+    "va_alimento_mermelada",
+    "va_alimento_miel",
+    "va_alimento_crema_cacao",
+    "va_alimento_melocoton_almibar",
+    "va_alimento_aceite_oliva",
+    "va_alimento_aceite_girasol",
+    "va_alimento_garrafa_aceite",
+    "va_alimento_vinagre",
+    "va_alimento_arroz",
+    "va_alimento_arroz_integral",
+    "va_alimento_espaguetis",
+    "va_alimento_macarrones",
+    "va_alimento_lentejas",
+    "va_alimento_garbanzos_seco",
+    "va_alimento_harina",
+    "va_alimento_azucar",
+    "va_alimento_sal",
+    "va_alimento_cafe_molido",
+    "va_alimento_infusiones",
+    "va_alimento_galletas_maria",
+    "va_alimento_galletas_chocolate",
+    "va_alimento_galletas_crackers",
+    "va_alimento_cereales_a",
+    "va_alimento_cereales_b",
+    "va_alimento_cereales_c",
+    "va_alimento_pan_molde",
+    "va_alimento_snack_patatas",
+    "va_alimento_snack_aperitivos",
+    "va_alimento_chocolate_tabletas",
+    "va_alimento_magdalenas",
+    "va_alimento_perrunillas",
+    "va_alimento_chicles",
+    "va_alimento_caramelos",
+    "va_alimento_agua_15",
+    "va_alimento_agua_gas",
+    "va_alimento_cola_15",
+    "va_alimento_naranja_15",
+    "va_alimento_limon_15",
+    "va_alimento_cerveza_pack",
+    "va_alimento_vino_tinto",
+    "va_alimento_vino_blanco",
+    "va_alimento_vino_rosado",
+    "va_alimento_zumo_naranja",
+    "va_alimento_zumo_melocoton",
+    "va_alimento_leche_entera",
+    "va_alimento_leche_semi",
+    "va_alimento_leche_desnatada"
+   ],
+   "en": [
+    "va_alacena",
+    "va_estante_alto"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_plafon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Built-in pantry.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Built-in_pantry.jpg",
+   "autor": "Downtowngal",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Canned Goods In The Hartzler Home In Alpha, Minnesota (6815824604).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Canned_Goods_In_The_Hartzler_Home_In_Alpha%2C_Minnesota_%286815824604%29.jpg",
+   "autor": "Mennonite Church USA Archives",
+   "licencia": "No restrictions"
+  },
+  {
+   "titulo": "Casa Orduña del Castell de Guadalest, rebost.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_Ordu%C3%B1a_del_Castell_de_Guadalest%2C_rebost.JPG",
+   "autor": "Joanbanjo",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Food over a kitchen - 20111001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Food_over_a_kitchen_-_20111001.jpg",
+   "autor": "Bretwa",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Kommandørgård - Küche Speisekammer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kommand%C3%B8rg%C3%A5rd_-_K%C3%BCche_Speisekammer.jpg",
+   "autor": "Wolfgang Sauber",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Konz, Roscheider Hof, Molzhaus, Vorratsraum.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Konz%2C_Roscheider_Hof%2C_Molzhaus%2C_Vorratsraum.jpg",
+   "autor": "Dguendel",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Laufas - Museum - Speisekammer 6 Wandschrank.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Laufas_-_Museum_-_Speisekammer_6_Wandschrank.jpg",
+   "autor": "Wolfgang Sauber",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Pantry 1.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Pantry_1.JPG",
+   "autor": "KDFernandez",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Pantry 2.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Pantry_2.JPG",
+   "autor": "KDFernandez",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Residential-pantry.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Residential-pantry.jpg",
+   "autor": "Tysto",
+   "licencia": "Public domain"
+  }
+ ]
+}

@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_89830537172940afb14848cc5b2e81fa",
+ "request_sha256": "ccbf460cd289aaed03b3f30bf5d6c3fcbf3772ed65c699acb741736d134beca4",
+ "fecha": "2026-10-17T14:05:36.491432+00:00",
+ "kit": "cocina",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_cocina.jpg",
+ "ficha_sha256": "8ca66c7794b1eed85e4abdc02a220b37741793cd811f7e8fe4d16a2b9ccdbb8b",
+ "referencias": [
+  {
+   "titulo": "Cocina-rafax.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Cocina-rafax.JPG",
+   "autor": "Rafael Ortega Díaz",
+   "licencia": "Public domain",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Cocina-rafax.JPG/960px-Cocina-rafax.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Compact modern fitted kitchen by Steinbeck-Reeves Design.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Compact_modern_fitted_kitchen_by_Steinbeck-Reeves_Design.jpg",
+   "autor": "Steinbeck-Reeves Design",
+   "licencia": "CC BY-SA 3.0",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Compact_modern_fitted_kitchen_by_Steinbeck-Reeves_Design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.59,
+  "coherencia": 2.52,
+  "iluminacion": 3.27,
+  "variedad": 2.58,
+  "lectura_funcional": 2.04
+ },
+ "media": 2.6,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.59,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.04
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.37
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.56
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.59
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.52,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.04
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.44
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.49
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.53
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.27,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.1
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.54
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.31
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.04
+    }
+   ],
+   "confidence": 0.57
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.58,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.04
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.4
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.51
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.55
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.04,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.22
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.55
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.21
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.6
+  }
+ ],
+ "uso": {
+  "input_tokens": 3873,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 3873
+ }
+}
