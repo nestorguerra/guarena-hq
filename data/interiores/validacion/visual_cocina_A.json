@@ -2,14 +2,14 @@
  "estado": "evaluado",
  "proveedor": "OpenAI Decisions",
  "modelo": "gpt-6-luna",
- "request_id": "req_897a96fe80324307bbd6270995ccf59c",
- "request_sha256": "d38347d59a69c7e277ac7b6498d5530d02a377f0a6e1d5463b4e4d5f43d8077f",
- "fecha": "2026-10-17T18:15:46.963937+00:00",
+ "request_id": "req_c332d4e3bc8d4460b7cf4d7247275bd7",
+ "request_sha256": "16adc7b173b87eba04b917a1063aae1b16bd3a1a570e95f74e06bf744fe093e8",
+ "fecha": "2026-10-17T18:25:31.668477+00:00",
  "kit": "cocina",
  "revisor": "A",
  "ficha": "data/interiores/fichas/casa_cocina.jpg",
- "ficha_sha256": "1f34c47d762fb39dcbf33d7a03580a259dfb321cc154b0580a711bb9758f636a",
- "ficha_snapshot": "data/interiores/validacion/imagenes/1f34c47d762fb39dcbf33d7a03580a259dfb321cc154b0580a711bb9758f636a.jpg",
+ "ficha_sha256": "287501f5259e37f60ea756e67fac90721be53df740990341d6a544ce7fa1d53f",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/287501f5259e37f60ea756e67fac90721be53df740990341d6a544ce7fa1d53f.jpg",
  "referencias": [
   {
    "titulo": "Cocina-rafax.JPG",
@@ -36,12 +36,12 @@
  },
  "puntuaciones": {
   "densidad": 2.98,
-  "coherencia": 3.02,
-  "iluminacion": 3.38,
-  "variedad": 2.88,
-  "lectura_funcional": 2.94
+  "coherencia": 3.34,
+  "iluminacion": 3.63,
+  "variedad": 2.93,
+  "lectura_funcional": 3.0
  },
- "media": 3.04,
+ "media": 3.176,
  "supera_umbral": false,
  "respuestas": [
   {
@@ -57,17 +57,17 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.03
+     "probability": 0.05
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.96
+     "probability": 0.92
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.01
+     "probability": 0.03
     },
     {
      "value": 4,
@@ -75,12 +75,12 @@
      "probability": 0.0
     }
    ],
-   "confidence": 0.97
+   "confidence": 0.93
   },
   {
    "type": "score",
    "name": "coherencia",
-   "score": 2.02,
+   "score": 2.34,
    "probabilities": [
     {
      "value": 0,
@@ -90,50 +90,50 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.09
+     "probability": 0.06
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.81
+     "probability": 0.57
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.09
+     "probability": 0.34
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.01
+     "probability": 0.03
     }
    ],
-   "confidence": 0.83
+   "confidence": 0.62
   },
   {
    "type": "score",
    "name": "iluminacion",
-   "score": 2.38,
+   "score": 2.63,
    "probabilities": [
     {
      "value": 0,
      "label": "1",
-     "probability": 0.01
+     "probability": 0.0
     },
     {
      "value": 1,
      "label": "2",
-     "probability": 0.03
+     "probability": 0.02
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.55
+     "probability": 0.35
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.39
+     "probability": 0.61
     },
     {
      "value": 4,
@@ -141,12 +141,12 @@
      "probability": 0.02
     }
    ],
-   "confidence": 0.6
+   "confidence": 0.66
   },
   {
    "type": "score",
    "name": "variedad",
-   "score": 1.88,
+   "score": 1.93,
    "probabilities": [
     {
      "value": 0,
@@ -161,25 +161,25 @@
     {
      "value": 2,
      "label": "3",
-     "probability": 0.83
+     "probability": 0.79
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.03
+     "probability": 0.06
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.0
+     "probability": 0.01
     }
    ],
-   "confidence": 0.85
+   "confidence": 0.81
   },
   {
    "type": "score",
    "name": "lectura_funcional",
-   "score": 1.94,
+   "score": 2.0,
    "probabilities": [
     {
      "value": 0,
@@ -189,7 +189,7 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.07
+     "probability": 0.04
     },
     {
      "value": 2,
@@ -199,7 +199,7 @@
     {
      "value": 3,
      "label": "4",
-     "probability": 0.01
+     "probability": 0.04
     },
     {
      "value": 4,

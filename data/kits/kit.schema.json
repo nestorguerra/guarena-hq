@@ -250,6 +250,11 @@
        "exclusiveMinimum": 0
       },
       "description": "Anchura y fondo del espacio de uso libre delante del objeto, en metros."
+     },
+     "grupo_pared": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nombre de un grupo opcional de entradas activas consecutivas: módulos de suelo obligatorios, obj fijo y cantidad uno, probados juntos contra pared; cada junto_a debe admitir como de el obj de la entrada inmediatamente anterior. Si el grupo no cumple ese contrato o no cabe el conjunto, se conservan las reglas individuales."
      }
     }
    }

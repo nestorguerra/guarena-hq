@@ -31,7 +31,7 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
     ['#e0d8c8','#9cae9f','#c2b7a0','#758e7f'],
     ['#dfd2c2','#b2a192','#bfb29e','#8b7f70'],
     ['#d6dcce','#99afb0','#b8c3b8','#688a8a'],
-  ][Math.abs(seed)%3]:store?['#d9d2be','#a2ab9b','#b7b39e','#6e7e70']:bath?[
+  ][Math.abs(seed)%3]:store?[['#cec6b4','#71867a','#a39f8c','#4e6658'],['#c8c7bd','#77858c','#a3aaa8','#4d626b'],['#d1c5b0','#99856a','#b3a58b','#716147']][(Math.abs(seed)+(estilo==='joven'?2:['antiguo','rustico'].includes(estilo)?1:0))%3]:bath?[
     ['#7e9891','#e4e0d3','#c9c6b9','#678078'],
     ['#8297a2','#e5e1d7','#cbc9bf','#667d87'],
     ['#b39880','#eee4d4','#d3c4b2','#91775e'],

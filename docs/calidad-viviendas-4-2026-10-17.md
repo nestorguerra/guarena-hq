@@ -99,3 +99,13 @@ Nueve contratos de luz y restauración pasan. La geometría es idéntica a tanda
 
 
 El caso dirigido de apagón se ha ejecutado sobre el paquete final: cámara, estado, PMREM, HouseLife e intensidades coinciden con la base anterior; cero errores y contexto privado cerrado. El ambiente permanece en 0,45 durante y después del render. No se vuelve a puntuar la misma ficha diurna, cuyo render no cambia al añadir el guard.
+
+Tanda 8 publicada y verificada: `313cf52da64c844941b5723326ad73716e2c00dc`, CI 39057951048 y Pages 39058116327 en verde. El juego público sirve ese commit. Ocho casas, Annie (caja fuerte, siesta, decoración), tres comercios y recarga con 321 € / 700 € pasan sin errores; las claves Evolución y fija conservan sus testigos. Recibo: `data/interiores/validacion/publicacion_tanda8.json`.
+
+## Tanda 9: frente de cocina y pertenencias del trastero
+
+La cocina busca y acepta conjuntamente los tres módulos del frente de trabajo, con prueba de orden espacial inverso y sin consumir el azar compartido si falla. La revisión estática detectó referencias ramificadas incorrectas: se exige referencia al miembro inmediato y se conserva el fallo anterior como regresión. Las tres cocinas canónicas reúnen cocción, preparación y nevera. El trastero añade bicicleta con carga, útiles de mantenimiento y contraste de ventilador y pared; se corrigen eje del portaequipajes, margen del sillín y cobertura de la variante nueva antes de integrar.
+
+Notas A/B: cocina **3,176/3,094** y trastero **3,252/3,048**. Mejoran respecto a tanda 8, pero no alcanzan 4/5. La revisión independiente acepta las muestras con límites: quedan paños altos vacíos, altos de cocina pequeños y almacenaje del trastero poco relacionado con la bici. Las cámaras del trastero coinciden con la tanda anterior; las de cocina cambian por la nueva colocación, conservando algoritmo, semillas, altura y campos de visión. No se atribuye toda la diferencia de nota al código. Las otras 15 fichas conservan sus evaluaciones anteriores y no acreditan esta versión compartida.
+
+Pasan 40 contratos, 200 casas / 1166 habitaciones, 81 semillas de cada kit afectado, integración fuente con colisiones, paquete y marcas. Máximos sintéticos: 70.578 triángulos, 59 mallas, nueve luces y 168,1 ms de montaje. Los siete generadores reproducen 21 archivos idénticos. La revisión estática y visual se conserva en `data/interiores/revision_calidad_tanda9_2026-10-17.md`. Pendiente de commit, Actions y prueba pública de esta tanda.

@@ -10,10 +10,10 @@ def generar():
     frentes=['va_cocina','va_cocina_amplia','va_encimera','va_encimera_amplia']
     # Un frente de trabajo continuo; la puerta puede obligar a usar otra pared.
     cocina=[
-        pared('va_cocina',area_max=14),pared('va_cocina_amplia',area_min=14),
-        junto('va_encimera',frentes,True,area_max=14,buscar_refs=True),
-        junto('va_encimera_amplia',frentes,True,area_min=14,buscar_refs=True),
-        junto('va_nevera',frentes,True,buscar_refs=True),
+        pared('va_cocina',area_max=14,grupo_pared='frente_trabajo'),pared('va_cocina_amplia',area_min=14,grupo_pared='frente_trabajo'),
+        junto('va_encimera',frentes,True,area_max=14,buscar_refs=True,grupo_pared='frente_trabajo'),
+        junto('va_encimera_amplia',frentes,True,area_min=14,buscar_refs=True,grupo_pared='frente_trabajo'),
+        junto('va_nevera',frentes,True,buscar_refs=True,grupo_pared='frente_trabajo'),
         E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera',cantidad=[0,1],preferir=True,area_max=14),
         E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera_amplia',cantidad=[0,1],preferir=True,area_min=14),
         junto('va_lavadora',frentes,buscar_refs=True),junto('va_alacena',frentes,True,buscar_refs=True),
@@ -44,14 +44,18 @@ def generar():
     kit('taller','Taller doméstico de bricolaje','otra_estancia',taller,mood['taller'],fondo=(2.5,5))
     almacen= herramientas+['caja_carton','caja_archivo','vb_cesto','vb_ropa','vb_colcha']
     estantes=['va_estante_trastero_0','va_estante_trastero_1','va_estante_trastero_2']
-    guardados=['va_bicicleta_guardada','va_escalera_guardada']
+    guardados=['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada']
     almacenaje=estantes+['va_cajas_apiladas']
     # Se prioriza un frente de estantes y cajas; el mínimo admite otra pared.
     # Los acompañantes opcionales solo se colocan si conservan su agrupación.
     trastero=[
         pared(estantes),junto(estantes,estantes,True,area_min=10,buscar_refs=True),
         junto('va_cajas_apiladas',estantes,True,area_min=14,buscar_refs=True),
-        pared(guardados),junto('va_cesto_temporada',estantes,True,buscar_refs=True),
+        pared(guardados),
+        E('pared','va_soporte_ciclismo',pared='*',sobre_de='va_bicicleta_guardada',cantidad=[0,1],preferir=True,si_no=False),
+        E('pared','va_soporte_ciclismo',pared='*',sobre_de='va_bicicleta_carga',cantidad=[0,1],preferir=True,si_no=False),
+        E('pared','va_soporte_pintura',pared='*',sobre_de='va_escalera_guardada',cantidad=[0,1],preferir=True,si_no=False),
+        junto('va_cesto_temporada',estantes,True,buscar_refs=True),
         junto(estantes,estantes,area_min=18,buscar_refs=True,si_no=False),
         junto('va_cajas_apiladas',almacenaje,area_min=16,buscar_refs=True,si_no=False),
         junto('va_caja_almacen',almacenaje,area_min=12,buscar_refs=True,si_no=False),

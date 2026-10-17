@@ -90,6 +90,7 @@
    "regla": "contra_pared",
    "variantes": [
     "va_bicicleta_guardada",
+    "va_bicicleta_carga",
     "va_escalera_guardada"
    ],
    "pared": "*",
@@ -99,6 +100,45 @@
    ],
    "obligatorio": true,
    "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_soporte_ciclismo",
+   "pared": "*",
+   "sobre_de": "va_bicicleta_guardada",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_soporte_ciclismo",
+   "pared": "*",
+   "sobre_de": "va_bicicleta_carga",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_soporte_pintura",
+   "pared": "*",
+   "sobre_de": "va_escalera_guardada",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
   },
   {
    "zona": "estancia",
@@ -186,6 +226,7 @@
    "obj": "va_ventilador_guardado",
    "de": [
     "va_bicicleta_guardada",
+    "va_bicicleta_carga",
     "va_escalera_guardada"
    ],
    "cantidad": [
@@ -203,6 +244,7 @@
    "obj": "va_utiles_guardados",
    "de": [
     "va_bicicleta_guardada",
+    "va_bicicleta_carga",
     "va_escalera_guardada"
    ],
    "cantidad": [

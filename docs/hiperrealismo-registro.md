@@ -1080,3 +1080,7 @@ La revisión visual encuentra espacio frontal insuficiente del WC3244 (8,3 cm). 
 ### 2026-10-17 — Tanda 8, luz doméstica
 
 El relleno del cielo y de la calle se acota en casas durante su render y se restaura después. Ocho pares muestran ganancia diurna moderada, sin certificar 4/5. Se detecta pérdida de lectura en apagón y se corrige excluyendo casas sin electricidad. Permanecen pendientes el plafón lavado y la composición amplia. Notas cocina 3,040/3,042, baño 3,152/3,018 y trastero 2,938/2,700. La evidencia desfavorable no se repite para buscar una nota mejor. Tanda 7 ya publicada como 44e3de3 y verificada en el juego público.
+
+### 2026-10-17 — Tanda 9, frente de cocina y trastero
+
+Se integra colocación atómica del frente de cocina, respetando referencias inmediatas y fallback; trastero incorpora bicicleta de carga, útiles vinculados y mejor contraste. Hallazgos de referencias, eje y bolsa corregidos antes de validar. Revisión independiente acotada sin bloqueo nuevo. Notas cocina 3,176/3,094 y trastero 3,252/3,048; objetivo 4/5 pendiente. Pasan 40 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Tanda 8 publicada como 313cf52 y verificada en juego público sin errores. Detalles y límites en docs/calidad-viviendas-4-2026-10-17.md.

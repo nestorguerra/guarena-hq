@@ -283,6 +283,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
     pared(e, Z) {
       // (one wall, or a list of them to go on to when the first is full; a row stops at `maximo` if the kit says so)
       const ref = e.sobre_de ? P.find((p) => p.zona === Z.id && p.obj === e.sobre_de) : null;
+      if(e.sobre_de&&!ref&&e.si_no===false)return; // acompañante opcional: no inventar otra pared sin su referencia
       const a=ref?Math.atan2(Math.sin(ref.ry),Math.cos(ref.ry)):0;
       const paredes = ref ? [Math.abs(a)<.3?'S':Math.abs(Math.abs(a)-Math.PI)<.3?'N':a>0?'W':'E'] : e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : [].concat(e.pared);
       const colocar = (pw, obj, s) => {
@@ -500,14 +501,72 @@ export function amueblar(kit, seed = 1, ctx = null) {
       }
     },
   };
+  // Grupos de módulos: probar el frente completo antes de comprometer su primera pieza.
+  // La búsqueda no consume r ni modifica P/cursores si falla: conserva el fallback anterior.
+  const aplicable = e => zonas[e.zona] && reglas[e.regla] && !(e.area_min != null && W*D < e.area_min) && !(e.area_max != null && W*D >= e.area_max) && !(ctx?.filtro && !ctx.filtro(e));
+  const entradasActivas = [...K.objetos.entries()].filter(([,e]) => aplicable(e));
+  const gruposIntentados = new Set(), entradasAgrupadas = new Set();
+  const probarGrupoPared = (miembros, Z) => {
+    const [raiz] = miembros, e0 = raiz[1];
+    // Contrato deliberadamente pequeño: módulos fijos, obligatorios y unitarios.
+    if(miembros.length<2 || miembros.length>4 || e0.regla!=='contra_pared')return false;
+    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !e.obligatorio || !(e.cantidad===1 || (Array.isArray(e.cantidad)&&e.cantidad[0]===1&&e.cantidad[1]===1)) || e.silla_frontal || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
+    // Sólo cadenas inmediatas: no convertir A<-B y A<-C en A-B-C.
+    // Si falta esa referencia adyacente, se ejecutan las reglas originales (incluido si_no).
+    let semilla=(seed*2654435761+97)>>>0;
+    for(const ch of Z.id+'|'+e0.grupo_pared)semilla=Math.imul(semilla^ch.charCodeAt(0),16777619)>>>0;
+    const azar=mulberry32(semilla);
+    const lados=e0.pared==='*'?['N','S','E','W']:Array.isArray(e0.pared)?[...e0.pared]:[e0.pared];
+    if(e0.pared==='*')for(let i=lados.length-1;i>0;i--){const j=Math.floor(azar()*(i+1));[lados[i],lados[j]]=[lados[j],lados[i]];}
+    const anchoGrupo=miembros.reduce((a,[,e])=>a+caja(e.obj).w,0)+.04*(miembros.length-1);
+    for(const lado of lados){
+      if(!PARED[lado])continue;
+      const pw=PARED[lado](Z),key=Z.id+lado,inicioGrupo=cursores[key]??pw.a+.03,fin=pw.b-.03-anchoGrupo;
+      if(inicioGrupo>fin+TOL)continue;
+      const slots=[];for(let s=inicioGrupo;s<=fin+1e-6;s+=.1)slots.push(s);
+      if(!slots.length||fin-slots[slots.length-1]>.001)slots.push(fin);
+      if(e0.centrado)slots.sort((a,b)=>Math.abs(a+anchoGrupo/2-(pw.a+pw.b)/2)-Math.abs(b+anchoGrupo/2-(pw.a+pw.b)/2));
+      for(const s of slots)for(const orden of [miembros,[...miembros].reverse()]){
+        let cursor=s;const nuevos=[];
+        for(const [ei,e] of orden){
+          const b=caja(e.obj),c=cursor+b.w/2,off=pw.fijo+(pw.eje==='z'?pw.n[0]:pw.n[1])*(b.d/2+.01);
+          const [x,z]=origen(e.obj,pw.eje==='z'?off:c,pw.eje==='z'?c:off,pw.ry);
+          const it={obj:e.obj,x,y:0,z,ry:pw.ry,e:ei,zona:Z.id},v=volumen(it);
+          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>choca(volumen(q),v)))break;
+          nuevos.push(it);cursor+=b.w+.04;
+        }
+        // También se comprueban usos frontales y accesos de las tres piezas juntas.
+        if(nuevos.length!==miembros.length||cierra(nuevos))continue;
+        const anterior=entrada;let previo=null;
+        for(const [ei,e] of miembros){
+          const it=nuevos.find(p=>p.e===ei);entrada=ei;
+          const puesto=poner(it.obj,Z.id,ei===raiz[0]?'contra_pared':'junto_a',it.x,it.y,it.z,it.ry);
+          if(previo)puesto.de=P.indexOf(previo);
+          previo=puesto;entradasAgrupadas.add(ei);
+        }
+        entrada=anterior;cursores[key]=s+anchoGrupo+.03;return true;
+      }
+    }
+    return false;
+  };
   // (I-03: what stands loose on the floor a little off true — a few centimetres, a few degrees —; never what stands
   // against a wall, on something, or holds something; the table sets are askew of their own)
   const SUELTA = new Set(['fila', 'esquina', 'suelo_libre']);
-  for (const [ei, e] of K.objetos.entries()) {
+  for (const [ei, e] of entradasActivas) {
     const Z = zonas[e.zona];
-    if (!Z || !reglas[e.regla] || (e.area_min != null && W*D < e.area_min) || (e.area_max != null && W*D >= e.area_max) || (ctx && ctx.filtro && !ctx.filtro(e))) continue;
     activas.push(ei);
     entrada = ei;
+    if(e.grupo_pared){
+      const key=JSON.stringify([e.zona,e.grupo_pared]);
+      if(!gruposIntentados.has(key)){
+        gruposIntentados.add(key);
+        const miembros=entradasActivas.filter(([,q])=>q.zona===e.zona&&q.grupo_pared===e.grupo_pared);
+        // No adelantar el grupo por encima de otras entradas activas intercaladas.
+        const pos=entradasActivas.findIndex(([i])=>i===ei);
+        if(miembros.every(([i],k)=>entradasActivas[pos+k]?.[0]===i))probarGrupoPared(miembros,Z);
+      }
+      if(entradasAgrupadas.has(ei))continue;
+    }
     const n0 = P.length;
     reglas[e.regla](e, Z);
     if (e.regla === 'modulos') { const a = alcanza(); for (const Z2 of Object.values(zonas)) if (Z2.publica && debe.includes(Z2.id) && !a.includes(Z2.id)) avisos.push(`la barra deja la zona pública «${Z2.id}» sin paso`); debe = a; }

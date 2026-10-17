@@ -15,6 +15,78 @@ export async function probarCasas(opts = {}) {
     try { await fn(); pruebas.push({ nombre, estado: 'PASS' }); }
     catch (e) { pruebas.push({ nombre, estado: 'FAIL', motivo: String(e.message || e) }); errores.push(nombre + ': ' + String(e.message || e)); }
   };
+  if(opts.tanda>=10)await caso('grupo ramificado respeta referencia inmediata y si_no sin alterar fallback',()=>{
+    const id='__grupo_rama',base=KITS.vivienda_cocina,objetos=[
+      {zona:'estancia',regla:'contra_pared',obj:'va_cocina',pared:'N',cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_encimera',de:'va_cocina',cantidad:[1,1],obligatorio:true,si_no:false,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_nevera',de:'va_cocina',cantidad:[1,1],obligatorio:true,si_no:false,grupo_pared:'frente'},
+    ];
+    const ctx={W:8,D:4,H:2.75};
+    try{for(const seed of [1,37,81]){
+      KITS[id]={...base,objetos};const A=amueblar(id,seed,ctx);
+      KITS[id]={...base,objetos:objetos.map(({grupo_pared,...e})=>e)};const B=amueblar(id,seed,ctx);
+      exigir(JSON.stringify(A.P)===JSON.stringify(B.P)&&JSON.stringify(A.activas)===JSON.stringify(B.activas),seed+': la rama se convirtió en una cadena ajena a de');
+      exigir(A.U([0,1])===B.U([0,1]),seed+': rechazar la rama consume el aleatorio compartido');
+    }
+    objetos[2].de=['va_cocina','va_encimera'];KITS[id]={...base,objetos};
+    const A=amueblar(id,37,ctx);
+    exigir(A.P.length===3,'rechaza la cadena inmediata válida');
+    for(const p of A.P.filter(p=>p.e>0)){
+      const ref=A.P[p.de];exigir(ref&&ref.e===p.e-1,'de no apunta al vecino inmediato');
+      const a=p.v,b=ref.v;
+      exigir(Math.abs(Math.abs(a.cx-b.cx)-a.hw-b.hw-.04)<.001,'referencia de separada de su vecino');
+    }
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=10)await caso('el grupo rechaza el hueco aislado y compromete tres entradas originales',()=>{
+    const id='__grupo_frente',base=KITS.vivienda_cocina,objetos=[
+      {zona:'estancia',regla:'contra_pared',obj:'va_cocina',pared:'N',cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_encimera',de:'va_cocina',cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_nevera',de:['va_cocina','va_encimera'],cantidad:[1,1],obligatorio:true,buscar_refs:true,grupo_pared:'frente'},
+    ];
+    KITS[id]={...base,objetos};
+    try{
+      const total=objetos.reduce((a,e)=>a+caja(e.obj).w,0)+.08,W=total*2+1,D=4.5;
+      const barrera={cx:-W/2+.03+caja('va_cocina').w+.18,cz:D-.4,hw:.12,hd:.4,a:0,y0:0,y1:3};
+      const ctx={W,D,H:2.75,libres:[barrera],inicio:{x:0,z:.5},funciones:true};
+      const A=amueblar(id,37,ctx),B=amueblar(id,37,ctx);
+      exigir(A.P.length===3&&JSON.stringify(A.P)===JSON.stringify(B.P),'el frente no es completo o determinista');
+      exigir(JSON.stringify(A.activas)==='[0,1,2]','pierde entradas activas');
+      for(const [i,e] of objetos.entries())exigir(A.P.filter(p=>p.e===i&&p.obj===e.obj).length===1,'entrada perdida o duplicada '+i);
+      exigir(A.P.every(p=>Math.abs(p.ry-Math.PI)<1e-8&&p.v.cx-p.v.hw>barrera.cx+barrera.hw),'se acepta el hueco que sólo admite el fuego');
+      const sorted=[...A.P].sort((a,b)=>a.v.cx-b.v.cx);
+      for(let i=1;i<sorted.length;i++)exigir(Math.abs((sorted[i].v.cx-sorted[i].v.hw)-(sorted[i-1].v.cx+sorted[i-1].v.hw)-.04)<.001,'frente discontinuo');
+      KITS[id]={...base,objetos:objetos.map(({grupo_pared,...e})=>e)};
+      const previo=amueblar(id,37,ctx);exigir(previo.P[0].v.cx<barrera.cx,'la prueba no reproduce la primera elección incompleta');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=10)await caso('grupo imposible conserva colocación individual y estado aleatorio',()=>{
+    const id='__grupo_fallback',base=KITS.vivienda_cocina,objetos=[
+      {zona:'estancia',regla:'contra_pared',obj:'va_cocina',pared:'*',cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_encimera',de:'va_cocina',cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'junto_a',obj:'va_nevera',de:['va_cocina','va_encimera'],cantidad:[1,1],obligatorio:true,grupo_pared:'frente'},
+      {zona:'estancia',regla:'suelo_libre',variantes:['va_cesto_ropa','va_cajas_apiladas'],cantidad:[0,1]},
+    ];
+    try{for(const seed of [1,2,3,37,81]){
+      KITS[id]={...base,objetos};const A=amueblar(id,seed,{W:2.1,D:2.1,H:2.75});
+      KITS[id]={...base,objetos:objetos.map(({grupo_pared,...e})=>e)};const B=amueblar(id,seed,{W:2.1,D:2.1,H:2.75});
+      exigir(JSON.stringify(A.P)===JSON.stringify(B.P)&&JSON.stringify(A.activas)===JSON.stringify(B.activas),seed+': cambia el fallback compacto');
+      exigir(A.U([0,1])===B.U([0,1]),seed+': la búsqueda fallida consume el aleatorio compartido');
+    }}finally{delete KITS[id];}
+  });
+  if(opts.tanda>=10)await caso('frentes reales completos respetan obligatorios y accesos',()=>{
+    const pres={interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}};
+    for(const seed of [2786,3244,1594]){const h=H.buildVecino(seed);try{
+      const e=h.estancias.find(e=>e.kit==='vivienda_cocina'),frente=e.colocados.filter(p=>KITS.vivienda_cocina.objetos[p.e]?.grupo_pared==='frente_trabajo');
+      exigir(frente.length===3&&new Set(frente.map(p=>p.e)).size===3,seed+': frente sin tres entradas distintas');
+      exigir(frente.every(p=>Math.abs(p.ry-frente[0].ry)<.001),seed+': el frente sigue disperso');
+      const r=revisar({local:e,group:{traverse(){}}},pres);exigir(!r.errores.length,seed+': '+r.errores.join('; '));
+      const a=frente[0].ry,tx=Math.cos(a),tz=-Math.sin(a),nx=Math.sin(a),nz=Math.cos(a);
+      const vistas=frente.map(p=>({s:p.v.cx*tx+p.v.cz*tz,w:p.v.hw,b:p.v.cx*nx+p.v.cz*nz-p.v.hd})).sort((a,b)=>a.s-b.s);
+      exigir(Math.max(...vistas.map(v=>v.b))-Math.min(...vistas.map(v=>v.b))<.01,seed+': módulos fuera de la misma pared');
+      for(let i=1;i<vistas.length;i++)exigir(Math.abs((vistas[i].s-vistas[i].w)-(vistas[i-1].s+vistas[i-1].w)-.04)<.01,seed+': separación del frente');
+    }finally{tirar(h);}}
+  });
   await caso('selecciona dormitorio, pintura y taller sin confundirlos', () => {
     exigir(typeof H.kitDeEstancia === 'function', 'falta la selección compartida de kits');
     for (const [tipo, perfil, esperado] of [
@@ -305,6 +377,47 @@ export async function probarCasas(opts = {}) {
       const roto={...e,colocados:e.colocados.map(p=>p.obj==='va_ducha'?{...p,x:wc.x+dx,z:wc.z+dz}:p)},rr=revisar({local:roto,group:{traverse(){}}},pres);
       exigir(rr.errores.some(e=>e.startsWith('uso frontal:')),'se acepta el inodoro bloqueado por la ducha');
     }finally{tirar(h);}}
+  });
+  if(opts.tanda>=10)await caso('el útil suspendido exige su referencia sólo cuando se solicita',()=>{
+    const id='__prueba_pared_referencia',base=KITS.vivienda_trastero;
+    KITS[id]={...base,objetos:[{zona:'estancia',regla:'pared',obj:'va_soporte_ciclismo',pared:'*',sobre_de:'va_bicicleta_guardada',cantidad:[0,1],preferir:true,si_no:false}]};
+    try{
+      exigir(amueblar(id,37,{W:4,D:3,H:2.75}).P.length===0,'útiles sin bicicleta en otra pared');
+      delete KITS[id].objetos[0].si_no;
+      exigir(amueblar(id,37,{W:4,D:3,H:2.75}).P.length===1,'se rompe el fallback anterior de otros kits');
+      KITS[id].objetos[0].si_no=false;
+      KITS[id].objetos.unshift({zona:'estancia',regla:'contra_pared',obj:'va_bicicleta_guardada',pared:'N',cantidad:[1,1],centrado:true});
+      const P=amueblar(id,37,{W:4,D:3,H:2.75}).P,b=P.find(p=>p.obj==='va_bicicleta_guardada'),u=P.find(p=>p.obj==='va_soporte_ciclismo');
+      exigir(b&&u&&Math.abs(b.ry-u.ry)<.001&&Math.abs(b.v.cx-u.v.cx)<.02,'útiles sin relación vertical con bicicleta');
+      const bloqueado=amueblar(id,37,{W:4,D:3,H:2.75,libres:[u.v]}).P;
+      exigir(bloqueado.some(p=>p.obj==='va_bicicleta_guardada')&&!bloqueado.some(p=>p.obj==='va_soporte_ciclismo'),'el accesorio invade la reserva o se recoloca en otra pared');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=10)await caso('las pertenencias de trastero conservan huella y apoyo',()=>{
+    const a=caja('va_bicicleta_guardada'),b=caja('va_bicicleta_carga');
+    exigir(b.w<=a.w+.001&&b.d<=a.d+.001&&b.h<=a.h+.001,'la variante consume más paso');
+    const bolsa=OBJETOS.va_bicicleta_carga.partes.find(p=>p.tinte==='tela');
+    exigir(bolsa&&Math.abs(bolsa.p[1]-bolsa.d[1]/2-.6925)<.001,'bolsa sin apoyo sobre portaequipajes');
+    const piezas=OBJETOS.va_bicicleta_carga.partes,sillin=piezas.find(p=>p.f==='caja'&&p.p[0]===-.22&&p.p[1]===.865);
+    exigir(sillin&&sillin.p[0]-sillin.d[0]/2-(bolsa.p[0]+bolsa.d[0]/2)>=.009,'bolsa dentro del sillín');
+    const eje=piezas.find(p=>p.f==='cil'&&p.p[0]===-.45&&p.p[1]===.325&&p.d[2]>=.20&&p.r?.[0]===90);
+    const tirantes=piezas.filter(p=>p.f==='cil'&&p.c==='#69776c'&&p.r?.[0]===0);
+    exigir(eje&&tirantes.length===4,'portaequipajes sin eje o tirantes');
+    for(const t of tirantes){const a=t.r[2]*Math.PI/180,x=t.p[0]+Math.sin(a)*t.d[2]/2,y=t.p[1]-Math.cos(a)*t.d[2]/2;
+      exigir(Math.hypot(x-eje.p[0],y-eje.p[1])<=eje.d[0]+.001&&Math.abs(t.p[2]-eje.p[2])<=eje.d[2]/2,'tirante desconectado del eje');
+    }
+    exigir(OBJETOS.va_soporte_ciclismo.soporte==='pared'&&OBJETOS.va_soporte_pintura.soporte==='pared','se ocupó el suelo con accesorios de pared');
+    exigir(caja('va_soporte_ciclismo').y0>a.y1&&caja('va_soporte_pintura').y0>caja('va_escalera_guardada').y1,'accesorios dentro de la pertenencia');
+    exigir(KITS.vivienda_trastero.paso_libre>=.8,'se redujo el paso');
+  });
+  if(opts.tanda>=10)await caso('trastero ofrece pertenencias reproducibles sin seleccionar la ficha',()=>{
+    const ids=new Set();
+    for(let seed=1;seed<=24;seed++){
+      const a=amueblar('vivienda_trastero',seed,{W:5,D:4,H:2.75}),b=amueblar('vivienda_trastero',seed,{W:5,D:4,H:2.75});
+      exigir(JSON.stringify(a.P)===JSON.stringify(b.P),'la misma semilla cambia de pertenencias');
+      for(const p of a.P)if(['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada'].includes(p.obj))ids.add(p.obj);
+    }
+    for(const id of ['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada'])exigir(ids.has(id),'nunca se coloca la variante '+id);
   });
   return { pruebas, errores };
 }

@@ -92,9 +92,9 @@
    "W": 6.2,
    "D": 4.3,
    "guardias": 7,
-   "objetos": 13,
-   "distintos": 10,
-   "hash": "182f7497",
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "7e15ca02",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -115,46 +115,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "va_soporte_pintura",
+     "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -170,7 +185,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11306,
+   "triangulos": 11758,
    "mallas": 10,
    "luces": 3,
    "determinista": true
@@ -182,9 +197,9 @@
    "W": 5.9,
    "D": 2.8,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "3a4f429",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "fb5e40d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -205,41 +220,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -255,7 +285,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11398,
+   "triangulos": 11850,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -268,9 +298,9 @@
    "W": 5,
    "D": 2.5,
    "guardias": 4,
-   "objetos": 8,
-   "distintos": 6,
-   "hash": "367827d4",
+   "objetos": 9,
+   "distintos": 7,
+   "hash": "2168d5f0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -286,36 +316,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -331,7 +376,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10680,
+   "triangulos": 11132,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -344,9 +389,9 @@
    "W": 4.4,
    "D": 4.9,
    "guardias": 5,
-   "objetos": 10,
-   "distintos": 8,
-   "hash": "f1793ef2",
+   "objetos": 11,
+   "distintos": 9,
+   "hash": "16a18d64",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -367,46 +412,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -422,7 +482,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10496,
+   "triangulos": 10948,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -434,10 +494,10 @@
    "seed": 5,
    "W": 6.5,
    "D": 4.3,
-   "guardias": 5,
-   "objetos": 12,
-   "distintos": 10,
-   "hash": "81815ca8",
+   "guardias": 6,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "9546a430",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -458,54 +518,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.28,
-     "libre_m2": 18.28
+     "alcanzable_m2": 17.55,
+     "libre_m2": 17.55
     }
    },
    "luz": {
@@ -513,7 +588,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10082,
+   "triangulos": 12782,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -526,9 +601,9 @@
    "W": 3.5,
    "D": 4,
    "guardias": 5,
-   "objetos": 9,
-   "distintos": 7,
-   "hash": "363d331e",
+   "objetos": 10,
+   "distintos": 8,
+   "hash": "3d84c108",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -549,36 +624,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -594,7 +684,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10764,
+   "triangulos": 11216,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -607,9 +697,9 @@
    "W": 4.7,
    "D": 2.5,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "a2326248",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "7be3f435",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -625,39 +715,54 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.9,
-     "libre_m2": 4.9
+     "alcanzable_m2": 4.67,
+     "libre_m2": 4.67
     }
    },
    "luz": {
@@ -665,7 +770,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9384,
+   "triangulos": 12328,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -678,9 +783,9 @@
    "W": 5.9,
    "D": 4.6,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "3e975d30",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "71a20645",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -701,54 +806,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.36,
-     "libre_m2": 17.36
+     "alcanzable_m2": 17.06,
+     "libre_m2": 17.06
     }
    },
    "luz": {
@@ -756,7 +876,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10910,
+   "triangulos": 13854,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -769,9 +889,9 @@
    "W": 4.1,
    "D": 2.5,
    "guardias": 4,
-   "objetos": 10,
-   "distintos": 9,
-   "hash": "c3d855a0",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "48f2b712",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -787,31 +907,46 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -827,7 +962,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8148,
+   "triangulos": 8340,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -840,9 +975,9 @@
    "W": 3.8000000000000003,
    "D": 3.4,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "4ac43973",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "aee3168f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -858,36 +993,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -903,7 +1053,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11788,
+   "triangulos": 12512,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -916,9 +1066,9 @@
    "W": 5,
    "D": 3.1,
    "guardias": 7,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "d0fa2870",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "98e0dcfa",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -939,44 +1089,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.23,
-     "libre_m2": 7.23
+     "alcanzable_m2": 7.18,
+     "libre_m2": 7.18
     }
    },
    "luz": {
@@ -984,7 +1149,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12060,
+   "triangulos": 12784,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -997,9 +1162,9 @@
    "W": 6.2,
    "D": 4.9,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "cb7b4f3d",
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "c6178aa7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1020,46 +1185,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "va_soporte_pintura",
+     "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1075,7 +1255,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12470,
+   "triangulos": 12922,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1088,9 +1268,9 @@
    "W": 6.2,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "2be2c394",
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "ae7da0eb",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1111,41 +1291,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1161,7 +1356,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12398,
+   "triangulos": 12850,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1174,9 +1369,9 @@
    "W": 6.2,
    "D": 4.6,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 9,
-   "hash": "4eb735cc",
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "4f2d16fd",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1197,46 +1392,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1252,7 +1462,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11622,
+   "triangulos": 12074,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1265,9 +1475,9 @@
    "W": 3.5,
    "D": 4.9,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "23c4f8b",
+   "objetos": 15,
+   "distintos": 14,
+   "hash": "a924299c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1288,49 +1498,64 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.41,
-     "libre_m2": 8.41
+     "alcanzable_m2": 8.36,
+     "libre_m2": 8.36
     }
    },
    "luz": {
@@ -1338,7 +1563,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13300,
+   "triangulos": 14024,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -1351,9 +1576,9 @@
    "W": 6.2,
    "D": 3.4,
    "guardias": 7,
-   "objetos": 13,
-   "distintos": 10,
-   "hash": "8bb0bbe",
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "b1a5bba7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1374,46 +1599,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 0
+     "obj": "va_soporte_pintura",
+     "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
-     "n": 1
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1429,7 +1669,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11086,
+   "triangulos": 11278,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1442,9 +1682,9 @@
    "W": 6.2,
    "D": 2.8,
    "guardias": 7,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "4f935c57",
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "ee869b91",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1465,41 +1705,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1515,7 +1770,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12702,
+   "triangulos": 13154,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -1528,9 +1783,9 @@
    "W": 4.1,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "fe286067",
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "450855c8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1551,36 +1806,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -1596,7 +1866,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10684,
+   "triangulos": 10876,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -1609,9 +1879,9 @@
    "W": 5.6,
    "D": 4,
    "guardias": 6,
-   "objetos": 10,
-   "distintos": 9,
-   "hash": "89b52a1a",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "6a1bd83c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1632,46 +1902,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -1687,7 +1972,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9234,
+   "triangulos": 9426,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -1700,9 +1985,9 @@
    "W": 6.2,
    "D": 3.1,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "46a44928",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "4f057e43",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1723,54 +2008,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.54,
-     "libre_m2": 10.54
+     "alcanzable_m2": 10.49,
+     "libre_m2": 10.49
     }
    },
    "luz": {
@@ -1778,7 +2078,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12686,
+   "triangulos": 13410,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -1791,9 +2091,9 @@
    "W": 5.6,
    "D": 3.1,
    "guardias": 6,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "4b86119f",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "6d5ec49e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1814,41 +2114,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 6
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -1864,7 +2179,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15274,
+   "triangulos": 15726,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -1877,9 +2192,9 @@
    "W": 4.4,
    "D": 3.4,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 9,
-   "hash": "c804dbaf",
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "6f641f4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1900,36 +2215,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -1945,7 +2275,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11024,
+   "triangulos": 11476,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -1958,9 +2288,9 @@
    "W": 4.4,
    "D": 3.1,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 10,
-   "hash": "5507a547",
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "8eae56dc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1976,44 +2306,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.64,
-     "libre_m2": 6.64
+     "alcanzable_m2": 6.37,
+     "libre_m2": 6.37
     }
    },
    "luz": {
@@ -2021,7 +2366,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8808,
+   "triangulos": 11752,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2034,9 +2379,9 @@
    "W": 5.300000000000001,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 11,
-   "distintos": 8,
-   "hash": "714617db",
+   "objetos": 12,
+   "distintos": 9,
+   "hash": "bfe7d5",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2057,54 +2402,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.13,
-     "libre_m2": 11.13
+     "alcanzable_m2": 10.79,
+     "libre_m2": 10.79
     }
    },
    "luz": {
@@ -2112,7 +2472,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10182,
+   "triangulos": 13126,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -2125,9 +2485,9 @@
    "W": 7.7,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "e9219a64",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "8d087a49",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2148,46 +2508,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -2203,7 +2578,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13374,
+   "triangulos": 13826,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -2216,9 +2591,9 @@
    "W": 6.5,
    "D": 4,
    "guardias": 7,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "9ccc594a",
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "c69ed6dc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2239,46 +2614,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -2294,7 +2684,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10534,
+   "triangulos": 10726,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -2307,9 +2697,9 @@
    "W": 6.5,
    "D": 4,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "45828dc3",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "4fe53735",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2330,46 +2720,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -2385,7 +2790,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13774,
+   "triangulos": 14226,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -2398,9 +2803,9 @@
    "W": 7.1,
    "D": 4.3,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "683dca33",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "e7d41ee",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2421,46 +2826,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -2476,7 +2896,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13446,
+   "triangulos": 13898,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -2489,9 +2909,9 @@
    "W": 5.9,
    "D": 2.5,
    "guardias": 6,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "b48cc33b",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "8ef22e54",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2512,44 +2932,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.88,
-     "libre_m2": 6.88
+     "alcanzable_m2": 6.59,
+     "libre_m2": 6.59
     }
    },
    "luz": {
@@ -2557,7 +2992,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9138,
+   "triangulos": 12082,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -2570,9 +3005,9 @@
    "W": 3.8000000000000003,
    "D": 3.4,
    "guardias": 6,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "328de73e",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "efe6a8ae",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2588,36 +3023,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -2633,7 +3083,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12196,
+   "triangulos": 12648,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2646,9 +3096,9 @@
    "W": 5,
    "D": 4,
    "guardias": 8,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "c11ee86d",
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "4d70fd48",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2669,46 +3119,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -2724,7 +3189,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12512,
+   "triangulos": 13236,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2737,9 +3202,9 @@
    "W": 4.4,
    "D": 4.6,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 9,
-   "hash": "51195148",
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "e3f42a99",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2760,46 +3225,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 0
+     "obj": "va_soporte_pintura",
+     "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -2815,7 +3295,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8928,
+   "triangulos": 9120,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2828,9 +3308,9 @@
    "W": 4.1,
    "D": 2.8,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "482face4",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "b917de05",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2846,31 +3326,46 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -2886,7 +3381,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12196,
+   "triangulos": 12648,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -2899,9 +3394,9 @@
    "W": 7.4,
    "D": 4.3,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 10,
-   "hash": "d3ad2aec",
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "eca9326f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2922,46 +3417,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -2977,7 +3487,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13590,
+   "triangulos": 14042,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -2990,9 +3500,9 @@
    "W": 7.4,
    "D": 4.6,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 10,
-   "hash": "a7099c7e",
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "66add2bf",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3013,54 +3523,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 22.75,
-     "libre_m2": 22.75
+     "alcanzable_m2": 22.42,
+     "libre_m2": 22.42
     }
    },
    "luz": {
@@ -3068,7 +3593,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10134,
+   "triangulos": 13078,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -3081,9 +3606,9 @@
    "W": 3.5,
    "D": 4,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 8,
-   "hash": "be1ef433",
+   "objetos": 12,
+   "distintos": 9,
+   "hash": "5223fc78",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3104,36 +3629,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3149,7 +3689,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10428,
+   "triangulos": 10880,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3162,9 +3702,9 @@
    "W": 7.1,
    "D": 3.7,
    "guardias": 8,
-   "objetos": 14,
-   "distintos": 9,
-   "hash": "91e74f23",
+   "objetos": 15,
+   "distintos": 10,
+   "hash": "d27dadf8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3185,46 +3725,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "va_soporte_pintura",
+     "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -3240,7 +3795,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13026,
+   "triangulos": 13478,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -3253,9 +3808,9 @@
    "W": 3.2,
    "D": 4,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "c42c13f8",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "cec52628",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3271,36 +3826,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3316,7 +3886,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12800,
+   "triangulos": 13252,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3329,9 +3899,9 @@
    "W": 7.7,
    "D": 3.4,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "c9eeb220",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "62c73fd6",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3352,46 +3922,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -3407,7 +3992,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12378,
+   "triangulos": 12830,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -3420,9 +4005,9 @@
    "W": 5.6,
    "D": 3.4,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "44a159ef",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "580a7e3d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3443,54 +4028,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.27,
-     "libre_m2": 10.27
+     "alcanzable_m2": 10.22,
+     "libre_m2": 10.22
     }
    },
    "luz": {
@@ -3498,7 +4098,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11810,
+   "triangulos": 12534,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -3511,9 +4111,9 @@
    "W": 3.8000000000000003,
    "D": 3.1,
    "guardias": 4,
-   "objetos": 10,
-   "distintos": 8,
-   "hash": "a3597390",
+   "objetos": 11,
+   "distintos": 9,
+   "hash": "ff28cdd9",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3529,31 +4129,46 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3569,7 +4184,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9276,
+   "triangulos": 9468,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3581,10 +4196,10 @@
    "seed": 42,
    "W": 5.300000000000001,
    "D": 3.4,
-   "guardias": 5,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "def8169a",
+   "guardias": 6,
+   "objetos": 14,
+   "distintos": 13,
+   "hash": "522535fc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3605,54 +4220,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.82,
-     "libre_m2": 9.82
+     "alcanzable_m2": 9.16,
+     "libre_m2": 9.16
     }
    },
    "luz": {
@@ -3660,7 +4290,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9922,
+   "triangulos": 14022,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -3673,9 +4303,9 @@
    "W": 4.1,
    "D": 4.3,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "3e2febac",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "dd269e92",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3696,41 +4326,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3746,7 +4391,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11448,
+   "triangulos": 11900,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3759,9 +4404,9 @@
    "W": 3.8000000000000003,
    "D": 3.1,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 9,
-   "hash": "2606b640",
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "2255e9c1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3777,31 +4422,46 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3817,7 +4477,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12784,
+   "triangulos": 13236,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3830,9 +4490,9 @@
    "W": 7.7,
    "D": 3.4,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "2645aaa3",
+   "objetos": 17,
+   "distintos": 14,
+   "hash": "1e74e5b2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3853,46 +4513,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "va_soporte_pintura",
+     "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -3908,7 +4583,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11898,
+   "triangulos": 12350,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -3921,9 +4596,9 @@
    "W": 4.1,
    "D": 3.4,
    "guardias": 5,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "a1e4a1ee",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "e95439a7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3939,44 +4614,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.53,
-     "libre_m2": 6.53
+     "alcanzable_m2": 6.48,
+     "libre_m2": 6.48
     }
    },
    "luz": {
@@ -3984,7 +4674,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11656,
+   "triangulos": 12380,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -3996,10 +4686,10 @@
    "seed": 47,
    "W": 7.4,
    "D": 4,
-   "guardias": 6,
+   "guardias": 5,
    "objetos": 14,
    "distintos": 11,
-   "hash": "cfa75018",
+   "hash": "93905e92",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4020,54 +4710,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.25,
-     "libre_m2": 19.25
+     "alcanzable_m2": 19.07,
+     "libre_m2": 19.07
     }
    },
    "luz": {
@@ -4075,7 +4780,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10462,
+   "triangulos": 12250,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -4088,9 +4793,9 @@
    "W": 5.6,
    "D": 4.3,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 10,
-   "hash": "4df0dcc2",
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "359c792b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4111,46 +4816,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4166,7 +4886,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11810,
+   "triangulos": 12262,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4179,9 +4899,9 @@
    "W": 3.5,
    "D": 4.9,
    "guardias": 7,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "adbfe297",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "6cd22e08",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4202,41 +4922,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4252,7 +4987,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11424,
+   "triangulos": 11876,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -4265,9 +5000,9 @@
    "W": 6.2,
    "D": 2.8,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "abc88f6f",
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "d2a4e54a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4288,41 +5023,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -4338,7 +5088,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11702,
+   "triangulos": 12154,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -4351,9 +5101,9 @@
    "W": 3.5,
    "D": 2.5,
    "guardias": 4,
-   "objetos": 7,
-   "distintos": 7,
-   "hash": "a67bef72",
+   "objetos": 8,
+   "distintos": 8,
+   "hash": "f84f0288",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4364,39 +5114,54 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.32,
-     "libre_m2": 3.32
+     "alcanzable_m2": 3.28,
+     "libre_m2": 3.28
     }
    },
    "luz": {
@@ -4404,7 +5169,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8968,
+   "triangulos": 9692,
    "mallas": 9,
    "luces": 1,
    "determinista": true,
@@ -4417,9 +5182,9 @@
    "W": 4.1,
    "D": 3.4,
    "guardias": 4,
-   "objetos": 9,
-   "distintos": 8,
-   "hash": "2b432f9a",
+   "objetos": 10,
+   "distintos": 9,
+   "hash": "ffb08cb4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4435,36 +5200,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4480,7 +5260,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11180,
+   "triangulos": 11632,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -4493,9 +5273,9 @@
    "W": 3.5,
    "D": 3.4,
    "guardias": 4,
-   "objetos": 9,
-   "distintos": 7,
-   "hash": "d152ce04",
+   "objetos": 10,
+   "distintos": 8,
+   "hash": "391a0af2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4511,31 +5291,46 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 1
     }
@@ -4551,7 +5346,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 7992,
+   "triangulos": 8184,
    "mallas": 9,
    "luces": 1,
    "determinista": true,
@@ -4564,9 +5359,9 @@
    "W": 5.9,
    "D": 4.6,
    "guardias": 6,
-   "objetos": 11,
-   "distintos": 9,
-   "hash": "a3052d13",
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "3762b003",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4587,46 +5382,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4642,7 +5452,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9978,
+   "triangulos": 10170,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4655,9 +5465,9 @@
    "W": 5.9,
    "D": 3.4,
    "guardias": 7,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "f8a49199",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "d02e4f31",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4678,54 +5488,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.76,
-     "libre_m2": 10.76
+     "alcanzable_m2": 10.72,
+     "libre_m2": 10.72
     }
    },
    "luz": {
@@ -4733,7 +5558,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12522,
+   "triangulos": 13246,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4746,9 +5571,9 @@
    "W": 4.4,
    "D": 3.4,
    "guardias": 5,
-   "objetos": 10,
-   "distintos": 9,
-   "hash": "15bfd734",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "fab2bd3c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4769,36 +5594,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4814,7 +5654,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9396,
+   "triangulos": 9588,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -4827,9 +5667,9 @@
    "W": 5.9,
    "D": 3.4,
    "guardias": 6,
-   "objetos": 10,
-   "distintos": 9,
-   "hash": "4a6d93b",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "67b57366",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4850,46 +5690,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4905,7 +5760,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10602,
+   "triangulos": 10794,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -4918,9 +5773,9 @@
    "W": 4.7,
    "D": 3.1,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "349a88a9",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "a405de9",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4941,36 +5796,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -4986,7 +5856,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8920,
+   "triangulos": 9112,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -4999,9 +5869,9 @@
    "W": 6.5,
    "D": 3.1,
    "guardias": 5,
-   "objetos": 13,
-   "distintos": 9,
-   "hash": "4b7cf76",
+   "objetos": 14,
+   "distintos": 10,
+   "hash": "303f5be0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5022,46 +5892,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -5077,7 +5962,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11630,
+   "triangulos": 12082,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5090,9 +5975,9 @@
    "W": 5.300000000000001,
    "D": 3.1,
    "guardias": 6,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "9ee1d82f",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "acafcf1d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5113,49 +5998,64 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 3
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.35,
-     "libre_m2": 8.35
+     "alcanzable_m2": 8.04,
+     "libre_m2": 8.04
     }
    },
    "luz": {
@@ -5163,7 +6063,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9802,
+   "triangulos": 12746,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5176,9 +6076,9 @@
    "W": 4.4,
    "D": 3.4,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "9871c852",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "65f395ce",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5199,44 +6099,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.01,
-     "libre_m2": 7.01
+     "alcanzable_m2": 6.96,
+     "libre_m2": 6.96
     }
    },
    "luz": {
@@ -5244,7 +6159,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13232,
+   "triangulos": 13956,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5257,9 +6172,9 @@
    "W": 7.1,
    "D": 2.5,
    "guardias": 6,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "68bd4db3",
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "fa4bbbe0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5280,49 +6195,64 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 6
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.03,
-     "libre_m2": 9.03
+     "alcanzable_m2": 8.73,
+     "libre_m2": 8.73
     }
    },
    "luz": {
@@ -5330,7 +6260,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10522,
+   "triangulos": 13466,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5343,9 +6273,9 @@
    "W": 3.5,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 10,
-   "hash": "acfd5e00",
+   "objetos": 13,
+   "distintos": 11,
+   "hash": "fee4dc77",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5361,36 +6291,51 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -5406,7 +6351,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12648,
+   "triangulos": 13100,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5418,10 +6363,10 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.8,
-   "guardias": 5,
+   "guardias": 4,
    "objetos": 12,
    "distintos": 11,
-   "hash": "5c4cf990",
+   "hash": "664eb631",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5437,44 +6382,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
-     "n": 1
+     "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.26,
-     "libre_m2": 6.26
+     "alcanzable_m2": 5.94,
+     "libre_m2": 5.94
     }
    },
    "luz": {
@@ -5482,7 +6442,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10128,
+   "triangulos": 11916,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -5495,9 +6455,9 @@
    "W": 7.4,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "2f6d96e9",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "4a5d1f02",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5518,46 +6478,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 0
+     "obj": "va_soporte_pintura",
+     "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -5573,7 +6548,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9838,
+   "triangulos": 10030,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5586,9 +6561,9 @@
    "W": 5.9,
    "D": 4.6,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "f5040d9c",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "88d99954",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5609,46 +6584,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -5664,7 +6654,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11382,
+   "triangulos": 11574,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5677,9 +6667,9 @@
    "W": 5.6,
    "D": 4.9,
    "guardias": 8,
-   "objetos": 12,
-   "distintos": 9,
-   "hash": "3daa5c1",
+   "objetos": 13,
+   "distintos": 10,
+   "hash": "dd5f2549",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5700,46 +6690,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -5755,7 +6760,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13730,
+   "triangulos": 14454,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5768,9 +6773,9 @@
    "W": 5.9,
    "D": 2.8,
    "guardias": 8,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "98df1e4",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "6cef547a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5791,41 +6796,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -5841,7 +6861,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10338,
+   "triangulos": 10530,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -5854,9 +6874,9 @@
    "W": 7.7,
    "D": 4,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "41c3c031",
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "fb0b283d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5877,46 +6897,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -5932,7 +6967,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11890,
+   "triangulos": 12614,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -5945,9 +6980,9 @@
    "W": 5.300000000000001,
    "D": 4,
    "guardias": 5,
-   "objetos": 11,
-   "distintos": 10,
-   "hash": "a2df7cf8",
+   "objetos": 12,
+   "distintos": 11,
+   "hash": "35fafbfc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5968,46 +7003,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
+     "obj": "va_cesto_temporada",
+     "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -6023,7 +7073,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11622,
+   "triangulos": 12346,
    "mallas": 10,
    "luces": 2,
    "determinista": true,
@@ -6036,9 +7086,9 @@
    "W": 5,
    "D": 4,
    "guardias": 6,
-   "objetos": 12,
-   "distintos": 11,
-   "hash": "1fb85fcb",
+   "objetos": 13,
+   "distintos": 12,
+   "hash": "b2cc780c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6059,46 +7109,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -6114,7 +7179,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9456,
+   "triangulos": 9648,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -6127,9 +7192,9 @@
    "W": 7.7,
    "D": 3.1,
    "guardias": 6,
-   "objetos": 14,
-   "distintos": 11,
-   "hash": "44ba5a44",
+   "objetos": 15,
+   "distintos": 12,
+   "hash": "cd29a2bd",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6150,46 +7215,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -6205,7 +7285,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11574,
+   "triangulos": 12026,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6218,9 +7298,9 @@
    "W": 3.5,
    "D": 4.9,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "f3cc5235",
+   "objetos": 16,
+   "distintos": 13,
+   "hash": "1e1b5304",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6241,41 +7321,56 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -6291,7 +7386,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14704,
+   "triangulos": 15156,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -6304,9 +7399,9 @@
    "W": 6.5,
    "D": 4.6,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 10,
-   "hash": "d1a9614c",
+   "objetos": 15,
+   "distintos": 11,
+   "hash": "dc7e4ec1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6327,46 +7422,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cesto_temporada",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -6382,7 +7492,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11898,
+   "triangulos": 12350,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6395,9 +7505,9 @@
    "W": 7.4,
    "D": 4.3,
    "guardias": 7,
-   "objetos": 15,
-   "distintos": 10,
-   "hash": "9b59788b",
+   "objetos": 16,
+   "distintos": 11,
+   "hash": "77cfad6a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6418,54 +7528,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.9,
-     "libre_m2": 20.9
+     "alcanzable_m2": 20.46,
+     "libre_m2": 20.46
     }
    },
    "luz": {
@@ -6473,7 +7598,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 9622,
+   "triangulos": 12566,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6486,9 +7611,9 @@
    "W": 4.7,
    "D": 2.8,
    "guardias": 4,
-   "objetos": 10,
-   "distintos": 9,
-   "hash": "8264656d",
+   "objetos": 11,
+   "distintos": 10,
+   "hash": "1429fe1d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6504,44 +7629,59 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 0
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 0
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.1,
-     "libre_m2": 6.1
+     "alcanzable_m2": 5.81,
+     "libre_m2": 5.81
     }
    },
    "luz": {
@@ -6549,7 +7689,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 8364,
+   "triangulos": 11308,
    "mallas": 9,
    "luces": 2,
    "determinista": true,
@@ -6562,9 +7702,9 @@
    "W": 7.4,
    "D": 4.9,
    "guardias": 8,
-   "objetos": 15,
-   "distintos": 11,
-   "hash": "9a21eef5",
+   "objetos": 16,
+   "distintos": 12,
+   "hash": "4eeb6538",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6585,54 +7725,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
+     "obj": "va_soporte_ciclismo",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_soporte_pintura",
+     "n": 0
+    },
+    {
+     "entrada": 7,
      "obj": "va_cesto_temporada",
      "n": 1
     },
     {
-     "entrada": 5,
+     "entrada": 8,
      "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
-     "entrada": 6,
+     "entrada": 9,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 10,
      "obj": "va_caja_almacen",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 24.71,
-     "libre_m2": 24.71
+     "alcanzable_m2": 24.36,
+     "libre_m2": 24.36
     }
    },
    "luz": {
@@ -6640,7 +7795,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10218,
+   "triangulos": 13162,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6653,9 +7808,9 @@
    "W": 6.8,
    "D": 2.8,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 10,
-   "hash": "73d6d587",
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "532d5b29",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6676,46 +7831,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
-     "n": 0
-    },
-    {
-     "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
+     "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -6731,7 +7901,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 12534,
+   "triangulos": 12986,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6744,9 +7914,9 @@
    "W": 6.8,
    "D": 3.7,
    "guardias": 6,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "ee424f28",
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "5c37f5ba",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6767,54 +7937,69 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
+     "entrada": 5,
+     "obj": "va_soporte_ciclismo",
+     "n": 1
+    },
+    {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
+     "obj": "va_estante_trastero_0|va_estante_traster",
      "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.05,
-     "libre_m2": 15.05
+     "alcanzable_m2": 15,
+     "libre_m2": 15
     }
    },
    "luz": {
@@ -6822,7 +8007,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11218,
+   "triangulos": 11942,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6835,9 +8020,9 @@
    "W": 7.1,
    "D": 4.6,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 12,
-   "hash": "6cc498cc",
+   "objetos": 17,
+   "distintos": 13,
+   "hash": "94a4df94",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6858,46 +8043,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
-     "n": 1
+     "obj": "va_soporte_ciclismo",
+     "n": 0
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
      "obj": "va_ventilador_guardado",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 12,
      "obj": "va_utiles_guardados",
      "n": 0
     },
     {
-     "entrada": 10,
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 5
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -6913,7 +8113,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 10734,
+   "triangulos": 10926,
    "mallas": 10,
    "luces": 3,
    "determinista": true,
@@ -6926,9 +8126,9 @@
    "W": 7.4,
    "D": 3.4,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "85d6df7b",
+   "objetos": 15,
+   "distintos": 13,
+   "hash": "db7d6dcc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6949,46 +8149,61 @@
     },
     {
      "entrada": 3,
-     "obj": "va_bicicleta_guardada|va_escalera_guarda",
+     "obj": "va_bicicleta_guardada|va_bicicleta_carga",
      "n": 1
     },
     {
      "entrada": 4,
-     "obj": "va_cesto_temporada",
+     "obj": "va_soporte_ciclismo",
      "n": 1
     },
     {
      "entrada": 5,
-     "obj": "va_estante_trastero_0|va_estante_traster",
+     "obj": "va_soporte_ciclismo",
      "n": 0
     },
     {
      "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_soporte_pintura",
      "n": 0
     },
     {
      "entrada": 7,
-     "obj": "va_caja_almacen",
+     "obj": "va_cesto_temporada",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_ventilador_guardado",
-     "n": 1
+     "obj": "va_estante_trastero_0|va_estante_traster",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_utiles_guardados",
+     "obj": "va_cajas_apiladas",
      "n": 0
     },
     {
      "entrada": 10,
+     "obj": "va_caja_almacen",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_ventilador_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_utiles_guardados",
+     "n": 0
+    },
+    {
+     "entrada": 13,
      "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
      "n": 4
     },
     {
-     "entrada": 11,
+     "entrada": 14,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -7004,7 +8219,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 13486,
+   "triangulos": 13938,
    "mallas": 10,
    "luces": 3,
    "determinista": true,

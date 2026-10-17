@@ -99,11 +99,11 @@
   }
  ],
  "contratos": {
-  "pruebas": 33,
+  "pruebas": 40,
   "errores": 0
  },
  "catalogo": {
-  "objetos": 1876,
+  "objetos": 1879,
   "kits": 40,
   "errores": 0,
   "avisos": 0
@@ -112,10 +112,10 @@
  "habitaciones_sinteticas": 1166,
  "errores_casas": 0,
  "maximos_sinteticas": {
-  "triangulos": 70556,
+  "triangulos": 70578,
   "mallas": 59,
   "luces": 9,
-  "montaje_ms": 171
+  "montaje_ms": 168.1
  },
  "casas_pueblo": 22,
  "habitaciones_pueblo": 132,
@@ -146,8 +146,8 @@
  },
  "paquete": {
   "errores": 0,
-  "maximo_entrada_ms": 193.2,
-  "annie_entrada_ms": 90.5,
+  "maximo_entrada_ms": 196.1,
+  "annie_entrada_ms": 89.6,
   "comercios": [
    {
     "tipo": "bar",
@@ -176,9 +176,9 @@
   "archivos": 21,
   "cambios": [],
   "sha256": {
-   "data/interiores/datos.json": "5af1425d0433a23982b32b77a10ec559855db0e28593216d1fb3e1af21010b8f",
+   "data/interiores/datos.json": "a2988840e03b1a7f264d38fb4f3632ee38f6558c7c42600278292a2bc6162f6c",
    "data/kits/vivienda_bano.json": "c87d9cbadea65b4cafb7ef65aa94782bb0cb08a5b89bc876dbe91968662beeac",
-   "data/kits/vivienda_cocina.json": "241fbf6f65c265f76341a8e962cdffa1000fc697d9e0f7584710e3914491c973",
+   "data/kits/vivienda_cocina.json": "a8e2e5e9a8f04b892511d2e9ccfd589529c3793e0f2b99ec9dbb44c8a26af518",
    "data/kits/vivienda_comedor.json": "515856c8e7e1c76241161ee97e81d9371cc76b4ddea4559e9f68a0d8db010e9e",
    "data/kits/vivienda_costura.json": "771825af8ce8040534cd53907175ee62a540f8c89803b33866fb8ebb12e979e6",
    "data/kits/vivienda_despacho.json": "50f432e53e4bad0b83f16f0df482bb0e27ccb03d454feab8a42884621d1d18b7",
@@ -191,12 +191,12 @@
    "data/kits/vivienda_pintura.json": "902f5a6a5f758fca0c0a41d543a311ae7b1e94a7a5ad2c33cf33b37d0786a583",
    "data/kits/vivienda_salon.json": "39fa736a80bd561e82df6a8a536782d5d86e7236053c2e8d78487f3e5e9ea9f2",
    "data/kits/vivienda_taller.json": "81c1daf167eb6fee79cd9d3299587e45c0c7f48d786ce760b8a75af275806b4e",
-   "data/kits/vivienda_trastero.json": "85a41b44b435386d992b582e8bfe9ae1b04de8420376be17544217e85a12aea9",
+   "data/kits/vivienda_trastero.json": "67df6b4178f220ff7ba8f310f1eb80288459020214cc3f3e1134d20b79c16d10",
    "data/kits/vivienda_trofeos.json": "e6e18eefd473c35326ece26cb0dd5f69927fa8d4c7bca34c6aef4e8b0580e9a3",
    "data/objetos/vivienda.json": "b0f228623fa616b4d33afdfb07d4cf0eb18f7651688cdeb220a2f91be4053d12",
-   "data/objetos/vivienda_a.json": "d405cde128711ae427232e2e1c5e0a6d3f4d2129fb433ca7de3ba20c7d5fc7e2",
+   "data/objetos/vivienda_a.json": "355d664758524904a1ebb24501936823c1095dae79485df2790f21c49edd0dcb",
    "data/objetos/vivienda_b.json": "1fc19839e8d4ac994092d5aaae1e148b753d40255855a9ea608d0d62057048dd",
-   "src/interiores_datos.js": "c2cc37d404aef2c4655c0c0ab3b17881285cdcff504d2c0dabd96180db71e0c3"
+   "src/interiores_datos.js": "7f2035d230789baaab8fd0619f8cdc07fbc6eb826991924df4c338afe71f45d9"
   }
  },
  "revision_visual": {
@@ -206,7 +206,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.7,
+   "minimo": 2.902,
    "maximo": 3.61
   },
   "hashes_fichas_validos": true,
@@ -220,8 +220,8 @@
     "B": 3.018
    },
    "cocina": {
-    "A": 3.04,
-    "B": 3.042
+    "A": 3.176,
+    "B": 3.094
    },
    "comedor": {
     "A": 3.15,
@@ -272,8 +272,8 @@
     "B": 3.218
    },
    "trastero": {
-    "A": 2.938,
-    "B": 2.7
+    "A": 3.252,
+    "B": 3.048
    },
    "trofeos": {
     "A": 2.992,
@@ -281,7 +281,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "En curso. Tanda 8 vuelve a evaluar cocina, baño y trastero. Otras 14 fichas conservan su última evaluación y no acreditan el nuevo render compartido."
+  "objetivo_4": "en curso; kits de la tanda 9: cocina, trastero. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -714,5 +714,46 @@
    "Residente ocluye encimera en comparación nocturna de cocina.",
    "No se recertifican otras 14 fichas tras el render compartido."
   ]
+ },
+ "calidad_tanda9": {
+  "fecha": "2026-10-17",
+  "tanda": 9,
+  "objetivo": 4,
+  "estado": "mejora_parcial_objetivo_no_alcanzado",
+  "base": "313cf52da64c844941b5723326ad73716e2c00dc",
+  "contratos": 40,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 70578,
+   "mallas": 59,
+   "luces": 9,
+   "montaje_ms": 168.1
+  },
+  "kits": {
+   "cocina": {
+    "ahora": {
+     "A": 3.176,
+     "B": 3.094
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   },
+   "trastero": {
+    "ahora": {
+     "A": 3.252,
+     "B": 3.048
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0,
+   "partida_ficticia_conservada": true
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda9_2026-10-17.md",
+  "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
  }
 }
