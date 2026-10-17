@@ -62,6 +62,6 @@ jobs:
       - name: Interiores, cinco semillas por kit (I-03, I-04, V-03)
         run: python3 tools/interiores/validar.py --semillas 1,2,3,4,5
       - name: Contratos funcionales de las viviendas
-        run: python3 tools/interiores/casas_pruebas.py --tanda 7
+        run: python3 tools/interiores/casas_pruebas.py --tanda 8
       - name: Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)
         run: python3 tools/interiores/validar.py --casas ${{ github.event_name == 'pull_request' && '30' || '200' }} --exigir-todas

@@ -226,5 +226,25 @@ export async function probarCasas(opts = {}) {
     const id='prueba_bisel_temporal';OBJETOS[id]={partes:[{f:'caja',d:[1,1,1],p:[0,.5,0],c:'#b99770',m:'madera',redondeo:.04}]};
     let g;try{g=construir([{obj:id,x:0,y:0,z:0,ry:0}]);g.updateMatrixWorld(true);const b=new THREE.Box3().setFromObject(g);exigir(Math.abs(b.min.x+.5)<1e-6&&Math.abs(b.max.x-.5)<1e-6&&Math.abs(b.min.y)<1e-6&&Math.abs(b.max.y-1)<1e-6,'el bisel altera el volumen que usa la colisión');let n=0;g.traverse(o=>{if(o.isMesh)n+=(o.geometry.index?o.geometry.index.count:o.geometry.attributes.position.count)/3;});exigir(n===108,'el coste geométrico del bisel no coincide con el catálogo');}finally{if(g)tirar({group:g});delete OBJETOS[id];}
   });
+  if(opts.tanda>=8)await caso('la luz por habitación se restaura y respeta apagones',async()=>{
+    const {prepararLuzVivienda}=await import('/src/luz_vivienda.js');
+    const h=H.buildVecino(3244,{x:-9700,z:-9700});
+    try{
+      const rm=h.rooms.find(r=>r.type==='bano'),cam={position:new THREE.Vector3((rm.x0+rm.x1)/2,(rm.lv||0)*3.1+1.6,(rm.z0+rm.z1)/2)},antes=h.lights.map(l=>[l.intensity,l.castShadow]);
+      const fin=prepararLuzVivienda(h,cam);exigir(h.lights.filter(l=>l.castShadow).length===1,'más de una luz puntual con sombras por vista');
+      exigir(h.lights.some((l,i)=>l.intensity<antes[i][0]),'no se limita el relleno de habitaciones vecinas');fin();
+      exigir(h.lights.every((l,i)=>l.intensity===antes[i][0]&&l.castShadow===antes[i][1]),'el render altera permanentemente las lámparas');
+      for(const l of h.lights)l.intensity=0;const f=prepararLuzVivienda(h,cam);f();exigir(h.lights.every(l=>l.intensity===0),'el render enciende una lámpara apagada');
+    }finally{tirar(h);}
+  });
+  if(opts.tanda>=8)await caso('el cruce entre dos luces no produce un salto de brillo',async()=>{
+    const {prepararLuzVivienda}=await import('/src/luz_vivienda.js');
+    const lights=[-1,1].map(x=>{const l=new THREE.PointLight(0xffffff,10,8);l.position.set(x,2.6,0);return l;});
+    const h={kind:'vecino',group:new THREE.Group(),lights,rooms:[]};
+    const muestra=x=>{const fin=prepararLuzVivienda(h,{position:new THREE.Vector3(x,1.6,0)}),r=lights.map(l=>({i:l.intensity,s:l.castShadow?l.shadow.intensity:0}));fin();return r;};
+    const a=muestra(-.001),b=muestra(.001);
+    exigir(a.every((v,i)=>Math.abs(v.i-b[i].i)<.02),'un desplazamiento de 2 mm intercambia bruscamente las intensidades');
+    exigir([...a,...b].every(v=>v.s<.01),'la sombra cambia de origen sin desvanecerse en el cruce');
+  });
   return { pruebas, errores };
 }

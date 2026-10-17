@@ -99,7 +99,7 @@
   }
  ],
  "contratos": {
-  "pruebas": 23,
+  "pruebas": 25,
   "errores": 0
  },
  "catalogo": {
@@ -146,8 +146,8 @@
  },
  "paquete": {
   "errores": 0,
-  "maximo_entrada_ms": 200.3,
-  "annie_entrada_ms": 78.4,
+  "maximo_entrada_ms": 201.9,
+  "annie_entrada_ms": 78.8,
   "comercios": [
    {
     "tipo": "bar",
@@ -197,7 +197,8 @@
    "data/objetos/vivienda_a.json": "53ef33f1e5df6dab11e8fa65895b19c2189b7a645ee713220d557eff8fecc647",
    "data/objetos/vivienda_b.json": "1fc19839e8d4ac994092d5aaae1e148b753d40255855a9ea608d0d62057048dd",
    "src/interiores_datos.js": "a21f87616dc5b91c5176883410f56b6f213eddf7474cc9266853eef788c4fe4c"
-  }
+  },
+  "tipo": "Datos idénticos por hash a la regeneración verificada de 059f665; esta tanda solo cambia render."
  },
  "revision_visual": {
   "fecha": "2026-10-17",
@@ -206,7 +207,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.854,
+   "minimo": 2.814,
    "maximo": 3.322
   },
   "hashes_fichas_validos": true,
@@ -216,8 +217,8 @@
     "B": 2.998
    },
    "bano": {
-    "A": 3.036,
-    "B": 2.854
+    "A": 3.034,
+    "B": 2.974
    },
    "cocina": {
     "A": 2.948,
@@ -272,7 +273,7 @@
     "B": 3.218
    },
    "trastero": {
-    "A": 3.082,
+    "A": 2.814,
     "B": 2.894
    },
    "trofeos": {
@@ -281,7 +282,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "en curso; kits de la tanda 3: trastero, despacho. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
+  "objetivo_4": "en curso; kits de la tanda 4: bano, trastero. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -418,5 +419,126 @@
   },
   "revision_independiente": "data/interiores/revision_calidad_tanda3_2026-10-17.md",
   "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
+ },
+ "calidad_tanda4": {
+  "fecha": "2026-10-17",
+  "tanda": 4,
+  "objetivo": 4,
+  "estado": "mejora_parcial_objetivo_no_alcanzado",
+  "base": "059f66515cf14365061be576a3714abfdf3594d2",
+  "contratos": 25,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 57212,
+   "mallas": 59,
+   "luces": 9,
+   "montaje_ms": 136.8
+  },
+  "kits": {
+   "bano": {
+    "ahora": {
+     "A": 3.034,
+     "B": 2.974
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   },
+   "trastero": {
+    "ahora": {
+     "A": 2.814,
+     "B": 2.894
+    },
+    "semillas_laboratorio": 81,
+    "errores": 0
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0,
+   "partida_ficticia_conservada": true
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda4_2026-10-17.md",
+  "pendiente": "Objetivo 4/5 no alcanzado. Composición y variedad del mobiliario requieren más trabajo.",
+  "nota_geometria": "El barrido de 200 casas y 81 distribuciones por kit corresponde a 059f665. Datos y modelos idénticos por hash; esta tanda cambia render.",
+  "rendimiento_render": {
+   "base": {
+    "calidad": "alta",
+    "medidas": [
+     {
+      "seed": 2786,
+      "media_ms": 4.808333337306976,
+      "maximo_ms": 6.400000035762787,
+      "sombras": 0,
+      "memoria": {
+       "geometries": 1583,
+       "textures": 183
+      }
+     },
+     {
+      "seed": 3244,
+      "media_ms": 13.074999998013178,
+      "maximo_ms": 16.099999964237213,
+      "sombras": 0,
+      "memoria": {
+       "geometries": 1583,
+       "textures": 183
+      }
+     },
+     {
+      "seed": 1594,
+      "media_ms": 13.350000003973642,
+      "maximo_ms": 15.200000047683716,
+      "sombras": 0,
+      "memoria": {
+       "geometries": 1583,
+       "textures": 183
+      }
+     }
+    ]
+   },
+   "nuevo": {
+    "calidad": "alta",
+    "medidas": [
+     {
+      "seed": 2786,
+      "media_ms": 7.341666668653488,
+      "maximo_ms": 11.199999988079071,
+      "sombras": 1,
+      "memoria": {
+       "geometries": 1402,
+       "textures": 179
+      }
+     },
+     {
+      "seed": 3244,
+      "media_ms": 14.808333332339922,
+      "maximo_ms": 16.900000035762787,
+      "sombras": 1,
+      "memoria": {
+       "geometries": 1457,
+       "textures": 186
+      }
+     },
+     {
+      "seed": 1594,
+      "media_ms": 15.09999999900659,
+      "maximo_ms": 19.099999964237213,
+      "sombras": 1,
+      "memoria": {
+       "geometries": 1628,
+       "textures": 195
+      }
+     }
+    ]
+   }
+  },
+  "revision_movimiento": "data/interiores/revision_luz_movimiento_2026-10-17.md",
+  "revision_codigo": "data/interiores/revision_luz_codigo_2026-10-17.md",
+  "continuidad": {
+   "contrato_red_fallos": 1,
+   "contratos_green": 25,
+   "resultado": "Sin salto notable en el umbral y bisectriz probados; no certifica todas las puertas o semillas."
+  }
  }
 }
