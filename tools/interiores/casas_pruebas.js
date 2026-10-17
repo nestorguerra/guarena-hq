@@ -516,5 +516,96 @@ export async function probarCasas(opts = {}) {
       }
     }finally{delete KITS[id];}
   });
+  if(opts.ninos||opts.tanda>=13)await caso('infantil 5045 y fichas conservan puesto unido, usos y paso real',()=>{
+    for(const seed of [4007,5045,1296]){
+      const h=H.buildVecino(seed,{x:0,z:0});
+      try{
+        const e=h.estancias.find(e=>e.kit==='vivienda_ninos'),C=e.colocados;
+        const mi=C.findIndex(p=>p.obj==='vb_mesa_ninos'),s=C.filter(p=>p.obj==='vb_silla_ninos');
+        exigir(mi>=0&&s.length===1&&s[0].de===mi&&s[0].e===C[mi].e,seed+': silla dispersa o ausente');
+        const m=C[mi],b=caja(m.obj),sb=caja(s[0].obj),dx=s[0].x-m.x,dz=s[0].z-m.z;
+        exigir(Math.abs(dx*Math.cos(m.ry)-dz*Math.sin(m.ry))<.001,'silla fuera del eje de la mesa');
+        exigir(Math.abs(dx*Math.sin(m.ry)+dz*Math.cos(m.ry)-(b.z1+sb.d/2+.06))<.001,'separación frontal alterada');
+        exigir(e.ancho===.8,'paso reducido');
+        exigir(h.pieces.bed.some(p=>p.rm.id===e.sala)&&h.pieces.table.some(p=>p.rm.id===e.sala)&&h.pieces.seat.some(p=>p.rm.id===e.sala),'función cama, mesa o asiento perdida');
+        exigir(h.inter.some(p=>p.sala===e.sala&&p.type==='hide'),'interacción del armario perdida');
+        exigir(!revisarUso(h).errores.some(x=>x.startsWith(e.sala+'/')),'uso infantil inaccesible');
+        for(const id of ['vb_cama_ninos','vb_armario_ninos','vb_osito','vb_bloques'])exigir(C.some(p=>p.obj===id),'obligatorio perdido '+id);
+      }finally{tirar(h);}
+    }
+  });
+  if(opts.ninos||opts.tanda>=13)await caso('infantil conserva volumen, roles y reservas negativas del puesto',()=>{
+    const b=caja('vb_cama_ninos'),a=caja('vb_cama_individual');
+    exigir(b.w>=a.w-.00001&&b.d>=a.d-.00001,'cama encogida');
+    exigir(OBJETOS.vb_cama_ninos.rol==='cama'&&OBJETOS.vb_armario_ninos.rol==='armario'&&OBJETOS.vb_estante_ninos.rol==='libros','rol perdido');
+    const w=caja('vb_armario_ninos');exigir(w.h>=1.49&&w.h<1.51&&.95*.42*1.5>=.8*.4*1.85,'armario sin volumen de ropa');
+    const id='__ninos_puesto';try{
+      const puesto=KITS.vivienda_ninos.objetos.find(e=>e.silla_frontal);
+      KITS[id]={...KITS.vivienda_ninos,objetos:[{...puesto,pared:'N',centrado:true}]};
+      const ctx={W:3,D:2.15,H:2.75,funciones:true},A=amueblar(id,37,ctx);
+      exigir(A.P.length===2&&A.P[1].de===0,'puesto libre incompleto');
+      const frontal=[{cx:0,cz:1.38,hw:1.5,hd:.2,a:0,y0:0,y1:1.5}];
+      exigir(amueblar(id,37,{...ctx,libres:frontal}).P.length===0,'acepta mesa sin hueco para su silla');
+      const reservas=[{cx:0,cz:1.075,hw:1.5,hd:1.075,a:0,y0:0,y1:3}],B=amueblar(id,37,{...ctx,libres:reservas});
+      exigir(B.P.length===0,'fuerza puesto dentro de reserva');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=13)await caso('despensa: cada envase cabe bajo las baldas reales de sus soportes',async()=>{
+    const {partes,penetra,superficie}=await import('/src/interiores_geo.js');
+    // Recorre el pool completo, no sólo las variantes sorteadas en tres fotografías.
+    // La tapa superior también cuenta: su hueco puede ser menor que el paso entre baldas.
+    let comprobados=0;
+    for(const e of KITS.vivienda_despensa.objetos.filter(e=>e.regla==='sobre'))for(const sid of e.en){
+      const soporte=partes({obj:sid,x:0,y:0,z:0,ry:0});
+      for(let k=0;k<OBJETOS[sid].superficies.length;k++){
+        const s=superficie(sid,k);if(!s)continue;
+        for(const id of e.variantes||[e.obj]){
+          const b=caja(id);if(b.w>s.x1-s.x0||b.d>s.z1-s.z0)continue;
+          const it={obj:id,x:(s.x0+s.x1-b.x0-b.x1)/2,z:(s.z0+s.z1-b.z0-b.z1)/2,y:s.y-b.y0,ry:0};
+          const piezas=partes(it);comprobados++;
+          exigir(piezas.every(p=>soporte.every(q=>penetra(p,q)<=.0001)),id+' atraviesa '+sid+' en superficie '+k);
+        }
+      }
+    }
+    exigir(comprobados>0,'no se comprobó ningún envase sobre baldas');
+  });
+  if(opts.tanda>=13)await caso('despensa: fichas, perfiles y fallback conservan el programa obligatorio',async()=>{
+    const {partes,penetra}=await import('/src/interiores_geo.js'),K=KITS.vivienda_despensa;
+    for(const seed of [2786,1689,2132]){
+      const h=H.buildVecino(seed,{x:0,z:0});try{
+        const e=h.estancias.find(e=>e.kit==='vivienda_despensa');exigir(e,seed+': falta despensa');
+        const C=e.colocados;
+        for(const id of ['va_estante','aparador',...(e.W*e.D>=14?['va_cajas_apiladas']:[])])exigir(C.some(p=>p.obj===id),seed+': falta '+id);
+        exigir(e.ancho>=.8&&!revisarUso(h).errores.some(x=>x.startsWith(e.sala+'/')),seed+': programa inaccesible');
+        for(const p of C.filter(p=>p.sop!=null)){
+          const soporte=C[p.sop];exigir(soporte&&OBJETOS[soporte.obj].superficies[p.sup],seed+': apoyo inexistente');
+          exigir(Math.abs(p.v.y0-(soporte.y+OBJETOS[soporte.obj].superficies[p.sup].y))<.001,seed+': envase sin apoyo');
+          exigir(partes(p).every(a=>partes(soporte).every(b=>penetra(a,b)<=.0001)),seed+': '+p.obj+' atraviesa su soporte');
+        }
+      }finally{tirar(h);}
+    }
+    for(const perfil of ['agricultor','cazador','matrimonio','familia','estudiante','artista','anciana']){
+      const activas=K.objetos.filter(e=>e.regla==='sobre'&&e.en?.includes('aparador')&&filtroHogar({perfil,estilo:'rustico',habitacion:'despensa'})(e));
+      exigir(activas.length===1,perfil+': desayuno/provisión duplicado o ausente');
+      const ids=activas[0].variantes||[activas[0].obj],campo=['agricultor','cazador'].includes(perfil);
+      exigir(ids.includes(campo?'va_alimento_garrafa_aceite':'va_alimento_pan_molde')&&!ids.includes(campo?'va_alimento_pan_molde':'va_alimento_garrafa_aceite'),perfil+': filtro de exclusión invertido');
+    }
+    const id='__despensa_fallback';try{
+      // El frente no cabe en esta pared de 2 m; los muebles esenciales sí caben en otras.
+      KITS[id]={...K,objetos:K.objetos.map((e,i)=>i===0?{...e,pared:'N',centrado:true}:e)};
+      for(const area of [13.999,14,14.001]){
+        const ctx={W:2,D:area/2,H:2.75,funciones:true},A=amueblar(id,37,ctx),B=amueblar(id,37,ctx);
+        exigir(JSON.stringify(A.P)===JSON.stringify(B.P),'fallback no reproducible');
+        const estante=A.P.find(p=>p.obj==='va_estante'),bajo=A.P.find(p=>p.obj==='aparador');
+        exigir(estante&&bajo&&Math.abs(Math.sin(estante.ry-bajo.ry))>.9,'no se ejercita fallback a otra pared');
+        const cajas=A.activas.filter(i=>K.objetos[i].obj==='va_cajas_apiladas');
+        exigir(cajas.length===1,'entradas de cajas solapadas o hueco en umbral');
+        exigir(!!K.objetos[cajas[0]].obligatorio===(area>=14),'mínimo de cajas incorrecto en '+area);
+        if(area>=14)exigir(A.P.some(p=>p.obj==='va_cajas_apiladas'),'cajas obligatorias ausentes');
+      }
+      const libres=[{cx:0,cz:3.5,hw:1,hd:3.5,a:0,y0:0,y1:2.4}];
+      exigir(amueblar(id,37,{W:2,D:7,H:2.75,funciones:true,libres}).P.filter(p=>p.regla!=='techo').length===0,'el fallback fuerza piezas dentro de una reserva total');
+    }finally{delete KITS[id];}
+  });
   return { pruebas, errores };
 }

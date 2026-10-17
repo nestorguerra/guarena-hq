@@ -19,8 +19,31 @@ export function panosPared(a, b, y0, y1, huecos) {
 }
 
 export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
-  const bath=rm.type==='bano',work=rm.type==='taller'&&perfil!=='artista',office=rm.type==='despacho',store=rm.type==='trastero',kitchen=rm.type==='cocina',sew=rm.type==='costura',wood=office||sew;
-  if(!bath&&!work&&!office&&!store&&!kitchen&&!sew)return;
+  if(rm.type==='ninos') {
+    // Color a escala infantil; los paños conservan todos los huecos de la casa.
+    const y=(rm.lv||0)*3.1,r=mulberry32(seed*347+rm.x0*13+rm.z0*53);
+    const mat=c=>B.mat('infantil_'+c,()=>std(c,{roughness:.94,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
+    const color=['#a0b3ad','#b6a68e','#98aeb8'][Math.floor(r()*3)],limite=.92;
+    for(const side of ['s','n','w','e']) {
+      const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
+      const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
+      for(const [lo,hi,v0,v1] of panosPared(a,b,0,limite,huecos)) {
+        const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
+        B.add(mat(color),planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
+      }
+    }
+    // Tabla ancha de poco contraste: orienta la sala sin recuperar el terrazo ruidoso.
+    const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
+    B.add(mat('#9b937e'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+    for(let x=rm.x0+.076;x<rm.x1-.076;x+=.32)for(let z=rm.z0+.076;z<rm.z1-.076;z+=1.4){
+      const tw=Math.min(.317,rm.x1-.076-x),td=Math.min(1.397,rm.z1-.076-z);
+      if(tw>.001&&td>.001)B.add(mat(['#b8ad94','#b5aa91','#bbb097'][Math.floor(r()*3)]),planeGeo(tw,td).rotateX(-Math.PI/2),x+tw/2,y+.0095,z+td/2);
+    }
+    B.add(mat('#e9e3d4'),planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);
+    return;
+  }
+  const bath=rm.type==='bano',work=rm.type==='taller'&&perfil!=='artista',office=rm.type==='despacho',store=rm.type==='trastero',kitchen=rm.type==='cocina',sew=rm.type==='costura',pantry=rm.type==='despensa',wood=office||sew;
+  if(!bath&&!work&&!office&&!store&&!kitchen&&!sew&&!pantry)return;
   const r=mulberry32(seed*347+rm.x0*13+rm.z0*53),y=(rm.lv||0)*3.1;
   const mat=c=>B.mat('acabado_domestico_'+c,()=>std(c,{roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
   const tonos=office?[
@@ -31,7 +54,7 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
     ['#e0d8c8','#9cae9f','#c2b7a0','#758e7f'],
     ['#dfd2c2','#b2a192','#bfb29e','#8b7f70'],
     ['#d6dcce','#99afb0','#b8c3b8','#688a8a'],
-  ][Math.abs(seed)%3]:store?[['#cec6b4','#71867a','#a39f8c','#4e6658'],['#c8c7bd','#77858c','#a3aaa8','#4d626b'],['#d1c5b0','#99856a','#b3a58b','#716147']][(Math.abs(seed)+(estilo==='joven'?2:['antiguo','rustico'].includes(estilo)?1:0))%3]:bath?[
+  ][Math.abs(seed)%3]:pantry?['#e1ddcf','#a8afa0','#b9bbaa','#768572']:store?[['#cec6b4','#71867a','#a39f8c','#4e6658'],['#c8c7bd','#77858c','#a3aaa8','#4d626b'],['#d1c5b0','#99856a','#b3a58b','#716147']][(Math.abs(seed)+(estilo==='joven'?2:['antiguo','rustico'].includes(estilo)?1:0))%3]:bath?[
     ['#7e9891','#e4e0d3','#c9c6b9','#678078'],
     ['#8297a2','#e5e1d7','#cbc9bf','#667d87'],
     ['#b39880','#eee4d4','#d3c4b2','#91775e'],
@@ -78,12 +101,12 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
   }
   // Suelo y techo locales: el antiguo estampado no domina estas salas de servicio.
   const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
-  B.add(mat(wood?'#78644c':bath||kitchen?'#858a7f':store?'#817662':'#a89c84'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+  B.add(mat(wood?'#78644c':bath||kitchen?'#858a7f':pantry?'#969587':store?'#817662':'#a89c84'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
   const paso=bath||kitchen?.3:wood?.18:.6,pasoZ=wood?1.2:paso;
   for(let x=rm.x0+.076;x<rm.x1-.076;x+=paso)for(let z=rm.z0+.076;z<rm.z1-.076;z+=pasoZ){
     const tw=Math.min(paso-.003,rm.x1-.076-x),td=Math.min(pasoZ-.003,rm.z1-.076-z);
     if(tw<.001||td<.001)continue;
-    const col=wood?['#ab916a','#ad9570','#a38a67'][Math.floor(r()*3)]:bath||kitchen?['#9b9e92','#999c90','#a3a697'][Math.floor(r()*3)]:store?['#938875','#8e836f','#9a907d'][Math.floor(r()*3)]:['#b7ac96','#b4a891','#beb29b'][Math.floor(r()*3)];
+    const col=wood?['#ab916a','#ad9570','#a38a67'][Math.floor(r()*3)]:bath||kitchen?['#9b9e92','#999c90','#a3a697'][Math.floor(r()*3)]:pantry?['#aaa89a','#a7a597','#b0ad9f'][Math.floor(r()*3)]:store?['#938875','#8e836f','#9a907d'][Math.floor(r()*3)]:['#b7ac96','#b4a891','#beb29b'][Math.floor(r()*3)];
     B.add(mat(col),planeGeo(tw,td).rotateX(-Math.PI/2),x+tw/2,y+.0095,z+td/2);
   }
   B.add(mat('#e9e3d4'),planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);

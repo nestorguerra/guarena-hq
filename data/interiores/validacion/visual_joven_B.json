@@ -2,13 +2,14 @@
  "estado": "evaluado",
  "proveedor": "OpenAI Decisions",
  "modelo": "gpt-6-luna",
- "request_id": "req_673b5ea33ded42afbc68813a2af8280c",
- "request_sha256": "f8e660b639262fcc502998b708e7e9bbd60e0d521672738c3a13b52b74233102",
- "fecha": "2026-10-17T14:19:51.859773+00:00",
+ "request_id": "req_4f57b0e7678a4b7b90d6088f95b45bd0",
+ "request_sha256": "bfadffc894a2b0dd26bf70bb2d3cd2aecc17dfa44adc7cc7d0cdd32bacf2e41e",
+ "fecha": "2026-10-17T18:53:41.236487+00:00",
  "kit": "joven",
  "revisor": "B",
  "ficha": "data/interiores/fichas/casa_dormJoven.jpg",
- "ficha_sha256": "48ea059f3587e5735973fbe4e9e170de7e6295e21083af101b5731d2f395f046",
+ "ficha_sha256": "19afe4b4bc6df6fbe7e329a6ff83ffa9434bd21d2ec093d2c9ad5b7b204d78cf",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/19afe4b4bc6df6fbe7e329a6ff83ffa9434bd21d2ec093d2c9ad5b7b204d78cf.jpg",
  "referencias": [
   {
    "titulo": "Twin Dolphin Hall new studio apartment 2.jpg",
@@ -34,19 +35,19 @@
   "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
  },
  "puntuaciones": {
-  "densidad": 2.95,
-  "coherencia": 3.06,
-  "iluminacion": 3.62,
-  "variedad": 3.16,
-  "lectura_funcional": 3.0
+  "densidad": 3.02,
+  "coherencia": 3.23,
+  "iluminacion": 3.58,
+  "variedad": 3.34,
+  "lectura_funcional": 3.01
  },
- "media": 3.158,
+ "media": 3.236,
  "supera_umbral": false,
  "respuestas": [
   {
    "type": "score",
    "name": "densidad",
-   "score": 1.95,
+   "score": 2.02,
    "probabilities": [
     {
      "value": 0,
@@ -56,17 +57,17 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.07
+     "probability": 0.04
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.91
+     "probability": 0.9
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.02
+     "probability": 0.06
     },
     {
      "value": 4,
@@ -74,12 +75,12 @@
      "probability": 0.0
     }
    ],
-   "confidence": 0.93
+   "confidence": 0.92
   },
   {
    "type": "score",
    "name": "coherencia",
-   "score": 2.06,
+   "score": 2.23,
    "probabilities": [
     {
      "value": 0,
@@ -89,17 +90,17 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.07
+     "probability": 0.03
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.81
+     "probability": 0.72
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.11
+     "probability": 0.24
     },
     {
      "value": 4,
@@ -107,12 +108,12 @@
      "probability": 0.01
     }
    ],
-   "confidence": 0.83
+   "confidence": 0.76
   },
   {
    "type": "score",
    "name": "iluminacion",
-   "score": 2.62,
+   "score": 2.58,
    "probabilities": [
     {
      "value": 0,
@@ -127,25 +128,25 @@
     {
      "value": 2,
      "label": "3",
-     "probability": 0.34
+     "probability": 0.35
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.54
+     "probability": 0.56
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.07
+     "probability": 0.04
     }
    ],
-   "confidence": 0.57
+   "confidence": 0.58
   },
   {
    "type": "score",
    "name": "variedad",
-   "score": 2.16,
+   "score": 2.34,
    "probabilities": [
     {
      "value": 0,
@@ -155,30 +156,30 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.04
+     "probability": 0.03
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.77
+     "probability": 0.62
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.18
+     "probability": 0.33
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.01
+     "probability": 0.02
     }
    ],
-   "confidence": 0.8
+   "confidence": 0.67
   },
   {
    "type": "score",
    "name": "lectura_funcional",
-   "score": 2.0,
+   "score": 2.01,
    "probabilities": [
     {
      "value": 0,
@@ -188,12 +189,12 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.03
+     "probability": 0.02
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.94
+     "probability": 0.95
     },
     {
      "value": 3,
@@ -206,7 +207,7 @@
      "probability": 0.0
     }
    ],
-   "confidence": 0.95
+   "confidence": 0.96
   }
  ],
  "uso": {

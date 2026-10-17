@@ -21,6 +21,30 @@ def objetos():
     out.append(mesa('vb_mesa_ninos','Mesa para deberes y juegos',.8,.42,.64))
     out.append(copiar('silla_comedor','vb_silla_ninos','Silla infantil','silla',.84))
     out.append(copiar('estanteria_libros','vb_estante_bajo','Estantería baja para cuentos y juguetes','libros',.65))
+    # Variantes infantiles: conservan roles y la cama original de 85 × 182 cm.
+    # No se escalan ni recolorean los muebles compartidos de los otros dormitorios.
+    cama=copy.deepcopy(next(o for o in out if o['id']=='vb_cama_individual'))
+    cama['id']='vb_cama_ninos';cama['nombre']='Cama individual con cajones bajos'
+    # El zócalo se retranquea; colchón, cabecero y huella total siguen iguales.
+    cama['partes'][0]['d'][0]=.81
+    for p in cama['partes']:
+        if p.get('tinte')=='tela':p.pop('tinte');p['c']='#7c9b99'
+    for lado in [-1,1]:
+        for z in [-.44,.44]:
+            cama['partes'] += [caja(.014,.15,.78,x=lado*.412,y=.23,z=z,c='#d4bd98'),caja(.012,.025,.12,x=lado*.419,y=.23,z=z,c='#697e77')]
+    out.append(cama)
+    # Armario bajo de ropa: cuerpo de 95 × 42 × 150 cm, no una cómoda.
+    p=[caja(.95,1.5,.42,c='#cbb591')]
+    for x in [-.2345,.2345]:
+        p += [caja(.451,1.40,.014,x=x,y=.77,z=.217,c='#879e91'),caja(.018,.13,.025,x=x*.18,y=.83,z=.236,c='#d6d0bb',m='metal')]
+    out.append(objeto('vb_armario_ninos','Armario infantil de ropa',.95,1.5,.45,'armario',48,partes=p))
+    # Dos baldas accesibles, huecos para cuentos y cajas integradas bajo la superior.
+    p=[caja(.88,.76,.022,z=-.139,c='#cbb591')]
+    for x in [-.428,.428]:p.append(caja(.024,.76,.3,x=x,c='#cbb591'))
+    for y in [.04,.38,.748]:p.append(caja(.88,.024,.3,y=y,c='#cbb591'))
+    for x in [-.22,.22]:
+        p += [caja(.34,.22,.24,x=x,y=.162,z=.012,c='#a4b1a0',m='tela'),caja(.09,.025,.008,x=x,y=.24,z=.136,c='#677e78')]
+    out.append(objeto('vb_estante_ninos','Guardado bajo de cuentos y juegos',.88,.76,.3,'libros',20,partes=p,superficies=[dict(y=.76,margen=.025)]))
     out.append(objeto('vb_ordenador','Ordenador doméstico sin marca',.38,.31,.22,None,2,'plastico',partes=[caja(.38,.24,.025,y=.19,z=-.06,c='#57616c',m='plastico'),caja(.34,.2,.005,y=.19,z=-.044,c='#8aabc1',m='cristal'),caja(.04,.08,.04,y=.04,z=-.06,c='#81878e',m='metal'),caja(.32,.018,.13,y=.009,z=.04,c='#69747e',m='plastico')],soporte='superficie',categoria='informatica'))
     out.append(objeto('vb_caballete','Caballete con lienzo pintado',.72,1.65,.48,None,7,partes=[caja(.045,1.6,.045,x=-.26,y=.8,z=.13,r=[0,0,-8]),caja(.045,1.6,.045,x=.26,y=.8,z=.13,r=[0,0,8]),caja(.05,1.4,.05,y=.7,z=-.18),caja(.72,.045,.12,y=.72,z=.12),dict(f='plano',d=[.62,.54],p=[0,1.05,.19],c='#e8d4b4',m='tela',tex=dict(tipo='vivienda_lienzo_b'))]))
     out.append(objeto('vb_rifle','Rifle de caza guardado',.12,1.12,.08,None,3.5,'madera',partes=[caja(.09,.34,.045,y=.17,c='#825a3d',m='madera'),caja(.045,.4,.04,y=.52,c='#6b747c',m='metal'),cil(.012,.012,.45,y=.895,c='#697078',m='metal')],categoria='decoracion'))

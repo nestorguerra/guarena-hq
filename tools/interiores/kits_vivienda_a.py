@@ -54,10 +54,31 @@ def generar():
     comedor=[E('conjunto','va_mesa_comedor',cantidad=[1,1],obligatorio=True,giro=[0,90],sillas=dict(variantes=['silla_comedor'],n=[2,4])),pared('aparador',False),pared('va_alacena',False),E('pared',['cuadro_paisaje','fotos_familia','cuadro_virgen'],pared='*',cantidad=[1,3]),E('sobre',vajilla,en=['va_mesa_comedor'],por_soporte=[2,4])]+adornos(vajilla+comida,['aparador','va_alacena'])
     kit('comedor','Comedor familiar','otra_estancia',comedor,mood['comedor'],fondo=(2.5,5))
     reservas=[k for k in C if k.startswith(('va_reserva_','va_conserva_'))]
-    despensa=[pared('va_estante'),pared('va_estante',False),pared('va_alacena',False),pared('va_estante_alto',False,area_min=8),pared('va_estante_alto',False,area_min=12),pared('va_tinaja',False),pared('va_cajas_apiladas',False,area_min=9),E('suelo_libre','va_cajas_apiladas',cantidad=[1,1],obligatorio=True,area_min=14)]+adornos(reservas+comida,['va_estante','va_alacena','va_estante_alto'])
-    despensa[-2]['variantes']=reservas
-    despensa[-2]['por_soporte']=[12,20]
-    despensa.insert(-1,E('sobre',comida,en=['va_estante','va_alacena','va_estante_alto'],por_soporte=[0,2]))
+    # Frente doméstico de guardado: módulo bajo entre dos alturas, antes de ampliar.
+    # Si no cabe, los obligatorios conservan su búsqueda individual de pared.
+    guardado=['va_estante','aparador','va_estante_alto','va_alacena']
+    despensa=[
+        pared('va_estante',grupo_pared='guardado_despensa'),
+        junto('aparador','va_estante',True,buscar_refs=True,grupo_pared='guardado_despensa'),
+        junto('va_estante_alto','aparador',area_min=8,buscar_refs=True,si_no=False,grupo_pared='guardado_despensa'),
+        junto('va_alacena',guardado,area_min=12,buscar_refs=True,si_no=False),
+        junto('va_estante_alto',guardado,area_min=18,buscar_refs=True,si_no=False),
+        junto('va_tinaja',guardado,buscar_refs=True,si_no=False,estilo=['antiguo','rustico']),
+        junto('va_cajas_apiladas',guardado,area_min=9,area_max=14,buscar_refs=True,si_no=False),
+        junto('va_cajas_apiladas',guardado,True,area_min=14,buscar_refs=True),
+        # En la superficie baja: formatos grandes y provisiones de uso cotidiano.
+        E('sobre',['va_alimento_garrafa_aceite','va_alimento_vinagre','va_alimento_miel','va_alimento_pimientos_piquillo'],en=['aparador'],por_soporte=[2,3],perfil=['agricultor','cazador']),
+        E('sobre',['va_alimento_pan_molde','va_alimento_galletas_maria','va_alimento_cafe_molido','va_alimento_mermelada','va_alimento_leche_semi'],en=['aparador'],por_soporte=[2,3],perfil=['!agricultor','!cazador']),
+        # La balda pequeña deja al menos 23 cm útiles; las botellas van al mueble alto.
+        E('sobre',reservas+[k for k in comida if k not in [
+            'va_alimento_aceite_oliva','va_alimento_aceite_girasol','va_alimento_garrafa_aceite','va_alimento_vinagre',
+            'va_alimento_espaguetis','va_alimento_cereales_a','va_alimento_cereales_b','va_alimento_cereales_c',
+            'va_alimento_snack_patatas','va_alimento_snack_aperitivos','va_alimento_agua_15','va_alimento_cola_15',
+            'va_alimento_naranja_15','va_alimento_limon_15','va_alimento_vino_tinto','va_alimento_vino_blanco','va_alimento_vino_rosado',
+        ]],en=['va_estante'],por_soporte=[2,4]),
+    ]+adornos(reservas+comida,['va_alacena','va_estante_alto'])
+    # Unidades de varios formatos, con huecos entre grupos; nunca facings de tienda.
+    despensa[-2]['por_soporte']=[2,4]
     kit('despensa','Despensa doméstica','otra_estancia',despensa,mood['despensa'])
     herramientas=[k for k,o in C.items() if k.startswith('fe_') and o['soporte']=='superficie' and 'insectic' not in k]+['tal_llaves_juego','tal_martillo','tal_caja_herramientas','tal_trapos','tal_rollo_papel_taller']
     sueltos=['tal_llaves_juego','tal_martillo','tal_caja_herramientas','tal_trapos','tal_rollo_papel_taller','fe_niveles_metros','fe_tijeras_poda','fe_guantes_trabajo']

@@ -2,13 +2,14 @@
  "estado": "evaluado",
  "proveedor": "OpenAI Decisions",
  "modelo": "gpt-6-luna",
- "request_id": "req_5d3de1766d3e4120b62baaf77ae442d9",
- "request_sha256": "e3c28aa131b6e515f8271294ec7915f60802a62316dfcfa724bb0ac0194b6a05",
- "fecha": "2026-10-17T14:24:23.188452+00:00",
+ "request_id": "req_05c50085e81e45bea2e4cfb838d34203",
+ "request_sha256": "da59002a30e273ac609d4ea00ef893faca4f00eab81243385a6d8be670b737f2",
+ "fecha": "2026-10-17T18:53:30.025006+00:00",
  "kit": "comedor",
  "revisor": "B",
  "ficha": "data/interiores/fichas/casa_comedor.jpg",
- "ficha_sha256": "93931e203e489ea17ce1ddb72e6c10e83d4f4af8fd04a464d95539d637d776ad",
+ "ficha_sha256": "efc558c3ce332761ccb4bf7034f18f6d208831e13118fff86b1af81b7e84fefa",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/efc558c3ce332761ccb4bf7034f18f6d208831e13118fff86b1af81b7e84fefa.jpg",
  "referencias": [
   {
    "titulo": "My Dining Room.JPG",
@@ -34,19 +35,19 @@
   "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
  },
  "puntuaciones": {
-  "densidad": 2.89,
-  "coherencia": 2.99,
-  "iluminacion": 3.18,
-  "variedad": 2.99,
+  "densidad": 2.85,
+  "coherencia": 2.98,
+  "iluminacion": 3.31,
+  "variedad": 2.96,
   "lectura_funcional": 2.99
  },
- "media": 3.008,
+ "media": 3.018,
  "supera_umbral": false,
  "respuestas": [
   {
    "type": "score",
    "name": "densidad",
-   "score": 1.89,
+   "score": 1.85,
    "probabilities": [
     {
      "value": 0,
@@ -56,12 +57,12 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.13
+     "probability": 0.17
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.85
+     "probability": 0.81
     },
     {
      "value": 3,
@@ -74,12 +75,12 @@
      "probability": 0.0
     }
    ],
-   "confidence": 0.88
+   "confidence": 0.84
   },
   {
    "type": "score",
    "name": "coherencia",
-   "score": 1.99,
+   "score": 1.98,
    "probabilities": [
     {
      "value": 0,
@@ -89,78 +90,12 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.09
+     "probability": 0.07
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.84
-    },
-    {
-     "value": 3,
-     "label": "4",
-     "probability": 0.06
-    },
-    {
-     "value": 4,
-     "label": "5",
-     "probability": 0.01
-    }
-   ],
-   "confidence": 0.86
-  },
-  {
-   "type": "score",
-   "name": "iluminacion",
-   "score": 2.18,
-   "probabilities": [
-    {
-     "value": 0,
-     "label": "1",
-     "probability": 0.0
-    },
-    {
-     "value": 1,
-     "label": "2",
-     "probability": 0.04
-    },
-    {
-     "value": 2,
-     "label": "3",
-     "probability": 0.75
-    },
-    {
-     "value": 3,
-     "label": "4",
-     "probability": 0.2
-    },
-    {
-     "value": 4,
-     "label": "5",
-     "probability": 0.01
-    }
-   ],
-   "confidence": 0.78
-  },
-  {
-   "type": "score",
-   "name": "variedad",
-   "score": 1.99,
-   "probabilities": [
-    {
-     "value": 0,
-     "label": "1",
-     "probability": 0.0
-    },
-    {
-     "value": 1,
-     "label": "2",
-     "probability": 0.06
-    },
-    {
-     "value": 2,
-     "label": "3",
-     "probability": 0.89
+     "probability": 0.88
     },
     {
      "value": 3,
@@ -173,7 +108,73 @@
      "probability": 0.0
     }
    ],
-   "confidence": 0.91
+   "confidence": 0.9
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.31,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.58
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.34
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.63
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.96,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.08
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.88
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.9
   },
   {
    "type": "score",

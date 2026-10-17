@@ -39,93 +39,184 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_alacena",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante_alto",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
    "preferir": true,
-   "area_min": 8
+   "grupo_pared": "guardado_despensa"
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_estante_alto",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true,
-   "area_min": 12
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_tinaja",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_cajas_apiladas",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true,
-   "area_min": 9
-  },
-  {
-   "zona": "estancia",
-   "regla": "suelo_libre",
-   "obj": "va_cajas_apiladas",
+   "regla": "junto_a",
+   "obj": "aparador",
+   "de": "va_estante",
    "cantidad": [
     1,
     1
    ],
    "obligatorio": true,
-   "area_min": 14
+   "preferir": true,
+   "buscar_refs": true,
+   "grupo_pared": "guardado_despensa"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_estante_alto",
+   "de": "aparador",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 8,
+   "buscar_refs": true,
+   "si_no": false,
+   "grupo_pared": "guardado_despensa"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_alacena",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 12,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_estante_alto",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 18,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_tinaja",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_cajas_apiladas",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 9,
+   "area_max": 14,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_cajas_apiladas",
+   "de": [
+    "va_estante",
+    "aparador",
+    "va_estante_alto",
+    "va_alacena"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_alimento_garrafa_aceite",
+    "va_alimento_vinagre",
+    "va_alimento_miel",
+    "va_alimento_pimientos_piquillo"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "perfil": [
+    "agricultor",
+    "cazador"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_alimento_pan_molde",
+    "va_alimento_galletas_maria",
+    "va_alimento_cafe_molido",
+    "va_alimento_mermelada",
+    "va_alimento_leche_semi"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "perfil": [
+    "!agricultor",
+    "!cazador"
+   ]
   },
   {
    "zona": "estancia",
@@ -139,22 +230,69 @@
     "va_reserva_5",
     "va_conserva_0",
     "va_conserva_1",
-    "va_conserva_2"
+    "va_conserva_2",
+    "va_alimento_atun",
+    "va_alimento_sardinillas",
+    "va_alimento_mejillones",
+    "va_alimento_tomate_frito",
+    "va_alimento_maiz",
+    "va_alimento_judias_verdes",
+    "va_alimento_garbanzos_bote",
+    "va_alimento_pimientos_piquillo",
+    "va_alimento_aceitunas",
+    "va_alimento_pepinillos",
+    "va_alimento_mermelada",
+    "va_alimento_miel",
+    "va_alimento_crema_cacao",
+    "va_alimento_melocoton_almibar",
+    "va_alimento_arroz",
+    "va_alimento_arroz_integral",
+    "va_alimento_macarrones",
+    "va_alimento_lentejas",
+    "va_alimento_garbanzos_seco",
+    "va_alimento_harina",
+    "va_alimento_azucar",
+    "va_alimento_sal",
+    "va_alimento_cafe_molido",
+    "va_alimento_infusiones",
+    "va_alimento_galletas_maria",
+    "va_alimento_galletas_chocolate",
+    "va_alimento_galletas_crackers",
+    "va_alimento_pan_molde",
+    "va_alimento_chocolate_tabletas",
+    "va_alimento_magdalenas",
+    "va_alimento_perrunillas",
+    "va_alimento_chicles",
+    "va_alimento_caramelos",
+    "va_alimento_agua_gas",
+    "va_alimento_cerveza_pack",
+    "va_alimento_zumo_naranja",
+    "va_alimento_zumo_melocoton",
+    "va_alimento_leche_entera",
+    "va_alimento_leche_semi",
+    "va_alimento_leche_desnatada"
    ],
    "en": [
-    "va_estante",
-    "va_alacena",
-    "va_estante_alto"
+    "va_estante"
    ],
    "por_soporte": [
-    12,
-    20
+    2,
+    4
    ]
   },
   {
    "zona": "estancia",
    "regla": "sobre",
    "variantes": [
+    "va_reserva_0",
+    "va_reserva_1",
+    "va_reserva_2",
+    "va_reserva_3",
+    "va_reserva_4",
+    "va_reserva_5",
+    "va_conserva_0",
+    "va_conserva_1",
+    "va_conserva_2",
     "va_alimento_atun",
     "va_alimento_sardinillas",
     "va_alimento_mejillones",
@@ -214,13 +352,12 @@
     "va_alimento_leche_desnatada"
    ],
    "en": [
-    "va_estante",
     "va_alacena",
     "va_estante_alto"
    ],
    "por_soporte": [
-    0,
-    2
+    2,
+    4
    ]
   },
   {

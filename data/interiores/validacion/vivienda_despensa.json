@@ -91,10 +91,10 @@
    "seed": 1,
    "W": 6.2,
    "D": 4,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 16,
-   "hash": "60696156",
+   "guardias": 3,
+   "objetos": 50,
+   "distintos": 39,
+   "hash": "28def241",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -105,33 +105,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -139,35 +134,52 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.68,
-     "libre_m2": 14.68
+     "alcanzable_m2": 15.75,
+     "libre_m2": 15.75
     }
    },
    "luz": {
-    "estancia": 0.094
+    "estancia": 0.098
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14842,
+   "triangulos": 4206,
    "mallas": 10,
-   "luces": 3,
+   "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true
   },
   {
@@ -176,10 +188,10 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.1999999999999997,
-   "guardias": 7,
-   "objetos": 120,
-   "distintos": 17,
-   "hash": "9f1bb150",
+   "guardias": 3,
+   "objetos": 53,
+   "distintos": 42,
+   "hash": "bd7a35cd",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -190,22 +202,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -216,28 +223,33 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.25,
-     "libre_m2": 5.25
+     "alcanzable_m2": 5.34,
+     "libre_m2": 5.34
     }
    },
    "luz": {
@@ -245,9 +257,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14606,
+   "triangulos": 4742,
    "mallas": 10,
    "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -257,10 +281,10 @@
    "seed": 3,
    "W": 5,
    "D": 1.9,
-   "guardias": 6,
-   "objetos": 90,
-   "distintos": 16,
-   "hash": "d2eb1d21",
+   "guardias": 2,
+   "objetos": 33,
+   "distintos": 29,
+   "hash": "85ce48b8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -271,22 +295,12 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
      "n": 1
     },
     {
@@ -295,25 +309,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 81
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 11
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.26,
-     "libre_m2": 3.26
+     "alcanzable_m2": 2.96,
+     "libre_m2": 2.96
     }
    },
    "luz": {
@@ -321,9 +340,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11252,
+   "triangulos": 2424,
    "mallas": 9,
    "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -333,10 +365,10 @@
    "seed": 4,
    "W": 4.4,
    "D": 4.6,
-   "guardias": 9,
-   "objetos": 120,
-   "distintos": 17,
-   "hash": "60e0ab16",
+   "guardias": 3,
+   "objetos": 52,
+   "distintos": 40,
+   "hash": "3c8f6f6c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -347,33 +379,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -381,25 +403,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.92,
-     "libre_m2": 10.92
+     "alcanzable_m2": 11.97,
+     "libre_m2": 11.97
     }
    },
    "luz": {
@@ -407,9 +434,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14640,
+   "triangulos": 4916,
    "mallas": 9,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -419,177 +458,10 @@
    "seed": 5,
    "W": 6.5,
    "D": 4,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 15,
-   "hash": "99135c7d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.07,
-     "libre_m2": 15.07
-    }
-   },
-   "luz": {
-    "estancia": 0.099
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14818,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 6,
-   "W": 3.5,
-   "D": 3.6999999999999997,
-   "guardias": 7,
-   "objetos": 122,
-   "distintos": 19,
-   "hash": "6da8f96d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.13,
-     "libre_m2": 6.13
-    }
-   },
-   "luz": {
-    "estancia": 0.163
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14688,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 7,
-   "W": 4.7,
-   "D": 1.9,
    "guardias": 5,
-   "objetos": 90,
-   "distintos": 15,
-   "hash": "e056e95b",
+   "objetos": 70,
+   "distintos": 46,
+   "hash": "6b7a79ce",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -600,88 +472,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 82
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 3.39,
-     "libre_m2": 3.39
-    }
-   },
-   "luz": {
-    "estancia": 0.218
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11264,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 8,
-   "W": 5.9,
-   "D": 4.6,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 18,
-   "hash": "33596a88",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -692,11 +493,6 @@
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -706,492 +502,21 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 15.99,
-     "libre_m2": 16
-    }
-   },
-   "luz": {
-    "estancia": 0.086
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14742,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 9,
-   "W": 4.1,
-   "D": 1.9,
-   "guardias": 4,
-   "objetos": 61,
-   "distintos": 13,
-   "hash": "5af4021b",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 55
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 2.92,
-     "libre_m2": 2.92
-    }
-   },
-   "luz": {
-    "estancia": 0.245
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7940,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 10,
-   "W": 3.8000000000000003,
-   "D": 2.8,
-   "guardias": 6,
-   "objetos": 91,
-   "distintos": 17,
-   "hash": "7b89845c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 81
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
      "n": 2
     },
     {
      "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.35,
-     "libre_m2": 4.35
-    }
-   },
-   "luz": {
-    "estancia": 0.21
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11192,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 11,
-   "W": 5,
-   "D": 2.5,
-   "guardias": 7,
-   "objetos": 120,
-   "distintos": 20,
-   "hash": "bbd7f46c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
      "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 106
+     "n": 16
     },
     {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.22,
-     "libre_m2": 5.22
-    }
-   },
-   "luz": {
-    "estancia": 0.181
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14492,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 12,
-   "W": 6.2,
-   "D": 4.6,
-   "guardias": 9,
-   "objetos": 125,
-   "distintos": 21,
-   "hash": "528b2625",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
+     "entrada": 11,
      "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
+     "n": 42
     },
     {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 6
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 17.1,
-     "libre_m2": 17.1
-    }
-   },
-   "luz": {
-    "estancia": 0.076
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 15146,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.992
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 13,
-   "W": 6.2,
-   "D": 2.1999999999999997,
-   "guardias": 7,
-   "objetos": 121,
-   "distintos": 17,
-   "hash": "9c40ee19",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.18,
-     "libre_m2": 6.18
-    }
-   },
-   "luz": {
-    "estancia": 0.242
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14722,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 14,
-   "W": 6.2,
-   "D": 4.3,
-   "guardias": 8,
-   "objetos": 122,
-   "distintos": 17,
-   "hash": "c9740839",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
-    },
-    {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
@@ -1203,26 +528,38 @@
     }
    },
    "luz": {
-    "estancia": 0.073
+    "estancia": 0.099
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14902,
+   "triangulos": 5054,
    "mallas": 10,
    "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.975
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_despensa",
    "tipologia": "otra_estancia",
-   "seed": 15,
+   "seed": 6,
    "W": 3.5,
-   "D": 4.6,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 17,
-   "hash": "5af112e8",
+   "D": 3.6999999999999997,
+   "guardias": 1,
+   "objetos": 37,
+   "distintos": 30,
+   "hash": "a3df38d9",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1233,21 +570,348 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.67,
+     "libre_m2": 6.67
+    }
+   },
+   "luz": {
+    "estancia": 0.078
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2472,
+   "mallas": 9,
+   "luces": 1,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 7,
+   "W": 4.7,
+   "D": 1.9,
+   "guardias": 1,
+   "objetos": 36,
+   "distintos": 32,
+   "hash": "f6ed40f4",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3,
+     "libre_m2": 3
+    }
+   },
+   "luz": {
+    "estancia": 0.218
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2908,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 8,
+   "W": 5.9,
+   "D": 4.6,
+   "guardias": 4,
+   "objetos": 55,
+   "distintos": 43,
+   "hash": "6502f89d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
      "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 31
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.66,
+     "libre_m2": 17.66
+    }
+   },
+   "luz": {
+    "estancia": 0.086
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4734,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "agricultor · rustico",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "rustico",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 9,
+   "W": 4.1,
+   "D": 1.9,
+   "guardias": 1,
+   "objetos": 24,
+   "distintos": 19,
+   "hash": "c1707a5f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.6,
+     "libre_m2": 2.6
+    }
+   },
+   "luz": {
+    "estancia": 0.245
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1864,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 10,
+   "W": 3.8000000000000003,
+   "D": 2.8,
+   "guardias": 2,
+   "objetos": 39,
+   "distintos": 32,
+   "hash": "9ab05477",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
      "obj": "va_estante_alto",
      "n": 1
     },
@@ -1259,7 +923,375 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.73,
+     "libre_m2": 4.73
+    }
+   },
+   "luz": {
+    "estancia": 0.21
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3004,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 11,
+   "W": 5,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 52,
+   "distintos": 39,
+   "hash": "4084dc45",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
      "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 27
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.43,
+     "libre_m2": 5.43
+    }
+   },
+   "luz": {
+    "estancia": 0.181
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4024,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "matrimonio · rustico",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "rustico",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 12,
+   "W": 6.2,
+   "D": 4.6,
+   "guardias": 3,
+   "objetos": 53,
+   "distintos": 40,
+   "hash": "c1ab057e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 27
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.87,
+     "libre_m2": 18.87
+    }
+   },
+   "luz": {
+    "estancia": 0.076
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4754,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "familia · alegre",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "alegre",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 13,
+   "W": 6.2,
+   "D": 2.1999999999999997,
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 37,
+   "hash": "2f969653",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 25
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.69,
+     "libre_m2": 5.69
+    }
+   },
+   "luz": {
+    "estancia": 0.242
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4654,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 14,
+   "W": 6.2,
+   "D": 4.3,
+   "guardias": 3,
+   "objetos": 52,
+   "distintos": 40,
+   "hash": "1ca2422d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
     },
     {
      "entrada": 7,
@@ -1268,24 +1300,117 @@
     },
     {
      "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
+    },
+    {
+     "entrada": 10,
      "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
+     "n": 19
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 23
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.28,
+     "libre_m2": 17.28
+    }
+   },
+   "luz": {
+    "estancia": 0.073
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4694,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.923
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 15,
+   "W": 3.5,
+   "D": 4.6,
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 36,
+   "hash": "f4cd4ea0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 25
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.07,
-     "libre_m2": 8.07
+     "alcanzable_m2": 8.55,
+     "libre_m2": 8.55
     }
    },
    "luz": {
@@ -1293,9 +1418,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14696,
+   "triangulos": 4372,
    "mallas": 9,
    "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1305,10 +1442,10 @@
    "seed": 16,
    "W": 6.2,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 19,
-   "hash": "bf0ddf8d",
+   "guardias": 4,
+   "objetos": 68,
+   "distintos": 43,
+   "hash": "acf84679",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1319,17 +1456,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -1338,50 +1475,58 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 41
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
-     "n": 2
+     "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.95,
-     "libre_m2": 9.95
+     "alcanzable_m2": 10.32,
+     "libre_m2": 10.32
     }
    },
    "luz": {
-    "estancia": 0.125
+    "estancia": 0.113
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14854,
+   "triangulos": 5310,
    "mallas": 10,
-   "luces": 2,
+   "luces": 3,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1391,10 +1536,10 @@
    "seed": 17,
    "W": 6.2,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 126,
-   "distintos": 17,
-   "hash": "18a0b36f",
+   "guardias": 4,
+   "objetos": 50,
+   "distintos": 39,
+   "hash": "41b3e987",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1405,32 +1550,22 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -1440,24 +1575,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 23
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.73,
-     "libre_m2": 6.73
+     "alcanzable_m2": 7.13,
+     "libre_m2": 7.13
     }
    },
    "luz": {
@@ -1465,11 +1605,23 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15238,
+   "triangulos": 4350,
    "mallas": 10,
    "luces": 3,
+   "hogar": "agricultor · antiguo",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "antiguo",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.984
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_despensa",
@@ -1477,10 +1629,10 @@
    "seed": 18,
    "W": 4.1,
    "D": 3.4,
-   "guardias": 7,
-   "objetos": 119,
-   "distintos": 16,
-   "hash": "8f2624ff",
+   "guardias": 1,
+   "objetos": 38,
+   "distintos": 26,
+   "hash": "bfaccfc7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1491,54 +1643,49 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.01,
-     "libre_m2": 7.01
+     "alcanzable_m2": 7.48,
+     "libre_m2": 7.48
     }
    },
    "luz": {
@@ -1546,9 +1693,20 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14564,
+   "triangulos": 2476,
    "mallas": 9,
    "luces": 2,
+   "hogar": "artista · alegre",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "alegre",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1558,10 +1716,10 @@
    "seed": 19,
    "W": 5.6,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 18,
-   "hash": "13aa6eac",
+   "guardias": 5,
+   "objetos": 75,
+   "distintos": 47,
+   "hash": "95d35487",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1572,17 +1730,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -1596,35 +1754,35 @@
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 19
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 44
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.54,
-     "libre_m2": 9.55
+     "alcanzable_m2": 10.39,
+     "libre_m2": 10.39
     }
    },
    "luz": {
@@ -1632,9 +1790,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14522,
+   "triangulos": 6078,
    "mallas": 10,
    "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1644,10 +1814,10 @@
    "seed": 20,
    "W": 6.2,
    "D": 2.8,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 18,
-   "hash": "62e6c1cb",
+   "guardias": 4,
+   "objetos": 52,
+   "distintos": 38,
+   "hash": "586c710e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1658,22 +1828,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -1682,35 +1847,35 @@
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.67,
-     "libre_m2": 7.67
+     "alcanzable_m2": 8.75,
+     "libre_m2": 8.75
     }
    },
    "luz": {
@@ -1718,11 +1883,23 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14766,
+   "triangulos": 4898,
    "mallas": 10,
    "luces": 3,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.951
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_despensa",
@@ -1730,10 +1907,10 @@
    "seed": 21,
    "W": 5.6,
    "D": 2.5,
-   "guardias": 8,
-   "objetos": 121,
-   "distintos": 17,
-   "hash": "7bb5a502",
+   "guardias": 3,
+   "objetos": 53,
+   "distintos": 38,
+   "hash": "dbba7bb9",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1744,32 +1921,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -1778,25 +1940,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.97,
-     "libre_m2": 5.97
+     "alcanzable_m2": 6.29,
+     "libre_m2": 6.29
     }
    },
    "luz": {
@@ -1804,9 +1971,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14690,
+   "triangulos": 4550,
    "mallas": 10,
    "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1816,10 +1996,10 @@
    "seed": 22,
    "W": 4.4,
    "D": 2.8,
-   "guardias": 7,
-   "objetos": 120,
-   "distintos": 16,
-   "hash": "ad055ee7",
+   "guardias": 2,
+   "objetos": 43,
+   "distintos": 35,
+   "hash": "10642180",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1830,54 +2010,49 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 11
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.59,
-     "libre_m2": 5.59
+     "alcanzable_m2": 5.8,
+     "libre_m2": 5.8
     }
    },
    "luz": {
@@ -1885,9 +2060,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14684,
+   "triangulos": 3748,
    "mallas": 9,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1897,10 +2084,10 @@
    "seed": 23,
    "W": 4.4,
    "D": 2.8,
-   "guardias": 7,
-   "objetos": 122,
-   "distintos": 17,
-   "hash": "fd744ff2",
+   "guardias": 2,
+   "objetos": 54,
+   "distintos": 41,
+   "hash": "b5680cba",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1911,54 +2098,54 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
      "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.25,
-     "libre_m2": 5.25
+     "alcanzable_m2": 5.8,
+     "libre_m2": 5.8
     }
    },
    "luz": {
@@ -1966,9 +2153,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14828,
+   "triangulos": 4436,
    "mallas": 9,
    "luces": 2,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -1978,10 +2177,10 @@
    "seed": 24,
    "W": 5.300000000000001,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 16,
-   "hash": "f1f45c6b",
+   "guardias": 4,
+   "objetos": 67,
+   "distintos": 43,
+   "hash": "327baf35",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1992,17 +2191,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -2011,40 +2210,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 42
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.34,
-     "libre_m2": 9.34
+     "alcanzable_m2": 9.78,
+     "libre_m2": 9.78
     }
    },
    "luz": {
@@ -2052,9 +2246,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14890,
+   "triangulos": 5934,
    "mallas": 10,
    "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2064,10 +2270,10 @@
    "seed": 25,
    "W": 7.7,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 21,
-   "hash": "4f09cb42",
+   "guardias": 3,
+   "objetos": 56,
+   "distintos": 42,
+   "hash": "1ae40116",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2078,33 +2284,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2112,25 +2308,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 106
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 6
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.99,
-     "libre_m2": 12.99
+     "alcanzable_m2": 14.17,
+     "libre_m2": 14.17
     }
    },
    "luz": {
@@ -2138,9 +2339,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14874,
+   "triangulos": 4362,
    "mallas": 10,
    "luces": 3,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2150,10 +2364,10 @@
    "seed": 26,
    "W": 6.5,
    "D": 3.6999999999999997,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 16,
-   "hash": "91f0cf6c",
+   "guardias": 2,
+   "objetos": 39,
+   "distintos": 32,
+   "hash": "94f76a83",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2164,33 +2378,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2199,24 +2408,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.42,
-     "libre_m2": 14.42
+     "alcanzable_m2": 15.01,
+     "libre_m2": 15.01
     }
    },
    "luz": {
@@ -2224,9 +2438,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14698,
+   "triangulos": 2906,
    "mallas": 10,
    "luces": 3,
+   "hogar": "agricultor · rustico",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "rustico",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2236,10 +2462,10 @@
    "seed": 27,
    "W": 6.5,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 18,
-   "hash": "72f86d76",
+   "guardias": 2,
+   "objetos": 41,
+   "distintos": 34,
+   "hash": "a985bee4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2250,33 +2476,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2284,25 +2500,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.41,
-     "libre_m2": 11.41
+     "alcanzable_m2": 13.3,
+     "libre_m2": 13.3
     }
    },
    "luz": {
@@ -2310,9 +2531,20 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14774,
+   "triangulos": 3322,
    "mallas": 10,
    "luces": 3,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2322,10 +2554,10 @@
    "seed": 28,
    "W": 7.1,
    "D": 4,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 16,
-   "hash": "e6f3b715",
+   "guardias": 3,
+   "objetos": 50,
+   "distintos": 37,
+   "hash": "6c663905",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2336,33 +2568,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2370,25 +2597,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.8,
-     "libre_m2": 16.8
+     "alcanzable_m2": 18.63,
+     "libre_m2": 18.63
     }
    },
    "luz": {
@@ -2396,11 +2628,23 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14926,
+   "triangulos": 4906,
    "mallas": 10,
    "luces": 3,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.992
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_despensa",
@@ -2408,10 +2652,10 @@
    "seed": 29,
    "W": 5.9,
    "D": 1.9,
-   "guardias": 6,
-   "objetos": 91,
-   "distintos": 15,
-   "hash": "ed543215",
+   "guardias": 2,
+   "objetos": 39,
+   "distintos": 34,
+   "hash": "17c06201",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2422,16 +2666,11 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
      "n": 1
     },
@@ -2443,28 +2682,33 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
      "n": 0
     },
     {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.25,
-     "libre_m2": 4.26
+     "alcanzable_m2": 4.02,
+     "libre_m2": 4.02
     }
    },
    "luz": {
@@ -2472,9 +2716,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11422,
+   "triangulos": 3062,
    "mallas": 10,
    "luces": 2,
+   "hogar": "matrimonio · rustico",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "rustico",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2484,10 +2740,10 @@
    "seed": 30,
    "W": 3.8000000000000003,
    "D": 2.8,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 16,
-   "hash": "e4c63a29",
+   "guardias": 1,
+   "objetos": 35,
+   "distintos": 27,
+   "hash": "a524caaf",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2498,49 +2754,44 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.56,
-     "libre_m2": 4.56
+     "alcanzable_m2": 4.78,
+     "libre_m2": 4.78
     }
    },
    "luz": {
@@ -2548,9 +2799,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11480,
+   "triangulos": 2624,
    "mallas": 9,
    "luces": 2,
+   "hogar": "familia · alegre",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "alegre",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2560,10 +2824,10 @@
    "seed": 31,
    "W": 5,
    "D": 3.6999999999999997,
-   "guardias": 9,
-   "objetos": 126,
-   "distintos": 19,
-   "hash": "eb5aa86e",
+   "guardias": 4,
+   "objetos": 71,
+   "distintos": 47,
+   "hash": "109e3216",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2574,17 +2838,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -2593,40 +2857,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 43
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.83,
-     "libre_m2": 8.83
+     "alcanzable_m2": 10.35,
+     "libre_m2": 10.35
     }
    },
    "luz": {
@@ -2634,9 +2893,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15208,
+   "triangulos": 6464,
    "mallas": 9,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2646,10 +2917,10 @@
    "seed": 32,
    "W": 4.4,
    "D": 4.6,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 17,
-   "hash": "79531888",
+   "guardias": 4,
+   "objetos": 56,
+   "distintos": 44,
+   "hash": "646af6fa",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2660,32 +2931,27 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
@@ -2695,24 +2961,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 30
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.48,
-     "libre_m2": 11.48
+     "alcanzable_m2": 11.87,
+     "libre_m2": 11.87
     }
    },
    "luz": {
@@ -2720,9 +2991,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14636,
+   "triangulos": 4992,
    "mallas": 9,
    "luces": 2,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2732,10 +3015,10 @@
    "seed": 33,
    "W": 4.1,
    "D": 2.5,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 16,
-   "hash": "f542bd39",
+   "guardias": 2,
+   "objetos": 35,
+   "distintos": 25,
+   "hash": "11f2d6a4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2746,22 +3029,12 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
      "n": 1
     },
     {
@@ -2770,25 +3043,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.96,
-     "libre_m2": 3.96
+     "alcanzable_m2": 4.2,
+     "libre_m2": 4.2
     }
    },
    "luz": {
@@ -2796,9 +3074,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11372,
+   "triangulos": 2356,
    "mallas": 9,
    "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2808,10 +3098,10 @@
    "seed": 34,
    "W": 7.4,
    "D": 4,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 17,
-   "hash": "db631280",
+   "guardias": 3,
+   "objetos": 57,
+   "distintos": 38,
+   "hash": "5c6a1fa1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2822,33 +3112,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2856,25 +3136,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.71,
-     "libre_m2": 17.71
+     "alcanzable_m2": 19.59,
+     "libre_m2": 19.59
     }
    },
    "luz": {
@@ -2882,9 +3167,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14746,
+   "triangulos": 5310,
    "mallas": 10,
    "luces": 3,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2894,10 +3192,10 @@
    "seed": 35,
    "W": 7.4,
    "D": 4.3,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 17,
-   "hash": "3661e377",
+   "guardias": 3,
+   "objetos": 52,
+   "distintos": 34,
+   "hash": "969f25d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2908,33 +3206,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -2943,24 +3236,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.49,
-     "libre_m2": 20.49
+     "alcanzable_m2": 21.48,
+     "libre_m2": 21.48
     }
    },
    "luz": {
@@ -2968,9 +3266,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15102,
+   "triangulos": 4854,
    "mallas": 10,
    "luces": 3,
+   "hogar": "agricultor · antiguo",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "antiguo",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -2980,10 +3290,10 @@
    "seed": 36,
    "W": 3.5,
    "D": 3.4,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 18,
-   "hash": "5982676a",
+   "guardias": 1,
+   "objetos": 41,
+   "distintos": 33,
+   "hash": "ff5ae795",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2994,49 +3304,44 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 82
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.49,
-     "libre_m2": 5.49
+     "alcanzable_m2": 5.92,
+     "libre_m2": 5.92
     }
    },
    "luz": {
@@ -3044,9 +3349,20 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11348,
+   "triangulos": 2696,
    "mallas": 9,
    "luces": 1,
+   "hogar": "artista · alegre",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "alegre",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3056,10 +3372,10 @@
    "seed": 37,
    "W": 7.1,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 15,
-   "hash": "ff2594d7",
+   "guardias": 2,
+   "objetos": 38,
+   "distintos": 30,
+   "hash": "1bde7464",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3070,33 +3386,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -3104,25 +3415,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 113
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.96,
-     "libre_m2": 12.96
+     "alcanzable_m2": 15.03,
+     "libre_m2": 15.03
     }
    },
    "luz": {
@@ -3130,9 +3446,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15142,
+   "triangulos": 2994,
    "mallas": 10,
    "luces": 3,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3142,10 +3470,10 @@
    "seed": 38,
    "W": 3.2,
    "D": 3.4,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 20,
-   "hash": "4efca407",
+   "guardias": 1,
+   "objetos": 39,
+   "distintos": 30,
+   "hash": "e23222b2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3156,49 +3484,49 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 80
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.38,
-     "libre_m2": 4.38
+     "alcanzable_m2": 5.14,
+     "libre_m2": 5.14
     }
    },
    "luz": {
@@ -3206,9 +3534,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11236,
+   "triangulos": 2752,
    "mallas": 9,
    "luces": 1,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3218,10 +3558,10 @@
    "seed": 39,
    "W": 7.7,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 120,
-   "distintos": 16,
-   "hash": "6f4323f8",
+   "guardias": 4,
+   "objetos": 70,
+   "distintos": 46,
+   "hash": "cdfad3e4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3232,17 +3572,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -3251,40 +3591,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 45
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.54,
-     "libre_m2": 12.54
+     "alcanzable_m2": 13.72,
+     "libre_m2": 13.72
     }
    },
    "luz": {
@@ -3292,9 +3627,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14606,
+   "triangulos": 5330,
    "mallas": 10,
    "luces": 3,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3304,10 +3652,10 @@
    "seed": 40,
    "W": 5.6,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 18,
-   "hash": "eb98047f",
+   "guardias": 3,
+   "objetos": 51,
+   "distintos": 36,
+   "hash": "3935e2be",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3318,32 +3666,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -3352,25 +3685,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.5,
-     "libre_m2": 8.5
+     "alcanzable_m2": 9.17,
+     "libre_m2": 9.17
     }
    },
    "luz": {
@@ -3378,9 +3716,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14750,
+   "triangulos": 4042,
    "mallas": 10,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3390,10 +3740,10 @@
    "seed": 41,
    "W": 3.8000000000000003,
    "D": 2.8,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 16,
-   "hash": "35516a82",
+   "guardias": 2,
+   "objetos": 40,
+   "distintos": 33,
+   "hash": "76ccebcc",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3404,16 +3754,11 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
      "n": 1
     },
@@ -3425,28 +3770,33 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.67,
-     "libre_m2": 4.67
+     "alcanzable_m2": 4.73,
+     "libre_m2": 4.73
     }
    },
    "luz": {
@@ -3454,9 +3804,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11324,
+   "triangulos": 2712,
    "mallas": 9,
    "luces": 2,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3466,10 +3828,10 @@
    "seed": 42,
    "W": 5.300000000000001,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 19,
-   "hash": "d637f279",
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 36,
+   "hash": "a8e1389a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3480,32 +3842,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -3514,25 +3861,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 12
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.97,
-     "libre_m2": 6.97
+     "alcanzable_m2": 8.51,
+     "libre_m2": 8.51
     }
    },
    "luz": {
@@ -3540,9 +3892,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14950,
+   "triangulos": 4322,
    "mallas": 10,
    "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -3552,10 +3916,10 @@
    "seed": 43,
    "W": 4.1,
    "D": 4,
-   "guardias": 8,
-   "objetos": 124,
-   "distintos": 18,
-   "hash": "2eb5ff5b",
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 35,
+   "hash": "c1e58542",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3566,17 +3930,1089 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.03,
+     "libre_m2": 9.03
+    }
+   },
+   "luz": {
+    "estancia": 0.136
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4292,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 44,
+   "W": 3.8000000000000003,
+   "D": 2.5,
+   "guardias": 2,
+   "objetos": 38,
+   "distintos": 32,
+   "hash": "7d70330",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
      "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.83,
+     "libre_m2": 3.83
+    }
+   },
+   "luz": {
+    "estancia": 0.227
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2960,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "agricultor · rustico",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "rustico",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 45,
+   "W": 7.7,
+   "D": 3.0999999999999996,
+   "guardias": 4,
+   "objetos": 68,
+   "distintos": 47,
+   "hash": "d694de5c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 41
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.72,
+     "libre_m2": 13.72
+    }
+   },
+   "luz": {
+    "estancia": 0.158
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4958,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 46,
+   "W": 4.1,
+   "D": 2.8,
+   "guardias": 2,
+   "objetos": 37,
+   "distintos": 28,
+   "hash": "1cf2b1b6",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.19,
+     "libre_m2": 5.19
+    }
+   },
+   "luz": {
+    "estancia": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2516,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 47,
+   "W": 7.4,
+   "D": 3.4,
+   "guardias": 2,
+   "objetos": 43,
+   "distintos": 37,
+   "hash": "f409c754",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 0
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.81,
+     "libre_m2": 15.81
+    }
+   },
+   "luz": {
+    "estancia": 0.151
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3158,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "matrimonio · rustico",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "rustico",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 48,
+   "W": 5.6,
+   "D": 4,
+   "guardias": 3,
+   "objetos": 53,
+   "distintos": 39,
+   "hash": "305ae026",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 25
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.83,
+     "libre_m2": 13.83
+    }
+   },
+   "luz": {
+    "estancia": 0.108
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4370,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "familia · alegre",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "alegre",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 49,
+   "W": 3.5,
+   "D": 4.6,
+   "guardias": 3,
+   "objetos": 49,
+   "distintos": 34,
+   "hash": "8082f3e3",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 25
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.57,
+     "libre_m2": 8.57
+    }
+   },
+   "luz": {
+    "estancia": 0.139
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4776,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 50,
+   "W": 6.2,
+   "D": 2.1999999999999997,
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 39,
+   "hash": "12a60336",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 11
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.76,
+     "libre_m2": 5.76
+    }
+   },
+   "luz": {
+    "estancia": 0.242
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4734,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 51,
+   "W": 3.5,
+   "D": 1.9,
+   "guardias": 1,
+   "objetos": 19,
+   "distintos": 18,
+   "hash": "d54e90a3",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 1.94,
+     "libre_m2": 1.94
+    }
+   },
+   "luz": {
+    "estancia": 0.117
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 1732,
+   "mallas": 9,
+   "luces": 1,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 52,
+   "W": 4.1,
+   "D": 3.0999999999999996,
+   "guardias": 2,
+   "objetos": 53,
+   "distintos": 38,
+   "hash": "2f115bb8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 19
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.28,
+     "libre_m2": 6.28
+    }
+   },
+   "luz": {
+    "estancia": 0.182
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4576,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 53,
+   "W": 3.5,
+   "D": 3.0999999999999996,
+   "guardias": 1,
+   "objetos": 41,
+   "distintos": 34,
+   "hash": "f5b46b17",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 19
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.08,
+     "libre_m2": 5.08
+    }
+   },
+   "luz": {
+    "estancia": 0.092
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3204,
+   "mallas": 9,
+   "luces": 1,
+   "hogar": "agricultor · antiguo",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "antiguo",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 54,
+   "W": 5.9,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 68,
+   "distintos": 48,
+   "hash": "7bcd8565",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 44
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.88,
+     "libre_m2": 15.88
+    }
+   },
+   "luz": {
+    "estancia": 0.094
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5506,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "artista · alegre",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "alegre",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 55,
+   "W": 5.9,
+   "D": 3.0999999999999996,
+   "guardias": 5,
+   "objetos": 66,
+   "distintos": 44,
+   "hash": "b0a99626",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -3590,58 +5026,70 @@
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 11
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 43
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.17,
-     "libre_m2": 8.17
+     "alcanzable_m2": 9.51,
+     "libre_m2": 9.51
     }
    },
    "luz": {
-    "estancia": 0.136
+    "estancia": 0.132
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14940,
-   "mallas": 9,
+   "triangulos": 5294,
+   "mallas": 10,
    "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
-   "diferencia_con_semilla_1": 0.984
+   "diferencia_con_semilla_1": 1
   },
   {
    "kit": "vivienda_despensa",
    "tipologia": "otra_estancia",
-   "seed": 44,
-   "W": 3.8000000000000003,
-   "D": 2.5,
-   "guardias": 6,
-   "objetos": 90,
-   "distintos": 16,
-   "hash": "44302df1",
+   "seed": 56,
+   "W": 4.4,
+   "D": 2.8,
+   "guardias": 2,
+   "objetos": 46,
+   "distintos": 32,
+   "hash": "d8b14ea2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3652,16 +5100,731 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 24
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.8,
+     "libre_m2": 5.8
+    }
+   },
+   "luz": {
+    "estancia": 0.187
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4424,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 57,
+   "W": 5.9,
+   "D": 3.0999999999999996,
+   "guardias": 4,
+   "objetos": 68,
+   "distintos": 46,
+   "hash": "816a022e",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 43
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.76,
+     "libre_m2": 9.76
+    }
+   },
+   "luz": {
+    "estancia": 0.132
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5326,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 58,
+   "W": 4.7,
+   "D": 2.8,
+   "guardias": 3,
+   "objetos": 54,
+   "distintos": 40,
+   "hash": "5b561fab",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 27
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 6.23,
+     "libre_m2": 6.23
+    }
+   },
+   "luz": {
+    "estancia": 0.177
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5208,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 59,
+   "W": 6.5,
+   "D": 2.5,
+   "guardias": 4,
+   "objetos": 56,
+   "distintos": 40,
+   "hash": "8f247451",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 30
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 7.6,
+     "libre_m2": 7.6
+    }
+   },
+   "luz": {
+    "estancia": 0.216
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5022,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 60,
+   "W": 5.300000000000001,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 54,
+   "distintos": 42,
+   "hash": "6fb443e0",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.81,
+     "libre_m2": 5.81
+    }
+   },
+   "luz": {
+    "estancia": 0.161
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4642,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 61,
+   "W": 4.4,
+   "D": 2.8,
+   "guardias": 2,
+   "objetos": 59,
+   "distintos": 43,
+   "hash": "eb7a1b68",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 33
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.8,
+     "libre_m2": 5.8
+    }
+   },
+   "luz": {
+    "estancia": 0.187
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4776,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 62,
+   "W": 7.1,
+   "D": 1.9,
+   "guardias": 1,
+   "objetos": 39,
+   "distintos": 34,
+   "hash": "b45cfaa4",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.57,
+     "libre_m2": 5.57
+    }
+   },
+   "luz": {
+    "estancia": 0.225
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2714,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "agricultor · rustico",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "rustico",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 63,
+   "W": 3.5,
+   "D": 3.4,
+   "guardias": 1,
+   "objetos": 40,
+   "distintos": 36,
+   "hash": "e4ddc45d",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.92,
+     "libre_m2": 5.92
+    }
+   },
+   "luz": {
+    "estancia": 0.085
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2676,
+   "mallas": 9,
+   "luces": 1,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 64,
+   "W": 4.7,
+   "D": 2.1999999999999997,
+   "guardias": 2,
+   "objetos": 41,
+   "distintos": 32,
+   "hash": "bf368ede",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
      "obj": "va_estante_alto",
      "n": 1
     },
@@ -3673,20 +5836,25 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 81
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 18
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
@@ -3698,1638 +5866,25 @@
     }
    },
    "luz": {
-    "estancia": 0.227
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11168,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 45,
-   "W": 7.7,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 16,
-   "hash": "208f293f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 13,
-     "libre_m2": 13
-    }
-   },
-   "luz": {
-    "estancia": 0.158
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 15010,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 46,
-   "W": 4.1,
-   "D": 2.8,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 16,
-   "hash": "11f9dceb",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.93,
-     "libre_m2": 4.93
-    }
-   },
-   "luz": {
-    "estancia": 0.198
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11324,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 47,
-   "W": 7.4,
-   "D": 3.4,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 18,
-   "hash": "288d8035",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.16,
-     "libre_m2": 14.23
-    }
-   },
-   "luz": {
-    "estancia": 0.151
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14802,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 48,
-   "W": 5.6,
-   "D": 4,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 17,
-   "hash": "ec361bc1",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 11.93,
-     "libre_m2": 11.93
-    }
-   },
-   "luz": {
-    "estancia": 0.108
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14722,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.992
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 49,
-   "W": 3.5,
-   "D": 4.6,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 18,
-   "hash": "da0b499f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.1,
-     "libre_m2": 7.11
-    }
-   },
-   "luz": {
-    "estancia": 0.139
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14556,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 50,
-   "W": 6.2,
-   "D": 2.1999999999999997,
-   "guardias": 7,
-   "objetos": 123,
-   "distintos": 16,
-   "hash": "1865b81f",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6.25,
-     "libre_m2": 6.25
-    }
-   },
-   "luz": {
-    "estancia": 0.242
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 15010,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 0.984
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 51,
-   "W": 3.5,
-   "D": 1.9,
-   "guardias": 4,
-   "objetos": 61,
-   "distintos": 14,
-   "hash": "e7176ba5",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 55
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 1.99,
-     "libre_m2": 1.99
-    }
-   },
-   "luz": {
-    "estancia": 0.117
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 7944,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 52,
-   "W": 4.1,
-   "D": 3.0999999999999996,
-   "guardias": 7,
-   "objetos": 120,
-   "distintos": 19,
-   "hash": "28c69ad5",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 107
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.74,
-     "libre_m2": 5.74
-    }
-   },
-   "luz": {
-    "estancia": 0.182
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14552,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 53,
-   "W": 3.5,
-   "D": 3.0999999999999996,
-   "guardias": 6,
-   "objetos": 90,
-   "distintos": 19,
-   "hash": "ceed4ff2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 79
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.42,
-     "libre_m2": 4.42
-    }
-   },
-   "luz": {
-    "estancia": 0.092
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11040,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 54,
-   "W": 5.9,
-   "D": 4.3,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 20,
-   "hash": "94da4dfb",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 106
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 7
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 14.63,
-     "libre_m2": 14.63
-    }
-   },
-   "luz": {
-    "estancia": 0.094
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14566,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 55,
-   "W": 5.9,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 119,
-   "distintos": 17,
-   "hash": "4eb6db7c",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 107
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.48,
-     "libre_m2": 8.48
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14482,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 56,
-   "W": 4.4,
-   "D": 2.8,
-   "guardias": 7,
-   "objetos": 122,
-   "distintos": 17,
-   "hash": "4097d1ee",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.6,
-     "libre_m2": 5.6
-    }
-   },
-   "luz": {
-    "estancia": 0.187
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14936,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 57,
-   "W": 5.9,
-   "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 15,
-   "hash": "9a49af2",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 113
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 8.56,
-     "libre_m2": 8.56
-    }
-   },
-   "luz": {
-    "estancia": 0.132
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14902,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 58,
-   "W": 4.7,
-   "D": 2.8,
-   "guardias": 7,
-   "objetos": 119,
-   "distintos": 19,
-   "hash": "22752a2a",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 105
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 6,
-     "libre_m2": 6
-    }
-   },
-   "luz": {
-    "estancia": 0.177
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14184,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 59,
-   "W": 6.5,
-   "D": 2.5,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 18,
-   "hash": "c49324d",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 7,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 7.21,
-     "libre_m2": 7.21
-    }
-   },
-   "luz": {
-    "estancia": 0.216
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14666,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 60,
-   "W": 5.300000000000001,
-   "D": 2.5,
-   "guardias": 7,
-   "objetos": 121,
-   "distintos": 15,
-   "hash": "8b8b8c92",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.87,
-     "libre_m2": 5.87
-    }
-   },
-   "luz": {
-    "estancia": 0.161
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14806,
-   "mallas": 10,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 61,
-   "W": 4.4,
-   "D": 2.8,
-   "guardias": 7,
-   "objetos": 120,
-   "distintos": 15,
-   "hash": "f030f3dd",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.38,
-     "libre_m2": 5.38
-    }
-   },
-   "luz": {
-    "estancia": 0.187
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14768,
-   "mallas": 9,
-   "luces": 2,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 62,
-   "W": 7.1,
-   "D": 1.9,
-   "guardias": 7,
-   "objetos": 119,
-   "distintos": 18,
-   "hash": "feead061",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 106
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 3
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.33,
-     "libre_m2": 5.33
-    }
-   },
-   "luz": {
-    "estancia": 0.225
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 14502,
-   "mallas": 10,
-   "luces": 3,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 63,
-   "W": 3.5,
-   "D": 3.4,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 19,
-   "hash": "9ba51238",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 81
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 1
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 5.56,
-     "libre_m2": 5.56
-    }
-   },
-   "luz": {
-    "estancia": 0.085
-   },
-   "flotando": 0,
-   "interpenetraciones": 0,
-   "triangulos": 11172,
-   "mallas": 9,
-   "luces": 1,
-   "determinista": true,
-   "diferencia_con_semilla_1": 1
-  },
-  {
-   "kit": "vivienda_despensa",
-   "tipologia": "otra_estancia",
-   "seed": 64,
-   "W": 4.7,
-   "D": 2.1999999999999997,
-   "guardias": 6,
-   "objetos": 95,
-   "distintos": 17,
-   "hash": "b4480a09",
-   "errores": [],
-   "avisos": [],
-   "recuento": [
-    {
-     "entrada": 0,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 1,
-     "obj": "va_estante",
-     "n": 1
-    },
-    {
-     "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 85
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
-    },
-    {
-     "entrada": 10,
-     "obj": "vb_plafon",
-     "n": 2
-    }
-   ],
-   "paso": {
-    "estancia": {
-     "alcanzable_m2": 4.16,
-     "libre_m2": 4.16
-    }
-   },
-   "luz": {
     "estancia": 0.205
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11756,
+   "triangulos": 2900,
    "mallas": 9,
    "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5339,10 +5894,10 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 120,
-   "distintos": 15,
-   "hash": "bb7c1621",
+   "guardias": 2,
+   "objetos": 39,
+   "distintos": 25,
+   "hash": "7e63fe2a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5353,33 +5908,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -5387,25 +5937,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.54,
-     "libre_m2": 14.54
+     "alcanzable_m2": 15.81,
+     "libre_m2": 15.81
     }
    },
    "luz": {
@@ -5413,9 +5968,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14698,
+   "triangulos": 2878,
    "mallas": 10,
    "luces": 3,
+   "hogar": "matrimonio · rustico",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "rustico",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5425,10 +5992,10 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.3,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 18,
-   "hash": "14a7797a",
+   "guardias": 4,
+   "objetos": 74,
+   "distintos": 50,
+   "hash": "66d94439",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5439,17 +6006,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -5458,40 +6025,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 47
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.31,
-     "libre_m2": 14.31
+     "alcanzable_m2": 15.88,
+     "libre_m2": 15.88
     }
    },
    "luz": {
@@ -5499,9 +6061,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15114,
+   "triangulos": 6646,
    "mallas": 10,
    "luces": 2,
+   "hogar": "familia · alegre",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "alegre",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5511,10 +6086,10 @@
    "seed": 67,
    "W": 5.6,
    "D": 4.6,
-   "guardias": 9,
-   "objetos": 121,
-   "distintos": 19,
-   "hash": "dec92577",
+   "guardias": 3,
+   "objetos": 50,
+   "distintos": 39,
+   "hash": "1277b1a3",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5525,33 +6100,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -5559,25 +6124,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 107
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.4,
-     "libre_m2": 15.4
+     "alcanzable_m2": 16.53,
+     "libre_m2": 16.53
     }
    },
    "luz": {
@@ -5585,9 +6155,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14606,
+   "triangulos": 4538,
    "mallas": 10,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5597,10 +6179,10 @@
    "seed": 68,
    "W": 5.9,
    "D": 2.1999999999999997,
-   "guardias": 7,
-   "objetos": 123,
-   "distintos": 20,
-   "hash": "e3263542",
+   "guardias": 3,
+   "objetos": 48,
+   "distintos": 39,
+   "hash": "936bb7d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5611,22 +6193,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -5637,28 +6214,33 @@
     {
      "entrada": 6,
      "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 5
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 24
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.61,
-     "libre_m2": 5.61
+     "alcanzable_m2": 5.34,
+     "libre_m2": 5.34
     }
    },
    "luz": {
@@ -5666,9 +6248,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14918,
+   "triangulos": 4478,
    "mallas": 10,
    "luces": 2,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5678,10 +6272,10 @@
    "seed": 69,
    "W": 7.7,
    "D": 3.6999999999999997,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 18,
-   "hash": "81e7cefc",
+   "guardias": 2,
+   "objetos": 42,
+   "distintos": 31,
+   "hash": "ccac18ee",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5692,33 +6286,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -5726,25 +6310,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.63,
-     "libre_m2": 17.63
+     "alcanzable_m2": 18.57,
+     "libre_m2": 18.57
     }
    },
    "luz": {
@@ -5752,9 +6341,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14734,
+   "triangulos": 2758,
    "mallas": 10,
    "luces": 3,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5764,10 +6365,10 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 3.6999999999999997,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 19,
-   "hash": "bb10589a",
+   "guardias": 2,
+   "objetos": 36,
+   "distintos": 31,
+   "hash": "c493bf1b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5778,33 +6379,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -5812,25 +6403,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 4
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.41,
-     "libre_m2": 10.41
+     "alcanzable_m2": 11.61,
+     "libre_m2": 11.61
     }
    },
    "luz": {
@@ -5838,9 +6434,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14862,
+   "triangulos": 2750,
    "mallas": 10,
    "luces": 2,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5850,10 +6459,10 @@
    "seed": 71,
    "W": 5,
    "D": 3.6999999999999997,
-   "guardias": 9,
-   "objetos": 119,
-   "distintos": 17,
-   "hash": "edfa312",
+   "guardias": 4,
+   "objetos": 65,
+   "distintos": 44,
+   "hash": "698210d7",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5864,17 +6473,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -5885,12 +6494,7 @@
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -5899,24 +6503,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 107
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 41
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.4,
-     "libre_m2": 9.4
+     "alcanzable_m2": 10.35,
+     "libre_m2": 10.35
     }
    },
    "luz": {
@@ -5924,9 +6533,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14504,
+   "triangulos": 5620,
    "mallas": 9,
    "luces": 2,
+   "hogar": "agricultor · antiguo",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "antiguo",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -5936,10 +6557,10 @@
    "seed": 72,
    "W": 7.7,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 16,
-   "hash": "c3056ed4",
+   "guardias": 4,
+   "objetos": 71,
+   "distintos": 51,
+   "hash": "16f9beaa",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5950,17 +6571,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -5969,40 +6590,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 112
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 17
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 42
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.22,
-     "libre_m2": 9.22
+     "alcanzable_m2": 9.58,
+     "libre_m2": 9.58
     }
    },
    "luz": {
@@ -6010,9 +6626,20 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15034,
+   "triangulos": 5822,
    "mallas": 10,
    "luces": 3,
+   "hogar": "artista · alegre",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "alegre",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm2"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6022,10 +6649,10 @@
    "seed": 73,
    "W": 3.5,
    "D": 4.6,
-   "guardias": 9,
-   "objetos": 118,
-   "distintos": 15,
-   "hash": "3440ea81",
+   "guardias": 4,
+   "objetos": 50,
+   "distintos": 37,
+   "hash": "e14f4e3e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6036,22 +6663,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -6060,35 +6682,35 @@
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 25
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.82,
-     "libre_m2": 6.82
+     "alcanzable_m2": 8.2,
+     "libre_m2": 8.2
     }
    },
    "luz": {
@@ -6096,9 +6718,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14348,
+   "triangulos": 4328,
    "mallas": 9,
    "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6108,10 +6742,10 @@
    "seed": 74,
    "W": 6.5,
    "D": 4.3,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 17,
-   "hash": "7430535d",
+   "guardias": 2,
+   "objetos": 40,
+   "distintos": 31,
+   "hash": "58c12b2e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6122,33 +6756,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -6156,25 +6785,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 109
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.54,
-     "libre_m2": 16.54
+     "alcanzable_m2": 18.43,
+     "libre_m2": 18.43
     }
    },
    "luz": {
@@ -6182,9 +6816,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14822,
+   "triangulos": 2966,
    "mallas": 10,
    "luces": 3,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6194,10 +6840,10 @@
    "seed": 75,
    "W": 7.4,
    "D": 4,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 16,
-   "hash": "8d4cb3d9",
+   "guardias": 3,
+   "objetos": 51,
+   "distintos": 39,
+   "hash": "7a56a57f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6208,33 +6854,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -6242,25 +6878,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 12
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 29
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.54,
-     "libre_m2": 18.54
+     "alcanzable_m2": 19.59,
+     "libre_m2": 19.59
     }
    },
    "luz": {
@@ -6268,9 +6909,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14870,
+   "triangulos": 4202,
    "mallas": 10,
    "luces": 3,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6280,10 +6934,10 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.1999999999999997,
-   "guardias": 6,
-   "objetos": 92,
-   "distintos": 16,
-   "hash": "bd86a68a",
+   "guardias": 2,
+   "objetos": 35,
+   "distintos": 29,
+   "hash": "6a150750",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6294,22 +6948,12 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
      "n": 1
     },
     {
@@ -6318,25 +6962,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 83
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 12
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.3,
-     "libre_m2": 4.3
+     "alcanzable_m2": 3.8,
+     "libre_m2": 3.8
     }
    },
    "luz": {
@@ -6344,9 +6993,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 11336,
+   "triangulos": 2620,
    "mallas": 9,
    "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6356,10 +7017,10 @@
    "seed": 77,
    "W": 7.4,
    "D": 4.6,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 17,
-   "hash": "9af3df7",
+   "guardias": 5,
+   "objetos": 77,
+   "distintos": 54,
+   "hash": "a70df642",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6370,17 +7031,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -6394,35 +7055,35 @@
      "n": 1
     },
     {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 110
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 2
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 51
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 21.72,
-     "libre_m2": 21.72
+     "alcanzable_m2": 22.74,
+     "libre_m2": 22.74
     }
    },
    "luz": {
@@ -6430,9 +7091,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15022,
+   "triangulos": 5990,
    "mallas": 10,
    "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6442,10 +7115,10 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.5,
-   "guardias": 9,
-   "objetos": 123,
-   "distintos": 16,
-   "hash": "cbbefcd2",
+   "guardias": 2,
+   "objetos": 40,
+   "distintos": 31,
+   "hash": "53d34098",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6456,33 +7129,18 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 4,
-     "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 7,
@@ -6490,25 +7148,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 1
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.18,
-     "libre_m2": 7.18
+     "alcanzable_m2": 8.62,
+     "libre_m2": 8.62
     }
    },
    "luz": {
@@ -6516,9 +7179,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14950,
+   "triangulos": 3106,
    "mallas": 10,
    "luces": 3,
+   "hogar": "musico · bohemio",
+   "contexto_hogar": {
+    "perfil": "musico",
+    "estilo": "bohemio",
+    "botin": [
+     "guitarra",
+     "altavoz",
+     "vinilos",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6528,10 +7203,10 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.4,
-   "guardias": 9,
-   "objetos": 122,
-   "distintos": 18,
-   "hash": "5b129db1",
+   "guardias": 4,
+   "objetos": 63,
+   "distintos": 43,
+   "hash": "3e14da6a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6542,17 +7217,17 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
+     "obj": "va_alacena",
      "n": 1
     },
     {
@@ -6561,40 +7236,35 @@
      "n": 1
     },
     {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
-    },
-    {
      "entrada": 7,
      "obj": "va_cajas_apiladas",
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 108
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 3
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 12
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 40
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.53,
-     "libre_m2": 12.53
+     "alcanzable_m2": 13.45,
+     "libre_m2": 13.45
     }
    },
    "luz": {
@@ -6602,9 +7272,22 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 14654,
+   "triangulos": 5218,
    "mallas": 10,
    "luces": 3,
+   "hogar": "rico · lujo",
+   "contexto_hogar": {
+    "perfil": "rico",
+    "estilo": "lujo",
+    "botin": [
+     "cajaFuerte",
+     "joyero",
+     "reloj",
+     "cuadro",
+     "portatil"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6614,10 +7297,10 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.3,
-   "guardias": 9,
-   "objetos": 124,
-   "distintos": 15,
-   "hash": "3e37ac2c",
+   "guardias": 2,
+   "objetos": 38,
+   "distintos": 30,
+   "hash": "6b200732",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6628,33 +7311,28 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 5,
      "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -6663,24 +7341,29 @@
     },
     {
      "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 113
-    },
-    {
-     "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
-     "n": 0
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 14
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.33,
-     "libre_m2": 19.33
+     "alcanzable_m2": 20.44,
+     "libre_m2": 20.44
     }
    },
    "luz": {
@@ -6688,9 +7371,21 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15130,
+   "triangulos": 2962,
    "mallas": 10,
    "luces": 3,
+   "hogar": "agricultor · rustico",
+   "contexto_hogar": {
+    "perfil": "agricultor",
+    "estilo": "rustico",
+    "botin": [
+     "lata",
+     "jamon",
+     "garrafa",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   },
@@ -6700,10 +7395,10 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.0999999999999996,
-   "guardias": 9,
-   "objetos": 125,
-   "distintos": 18,
-   "hash": "c35cb187",
+   "guardias": 2,
+   "objetos": 41,
+   "distintos": 30,
+   "hash": "14ade3e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6714,33 +7409,23 @@
     },
     {
      "entrada": 1,
-     "obj": "va_estante",
+     "obj": "aparador",
      "n": 1
     },
     {
      "entrada": 2,
-     "obj": "va_alacena",
+     "obj": "va_estante_alto",
      "n": 1
     },
     {
      "entrada": 3,
-     "obj": "va_estante_alto",
-     "n": 1
+     "obj": "va_alacena",
+     "n": 0
     },
     {
      "entrada": 4,
      "obj": "va_estante_alto",
-     "n": 1
-    },
-    {
-     "entrada": 5,
-     "obj": "va_tinaja",
-     "n": 1
-    },
-    {
-     "entrada": 6,
-     "obj": "va_cajas_apiladas",
-     "n": 1
+     "n": 0
     },
     {
      "entrada": 7,
@@ -6748,25 +7433,30 @@
      "n": 1
     },
     {
-     "entrada": 8,
-     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
-     "n": 111
-    },
-    {
      "entrada": 9,
-     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
      "n": 3
     },
     {
      "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 12,
      "obj": "vb_plafon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.82,
-     "libre_m2": 11.82
+     "alcanzable_m2": 13.51,
+     "libre_m2": 13.51
     }
    },
    "luz": {
@@ -6774,9 +7464,20 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 15078,
+   "triangulos": 3470,
    "mallas": 10,
    "luces": 3,
+   "hogar": "artista · bohemio",
+   "contexto_hogar": {
+    "perfil": "artista",
+    "estilo": "bohemio",
+    "botin": [
+     "cuadro",
+     "portatil",
+     "cartera"
+    ],
+    "habitacion": "dorm"
+   },
    "determinista": true,
    "diferencia_con_semilla_1": 1
   }

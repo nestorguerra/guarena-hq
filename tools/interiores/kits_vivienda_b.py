@@ -4,6 +4,22 @@ from vivienda_base import *
 def personales(C):
     return list(dict.fromkeys([k for k,o in C.items() if o['soporte']=='superficie' and (k.startswith(('hilera_libros_','pila_camiseta','pila_pantalon','pila_jersey','mue_cojin','mue_manta','per_perfume_')) or k in ['vb_despertador','vb_joyero','vb_hucha','vb_gafas','vb_zapatillas','vb_ropa','vb_colcha','vb_cuaderno','vb_cesto','vb_cargador'])]+['lampara_mesa','libro_tumbado','portarretratos','reloj_sobremesa','jarron_flores','figura_porcelana','telefono_casa','manta_doblada','cojin_suelto','cartera','movil','revista','periodico','velas']))
 
+def infantiles(C):
+    """Cuentos, juego, deberes y pertenencias domésticas; sólo piezas bajas reales."""
+    from datos import alto
+    familias={
+        'lectura':['hilera_libros_a','hilera_libros_b','hilera_libros_c','hilera_libros_e','hilera_libros_f','lb_libros_infantiles','lb_libros_bolsillo','lb_libros_atlas','lb_diccionarios','lb_libros_cara_c','libro_tumbado'],
+        'juego':['jg_puzles_madera','jg_pizarras','jg_dinosaurios','jg_figuras_accion','jg_tren_madera','jg_cartas','jg_pinturas_dedos','bz_cochecitos','vb_bloques'],
+        'deberes_manualidades':['bloc_notas','portalapices','grapadora','va_tela_algodon','va_botones','va_cinta_metrica','va_ovillo','lb_estuches','lb_calculadoras','lb_gomas_tijeras','bz_cuadernos','bz_cuadernos_a4','vb_cuaderno','vb_acuarelas','vb_paleta','vb_pinceles'],
+        'personales':['va_panuelos','va_cepillo_pelo','cesta_calcetines','vb_hucha','vb_despertador','vb_cesto','vb_ropa','vb_colcha','vb_joyero','vb_gafas','portarretratos','manta_doblada','vb_brujula','vb_prismaticos','vb_linterna','vb_auriculares'],
+    }
+    ids=list(dict.fromkeys(i for grupo in familias.values() for i in grupo))
+    def altura(i):return max(c+h for h,c in map(alto,C[i]['partes']))
+    bajos=[i for i in ids if C[i]['soporte']=='superficie' and altura(i)<=.280001]
+    # En el tablero de deberes, ninguna pieza supera 16 cm. Lo más alto sólo
+    # aparece en mesita o estante; no se añaden referencias ajenas para sumar IDs.
+    return bajos,[i for i in bajos if altura(i)<=.160001]
+
 def generar():
     C=catalogo();mood=json.load(open(os.path.join(ROOT,'tools','interiores','moodboard_vivienda_b.json')))
     dormitorio=[pared('vb_cama_doble',habitacion=['dorm'],area_max=18,centrado=True),pared('vb_cama_amplia',habitacion=['dorm'],area_min=18,centrado=True),pared(['vb_cama_individual','vb_cama_doble'],habitacion=['dorm2']),junto('vb_mesita',['vb_cama_doble','vb_cama_individual','vb_cama_amplia'],True),pared('vb_armario'),pared('vb_comoda',False),junto('vb_mesita',['vb_cama_doble','vb_cama_individual','vb_cama_amplia'],area_min=16),pared('sillon_orejero',False,area_min=16),pared('vb_escritorio',False,area_min=22),junto('silla_comedor','vb_escritorio',lados=['frente'],mira_ref=True,area_min=22),pared('estanteria_libros',False,area_min=22),E('suelo_libre','vb_alfombra',cantidad=[0,1],area_min=16,area_max=26),E('suelo_libre','vb_alfombra',cantidad=[1,1],area_min=26,obligatorio=True),E('pared',['fotos_familia','cuadro_paisaje','cuadro_foto_antigua','cuadro_virgen','poster_enmarcado'],pared='*',cantidad=[1,3])]+adornos(personales(C),['vb_mesita','vb_comoda','vb_escritorio'])
@@ -15,11 +31,26 @@ def generar():
         silla='vb_silla_ninos' if id=='ninos' else 'silla_comedor'
         soportes=['vb_mesita',mesa_id,'vb_estante_bajo']
         p=[pared('vb_cama_individual'),junto('vb_mesita','vb_cama_individual',True),pared(mesa_id),junto(silla,mesa_id,True,lados=['frente'],mira_ref=True),pared('vb_armario'),pared('vb_estante_bajo',False),pared('vb_cama_individual',False,area_min=20,habitacion=['ninos']),E('pared',['poster_enmarcado','fotos_familia','cuadro_paisaje'],pared='*',cantidad=[1,3])]
-        if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=[mesa_id,'vb_estante_bajo'],cantidad=[1,1],obligatorio=True)]
+        if id=='ninos':
+            # Un puesto se admite sólo con su silla frontal: no hay silla dispersa.
+            # El armario conserva su interacción; las reservas se prueban antes de colocar.
+            p=[pared('vb_cama_ninos'),junto('vb_mesita','vb_cama_ninos',True),
+               pared('vb_armario_ninos',espacio_frontal=[.7,.6]),pared(mesa_id,silla_frontal=silla),
+               junto('vb_estante_ninos',mesa_id,False,buscar_refs=True),
+               pared('vb_cama_ninos',False,area_min=20,habitacion=['ninos']),
+               E('suelo_libre','vb_alfombra',cantidad=[0,1],preferir=True,area_min=12),
+               E('pared',['poster_enmarcado','fotos_familia','cuadro_paisaje'],pared='*',cantidad=[1,3])]
+            soportes=['vb_mesita',mesa_id,'vb_estante_ninos']
+        if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=[mesa_id,'vb_estante_ninos'],cantidad=[1,1],obligatorio=True)]
         if id=='joven':p += [pared('guitarra_soporte',False),E('sobre','vb_ordenador',en=[mesa_id],cantidad=[1,1])]
         if id=='joven':p += [pared('estanteria_libros',False,area_min=16),pared('mueble_tv',False,area_min=22),E('sobre','televisor_plano',en=['mueble_tv'],cantidad=[1,1],area_min=22),E('enfrente','sofa_dos_plazas',de='televisor_plano',cantidad=[0,1],preferir=True,si_no=False,area_min=22,area_max=30),E('enfrente','sofa_dos_plazas',de='televisor_plano',cantidad=[1,1],obligatorio=True,si_no=False,area_min=30),E('entre','mesa_centro',a='televisor_plano',b='sofa_dos_plazas',cantidad=[0,1],area_min=22),pared('vb_comoda',False,area_min=18),E('suelo_libre','vb_alfombra',cantidad=[0,1],area_min=18)]
         if id=='joven':soportes+=['estanteria_libros','mesa_centro','vb_comoda']
         p+=adornos(juguetes+libros+['vb_hucha','vb_despertador','vb_cuaderno','vb_cesto','vb_ropa','vb_colcha','lampara_mesa','libro_tumbado','cojin_suelto'] if id=='ninos' else papeles+personales(C),soportes)
+        if id=='ninos':
+            # La mesa queda para juego y deberes: piezas pequeñas, sin hileras altas de libros.
+            bajos,tablero=infantiles(C)
+            p[-2:-1]=[E('sobre',tablero,en=[mesa_id],por_soporte=[1,2]),
+                       E('sobre',bajos,en=['vb_mesita','vb_estante_ninos'],por_soporte=[1,2])]
         kit(id,nombre,'dormitorio',p,mood[id],fondo=(2.1,5.2))
     for id,nombre in [('estudio','Estudio para leer y trabajar'),('despacho','Despacho doméstico')]:
         p=[pared('vb_escritorio'),junto('silla_comedor','vb_escritorio',True,lados=['frente'],mira_ref=True),pared('estanteria_libros'),pared('vb_comoda',False),pared('sillon_orejero',False,area_min=11),pared('estanteria_libros',False,area_min=16),E('pared',['cuadro_paisaje','fotos_familia','poster_enmarcado'],pared='*',cantidad=[1,3]),E('sobre','vb_ordenador',en=['vb_escritorio'],cantidad=[1,1])]

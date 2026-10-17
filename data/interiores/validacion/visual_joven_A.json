@@ -2,13 +2,14 @@
  "estado": "evaluado",
  "proveedor": "OpenAI Decisions",
  "modelo": "gpt-6-luna",
- "request_id": "req_2236fb141c744a57af920489023f57a8",
- "request_sha256": "f901db1723fd27adb9440e7b59edf8308dcf76c1cd5507f6482694b569c875d6",
- "fecha": "2026-10-17T14:19:50.652148+00:00",
+ "request_id": "req_1b3e4af66d354d41b5937f35987f6433",
+ "request_sha256": "9b5a8a93daa25023e67bd13ea50522a5d2c1b84134a5777af7adb1b55c12da6e",
+ "fecha": "2026-10-17T18:53:41.625213+00:00",
  "kit": "joven",
  "revisor": "A",
  "ficha": "data/interiores/fichas/casa_dormJoven.jpg",
- "ficha_sha256": "48ea059f3587e5735973fbe4e9e170de7e6295e21083af101b5731d2f395f046",
+ "ficha_sha256": "19afe4b4bc6df6fbe7e329a6ff83ffa9434bd21d2ec093d2c9ad5b7b204d78cf",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/19afe4b4bc6df6fbe7e329a6ff83ffa9434bd21d2ec093d2c9ad5b7b204d78cf.jpg",
  "referencias": [
   {
    "titulo": "Twin Dolphin Hall new studio apartment 2.jpg",
@@ -34,19 +35,19 @@
   "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
  },
  "puntuaciones": {
-  "densidad": 3.06,
-  "coherencia": 3.32,
-  "iluminacion": 3.54,
-  "variedad": 3.29,
+  "densidad": 3.02,
+  "coherencia": 3.35,
+  "iluminacion": 3.58,
+  "variedad": 3.4,
   "lectura_funcional": 3.01
  },
- "media": 3.244,
+ "media": 3.272,
  "supera_umbral": false,
  "respuestas": [
   {
    "type": "score",
    "name": "densidad",
-   "score": 2.06,
+   "score": 2.02,
    "probabilities": [
     {
      "value": 0,
@@ -56,7 +57,7 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.04
+     "probability": 0.06
     },
     {
      "value": 2,
@@ -66,7 +67,7 @@
     {
      "value": 3,
      "label": "4",
-     "probability": 0.08
+     "probability": 0.06
     },
     {
      "value": 4,
@@ -79,7 +80,7 @@
   {
    "type": "score",
    "name": "coherencia",
-   "score": 2.32,
+   "score": 2.35,
    "probabilities": [
     {
      "value": 0,
@@ -94,12 +95,12 @@
     {
      "value": 2,
      "label": "3",
-     "probability": 0.65
+     "probability": 0.62
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.32
+     "probability": 0.35
     },
     {
      "value": 4,
@@ -107,12 +108,12 @@
      "probability": 0.01
     }
    ],
-   "confidence": 0.7
+   "confidence": 0.68
   },
   {
    "type": "score",
    "name": "iluminacion",
-   "score": 2.54,
+   "score": 2.58,
    "probabilities": [
     {
      "value": 0,
@@ -122,30 +123,30 @@
     {
      "value": 1,
      "label": "2",
-     "probability": 0.03
+     "probability": 0.04
     },
     {
      "value": 2,
      "label": "3",
-     "probability": 0.41
+     "probability": 0.36
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.51
+     "probability": 0.54
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.04
+     "probability": 0.05
     }
    ],
-   "confidence": 0.55
+   "confidence": 0.57
   },
   {
    "type": "score",
    "name": "variedad",
-   "score": 2.29,
+   "score": 2.4,
    "probabilities": [
     {
      "value": 0,
@@ -160,20 +161,20 @@
     {
      "value": 2,
      "label": "3",
-     "probability": 0.7
+     "probability": 0.6
     },
     {
      "value": 3,
      "label": "4",
-     "probability": 0.28
+     "probability": 0.37
     },
     {
      "value": 4,
      "label": "5",
-     "probability": 0.01
+     "probability": 0.02
     }
    ],
-   "confidence": 0.74
+   "confidence": 0.65
   },
   {
    "type": "score",
