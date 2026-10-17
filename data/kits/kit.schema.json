@@ -254,7 +254,27 @@
      "grupo_pared": {
       "type": "string",
       "minLength": 1,
-      "description": "Nombre de un grupo opcional de entradas activas consecutivas: módulos de suelo obligatorios, obj fijo y cantidad uno, probados juntos contra pared; cada junto_a debe admitir como de el obj de la entrada inmediatamente anterior. Si el grupo no cumple ese contrato o no cabe el conjunto, se conservan las reglas individuales."
+      "description": "Grupo opcional de 2–4 módulos de suelo, obj fijo y entradas activas consecutivas. Raíz contra_pared obligatoria y unitaria; acompañantes junto_a unitarios obligatorios o preferir:true/cantidad:[0,1]. Cada de admite el obj inmediatamente anterior. Se prueba el conjunto completo; al fallar se conservan las reglas individuales y la opcionalidad."
+     },
+     "reserva_lateral": {
+      "type": "object",
+      "properties": {
+       "obj": {
+        "type": "string"
+       },
+       "lado": {
+        "enum": [
+         "izquierda",
+         "derecha"
+        ]
+       }
+      },
+      "required": [
+       "obj",
+       "lado"
+      ],
+      "additionalProperties": false,
+      "description": "Precondición de la raíz de grupo_pared: debe caber este acompañante de pared al lado indicado. Prueba su volumen real sin colocarlo ni sustituir su entrada posterior. No cambia los mínimos ni actúa como collider."
      }
     }
    }

@@ -18,7 +18,7 @@ export function panosPared(a, b, y0, y1, huecos) {
   return rects;
 }
 
-export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076}={}) {
+export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
   const bath=rm.type==='bano',work=rm.type==='taller'&&perfil!=='artista',office=rm.type==='despacho',store=rm.type==='trastero',kitchen=rm.type==='cocina',sew=rm.type==='costura',wood=office||sew;
   if(!bath&&!work&&!office&&!store&&!kitchen&&!sew)return;
   const r=mulberry32(seed*347+rm.x0*13+rm.z0*53),y=(rm.lv||0)*3.1;
@@ -38,6 +38,12 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
   ][Math.abs(seed)%3]:[['#e4d8bd','#617568','#aaa28b','#4c5f53'],['#ddd8c8','#667b80','#b3ac9b','#4f6468']][Math.abs(seed)%2];
   const limite=bath||kitchen?1.28:wood?.85:1.02;
   const alto=mat(tonos[0]),bajo=mat(tonos[1]),junta=mat(tonos[2]),borde=mat(tonos[3]);
+  // Un paño de uso en baños grandes: color existente detrás del aseo; cal en los demás.
+  // Se sustituyen materiales de las mismas láminas, sin sumar geometría ni tapar huecos.
+  const lavabo=bath&&(rm.x1-rm.x0)*(rm.z1-rm.z0)>=10
+    ? estancia?.colocados?.find(p=>p.obj==='va_lavabo_amplio') : null;
+  const ang=lavabo?Math.atan2(Math.sin(lavabo.ry),Math.cos(lavabo.ry)):null;
+  const paredUso=ang===null?null:Math.abs(ang)<.3?'s':Math.abs(Math.abs(ang)-Math.PI)<.3?'n':ang>0?'w':'e';
   for(const side of ['s','n','w','e']) {
     const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
     const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
@@ -46,7 +52,7 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
       const c=(q[0]+q[1])/2,px=horizontal?c:side==='w'?rm.x0+inset+offset:rm.x1-inset-offset,pz=horizontal?(side==='s'?rm.z0+inset+offset:rm.z1-inset-offset):c;
       B.add(key,planeGeo(q[1]-q[0],q[3]-q[2]),px,y+(q[2]+q[3])/2,pz,ry);
     };
-    for(const p of panosPared(a,b,limite,altura,huecos))dibujo(alto,p);
+    for(const p of panosPared(a,b,limite,altura,huecos))dibujo(paredUso&&side!==paredUso?bajo:alto,p);
     for(const p of panosPared(a,b,0,limite,huecos)) {
       if(bath||kitchen) {
         // Junta y azulejo comparten plano y ocupan áreas disjuntas. Sin láminas

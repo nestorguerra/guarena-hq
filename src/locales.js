@@ -508,9 +508,12 @@ export function amueblar(kit, seed = 1, ctx = null) {
   const gruposIntentados = new Set(), entradasAgrupadas = new Set();
   const probarGrupoPared = (miembros, Z) => {
     const [raiz] = miembros, e0 = raiz[1];
-    // Contrato deliberadamente pequeño: módulos fijos, obligatorios y unitarios.
+    // Raíz obligatoria; acompañantes unitarios o preferidos [0,1]. Nunca se fuerza un opcional al fallar.
+    const unidadGrupo=(e,k)=>e.obligatorio
+      ? e.cantidad===1 || (Array.isArray(e.cantidad)&&e.cantidad[0]===1&&e.cantidad[1]===1)
+      : k>0 && e.preferir===true && Array.isArray(e.cantidad)&&e.cantidad[0]===0&&e.cantidad[1]===1;
     if(miembros.length<2 || miembros.length>4 || e0.regla!=='contra_pared')return false;
-    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !e.obligatorio || !(e.cantidad===1 || (Array.isArray(e.cantidad)&&e.cantidad[0]===1&&e.cantidad[1]===1)) || e.silla_frontal || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
+    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !unidadGrupo(e,k) || e.silla_frontal || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
     // Sólo cadenas inmediatas: no convertir A<-B y A<-C en A-B-C.
     // Si falta esa referencia adyacente, se ejecutan las reglas originales (incluido si_no).
     let semilla=(seed*2654435761+97)>>>0;
@@ -536,7 +539,24 @@ export function amueblar(kit, seed = 1, ctx = null) {
           nuevos.push(it);cursor+=b.w+.04;
         }
         // También se comprueban usos frontales y accesos de las tres piezas juntas.
-        if(nuevos.length!==miembros.length||cierra(nuevos))continue;
+        if(nuevos.length!==miembros.length)continue;
+        let prueba=nuevos;
+        // Precondición opt-in: el acompañante de pared debe caber junto a la raíz.
+        // No se compromete aquí: su entrada conserva índice, mínimo y regla propios.
+        if(e0.reserva_lateral){
+          const {obj,lado}=e0.reserva_lateral,ref=nuevos.find(p=>p.e===raiz[0]);
+          if(OBJETOS[obj]?.soporte!=='pared'||!['izquierda','derecha'].includes(lado))continue;
+          const b=caja(obj),rb=caja(ref.obj),lx=lado==='izquierda'?rb.x0-b.w/2-.04:rb.x1+b.w/2+.04;
+          const [dx,dz]=rot(lx,rb.z0+b.d/2,ref.ry),ry=ref.ry;
+          let [x,z]=origen(obj,ref.x+dx,ref.z+dz,ry);
+          const [bx,bz]=rot(0,b.z0,ry),sn=Math.sin(ry),cs=Math.cos(ry);
+          if(Math.abs(sn)>.5)x=(sn>0?Z.x0:Z.x1)+sn*.003-bx;
+          else z=(cs>0?Z.z0:Z.z1)+cs*.003-bz;
+          const it={obj,x,y:0,z,ry,e:-1,zona:Z.id},v=volumen(it);
+          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>choca(volumen(q),v)))continue;
+          prueba=nuevos.concat(it);
+        }
+        if(cierra(prueba))continue;
         const anterior=entrada;let previo=null;
         for(const [ei,e] of miembros){
           const it=nuevos.find(p=>p.e===ei);entrada=ei;

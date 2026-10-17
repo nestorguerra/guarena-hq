@@ -53,6 +53,32 @@ def mejorar_despacho(out):
     p += [b(.26,.025,.2,y=.542,c='#7d9693',m='papel'),b(.24,.025,.18,y=.568,c='#c9b88e',m='papel'),b(.22,.025,.17,y=.594,c='#9e7e6a',m='papel')]
     out.append(objeto('vb_mesa_lectura','Mesa auxiliar con libros',.52,.61,.46,None,6,partes=p))
 
+def armario_alto_cocina(w, diseno):
+    """Módulo de pared sobre preparación: misma profundidad y cotas, tres usos de frente."""
+    p=[caja(w,.64,.024,y=1.80,z=.012,tinte='madera')]
+    for x in [-w/2+.0125,w/2-.0125]:p.append(caja(.025,.64,.28,x=x,y=1.80,z=.14,tinte='madera'))
+    for y in [1.4925,2.1075]:p.append(caja(w,.025,.28,y=y,z=.14,tinte='madera'))
+    if diseno=='abierto':
+        # Vajillero lateral abierto, con dos pilas apoyadas y un armario cerrado.
+        corte=-w*.14
+        p.append(caja(.025,.59,.28,x=corte,y=1.80,z=.14,tinte='madera'))
+        p.append(caja(w*.36-.025,.025,.28,x=-w*.32,y=1.80,z=.14,tinte='madera'))
+        puertas=[(w*.18,w*.64-.045)]
+        for y0 in [1.505,1.8125]:
+            for k in range(3):p.append(cil(.065,.065,.012,x=-w*.32,y=y0+.006+k*.012,z=.15,c='#d7d2bd',m='ceramica',seg=12))
+    else:puertas=[(-w/4,w/2-.028),(w/4,w/2-.028)]
+    for x,an in puertas:
+        p.append(b(an,.58,.018,x=x,y=1.80,z=.289,tinte='madera'))
+        if diseno=='clasico':
+            # Bastidor visible, sin cambiar la huella exterior de la puerta.
+            for dx in [-an/2+.012,an/2-.012]:p.append(caja(.024,.56,.010,x=x+dx,y=1.80,z=.303,c='#9c845e'))
+            for y in [1.532,2.068]:p.append(caja(an-.048,.024,.010,x=x,y=y,z=.303,c='#9c845e'))
+        p.append(caja(.11,.014,.025,x=x,y=1.56,z=.310,c='#aaa48f',m='metal'))
+    if diseno=='clasico':
+        p.append(b(w,.025,.29,y=1.34,z=.145,tinte='madera'))
+        for x in [-w*.28,0,w*.28]:p.append(cil(.055,.045,.09,x=x,y=1.3975,z=.16,c='#d2c9ad',m='ceramica'))
+    return p
+
 def mejorar_cocina_costura(out):
     C={o['id']:o for o in out}
     for id in ['va_cocina','va_encimera','va_nevera','va_lavadora','va_alacena','va_alto_cocina']:
@@ -62,23 +88,19 @@ def mejorar_cocina_costura(out):
     for id in ['va_cocina','va_encimera']:
         for p in C[id]['partes']:
             if p['m']=='madera' and p['p'][2]>.25:
-                p.pop('tinte',None);p['c']='#6b8275'
+                p['tinte']='madera';p['c']='#8a7355'
     # El módulo de preparación deja de parecer una cómoda: tablero de piedra
     # y armario superior con puertas, balda y vajilla en el mismo eje.
     for p in C['va_encimera']['partes']:
         p['d'][1]*=.855/.89;p['p'][1]*=.855/.89
     C['va_encimera']['partes'].append(b(.67,.035,.53,y=.8725,c='#c4baa6',m='piedra'))
     C['va_encimera']['superficies']=[dict(y=.89,margen=.045)]
-    C['va_alto_cocina']['partes']=[
-        b(.59,.58,.25,y=1.75,z=.125,c='#62796c'),
-        b(.273,.47,.018,x=-.143,y=1.78,z=.26,c='#839989'),
-        b(.273,.47,.018,x=.143,y=1.78,z=.26,c='#839989'),
-        b(.012,.13,.025,x=-.03,y=1.73,z=.279,c='#b6ae96',m='metal'),
-        b(.012,.13,.025,x=.03,y=1.73,z=.279,c='#b6ae96',m='metal'),
-        b(.62,.025,.29,y=1.34,z=.145,c='#9f845e'),
-    ]
-    for x in [-.18,0,.18]:
-        C['va_alto_cocina']['partes'] += [cil(.055,.045,.09,x=x,y=1.3975,z=.16,c='#d2c9ad',m='ceramica')]
+    C['va_alto_cocina']['partes']=armario_alto_cocina(.62,'clasico')
+    for sufijo,diseno in [('', 'clasico'),('_liso','liso'),('_abierto','abierto')]:
+        for amplio,w in [(False,.62),(True,.94)]:
+            if not sufijo and not amplio:continue
+            id='va_alto_cocina'+sufijo+('_amplio' if amplio else '')
+            out.append(objeto(id,'Armario alto de cocina '+diseno+(' amplio' if amplio else ''),w,.8,.33,None,18 if amplio else 12,partes=armario_alto_cocina(w,diseno),soporte='pared'))
     # Dos puertas de nevera con volumen y zócalo; no una caja blanca sin juntas.
     C['va_nevera']['partes'] += [b(.48,1.07,.025,y=.57,z=.269,c='#c9cec4',m='metal'),b(.48,.35,.025,y=1.35,z=.269,c='#d9dcd0',m='metal'),caja(.45,.04,.018,y=.03,z=.266,c='#707a72',m='metal')]
     for p in C['va_nevera']['partes']:

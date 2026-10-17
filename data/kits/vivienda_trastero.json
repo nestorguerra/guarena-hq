@@ -49,11 +49,35 @@
    "zona": "estancia",
    "regla": "junto_a",
    "variantes": [
+    "va_bicicleta_guardada",
+    "va_bicicleta_carga",
+    "va_escalera_guardada"
+   ],
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "variantes": [
     "va_estante_trastero_0",
     "va_estante_trastero_1",
     "va_estante_trastero_2"
    ],
    "de": [
+    "va_bicicleta_guardada",
+    "va_bicicleta_carga",
+    "va_escalera_guardada",
     "va_estante_trastero_0",
     "va_estante_trastero_1",
     "va_estante_trastero_2"
@@ -84,22 +108,6 @@
    "preferir": true,
    "area_min": 14,
    "buscar_refs": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "variantes": [
-    "va_bicicleta_guardada",
-    "va_bicicleta_carga",
-    "va_escalera_guardada"
-   ],
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
-   ],
-   "obligatorio": true,
-   "preferir": true
   },
   {
    "zona": "estancia",

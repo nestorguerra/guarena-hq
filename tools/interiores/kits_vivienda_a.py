@@ -14,8 +14,9 @@ def generar():
         junto('va_encimera',frentes,True,area_max=14,buscar_refs=True,grupo_pared='frente_trabajo'),
         junto('va_encimera_amplia',frentes,True,area_min=14,buscar_refs=True,grupo_pared='frente_trabajo'),
         junto('va_nevera',frentes,True,buscar_refs=True,grupo_pared='frente_trabajo'),
-        E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera',cantidad=[0,1],preferir=True,area_max=14),
-        E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera_amplia',cantidad=[0,1],preferir=True,area_min=14),
+        *[E('pared','va_alto_cocina'+sufijo+('_amplio' if amplio else ''),pared='*',sobre_de='va_encimera'+('_amplia' if amplio else ''),cantidad=[0,1],preferir=True,si_no=False,estilo=estilos,**({'area_min':14} if amplio else {'area_max':14}))
+          for sufijo,estilos in [('', ['antiguo','rustico']),('_liso',['moderno','joven','lujo']),('_abierto',['!antiguo','!rustico','!moderno','!joven','!lujo'])]
+          for amplio in [False,True]],
         junto('va_lavadora',frentes,buscar_refs=True),junto('va_alacena',frentes,True,buscar_refs=True),
         junto('va_encimera_amplia',frentes,area_min=18,buscar_refs=True),
         pared('va_alacena',False,area_min=20),
@@ -24,7 +25,29 @@ def generar():
         E('suelo_libre','va_isla_cocina',cantidad=[0,1],preferir=True,area_min=22),
     ]+adornos(comida+vajilla,['va_encimera','va_encimera_amplia','va_alacena','va_lavadora','va_isla_cocina'])
     kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
-    bano=[pared('va_lavabo',area_max=10),pared('va_lavabo_amplio',area_min=10),E('pared','va_espejo',pared='*',sobre_de='va_lavabo',cantidad=[1,1],obligatorio=True,area_max=10),E('pared','va_espejo_amplio',pared='*',sobre_de='va_lavabo_amplio',cantidad=[1,1],obligatorio=True,area_min=10),E('enfrente','va_inodoro',de=['va_lavabo','va_lavabo_amplio'],cantidad=[1,1],obligatorio=True,area_min=10),pared('va_ducha'),junto('va_inodoro','va_ducha',True,area_max=10),junto('va_toallero',['va_lavabo','va_lavabo_amplio'],True),E('pared','va_papel',pared='*',sobre_de='va_inodoro',cantidad=[0,1]),junto('va_armario_bano',['va_lavabo','va_lavabo_amplio']),junto('va_banera','va_ducha',area_min=10),pared('va_cesto_ropa',False),junto('va_alfombrilla_bano',['va_lavabo','va_lavabo_amplio'],lados=['frente'],si_no=False),E('sobre',['va_cepillero','va_jabonera','va_jabonera'],en=['va_lavabo','va_lavabo_amplio'],por_soporte=[1,1])]+adornos(higiene,['va_armario_bano'])
+    # En salas grandes, reservar el frente de aseo antes de comprometer el lavabo.
+    # Armario opcional: si no cabe el conjunto, el fallback conserva su omisión.
+    bano=[
+        pared('va_lavabo',area_max=10),
+        pared('va_lavabo_amplio',area_min=10,grupo_pared='aseo_diario',reserva_lateral=dict(obj='va_toallero',lado='izquierda')),
+        junto('va_armario_bano','va_lavabo_amplio',area_min=10,grupo_pared='aseo_diario',si_no=False),
+        junto('va_toallero','va_lavabo_amplio',True,area_min=10,lados=['izquierda'],si_no=False),
+        E('pared','va_espejo',pared='*',sobre_de='va_lavabo',cantidad=[1,1],obligatorio=True,area_max=10),
+        E('pared','va_espejo_amplio',pared='*',sobre_de='va_lavabo_amplio',cantidad=[1,1],obligatorio=True,area_min=10),
+        E('enfrente','va_inodoro',de=['va_lavabo','va_lavabo_amplio'],cantidad=[1,1],obligatorio=True,area_min=10),
+        pared('va_ducha',area_max=10),
+        junto('va_inodoro','va_ducha',True,area_max=10),
+        junto('va_toallero',['va_lavabo','va_lavabo_amplio'],True,area_max=10),
+        E('pared','va_papel',pared='*',sobre_de='va_inodoro',cantidad=[0,1]),
+        junto('va_armario_bano',['va_lavabo','va_lavabo_amplio'],area_max=10),
+        # Conjunto húmedo independiente del aseo: reservar ducha + bañera completas.
+        # La ducha sigue obligatoria y la bañera opcional al recurrir al fallback.
+        pared('va_ducha',area_min=10,grupo_pared='zona_humeda'),
+        junto('va_banera','va_ducha',area_min=10,grupo_pared='zona_humeda',si_no=False),
+        pared('va_cesto_ropa',False),
+        junto('va_alfombrilla_bano',['va_lavabo','va_lavabo_amplio'],lados=['frente'],si_no=False),
+        E('sobre',['va_cepillero','va_jabonera','va_jabonera'],en=['va_lavabo','va_lavabo_amplio'],por_soporte=[1,1]),
+    ]+adornos(higiene,['va_armario_bano'])
     for e in bano:
         if e.get('obj')=='va_inodoro':e['espacio_frontal']=[.6,.65]
     kit('bano','Baño doméstico','bano',bano,mood['bano'],fondo=(1.9,3.6))
@@ -46,12 +69,13 @@ def generar():
     estantes=['va_estante_trastero_0','va_estante_trastero_1','va_estante_trastero_2']
     guardados=['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada']
     almacenaje=estantes+['va_cajas_apiladas']
-    # Se prioriza un frente de estantes y cajas; el mínimo admite otra pared.
-    # Los acompañantes opcionales solo se colocan si conservan su agrupación.
+    # La pareja alta/baja arranca en un extremo libre de pared: primero el
+    # estante y su bicicleta/escalera, antes de consumir el frente con otro estante.
+    # Los obligatorios mantienen el fallback de junto_a si esa relación no cabe.
     trastero=[
-        pared(estantes),junto(estantes,estantes,True,area_min=10,buscar_refs=True),
+        pared(estantes),junto(guardados,estantes,True,buscar_refs=True),
+        junto(estantes,guardados+estantes,True,area_min=10,buscar_refs=True),
         junto('va_cajas_apiladas',estantes,True,area_min=14,buscar_refs=True),
-        pared(guardados),
         E('pared','va_soporte_ciclismo',pared='*',sobre_de='va_bicicleta_guardada',cantidad=[0,1],preferir=True,si_no=False),
         E('pared','va_soporte_ciclismo',pared='*',sobre_de='va_bicicleta_carga',cantidad=[0,1],preferir=True,si_no=False),
         E('pared','va_soporte_pintura',pared='*',sobre_de='va_escalera_guardada',cantidad=[0,1],preferir=True,si_no=False),

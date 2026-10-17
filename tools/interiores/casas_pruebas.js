@@ -87,6 +87,64 @@ export async function probarCasas(opts = {}) {
       for(let i=1;i<vistas.length;i++)exigir(Math.abs((vistas[i].s-vistas[i].w)-(vistas[i-1].s+vistas[i-1].w)-.04)<.01,seed+': separación del frente');
     }finally{tirar(h);}}
   });
+  if(opts.tanda>=11)await caso('grupo con opcional preferido conserva fallback y aleatorio sin compromiso parcial',()=>{
+    const id='__grupo_opcional',base=KITS.vivienda_bano,objetos=[
+      {zona:'estancia',regla:'contra_pared',obj:'va_lavabo_amplio',pared:'N',cantidad:[1,1],obligatorio:true,grupo_pared:'aseo'},
+      {zona:'estancia',regla:'junto_a',obj:'va_armario_bano',de:'va_lavabo_amplio',cantidad:[0,1],preferir:true,si_no:false,grupo_pared:'aseo'},
+    ];
+    const kit={...base,objetos},plain={...base,objetos:objetos.map(({grupo_pared,...e})=>e)};
+    const W=caja('va_lavabo_amplio').w+.10,ctx={W,D:3,H:2.75,libres:[],inicio:{x:0,z:.5},funciones:true};
+    try{for(const seed of [1,37,81]){
+      KITS[id]=kit;const A=amueblar(id,seed,ctx);KITS[id]=plain;const B=amueblar(id,seed,ctx);
+      exigir(JSON.stringify(A.P)===JSON.stringify(B.P)&&JSON.stringify(A.activas)===JSON.stringify(B.activas),'grupo fallido altera fallback '+seed);
+      exigir(A.U([0,1])===B.U([0,1]),'grupo fallido consume RNG '+seed);
+      exigir(A.P.some(p=>p.obj==='va_lavabo_amplio')&&!A.P.some(p=>p.obj==='va_armario_bano'),'no conserva el armario opcional omitido');
+    }
+    KITS[id]=kit;const A=amueblar(id,37,{...ctx,W:4});
+    const l=A.P.find(p=>p.obj==='va_lavabo_amplio'),a=A.P.find(p=>p.obj==='va_armario_bano');
+    exigir(l&&a&&a.e===1&&A.P[a.de]===l,'no coloca el opcional preferido con su referencia');
+    exigir(Math.abs(Math.abs(a.v.cx-l.v.cx)-a.v.hw-l.v.hw-.04)<.001,'armario separado del lavabo');
+    exigir(!objetos[1].obligatorio&&objetos[1].cantidad[0]===0,'convierte el armario en obligatorio');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=11)await caso('el grupo de aseo rechaza un rincón sin pared para su toalla',()=>{
+    const id='__aseo_pared_toalla',base=KITS.vivienda_bano,objetos=[
+      {zona:'estancia',regla:'contra_pared',obj:'va_lavabo_amplio',pared:'N',cantidad:[1,1],obligatorio:true,grupo_pared:'aseo',reserva_lateral:{obj:'va_toallero',lado:'izquierda'}},
+      {zona:'estancia',regla:'junto_a',obj:'va_armario_bano',de:'va_lavabo_amplio',cantidad:[0,1],preferir:true,si_no:false,grupo_pared:'aseo'},
+      {zona:'estancia',regla:'junto_a',obj:'va_toallero',de:'va_lavabo_amplio',cantidad:[1,1],obligatorio:true,lados:['izquierda'],si_no:false},
+    ];
+    const ctx={W:3.8,D:3,H:2.75,libres:[],inicio:{x:0,z:.5},funciones:true};
+    try{
+      KITS[id]={...base,objetos};const A=amueblar(id,37,ctx);
+      exigir(A.P.length===3&&A.P.some(p=>p.obj==='va_toallero'),'pierde toalla al aceptar la primera pareja');
+      const l=A.P.find(p=>p.obj==='va_lavabo_amplio'),t=A.P.find(p=>p.obj==='va_toallero');
+      exigir(Math.abs(l.ry-t.ry)<.001,'manda la toalla a otra pared');
+      KITS[id]={...base,objetos:objetos.map(({reserva_lateral,...e})=>e)};const B=amueblar(id,37,ctx);
+      exigir(!B.P.some(p=>p.obj==='va_toallero'),'la muestra no reproduce el rincón sin reserva');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=11)await caso('banos grandes conservan conjuntos de aseo, espejo y reserva frontal WC',()=>{
+    const pres={interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}};
+    for(const seed of [2786,3244,1594]){const h=H.buildVecino(seed);try{
+      const e=h.estancias.find(e=>e.kit==='vivienda_bano');exigir(e,'sin bano '+seed);
+      const l=e.colocados.find(p=>['va_lavabo','va_lavabo_amplio'].includes(p.obj)),m=e.colocados.find(p=>OBJETOS[p.obj].rol==='espejo');
+      exigir(l&&m&&Math.hypot(l.x-m.x,l.z-m.z)<.4&&Math.abs(l.ry-m.ry)<.01,'espejo sin relacion '+seed);
+      exigir(e.colocados.some(p=>p.obj==='va_inodoro')&&e.colocados.some(p=>p.obj==='va_ducha')&&e.colocados.some(p=>p.obj==='va_toallero'),'pierde un sanitario/toalla obligatorio '+seed);
+      const r=revisar({local:e,group:{traverse(){}}},pres);exigir(!r.errores.length,seed+': '+r.errores.join('; '));
+      if(e.W*e.D>=10){
+        const a=e.colocados.find(p=>p.obj==='va_armario_bano');exigir(a,'muestra grande sin armario '+seed);
+        const tx=Math.cos(l.ry),tz=-Math.sin(l.ry),nx=Math.sin(l.ry),nz=Math.cos(l.ry);
+        const sep=Math.abs((a.v.cx-l.v.cx)*tx+(a.v.cz-l.v.cz)*tz)-a.v.hw-l.v.hw;
+        const respaldo=p=>p.v.cx*nx+p.v.cz*nz-p.v.hd;
+        exigir(Math.abs(a.ry-l.ry)<.001&&Math.abs(sep-.04)<.01&&Math.abs(respaldo(a)-respaldo(l))<.01,'aseo sigue disperso '+seed);
+        const b=e.colocados.find(p=>p.obj==='va_banera');exigir(b,'muestra grande pierde banera '+seed);
+        const t=e.colocados.find(p=>p.obj==='va_toallero'),d=e.colocados.find(p=>p.obj==='va_ducha');
+        const separacion=(p,q)=>Math.abs((p.v.cx-q.v.cx)*Math.cos(q.ry)-(p.v.cz-q.v.cz)*Math.sin(q.ry))-p.v.hw-q.v.hw;
+        exigir(Math.abs(t.ry-l.ry)<.001&&Math.abs(separacion(t,l)-.04)<.01,'toalla fuera del conjunto de aseo '+seed);
+        exigir(Math.abs(d.ry-b.ry)<.001&&Math.abs(separacion(d,b)-.04)<.01,'ducha y banera siguen dispersas '+seed);
+      }
+    }finally{tirar(h);}}
+  });
   await caso('selecciona dormitorio, pintura y taller sin confundirlos', () => {
     exigir(typeof H.kitDeEstancia === 'function', 'falta la selección compartida de kits');
     for (const [tipo, perfil, esperado] of [
@@ -418,6 +476,45 @@ export async function probarCasas(opts = {}) {
       for(const p of a.P)if(['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada'].includes(p.obj))ids.add(p.obj);
     }
     for(const id of ['va_bicicleta_guardada','va_bicicleta_carga','va_escalera_guardada'])exigir(ids.has(id),'nunca se coloca la variante '+id);
+  });
+  if(opts.tanda>=12)await caso('trastero compone pareja alta y baja antes de prolongar el almacenaje',()=>{
+    const K=KITS.vivienda_trastero;
+    exigir(K.objetos[0].regla==='contra_pared'&&K.objetos[1].regla==='junto_a'&&K.objetos[1].buscar_refs,'no prioriza la pareja');
+    exigir(K.objetos[1].obligatorio&&K.objetos[1].si_no!==false,'pierde el fallback del obligatorio');
+    const id='__trastero_pareja',ctx={W:5,D:4,H:2.75,libres:[],inicio:{x:0,z:1},funciones:true};
+    const entradas=K.objetos.slice(0,2).map(e=>({...e}));entradas[0]={...entradas[0],pared:'N',obj:'va_estante_trastero_0',variantes:undefined};entradas[1]={...entradas[1],obj:'va_bicicleta_guardada',variantes:undefined};
+    const junto=(a,b)=>Math.abs(a.ry-b.ry)<.001&&Math.abs(Math.abs(a.v.cx-b.v.cx)-a.v.hw-b.v.hw-.04)<.001;
+    try{
+      KITS[id]={...K,objetos:entradas};const A=amueblar(id,37,ctx),B=amueblar(id,37,ctx);
+      exigir(A.P.length===2&&junto(A.P[0],A.P[1]),'pareja separada con pared libre');
+      exigir(JSON.stringify(A.P)===JSON.stringify(B.P),'pareja no reproducible');
+      const alto=A.P[0],bajo=A.P[1];exigir(alto.v.y1>1.9&&bajo.v.y1<1.1,'no hay volúmenes de dos alturas');
+      const libres=[{...bajo.v,y0:0,y1:2.4}];
+      const C=amueblar(id,37,{...ctx,libres});
+      exigir(C.P.length===2&&!C.P.some(p=>p.obj==='va_bicicleta_guardada'&&junto(C.P[0],p)),'el obligatorio no conserva otra pared ante hueco reservado');
+      const todas=[{cx:0,cz:2,hw:2.5,hd:2,a:0,y0:0,y1:3}];
+      exigir(amueblar(id,37,{...ctx,libres:todas}).P.length===0,'fuerza piezas en sala completamente reservada');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=11)await caso('altos de cocina proporcionados, estilos excluyentes y huecos protegidos',()=>{
+    const familias={rustico:'',antiguo:'',joven:'_liso',moderno:'_liso',lujo:'_liso',bohemio:'_abierto',alegre:'_abierto'};
+    for(const [estilo,sufijo] of Object.entries(familias))for(const [W,D,amplio] of [[3,4,false],[5,4,true]]){
+      const filtro=filtroHogar({perfil:'familia',estilo,habitacion:'cocina',botin:[]});
+      const activas=KITS.vivienda_cocina.objetos.filter(e=>e.obj?.startsWith('va_alto_cocina')&&filtro(e)&&!(e.area_min!=null&&W*D<e.area_min)&&!(e.area_max!=null&&W*D>=e.area_max));
+      exigir(activas.length===1&&activas[0].obj==='va_alto_cocina'+sufijo+(amplio?'_amplio':''),'selección ambigua de alto '+estilo);
+      const b=caja(activas[0].obj),bajo=caja(amplio?'va_encimera_amplia':'va_encimera');
+      exigir(b.w<=bajo.w&&b.w/bajo.w>.90&&b.y0>1.2&&b.y1<2.2,'alto fuera de proporción o paso');
+    }
+    const id='__alto_cocina_hueco';try{
+      for(const estilo of Object.keys(familias)){
+        const alto=KITS.vivienda_cocina.objetos.find(e=>e.obj==='va_alto_cocina'+familias[estilo]+'_amplio');
+        KITS[id]={...KITS.vivienda_cocina,objetos:[{zona:'estancia',regla:'contra_pared',obj:'va_encimera_amplia',pared:'N',cantidad:1,centrado:true},alto]};
+        const ctx={W:5,D:4,H:2.75,filtro:filtroHogar({perfil:'familia',estilo,habitacion:'cocina',botin:[]})};
+        const A=amueblar(id,37,ctx),u=A.P.find(p=>p.obj===alto.obj);exigir(u,'falta alto con pared libre '+estilo);
+        const B=amueblar(id,37,{...ctx,libres:[u.v]});exigir(!B.P.some(p=>p.obj===alto.obj),'invade reserva de ventana '+estilo);
+        KITS[id].objetos=[alto];exigir(amueblar(id,37,ctx).P.length===0,'alto huérfano sin preparación');
+      }
+    }finally{delete KITS[id];}
   });
   return { pruebas, errores };
 }

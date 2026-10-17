@@ -127,12 +127,17 @@
     1
    ],
    "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ],
    "area_max": 14
   },
   {
    "zona": "estancia",
    "regla": "pared",
-   "obj": "va_alto_cocina",
+   "obj": "va_alto_cocina_amplio",
    "pared": "*",
    "sobre_de": "va_encimera_amplia",
    "cantidad": [
@@ -140,6 +145,91 @@
     1
    ],
    "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "antiguo",
+    "rustico"
+   ],
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_liso",
+   "pared": "*",
+   "sobre_de": "va_encimera",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "moderno",
+    "joven",
+    "lujo"
+   ],
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_liso_amplio",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "moderno",
+    "joven",
+    "lujo"
+   ],
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_abierto",
+   "pared": "*",
+   "sobre_de": "va_encimera",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "!antiguo",
+    "!rustico",
+    "!moderno",
+    "!joven",
+    "!lujo"
+   ],
+   "area_max": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_alto_cocina_abierto_amplio",
+   "pared": "*",
+   "sobre_de": "va_encimera_amplia",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false,
+   "estilo": [
+    "!antiguo",
+    "!rustico",
+    "!moderno",
+    "!joven",
+    "!lujo"
+   ],
    "area_min": 14
   },
   {

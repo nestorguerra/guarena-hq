@@ -53,7 +53,44 @@
    ],
    "obligatorio": true,
    "preferir": true,
-   "area_min": 10
+   "area_min": 10,
+   "grupo_pared": "aseo_diario",
+   "reserva_lateral": {
+    "obj": "va_toallero",
+    "lado": "izquierda"
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_armario_bano",
+   "de": "va_lavabo_amplio",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 10,
+   "grupo_pared": "aseo_diario",
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_toallero",
+   "de": "va_lavabo_amplio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10,
+   "lados": [
+    "izquierda"
+   ],
+   "si_no": false
   },
   {
    "zona": "estancia",
@@ -110,7 +147,8 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 10
   },
   {
    "zona": "estancia",
@@ -142,7 +180,8 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 10
   },
   {
    "zona": "estancia",
@@ -168,7 +207,22 @@
     1
    ],
    "obligatorio": false,
-   "preferir": true
+   "preferir": true,
+   "area_max": 10
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_ducha",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10,
+   "grupo_pared": "zona_humeda"
   },
   {
    "zona": "estancia",
@@ -181,7 +235,9 @@
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 10
+   "area_min": 10,
+   "grupo_pared": "zona_humeda",
+   "si_no": false
   },
   {
    "zona": "estancia",
