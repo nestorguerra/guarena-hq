@@ -1155,6 +1155,7 @@ export class Interiors {
     if (g.horror && g.horror.active && g.horror.hiding) return g.horror.option(g.horror.hiding);
     let best = null, bd = Infinity;
     for (const it of h.inter) {
+      if (it.type === 'loot' && it.taken) continue;
       if (Math.abs(p.pos.y - (it.y || 0)) > 1.5) continue; // other storey
       if (it.seat && (it.seat.ocupado || it.seat.taken)) continue; // (somebody is sitting there)
       const d = Math.hypot(it.x - p.pos.x, it.z - p.pos.z);

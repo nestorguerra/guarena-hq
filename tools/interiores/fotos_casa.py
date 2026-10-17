@@ -46,26 +46,41 @@ JS = r'''(async () => {
       // sanitario completo en baño. Se conservan altura humana y campo de visión.
       const sanitario=k===1&&tipo==='bano'?est?.colocados.find(p=>p.obj==='va_inodoro'):null;
       const preparacion=k===1&&tipo==='cocina'?est?.colocados.find(p=>['va_encimera','va_encimera_amplia'].includes(p.obj)):null;
-      const objetivos=preparacion?[preparacion,est.colocados.find(p=>p.obj==='va_nevera')].filter(Boolean):sanitario?[sanitario]:[];
+      const mesaComedor=k===0&&tipo==='comedor'?est?.colocados.find(p=>['va_mesa_comedor','va_mesa_familiar'].includes(p.obj)):null;
+      if(tipo==='comedor'&&k===0&&!mesaComedor)throw Error('comedor sin mesa para documentar: '+s);
+      const puestosComedor=mesaComedor?[mesaComedor,...est.colocados.filter(p=>p.de===est.colocados.indexOf(mesaComedor))]:[];
+      const objetivos=puestosComedor.length?puestosComedor:preparacion?[preparacion,est.colocados.find(p=>p.obj==='va_nevera')].filter(Boolean):sanitario?[sanitario]:[];
       const centros=objetivos.map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {p,x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry)};});
       const cx = foco?est.origen.x+foco.x:centros.length?centros.reduce((a,p)=>a+p.x,0)/centros.length:(rm.x0+rm.x1)/2, cz = foco?est.origen.z+foco.z:centros.length?centros.reduce((a,p)=>a+p.z,0)/centros.length:(rm.z0+rm.z1)/2,col=h.levels?.[rm.lv]||h.collider;
-      const alturaObjetivo=k===0?(tipo==='trastero'?.85:1.05):tipo==='bano'?.8:1.4;
-      const fov=foco?(tipo==='trastero'?68:60):tipo==='bano'?75:68;
-      const pruebaCam=objetivos.length?new THREE.PerspectiveCamera(fov,16/9,.05,1000):null;
+      const centroAlturaComedor=puestosComedor.length?(Math.min(...puestosComedor.map(p=>(p.y||0)+caja(p.obj).y0))+Math.max(...puestosComedor.map(p=>(p.y||0)+caja(p.obj).y1)))/2:.75;
+      const alturaObjetivo=k===0?(tipo==='trastero'?.85:tipo==='comedor'?centroAlturaComedor:1.05):tipo==='bano'?.8:tipo==='comedor'?1.05:1.4;
+      const fov=foco?(tipo==='trastero'?68:60):['bano','comedor'].includes(tipo)?75:68;
+      const pruebaCam=objetivos.length||tipo==='comedor'?new THREE.PerspectiveCamera(fov,16/9,.05,1000):null;
       const esquinas=objetivos.flatMap(p=>{const b=caja(p.obj),out=[];for(const lx of [b.x0,b.x1])for(const ly of [b.y0,b.y1])for(const lz of [b.z0,b.z1])out.push(new THREE.Vector3(est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),y+(p.y||0)+ly,est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry)));return out;});
-      h.group.updateMatrixWorld(true);let mejor=-Infinity;
+      h.group.updateMatrixWorld(true);let mejor=-Infinity,puertaElegida=null,recortesElegidos=null;
       const opacos=[];h.group.traverse(o=>{if(o.isMesh&&o.visible&&!o.material?.transparent)opacos.push(o);});
       const hojas=h.doors.flatMap(d=>{const m=[];d.pivot.traverse(o=>{if(o.isMesh)m.push(o);});return m;});
-      for(const [fx,fz] of [[f,f],[1-f,f],[f,1-f],[f,.5],[.5,f],...[.2,.3,.4,.5,.6,.7,.8].flatMap(fx=>[.2,.3,.4,.5,.6,.7,.8].map(fz=>[fx,fz]))]){
+      const rejilla=tipo==='comedor'?[.08,.1,.12,.18,.25,.35,.5,.65,.75,.82,.88,.9,.92]:[.2,.3,.4,.5,.6,.7,.8];
+      for(const [fx,fz] of [[f,f],[1-f,f],[f,1-f],[f,.5],[.5,f],...rejilla.flatMap(fx=>rejilla.map(fz=>[fx,fz]))]){
         const q={x:rm.x0+(rm.x1-rm.x0)*fx,z:rm.z0+(rm.z1-rm.z0)*fz},antes={...q};col.resolveCircle(q,.34);
         if(Math.hypot(q.x-antes.x,q.z-antes.z)>.05)continue;
         if(!foco&&Math.hypot(q.x-cx,q.z-cz)<Math.min(1.15,Math.min(rm.x1-rm.x0,rm.z1-rm.z0)*.4))continue;
         if(!foco&&vistas.length&&Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)<.5)continue;
         if(preparacion&&centros.some(p=>(Math.sin(p.p.ry)*(q.x-p.x)+Math.cos(p.p.ry)*(q.z-p.z))/Math.max(.001,Math.hypot(q.x-p.x,q.z-p.z))<Math.cos(55*Math.PI/180)))continue;
         const pos=new THREE.Vector3(q.x,y+1.6,q.z),dest=new THREE.Vector3(cx,y+(pruebaCam?alturaObjetivo:1),cz),dir=dest.clone().sub(pos),dist=dir.length();
-        let recortes=0;
+        let recortes=0,puertaPrimerPlano=0;
         if(pruebaCam){
           pruebaCam.position.copy(pos);pruebaCam.lookAt(cx,y+alturaObjetivo,cz);pruebaCam.updateMatrixWorld(true);
+          // En comedor, una hoja próxima no puede tapar la evidencia del conjunto.
+          if(tipo==='comedor'){
+            const rr=new THREE.Raycaster();rr.near=.05;rr.far=1.25;
+            for(let iy=0;iy<5;iy++)for(let ix=0;ix<7;ix++){
+              rr.setFromCamera(new THREE.Vector2(-.9+ix*.3,-.8+iy*.4),pruebaCam);
+              if(rr.intersectObjects(hojas,false).length)puertaPrimerPlano++;
+            }
+            puertaPrimerPlano/=35;
+            if(puertaPrimerPlano>.12)continue;
+          }
           for(const v of esquinas){const p=v.clone().project(pruebaCam);if(p.z< -1||p.z>1||Math.abs(p.x)>.94||Math.abs(p.y)>.94)recortes++;}
         }
         const ray=new THREE.Raycaster(pos,dir.normalize(),0,dist);let tapa=ray.intersectObjects(hojas,false).length;
@@ -80,12 +95,24 @@ JS = r'''(async () => {
         const separacion=vistas.length?Math.min(2,Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)):0;
         const similitud=vistas.length?Math.max(0,((q.x-cx)*(vistas[0].x-cx)+(q.z-cz)*(vistas[0].z-cz))/Math.max(.001,Math.hypot(q.x-cx,q.z-cz)*Math.hypot(vistas[0].x-cx,vistas[0].z-cz))):0;
         const nota=(foco?(k===0?-Math.abs(dist-(tipo==='trastero'?2.1:1.6)):dist)-(tapa?10:0):lectura*3+separacion-similitud*5-(tapa?4:0)-Math.abs(dist-2)*.15)-recortes*100-(sanitario?Math.max(0,1.1-Math.hypot(q.x-cx,q.z-cz))*8:0);
-        if(nota>mejor){mejor=nota;x=q.x;z=q.z;}
+        if(nota>mejor){mejor=nota;x=q.x;z=q.z;puertaElegida=puertaPrimerPlano;recortesElegidos=recortes;}
       }
       if(!Number.isFinite(mejor))throw Error('sin cámara libre: '+tipo+'/'+s);
       for (let i = 0; i < 3; i++) g.frame(1 / 30);
       cam.fov=fov;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + alturaObjetivo, cz); cam.updateMatrixWorld(true);
-      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
+      if(tipo==='comedor'){
+        // La pose final puede cambiar tras frame: comprobar lo que se va a fotografiar.
+        h.group.updateMatrixWorld(true);
+        const rr=new THREE.Raycaster();rr.near=.05;rr.far=1.25;let tapaFinal=0;
+        for(let iy=0;iy<5;iy++)for(let ix=0;ix<7;ix++){
+          rr.setFromCamera(new THREE.Vector2(-.9+ix*.3,-.8+iy*.4),cam);
+          if(rr.intersectObjects(hojas,false).length)tapaFinal++;
+        }
+        puertaElegida=tapaFinal/35;
+        recortesElegidos=esquinas.length?esquinas.filter(v=>{const p=v.clone().project(cam);return p.z< -1||p.z>1||Math.abs(p.x)>.94||Math.abs(p.y)>.94;}).length:null;
+        if(puertaElegida>.12||recortesElegidos>0)throw Error('cobertura final incompleta: '+tipo+'/'+s+'/'+k+' puerta='+puertaElegida+' recortes='+recortesElegidos+' cam='+JSON.stringify({x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fuera:esquinas.map((v,i)=>({i,p:v.clone().project(cam)})).filter(q=>Math.abs(q.p.x)>.94||Math.abs(q.p.y)>.94)}));
+      }
+      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(tipo==='comedor'?{cobertura:{hoja_cercana_fraccion:puertaElegida,muestras:35,distancia_max:1.25,limite:.12,medido:'pose_final_antes_render',esquinas_evaluadas:esquinas.length,esquinas_recortadas:recortesElegidos}}:{}),...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
       g.render();
       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
     }

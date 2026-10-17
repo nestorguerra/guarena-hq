@@ -7,7 +7,7 @@
 // Frame: the street door at z = 0, the back wall at z = D, x from -W/2 to W/2 (metres, from the interior's origin): the
 // walls' inner faces, so a zone that runs to a wall ends at its face.
 import * as THREE from 'three';
-import { INTERIOR_ORIGIN, planeGeo, boxGeo, HouseBuilder, std, texMat, glassMat, T as MURO } from './housekit.js';
+import { INTERIOR_ORIGIN, planeGeo, boxGeo, HouseBuilder, std, texMat, glassMat, programaLuzDomestica, T as MURO } from './housekit.js';
 import { KITS, OBJETOS } from './interiores_datos.js';
 import { caja, construir, kelvin } from './objetos.js';
 import { rot, partes, penetra, superficie, mapaPaso, espacioFrontal } from './interiores_geo.js';
@@ -391,6 +391,11 @@ export function amueblar(kit, seed = 1, ctx = null) {
       for (let x = gx0; x <= Z.x1 - 0.6; x += pitch) for (let z = gz0; z <= Z.z1 - 0.6; z += pitch) cand.push([x + (r() - 0.5) * 0.3, z + (r() - 0.5) * 0.3]);
       baraja(cand);
       for (let t = 0; t < 250; t++) cand.push([Z.x0 + 0.5 + r() * (Z.x1 - Z.x0 - 1.0), Z.z0 + 0.5 + r() * (Z.z1 - Z.z0 - 1.0)]);
+      if(e.centrado){
+        const cx=(Z.x0+Z.x1)/2,cz=(Z.z0+Z.z1)/2;
+        cand.sort((a,b)=>Math.hypot(a[0]-cx,a[1]-cz)-Math.hypot(b[0]-cx,b[1]-cz));
+        cand.unshift([cx,cz]);
+      }
       let puestos = 0;
       for (const [cx, cz] of cand) {
         if (puestos >= n) break;
@@ -432,13 +437,16 @@ export function amueblar(kit, seed = 1, ctx = null) {
       const usar = e.fraccion ? sups.filter(() => r() < U(e.fraccion)) : sups;
       if (!usar.length && sups.length) usar.push(sups[Math.floor(r() * sups.length)]); // (a share of them, but one at least)
       const lenTot = sups.reduce((s, q) => s + (q.x1 - q.x0), 0);
-      const total = e.relleno ? 9999 : e.por_soporte ? (Array.isArray(e.por_soporte) ? 9999 : usar.length * e.por_soporte) : tantos(e, lenTot, 0, usar.length);
+      const total = e.preferir&&e.cantidad ? e.cantidad[1] : e.relleno ? 9999 : e.por_soporte ? (Array.isArray(e.por_soporte) ? 9999 : usar.length * e.por_soporte) : tantos(e, lenTot, 0, usar.length);
       let puestos = 0, k = 0;
       const enSup = (q, obj) => {
         const b = caja(obj);
         for (let t = 0; t < (q.estante ? 1 : 30); t++) {
           let lx, lz;
-          if (q.estante) { // (on a shelf: side by side from one end, the next free stretch)
+          if(e.centrado){
+            lx=(q.x0+q.x1)/2;lz=(q.z0+q.z1)/2;
+            if(lx+b.x0<q.x0-.0001||lx+b.x1>q.x1+.0001||lz+b.z0<q.z0-.0001||lz+b.z1>q.z1+.0001)return false;
+          } else if (q.estante) { // (on a shelf: side by side from one end, the next free stretch)
             const ek = q.i + '#' + q.k;
             q.cur = q.cur ?? estantes[ek] ?? q.x0 + r() * 0.06;
             if (q.cur + b.w > q.x1 || b.d > q.z1 - q.z0 + 0.02) return false;
@@ -449,11 +457,15 @@ export function amueblar(kit, seed = 1, ctx = null) {
             if (q.x1 - q.x0 < b.w || q.z1 - q.z0 < b.d) return false;
             lx = q.x0 + b.w / 2 + r() * (q.x1 - q.x0 - b.w) - (b.x0 + b.x1) / 2; lz = q.z0 + b.d / 2 + r() * (q.z1 - q.z0 - b.d) - (b.z0 + b.z1) / 2;
           }
-          const lry = q.estante || OBJETOS[obj].clase === 'FIXED' ? 0 : (r() - 0.5) * 0.6;
+          const lry = e.centrado || q.estante || OBJETOS[obj].clase === 'FIXED' ? 0 : (r() - 0.5) * 0.6;
           const [wx, wz] = rot(lx, lz, q.p.ry), ry = q.p.ry + lry;
           const it = { obj, x: q.p.x + wx, y: (q.p.y || 0) + q.y, z: q.p.z + wz, ry,e:entrada };
           const v = volumen(it);
-          if (!P.some((p, j) => j !== q.i && p.v && choca(p.v, v)) && !(ctx?.funciones&&e.botin&&cierra([it]))) { const c = poner(obj, Z.id, vida ? 'vida' : 'sobre', it.x, it.y, it.z, ry, q.i, q.k); c.v = v; return true; }
+          // Un servicio compuesto puede pasar por encima de las patas de las
+          // sillas: comprobar piezas reales, sin aceptar penetraciones de vajilla.
+          const colision=e.centrado?P.some((p,j)=>j!==q.i&&partes(it).some(a=>partes(p).some(b=>penetra(a,b)>.005))):P.some((p,j)=>j!==q.i&&p.v&&choca(p.v,v));
+          const reservado=ctx?.funciones&&(e.centrado||(e.botin&&e.preferir))&&partes(it).some(v=>libres.some(q=>penetra(v,q)>.005));
+          if (!colision && !reservado && !(ctx?.funciones&&e.botin&&cierra([it]))) { const c = poner(obj, Z.id, vida ? 'vida' : 'sobre', it.x, it.y, it.z, ry, q.i, q.k); c.v = v; return true; }
         }
         return false;
       };
@@ -485,13 +497,15 @@ export function amueblar(kit, seed = 1, ctx = null) {
     },
     vida(e, Z) { this.sobre(e, Z, true); },
     techo(e, Z) {
+      const referencia=e.sobre_de?P.find(p=>p.zona===Z.id&&p.obj===e.sobre_de):null;
+      if(e.sobre_de&&!referencia)return;
       const lx = Z.x1 - Z.x0, lz = Z.z1 - Z.z0, n = e.cantidad ? N(e.cantidad) : e.por_m ? Math.max(1, Math.round(Math.max(lx, lz) * U(e.por_m))) : Math.max(1, Math.round(lx * lz * U(e.por_m2)));
       const cols = Math.max(1, Math.round(Math.sqrt((n * lx) / Math.max(lz, 0.1)))), rows = Math.max(1, Math.ceil(n / cols));
       let k = 0;
       // (on a grid over the zone; a slot taken by another hanging thing — a lamp, a ham —: a little along the zone)
       const largo = lx >= lz, colgados = P.filter((p) => p.regla === 'techo'), abajo = P.filter((p) => p.regla !== 'techo' && p.v);
       for (let i = 0; i < rows; i++) for (let j = 0; j < cols && k < n; j++, k++) {
-        const x0 = Z.x0 + (lx * (j + 0.5)) / cols, z0 = Z.z0 + (lz * (i + 0.5)) / rows;
+        const x0 = referencia?referencia.x:Z.x0 + (lx * (j + 0.5)) / cols, z0 = referencia?referencia.z:Z.z0 + (lz * (i + 0.5)) / rows;
         const pasos = [0, 0.35, -0.35, 0.7, -0.7, 1.05, -1.05, 1.4, -1.4];
         for (const [d, t] of [...pasos.map((d) => [d, 0]), ...pasos.slice(1).map((d) => [0, d])]) {
           const obj = variante(e, k), x = Math.min(Z.x1 - 0.2, Math.max(Z.x0 + 0.2, x0 + (largo ? d : t))), z = Math.min(Z.z1 - 0.2, Math.max(Z.z0 + 0.2, z0 + (largo ? t : d))), it = { obj, x, y: H, z, ry: 0 }, v = volumen(it);
@@ -656,10 +670,12 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const total = [...porZona.values()].reduce((s, l) => s + l.length, 0), lamps = [];
   for (let ronda = 0; lamps.length < Math.min(maxL, total); ronda++) for (const l of porZona.values()) if (l[ronda] && lamps.length < maxL) lamps.push(l[ronda]);
   const luces = [];
+  // Alcance optativo: este comedor usa una sola luminaria y el programa físico de casa.
+  const programaLuz = kit === 'vivienda_comedor' ? programaLuzDomestica(W * D) : null;
   for (const p of lamps) {
     const yl = Math.min(...OBJETOS[p.obj].partes.filter((q) => q.luz).map((q) => q.p[1]));
-    B.light(p.x, H + yl - 0.15, p.z, col.getHex(), 5.5, 7.5);
-    luces.push({ x: p.x, y: H + yl, z: p.z, k: Math.round(Tk), zona: p.zona });
+    const l = B.light(p.x, programaLuz ? (p.y || 0) + yl : H + yl - 0.15, p.z, col.getHex(), programaLuz ? programaLuz.intensidad : 5.5, programaLuz ? programaLuz.alcance : 7.5);
+    luces.push(programaLuz ? { x: l.position.x - B.ox, y: l.position.y, z: l.position.z - B.oz, k: Math.round(Tk), zona: p.zona, color: '#' + l.color.getHexString(), intensidad: l.intensity, alcance: l.distance } : { x: p.x, y: H + yl, z: p.z, k: Math.round(Tk), zona: p.zona });
   }
   // (the light fittings HouseBuilder.light adds — a shade each — are not wanted: the lamp is the catalogue's)
   B.extra = B.extra.filter((m) => !(m.userData && m.userData.lamp));
@@ -720,6 +736,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   let hh = 2166136261;
   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
   h.local = { kit, tipologia, seed, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+  if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
   h.venue = false;
   // (what the game asks of any interior: where it stands, its extent, what it is; the street seen from its windows)
   h.origin = { x: origin.x, z: origin.z };

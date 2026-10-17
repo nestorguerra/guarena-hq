@@ -153,3 +153,28 @@ La cama infantil conserva su volumen y divide la colcha en bandas que toman la t
 Notas A/B: **3,328/3,040**, frente a 3,130/2,944. Mejora parcial, aún sin 4/5. Las cámaras coinciden exactamente con T11. La revisión independiente confirma mayor contraste e identidad, con límites: en 4007 el amarillo de la colcha se aproxima al ocre de pared; en 5045 el armario sigue dominando y oculta parte del descanso; la galería ocupa poco paño. No se intenta compensarlo con más miniaturas. La siguiente propuesta revisa la relación entre guardado, cama y estudio.
 
 Pasan 51 contratos, 200 casas / 1166 habitaciones, 81 semillas del kit, 96 recorridos de colisión, integración fuente y empaquetada, marcas y recarga de partida ficticia. Máximos sintéticos: 70.192 triángulos, 60 mallas, nueve luces y 162,4 ms de montaje. Los generadores afectados y compilador reproducen los 21 archivos comprobados sin cambios. Los contratos nuevos prueban mapas y píxeles diferentes, reutilización correcta de caché, paletas, envolventes y respeto de huecos en las cuatro paredes. Publicación pendiente de commit, CI y lectura del SHA público.
+
+
+Tanda 12 publicada y verificada: `f667142e230a7f52d746f4b69901b1fdfe429bf2`, CI 39063117668 y Pages 39063319918 completados con éxito. El juego público sirvió la revisión y pasó la integración funcional sin errores. Recibo: `data/interiores/validacion/publicacion_tanda12.json`.
+
+
+## Candidato infantil T13 retirado antes de publicar
+
+Se ensayó colocar cama y mesita como conjunto y agrupar el guardado; un mural grande sustituyó a la galería pequeña. La composición deja el paso de 0,8 m en las casas críticas. El primer mural superó el presupuesto de mallas en tres casas; compartir la familia material de dibujos lo devolvió a 60 sin eliminar muebles. Pasaron 54 contratos, 200 casas, 81 semillas, colisiones e integración empaquetada.
+
+Las notas finales, **3,288/2,936**, quedan por debajo de T12 (3,328/3,040). La mejora visual no queda confirmada y el candidato se retira, sin publicarlo. Se restauran producto y fichas vigentes a la versión publicada; las evidencias y resultados desfavorables se conservan en `data/interiores/validacion/historico/calidad_tanda13_retirada`. Persisten grandes paños vacíos y poca variedad entre habitaciones. La composición cambió cinco de seis cámaras automáticas frente a T12; el material posterior conservó las cámaras, pero cambió su acabado.
+
+La luz cenital r4 también se rechaza: mejora el plafón, pero introduce franjas en estante/campana de cocina y junto a la toalla del baño. Sus 14 parejas corresponden a una copia T9, no a este producto. La luz publicada permanece sin ese cambio.
+
+
+## Tanda 14: comedor servido, guardado y pertenencias accesibles
+
+El comedor distingue dos plazas en menos de 12 m² y cuatro en recintos mayores, con mesa propia cuando corresponde. Sillas y capacidad se aceptan como conjunto. El servicio centrado orienta plato, vaso y cubiertos a cada plaza; pan y jarra ocupan el centro. La vajilla guardada ocupa baldas reales y los cuadros se limitan a una unidad por dibujo. Pared bicolor y suelo tranquilo separan mejor madera y cerámica. Las pertenencias recogibles conservan ID, valor y acción; el joyero, lata y reloj usan formas reconocibles, apoyos libres y fallback fuera de la mesa puesta.
+
+Notas A/B: **3,552/3,410**, frente a 3,194/3,018. Mejora parcial; no alcanza 4/5. Iluminación obtiene 4,01/3,97; variedad 2,96/3,17 y lectura funcional 3,21/3,11 siguen limitando el conjunto. La revisión independiente señala paredes altas vacías y guardado repetido. Las cámaras de comedor pasan de FOV 68 a 75 y su vista de uso apunta al centro real de mesa/sillas; se conservan semillas. No se atribuye toda diferencia de puntuación al mobiliario. Se comprueban 40/24/40 esquinas completas en las vistas de uso; las de conjunto no certifican esquinas. La muestra de hojas cercanas es 3/35 en 2786/conjunto y 0/35 en las otras cinco vistas, con límite 12%; no es cobertura de cada píxel.
+
+La prueba real de recogida encontró un selector que seguía eligiendo el joyero ya retirado e impedía recoger la lata próxima. Se omite el botín tomado antes de buscar el objeto más cercano. El contrato mantenido llama las acciones reales, exige identidad y recompensa, recarga un documento nuevo y verifica la persistencia sin guardar desde el test. Fuente y paquete pasan; las claves de Evolución y fija conservan sus testigos. El primer instrumento guardaba artificialmente antes de recargar: revisión independiente detectó ese falso positivo y se corrigió; sus recibos se conservan como evidencia menos estricta.
+
+El barrido inicial del laboratorio falló en 29/81 por usar intensidad/alcance fijos y un foco separado 15 cm del emisor, distintos del programa doméstico. Se comparte la fórmula física vigente con el laboratorio de comedor, se registra el foco real y se conserva la calibración y el umbral del validador. Geometría, trazado, coste y luces de las casas canónicas siguen iguales; los demás laboratorios no cambian. El fallo previo se conserva en historico/calidad_tanda14_laboratorio_previo.
+
+Pasan 58 contratos, 200 casas / 1.166 habitaciones, 81 semillas, 96 recorridos de colisión, integración fuente y empaquetada, recursos de Pages/portable/multijugador, marcas y los dos contratos de recogida/recarga. Máximos sintéticos: 70.192 triángulos, 60 mallas, nueve luces y 208,5 ms de montaje; no es una medición de FPS. Los generadores afectados reproducen 21 archivos idénticos. Revisión y recibos en data/interiores/validacion/evidencia_tanda14 y calidad_tanda14.json. Pendientes commit, CI y lectura pública del SHA exacto.

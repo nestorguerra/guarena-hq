@@ -19,6 +19,27 @@ export function panosPared(a, b, y0, y1, huecos) {
 }
 
 export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
+  if(rm.type==='comedor') {
+    // Paños domésticos serenos; el zócalo heredado se excluye en houses.js.
+    const y=(rm.lv||0)*3.1,limite=1.02;
+    const mat=c=>B.mat('comedor_'+c,()=>std(c,{roughness:.94,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
+    const bajo=mat(estilo==='rustico'?'#78816d':'#7d8b85'),alto=mat('#d9d2bf');
+    for(const side of ['s','n','w','e']) {
+      const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
+      const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
+      for(const [lo,hi,v0,v1] of panosPared(a,b,0,altura,huecos)) {
+        for(const [l,h,m] of [[v0,Math.min(v1,limite),bajo],[Math.max(v0,limite),v1,alto]])if(h-l>.001){
+          const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
+          B.add(m,planeGeo(hi-lo,h-l),x,y+(l+h)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
+        }
+      }
+    }
+    const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
+    // Un suelo cálido mate de masa continua; no competir con vajilla y sillas.
+    B.add(mat('#aa9a7e'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+    B.add(mat('#e2dac8'),planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);
+    return;
+  }
   if(rm.type==='ninos') {
     // Color a escala infantil; los paños conservan todos los huecos de la casa.
     const y=(rm.lv||0)*3.1,r=mulberry32(seed*347+rm.x0*13+rm.z0*53);

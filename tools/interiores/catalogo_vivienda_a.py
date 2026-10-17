@@ -1,5 +1,6 @@
 """Mobiliario doméstico funcional de cocina, baño y estancias de servicio. El script es el modelo."""
 from vivienda_base import *
+import math
 from acabados_catalogo import mejorar_bano_taller
 
 def objetos():
@@ -24,6 +25,43 @@ def objetos():
     out.append(objeto('va_toallero','Toallero con toalla',.38,.42,.07,None,1,categoria='decoracion',partes=[caja(.38,.025,.05,y=1.15,z=.025,c=METAL,m='metal'),caja(.28,.38,.018,y=.98,z=.055,c='#729a9a',m='tela',tinte='tela')],soporte='pared'))
     out.append(copiar('portarrollos','va_papel','Papel higiénico en su soporte'))
     out.append(mesa('va_mesa_comedor','Mesa de comedor familiar',1.05,.7))
+    # Variante exclusiva de comedor: cuatro puestos, sin alterar la mesa de cocinas.
+    out.append(mesa('va_mesa_familiar','Mesa familiar de cuatro puestos',1.35,.8))
+    # Conjuntos reales: origen en el centro de la mesa, cada puesto mira a su silla.
+    C=catalogo()
+    def componente(id,x=0,z=0,angulo=0,escala=1,dy=0):
+        piezas=copy.deepcopy(C[id]['partes']);a=math.radians(angulo);co,si=math.cos(a),math.sin(a)
+        for q in piezas:
+            px,py,pz=[v*escala for v in q['p']];q['p']=[x+px*co+pz*si,py+dy,z-px*si+pz*co]
+            q['d']=[v*escala for v in q['d']]
+            if angulo:q['r']=[0,angulo,0]
+        return piezas
+    for plazas in [2,4]:
+        anclas=[(0,.205 if plazas==2 else .245,0),(0,-(.205 if plazas==2 else .245),180)]
+        if plazas==4:anclas += [(.5,0,90),(-.5,0,-90)]
+        p=[]
+        for x,z,a in anclas:
+            p += componente('plato_llano',x,z,a,.8)
+            co,si=math.cos(math.radians(a)),math.sin(math.radians(a))
+            p += componente('vaso_agua',x+.17*co-.16*si,z-.17*si-.16*co)
+            for u,w in [(-.137,.012),(.137,.012),(.16,.016)]:
+                p.append(caja(w,.003,.18,x=x+u*co,y=.0015,z=z-u*si,c='#bdc3c0',m='metal',r=[0,a,0]))
+        p += componente('jarra_agua',0,0)
+        p += componente('cesta_pan',.3,0,escala=.6)
+        out.append(objeto('va_servicio_comedor_'+str(plazas),'Mesa puesta para '+str(plazas)+' personas',1,.20,.70,None,3 if plazas==2 else 5,'ceramica',partes=p,soporte='superficie',categoria='vajilla',motivo_clase='Conjunto de varias piezas de vajilla: la masa declarada es la suma del servicio, no de una pieza.'))
+    # Vajilla guardada a escala: grupos de uso, sin cajas de productos ni hileras de tienda.
+    p=[]
+    for h in [0,.015,.030]:p += componente('plato_llano',-.07,0,escala=.75,dy=h)
+    p += componente('taza_cafe',.15,0)
+    out.append(objeto('va_vajilla_guardada_platos','Pila de platos y taza guardados',.34,.12,.21,None,2,'ceramica',partes=p,soporte='superficie',categoria='vajilla',motivo_clase='Conjunto de varias piezas de vajilla: la masa declarada es la suma del servicio, no de una pieza.'))
+    p=[]
+    for x in [-.075,.075]:
+        for z in [-.052,.052]:p += componente('taza_cafe',x,z)
+    out.append(objeto('va_vajilla_guardada_tazas','Tazas guardadas juntas',.30,.12,.21,None,1.6,'ceramica',partes=p,soporte='superficie',categoria='vajilla',motivo_clase='Conjunto de varias piezas de vajilla: la masa declarada es la suma del servicio, no de una pieza.'))
+    # Pertenencias recogibles: cada modelo usa una familia/material y una malla propia.
+    out.append(objeto('va_joyero_guardado','Joyero de madera con tapa y cierre',.19,.08,.13,None,.7,'madera',partes=[caja(.18,.06,.12,c='#866044'),caja(.19,.018,.13,y=.069,c='#a47c50'),caja(.025,.016,.008,y=.05,z=.068,c='#c6aa65')],soporte='superficie',categoria='decoracion'))
+    out.append(objeto('va_lata_guardada','Lata de galletas cerrada',.18,.10,.18,None,.8,'metal',partes=[cil(.085,.085,.08,y=.04,c='#638782',m='metal',seg=16),cil(.09,.09,.012,y=.086,c='#c8b184',m='metal',seg=16),caja(.075,.025,.004,y=.045,z=.085,c='#e1d4b3',m='metal')],soporte='superficie',categoria='decoracion'))
+    out.append(objeto('va_reloj_guardado','Reloj de pulsera con esfera clara',.05,.02,.15,None,.2,'metal',partes=[caja(.03,.004,.15,y=.002,c='#a99261',m='metal'),cil(.025,.025,.008,y=.008,c='#c3aa66',m='metal',seg=16),cil(.020,.020,.002,y=.013,c='#e5decb',m='metal',seg=16),caja(.002,.002,.016,y=.015,z=-.004,c='#4c554e',m='metal'),caja(.012,.002,.002,x=.003,y=.015,c='#4c554e',m='metal')],soporte='superficie',categoria='decoracion'))
     out.append(copiar('estanteria_libros','va_estante','Estante de despensa y trastero',escala=.75))
     out[-1].pop('rol',None)
     out.append(objeto('va_alto_cocina','Armario alto sobre encimera',.56,.5,.25,None,12,partes=[caja(.56,.5,.25,y=1.65,z=.125,tinte='madera'),caja(.18,.015,.025,y=1.44,z=.26,c=METAL,m='metal')],soporte='pared'))

@@ -79,6 +79,11 @@ export function rugTexture(seed) {
   return t;
 }
 
+// El laboratorio doméstico y la casa comparten el programa físico; no consume azar.
+export function programaLuzDomestica(area) {
+  return { intensidad: Math.min(11, 4 + area * 0.32), alcance: Math.max(6, Math.sqrt(area) * 2.6) };
+}
+
 // ---------------------------------------------------------------- the house builder
 export class HouseBuilder {
   constructor(ox, oz, horror) {

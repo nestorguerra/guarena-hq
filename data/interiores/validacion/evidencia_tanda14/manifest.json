@@ -1,0 +1,100 @@
+{
+ "estado": "PASS local; pendiente commit, CI y publicación pública",
+ "archivos": [
+  {
+   "fuente": ".cache/calidad/tanda14/contratos.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/contratos.json",
+   "sha256": "65d073e40e90247d17836f636ec99c7909f3abf870c684235d14d86a6bcea939"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/regeneracion.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/regeneracion.json",
+   "sha256": "494de69cb56510556c18f311a7694b611ced11bbfc78010420cd33a56adc7357"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/estado_candidato.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/estado_candidato.json",
+   "sha256": "51219587c9c2c30432dd4929daee39c3cb9fde1cfa0053a15ff273e4d6f3faa6"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/validacion_ejecuciones.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/validacion_ejecuciones.json",
+   "sha256": "929b5fde5cd770aab9332592e9bae7fda6e78a699951ed4256c3f9f5b546f920"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/protocolo_capturas.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/protocolo_capturas.md",
+   "sha256": "59417c22e1925425d86783469cea014e8e0898f8670df2e36c1ee28ddcfef24b"
+  },
+  {
+   "fuente": ".cache/calidad/comedor_t12_revision_codigo.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/comedor_t12_revision_codigo.md",
+   "sha256": "dc000f749f9416f758936bd60a32c3300a5de15fb382aa43145ec2da2fe9912f"
+  },
+  {
+   "fuente": ".cache/calidad/comedor_t14_servicio_revision_codigo.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/comedor_t14_servicio_revision_codigo.md",
+   "sha256": "0242f567a981e76f2b7a97bf6108a88fe238594c173b90d0fbd2b2a41d511aba"
+  },
+  {
+   "fuente": ".cache/calidad/comedor_luz_lab_revision_codigo.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/comedor_luz_lab_revision_codigo.md",
+   "sha256": "3ca5961a23b5d663624e565ea8f086898e6317760c13de146d9a98261d620689"
+  },
+  {
+   "fuente": ".cache/calidad/botin_mantenido_revision.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/botin_mantenido_revision.md",
+   "sha256": "f191d29b362d8ab5c228c3d1a29082cd2adf5580a50901afb6c5de525e312d62"
+  },
+  {
+   "fuente": ".cache/calidad/fotos_comedor_revision_codigo.md",
+   "copia": "data/interiores/validacion/evidencia_tanda14/fotos_comedor_revision_codigo.md",
+   "sha256": "1cbedb1180c0ca8e24ee96a85027a5f1eab0412e711be2de7ee8e1724615b875"
+  },
+  {
+   "fuente": ".cache/calidad/selector_botin_revision_cpu.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/selector_botin_revision_cpu.json",
+   "sha256": "738cee03176c45081b9b58c6a6c7df74f6815904a0a5d81e19895f7bc7b41753"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/botin_fuente_v3.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/botin_fuente_v3.json",
+   "sha256": "659437d673fc54420238041a7bfc1adb413dbb146c43dddb1dc1916b05f98841"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/botin_paquete_v3.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/botin_paquete_v3.json",
+   "sha256": "9baa168966c05ab2ab7846ca9c45d84d0e097a3e7ee0baf47466761ba96e12e3"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/botin_ejecuciones.json",
+   "copia": "data/interiores/validacion/evidencia_tanda14/botin_ejecuciones.json",
+   "sha256": "888731cf6f2c74991fe8fd72e55d4e8ddc44dd12185f95d6b11c0667c142a67f"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/casas200.log",
+   "copia": "data/interiores/validacion/evidencia_tanda14/casas200.log",
+   "sha256": "dc17321207abdb0c78335eb7c1a7a67e9a1216e3accca04f1a9e626431683023"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/kits81.log",
+   "copia": "data/interiores/validacion/evidencia_tanda14/kits81.log",
+   "sha256": "637c0ded72d3581c55ceb43fd8d5be8a20affde7d5f743f36b7556bd51743e74"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/recursos.log",
+   "copia": "data/interiores/validacion/evidencia_tanda14/recursos.log",
+   "sha256": "e96ef04ca683972436703352847a72e4ec02c20956ec9d52ab562bc1f18d6576"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/marcas.log",
+   "copia": "data/interiores/validacion/evidencia_tanda14/marcas.log",
+   "sha256": "16b0b9e0bb47cfcd2d90acdc584e66bbbf23d2d7f023444e57ffa58ddca75788"
+  },
+  {
+   "fuente": ".cache/calidad_tanda14_revision.md",
+   "copia": "data/interiores/revision_calidad_tanda14_2026-10-17.md",
+   "sha256": "d7fbdf9b3e822aefdb06bf04f176fab241cd65520086337d297a3a0090263375"
+  }
+ ]
+}

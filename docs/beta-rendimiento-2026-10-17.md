@@ -85,3 +85,5 @@ La primera versión del servidor de ensayo falló con nueve errores de transport
 El paquete integrado y su publicación se verifican por separado. Esta tanda no resuelve el replay causal de fluidez ni el objetivo visual 4/5.
 
 El build integrado coincide byte a byte con los tres HTML y todos los recursos externos del candidato medido. Pasan los contratos de bytes normal y split, marcas, y la integración del paquete (ocho vecinos, Annie, tres comercios, recarga de partida). Los contratos split se ejecutan sobre la copia física aislada anterior de la misma modificación de build; no prueban comportamiento jugable split. Evidencias y SHA-256 en la carpeta de esta tanda.
+
+Publicación verificada: commit `e218dc535eeb45ef1e79b0d974098edfd5e8b37e`, CI 39064106456 y Pages 39064263134 completados con éxito. La web sirvió esa revisión antes y después de recargar y pasó la integración pública sin errores: ocho vecinos, Annie, acciones disponibles en tres comercios y persistencia. Esta comprobación acredita publicación/funciones, no vuelve a medir velocidad pública. Recibo: `data/rendimiento/carga_suelo_2026-10-17/publicacion.json`.

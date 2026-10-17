@@ -42,13 +42,44 @@
     0,
     90
    ],
+   "centrado": true,
+   "area_max": 12,
    "sillas": {
     "variantes": [
      "silla_comedor"
     ],
-    "n": [
-     2,
-     4
+    "n": 2,
+    "lados": [
+     "+z",
+     "-z"
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "va_mesa_familiar",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "giro": [
+    0,
+    90
+   ],
+   "centrado": true,
+   "area_min": 12,
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": 4,
+    "lados": [
+     "+z",
+     "-z",
+     "+x",
+     "-x"
     ]
    }
   },
@@ -79,130 +110,181 @@
   {
    "zona": "estancia",
    "regla": "pared",
-   "variantes": [
-    "cuadro_paisaje",
-    "fotos_familia",
-    "cuadro_virgen"
-   ],
+   "obj": "cuadro_paisaje",
    "pared": "*",
    "cantidad": [
     1,
-    3
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "fotos_familia",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cuadro_virgen",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
    ]
   },
   {
    "zona": "estancia",
    "regla": "sobre",
-   "variantes": [
-    "bandeja",
-    "azucarero",
-    "taza_cafe",
-    "taza_desayuno",
-    "plato_cafe",
-    "plato_llano",
-    "vaso_agua",
-    "cucharilla",
-    "frutero",
-    "servilletero"
-   ],
+   "obj": "va_servicio_comedor_2",
    "en": [
     "va_mesa_comedor"
    ],
-   "por_soporte": [
-    2,
-    4
-   ]
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "centrado": true,
+   "area_max": 12
   },
   {
    "zona": "estancia",
    "regla": "sobre",
-   "variantes": [
-    "bandeja",
-    "azucarero",
-    "taza_cafe",
-    "taza_desayuno",
-    "plato_cafe",
-    "plato_llano",
-    "vaso_agua",
-    "cucharilla",
-    "frutero",
-    "servilletero",
-    "va_alimento_atun",
-    "va_alimento_sardinillas",
-    "va_alimento_mejillones",
-    "va_alimento_tomate_frito",
-    "va_alimento_maiz",
-    "va_alimento_judias_verdes",
-    "va_alimento_garbanzos_bote",
-    "va_alimento_pimientos_piquillo",
-    "va_alimento_aceitunas",
-    "va_alimento_pepinillos",
-    "va_alimento_mermelada",
-    "va_alimento_miel",
-    "va_alimento_crema_cacao",
-    "va_alimento_melocoton_almibar",
-    "va_alimento_aceite_oliva",
-    "va_alimento_aceite_girasol",
-    "va_alimento_garrafa_aceite",
-    "va_alimento_vinagre",
-    "va_alimento_arroz",
-    "va_alimento_arroz_integral",
-    "va_alimento_espaguetis",
-    "va_alimento_macarrones",
-    "va_alimento_lentejas",
-    "va_alimento_garbanzos_seco",
-    "va_alimento_harina",
-    "va_alimento_azucar",
-    "va_alimento_sal",
-    "va_alimento_cafe_molido",
-    "va_alimento_infusiones",
-    "va_alimento_galletas_maria",
-    "va_alimento_galletas_chocolate",
-    "va_alimento_galletas_crackers",
-    "va_alimento_cereales_a",
-    "va_alimento_cereales_b",
-    "va_alimento_cereales_c",
-    "va_alimento_pan_molde",
-    "va_alimento_snack_patatas",
-    "va_alimento_snack_aperitivos",
-    "va_alimento_chocolate_tabletas",
-    "va_alimento_magdalenas",
-    "va_alimento_perrunillas",
-    "va_alimento_chicles",
-    "va_alimento_caramelos",
-    "va_alimento_agua_15",
-    "va_alimento_agua_gas",
-    "va_alimento_cola_15",
-    "va_alimento_naranja_15",
-    "va_alimento_limon_15",
-    "va_alimento_cerveza_pack",
-    "va_alimento_vino_tinto",
-    "va_alimento_vino_blanco",
-    "va_alimento_vino_rosado",
-    "va_alimento_zumo_naranja",
-    "va_alimento_zumo_melocoton",
-    "va_alimento_leche_entera",
-    "va_alimento_leche_semi",
-    "va_alimento_leche_desnatada"
+   "obj": "va_servicio_comedor_4",
+   "en": [
+    "va_mesa_familiar"
    ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "centrado": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_joyero_guardado",
    "en": [
     "aparador",
     "va_alacena"
    ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "joyero"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_lata_guardada",
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "lata"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_reloj_guardado",
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "reloj"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_vajilla_guardada_platos",
+    "va_vajilla_guardada_tazas"
+   ],
+   "en": [
+    "va_alacena"
+   ],
    "por_soporte": [
-    3,
-    6
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "bandeja",
+    "azucarero",
+    "taza_cafe",
+    "taza_desayuno",
+    "plato_cafe",
+    "plato_llano",
+    "vaso_agua",
+    "copa_vino",
+    "cucharilla",
+    "servilletero",
+    "cubiertos_servicio",
+    "servilleta_doblada",
+    "jarra_agua",
+    "salero_pimentero",
+    "aceitera_vinagrera",
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "bote_caramelos",
+    "florero_mesa",
+    "portarretratos",
+    "reloj_sobremesa"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
    ]
   },
   {
    "zona": "estancia",
    "regla": "techo",
    "obj": "lampara_techo_salon",
-   "por_m": [
-    0.4,
-    0.42
+   "cantidad": [
+    1,
+    1
    ],
-   "obligatorio": true
+   "obligatorio": true,
+   "sobre_de": "va_mesa_comedor",
+   "area_max": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "va_mesa_familiar",
+   "area_min": 12
   }
  ],
  "iluminacion": {

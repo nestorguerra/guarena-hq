@@ -51,7 +51,25 @@ def generar():
     for e in bano:
         if e.get('obj')=='va_inodoro':e['espacio_frontal']=[.6,.65]
     kit('bano','Baño doméstico','bano',bano,mood['bano'],fondo=(1.9,3.6))
-    comedor=[E('conjunto','va_mesa_comedor',cantidad=[1,1],obligatorio=True,giro=[0,90],sillas=dict(variantes=['silla_comedor'],n=[2,4])),pared('aparador',False),pared('va_alacena',False),E('pared',['cuadro_paisaje','fotos_familia','cuadro_virgen'],pared='*',cantidad=[1,3]),E('sobre',vajilla,en=['va_mesa_comedor'],por_soporte=[2,4])]+adornos(vajilla+comida,['aparador','va_alacena'])
+    mesas_comedor=['va_mesa_comedor','va_mesa_familiar']
+    servicio_comedor=['bandeja','azucarero','taza_cafe','taza_desayuno','plato_cafe','plato_llano','vaso_agua','copa_vino','cucharilla','servilletero','cubiertos_servicio','servilleta_doblada','jarra_agua','salero_pimentero','aceitera_vinagrera','botella_vino_tinto','botella_vino_blanco','bote_caramelos','florero_mesa','portarretratos','reloj_sobremesa']
+    comedor=[
+        E('conjunto','va_mesa_comedor',cantidad=[1,1],obligatorio=True,giro=[0,90],centrado=True,area_max=12,sillas=dict(variantes=['silla_comedor'],n=2,lados=['+z','-z'])),
+        E('conjunto','va_mesa_familiar',cantidad=[1,1],obligatorio=True,giro=[0,90],centrado=True,area_min=12,sillas=dict(variantes=['silla_comedor'],n=4,lados=['+z','-z','+x','-x'])),
+        pared('aparador',False),pared('va_alacena',False),
+        E('pared','cuadro_paisaje',pared='*',cantidad=[1,1],obligatorio=True),
+        E('pared','fotos_familia',pared='*',cantidad=[0,1]),
+        E('pared','cuadro_virgen',pared='*',cantidad=[0,1]),
+        E('sobre','va_servicio_comedor_2',en=['va_mesa_comedor'],cantidad=[1,1],obligatorio=True,centrado=True,area_max=12),
+        E('sobre','va_servicio_comedor_4',en=['va_mesa_familiar'],cantidad=[1,1],obligatorio=True,centrado=True,area_min=12),
+        # Un único objeto/acción de cada pertenencia, antes de llenar baldas opcionales.
+        *[E('sobre',obj,en=['aparador','va_alacena'],cantidad=[0,1],preferir=True,botin=botin)
+          for obj,botin in [('va_joyero_guardado','joyero'),('va_lata_guardada','lata'),('va_reloj_guardado','reloj')]],
+        E('sobre',['va_vajilla_guardada_platos','va_vajilla_guardada_tazas'],en=['va_alacena'],por_soporte=[1,1]),
+        E('sobre',servicio_comedor,en=['aparador'],por_soporte=[2,3]),
+        E('techo','lampara_techo_salon',cantidad=[1,1],obligatorio=True,sobre_de='va_mesa_comedor',area_max=12),
+        E('techo','lampara_techo_salon',cantidad=[1,1],obligatorio=True,sobre_de='va_mesa_familiar',area_min=12),
+    ]
     kit('comedor','Comedor familiar','otra_estancia',comedor,mood['comedor'],fondo=(2.5,5))
     reservas=[k for k in C if k.startswith(('va_reserva_','va_conserva_'))]
     # Frente doméstico de guardado: módulo bajo entre dos alturas, antes de ampliar.

@@ -275,6 +275,10 @@
       ],
       "additionalProperties": false,
       "description": "Precondición de la raíz de grupo_pared: debe caber este acompañante de pared al lado indicado. Prueba su volumen real sin colocarlo ni sustituir su entrada posterior. No cambia los mínimos ni actúa como collider."
+     },
+     "sobre_de": {
+      "type": "string",
+      "description": "Mueble de referencia para pared o luminaria de techo; el techo sigue su centro en planta."
      }
     }
    }

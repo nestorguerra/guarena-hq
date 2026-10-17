@@ -6,11 +6,11 @@
 import * as THREE from 'three';
 import { StaticCollider } from './collision.js';
 import { mulberry32, hash1 } from './util.js';
-import { INTERIOR_ORIGIN, WALL_H, boxGeo, planeGeo, cylGeo, pictureTexture, rugTexture, HouseBuilder, std, texMat, ringSegs } from './housekit.js';
+import { INTERIOR_ORIGIN, WALL_H, boxGeo, planeGeo, cylGeo, pictureTexture, rugTexture, HouseBuilder, std, texMat, ringSegs, programaLuzDomestica } from './housekit.js';
 import { amueblar, encaja } from './locales.js';
 import { KITS, OBJETOS } from './interiores_datos.js';
 import { caja, construir } from './objetos.js';
-import { rot, mapaPaso, partes } from './interiores_geo.js';
+import { rot, mapaPaso, partes, penetra, superficie } from './interiores_geo.js';
 import { agruparCasa } from './casa_lotes.js';
 import { revestirEstancia } from './acabados_vivienda.js';
 
@@ -341,7 +341,10 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     for (const sx of [-1, 1]) { const q = P(sx * (w / 2 + 0.06), 0.1); B.add(M.curtain, curtainGeo(0.38, 2.05), q[0], y + 1.2, q[1], ry); }
     B.view(z < 1 ? 'f' : 'b', x - w / 2, y + 0.95, z - 0.12, x + w / 2, y + 2.05, z + 0.12); // the street shows through it
   };
-  const lampAt = (x, z, y, area) => B.light(x, y - 0.33, z, S.lamp, Math.min(11, 4 + area * 0.32), Math.max(6, Math.sqrt(area) * 2.6));
+  const lampAt = (x, z, y, area) => {
+    const luz = programaLuzDomestica(area);
+    return B.light(x, y - 0.33, z, S.lamp, luz.intensidad, luz.alcance);
+  };
 
   // ---------------------------------------------------------------- layouts
   const rooms = [];
@@ -559,7 +562,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // patio walls (over them, the roofs of the neighbours)
   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
   B.view('b', -hw, 3.2, D1, hw, 40, D);
-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
+  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
     // tiled skirting 1.1 m high round the room (skipping doors)
     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
       const along = side === 's' || side === 'n';
@@ -1079,7 +1082,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const cxz = L((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2), frente = L((b.x0 + b.x1) / 2, b.z1 + 0.5);
       const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
       if (deBotin.has(i)) {
-        const g = construir([it],{domestico:true}); B.extra.push(g);
+        const g = construir([it],{domestico:true}); g.userData.objetoBotin=p.obj; B.extra.push(g);
         const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95,sala:rm.id }); // (its storey by the floor it is on, not by how high it hangs)
         if (li && li.def.crack) li.label = 'Forzar la caja fuerte';
         return;
@@ -1163,7 +1166,12 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     }
     // the leftover loot finds a place in the main rooms
     const area = rm.w * rm.d;
-    lampAt(rm.cx, rm.cz, y + (rm.lv ? H2 : WALL_H), area);
+    // Una luminaria de comedor corresponde a un único foco físico sobre su mesa.
+    const estLuz=porKit&&rm.type==='comedor'?estancias[estancias.length-1]:null;
+    const luminaria=estLuz?.colocados.find(p=>p.regla==='techo');
+    const emisor=luminaria&&OBJETOS[luminaria.obj].partes.find(p=>p.luz);
+    if(emisor)lampAt(estLuz.origen.x-B.ox+luminaria.x,estLuz.origen.z-B.oz+luminaria.z,y+luminaria.y+emisor.p[1]+.33,area);
+    else lampAt(rm.cx, rm.cz, y + (rm.lv ? H2 : WALL_H), area);
     if(porKit) B.extra[B.extra.length-1].visible=false; // el kit aporta la luminaria; se conserva la luz de la casa
     if(porKit){const est=estancias[estancias.length-1],l=B.lights[B.lights.length-1];est.luces=[{x:l.position.x-est.origen.x,y:l.position.y-y,z:l.position.z-est.origen.z,color:'#'+l.color.getHexString(),intensidad:l.intensity,alcance:l.distance}];est.modoLuz='casa';}
     if (S.beams && !rm.lv) for (let k = 0.6; k < rm.d; k += 1.1) B.add(M.wood, boxGeo(rm.w, 0.14, 0.12, 1), rm.cx, WALL_H - 0.07, rm.z0 + k);
@@ -1174,16 +1182,68 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     B.extra.push(g);
     for (const q of pendientes) { const a = g.userData.aparte.find((x) => x.i === q.i); if (a) q.fn(a.mesh); }
   }
-  // a wallet or a phone left on a table, whatever is still in the pool
+  // Las mesas puestas no reciben sobrantes aleatorios. Una pertenencia conserva
+  // su ID/valor/acción; si no cupo en el mueble del comedor, busca apoyo real libre.
+  const modelosBotin={joyero:'va_joyero_guardado',lata:'va_lata_guardada',reloj:'va_reloj_guardado'};
+  const hayComedor=estancias.some(e=>e.kit==='vivienda_comedor'),ocupadosBotin=[],pasosBotin=new Map();
+  const apoyoBotin=(obj,b)=>{
+    const orden=[...estancias].sort((a,b)=>(a.kit==='vivienda_comedor'?0:1)-(b.kit==='vivienda_comedor'?0:1));
+    for(const e of orden){
+      const objetos=e.colocados.flatMap(partes),extras=()=>ocupadosBotin.filter(q=>q.sala===e.sala).flatMap(q=>q.partes);
+      if(!pasosBotin.has(e.sala)){
+        const mp=mapaPaso(e,objetos,.05,e.ancho,e.inicio),celdas=[];
+        for(let i=0;i<mp.reach.length;i++)if(mp.reach[i])celdas.push({x:-e.W/2+(i%mp.nx+.5)*mp.S,z:(Math.floor(i/mp.nx)+.5)*mp.S});
+        pasosBotin.set(e.sala,celdas);
+      }
+      const celdas=pasosBotin.get(e.sala);
+      const probar=(x,y,z,ry,soporte)=>{
+        const [dx,dz]=rot((b.x0+b.x1)/2,(b.z0+b.z1)/2,ry);
+        const ps=obj?partes({obj,x,y,z,ry}):[{cx:x+dx,cz:z+dz,hw:(b.x1-b.x0)/2,hd:(b.z1-b.z0)/2,a:ry,y0:y+b.y0,y1:y+b.y1}];
+        if(ps.some(v=>[...objetos,...e.libres,...extras()].some(q=>penetra(v,q)>.005)))return null;
+        let cerca=null,d=Infinity;for(const q of celdas){const dd=Math.hypot(q.x-x,q.z-z);if(dd<d){d=dd;cerca=q;}}
+        if(!cerca||d>1.25)return null;
+        ocupadosBotin.push({sala:e.sala,partes:ps});
+        return {x:e.origen.x-B.ox+x,y:e.origen.y+y,z:e.origen.z-B.oz+z,ry,sala:e.sala,apoyo:{...soporte,distanciaUso:d,superficieY:e.origen.y+y+b.y0}};
+      };
+      for(const [i,p] of e.colocados.entries()){
+        if(e.kit==='vivienda_comedor'&&['va_mesa_comedor','va_mesa_familiar'].includes(p.obj))continue;
+        if(p.sop!=null||p.regla==='pared'||p.regla==='techo')continue;
+        for(let k=0;k<(OBJETOS[p.obj].superficies||[]).length;k++){
+          const q=superficie(p.obj,k);if(!q||p.y+q.y>1.75)continue;
+          const x0=q.x0-b.x0,x1=q.x1-b.x1,z0=q.z0-b.z0,z1=q.z1-b.z1;if(x1<x0||z1<z0)continue;
+          for(const u of [.5,0,1])for(const v of [.5,0,1]){
+            const [dx,dz]=rot(x0+(x1-x0)*u,z0+(z1-z0)*v,p.ry);
+            const pos=probar(p.x+dx,p.y+q.y-b.y0,p.z+dz,p.ry,{tipo:'superficie',obj:p.obj,indice:i,sup:k});if(pos)return pos;
+          }
+        }
+      }
+    }
+    // Fallback visible: una celda de suelo alcanzable, fuera de reservas y muebles.
+    for(const e of orden)for(const q of pasosBotin.get(e.sala)||[]){
+      const x=q.x-(b.x0+b.x1)/2,z=q.z-(b.z0+b.z1)/2,y=-b.y0;
+      const ps=obj?partes({obj,x,y,z,ry:0}):[{cx:q.x,cz:q.z,hw:(b.x1-b.x0)/2,hd:(b.z1-b.z0)/2,a:0,y0:0,y1:b.y1-b.y0}];
+      if(ps.some(v=>v.cx-v.hw<-e.W/2||v.cx+v.hw>e.W/2||v.cz-v.hd<0||v.cz+v.hd>e.D||[...e.colocados.flatMap(partes),...e.libres,...ocupadosBotin.filter(t=>t.sala===e.sala).flatMap(t=>t.partes)].some(t=>penetra(v,t)>.005)))continue;
+      ocupadosBotin.push({sala:e.sala,partes:ps});
+      return{x:e.origen.x-B.ox+x,y:e.origen.y+y,z:e.origen.z-B.oz+z,ry:0,sala:e.sala,apoyo:{tipo:'suelo',distanciaUso:0,superficieY:e.origen.y}};
+    }
+    return null;
+  };
   for (const id of lootPool.splice(0)) {
     const tb = pieces.table[Math.floor(r() * pieces.table.length)] || null;
     const rm = tb ? tb.rm : rooms.find((q) => q.type === 'salon');
     if (!rm) continue;
     if (LOOT[id].weapon) continue;
     const x = tb ? tb.x + (r() - 0.5) * 0.4 : rm.standSpot().x, z = tb ? tb.z + (r() - 0.5) * 0.3 : rm.standSpot().z;
-    const yy = tb ? tb.y : rm.lv ? F2 : 0;
-    const mesh = smallMesh(id === 'cartera' ? boxGeo(0.11, 0.025, 0.09, 1) : id === 'movil' ? boxGeo(0.08, 0.012, 0.15, 1) : boxGeo(0.14, 0.08, 0.1, 1), B.mats.get(id === 'cartera' ? M.leather : M.black));
-    const li=lootItem(id, mesh, x, yy + 0.02, z, r() * 3,{sala:rm.id});
+    const yy = tb ? tb.y : rm.lv ? F2 : 0,ry=r()*3;
+    const obj=hayComedor?modelosBotin[id]:null;
+    const mesh=obj?construir([{obj,x:0,y:0,z:0,seed:prof.seed}],{domestico:true}):smallMesh(id === 'cartera' ? boxGeo(0.11, 0.025, 0.09, 1) : id === 'movil' ? boxGeo(0.08, 0.012, 0.15, 1) : boxGeo(0.14, 0.08, 0.1, 1), B.mats.get(id === 'cartera' ? M.leather : M.black));
+    const box=new THREE.Box3().setFromObject(mesh),b={x0:box.min.x,x1:box.max.x,y0:box.min.y,y1:box.max.y,z0:box.min.z,z1:box.max.z};
+    let pos={x,y:yy+.02,z,ry,sala:rm.id};
+    if(obj||rm.type==='comedor'){
+      pos=apoyoBotin(obj,b);if(!pos)throw new Error('Botín sin apoyo accesible: '+id);
+      mesh.userData.objetoBotin=obj||id;mesh.userData.apoyoBotin=pos.apoyo;
+    }
+    const li=lootItem(id,mesh,pos.x,pos.y,pos.z,pos.ry,{sala:pos.sala});
     if(li&&li.def.crack)li.label='Forzar la caja fuerte';
   }
 

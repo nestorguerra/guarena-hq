@@ -1084,3 +1084,12 @@ El relleno del cielo y de la calle se acota en casas durante su render y se rest
 ### 2026-10-17 — Tanda 9, frente de cocina y trastero
 
 Se integra colocación atómica del frente de cocina, respetando referencias inmediatas y fallback; trastero incorpora bicicleta de carga, útiles vinculados y mejor contraste. Hallazgos de referencias, eje y bolsa corregidos antes de validar. Revisión independiente acotada sin bloqueo nuevo. Notas cocina 3,176/3,094 y trastero 3,252/3,048; objetivo 4/5 pendiente. Pasan 40 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Tanda 8 publicada como 313cf52 y verificada en juego público sin errores. Detalles y límites en docs/calidad-viviendas-4-2026-10-17.md.
+
+
+## 2026-10-17 · comedor doméstico, tanda 14
+
+- Usuario: continuar calidad visual hasta 4/5, validar y desplegar cada tanda.
+- El comedor incorpora capacidad y servicio reales, guardado de vajilla, acabados tranquilos y pertenencias reconocibles/accesibles. Un selector seguía apuntando al botín retirado; se corrige y se comprueba recogida y recarga sin guardado del instrumento.
+- Revisión independiente estática y visual conservadas; A/B 3,552/3,410. Mejora parcial; 4/5 pendiente. Se declaran las nuevas cámaras FOV 75 y las limitaciones de cobertura; no se finge equivalencia causal con las anteriores.
+- 58 contratos, 200 casas, 81 semillas comedor, 96 recorridos, fuente/paquete, recursos y marcas pasan. La luz del laboratorio se alinea con el foco doméstico real sin rebajar el umbral ni cambiar la luz de las casas.
+- T13 infantil queda retirada por empeorar ambos juicios; evidencia conservada. Siguiente candidata: biblioteca infantil, aún privada y sin aprobación visual. Publicación T14 pendiente de CI y prueba pública. Detalle en docs/calidad-viviendas-4-2026-10-17.md.

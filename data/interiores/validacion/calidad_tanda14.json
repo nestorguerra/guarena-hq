@@ -1,0 +1,49 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 14,
+ "objetivo": 4,
+ "estado": "mejora_parcial_objetivo_no_alcanzado",
+ "base": "e218dc535eeb45ef1e79b0d974098edfd5e8b37e",
+ "contratos": 58,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 70192,
+  "mallas": 60,
+  "luces": 9,
+  "montaje_ms": 208.5
+ },
+ "kits": {
+  "comedor": {
+   "ahora": {
+    "A": 3.552,
+    "B": 3.41
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0,
+  "partida_ficticia_conservada": true
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda14_2026-10-17.md",
+ "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo.",
+ "botin_mantenido": {
+  "fuente": {
+   "estado": "PASS",
+   "informe": "data/interiores/validacion/evidencia_tanda14/botin_fuente_v3.json",
+   "guardado_artificial": false,
+   "identidad_recompensa_comprobada": true
+  },
+  "paquete": {
+   "estado": "PASS",
+   "informe": "data/interiores/validacion/evidencia_tanda14/botin_paquete_v3.json",
+   "guardado_artificial": false,
+   "identidad_recompensa_comprobada": true
+  }
+ },
+ "laboratorio_comedor": "81/81 PASS con foco físico doméstico; umbral conservado; fallo previo conservado",
+ "publicacion": "pendiente commit, CI y prueba del SHA público"
+}

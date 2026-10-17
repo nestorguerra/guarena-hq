@@ -1,9 +1,10 @@
 // Pruebas de contrato: ejercitan los constructores reales; los kits alterados se restauran siempre.
 import * as H from '/src/houses.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
-import { filtroHogar, amueblar } from '/src/locales.js';
+import { filtroHogar, amueblar, buildLocal } from '/src/locales.js';
 import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
 import * as THREE from 'three';
+import { programaLuzDomestica } from '/src/housekit.js';
 import { construir, caja } from '/src/objetos.js';
 
 const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
@@ -649,6 +650,127 @@ export async function probarCasas(opts = {}) {
       KITS[id]={...K,objetos:[galeria]};
       exigir(amueblar(id,37,{W:4,D:4,H:2.75}).P.length===0,'galería huérfana sin cama');
     }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=16)await caso('comedor doméstico ofrece mesa y sillas reales, comida servida y paso',()=>{
+    for(const seed of [2786,5157,2606]){
+      const h=H.buildVecino(seed,{x:0,z:0});try{
+        const e=h.estancias.find(e=>e.kit==='vivienda_comedor');exigir(e,seed+': falta comedor');
+        const C=e.colocados,mesas=C.map((p,i)=>({p,i})).filter(({p})=>['va_mesa_comedor','va_mesa_familiar'].includes(p.obj));
+        exigir(mesas.length===1,seed+': mesa principal ausente o duplicada');const {p:mesa,i}=mesas[0],grande=e.W*e.D>=12;
+        exigir(mesa.obj===(grande?'va_mesa_familiar':'va_mesa_comedor'),seed+': mesa inadecuada a la capacidad prevista');
+        exigir(C.filter(p=>p.obj==='silla_comedor'&&p.de===i).length===(grande?4:2),seed+': sillas ausentes o sueltas');
+        const encima=C.filter(p=>p.sop===i);
+        const servicio=encima.filter(p=>p.obj==='va_servicio_comedor_'+(grande?4:2));
+        exigir(servicio.length===1,seed+': falta el servicio completo relacionado con la capacidad');
+        exigir(Math.hypot(servicio[0].x-mesa.x,servicio[0].z-mesa.z)<.001&&Math.abs(servicio[0].ry-mesa.ry)<.001,seed+': el servicio no está centrado y alineado con la mesa');
+        const piezas=OBJETOS[servicio[0].obj].partes,n=grande?4:2;
+        exigir(piezas.filter(p=>p.f==='cil'&&p.m==='ceramica').length===n&&piezas.filter(p=>p.f==='cil'&&p.m==='cristal'&&Math.abs(p.d[2]-.1)<.0001).length===n,seed+': no hay plato y vaso por puesto');
+        exigir(piezas.some(p=>p.m==='comida')&&piezas.some(p=>p.f==='cil'&&p.m==='cristal'&&Math.abs(p.d[2]-.18)<.0001),seed+': falta pan/comida compartida o jarra de agua del servicio');
+        exigir(piezas.filter(p=>p.f==='caja'&&p.m==='metal'&&Math.abs(p.d[1]-.003)<.0001).length===3*n,seed+': faltan cubiertos en algún puesto');
+        const colgados=C.filter(p=>p.regla==='techo');exigir(colgados.length===1&&Math.hypot(colgados[0].x-mesa.x,colgados[0].z-mesa.z)<.001,seed+': luminaria duplicada o sin relación con la mesa');
+        const lam=colgados[0],emisor=OBJETOS[lam.obj].partes.find(p=>p.luz),l=h.lights.find(l=>Math.abs(l.position.x-e.origen.x-lam.x)<.001&&Math.abs(l.position.z-e.origen.z-lam.z)<.001);
+        exigir(l&&Math.abs(l.position.y-e.origen.y-lam.y-emisor.p[1])<.001&&l.userData.base>0,seed+': el foco real no coincide con la luminaria o pierde su intensidad de programa');
+        for(const id of ['cuadro_paisaje','fotos_familia','cuadro_virgen'])exigir(C.filter(p=>p.obj===id).length<=1,seed+': cuadro duplicado '+id);
+        exigir(!C.some(p=>p.obj.startsWith('va_alimento_')||p.obj.startsWith('prod_')),seed+': el comedor conserva provisiones de tienda');
+        exigir(e.ancho>=.8&&!revisarUso(h).errores.some(x=>x.startsWith(e.sala+'/')),seed+': programa inaccesible');
+      }finally{tirar(h);}
+    }
+    const b=caja('va_mesa_comedor'),g=caja('va_mesa_familiar');
+    exigir(Math.abs(b.w-1.05)<.0001&&Math.abs(b.d-.7)<.0001,'se ha agrandado la mesa compartida de cocinas');
+    exigir(g.w>=1.3499&&g.d>=.7999,'la mesa familiar mantiene superficie insuficiente');
+  });
+  if(opts.tanda>=16)await caso('comedor conserva capacidad en umbral y no fuerza cuatro sillas donde no caben',()=>{
+    const id='__comedor_capacidad',K=KITS.vivienda_comedor;
+    try{
+      for(const area of [11.999,12,12.001]){
+        const A=amueblar('vivienda_comedor',37,{W:4,D:area/4,H:2.75,funciones:true});
+        const activas=A.activas.filter(i=>K.objetos[i].regla==='conjunto');
+        exigir(activas.length===1,area+': hueco o solapamiento en programa de mesa');
+        exigir(K.objetos[activas[0]].obj===(area>=12?'va_mesa_familiar':'va_mesa_comedor'),area+': capacidad incorrecta');
+      }
+      const grande=K.objetos.find(e=>e.obj==='va_mesa_familiar');
+      KITS[id]={...K,objetos:[{...grande,area_min:undefined}]};
+      const A=amueblar(id,37,{W:1,D:5,H:2.75,funciones:true});
+      exigir(A.P.length===0,'se acepta mesa familiar con sólo dos sillas dentro de corredor estrecho');
+      const ctx={W:4,D:4,H:2.75,funciones:true,libres:[{cx:0,cz:2,hw:2,hd:2,a:0,y0:0,y1:2.4}]};
+      exigir(amueblar('vivienda_comedor',37,ctx).P.every(p=>p.regla==='techo'),'se fuerza mesa o vajilla sin soporte dentro de una reserva total');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=16)await caso('comedor conserva todo el botín y lo apoya fuera de la mesa puesta',()=>{
+    for(const seed of [2786,5157,2606]){
+      const h=H.buildVecino(seed);try{
+        const ids=h.loot.map(i=>i.id).sort();exigir(JSON.stringify(ids)===JSON.stringify([...h.profile.loot].sort()),seed+': se pierde o duplica una pertenencia');
+        const modelos={joyero:'va_joyero_guardado',lata:'va_lata_guardada',reloj:'va_reloj_guardado'};
+        h.group.updateMatrixWorld(true);
+        for(const i of h.loot){
+          exigir(i.def&&i.label&&i.r>0,seed+': botín sin acción o definición');
+          if(!modelos[i.id])continue;
+          exigir(i.mesh?.userData.objetoBotin===modelos[i.id],seed+': pertenencia sin modelo legible '+i.id);
+          const e=h.estancias.find(e=>e.sala===i.sala),p=e?.colocados.find(p=>p.obj===modelos[i.id]),b=new THREE.Box3().setFromObject(i.mesh);
+          if(p){const soporte=e.colocados[p.sop],sup=OBJETOS[soporte.obj].superficies[p.sup];exigir(!['va_mesa_comedor','va_mesa_familiar'].includes(soporte.obj),seed+': pertenencia sobre mesa puesta');exigir(Math.abs(b.min.y-e.origen.y-soporte.y-sup.y)<.001,seed+': pertenencia enterrada o flotante');}
+          else exigir(i.mesh.userData.apoyoBotin?.distanciaUso<=1.25,seed+': fallback sin acceso medido');
+        }
+        exigir(!revisarUso(h).errores.length,seed+': botín inaccesible');
+      }finally{tirar(h);}
+    }
+  });
+  if(opts.tanda>=16)await caso('comedor sin aparador ni alacena conserva pertenencias con fallback visible y accesible',()=>{
+    const K=KITS.vivienda_comedor,original=K.objetos;
+    try{
+      K.objetos=original.filter(e=>!['aparador','va_alacena'].includes(e.obj));
+      for(const seed of [2786,5157,2606]){
+        const h=H.buildVecino(seed);try{
+          exigir(JSON.stringify(h.loot.map(i=>i.id).sort())===JSON.stringify([...h.profile.loot].sort()),seed+': se borra botín al faltar apoyo');
+          for(const i of h.loot.filter(i=>['joyero','lata','reloj'].includes(i.id))){
+            exigir(i.mesh?.visible!==false&&i.mesh.userData.apoyoBotin?.distanciaUso<=1.25,seed+': fallback invisible o sin acceso');
+            const a=i.mesh.userData.apoyoBotin;exigir(a.tipo==='suelo'||!['va_mesa_comedor','va_mesa_familiar'].includes(a.obj),seed+': fallback invade mesa puesta');
+            h.group.updateMatrixWorld(true);const b=new THREE.Box3().setFromObject(i.mesh);exigir(Math.abs(b.min.y-a.superficieY)<.001,seed+': apoyo de fallback incorrecto');
+          }
+          exigir(!revisarUso(h).errores.length,seed+': fallback no accesible');
+        }finally{tirar(h);}
+      }
+    }finally{K.objetos=original;}
+  });
+  if(opts.tanda>=16)await caso('botín sobre un mueble bajo no invade la reserva alta de una ventana',()=>{
+    const id='__reserva_botin',base=KITS.vivienda_comedor;
+    try{
+      KITS[id]={...base,objetos:[
+        {zona:'estancia',regla:'contra_pared',obj:'aparador',pared:'S',cantidad:[1,1],obligatorio:true},
+        {zona:'estancia',regla:'sobre',obj:'va_joyero_guardado',en:['aparador'],cantidad:[1,1],botin:'joyero',preferir:true},
+      ]};
+      const A=amueblar(id,37,{W:4,D:4,H:2.75,funciones:true,filtro:()=>true,libres:[{cx:0,cz:.4,hw:2,hd:.4,a:0,y0:.91,y1:2.4}]});
+      exigir(A.P.some(p=>p.obj==='aparador'),'negativo sin el soporte bajo que debe caber');
+      exigir(!A.P.some(p=>p.obj==='va_joyero_guardado'),'el botín alto ocupa el hueco reservado de ventana');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=16)await caso('jarra de un servicio centrado respeta la reserva alta aunque la mesa quepa debajo',()=>{
+    const id='__reserva_servicio',base=KITS.vivienda_comedor;
+    try{
+      KITS[id]={...base,objetos:[
+        {zona:'estancia',regla:'conjunto',obj:'va_mesa_comedor',cantidad:[1,1],centrado:true,sillas:{variantes:[],n:0}},
+        {zona:'estancia',regla:'sobre',obj:'va_servicio_comedor_2',en:['va_mesa_comedor'],cantidad:[1,1],centrado:true},
+      ]};
+      const A=amueblar(id,37,{W:4,D:4,H:2.75,funciones:true,libres:[{cx:0,cz:2,hw:2,hd:2,a:0,y0:.92,y1:2.4}]});
+      exigir(A.P.some(p=>p.obj==='va_mesa_comedor'),'negativo sin mesa baja bajo la reserva');
+      exigir(!A.P.some(p=>p.obj==='va_servicio_comedor_2'),'la jarra atraviesa la reserva alta de ventana');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=16)await caso('laboratorio comedor usa el foco doméstico real y conserva el mínimo de luz',async()=>{
+    const presupuesto=await(await fetch('/data/quality_budgets.json')).json(),K=KITS.vivienda_comedor,ids=Object.keys(H.PROFILES);
+    for(const seed of [1,69,81]){
+      const id=ids[(seed-1)%ids.length],P=H.PROFILES[id],hogar={perfil:id,estilo:P.styles[Math.floor((seed-1)/ids.length)%P.styles.length],botin:P.loot,habitacion:Math.floor((seed-1)/(ids.length*2))%2?'dorm2':'dorm'};
+      const puerta=K.puerta??0,origin={x:-9400,z:-9400},h=buildLocal('vivienda_comedor',seed,origin,'Validación',hogar,{libres:[{cx:puerta,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}],inicio:{x:puerta,z:.5}});
+      try{
+        const L=h.local,programa=programaLuzDomestica(L.W*L.D),lam=L.colocados.filter(p=>p.regla==='techo');
+        exigir(L.modoLuz==='casa'&&h.lights.length===1&&L.luces.length===1&&lam.length===1,seed+': programa o número de fuentes incorrecto');
+        const l=h.lights[0],m=L.luces[0],emisor=OBJETOS[lam[0].obj].partes.find(p=>p.luz);
+        exigir(l.intensity===programa.intensidad&&l.distance===programa.alcance&&l.userData.base===l.intensity,seed+': foco distinto del programa doméstico');
+        exigir(Math.abs(l.position.x-origin.x-lam[0].x)<.001&&Math.abs(l.position.z-origin.z-lam[0].z)<.001&&Math.abs(l.position.y-lam[0].y-emisor.p[1])<.001,seed+': foco separado de la luminaria');
+        exigir(m.x===l.position.x-origin.x&&m.y===l.position.y&&m.z===l.position.z-origin.z&&m.intensidad===l.intensity&&m.alcance===l.distance,seed+': metadatos distintos del foco real');
+        exigir(m.k>=K.iluminacion.temperatura_k[0]&&m.k<=K.iluminacion.temperatura_k[1],seed+': temperatura fuera del kit');
+        const rep=revisar(h,presupuesto);exigir(!rep.errores.length,seed+': '+rep.errores.join('; '));
+      }finally{tirar(h);}
+    }
   });
   return { pruebas, errores };
 }
