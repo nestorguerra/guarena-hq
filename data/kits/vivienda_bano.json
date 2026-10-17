@@ -39,7 +39,21 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 9.999
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_lavabo_amplio",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10
   },
   {
    "zona": "estancia",
@@ -51,7 +65,21 @@
     1,
     1
    ],
-   "obligatorio": true
+   "obligatorio": true,
+   "area_max": 9.999
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_espejo_amplio",
+   "pared": "*",
+   "sobre_de": "va_lavabo_amplio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "area_min": 10
   },
   {
    "zona": "estancia",
@@ -81,7 +109,10 @@
    "zona": "estancia",
    "regla": "junto_a",
    "obj": "va_toallero",
-   "de": "va_lavabo",
+   "de": [
+    "va_lavabo",
+    "va_lavabo_amplio"
+   ],
    "cantidad": [
     1,
     1
@@ -104,7 +135,10 @@
    "zona": "estancia",
    "regla": "junto_a",
    "obj": "va_armario_bano",
-   "de": "va_lavabo",
+   "de": [
+    "va_lavabo",
+    "va_lavabo_amplio"
+   ],
    "cantidad": [
     0,
     1
@@ -141,7 +175,10 @@
    "zona": "estancia",
    "regla": "junto_a",
    "obj": "va_alfombrilla_bano",
-   "de": "va_lavabo",
+   "de": [
+    "va_lavabo",
+    "va_lavabo_amplio"
+   ],
    "cantidad": [
     0,
     1
@@ -162,7 +199,8 @@
     "va_jabonera"
    ],
    "en": [
-    "va_lavabo"
+    "va_lavabo",
+    "va_lavabo_amplio"
    ],
    "por_soporte": [
     1,

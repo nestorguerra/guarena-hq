@@ -47,30 +47,30 @@
   {
    "kit": "vivienda_bano",
    "revisor": "Decision API A",
-   "fecha": "2026-10-17T15:22:39.508065+00:00",
+   "fecha": "2026-10-17T15:42:45.642594+00:00",
    "puntos": {
-    "densidad": 2.73,
-    "coherencia": 2.8,
-    "iluminacion": 3.15,
-    "variedad": 2.88,
-    "lectura_funcional": 2.96
+    "densidad": 2.81,
+    "coherencia": 2.9,
+    "iluminacion": 3.32,
+    "variedad": 3.02,
+    "lectura_funcional": 3.13
    },
-   "media": 2.904,
+   "media": 3.036,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_bano_A.json"
   },
   {
    "kit": "vivienda_bano",
    "revisor": "Decision API B",
-   "fecha": "2026-10-17T15:22:39.522795+00:00",
+   "fecha": "2026-10-17T15:42:45.452104+00:00",
    "puntos": {
-    "densidad": 2.62,
-    "coherencia": 2.67,
-    "iluminacion": 2.93,
-    "variedad": 2.79,
-    "lectura_funcional": 2.76
+    "densidad": 2.74,
+    "coherencia": 2.87,
+    "iluminacion": 3.03,
+    "variedad": 2.75,
+    "lectura_funcional": 2.88
    },
-   "media": 2.754,
+   "media": 2.854,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_bano_B.json"
   },
@@ -437,30 +437,30 @@
   {
    "kit": "vivienda_taller",
    "revisor": "Decision API A",
-   "fecha": "2026-10-17T15:19:55.371852+00:00",
+   "fecha": "2026-10-17T15:39:26.579288+00:00",
    "puntos": {
-    "densidad": 2.8,
-    "coherencia": 2.82,
-    "iluminacion": 3.45,
-    "variedad": 2.63,
-    "lectura_funcional": 2.51
+    "densidad": 3.06,
+    "coherencia": 3.38,
+    "iluminacion": 3.9,
+    "variedad": 2.96,
+    "lectura_funcional": 2.47
    },
-   "media": 2.842,
+   "media": 3.154,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_taller_A.json"
   },
   {
    "kit": "vivienda_taller",
    "revisor": "Decision API B",
-   "fecha": "2026-10-17T15:19:55.530564+00:00",
+   "fecha": "2026-10-17T15:39:26.774003+00:00",
    "puntos": {
-    "densidad": 2.94,
-    "coherencia": 2.9,
-    "iluminacion": 3.41,
-    "variedad": 2.63,
+    "densidad": 2.99,
+    "coherencia": 3.51,
+    "iluminacion": 3.89,
+    "variedad": 2.87,
     "lectura_funcional": 2.83
    },
-   "media": 2.942,
+   "media": 3.218,
    "aprobado": false,
    "evidencia": "data/interiores/validacion/visual_taller_B.json"
   },
@@ -572,5 +572,6 @@
    "umbral_superado": false
   },
   "resto": "Notas de la versión anterior: pendientes de reevaluar después del ajuste compartido de materiales."
- }
+ },
+ "estado_viviendas": "calidad_4_en_curso"
 }

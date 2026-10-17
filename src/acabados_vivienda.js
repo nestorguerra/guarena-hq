@@ -53,6 +53,14 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
       }else dibujo(bajo,p);
     }
     for(const p of panosPared(a,b,limite-.014,limite+.014,huecos))dibujo(borde,p,.005);
+    if(bath)for(const o of (rm.open||[]).filter(o=>o.side===side&&!o.door)) {
+      // Vidrio de privacidad: parte del baño visible también durante el juego,
+      // con cerco claro y acabado mate; no una modificación de la fotografía.
+      const l=o.a+.02,h=o.b-.02,v0=.96,v1=2.04,j=.035;
+      dibujo(mat('#c5d7d1'),[l+j,h-j,v0+j,v1-j],.017);
+      for(const q of [[l,l+j,v0,v1],[h-j,h,v0,v1],[l+j,h-j,v0,v0+j],[l+j,h-j,v1-j,v1]])dibujo(mat('#e2dac7'),q,.017);
+    }
+
   }
   // Suelo y techo locales: el antiguo estampado no domina estas salas de servicio.
   const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;

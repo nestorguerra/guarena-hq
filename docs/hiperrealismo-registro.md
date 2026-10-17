@@ -1051,3 +1051,5 @@ Los arreglos del revisor, por su orden:
 ## 2026-10-17 · calidad visual por tandas hasta 4/5
 
 El usuario solicita mejorar primero las habitaciones peor puntuadas, composición y contraste, validar y desplegar cada tanda. Tanda 1: taller y baño. Se mantienen rúbrica, umbral y semillas; las capturas registran sus cámaras. Se añaden superficies serenas, revestimientos con huecos recortados, banco a escala doméstica, almacenaje de herramientas y detalle/contraste de lavabo, espejo y armario. La evaluación debe conservar resultados desfavorables y solo declarará 4/5 cuando ambos evaluadores lo alcancen.
+
+Tanda 2: cantos redondeados opcionales con coste real probado, sanitarios con volumen, lavabo amplio y bancos con actividades de bricolaje. La segunda cámara del baño documenta la zona húmeda que antes quedaba fuera de plano. Revisión independiente de cobertura cerrada. Notas finales taller 3,154/3,218; baño 3,036/2,854. Pasan 23 contratos, 200 casas, 81 semillas por kit e integración fuente/paquete. Objetivo 4/5 aún pendiente.

@@ -39,10 +39,13 @@ JS = r'''(async () => {
     const vistas=[];
     for (const [k, f] of [[0, 0.12], [1, 0.88]]) {
       let x = rm.x0 + (rm.x1 - rm.x0) * f, z = rm.z0 + (rm.z1 - rm.z0) * f;
-      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete');
+      const est=h.estancias.find(e=>e.sala===rm.id),foco=est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo'))));
       const hitos=(est?.colocados||[]).filter(p=>p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>.28).map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry),y:y+Math.min(b.h*.65,1.25),w:b.w,peso:Math.min(2,b.w*b.h)+(['va_banco','va_lavabo'].includes(p.obj)?1.5:0)};});
       const suma=hitos.reduce((a,p)=>a+p.peso,0)||1;
-      const cx = foco?est.origen.x+foco.x:(rm.x0+rm.x1)/2, cz = foco?est.origen.z+foco.z:(rm.z0+rm.z1)/2,col=h.levels?.[rm.lv]||h.collider;
+      // El segundo ángulo del baño debe documentar la zona húmeda, también en
+      // salas estrechas: apuntar al centro repetía el lavabo y cortaba el WC.
+      const sanitario=k===1&&tipo==='bano'?est?.colocados.find(p=>p.obj==='va_inodoro'):null;
+      const cx = foco?est.origen.x+foco.x:sanitario?est.origen.x+sanitario.x:(rm.x0+rm.x1)/2, cz = foco?est.origen.z+foco.z:sanitario?est.origen.z+sanitario.z:(rm.z0+rm.z1)/2,col=h.levels?.[rm.lv]||h.collider;
       h.group.updateMatrixWorld(true);let mejor=-Infinity;
       const hojas=h.doors.flatMap(d=>{const m=[];d.pivot.traverse(o=>{if(o.isMesh)m.push(o);});return m;});
       for(const [fx,fz] of [[f,f],[1-f,f],[f,1-f],[f,.5],[.5,f],...[.2,.3,.4,.5,.6,.7,.8].flatMap(fx=>[.2,.3,.4,.5,.6,.7,.8].map(fz=>[fx,fz]))]){
@@ -67,7 +70,7 @@ JS = r'''(async () => {
       if(!Number.isFinite(mejor))throw Error('sin cámara libre: '+tipo+'/'+s);
       for (let i = 0; i < 3; i++) g.frame(1 / 30);
       cam.fov=foco?60:tipo==='bano'?75:68;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + 1.05, cz); cam.updateMatrixWorld(true);
-      vistas.push({x,y:y+1.6,z,objetivo:[cx,y+1.05,cz],fov:cam.fov});
+      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+1.05,cz],fov:cam.fov});
       g.render();
       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
     }

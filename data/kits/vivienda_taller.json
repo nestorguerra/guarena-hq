@@ -32,20 +32,49 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
-   "obj": "va_banco",
+   "variantes": [
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica"
+   ],
    "pared": "*",
    "cantidad": [
     1,
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 10.499
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10.5
   },
   {
    "zona": "estancia",
    "regla": "junto_a",
    "obj": "va_estante_taller",
-   "de": "va_banco",
+   "de": [
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica",
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
+   ],
    "cantidad": [
     1,
     1
@@ -92,7 +121,12 @@
     "fe_guantes_trabajo"
    ],
    "en": [
-    "va_banco"
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica",
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
    ],
    "por_soporte": [
     1,

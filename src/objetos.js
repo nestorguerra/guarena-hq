@@ -4,6 +4,7 @@
 // meshes per material family (matte, metal, glass, lit), and a mesh of its own for each picture, slate or screen.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { OBJETOS } from './interiores_datos.js';
 import { pictureTexture } from './housekit.js';
 import { mulberry32 } from './util.js';
@@ -45,7 +46,7 @@ export function caja(id) {
 function parteGeo(p, bare = false) {
   let g;
   const d = p.d;
-  if (p.f === 'caja') g = new THREE.BoxGeometry(d[0], d[1], d[2]);
+  if (p.f === 'caja') g = p.redondeo ? new RoundedBoxGeometry(d[0],d[1],d[2],1,Math.min(p.redondeo,Math.min(...d)/2)) : new THREE.BoxGeometry(d[0], d[1], d[2]);
   else if (p.f === 'cil') g = new THREE.CylinderGeometry(d[0], d[1], d[2], p.seg || 12);
   else if (p.f === 'esfera') g = new THREE.SphereGeometry(d[0], 12, 8);
   else if (p.f === 'cono') g = new THREE.ConeGeometry(d[0], d[1], p.seg || 14, 1, false);

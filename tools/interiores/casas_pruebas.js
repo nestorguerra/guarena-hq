@@ -60,7 +60,7 @@ export async function probarCasas(opts = {}) {
       const b=A.P.find(p=>OBJETOS[p.obj].rol==='cama_doble'), m=A.P.find(p=>p.obj==='vb_mesita');
       exigir(b && m && Math.hypot(b.x-m.x,b.z-m.z)<1.35, 'mesita ausente o lejos de la cama');
       const B=amueblar('vivienda_bano',37,{W:5,D:3,H:2.75});
-      const l=B.P.find(p=>p.obj==='va_lavabo'), e=B.P.find(p=>p.obj==='va_espejo');
+      const l=B.P.find(p=>['va_lavabo','va_lavabo_amplio'].includes(p.obj)), e=B.P.find(p=>OBJETOS[p.obj].rol==='espejo');
       exigir(l && e && Math.hypot(l.x-e.x,l.z-e.z)<.4 && Math.abs(l.ry-e.ry)<.01, 'espejo ausente o separado del lavabo');
     });
     await caso('tanda 1: las casas no superponen pantalla heredada y lámpara del kit', () => {
@@ -221,6 +221,10 @@ export async function probarCasas(opts = {}) {
   if(opts.tanda>=6)await caso('los lotes conservan el acabado sereno de los materiales domésticos',()=>{
     const h=H.buildVecino(3244,{x:-9700,z:-9700});
     try{let n=0;h.group.traverse(o=>{if(o.isMesh&&o.material?.defines?.CLAY_RELIEF===.12)n++;});exigir(n>0,'la agrupación ha perdido los parámetros de relieve y contraste del material');}finally{tirar(h);}
+  });
+  if(opts.tanda>=7)await caso('el bisel conserva la envolvente física de una pieza',()=>{
+    const id='prueba_bisel_temporal';OBJETOS[id]={partes:[{f:'caja',d:[1,1,1],p:[0,.5,0],c:'#b99770',m:'madera',redondeo:.04}]};
+    let g;try{g=construir([{obj:id,x:0,y:0,z:0,ry:0}]);g.updateMatrixWorld(true);const b=new THREE.Box3().setFromObject(g);exigir(Math.abs(b.min.x+.5)<1e-6&&Math.abs(b.max.x-.5)<1e-6&&Math.abs(b.min.y)<1e-6&&Math.abs(b.max.y-1)<1e-6,'el bisel altera el volumen que usa la colisión');let n=0;g.traverse(o=>{if(o.isMesh)n+=(o.geometry.index?o.geometry.index.count:o.geometry.attributes.position.count)/3;});exigir(n===108,'el coste geométrico del bisel no coincide con el catálogo');}finally{if(g)tirar({group:g});delete OBJETOS[id];}
   });
   return { pruebas, errores };
 }

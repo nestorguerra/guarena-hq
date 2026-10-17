@@ -32,7 +32,7 @@ def alto(p):
 def triangulos(p):
     # (as src/objetos.js builds them: three.js' boxes, cylinders of `seg` sides, spheres 12 × 8, cones of `seg`)
     f, seg = p['f'], p.get('seg')
-    return {'caja': 12, 'cil': 4 * (seg or 12), 'esfera': 2 * 12 * 8, 'cono': 2 * (seg or 14), 'plano': 2}[f]
+    return {'caja': 108 if p.get('redondeo') else 12, 'cil': 4 * (seg or 12), 'esfera': 2 * 12 * 8, 'cono': 2 * (seg or 14), 'plano': 2}[f]
 
 def albedo(hexc):
     # the part's colour as linear reflectance (the mean of its channels)

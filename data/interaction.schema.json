@@ -141,6 +141,12 @@
      "aparte": {
       "type": "boolean",
       "description": "una malla propia (la pantalla de la tele, que se enciende y se apaga)"
+     },
+     "redondeo": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 0.1,
+      "description": "Radio de bisel para una caja: conserva la envolvente; se limita a la mitad de su dimensión menor."
      }
     }
    }
