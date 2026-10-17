@@ -1,46 +1,7 @@
 {
  "version": 1,
- "resumen": {
-  "interiores": 128,
-  "puertas": 125,
-  "accesibles": 125,
-  "por_estado": {
-   "completo": 100,
-   "basico": 25,
-   "vacio": 3
-  },
-  "por_tipologia": {
-   "alimentacion": {
-    "completo": 9
-   },
-   "bar": {
-    "completo": 15
-   },
-   "cafeteria": {
-    "completo": 2
-   },
-   "gimnasio": {
-    "completo": 1
-   },
-   "oficina": {
-    "vacio": 2
-   },
-   "restaurante": {
-    "basico": 1
-   },
-   "singular": {
-    "completo": 9
-   },
-   "tienda_especializada": {
-    "completo": 64,
-    "basico": 1,
-    "vacio": 1
-   },
-   "vivienda": {
-    "basico": 23
-   }
-  }
- },
+ "puertas": 125,
+ "interiores": 128,
  "errores": [],
  "interiors": [
   {
@@ -1637,14 +1598,66 @@
    "nombre": "Casa de Annie",
    "superficie_m2": 86.4,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "interiors.js / houses.js (a mano)",
+   "constructor": "interiors.js (Annie): 5 por kit, 1 personalizadas, 6 habitables",
+   "constructor_especial": "buildAnnieHouse",
+   "migracion": "cinco estancias por kit y dormitorio personalizado conservado",
+   "estancias_kit": [
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_bano",
+    "vivienda_estudio"
+   ],
+   "estancias_total": 6,
    "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
+    {
+     "sala": "saloncito",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "banoAlto",
+     "tipo": "bano",
+     "planta": 1,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "estudio",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    },
+    {
+     "sala": "dormitorio",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": null,
+     "kit_esperado": null
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": [
+    "dormitorio"
    ]
   },
   {
@@ -1813,19 +1826,64 @@
    "nombre": "Casa de Paco y Mari",
    "superficie_m2": 128.9,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:3244",
@@ -1840,19 +1898,64 @@
    "nombre": "Casa de Marisa la pintora",
    "superficie_m2": 124.9,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_pintura",
+    "vivienda_estudio"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "taller",
+     "planta": 1,
+     "kit": "vivienda_pintura",
+     "kit_esperado": "vivienda_pintura"
+    },
+    {
+     "sala": "A2",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:1594",
@@ -1867,19 +1970,64 @@
    "nombre": "Casa de Sergio",
    "superficie_m2": 101.8,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_joven",
+    "vivienda_estudio",
+    "vivienda_trastero"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dormJoven",
+     "planta": 1,
+     "kit": "vivienda_joven",
+     "kit_esperado": "vivienda_joven"
+    },
+    {
+     "sala": "A1",
+     "tipo": "estudio",
+     "planta": 1,
+     "kit": "vivienda_estudio",
+     "kit_esperado": "vivienda_estudio"
+    },
+    {
+     "sala": "A2",
+     "tipo": "trastero",
+     "planta": 1,
+     "kit": "vivienda_trastero",
+     "kit_esperado": "vivienda_trastero"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:1689",
@@ -1894,19 +2042,72 @@
    "nombre": "Casa del tío Blas",
    "superficie_m2": 157,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_despensa",
+    "vivienda_bano",
+    "vivienda_taller",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "taller",
+     "planta": 0,
+     "kit": "vivienda_taller",
+     "kit_esperado": "vivienda_taller"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2132",
@@ -1921,19 +2122,72 @@
    "nombre": "Casa de Ramón el de las perdices",
    "superficie_m2": 161.1,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:1639",
@@ -1948,19 +2202,48 @@
    "nombre": "Casa de Lucía la del coro",
    "superficie_m2": 109.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 4 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
    ],
-   "estancias_total": 4
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:5157",
@@ -1975,19 +2258,72 @@
    "nombre": "Casa de los Barragán",
    "superficie_m2": 153.9,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:3627",
@@ -2002,19 +2338,56 @@
    "nombre": "Casa de Don Isidro",
    "superficie_m2": 129.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 5 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 5 por kit, 0 personalizadas, 5 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_cocina"
    ],
-   "estancias_total": 5
+   "estancias_total": 5,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R4",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2606",
@@ -2029,19 +2402,72 @@
    "nombre": "Casa de la señá Rosario",
    "superficie_m2": 164.4,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:4007",
@@ -2056,19 +2482,64 @@
    "nombre": "Casa de los Moreno",
    "superficie_m2": 102.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_ninos",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "ninos",
+     "planta": 1,
+     "kit": "vivienda_ninos",
+     "kit_esperado": "vivienda_ninos"
+    },
+    {
+     "sala": "A2",
+     "tipo": "dorm2",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:4204",
@@ -2083,19 +2554,72 @@
    "nombre": "Casa de Ramón el de las perdices",
    "superficie_m2": 156.2,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2268",
@@ -2110,19 +2634,64 @@
    "nombre": "Casa de los Barragán",
    "superficie_m2": 133,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_despensa"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:4216",
@@ -2137,19 +2706,72 @@
    "nombre": "Casa de Doña Petra",
    "superficie_m2": 159.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:4473",
@@ -2164,19 +2786,56 @@
    "nombre": "Casa de Juan el del tractor",
    "superficie_m2": 144.4,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 5 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 5 por kit, 0 personalizadas, 5 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despensa",
+    "vivienda_cocina"
    ],
-   "estancias_total": 5
+   "estancias_total": 5,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R4",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2720",
@@ -2191,19 +2850,48 @@
    "nombre": "Casa de Don Isidro",
    "superficie_m2": 125.1,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 4 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
    ],
-   "estancias_total": 4
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:3981",
@@ -2218,19 +2906,72 @@
    "nombre": "Casa de Doña Petra",
    "superficie_m2": 153.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_comedor",
+    "vivienda_bano",
+    "vivienda_costura",
+    "vivienda_despensa"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "comedor",
+     "planta": 0,
+     "kit": "vivienda_comedor",
+     "kit_esperado": "vivienda_comedor"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "costura",
+     "planta": 0,
+     "kit": "vivienda_costura",
+     "kit_esperado": "vivienda_costura"
+    },
+    {
+     "sala": "R3",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:3429",
@@ -2245,19 +2986,72 @@
    "nombre": "Casa del tío Blas",
    "superficie_m2": 140.4,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 7 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 7 por kit, 0 personalizadas, 7 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_despensa",
+    "vivienda_bano",
+    "vivienda_taller",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 7
+   "estancias_total": 7,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "taller",
+     "planta": 0,
+     "kit": "vivienda_taller",
+     "kit_esperado": "vivienda_taller"
+    },
+    {
+     "sala": "R3",
+     "tipo": "dorm2",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2728",
@@ -2272,19 +3066,48 @@
    "nombre": "Casa de los Barragán",
    "superficie_m2": 131.3,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 4 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 4 por kit, 0 personalizadas, 4 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_cocina"
    ],
-   "estancias_total": 4
+   "estancias_total": 4,
+   "estancias": [
+    {
+     "sala": "R0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "R1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "R2",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R3",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:1679",
@@ -2299,19 +3122,64 @@
    "nombre": "Casa del tío Anselmo",
    "superficie_m2": 146.7,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:5045",
@@ -2326,19 +3194,64 @@
    "nombre": "Casa de los García",
    "superficie_m2": 102.5,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_ninos",
+    "vivienda_dormitorio"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "ninos",
+     "planta": 1,
+     "kit": "vivienda_ninos",
+     "kit_esperado": "vivienda_ninos"
+    },
+    {
+     "sala": "A2",
+     "tipo": "dorm2",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:2162",
@@ -2353,19 +3266,64 @@
    "nombre": "Casa del tío Anselmo",
    "superficie_m2": 133.5,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_dormitorio",
+    "vivienda_cocina",
+    "vivienda_trofeos",
+    "vivienda_bano",
+    "vivienda_despensa"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "L0",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "L1",
+     "tipo": "dorm",
+     "planta": 0,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "L2",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "R0",
+     "tipo": "trofeos",
+     "planta": 0,
+     "kit": "vivienda_trofeos",
+     "kit_esperado": "vivienda_trofeos"
+    },
+    {
+     "sala": "R1",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "R2",
+     "tipo": "despensa",
+     "planta": 0,
+     "kit": "vivienda_despensa",
+     "kit_esperado": "vivienda_despensa"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "vivienda:4685",
@@ -2380,19 +3338,64 @@
    "nombre": "Casa de los Cienfuegos",
    "superficie_m2": 103.9,
    "accesible": true,
-   "estado": "basico",
+   "estado": "completo",
    "kit": null,
-   "constructor": "houses.js: 1 de 6 estancias por kit",
-   "estancias": [
-    "salon",
-    "cocina",
-    "dormitorio",
-    "bano"
-   ],
+   "constructor": "houses.js: 6 por kit, 0 personalizadas, 6 habitables",
    "estancias_kit": [
-    "vivienda_salon"
+    "vivienda_salon",
+    "vivienda_cocina",
+    "vivienda_bano",
+    "vivienda_dormitorio",
+    "vivienda_bano",
+    "vivienda_despacho"
    ],
-   "estancias_total": 6
+   "estancias_total": 6,
+   "estancias": [
+    {
+     "sala": "salon",
+     "tipo": "salon",
+     "planta": 0,
+     "kit": "vivienda_salon",
+     "kit_esperado": "vivienda_salon"
+    },
+    {
+     "sala": "cocina",
+     "tipo": "cocina",
+     "planta": 0,
+     "kit": "vivienda_cocina",
+     "kit_esperado": "vivienda_cocina"
+    },
+    {
+     "sala": "bano",
+     "tipo": "bano",
+     "planta": 0,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A0",
+     "tipo": "dorm",
+     "planta": 1,
+     "kit": "vivienda_dormitorio",
+     "kit_esperado": "vivienda_dormitorio"
+    },
+    {
+     "sala": "A1",
+     "tipo": "bano",
+     "planta": 1,
+     "kit": "vivienda_bano",
+     "kit_esperado": "vivienda_bano"
+    },
+    {
+     "sala": "A2",
+     "tipo": "despacho",
+     "planta": 1,
+     "kit": "vivienda_despacho",
+     "kit_esperado": "vivienda_despacho"
+    }
+   ],
+   "fallos_kit": [],
+   "estancias_personalizadas": []
   },
   {
    "interior_id": "local:141",
@@ -2436,5 +3439,14 @@
    "kit": null,
    "constructor": null
   }
- ]
+ ],
+ "resumen": {
+  "puertas": 125,
+  "interiores": 128,
+  "por_estado": {
+   "completo": 123,
+   "basico": 2,
+   "vacio": 3
+  }
+ }
 }

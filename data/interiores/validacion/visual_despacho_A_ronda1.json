@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_485d1c5c064c4470b6012c63bb295aeb",
+ "request_sha256": "88c6ac18a91fb13d3c825ebbb817fc9799a90f2a243c6f95d4f693ce07ef486e",
+ "fecha": "2026-10-17T14:10:57.824019+00:00",
+ "kit": "despacho",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_despacho.jpg",
+ "ficha_sha256": "1e282cf56a0351e92e054efb50be6cf2bc91d16c6221bc2f0f07f546f9bd9612",
+ "referencias": [
+  {
+   "titulo": "Big Desk Home Office Carrollton New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Big_Desk_Home_Office_Carrollton_New_Orleans.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Big_Desk_Home_Office_Carrollton_New_Orleans.jpg/960px-Big_Desk_Home_Office_Carrollton_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "MapleSt Central BR Desk, Carrollton, New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg",
+   "autor": "Infrogmation",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg/960px-MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.61,
+  "coherencia": 2.66,
+  "iluminacion": 2.86,
+  "variedad": 2.6,
+  "lectura_funcional": 2.07
+ },
+ "media": 2.56,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.61,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.37
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.59
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.64
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.66,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.37
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.52
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.07
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.57
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 1.86,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.16
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.79
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.82
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.6,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.07
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.36
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.48
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.08
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.5
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.07,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.25
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.47
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.25
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.52
+  }
+ ],
+ "uso": {
+  "input_tokens": 4271,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4271
+ }
+}

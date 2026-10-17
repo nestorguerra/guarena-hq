@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_39f2c6111e4e4f6f891936b55a4ae644",
+ "request_sha256": "82e849898b7a442d4cac1c6cb3a5f54af12f868ab1934581a0a21f3a3a047a80",
+ "fecha": "2026-10-17T14:01:57.499942+00:00",
+ "kit": "despensa",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_despensa.jpg",
+ "ficha_sha256": "a1ccbaaddd169a0260210d2b89824e5c43d865e996532b153430207a977bec53",
+ "referencias": [
+  {
+   "titulo": "Built-in pantry.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Built-in_pantry.jpg",
+   "autor": "Downtowngal",
+   "licencia": "CC BY-SA 3.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Built-in_pantry.jpg/960px-Built-in_pantry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Canned Goods In The Hartzler Home In Alpha, Minnesota (6815824604).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Canned_Goods_In_The_Hartzler_Home_In_Alpha%2C_Minnesota_%286815824604%29.jpg",
+   "autor": "Mennonite Church USA Archives",
+   "licencia": "No restrictions",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Canned_Goods_In_The_Hartzler_Home_In_Alpha%2C_Minnesota_%286815824604%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.44,
+  "coherencia": 2.83,
+  "iluminacion": 3.13,
+  "variedad": 2.64,
+  "lectura_funcional": 2.07
+ },
+ "media": 2.622,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.44,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.05
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.48
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.45
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.55
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.83,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.18
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.81
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.84
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.13,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.6
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.24
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.64
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.64,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.37
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.54
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.05
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.58
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.07,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.17
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.62
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.19
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.66
+  }
+ ],
+ "uso": {
+  "input_tokens": 4229,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4229
+ }
+}

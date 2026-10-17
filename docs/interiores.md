@@ -137,11 +137,49 @@ se amuebla como antes, a mano. Referencia: `vivienda_salon` (`tools/interiores/k
   madera.
 - La altura de las casas es menor (2,75 m arriba): nada más alto de 2,4 m.
 
-Comprobación: `validar.py vivienda_<estancia> --semillas 1,…,81` valida el kit en 81 hogares (cada perfil con cada uno de
-sus estilos y su botín) y `validar.py --casas 200` construye 200 casas como las construye el juego y comprueba cada
-habitación amueblada por kit (obligatorios de ese hogar, nada flotando ni metido en otra cosa, el paso desde su puerta).
+Comprobación: `validar.py vivienda_<estancia> --semillas 1,…,81` prueba 81 semillas. El informe identifica el perfil,
+estilo y contexto de dormitorio de cada semilla; no son 81 hogares distintos. `validar.py --casas 200 --exigir-todas`
+construye 200 casas y exige kit en cada habitación habitable. Una habitación que vuelve al constructor anterior o
+falla al montar nunca puede dar un informe de aceptación verde. `--casas-pueblo --exigir-todas` usa las 22 puertas
+reales de vecinos. Annie conserva constructor propio: cinco estancias por kit y un dormitorio personalizado, con validación específica en las pruebas de contrato e integración.
 Para verlas: `python3 tools/interiores/fotos_casa.py <tipo> 3` (tipos de `src/houses.js`: salon, cocina, bano, dorm,
 dorm2, ninos, dormJoven, comedor, estudio, despacho, musica, trofeos, taller, costura, despensa, trastero).
+
+Las viviendas conservan `paso_libre: 0.8`; el acceso predeterminado de un comercio es de 0,9 m. No se agrandan las
+puertas para que quepan muebles. La regla `junto_a` relaciona módulos y acompañantes; `sobre_de` cuelga el espejo en
+la pared del lavabo. `habitacion` distingue `dorm` y `dorm2`; `area_min`/`area_max` reservan variantes amplias para
+salas que las admiten. `preferir` intenta la cantidad máxima sin convertir una pieza opcional en obligatoria.
+
+El montador doméstico conserva acceso a los muebles funcionales y puede probar hasta doce distribuciones
+deterministas si una puerta impide colocar un obligatorio. La semilla definitiva queda en el informe. Los puntos de
+uso y de despertar se sitúan en suelo alcanzable; el botín sin superficie accesible puede quedar junto a ella en el
+suelo, sin duplicarse. Las correcciones de acceso pueden cambiar distribuciones anteriores, pero la misma entrada
+vuelve a producir la misma casa.
+
+Se miden triángulos, mallas visibles, luces y tiempo de construcción de la casa entera. `integracion.py` mide además
+la entrada real, arranque y recarga de partida, con datos ficticios en un contexto privado del navegador de ensayos.
+No escribe partidas de usuarios. La iluminación de la vivienda conserva el color de su estilo y registra la
+intensidad y alcance reales; el índice de cobertura pondera esa intensidad respecto a la lámpara de laboratorio.
+Ese índice no es una medición fotométrica de lux y no sustituye la revisión visual.
+
+`src/casa_lotes.js` agrupa geometría estática y dibujos de canvas de las viviendas para respetar el presupuesto de
+mallas. Cada puerta mantiene su pivote; botín, ventanas y pantallas de televisión conservan sus mallas mutables.
+El atlas y los materiales del lote se liberan al salir de la casa. Annie usa también los lotes estáticos; se conservan sus puertas, TV y luminarias controlables. Los locales conservan sus constructores.
+
+Ensayos de integración:
+
+```bash
+python3 tools/interiores/casas_pruebas.py --tanda 5
+python3 tools/interiores/validar.py --casas 200 --exigir-todas
+python3 tools/interiores/integracion.py --colisiones
+python3 tools/build.py
+python3 tools/interiores/integracion.py --paquete
+python3 tools/interiores/fotos_casa.py taller 3 --kit vivienda_pintura --perfil artista
+python3 tools/interiores/fotos_casa.py dorm 2 --estilo real
+```
+
+Las fichas identifican semilla, perfil, dimensiones y planta. Se puede pasar una lista de tipos separada por comas.
+Las puntuaciones formales se registran con una rúbrica doméstica en `data/interiors_review.json`, conservando las respuestas y los hashes de las fichas. La orden del usuario del 17-10 autoriza publicar esta versión de prueba; no convierte las puntuaciones inferiores al umbral en una aprobación de calidad. Un resultado técnico verde solo acredita el alcance de sus ensayos.
 
 ## Cómo se trabaja
 
@@ -163,3 +201,11 @@ servidor de desarrollo (`python3 tools/devserver.py 8920`). Para mirar el result
 - **Ningún dato personal** de personas reales.
 - Todo lo que lee el jugador, en español.
 - Nada se publica (commit, Pages, artefactos) sin que el usuario lo pida.
+
+## Casa de Annie y acabados (17-10-2026)
+
+`src/casa_annie.js` adapta cinco kits al plano singular de Annie: salón, cocina, dos baños y estudio. El dormitorio mantiene cama, gato, tocador, guirnaldas y caja fuerte, con acabados añadidos. Arquitectura, patio, dos plantas, puertas y claves de guardado se conservan. Las pruebas recorren las dos plantas por sus colliders y ejercitan caja fuerte, siesta y decoración guardada en una partida ficticia privada.
+
+Se corrige la conversión sRGB duplicada del catálogo y la caché de texturas dibujadas incluye su semilla. Las lámparas de trabajo y plafones distinguen funciones; el piano muestra el teclado, las cornamentas tienen ramas y la camilla tiene pliegues. La despensa usa reservas a escala de las baldas. Cocina y cuarto joven reservan zonas de mesa y TV; en cuartos amplios el sofá queda frente a la pantalla. Los baños solo seleccionan artículos de higiene.
+
+Las capturas esperan a terminar el vuelo de introducción y buscan cámaras libres; una ficha de taller excluye el estudio de pintura. El empaquetador incluye `guarena-revision` para verificar qué commit se está sirviendo en Pages.

@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_299d0375e0134281976a761686e99b55",
+ "request_sha256": "d834304c3a4c3ff20e0a2e6e121c9df0a93e11088938e1b9795f3a754f8f737c",
+ "fecha": "2026-10-17T14:11:09.929530+00:00",
+ "kit": "costura",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_costura.jpg",
+ "ficha_sha256": "02eb6fdf263bb10b91ed070adaeb5c4ceb58d3979b2844d331d7f32b64fad25b",
+ "referencias": [
+  {
+   "titulo": "Campbell House Spokane Sewing Room 2018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Campbell_House_Spokane_Sewing_Room_2018.jpg",
+   "autor": "Antony-22",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Campbell_House_Spokane_Sewing_Room_2018.jpg/960px-Campbell_House_Spokane_Sewing_Room_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Looking ESE through sewing room - second floor - Tinsley Living Farm - Museum of the Rockies - 2013-07-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+   "autor": "Tim Evanson",
+   "licencia": "CC BY-SA 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg/960px-Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.66,
+  "coherencia": 2.82,
+  "iluminacion": 3.4,
+  "variedad": 2.99,
+  "lectura_funcional": 2.15
+ },
+ "media": 2.804,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.66,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.34
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.58
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.62
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.82,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.25
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.63
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.67
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.4,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.06
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.49
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.4
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.04
+    }
+   ],
+   "confidence": 0.53
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.99,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.56
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.19
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.61
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.15,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.26
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.39
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.3
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.44
+  }
+ ],
+ "uso": {
+  "input_tokens": 4195,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4195
+ }
+}

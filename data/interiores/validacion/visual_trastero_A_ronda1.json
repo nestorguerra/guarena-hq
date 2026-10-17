@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_54c33ce3947c4646922fb89e3462d6b8",
+ "request_sha256": "864b992cceeff31d82f472f7c58dfafc080da6ab2c5631b8fbc2c5d733041b16",
+ "fecha": "2026-10-17T14:11:01.815616+00:00",
+ "kit": "trastero",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_trastero.jpg",
+ "ficha_sha256": "48a9af516de69f1eb64e846bf2b8e3999773ac40d839b24a72c927b70b4f7cc2",
+ "referencias": [
+  {
+   "titulo": "Casa de Estudillo interior 04 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_04_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Casa_de_Estudillo_interior_04_-_storage_room.jpg/960px-Casa_de_Estudillo_interior_04_-_storage_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Casa de Estudillo interior 05 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_05_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Casa_de_Estudillo_interior_05_-_storage_room.jpg/960px-Casa_de_Estudillo_interior_05_-_storage_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.55,
+  "coherencia": 2.61,
+  "iluminacion": 2.98,
+  "variedad": 2.43,
+  "lectura_funcional": 2.08
+ },
+ "media": 2.53,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.55,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.41
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.54
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.59
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.61,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.41
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.55
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.61
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 1.98,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.74
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.11
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.43,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.12
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.41
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.4
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.44
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.08,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.27
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.45
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.23
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.48
+  }
+ ],
+ "uso": {
+  "input_tokens": 4090,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4090
+ }
+}

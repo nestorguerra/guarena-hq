@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_e47f27ef1345495dba0284dbc7dd7d43",
+ "request_sha256": "f26d605d8ffff2fdeee38c97f61bb885224394234b2a145657908a216229616a",
+ "fecha": "2026-10-17T14:11:05.674004+00:00",
+ "kit": "taller",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_taller.jpg",
+ "ficha_sha256": "f2e6eff452db36af486d7c1df6f00ecba6ddbe04d79be6a2d10ce01d60963072",
+ "referencias": [
+  {
+   "titulo": "Turning over the tools. (27616250774).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Turning_over_the_tools._%2827616250774%29.jpg",
+   "autor": "Ed Schipul from Houston, TX, US",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Turning_over_the_tools._%2827616250774%29.jpg/960px-Turning_over_the_tools._%2827616250774%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Eric Archer making a MeeBlip 7 - Dr. Bleep's garage workshop - MeeBlip build session, Austin, TX, 2010-10-17.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Eric_Archer_making_a_MeeBlip_7_-_Dr._Bleep%27s_garage_workshop_-_MeeBlip_build_session%2C_Austin%2C_TX%2C_2010-10-17.jpg",
+   "autor": "Create Digital Media",
+   "licencia": "CC BY-SA 2.0",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Eric_Archer_making_a_MeeBlip_7_-_Dr._Bleep%27s_garage_workshop_-_MeeBlip_build_session%2C_Austin%2C_TX%2C_2010-10-17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.42,
+  "coherencia": 2.65,
+  "iluminacion": 2.91,
+  "variedad": 2.71,
+  "lectura_funcional": 2.11
+ },
+ "media": 2.56,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.42,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.09
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.45
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.42
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.5
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.65,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.35
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.57
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.61
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 1.91,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.24
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.55
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.15
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.03
+    }
+   ],
+   "confidence": 0.57
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.71,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.31
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.59
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.63
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.11,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.23
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.49
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.24
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.52
+  }
+ ],
+ "uso": {
+  "input_tokens": 4294,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4294
+ }
+}

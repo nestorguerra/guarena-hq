@@ -1037,3 +1037,13 @@ Los arreglos del revisor, por su orden:
     falta la luz de sus velas o un foco);
   - la policromía (estofado y encarnaciones), la corona de espinas del Cristo y la cara del Niño, que es de adulto.
 
+
+## 2026-10-17 · Viviendas, acabados y casa de Annie
+
+- El usuario pidió reforzar validación y completar las habitaciones por tandas; después autorizó terminar revisión visual, corregir acabados, actualizar Annie, hacer commits/push y desplegar.
+- Se incorporan 15 kits nuevos y se preservan funciones y perfiles de las 22 casas de vecinos. Annie conserva su plano singular y dormitorio, con cinco habitaciones comunes por kit.
+- Se corrigen materiales demasiado oscuros por una segunda conversión sRGB, caché de dibujos sin semilla, mobiliario de cocinas grandes y cuarto joven, reservas de despensa, luminarias, piano, cornamentas y telas. El kit doméstico conserva paso de 0,8 m y los límites originales de rendimiento.
+- La revisión independiente detectó un error del inventario de Annie y pérdida de control de sus lámparas al agrupar; se corrigieron. Las capturas esperan el fin del vuelo inicial y distinguen taller de pintura.
+- Las evaluaciones de Decision API se conservan, incluidas las rondas desfavorables. No equivalen a verificación funcional ni aprobación del usuario. La publicación solicitada es una versión de prueba; no se afirma superado el objetivo formal de 4/5.
+- Evidencia reproducible: `tools/interiores/casas_pruebas.py --tanda 5`, `validar.py --casas 200 --exigir-todas`, `integracion.py --colisiones` y `integracion.py --paquete`; informes en `data/interiores/validacion/` y fichas en `data/interiores/fichas/`.
+- Se conservan las claves de guardado HQ, Evolución y fija. Las pruebas de partida, caja fuerte, siesta y decoración usan datos ficticios en contexto privado; no se modifican partidas reales del usuario.

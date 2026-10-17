@@ -1,0 +1,289 @@
+{
+ "fecha": "2026-10-17",
+ "kits": [
+  {
+   "kit": "vivienda_bano",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_cocina",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_comedor",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_costura",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_despacho",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_despensa",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_dormitorio",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_estudio",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_joven",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_musica",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_ninos",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_pintura",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_salon",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_taller",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_trastero",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  },
+  {
+   "kit": "vivienda_trofeos",
+   "semillas": 81,
+   "errores": 0,
+   "avisos": 0
+  }
+ ],
+ "contratos": {
+  "pruebas": 20,
+  "errores": 0
+ },
+ "catalogo": {
+  "objetos": 1791,
+  "kits": 40,
+  "errores": 0,
+  "avisos": 0
+ },
+ "casas_sinteticas": 200,
+ "habitaciones_sinteticas": 1166,
+ "errores_casas": 0,
+ "maximos_sinteticas": {
+  "triangulos": 41886,
+  "mallas": 59,
+  "luces": 9,
+  "montaje_ms": 143.5
+ },
+ "casas_pueblo": 22,
+ "habitaciones_pueblo": 132,
+ "inventario": {
+  "puertas": 125,
+  "interiores": 128,
+  "por_estado": {
+   "completo": 123,
+   "basico": 2,
+   "vacio": 3
+  }
+ },
+ "Annie": {
+  "kits": 5,
+  "dormitorio_personalizado": true,
+  "acciones": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "caja_fuerte_y_siesta": true
+ },
+ "paquete": {
+  "errores": 0,
+  "maximo_entrada_ms": 186.6,
+  "annie_entrada_ms": 65.8,
+  "comercios": [
+   {
+    "tipo": "bar",
+    "acciones": 1
+   },
+   {
+    "tipo": "cafeteria",
+    "acciones": 1
+   },
+   {
+    "tipo": "farmacia",
+    "acciones": 1
+   }
+  ],
+  "partida_ficticia_conservada": true
+ },
+ "colisiones_acotadas": {
+  "planos": 3,
+  "recorridos": 64,
+  "recorridos_annie": 32,
+  "tuneles": 0,
+  "escapes": 0
+ },
+ "regeneracion": {
+  "archivos": 21,
+  "cambios": [],
+  "sha256": {
+   "data/interiores/datos.json": "09a3908964dd9b1c994aaf67e01d40f6f450c072669c5341531ab3afaea3403f",
+   "data/kits/vivienda_bano.json": "66161b174ab8abd98c50244aa69520a94c93f5f27b3300d50cc89719d6386812",
+   "data/kits/vivienda_cocina.json": "d10a68ad57aa7133d5d60cef4f7644b6cbf049efc948bc1891635a9f928748ce",
+   "data/kits/vivienda_comedor.json": "a8a4a9b075c14998da81e8b183c3154e6f1e01eb96126fb60bda20cab0e2bc30",
+   "data/kits/vivienda_costura.json": "8a95a3764aff49895f8cb4dc6a6e91877720f80f5138eeca0296b39f60484cf9",
+   "data/kits/vivienda_despacho.json": "3f03b291e56b0c0b7d7044af001fee8137485283314126f90347f2028f2b1caa",
+   "data/kits/vivienda_despensa.json": "d77caa3dcc3a7292ab9a55c7115759865b00adbaa7f4d49b973cf1772018dfc1",
+   "data/kits/vivienda_dormitorio.json": "61283e05cbc9ed4b07e3b002dee27f5f3284b4aa84becfd96d93bfec9c0f6fcc",
+   "data/kits/vivienda_estudio.json": "758fc3ae8bc7e1491f86d98538f079e25542fa98dc5863970da624003b56a049",
+   "data/kits/vivienda_joven.json": "38ed95390462eb204b2564413a612eb565a9e71016b3bffaad3faf4f99e98d53",
+   "data/kits/vivienda_musica.json": "4aaa56923537a718fe84c912f619ca65bf172a4c2015754fd89e50610c5b521b",
+   "data/kits/vivienda_ninos.json": "f3d60d17166d6f2873870553fa3177961534c0bfbbfa45a77bf7926c14c948da",
+   "data/kits/vivienda_pintura.json": "902f5a6a5f758fca0c0a41d543a311ae7b1e94a7a5ad2c33cf33b37d0786a583",
+   "data/kits/vivienda_salon.json": "39fa736a80bd561e82df6a8a536782d5d86e7236053c2e8d78487f3e5e9ea9f2",
+   "data/kits/vivienda_taller.json": "c312658220dd969d5552eebe159bdf483f499af1e00d9e9d669289ab6aee9553",
+   "data/kits/vivienda_trastero.json": "ab07684211c511b85afd8856d32f052e2e060a9d1ade38b428693346783d4ff1",
+   "data/kits/vivienda_trofeos.json": "e6e18eefd473c35326ece26cb0dd5f69927fa8d4c7bca34c6aef4e8b0580e9a3",
+   "data/objetos/vivienda.json": "b0f228623fa616b4d33afdfb07d4cf0eb18f7651688cdeb220a2f91be4053d12",
+   "data/objetos/vivienda_a.json": "ee2b02db285eba738db10ffbac0d5fd55b1e23634f0fee9fadc0b6fca62db292",
+   "data/objetos/vivienda_b.json": "cd20cbd02f0af6018e943063c8a1bc2281062280d99ae29e54575f319c60cfee",
+   "src/interiores_datos.js": "b4750112e8f69a682c943e23a06435afe926b02f4872c3bce272af0c6bef25d4"
+  }
+ },
+ "revision_visual": {
+  "fecha": "2026-10-17",
+  "estado": "revision_completada_objetivo_formal_no_superado",
+  "evaluaciones": 34,
+  "fichas": 17,
+  "aprobadas": 0,
+  "medias": {
+   "minimo": 2.658,
+   "maximo": 3.246
+  },
+  "hashes_fichas_validos": true,
+  "evaluaciones_por_kit": {
+   "annie": {
+    "A": 2.99,
+    "B": 2.998
+   },
+   "bano": {
+    "A": 2.692,
+    "B": 2.714
+   },
+   "cocina": {
+    "A": 2.948,
+    "B": 2.87
+   },
+   "comedor": {
+    "A": 3.15,
+    "B": 3.008
+   },
+   "costura": {
+    "A": 2.862,
+    "B": 2.96
+   },
+   "despacho": {
+    "A": 2.93,
+    "B": 2.802
+   },
+   "despensa": {
+    "A": 2.996,
+    "B": 2.902
+   },
+   "dormitorio": {
+    "A": 3.006,
+    "B": 2.974
+   },
+   "estudio": {
+    "A": 3.044,
+    "B": 2.98
+   },
+   "joven": {
+    "A": 3.244,
+    "B": 3.158
+   },
+   "musica": {
+    "A": 3.236,
+    "B": 3.09
+   },
+   "ninos": {
+    "A": 3.004,
+    "B": 2.906
+   },
+   "pintura": {
+    "A": 3.246,
+    "B": 3.18
+   },
+   "salon": {
+    "A": 3.03,
+    "B": 3.028
+   },
+   "taller": {
+    "A": 2.658,
+    "B": 2.688
+   },
+   "trastero": {
+    "A": 2.812,
+    "B": 2.838
+   },
+   "trofeos": {
+    "A": 2.992,
+    "B": 2.994
+   }
+  },
+  "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad."
+ },
+ "publicacion": {
+  "destino": "GitHub Pages: nestorguerra/guarena-hq main",
+  "tipo": "versión de prueba autorizada",
+  "estado_al_generar": "previo a commit y despliegue; consultar Actions y guarena-revision en la página servida"
+ }
+}

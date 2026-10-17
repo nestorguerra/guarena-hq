@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_0da15aa110104b269dbfb6fb4538494b",
+ "request_sha256": "8d697987c51831fe4fb117f6abbea661c66691a4ea8c58dcbebad26a2fceff27",
+ "fecha": "2026-10-17T14:11:17.865824+00:00",
+ "kit": "pintura",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_pintura.jpg",
+ "ficha_sha256": "ff61c0aed9546a8ada1f01d37abc642e165b2539c9db8f6437d8e14d608927bf",
+ "referencias": [
+  {
+   "titulo": "Interior of Camille Pissarro s studio at Éragny-sur-Epte - 2026.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg",
+   "autor": "AlexDS05",
+   "licencia": "CC0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg/960px-Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Peter Wegner Studio Interior 2019.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peter_Wegner_Studio_Interior_2019.jpg",
+   "autor": "Smallworldsocial",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Peter_Wegner_Studio_Interior_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.74,
+  "coherencia": 2.95,
+  "iluminacion": 3.36,
+  "variedad": 2.94,
+  "lectura_funcional": 2.03
+ },
+ "media": 2.804,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.74,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.26
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.71
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.75
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.95,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.19
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.63
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.14
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.66
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.36,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.1
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.48
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.34
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.07
+    }
+   ],
+   "confidence": 0.5
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.94,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.58
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.16
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.62
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.03,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.27
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.47
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.23
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.52
+  }
+ ],
+ "uso": {
+  "input_tokens": 4300,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4300
+ }
+}
