@@ -27,6 +27,11 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Adaptación de calidad y límites del navegador
+        run: node tools/perf/tests/rendimiento.mjs
       - name: Empaquetar el juego
         run: python3 tools/build.py
       - name: Marcas y marcadores en la copia publicable (R-07, V-02)

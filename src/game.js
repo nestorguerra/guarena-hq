@@ -6,6 +6,8 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { scenePass } from './post_scene.js';
+import { machineHints, initialProfile, automaticQuality, pixelBudget, QualityController } from './rendimiento.js';
 import { PLASTILINA, ClayLens, ClayGrade, STUDIO_AO } from './plastilina.js';
 import { prepararLuzVivienda, prepararOclusionVivienda } from './luz_vivienda.js';
 import { STYLE } from './style.js';
@@ -90,10 +92,17 @@ export class Game {
   async init(progress) {
     const q = this.q;
     const r = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: !q.bloom, powerPreference: 'high-performance', stencil: false });
+    this.autoQuality = automaticQuality(this.save);
+    this.machine = machineHints(navigator, r.getContext(), matchMedia('(pointer: coarse)').matches);
+    this.machineProfile = initialProfile(this.machine);
+    if (this.autoQuality) {
+      this.qKey = this.machineProfile.quality;
+      Object.assign(q, QUALITY[this.qKey]);
+    }
     // (the claymation drew at the screen's own resolution on high quality — 2× on a laptop's retina screen: the GPU
     // took 50 ms a frame there, 16 fps. At 1.5× the clay's thumbprints still read, the lens softens the background
     // anyway, and there are 44 % fewer pixels to shade; the dynamic resolution backs off from there if the GPU is short)
-    r.setPixelRatio(Math.min(devicePixelRatio || 1, q.pr));
+    r.setPixelRatio(this.autoQuality ? pixelBudget(innerWidth, innerHeight, devicePixelRatio, this.machineProfile) : Math.min(devicePixelRatio || 1, q.pr));
     r.setSize(innerWidth, innerHeight, false);
     r.outputColorSpace = THREE.SRGBColorSpace;
     r.toneMapping = THREE.ACESFilmicToneMapping;
@@ -196,17 +205,11 @@ export class Game {
     // post-processing. The claymation: the scene, its contact shadows (ambient occlusion where things meet), the film's
     // grade, a soft lens, a little bloom; the photographic town: the scene and its bloom
     if (STYLE.plastilina) {
-      const rt = new THREE.WebGLRenderTarget(innerWidth, innerHeight, { type: THREE.HalfFloatType, samples: this.qKey === 'baja' ? 0 : 4, depthTexture: new THREE.DepthTexture(innerWidth, innerHeight) });
+      const rt = new THREE.WebGLRenderTarget(innerWidth, innerHeight, { type: THREE.HalfFloatType, depthBuffer: false });
       this.composer = new EffectComposer(r, rt);
-      // (the scene pass draws into whichever of the composer's two buffers is free; its depth is kept for the AO and, in
-      // the claymation, the lens. The full-screen passes after it draw into the same buffers and clear them: their
-      // depth must not be resolved over the scene's — with MSAA the texture is only written when a pass ends)
-      const rp = new RenderPass(this.scene, this.camera), rpRender = rp.render.bind(rp);
-      rp.render = (renderer, wb, rb, dt, mask) => {
-        rb.resolveDepthBuffer = true; this.sceneDepth = rb.depthTexture;
-        rpRender(renderer, wb, rb, dt, mask);
-        rb.resolveDepthBuffer = wb.resolveDepthBuffer = false;
-      };
+      // The scene keeps 4x MSAA and its own depth. Grade/lens/bloom ping-pong in colour-only targets.
+      const rp = scenePass(this.scene, this.camera, { samples: this.qKey === 'baja' ? 0 : 4 });
+      this.sceneDepth = rp.target.depthTexture;
       this.composer.addPass(rp);
       if (this.qKey !== 'baja') {
         // the AO reads the depth the scene pass has just drawn (normals from that depth): no second drawing of the whole
@@ -215,12 +218,13 @@ export class Game {
         // of the frame), a soft contact shadow that does not need more, and laid on the picture by the grade below —
         // not copied over the whole picture and then blended onto it again, two full-screen passes less
         this.gtao = new GTAOPass(this.scene, this.camera, innerWidth, innerHeight);
-        this.gtao.setGBuffer(rt.depthTexture); // (after construction: r170's constructor trips over a given depth texture)
+        this.gtao.setGBuffer(this.sceneDepth); // (after construction: r170's constructor trips over a given depth texture)
         this.gtao.updateGtaoMaterial(STUDIO_AO.ao); this.gtao.updatePdMaterial(STUDIO_AO.denoise);
         this.gtao.blendIntensity = STUDIO_AO.blend;
         this.gtao.output = GTAOPass.OUTPUT.Off; this.gtao.needsSwap = false;
         const gtaoSize = this.gtao.setSize.bind(this.gtao);
-        this.gtao.setSize = (w, h) => gtaoSize(Math.max(1, Math.ceil(w / 2)), Math.max(1, Math.ceil(h / 2)));
+        this.aoScale = 0.5;
+        this.gtao.setSize = (w, h) => gtaoSize(Math.max(1, Math.ceil(w * this.aoScale)), Math.max(1, Math.ceil(h * this.aoScale)));
         const gtaoRender = this.gtao.render.bind(this.gtao);
         this.gtao.render = (renderer, wb, rb, dt, mask) => { // (the composer's two buffers take turns: the one just drawn)
           this.gtao.gtaoMaterial.uniforms.tDepth.value = this.sceneDepth; this.gtao.pdMaterial.uniforms.tDepth.value = this.sceneDepth;
@@ -229,10 +233,11 @@ export class Game {
         this.composer.addPass(this.gtao);
       }
       this.grade = new ShaderPass(ClayGrade);
+      rp.canReadDirectly = () => this.grade.enabled && (!this.gtao?.enabled || this.gtao.output === GTAOPass.OUTPUT.Off);
       if (this.gtao) { this.grade.uniforms.tAO.value = this.gtao.gtaoMap; this.grade.uniforms.uAO.value = STUDIO_AO.blend; }
       this.grade.material.depthTest = this.grade.material.depthWrite = false; // (full-screen passes never touch depth)
       { const gradeRender = this.grade.render.bind(this.grade), U = this.grade.uniforms; // (the scene's depth, for the AO's fade far off)
-        this.grade.render = (renderer, wb, rb, dt, mask) => { U.tDepth.value = this.sceneDepth; U.uNear.value = this.camera.near; U.uFar.value = this.camera.far; gradeRender(renderer, wb, rb, dt, mask); }; }
+        this.grade.render = (renderer, wb, rb, dt, mask) => { U.tDepth.value = this.sceneDepth; U.uNear.value = this.camera.near; U.uFar.value = this.camera.far; gradeRender(renderer, wb, rp.enabled && rp.directOutput ? rp.target : rb, dt, mask); }; }
       this.composer.addPass(this.grade);
       { // (pure clay colours, the studio's fill in the shadows, a touch of lens)
         const G = PLASTILINA.grade, U = this.grade.uniforms;
@@ -262,6 +267,7 @@ export class Game {
       this.composer.setPixelRatio(r.getPixelRatio());
     }
     addEventListener('resize', () => this.resize());
+    addEventListener('visibilitychange', () => this.perfGrace(3));
     this.resize();
     // warm up shaders
     progress('Encendiendo el motor…', 0.97);
@@ -307,10 +313,22 @@ export class Game {
 
   resize() {
     const w = innerWidth, h = innerHeight;
+    if (this.autoQuality) {
+      const base = pixelBudget(w, h, devicePixelRatio, this.machineProfile);
+      const ceiling = pixelBudget(w, h, devicePixelRatio, { ...this.machineProfile, maxDpr: this.machineProfile.exploreDpr });
+      if (this.perf && (Math.abs(base - this.perf.base) > 0.001 || Math.abs(ceiling - this.perf.ceiling) > 0.001)) {
+        const state = this.perf.resize(base, ceiling);
+        if (this.save.dynRes === false) state.pr = this.perf.pr = base;
+        this.applyPerformance(state);
+      } else if (!this.perf && Math.abs(base - this.renderer.getPixelRatio()) > 0.001) {
+        this.renderer.setPixelRatio(base);
+        if (this.composer) this.composer.setPixelRatio(base);
+      }
+    }
     this.renderer.setSize(w, h, false);
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
-    if (this.composer) { this.composer.setSize(w, h); if (this.bloom) this.bloom.setSize(w, h); } // (the claymation's composer may have no bloom)
+    if (this.composer) this.composer.setSize(w, h); // composer passes receive the physical pixel size once
     const radar = this.ui.radar;
     const size = Math.round(w < 520 ? Math.min(128, w * 0.34) : h <= 500 ? Math.min(112, h * 0.3) : Math.min(230, Math.max(150, Math.min(w, h) * 0.24)));
     const dpr = Math.min(2, devicePixelRatio || 1);
@@ -318,7 +336,8 @@ export class Game {
     radar.style.width = radar.style.height = size + 'px';
   }
   setQuality(key) {
-    this.save.quality = key;
+    this.save.qualityMode = key === 'auto' ? 'auto' : 'manual';
+    if (key !== 'auto' && QUALITY[key]) this.save.quality = key;
     this.persist();
   }
 
@@ -569,7 +588,7 @@ export class Game {
   }
 
   // ------------------------------------------------------------ main loop
-  frame(dtReal) {
+  frame(dtReal, dtObserved = dtReal) {
     const tWork = performance.now(); // (how long this frame's own work takes: see adaptResolution)
     const input = this.input;
     input.poll();
@@ -620,7 +639,7 @@ export class Game {
       input.endFrame();
       return;
     } else if (this.state === 'intro') this.introStep(dt);
-    if (this.state === 'play' && dtReal > 0 && dtReal < 0.1) this.adaptResolution(dtReal);
+    if (this.state === 'play') this.adaptResolution(dtObserved);
     if (playing) {
       // time of day
       const nh = this.sky.hour + dt / (this.mode === 'zombis' ? 600 : 90); // the zombie dusk lasts
@@ -732,41 +751,36 @@ export class Game {
     if (withCam) this.cam.update(dt, this.input);
   }
 
-  // dynamic resolution, gently: only a sustained slowdown (not a hiccup while the town streams in) lowers the internal
-  // resolution, by small steps and never below ~60 % of the chosen one; it comes back as soon as there is room.
-  // Ajustes › Resolución «Fija» turns it off. (It used to drop to 0.55 at the first stutter and stay there: the
-  // «the graphics get worse out of nowhere» of the testers.)
+  // Runtime measurements complement the initial hardware hints. No networking or stored device fingerprint.
   adaptResolution(dtReal) {
     const r = this.renderer;
-    const pf = this.perf || (this.perf = { avg: 1 / 60, t: 0, pr: r.getPixelRatio(), base: r.getPixelRatio(), lock: 0, slow: 0, fast: 0, grace: 8 });
-    if (this.save.dynRes === false) { if (pf.pr !== pf.base) { pf.pr = pf.base; r.setPixelRatio(pf.base); if (this.composer) this.composer.setPixelRatio(pf.base); this.resize(); } return; }
-    pf.grace -= dtReal;
-    if (pf.grace > 0) return; // the first seconds after starting / entering somewhere: everything is loading
-    pf.avg = pf.avg * 0.97 + dtReal * 0.03;
-    pf.work = (pf.work ?? dtReal) * 0.97 + Math.min(0.1, (this.workMs || 0) / 1000) * 0.03;
-    pf.t += dtReal;
-    pf.lock -= dtReal;
-    if (pf.t < 1) return;
-    pf.t = 0;
-    // (fluid first: under ~50 fps for two seconds running, a little less resolution; back up once the frames are
-    // coming at ~60 again for three. Fewer pixels only help a GPU that is short: a frame whose own work — the game's
-    // code and the drawing's calls — takes up most of it is short of CPU, and dropping the resolution would only blur
-    // the picture for nothing: then it stays, or goes back up. In between, it holds)
-    const busy = pf.work / pf.avg;
-    pf.slow = pf.avg > 1 / 50 && busy < 0.65 ? pf.slow + 1 : 0;   // under ~50 fps, the GPU short
-    pf.fast = pf.avg < 1 / 57 || busy > 0.8 ? pf.fast + 1 : 0;    // at ~60 fps (or the CPU the one short)
-    const floor = Math.max(0.75, pf.base * 0.6);
-    let pr = pf.pr;
-    if (pf.slow >= 2 && pr > floor) { pr = Math.max(floor, pr - 0.1); pf.lock = 4; pf.slow = 0; }       // 2 s in a row
-    else if (pf.fast >= 3 && pr < pf.base && pf.lock <= 0) { pr = Math.min(pf.base, pr + 0.05); pf.fast = 0; }
-    if (Math.abs(pr - pf.pr) < 0.01) return;
-    pf.pr = pr;
-    r.setPixelRatio(pr);
-    if (this.composer) this.composer.setPixelRatio(pr);
-    this.resize();
+    // Moving a window between monitors can change DPR without changing its CSS dimensions.
+    if (this.displayDpr !== (devicePixelRatio || 1)) { this.displayDpr = devicePixelRatio || 1; this.resize(); }
+    const ceiling = this.autoQuality ? pixelBudget(innerWidth, innerHeight, devicePixelRatio, { ...this.machineProfile, maxDpr: this.machineProfile.exploreDpr }) : r.getPixelRatio();
+    const pf = this.perf || (this.perf = new QualityController(r.getPixelRatio(), { effects: this.autoQuality, ceiling }));
+    if (this.save.dynRes === false) {
+      pf.probe = null;
+      if (pf.pr !== pf.base || pf.level !== 0) {
+        pf.pr = pf.base; pf.level = 0; this.applyPerformance(pf);
+      }
+      pf.suspend(); return;
+    }
+    const next = pf.observe(dtReal, this.workMs || 0, !document.hidden && !this.cam?.cinematic);
+    if (next) this.applyPerformance(next);
+  }
+  applyPerformance({ pr, level }) {
+    const r = this.renderer;
+    if (this.lens) for (const pass of this.lens) pass.enabled = level < 1;
+    if (this.bloom) this.bloom.enabled = level < 1;
+    const aoScale = level < 2 ? 0.5 : 0.35, aoChanged = aoScale !== this.aoScale;
+    this.aoScale = aoScale;
+    if (Math.abs(r.getPixelRatio() - pr) > 0.001) {
+      r.setPixelRatio(pr);
+      if (this.composer) this.composer.setPixelRatio(pr);
+    } else if (aoChanged && this.composer) this.composer.setSize(innerWidth, innerHeight);
   }
   // a pause before judging the frame rate again (after a teleport, a respawn, a house…)
-  perfGrace(s = 6) { if (this.perf) { this.perf.grace = Math.max(this.perf.grace || 0, s); this.perf.slow = 0; } }
+  perfGrace(s = 6) { const restored = this.perf?.suspend(s); if (restored) this.applyPerformance(restored); }
 
   updateAudio(dt) {
     const a = this.audio;

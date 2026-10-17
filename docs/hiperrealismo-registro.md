@@ -1062,3 +1062,10 @@ Tanda 4: sombras y mezcla continua de luces domésticas. El candidato inicial pr
 Tanda 5: cocina y costura, alimentos unitarios también en comedor/despensa, puesto con silla frontal validado conjuntamente y sombra de contacto a escala doméstica. Revisión independiente de código y visual sin los defectos concretos detectados abiertos. Se conservan candidatos e incidencias; cocina 2,988/3,016 y costura 3,422/3,610 aún no alcanzan 4. Pasan 30contratos, 200 casas/1166 habitaciones y 81 semillas de los cinco kits afectados. Fuente/paquete/marcas en verde. Evidencia detallada en docs/calidad-viviendas-4-2026-10-17.md.
 
 Tanda6: trastero con pertenencias reconocibles y contraste. Las tres uniones geométricas observadas por el revisor se corrigen. Semillas y evaluación conservadas:2,966/2,858, objetivo pendiente.30contratos,200casas/1166habitaciones,81semillas, fuente/paquete/marcas y regeneración en verde. Detalles y alcance de cámara en docs/calidad-viviendas-4-2026-10-17.md.
+
+
+## 2026-10-17 · Candidata de rendimiento y adaptación silenciosa
+
+Se conserva MSAA en la escena y se elimina de los destinos intermedios de pantalla. El modo automático elige perfil y presupuesto de píxeles mediante capacidades aproximadas del navegador; mide fotogramas para ajustar resolución y efectos con pausa e histéresis. Las elecciones manuales se conservan. La iglesia detallada se descarga bajo demanda en Pages; sigue integrada en portátil y multijugador.
+
+Las mejoras observadas y sus límites se registran en docs/beta-rendimiento-2026-10-17.md: no se considera alcanzado el objetivo global25%,4/5 visual ni beta final. Se mantienen pruebas funcionales, revisión independiente y comprobación pública por tanda.
