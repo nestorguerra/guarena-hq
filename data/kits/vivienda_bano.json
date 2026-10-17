@@ -1,0 +1,315 @@
+{
+ "tipologia": "bano",
+ "nombre": "Baño doméstico",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   1.9,
+   3.6
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_lavabo",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_espejo",
+   "pared": "*",
+   "sobre_de": "va_lavabo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_inodoro",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_ducha",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_toallero",
+   "pared": "*",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "va_papel",
+   "pared": "*",
+   "sobre_de": "va_inodoro",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_armario_bano",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_banera",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 10
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cesto_ropa",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "per_perfume_azahar",
+    "per_perfume_jazmin",
+    "per_perfume_rosa_mayo",
+    "per_perfume_lavanda",
+    "per_perfume_sandalo",
+    "per_perfume_ambar",
+    "per_perfume_citrus",
+    "per_perfume_brisa_marina",
+    "per_perfume_vainilla",
+    "per_perfume_noche_verano",
+    "per_perfume_madera_noble",
+    "per_perfume_almendro",
+    "per_perfume_higuera",
+    "per_perfume_romero",
+    "per_perfume_pino",
+    "per_perfume_caramelo",
+    "per_perfume_violeta",
+    "per_perfume_cuero",
+    "per_perfume_ninos",
+    "per_perfume_oud",
+    "per_cosm_pintalabios_rojos",
+    "per_cosm_pintalabios_nude",
+    "per_cosm_esmaltes_rojos",
+    "per_cosm_esmaltes_pastel",
+    "per_cosm_mascara_pestanas",
+    "per_cosm_base_maquillaje",
+    "per_cosm_polvos_compactos",
+    "per_cosm_paleta_sombras",
+    "per_cosm_brochas",
+    "per_cosm_crema_facial",
+    "per_cosm_serum",
+    "per_cosm_crema_manos",
+    "per_cosm_leche_corporal",
+    "per_cosm_gel_ducha",
+    "per_cosm_jabones",
+    "per_cosm_sales_bano",
+    "per_cosm_protector_solar",
+    "per_cosm_desmaquillante",
+    "per_cosm_agua_perfumada",
+    "va_cepillero",
+    "va_dentifrico",
+    "va_jabonera",
+    "va_pastilla_jabon",
+    "va_peine",
+    "va_maquinilla",
+    "va_afeitado",
+    "va_esponja",
+    "va_algodon",
+    "va_bastoncillos",
+    "va_toalla",
+    "va_toalla_manos",
+    "va_secador",
+    "va_cortaunas",
+    "va_panuelos",
+    "va_colonia",
+    "va_desodorante",
+    "va_crema",
+    "va_locion",
+    "va_sales",
+    "va_hilo_dental",
+    "va_cepillo_pelo",
+    "va_gorro",
+    "va_cosmeticos",
+    "va_gel",
+    "va_champu",
+    "prod_papel_higienico",
+    "prod_gel_ducha",
+    "prod_champu_super",
+    "prod_dentifrico",
+    "prod_compresas",
+    "prod_esponjas"
+   ],
+   "en": [
+    "va_lavabo",
+    "va_armario_bano"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_plafon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Bathroom, Interior of apartment in Brisbane, 2025, 07.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_07.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bathroom, Interior of apartment in Brisbane, 2025, 08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bathroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_08.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2022-05-22 13 29 43 Panoramic view of the first floor bathroom in a house along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2022-05-22_13_29_43_Panoramic_view_of_the_first_floor_bathroom_in_a_house_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+   "autor": "Famartin",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2022-05-22 13 30 09 Panoramic view of the first floor bathroom in a house along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2022-05-22_13_30_09_Panoramic_view_of_the_first_floor_bathroom_in_a_house_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+   "autor": "Famartin",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2022-05-22 13 36 23 Panoramic view of the second floor bathroom in a house along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2022-05-22_13_36_23_Panoramic_view_of_the_second_floor_bathroom_in_a_house_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+   "autor": "Famartin",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2022-05-22 13 36 36 Panoramic view of the second floor bathroom in a house along Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2022-05-22_13_36_36_Panoramic_view_of_the_second_floor_bathroom_in_a_house_along_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+   "autor": "Famartin",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "House inside - 48505575106.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:House_inside_-_48505575106.jpg",
+   "autor": "Mount Rainier NPS",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Toilet and Bathroom.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Toilet_and_Bathroom.jpg",
+   "autor": "Gaurav Dhwaj Khadka",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bathroom of Dobbs-heads.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bathroom_of_Dobbs-heads.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Dirty residential bathroom in America.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dirty_residential_bathroom_in_America.jpg",
+   "autor": "Yitzilitt",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

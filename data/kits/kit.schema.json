@@ -160,7 +160,8 @@
        "vida",
        "techo",
        "enfrente",
-       "entre"
+       "entre",
+       "junto_a"
       ]
      },
      "obligatorio": {
@@ -197,6 +198,40 @@
      },
      "b": {
       "description": "entre: la segunda (la nueva mira como ella, girada)"
+     },
+     "habitacion": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "area_min": {
+      "type": "number",
+      "minimum": 0
+     },
+     "lados": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "derecha",
+        "izquierda",
+        "frente"
+       ]
+      }
+     },
+     "mira_ref": {
+      "type": "boolean"
+     },
+     "area_max": {
+      "type": "number",
+      "minimum": 0
+     },
+     "centrado": {
+      "type": "boolean"
+     },
+     "preferir": {
+      "type": "boolean",
+      "description": "Intenta el máximo de cantidad; el mínimo conserva los obligatorios."
      }
     }
    }

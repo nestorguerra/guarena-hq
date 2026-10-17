@@ -13,6 +13,8 @@ import { COP_DESC } from './police.js';
 import { hash1 } from './util.js';
 import { loadTexture } from './assets.js';
 import { buildShop } from './shops.js';
+import { amueblarAnnie } from './casa_annie.js';
+import { agruparCasa } from './casa_lotes.js';
 import { ITEMS, lc } from './items.js';
 import { buildChurch, updateBeams, lightCandle, ChurchLife } from './church.js';
 import { attachInterior } from './hiperinterior.js';
@@ -312,7 +314,8 @@ export function buildHouse(kind = 'casa', seed = 1, origin = INTERIOR_ORIGIN) {
     B.add(mMetal, boxGeo(0.02, 0.02, 4.6, 1), -2.6, 2.1, 13.5);
     if (!horror) for (let i = 0; i < 4; i++) B.add(B.mat('cloth' + i, () => std([0xf4f4f0, 0x88a9c9, 0xe87aa4, 0xe6b422][i], { roughness: 1, side: THREE.DoubleSide })), planeGeo(0.5, 0.6, 1), -2.6, 1.8, 11.9 + i * 1.1, Math.PI / 2);
     else B.add(B.mat('cloth0', () => std(0xe8e4dc, { roughness: 1, side: THREE.DoubleSide })), planeGeo(0.6, 1.3, 1), -2.6, 1.45, 14.6, Math.PI / 2);
-    B.light(0, 2.7, D1 + 0.3, 0xffe8c0, 4, 6);
+    const patioLamp=new THREE.Mesh(cylGeo(.07,.11,.15),std(0xf2eadc,{emissive:0xffdbac,emissiveIntensity:.5}));
+    B.extraMesh(patioLamp,0,2.7,D1+.3);
     B.spots.patio = { x: B.ox + 1.5, z: B.oz + 14.5 };
     B.spots.pozo = { x: B.ox, z: B.oz + 12.6 };
   }
@@ -362,7 +365,7 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
   const SX0 = 2.0, SX1 = 3.12, SZ0 = 5.0, SZ1 = 9.4; // stairs: x range, bottom → top along +z
   const NSTEP = 17;
   // --- materials
-  const mWall = (t) => B.mat('wall' + t, () => texMat('painted_plaster_wall', t, 0.9));
+  const mWall = (t) => B.mat('wall' + t, () => std(t,{roughness:.92,defines:{CLAY_TONE:.25,CLAY_CAV:.025,CLAY_RELIEF:.45,CLAY_AMP:.0006}}));
   const mOut = B.mat('wallout', () => texMat('white_rough_plaster', 0xf4f0e6, 0.95));
   const mWood = B.mat('wood', () => texMat('herringbone_parquet', 0xffffff, 0.6));
   const mTile = B.mat('tile', () => texMat('floor_tiles_06', 0xffffff, 0.45));
@@ -372,7 +375,7 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
   const mPatio = B.mat('patio', () => texMat('floor_tiles_06', 0xd08a5a, 0.8));
   const mDark = B.mat('darkwood', () => texMat('dark_wood', 0xffffff, 0.6));
   const mPale = B.mat('palewood', () => texMat('dark_wood', 0xf0d4b0, 0.6));
-  const mWhite = B.mat('white', () => std(0xf2f2ee, { roughness: 0.35 }));
+  const mWhite = B.mat('white', () => std(0xf2f2ee, { roughness: 0.95 }));
   const mMetal = B.mat('metal', () => std(0x9aa0a4, { roughness: 0.3, metalness: 0.8 }));
   const mBlack = B.mat('black', () => std(0x141416, { roughness: 0.4 }));
   const mIron = B.mat('iron', () => std(0x1d1d1f, { roughness: 0.5, metalness: 0.6 }));
@@ -382,9 +385,9 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
   const mPink = B.mat('pink', () => std(0xf4a6c0, { roughness: 0.95 }));
   const mSheet = B.mat('sheetw', () => std(0xfbf6f4, { roughness: 0.95 }));
   const mLilac = B.mat('lilac', () => std(0xc8b4e0, { roughness: 0.95 }));
-  const mPlant = B.mat('plant', () => std(0x3f7a35, { roughness: 0.9 }));
-  const mPot = B.mat('pot', () => std(0xb5552e, { roughness: 0.8 }));
-  const mRed = B.mat('flower', () => std(0xd8263a, { roughness: 0.7 }));
+  const mPlant = B.mat('plant', () => std(0x3f7a35, { roughness: 0.95 }));
+  const mPot = B.mat('pot', () => std(0xb5552e, { roughness: 0.95 }));
+  const mRed = B.mat('flower', () => std(0xd8263a, { roughness: 0.95 }));
   const mStone = B.mat('stone', () => texMat('granite_wall', 0xffffff, 0.9));
   const tints = [0xf6efe6, 0xe8f0ee, 0xf4e6ea, 0xf2ece0];
   const segs0 = [], segs1 = [];
@@ -479,52 +482,8 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
     B.add(mWhite, boxGeo(w, 0.05, 0.12, 1), cx, 1.875, D1);
     B.add(B.mat('frosted', () => std(0xe8eef0, { roughness: 0.5, transparent: true, opacity: 0.82 })), boxGeo(w - 0.06, 0.64, 0.01, 1), cx, 1.55, D1);
   }
-  // --- saloncito: two-seater sofa and an armchair round a small table, the telly, shelves, a rug
-  {
-    solid(mSofa, 0.85, 0.42, 1.8, -2.72, 0, 1.9);
-    box(mSofa, 0.2, 0.5, 1.8, -3.05, 0.42, 1.9); box(mSofa, 0.85, 0.3, 0.2, -2.72, 0.42, 0.9); box(mSofa, 0.85, 0.3, 0.2, -2.72, 0.42, 2.9);
-    for (const [z, c] of [[1.45, mPink], [2.35, mLilac]]) box(c, 0.14, 0.34, 0.38, -2.9, 0.44, z, 0.1);
-    solid(mSofa, 0.8, 0.42, 0.8, -1.0, 0, 3.25, 0); box(mSofa, 0.8, 0.45, 0.18, -1.0, 0.42, 3.55); // armchair
-    solid(mPale, 0.9, 0.42, 0.55, -1.7, 0, 1.9);
-    box(B.mat('mug', () => std(0xe8456a, { roughness: 0.4 })), 0.08, 0.1, 0.08, -1.55, 0.42, 1.8);
-    solid(mDark, 0.45, 0.5, 1.3, 2.95, 0, 1.6);
-    const tv = new THREE.Mesh(boxGeo(0.06, 0.6, 1.05, 1), new THREE.MeshStandardMaterial({ color: 0x0c0d10, emissive: 0x6a8aa8, emissiveIntensity: 0.3, roughness: 0.3 }));
-    B.extraMesh(tv, 2.95, 0.84, 1.6);
-    B.interact({ type: 'tv', x: 2.1, z: 1.6, r: 0.9, label: 'Encender la tele', mesh: tv });
-    // open bookshelf (back, sides, four shelves) with books, clear of the door into the hall (x 1.5-2.4)
-    box(mDark, 1.1, 1.7, 0.03, -0.2, 0, 3.745); for (const x of [-0.74, 0.34]) box(mDark, 0.03, 1.7, 0.32, x, 0, 3.6);
-    for (const y of [0.02, 0.45, 0.88, 1.31, 1.67]) box(mDark, 1.1, 0.03, 0.32, -0.2, y, 3.6);
-    B.footprint(1.1, 0.32, -0.2, 3.6, 0, 1.7);
-    const bookCols = [0x7a2a22, 0x2a4a6a, 0xe87aa4, 0xb89a5a, 0x3a5a2a, 0xe8dcc0];
-    for (let sh = 0; sh < 3; sh++) {
-      let x = -0.7;
-      while (x < 0.25) {
-        const w = 0.03 + r() * 0.035, hb = 0.2 + r() * 0.12;
-        if (r() < 0.12) { x += 0.08; continue; }
-        box(B.mat('book' + (Math.floor(r() * 6)), () => std(bookCols[Math.floor(r() * 6)], { roughness: 0.8 })), w, hb, 0.2, x + w / 2, 0.05 + sh * 0.43, 3.62, (r() - 0.5) * 0.06);
-        x += w + 0.004;
-      }
-    }
-    const rug = new THREE.Mesh(new THREE.PlaneGeometry(1.8, 1.3).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: rugTexture(seed), roughness: 1 }));
-    B.extraMesh(rug, -1.6, 0.012, 1.9);
-    picture(pictureTexture('paisaje', seed), -hw + 0.08, 1.65, 1.9, Math.PI / 2, 0.7, 0.5);
-    picture(pictureTexture('foto', seed + 1), 0.9, 1.6, 3.72, Math.PI, 0.3, 0.38);
-    plant(-3.0, 3.5, 0, true);
-    const mir = new THREE.Mesh(new THREE.CircleGeometry(0.24, 28), new THREE.MeshStandardMaterial({ color: 0xc8d0d8, roughness: 0.05, metalness: 1 }));
-    B.extraMesh(mir, 2.8, 1.65, 3.72, Math.PI);
-    B.add(B.mat('gilt', () => std(0xb89a5a, { roughness: 0.35, metalness: 0.7 })), new THREE.TorusGeometry(0.25, 0.022, 8, 28), 2.8, 1.65, 3.73, 0);
-    const face = new THREE.Mesh(new THREE.CircleGeometry(0.14, 24), new THREE.MeshStandardMaterial({ color: 0xf4efe0, roughness: 0.5 }));
-    B.extraMesh(face, -0.2, 2.2, 3.72, Math.PI);
-    B.add(mDark, new THREE.TorusGeometry(0.15, 0.018, 6, 24), -0.2, 2.2, 3.73, 0);
-    for (let i = 0; i < 3; i++) picture(pictureTexture('foto', seed + 10 + i), -2.2 + i * 0.45, 1.55 + (i % 2) * 0.12, 3.72, Math.PI, 0.26, 0.32);
-    box(mDark, 0.05, 1.5, 0.05, -3.0, 0, 0.5); // floor lamp
-    const fl = new THREE.Mesh(cylGeo(0.14, 0.22, 0.28, 12), new THREE.MeshStandardMaterial({ color: 0xf4ead8, emissive: 0xffd9a0, emissiveIntensity: 0.6, side: THREE.DoubleSide }));
-    fl.userData.lamp = true; B.extraMesh(fl, -3.0, 1.62, 0.5);
-    B.light(-3.0, 1.5, 0.6, 0xffd0a0, 3, 4);
-    for (const x of [-2.95, -1.35]) B.add(B.mat('curtain', () => std(0xe8d6b8, { roughness: 1, side: THREE.DoubleSide })), boxGeo(0.35, 1.6, 0.04, 1), x, 1.45, 0.12);
-    B.light(-0.6, 2.62, 1.9, 0xffd9a0, 7, 7);
-    B.spots.salon = { x: B.ox - 1.4, z: B.oz + 2.6 };
-  }
+  // El mobiliario del salón se monta por kit al terminar la arquitectura.
+  B.spots.salon = { x: B.ox - 1.4, z: B.oz + 2.6 };
   // --- recibidor (the other part of the house): coat rack, shoe cabinet, mirror, the phone
   {
     solid(mDark, 0.3, 0.9, 0.9, 1.08, 0, 7.2);
@@ -537,30 +496,6 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
     B.light(1.45, 2.62, 9.9, 0xffd9a0, 4, 5);
     B.spots.entrada = { x: B.ox, z: B.oz + 1.2 };
   }
-  // --- cocina
-  {
-    solid(mWhite, 0.62, 0.9, 3.4, -2.88, 0, 6.0);
-    box(B.mat('worktop', () => std(0x3a3a3a, { roughness: 0.3 })), 0.66, 0.04, 3.44, -2.88, 0.9, 6.0);
-    B.add(mBath, planeGeo(3.4, 0.7, 0.6).rotateY(Math.PI / 2), -hw + 0.08, 1.3, 6.0);
-    box(mBlack, 0.5, 0.02, 0.55, -2.88, 0.94, 5.2); box(mMetal, 0.45, 0.05, 0.4, -2.88, 0.9, 6.9);
-    solid(mWhite, 0.7, 1.8, 0.66, -2.8, 0, 7.95);
-    solid(mPale, 1.0, 0.76, 0.75, -1.0, 0, 6.2);
-    for (const [x, z, ry] of [[-1.0, 5.6, 0], [-1.0, 6.8, Math.PI], [-0.3, 6.2, -Math.PI / 2]]) {
-      box(mPale, 0.42, 0.04, 0.42, x, 0.44, z, ry); box(mPale, 0.42, 0.48, 0.04, x - Math.sin(ry) * 0.2, 0.48, z - Math.cos(ry) * 0.2, ry);
-    }
-    B.interact({ type: 'drawer', x: -2.3, z: 6.3, r: 0.9, label: 'Registrar los cajones' });
-    picture(pictureTexture('calendario', seed + 2), -0.2, 1.6, 8.33, Math.PI, 0.3, 0.38);
-    B.light(-1.2, 2.62, 6.1, 0xfff0d8, 7, 7);
-    B.spots.cocina = { x: B.ox - 1.4, z: B.oz + 5.0 };
-  }
-  // --- baño de abajo
-  {
-    solid(mWhite, 0.8, 0.12, 0.8, -2.7, 0, 9.7);
-    B.add(mBath, planeGeo(2.1, 1.8, 0.6).rotateY(Math.PI / 2), -hw + 0.08, 0.9, 9.45);
-    solid(mWhite, 0.4, 0.42, 0.55, -1.5, 0, 10.1, Math.PI); box(mWhite, 0.38, 0.35, 0.16, -1.5, 0.42, 10.35);
-    solid(mWhite, 0.5, 0.85, 0.4, -0.3, 0, 10.2, Math.PI);
-    B.light(-1.2, 2.62, 9.4, 0xf4f8ff, 4, 5);
-  }
   // --- patio: geraniums, a table with two chairs, the washing machine under a little roof, a clothesline
   {
     for (const [x, z, big] of [[-2.8, 11.0, true], [-2.8, 13.0, false], [2.8, 13.0, true], [2.9, 11.2, false], [0, 13.1, false]]) plant(x, z, 0, big);
@@ -572,7 +507,8 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
     box(B.mat('corrugated', () => texMat('corrugated_iron', 0xd8d4c8, 0.6)), 1.3, 0.04, 1.1, 2.6, 2.3, 12.1);
     box(mMetal, 0.02, 0.02, 2.6, -2.2, 2.05, 12.2);
     for (let i = 0; i < 3; i++) B.add(B.mat('cloth' + i, () => std([0xf4a6c0, 0xf4f4f0, 0x88a9c9][i], { roughness: 1, side: THREE.DoubleSide })), planeGeo(0.45, 0.55, 1), -2.2, 1.75, 11.4 + i * 0.8, Math.PI / 2);
-    B.light(0, 2.7, D1 + 0.3, 0xffe8c0, 4, 6);
+    const patioLamp=new THREE.Mesh(cylGeo(.07,.11,.15),std(0xf2eadc,{emissive:0xffdbac,emissiveIntensity:.5}));
+    B.extraMesh(patioLamp,0,2.7,D1+.3);
     B.spots.patio = { x: B.ox + 0.8, z: B.oz + 12.8 };
     B.view('b', -hw, 3.2, D1, hw, 40, DP); // the sky over the patio, the neighbours' roofs
   }
@@ -651,11 +587,17 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
     // wardrobe on the left wall, dressing table with a mirror under the front window
     solid(mPale, 0.6, 2.1, 1.6, -2.88, Y, 1.4, 0, 1.2);
     box(mBlack, 0.01, 1.9, 0.015, -2.57, Y + 0.1, 1.4);
+    for(const z of [.99,1.81]) {
+      box(mPale,.025,1.94,.75,-2.565,Y+.08,z);
+      box(mMetal,.04,.15,.025,-2.54,Y+.98,z+(z<1.4?.28:-.28));
+    }
     solid(mPale, 1.0, 0.75, 0.48, 1.8, Y, 0.3);
     const vm = new THREE.Mesh(planeGeo(0.6, 0.75, 1), new THREE.MeshStandardMaterial({ color: 0xc8d0d8, roughness: 0.05, metalness: 1 }));
     B.extraMesh(vm, 1.8, Y + 1.25, 0.1, 0);
     B.interact({ type: 'mirror', x: 1.8, z: 0.95, r: 0.7, y: Y, label: 'Arreglarse en el tocador' });
     box(mPale, 0.42, 0.04, 0.42, 1.8, Y + 0.44, 0.85); // stool
+    for(const x of [1.49,1.65]){box(mPink,.09,.1,.07,x,Y+.75,.27);box(mMetal,.05,.025,.05,x,Y+.85,.27);}
+    box(mLilac,.62,.035,.34,bx,Y+.59,3.04);
     // balcony door on the street side (shutter half down) and a rug
     B.add(mShutter, boxGeo(1.0, 0.6, 0.04, 1), -0.8, Y + 1.85, 0.03, 0);
     B.extraMesh(new THREE.Mesh(planeGeo(0.94, 1.45, 1), glass), -0.8, Y + 0.83, 0.06, 0);
@@ -688,22 +630,9 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
     B.light(-0.6, Y + H2 - 0.33, 2.3, 0xffe2d0, 7, 7);
     B.spots.dormAnnie = { x: B.ox + 0.4, z: B.oz + 2.6 };
   }
-  // --- upstairs bathroom and a study
-  {
-    solid(mWhite, 1.6, 0.55, 0.72, -2.35, Y, 5.45);
-    B.add(mBath, planeGeo(1.8, 1.6, 0.6), -2.35, Y + 0.8, SZ0 + 0.08, 0);
-    solid(mWhite, 0.4, 0.42, 0.55, -0.4, Y, 5.4); box(mWhite, 0.38, 0.35, 0.16, -0.4, Y + 0.42, 5.18);
-    solid(mWhite, 0.5, 0.85, 0.4, -2.9, Y, 6.9, Math.PI / 2);
-    B.light(-1.2, Y + H2 - 0.33, 6.2, 0xf4f8ff, 4, 5);
-    solid(mPale, 1.2, 0.75, 0.6, -2.5, Y, 9.9);
-    const lap = new THREE.Mesh(boxGeo(0.34, 0.02, 0.24, 1), B.mats.get(mBlack)); B.extraMesh(lap, -2.5, Y + 0.77, 9.85);
-    box(mPale, 0.42, 0.04, 0.42, -2.5, Y + 0.44, 9.3);
-    solid(mDark, 0.32, 1.8, 1.1, -3.0, Y, 8.3);
-    solid(mSofa, 1.5, 0.42, 0.75, -1.2, Y, 7.85);
-    B.light(-1.2, Y + H2 - 0.33, 9.0, 0xffe8c8, 5, 6);
-    B.light(1.45, Y + H2 - 0.33, 7.2, 0xffd9a0, 4, 6);
-    B.light(2.6, Y + H2 - 0.33, 9.95, 0xffd9a0, 3, 5);
-  }
+  const amueblado=amueblarAnnie(B,seed,segs0,segs1);
+  B.segs=segs1;
+  B.light(1.45,Y+H2-.33,7.2,0xffe4c8,4,6);
   for (const s of segs1) s[4] += F2; // upstairs segments stand on the upper floor (rays below them pass)
 
   // ================================================================ finish: one collider per storey
@@ -728,6 +657,10 @@ export function buildAnnieHouse(seed = 12, origin = INTERIOR_ORIGIN) {
   out.spots.floor = { saloncito: fl(-1.2, 2.6), recibidor: fl(1.45, 4.4), cocina: fl(-1.4, 5.0), patio: fl(0.8, 12.8), entrada: fl(0, 1.2) };
   out.spots.wake = fl(0.4, 2.6);
   out.origin = { x: ox, z: oz };
+  out.rooms=[...amueblado.rooms,{id:'dormitorio',type:'dorm',lv:1,x0:ox-hw,z0:oz,x1:ox+hw,z1:oz+SZ0}];
+  out.estancias=amueblado.estancias;out.personalizadas=['dormitorio'];out.fallosKit=[];
+  out.pieces={tv:amueblado.tv};
+  agruparCasa(out);
   out.kind = 'annie';
   out.bounds = { x0: ox - hw, x1: ox + hw, z0: oz, z1: oz + DP };
   return out;

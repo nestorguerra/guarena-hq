@@ -10,7 +10,14 @@ import { INTERIOR_ORIGIN, WALL_H, boxGeo, planeGeo, cylGeo, pictureTexture, rugT
 import { amueblar, encaja } from './locales.js';
 import { KITS, OBJETOS } from './interiores_datos.js';
 import { caja, construir } from './objetos.js';
-import { rot } from './interiores_geo.js';
+import { rot, mapaPaso, partes } from './interiores_geo.js';
+import { agruparCasa } from './casa_lotes.js';
+
+// Una sola correspondencia para montaje, inventario y pruebas. Annie usa otro constructor.
+export function kitDeEstancia(tipo, perfil) {
+  const tipos = { salon: 'salon', comedor: 'comedor', cocina: 'cocina', bano: 'bano', dorm: 'dormitorio', dorm2: 'dormitorio', ninos: 'ninos', dormJoven: 'joven', estudio: 'estudio', despacho: 'despacho', musica: 'musica', trofeos: 'trofeos', taller: perfil === 'artista' ? 'pintura' : 'taller', costura: 'costura', despensa: 'despensa', trastero: 'trastero' };
+  return tipos[tipo] ? 'vivienda_' + tipos[tipo] : null;
+}
 
 // ---------------------------------------------------------------- who lives here
 export const PROFILES = {
@@ -278,7 +285,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // ---- materials
   const woodTint = { dark: 0xffffff, pale: 0xf0d4b0, white: 0xf4f2ee, walnut: 0xb89070 }[S.wood];
   const M = {
-    wall: (i) => B.mat('wall' + i, () => texMat(['moderno', 'lujo', 'alegre', 'joven'].includes(prof.style) ? 'white_plaster_02' : 'painted_plaster_wall', S.walls[i % S.walls.length], 0.9)),
+    wall: (i) => B.mat('wall' + i, () => ['moderno', 'lujo', 'alegre', 'joven'].includes(prof.style) ? std(S.walls[i % S.walls.length], {roughness:.92,defines:{CLAY_TONE:.25,CLAY_CAV:.025,CLAY_RELIEF:.45,CLAY_AMP:.0006}}) : texMat('painted_plaster_wall', S.walls[i % S.walls.length], 0.9)),
     out: B.mat('wallout', () => texMat('white_rough_plaster', 0xf4f0e6, 0.95)),
     ceil: B.mat('ceil', () => texMat('painted_plaster_wall', 0xf8f6f0, 0.95)),
     wood: B.mat('furnwood', () => S.wood === 'white' ? std(0xf2f0ea, { roughness: 0.5 }) : texMat('dark_wood', woodTint, 0.6)),
@@ -1021,12 +1028,11 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // for this household: the room's size, from its door, round its doors and windows; what the household has to take
   // goes where the kit says (or back to the pool); the pieces with a part in the life of the house (rol) become its
   // seats, beds, tables, telly, kitchen, wardrobe, drawers… A kind with no kit yet keeps the hand-made furniture.
-  const KIT_ESTANCIA = { salon: 'salon', comedor: 'comedor', cocina: 'cocina', bano: 'bano', dorm: 'dormitorio', dorm2: 'dormitorio', ninos: 'ninos', dormJoven: 'joven', estudio: 'estudio', despacho: 'despacho', musica: 'musica', trofeos: 'trofeos', taller: prof.id === 'artista' ? 'pintura' : 'taller', costura: 'costura', despensa: 'despensa', trastero: 'trastero' };
   const MADERAS = { dark: '#5e3b22', pale: '#c8a37a', white: '#e8e4dc', walnut: '#6a4630' };
   const paleta = { tela: S.fabric.map((c) => '#' + c.toString(16).padStart(6, '0')), madera: MADERAS[S.wood] || '#6a4630' };
-  const enCasa = [], pendientes = [], estancias = []; // (the pieces laid out, built together at the end; what needs their meshes; each room's layout, for the validator)
+  const enCasa = [], pendientes = [], estancias = [], fallosKit = []; // (the pieces laid out, built together at the end; what needs their meshes; each room's layout, for the validator)
   const amueblarEstancia = (rm) => {
-    const kid = KIT_ESTANCIA[rm.type] && 'vivienda_' + KIT_ESTANCIA[rm.type];
+    const kid = kitDeEstancia(rm.type, prof.id);
     if (!kid || !KITS[kid]) return false;
     const yl = rm.lv ? F2 : 0, f = WALLF, W = rm.w - 2 * f, Dd = rm.d - 2 * f, ox = rm.cx, oz = rm.z0 + f; // (kit frame → house: x + ox, z + oz)
     // clear: in front of every door (its swing and a step), the windows (nothing tall or hung there), what the house keeps
@@ -1042,18 +1048,30 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const inicio = !d0 ? { x: 0, z: Dd / 2 } : d0.side === 's' ? { x: m - ox, z: 0.5 } : d0.side === 'n' ? { x: m - ox, z: Dd - 0.5 } : d0.side === 'w' ? { x: -W / 2 + 0.5, z: m - oz } : { x: W / 2 - 0.5, z: m - oz };
     const tomados = [];
     const filtro = (e) => {
-      if (!encaja(e.perfil, prof.id) || !encaja(e.estilo, prof.style)) return false;
+      if (!encaja(e.perfil, prof.id) || !encaja(e.estilo, prof.style) || !encaja(e.habitacion, rm.type)) return false;
       if (e.botin) { if (!takeLoot(e.botin)) return false; tomados.push(e); }
       return true;
     };
     let A;
-    try { A = amueblar(kid, (prof.seed * 131 + rooms.indexOf(rm) * 17 + 5) >>> 0, { W, D: Dd, H: rm.lv ? H2 : WALL_H, inicio, libres, filtro }); } catch (err) { for (const e of tomados) lootPool.push(e.botin); return false; }
+    try {
+      for(let intento=0;intento<12;intento++){
+        for(const e of tomados)lootPool.push(e.botin);tomados.length=0;
+        A = amueblar(kid, (prof.seed * 131 + rooms.indexOf(rm) * 17 + 5+intento*104729) >>> 0, { W, D: Dd, H: rm.lv ? H2 : WALL_H, inicio, libres, filtro,funciones:true });
+        const faltan=A.activas.some(ei=>{const e=A.K.objetos[ei],n=A.P.filter(p=>p.e===ei&&(e.regla!=='conjunto'||p.de==null)).length;return n<Math.max(e.obligatorio?1:0,e.cantidad?.[0]||0);});
+        if(!faltan)break;
+      }
+    } catch (err) {
+      for (const e of tomados) lootPool.push(e.botin);
+      fallosKit.push({ sala: rm.id, tipo: rm.type, kit: kid, motivo: String(err.message || err) });
+      return false;
+    }
     const P = A.P, K = A.K;
-    estancias.push({ kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
+    estancias.push({ kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
       colocados: P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: p.x, y: p.y || 0, z: p.z, ry: p.ry, sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v })) });
     // the loot: the first piece of each such entry; one the room had no room for goes back to the pool
     const deBotin = new Map();
     for (const e of tomados) { const ei = K.objetos.indexOf(e), i = P.findIndex((p) => p.e === ei); if (i < 0) lootPool.push(e.botin); else deBotin.set(i, e.botin); }
+    const interact=spec=>B.interact({sala:rm.id,...spec});
     P.forEach((p, i) => {
       const o = OBJETOS[p.obj], b = caja(p.obj), hx = ox + p.x, hz = oz + p.z, y = yl + (p.y || 0);
       const L = (lx, lz) => { const [a, c] = rot(lx, lz, p.ry); return [hx + a, hz + c]; }; // (a point of the piece, in the house)
@@ -1061,7 +1079,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
       if (deBotin.has(i)) {
         const g = construir([it]); B.extra.push(g);
-        const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95 }); // (its storey by the floor it is on, not by how high it hangs)
+        const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95,sala:rm.id }); // (its storey by the floor it is on, not by how high it hangs)
         if (li && li.def.crack) li.label = 'Forzar la caja fuerte';
         return;
       }
@@ -1082,20 +1100,20 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
         case 'mesa': pieces.table.push({ x: cxz[0], z: cxz[1], y: y + top, rm }); break;
         case 'cama': case 'cama_doble': {
           const head = L((b.x0 + b.x1) / 2, b.z0 + 0.55), side = L(b.x1 + 0.45, (b.z0 + b.z1) / 2), dbl = o.rol === 'cama_doble';
-          pieces.bed.push({ x: cx0 + head[0], z: cz0 + head[1], hx: cx0 + cxz[0], hz: cz0 + cxz[1], y: yl, ry: p.ry, rm, double: dbl, side: { x: cx0 + side[0], z: cz0 + side[1] } });
-          if (dbl && takeLoot('colchon')) lootItem('colchon', null, side[0], yl, side[1], 0, { r: 1.0 });
+          pieces.bed.push({ x: cx0 + head[0], z: cz0 + head[1], hx: cx0 + cxz[0], hz: cz0 + cxz[1], y: yl, ry: p.ry, rm, double: dbl,indiceKit:i, side: { x: cx0 + side[0], z: cz0 + side[1] } });
+          if (dbl && takeLoot('colchon')) lootItem('colchon', null, side[0], yl, side[1], 0, { r: 1.0,sala:rm.id });
           break;
         }
-        case 'tv': pendientes.push({ i: enCasa.length - 1, fn: (mesh) => { pieces.tv.push({ x: cxz[0], z: cxz[1], ry: p.ry, y: yl, mesh, rm }); B.interact({ type: 'tv', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Encender la tele', mesh }); } }); break;
-        case 'cocina': pieces.kitchen.push({ x: cx0 + frente[0], z: cz0 + frente[1], y: yl, ry: p.ry, rm }); B.interact({ type: 'eat', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Picar algo de la cocina' }); break;
-        case 'nevera': B.interact({ type: 'fridge', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Abrir la nevera' }); break;
-        case 'armario': B.interact({ type: 'hide', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Esconderse en el armario', hx: cxz[0], hz: cxz[1], ry: p.ry }); break;
-        case 'comoda': B.interact({ type: 'drawer', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Registrar los cajones' }); break;
-        case 'espejo': B.interact({ type: 'mirror', x: frente[0], z: frente[1], y: yl, r: 0.6, label: 'Mirarse al espejo' }); break;
-        case 'piano': B.interact({ type: 'piano', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Tocar el piano' }); break;
-        case 'guitarra': B.interact({ type: 'guitar', x: cxz[0], z: cxz[1], y: yl, r: 0.9, label: 'Tocar la guitarra' }); break;
-        case 'libros': B.interact({ type: 'read', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Hojear un libro' }); break;
-        case 'telefono': B.interact({ type: 'phone', x: frente[0], z: frente[1], y: yl, r: 0.7, label: 'Coger el teléfono' }); break;
+        case 'tv': pendientes.push({ i: enCasa.length - 1, fn: (mesh) => { pieces.tv.push({ x: cxz[0], z: cxz[1], ry: p.ry, y: yl, mesh, rm }); interact({ type: 'tv', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Encender la tele', mesh }); } }); break;
+        case 'cocina': pieces.kitchen.push({ x: cx0 + frente[0], z: cz0 + frente[1], y: yl, ry: p.ry, rm }); interact({ type: 'eat', x: frente[0], z: frente[1], y: yl, r: 0.9, label: 'Picar algo de la cocina' }); break;
+        case 'nevera': interact({ type: 'fridge', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Abrir la nevera' }); break;
+        case 'armario': interact({ type: 'hide', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Esconderse en el armario', hx: cxz[0], hz: cxz[1], ry: p.ry }); break;
+        case 'comoda': interact({ type: 'drawer', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Registrar los cajones' }); break;
+        case 'espejo': interact({ type: 'mirror', x: frente[0], z: frente[1], y: yl, r: 0.6, label: 'Mirarse al espejo' }); break;
+        case 'piano': interact({ type: 'piano', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Tocar el piano' }); break;
+        case 'guitarra': interact({ type: 'guitar', x: cxz[0], z: cxz[1], y: yl, r: 0.9, label: 'Tocar la guitarra' }); break;
+        case 'libros': interact({ type: 'read', x: frente[0], z: frente[1], y: yl, r: 0.8, label: 'Hojear un libro' }); break;
+        case 'telefono': interact({ type: 'phone', x: frente[0], z: frente[1], y: yl, r: 0.7, label: 'Coger el teléfono' }); break;
         case 'chimenea': if (prof.id === 'cazador' || prof.style === 'rustico') { const q = L(0, 0.15); const l = B.light(q[0], yl + 0.4, q[1], 0xff9a50, 3, 5); l.userData.fire = true; B.extra[B.extra.length - 1].visible = false; } break;
       }
     });
@@ -1111,13 +1129,13 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const along = rm.doorsAlong || [];
       if (rm.type === 'pasillo') { const p = rm.fit(0.35, 0.34, ['w', 'e'], false, r); if (p) { B.add(M.wood, boxGeo(0.35, 0.8, 0.34, 1), p.x, y + 0.4, p.z, p.ry); foot(rm, 0.35, 0.34, p.x, p.z, p.ry, 0.8); B.interact({ type: 'phone', x: p.x + Math.sin(p.ry) * 0.5, z: p.z + Math.cos(p.ry) * 0.5, y, r: 0.7, label: 'Coger el teléfono' }); } }
       decorate(rm, 2);
-      const n = Math.max(1, Math.round(rm.d / 5));
-      for (let i = 0; i < n; i++) B.light(rm.cx, y + (rm.lv ? H2 : WALL_H) - 0.33, rm.z0 + ((i + 0.5) / n) * rm.d, S.lamp, 4.5, 6);
+      B.light(rm.cx, y + (rm.lv ? H2 : WALL_H) - 0.33, rm.cz, S.lamp, Math.max(4.5,rm.d), Math.max(6,rm.d));
       if (rm.type === 'hall' && r() < 0.7) plant(rm, false);
       rm.along = along;
       continue;
     }
-    if (!amueblarEstancia(rm)) switch (rm.type) {
+    const porKit = amueblarEstancia(rm);
+    if (!porKit) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }
         else { F.tv(rm); F.sofa(rm, ['s', 'n', 'w', 'e'].sort(() => r() - 0.5), Math.floor(r() * 3)); F.coffeeTable(rm); if (prof.id === 'cazador' || S.beams) F.chimney(rm); F.armchair(rm); F.shelf(rm); if (prof.id === 'musico') F.piano(rm); }
@@ -1143,6 +1161,8 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     // the leftover loot finds a place in the main rooms
     const area = rm.w * rm.d;
     lampAt(rm.cx, rm.cz, y + (rm.lv ? H2 : WALL_H), area);
+    if(porKit) B.extra[B.extra.length-1].visible=false; // el kit aporta la luminaria; se conserva la luz de la casa
+    if(porKit){const est=estancias[estancias.length-1],l=B.lights[B.lights.length-1];est.luces=[{x:l.position.x-est.origen.x,y:l.position.y-y,z:l.position.z-est.origen.z,color:'#'+l.color.getHexString(),intensidad:l.intensity,alcance:l.distance}];est.modoLuz='casa';}
     if (S.beams && !rm.lv) for (let k = 0.6; k < rm.d; k += 1.1) B.add(M.wood, boxGeo(rm.w, 0.14, 0.12, 1), rm.cx, WALL_H - 0.07, rm.z0 + k);
   }
   // the rooms furnished from their kits: built together (a mesh per material); the tellies get their screens
@@ -1160,7 +1180,8 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const x = tb ? tb.x + (r() - 0.5) * 0.4 : rm.standSpot().x, z = tb ? tb.z + (r() - 0.5) * 0.3 : rm.standSpot().z;
     const yy = tb ? tb.y : rm.lv ? F2 : 0;
     const mesh = smallMesh(id === 'cartera' ? boxGeo(0.11, 0.025, 0.09, 1) : id === 'movil' ? boxGeo(0.08, 0.012, 0.15, 1) : boxGeo(0.14, 0.08, 0.1, 1), B.mats.get(id === 'cartera' ? M.leather : M.black));
-    lootItem(id, mesh, x, yy + 0.02, z, r() * 3);
+    const li=lootItem(id, mesh, x, yy + 0.02, z, r() * 3,{sala:rm.id});
+    if(li&&li.def.crack)li.label='Forzar la caja fuerte';
   }
 
   // ---- the patio: plants, a washing line, a well or a bench, the lemon tree
@@ -1183,7 +1204,8 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     }
     B.add(M.metal, boxGeo(0.02, 0.02, P - 0.8, 1), -hw + 1.0, 2.1, D1 + P / 2);
     for (let i = 0; i < 3; i++) B.add(B.mat('cloth' + i, () => std([0xf4f4f0, 0x88a9c9, 0xe87aa4][i], { roughness: 1, side: THREE.DoubleSide })), planeGeo(0.5, 0.6, 1), -hw + 1.0, 1.8, D1 + 0.8 + i * 0.9, Math.PI / 2);
-    B.light(0, 2.7, D1 + 0.3, 0xffe8c0, 4, 6);
+    // El patio abierto recibe el cielo; la luminaria conserva su modelo sin añadir otra luz puntual interior.
+    B.add(M.metal,cylGeo(.12,.22,.2,12),0,2.8,D1+.3);
   }
 
   // ---------------------------------------------------------------- finish (one collider per storey)
@@ -1249,12 +1271,42 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   out.loot = loot;
   out.profile = prof;
   out.estancias = estancias;
+  out.fallosKit = fallosKit;
   out.winMat = winMat;
   out.spots.entrada = { x: ox + doorX, z: oz + 1.2 };
   out.spots.floor = Object.fromEntries(rooms.map((q) => [q.id, { x: nodes[roomNode.get(q)].x, z: nodes[roomNode.get(q)].z }]));
   out.origin = { x: ox, z: oz };
   out.kind = 'vecino';
   out.bounds = { x0: ox - hw, x1: ox + hw, z0: oz, z1: oz + D };
+  // Puntos de uso en suelo alcanzable. En un dormitorio estrecho se puede despertar a los pies de la cama.
+  out.fallosUso=[];
+  for(const e of estancias){
+    const rm=out.rooms.find(q=>q.id===e.sala),mp=mapaPaso(e,e.colocados.flatMap(partes),.05,e.ancho,e.inicio),celdas=[];
+    for(let c=0;c<mp.reach.length;c++)if(mp.reach[c])celdas.push({x:e.origen.x-e.W/2+(c%mp.nx+.5)*mp.S,z:e.origen.z+(Math.floor(c/mp.nx)+.5)*mp.S});
+    const cerca=(x,z)=>{let q=null,d=Infinity;for(const c of celdas){const l=Math.hypot(c.x-x,c.z-z);if(l<d){q=c;d=l;}}return {q,d};};
+    for(const b of pieces.bed.filter(b=>b.rm.id===e.sala)){
+      const p=e.colocados[b.indiceKit],bb=p&&caja(p.obj);
+      if(!p)continue;
+      const candidatos=[[bb.x1+.45,(bb.z0+bb.z1)/2],[bb.x0-.45,(bb.z0+bb.z1)/2],[(bb.x0+bb.x1)/2,bb.z1+.45]].map(([x,z])=>{const [dx,dz]=rot(x,z,p.ry);return cerca(e.origen.x+p.x+dx,e.origen.z+p.z+dz);}).sort((a,b0)=>a.d-b0.d);
+      if(candidatos[0].q&&candidatos[0].d<.45){
+        const ahorro=B.inter.find(i=>i.id==='colchon'&&Math.abs((i.y||0)-b.y)<.2&&Math.hypot(i.x-b.side.x,i.z-b.side.z)<.2);
+        b.side={...candidatos[0].q};if(ahorro){ahorro.x=b.side.x;ahorro.z=b.side.z;}
+      }else out.fallosUso.push(e.sala+': no se puede salir de la cama');
+    }
+    for(const i of B.inter){
+      if(!['eat','fridge','hide','drawer','piano','guitar','read','mirror','loot'].includes(i.type)||Math.abs((i.y||0)-e.origen.y)>.2||(i.sala?i.sala!==e.sala:i.x<rm.x0||i.x>rm.x1||i.z<rm.z0||i.z>rm.z1))continue;
+      const q=cerca(i.x,i.z);
+      if(q.q&&q.d<1.25){i.x=q.q.x;i.z=q.q.z;}
+      else if(q.q&&i.type==='loot'&&i.mesh){
+        // Una pertenencia sin superficie accesible queda en el suelo, junto a ella, sin duplicarse.
+        i.mesh.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(i.mesh);
+        i.mesh.position.x+=q.q.x-i.x;i.mesh.position.z+=q.q.z-i.z;i.mesh.position.y+=e.origen.y+.02-box.min.y;
+        i.x=q.q.x;i.z=q.q.z;i.reubicado=true;
+      }else out.fallosUso.push(e.sala+'/'+i.type+': punto de uso bloqueado');
+    }
+  }
+  for(const k of pieces.kitchen){const i=B.inter.find(i=>i.type==='eat'&&i.sala===k.rm.id);if(i){k.x=i.x;k.z=i.z;}}
+  agruparCasa(out);
   // lamps that only make sense lit at night (the fire, the telly) are switched by the house life
   return out;
 }

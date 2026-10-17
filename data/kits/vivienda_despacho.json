@@ -1,0 +1,302 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Despacho doméstico",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.1,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_escritorio",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "silla_comedor",
+   "de": "vb_escritorio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "lados": [
+    "frente"
+   ],
+   "mira_ref": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_comoda",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "sillon_orejero",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 11
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 16
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_paisaje",
+    "fotos_familia",
+    "poster_enmarcado"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_ordenador",
+   "en": [
+    "vb_escritorio"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "caja_fuerte_pequena",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "botin": "cajaFuerte"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_rojos",
+    "lb_libros_azules",
+    "lb_libros_verdes",
+    "lb_libros_ocres",
+    "lb_libros_negros",
+    "lb_libros_crema",
+    "lb_libros_morados",
+    "lb_libros_granates",
+    "lb_libros_mixtos_a",
+    "lb_libros_mixtos_b",
+    "lb_libros_infantiles",
+    "lb_libros_turquesas",
+    "lb_libros_grises",
+    "lb_libros_bolsillo",
+    "lb_libros_enciclopedia",
+    "lb_libros_atlas",
+    "lb_pila_novedad_a",
+    "lb_pila_novedad_b",
+    "lb_pila_novedad_c",
+    "lb_pila_grandes",
+    "lb_libros_cara_a",
+    "lb_libros_cara_b",
+    "lb_libros_cara_c",
+    "lb_comics_a",
+    "lb_comics_b",
+    "lb_comics_c",
+    "lb_comics_d",
+    "lb_cuadernos_espiral",
+    "lb_cuadernos_rojos",
+    "lb_carpetas_anillas",
+    "lb_estuches",
+    "lb_rotuladores",
+    "lb_papel_folios",
+    "lb_sobres",
+    "lb_agendas",
+    "lb_diccionarios",
+    "lb_calculadoras",
+    "lb_gomas_tijeras",
+    "libro_tumbado",
+    "portarretratos",
+    "reloj_sobremesa",
+    "lampara_mesa",
+    "vb_cuaderno",
+    "vb_despertador",
+    "vb_ordenador",
+    "movil",
+    "cartera"
+   ],
+   "en": [
+    "vb_escritorio",
+    "vb_comoda",
+    "estanteria_libros"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_plafon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Big Desk Home Office Carrollton New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Big_Desk_Home_Office_Carrollton_New_Orleans.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "MapleSt Central BR Desk, Carrollton, New Orleans.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:MapleSt_Central_BR_Desk%2C_Carrollton%2C_New_Orleans.jpg",
+   "autor": "Infrogmation",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Brooklyn Home Office, Minimized, At Night.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Home_Office%2C_Minimized%2C_At_Night.jpg",
+   "autor": "Mackenzie Kosut",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "22 West - home office.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:22_West_-_home_office.jpg",
+   "autor": "AgnosticPreachersKid",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Ernst Jünger 5.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Ernst_J%C3%BCnger_5.jpg",
+   "autor": "Richard Mayer",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Scolton Manor H6a-arbeitszimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Scolton_Manor_H6a-arbeitszimmer.jpg",
+   "autor": "Helge Klaus Rieder",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Goethe Weimar 675.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Goethe_Weimar_675.jpg",
+   "autor": "Michiel Hendryckx",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Maison de George Sand, cabinet de travail au premier étage, bureau et bibliothèque.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Maison_de_George_Sand%2C_cabinet_de_travail_au_premier_%C3%A9tage%2C_bureau_et_biblioth%C3%A8que.jpg",
+   "autor": "Eunostos",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Uptown New Orleans home office early 1991 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Uptown_New_Orleans_home_office_early_1991_02.jpg",
+   "autor": "Infrogmation of New Orleans",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Villa Mulini - Arbeitszimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Villa_Mulini_-_Arbeitszimmer.jpg",
+   "autor": "Wolfgang Sauber",
+   "licencia": "CC BY-SA 3.0"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Comedor familiar",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.5,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "va_mesa_comedor",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "giro": [
+    0,
+    90
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "aparador",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_alacena",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_paisaje",
+    "fotos_familia",
+    "cuadro_virgen"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "bandeja",
+    "azucarero",
+    "taza_cafe",
+    "taza_desayuno",
+    "plato_cafe",
+    "plato_llano",
+    "vaso_agua",
+    "cucharilla",
+    "frutero",
+    "servilletero"
+   ],
+   "en": [
+    "va_mesa_comedor"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "bandeja",
+    "azucarero",
+    "taza_cafe",
+    "taza_desayuno",
+    "plato_cafe",
+    "plato_llano",
+    "vaso_agua",
+    "cucharilla",
+    "frutero",
+    "servilletero",
+    "prod_atun",
+    "prod_sardinillas",
+    "prod_mejillones",
+    "prod_tomate_frito",
+    "prod_maiz",
+    "prod_judias_verdes",
+    "prod_garbanzos_bote",
+    "prod_pimientos_piquillo",
+    "prod_aceitunas",
+    "prod_pepinillos",
+    "prod_mermelada",
+    "prod_miel",
+    "prod_crema_cacao",
+    "prod_melocoton_almibar",
+    "prod_aceite_oliva",
+    "prod_aceite_girasol",
+    "prod_garrafa_aceite",
+    "prod_vinagre",
+    "prod_arroz",
+    "prod_arroz_integral",
+    "prod_espaguetis",
+    "prod_macarrones",
+    "prod_lentejas",
+    "prod_garbanzos_seco",
+    "prod_harina",
+    "prod_azucar",
+    "prod_sal",
+    "prod_cafe_molido",
+    "prod_infusiones",
+    "prod_galletas_maria",
+    "prod_galletas_chocolate",
+    "prod_galletas_crackers",
+    "prod_cereales_a",
+    "prod_cereales_b",
+    "prod_cereales_c",
+    "prod_pan_molde",
+    "prod_snack_patatas",
+    "prod_snack_aperitivos",
+    "prod_chocolate_tabletas",
+    "prod_magdalenas",
+    "prod_perrunillas",
+    "prod_chicles",
+    "prod_caramelos",
+    "prod_agua_15",
+    "prod_agua_gas",
+    "prod_cola_15",
+    "prod_naranja_15",
+    "prod_limon_15",
+    "prod_cerveza_pack",
+    "prod_vino_tinto",
+    "prod_vino_blanco",
+    "prod_vino_rosado",
+    "prod_zumo_naranja",
+    "prod_zumo_melocoton",
+    "prod_leche_entera",
+    "prod_leche_semi",
+    "prod_leche_desnatada",
+    "prod_lavavajillas",
+    "prod_papel_cocina",
+    "prod_servilletas",
+    "prod_esponjas",
+    "prod_yogur_natural",
+    "prod_yogur_fresa",
+    "prod_yogur_limon",
+    "prod_mantequilla",
+    "prod_queso_lonchas",
+    "prod_huevos",
+    "prod_nata",
+    "prod_zumo_fresco",
+    "prod_bandeja_carne",
+    "prod_bandeja_pollo",
+    "prod_fiambre_loncheado",
+    "prod_quesito_untable",
+    "prod_agua_fria",
+    "prod_naranja_fria",
+    "prod_zumo_frio",
+    "prod_cola_fria",
+    "prod_cerveza_fria",
+    "prod_isotonica_fria",
+    "prod_baguettes",
+    "prod_hogazas",
+    "prod_bollos",
+    "prod_pan_molde_artesano",
+    "prod_fruta_melocotones",
+    "prod_fruta_melones",
+    "prod_fruta_naranjas",
+    "prod_fruta_manzanas_rojas",
+    "prod_fruta_manzanas_verdes",
+    "prod_fruta_limones",
+    "prod_fruta_tomates",
+    "prod_fruta_cebollas",
+    "prod_fruta_patatas",
+    "prod_fruta_lechugas",
+    "prod_fruta_pimientos",
+    "prod_fruta_zanahorias",
+    "prod_fruta_platanos",
+    "prod_fruta_uvas"
+   ],
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "My Dining Room.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:My_Dining_Room.JPG",
+   "autor": "Mokes123 (talk) (Uploads)",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "After, Dining Room Living Room - Flickr - Tall Chris.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:After%2C_Dining_Room_Living_Room_-_Flickr_-_Tall_Chris.jpg",
+   "autor": "Tall Chris",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Dining Room 556.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_556.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 558.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_558.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 559.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_559.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 560.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_560.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Peles Castle Interior - Royal Dining Room (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_Royal_Dining_Room_%281%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Peles Castle Interior - Royal Dining Room (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_Royal_Dining_Room_%282%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Basildon Park, Dining Room - geograph.org.uk - 3029945.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Basildon_Park%2C_Dining_Room_-_geograph.org.uk_-_3029945.jpg",
+   "autor": "Len Williams",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Castle Ward Interior - Dining Room - geograph.org.uk - 3968505.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Castle_Ward_Interior_-_Dining_Room_-_geograph.org.uk_-_3968505.jpg",
+   "autor": "Suzanne Mischyshyn",
+   "licencia": "CC BY-SA 2.0"
+  }
+ ]
+}

@@ -47,7 +47,7 @@ const grow = (v, m) => ({ ...v, hw: v.hw + m, hd: v.hd + m });
 export const encaja = (lista, valor) => !lista || (lista.some((t) => t.startsWith('!')) ? !lista.includes('!' + valor) : lista.includes(valor));
 // the entries of a kit that belong to a household { perfil, estilo, botin: [what it has to take] } (src/houses.js does
 // its own, taking the loot from the house's pool as it goes)
-export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && encaja(e.estilo, hogar.estilo) && (!e.botin || (hogar.botin || []).includes(e.botin));
+export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && encaja(e.estilo, hogar.estilo) && encaja(e.habitacion, hogar.habitacion) && (!e.botin || (hogar.botin || []).includes(e.botin));
 
 // the layout alone, with no room built: the kit's objects in its frame, laid out with this seed. ctx, for a room of a
 // house (src/houses.js): { W, D, H } its size instead of the kit's ranges, inicio { x, z } where one comes in (the way
@@ -117,7 +117,22 @@ export function amueblar(kit, seed = 1, ctx = null) {
   };
   let debe = alcanza(), guardias = 0;
   for (const Z of Object.values(zonas)) if (Z.publica && !debe.includes(Z.id)) avisos.push(`la zona pública «${Z.id}» no se alcanza ni con el local vacío`);
-  const cierra = (nuevos, sin = -1) => { guardias++; const a = alcanza(nuevos, sin); return debe.some((id) => !a.includes(id)); };
+  const cierra = (nuevos, sin = -1) => {
+    guardias++;
+    if(!ctx?.funciones){const a=alcanza(nuevos,sin);return debe.some(id=>!a.includes(id));}
+    const objetos=P.filter((p,i)=>i!==sin).concat(nuevos),mapa=mapaPaso(planta,objetos.flatMap(partes),.05,ancho,inicio);
+    if(debe.some(id=>!mapa.zonas[id]?.alcanzable))return true;
+    const llega=(x,z,radio)=>{const x0=Math.max(0,Math.floor((x-radio+W/2)/mapa.S)),x1=Math.min(mapa.nx-1,Math.ceil((x+radio+W/2)/mapa.S)),z0=Math.max(0,Math.floor((z-radio)/mapa.S)),z1=Math.min(mapa.nz-1,Math.ceil((z+radio)/mapa.S));for(let k=z0;k<=z1;k++)for(let i=x0;i<=x1;i++)if(mapa.reach[k*mapa.nx+i]&&Math.hypot(-W/2+(i+.5)*mapa.S-x,(k+.5)*mapa.S-z)<=radio)return true;return false;};
+    for(const p of objetos){
+      if(K.objetos[p.e]?.botin){const b=caja(p.obj);if(!llega(p.x+(b.x0+b.x1)/2,p.z+(b.z0+b.z1)/2,.85))return true;}
+      const rol=OBJETOS[p.obj].rol;if(!rol)continue;
+      const b=caja(p.obj),punto=(x,z)=>{const [dx,dz]=rot(x,z,p.ry);return [p.x+dx,p.z+dz];};
+      if(rol==='cama'||rol==='cama_doble'){
+        if(![[b.x1+.45,(b.z0+b.z1)/2],[b.x0-.45,(b.z0+b.z1)/2],[(b.x0+b.x1)/2,b.z1+.45]].some(q=>llega(...punto(...q),.3)))return true;
+      }else if(['cocina','nevera','armario','comoda','libros','piano','guitarra','espejo','tv','telefono'].includes(rol)&&!llega(...punto((b.x0+b.x1)/2,b.z1+.5),.65))return true;
+    }
+    return false;
+  };
   // (how far an object's parts run into another's)
   const hunde = (A, B) => { let m = 0; for (const a of partes(A)) for (const b of partes(B)) m = Math.max(m, penetra(a, b)); return m; };
   const dentro = (v, z) => {
@@ -140,10 +155,30 @@ export function amueblar(kit, seed = 1, ctx = null) {
   // the object's origin for its footprint's centre to land at (cx, cz) turned ry
   const origen = (obj, cx, cz, ry) => { const b = caja(obj); const [ox, oz] = rot((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2, ry); return [cx - ox, cz - oz]; };
   const tantos = (e, len = 0, area = 0, sops = 0) => (e.cantidad ? N(e.cantidad) : e.por_m ? Math.max(1, Math.round(len * U(e.por_m))) : e.por_m2 ? Math.max(1, Math.round(area * U(e.por_m2))) : e.por_soporte && !Array.isArray(e.por_soporte) ? sops * e.por_soporte : 1);
+  const cantidadPreferida=e=>e.preferir&&Array.isArray(e.cantidad)?e.cantidad[1]:N(e.cantidad||1);
   const variante = (e, k) => (e.variantes ? (e.todas && k < e.variantes.length ? e.variantes[k] : e.variantes[Math.floor(r() * e.variantes.length)]) : e.obj);
   const cursores = {}, estantes = {}, activas = []; // (activas: the entries laid out for this household)
 
   const reglas = {
+    // Acompañantes en el mismo marco: módulos de cocina, mesitas junto al cabecero y sillas de escritorio.
+    // Si una puerta impide la relación, solo las entradas que lo permiten buscan otra pared.
+    junto_a(e, Z) {
+      const ids = [].concat(e.de), n = cantidadPreferida(e);
+      for(let k=0;k<n;k++) {
+        const ref=[...P].reverse().find(p=>p.zona===Z.id && ids.includes(p.obj));
+        if(!ref) break;
+        const obj=variante(e,k), b=caja(obj), rb=caja(ref.obj), lados=e.lados || ['derecha','izquierda'];
+        let ok=false;
+        for(const lado of lados) {
+          const lx=lado==='derecha'?rb.x1+b.w/2+.04:lado==='izquierda'?rb.x0-b.w/2-.04:(rb.x0+rb.x1)/2;
+          const lz=lado==='frente'?rb.z1+b.d/2+.06:rb.z0+b.d/2;
+          const [dx,dz]=rot(lx,lz,ref.ry), ry=ref.ry+(lado==='frente'&&e.mira_ref?Math.PI:0);
+          const [x,z]=origen(obj,ref.x+dx,ref.z+dz,ry), it={obj,x,y:0,z,ry}, v=volumen(it);
+          if(dentro(v,Z)&&libre(v)&&!cierra([it])) {poner(obj,Z.id,'junto_a',x,0,z,ry);ok=true;break;}
+        }
+        if(!ok) {if(e.si_no!==false) reglas.contra_pared({...e,pared:'*',cantidad:1},Z);break;}
+      }
+    },
     // the counter's modules, end to end along a line (the kit's own design: never moved, never refused)
     modulos(e, Z) {
       const [fijo, a, b] = e.linea.map(ev), ry = MIRA[e.mira || '+z'], w = caja(e.obj).w, n = Math.floor((b - a + 1e-6) / w), s0 = a + (b - a - n * w) / 2;
@@ -161,7 +196,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
       // (a list of walls, or '*' any of the four: each piece against the first that takes it — a room's, whose door and
       // windows the kit cannot know)
       if (typeof e.pared !== 'string' || e.pared === '*') {
-        const lados = e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : e.pared, n = N(e.cantidad || 1);
+        const lados = e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : e.pared, n = cantidadPreferida(e);
         for (let puestos = 0, k = 0; puestos < n && k < n + 3; k++) {
           const n0 = P.length;
           for (const lado of lados) { reglas.contra_pared({ ...e, pared: lado, cantidad: 1, llenar: false, variantes: e.variantes ? [variante(e, puestos)] : undefined }, Z); if (P.length > n0) break; }
@@ -170,17 +205,19 @@ export function amueblar(kit, seed = 1, ctx = null) {
         return;
       }
       const pw = PARED[e.pared](Z), key = Z.id + e.pared;
-      const n = e.llenar ? 99 : N(e.cantidad || 1);
+      const n = e.llenar ? 99 : cantidadPreferida(e);
       let puestos = 0;
       for (let k = 0; puestos < n && k < 40; k++) {
         const obj = variante(e, k), b = caja(obj);
         let s = cursores[key] ?? pw.a + 0.03, ok = false;
-        while (s + b.w <= pw.b - 0.03 + 1e-6) {
+        const slots=[];
+        while(s+b.w<=pw.b-.03+1e-6){slots.push(s);s+=.1;}
+        if(e.centrado) slots.sort((a,b0)=>Math.abs(a+b.w/2-(pw.a+pw.b)/2)-Math.abs(b0+b.w/2-(pw.a+pw.b)/2));
+        for (s of slots) {
           const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + 0.01);
           const [x, z] = origen(obj, pw.eje === 'z' ? off : c, pw.eje === 'z' ? c : off, pw.ry);
           const it = { obj, x, y: 0, z, ry: pw.ry }, v = volumen(it);
           if (dentro(v, Z) && libre(v) && !cierra([it])) { poner(obj, Z.id, 'contra_pared', x, 0, z, pw.ry); cursores[key] = s + b.w + 0.03; ok = true; break; }
-          s += 0.1;
         }
         if (!ok) break;
         puestos++;
@@ -213,7 +250,9 @@ export function amueblar(kit, seed = 1, ctx = null) {
     // or over its fellow below (sobre_de)
     pared(e, Z) {
       // (one wall, or a list of them to go on to when the first is full; a row stops at `maximo` if the kit says so)
-      const paredes = e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : [].concat(e.pared), ref = e.sobre_de ? P.find((p) => p.zona === Z.id && p.obj === e.sobre_de) : null;
+      const ref = e.sobre_de ? P.find((p) => p.zona === Z.id && p.obj === e.sobre_de) : null;
+      const a=ref?Math.atan2(Math.sin(ref.ry),Math.cos(ref.ry)):0;
+      const paredes = ref ? [Math.abs(a)<.3?'S':Math.abs(Math.abs(a)-Math.PI)<.3?'N':a>0?'W':'E'] : e.pared === '*' ? baraja(['N', 'S', 'E', 'W']) : [].concat(e.pared);
       const colocar = (pw, obj, s) => {
         const b = caja(obj), c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (-b.z0 + 0.003);
         const [ox, oz] = rot((b.x0 + b.x1) / 2, 0, pw.ry);
@@ -313,7 +352,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
     // or none), each set a clear way from anything else on the floor; tried first on a grid a set and an aisle apart
     // (shifted at random), then anywhere. giro: the turns the table may take (degrees; 0 by default)
     conjunto(e, Z) {
-      const area = (Z.x1 - Z.x0) * (Z.z1 - Z.z0), n = tantos(e, 0, area), paso = ancho + 0.1;
+      const area = (Z.x1 - Z.x0) * (Z.z1 - Z.z0), n = e.preferir && e.cantidad ? e.cantidad[1] : tantos(e, 0, area), paso = ancho + 0.1;
       const lejos = (v) => !P.some((p) => p.v && p.v.y0 < 0.5 && choca(p.v, grow(v, paso)));
       const cand = [], pitch = 1.6 + paso, gx0 = Z.x0 + 0.8 + r() * 0.4, gz0 = Z.z0 + 0.8 + r() * 0.4;
       for (let x = gx0; x <= Z.x1 - 0.6; x += pitch) for (let z = gz0; z <= Z.z1 - 0.6; z += pitch) cand.push([x + (r() - 0.5) * 0.3, z + (r() - 0.5) * 0.3]);
@@ -379,9 +418,9 @@ export function amueblar(kit, seed = 1, ctx = null) {
           }
           const lry = q.estante || OBJETOS[obj].clase === 'FIXED' ? 0 : (r() - 0.5) * 0.6;
           const [wx, wz] = rot(lx, lz, q.p.ry), ry = q.p.ry + lry;
-          const it = { obj, x: q.p.x + wx, y: (q.p.y || 0) + q.y, z: q.p.z + wz, ry };
+          const it = { obj, x: q.p.x + wx, y: (q.p.y || 0) + q.y, z: q.p.z + wz, ry,e:entrada };
           const v = volumen(it);
-          if (!P.some((p, j) => j !== q.i && p.v && choca(p.v, v))) { const c = poner(obj, Z.id, vida ? 'vida' : 'sobre', it.x, it.y, it.z, ry, q.i, q.k); c.v = v; return true; }
+          if (!P.some((p, j) => j !== q.i && p.v && choca(p.v, v)) && !(ctx?.funciones&&e.botin&&cierra([it]))) { const c = poner(obj, Z.id, vida ? 'vida' : 'sobre', it.x, it.y, it.z, ry, q.i, q.k); c.v = v; return true; }
         }
         return false;
       };
@@ -434,7 +473,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
   const SUELTA = new Set(['fila', 'esquina', 'suelo_libre']);
   for (const [ei, e] of K.objetos.entries()) {
     const Z = zonas[e.zona];
-    if (!Z || !reglas[e.regla] || (ctx && ctx.filtro && !ctx.filtro(e))) continue;
+    if (!Z || !reglas[e.regla] || (e.area_min != null && W*D < e.area_min) || (e.area_max != null && W*D >= e.area_max) || (ctx && ctx.filtro && !ctx.filtro(e))) continue;
     activas.push(ei);
     entrada = ei;
     const n0 = P.length;
@@ -454,8 +493,8 @@ export function amueblar(kit, seed = 1, ctx = null) {
 
 // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
 // household only
-export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null) {
-  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas } = amueblar(kit, seed, hogar ? { filtro: filtroHogar(hogar) } : null);
+export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null, contexto = null) {
+  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas } = amueblar(kit, seed, contexto || hogar ? { ...contexto, ...(hogar ? { filtro: filtroHogar(hogar) } : {}) } : null);
   const t2 = MURO / 2;
   // ---- the room (its walls outside the frame: their faces at its edges)
   const B = new HouseBuilder(origin.x, origin.z, false);

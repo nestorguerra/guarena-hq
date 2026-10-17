@@ -1,0 +1,215 @@
+// Pruebas de contrato: ejercitan los constructores reales; los kits alterados se restauran siempre.
+import * as H from '/src/houses.js';
+import { KITS, OBJETOS } from '/src/interiores_datos.js';
+import { filtroHogar, amueblar } from '/src/locales.js';
+import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
+import * as THREE from 'three';
+import { construir } from '/src/objetos.js';
+
+const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
+const tirar = (h) => h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
+
+export async function probarCasas(opts = {}) {
+  const pruebas = [], errores = [];
+  const caso = async (nombre, fn) => {
+    try { await fn(); pruebas.push({ nombre, estado: 'PASS' }); }
+    catch (e) { pruebas.push({ nombre, estado: 'FAIL', motivo: String(e.message || e) }); errores.push(nombre + ': ' + String(e.message || e)); }
+  };
+  await caso('selecciona dormitorio, pintura y taller sin confundirlos', () => {
+    exigir(typeof H.kitDeEstancia === 'function', 'falta la selección compartida de kits');
+    for (const [tipo, perfil, esperado] of [
+      ['dorm', 'familia', 'vivienda_dormitorio'], ['dorm2', 'familia', 'vivienda_dormitorio'],
+      ['taller', 'artista', 'vivienda_pintura'], ['taller', 'agricultor', 'vivienda_taller'],
+      ['hall', 'familia', null], ['pasillo', 'abuela', null],
+    ]) exigir(H.kitDeEstancia(tipo, perfil) === esperado, tipo + '/' + perfil + ': kit equivocado');
+  });
+  await caso('el filtro de dormitorio no coloca muebles exclusivos de otra habitacion', () => {
+    const filtro = filtroHogar({ perfil: 'familia', estilo: 'alegre', botin: [], habitacion: 'dorm2' });
+    exigir(!filtro({ habitacion: ['dorm'] }), 'una entrada del dormitorio principal se activa en el secundario');
+    exigir(filtro({ habitacion: ['dorm2'] }) && filtro({}), 'rechaza entradas aplicables');
+  });
+  await caso('la cobertura cuenta tambien habitaciones sin kit', async () => {
+    const [r] = await validarCasas([1000]);
+    exigir(r.cobertura && r.cobertura.habitables > 1, 'no informa la cobertura de todas las habitaciones');
+    exigir(r.cobertura.porKit + r.cobertura.faltantes.length === r.cobertura.habitables, 'la cobertura pierde habitaciones');
+  });
+  await caso('exigir todas detecta un kit ausente aunque el mobiliario anterior funcione', async () => {
+    const anterior = KITS.vivienda_bano;
+    try {
+      delete KITS.vivienda_bano;
+      const [r] = await validarCasas([1000], { exigirTodas: true });
+      exigir(r.errores.some((e) => e.includes('vivienda_bano')), 'devuelve verde con el baño sin kit');
+    } finally { if (anterior) KITS.vivienda_bano = anterior; }
+  });
+  await caso('un kit fallido conserva el diagnostico y hace fallar la validacion', async () => {
+    const anterior = KITS.vivienda_salon;
+    try {
+      KITS.vivienda_salon = { ...anterior, objetos: null };
+      const h = H.buildVecino(1000);
+      try { exigir(h.fallosKit && h.fallosKit.some((e) => e.kit === 'vivienda_salon' && e.motivo), 'se ha ocultado la causa del retorno al mobiliario anterior'); }
+      finally { tirar(h); }
+      const [r] = await validarCasas([1000]);
+      exigir(r.errores.some((e) => e.includes('vivienda_salon')), 'el fallo de un kit instalado no bloquea la aceptación');
+    } finally { KITS.vivienda_salon = anterior; }
+  });
+  if ((opts.tanda || 0) >= 1) {
+    await caso('tanda 1: cama apoyada y mesita junto al cabecero; espejo sobre lavabo', () => {
+      const cama = OBJETOS.vb_cama_doble;
+      exigir(cama.partes.some(p=>p.p[1]-p.d[1]/2<.01 && p.p[2]>.4), 'la cama no apoya los pies en el suelo');
+      const A = amueblar('vivienda_dormitorio',37,{W:6,D:5,H:2.75,filtro:filtroHogar({perfil:'familia',estilo:'alegre',habitacion:'dorm',botin:[]})});
+      const b=A.P.find(p=>OBJETOS[p.obj].rol==='cama_doble'), m=A.P.find(p=>p.obj==='vb_mesita');
+      exigir(b && m && Math.hypot(b.x-m.x,b.z-m.z)<1.35, 'mesita ausente o lejos de la cama');
+      const B=amueblar('vivienda_bano',37,{W:5,D:3,H:2.75});
+      const l=B.P.find(p=>p.obj==='va_lavabo'), e=B.P.find(p=>p.obj==='va_espejo');
+      exigir(l && e && Math.hypot(l.x-e.x,l.z-e.z)<.4 && Math.abs(l.ry-e.ry)<.01, 'espejo ausente o separado del lavabo');
+    });
+    await caso('tanda 1: las casas no superponen pantalla heredada y lámpara del kit', () => {
+      const h=H.buildVecino(1000);
+      try { h.group.traverse(o=>{
+        if(!o.isMesh || !o.visible || !o.userData.lamp) return;
+        const x=o.position.x, z=o.position.z;
+        exigir(!h.rooms.some(r=>h.estancias.some(e=>e.sala===r.id)&& x>r.x0&&x<r.x1&&z>r.z0&&z<r.z1), 'pantalla heredada visible en habitación por kit');
+      }); } finally { tirar(h); }
+    });
+    await caso('tanda 1: cocina, baño y dormitorio se montan en casas reales', async () => {
+      const res = await validarCasas([1000,1037,1074,1111,1148,1185], { exigirKits: ['vivienda_salon','vivienda_cocina','vivienda_bano','vivienda_dormitorio'] });
+      exigir(res.every(r => !r.errores.length), res.flatMap(r=>r.errores).slice(0,5).join('; '));
+    });
+    await caso('tanda 1: los muebles conservan sueño, comida, nevera y ocultacion', () => {
+      for (const seed of [1000,1037,1074,1111,1148,1185]) {
+        const h = H.buildVecino(seed);
+        try {
+          exigir(h.pieces.kitchen.length > 0, seed + ': sin cocina funcional');
+          exigir(h.inter.some(i=>i.type==='fridge'), seed + ': sin nevera funcional');
+          for (const rm of h.rooms.filter(r=>r.type==='dorm' || r.type==='dorm2')) {
+            exigir(h.pieces.bed.some(b=>b.rm.id===rm.id), seed + '/' + rm.id + ': sin cama funcional');
+            if (rm.type==='dorm') exigir(h.pieces.bed.some(b=>b.rm.id===rm.id && b.double), seed + ': dormitorio principal sin cama doble');
+          }
+          exigir(h.inter.some(i=>i.type==='hide'), seed + ': sin armario para ocultarse');
+          exigir(h.loot.filter(i=>i.id==='colchon').length <= 1, seed + ': ahorros duplicados');
+        } finally { tirar(h); }
+      }
+    });
+  }
+  if ((opts.tanda || 0) >= 2) {
+    await caso('tanda 2: comedor, niños, joven, estudio y despacho por kit', async () => {
+      const res=await validarCasas(Array.from({length:40},(_,i)=>1000+37*i),{exigirKits:['vivienda_comedor','vivienda_ninos','vivienda_joven','vivienda_estudio','vivienda_despacho']});
+      exigir(res.every(r=>!r.errores.length),res.flatMap(r=>r.errores).slice(0,5).join('; '));
+    });
+    await caso('tanda 2: camas, mesa y asientos, escritorio y lectura por habitación', () => {
+      for(let seed=1000;seed<2500;seed+=37) {
+        const h=H.buildVecino(seed);
+        try {
+          for(const rm of h.rooms) {
+            if(['ninos','dormJoven'].includes(rm.type)) exigir(h.pieces.bed.some(b=>b.rm.id===rm.id),seed+'/'+rm.type+': falta cama');
+            if(['comedor','estudio','despacho','ninos','dormJoven'].includes(rm.type)) {
+              exigir(h.pieces.table.some(t=>t.rm.id===rm.id),seed+'/'+rm.type+': falta mesa');
+              exigir(h.pieces.seat.some(t=>t.rm.id===rm.id),seed+'/'+rm.type+': falta asiento');
+            }
+            if(['estudio','despacho'].includes(rm.type)) {
+              const e=h.estancias.find(e=>e.sala===rm.id);
+              exigir(e && e.colocados.some(c=>OBJETOS[c.obj].rol==='libros'),seed+'/'+rm.type+': falta lectura');
+            }
+          }
+          const ids=h.loot.map(l=>l.id);
+          exigir(new Set(ids).size===ids.length,seed+': botín duplicado');
+          exigir(ids.every(id=>h.profile.loot.includes(id)),seed+': botín ajeno al perfil');
+        } finally { tirar(h); }
+      }
+    });
+  }
+  if ((opts.tanda || 0) >= 3) {
+    await caso('tanda 3: ninguna habitación de vecinos vuelve al mobiliario anterior', async () => {
+      const res=await validarCasas(Array.from({length:40},(_,i)=>1000+37*i),{exigirTodas:true});
+      exigir(res.every(r=>!r.errores.length),res.flatMap(r=>r.errores).slice(0,5).join('; '));
+    });
+    await caso('tanda 3: instrumentos, pintura, costura y botín del cazador', () => {
+      const vistas=new Set();
+      for(let seed=1000;seed<5000;seed+=37) {
+        const h=H.buildVecino(seed);
+        try {
+          for(const rm of h.rooms) {
+            if(['hall','pasillo'].includes(rm.type))continue;
+            const kid=H.kitDeEstancia(rm.type,h.profile.id),e=h.estancias.find(e=>e.sala===rm.id);
+            exigir(e && e.kit===kid,seed+'/'+rm.type+': kit incorrecto');vistas.add(kid);
+            if(rm.type==='musica') exigir(e.colocados.some(c=>OBJETOS[c.obj].rol==='piano')&&e.colocados.some(c=>OBJETOS[c.obj].rol==='guitarra'),'música sin instrumentos utilizables');
+          }
+          if(h.profile.id==='cazador' && h.rooms.some(r=>r.type==='trofeos')) exigir(h.loot.some(l=>l.id==='rifle'),'trofeos sin rifle del perfil');
+          const ids=h.loot.map(l=>l.id);exigir(new Set(ids).size===ids.length,'botín repetido');
+          exigir(ids.every(id=>h.profile.loot.includes(id)),'botín de otro hogar');
+        } finally {tirar(h);}
+      }
+      for(const k of ['pintura','taller','costura','musica','trofeos','trastero','despensa'])exigir(vistas.has('vivienda_'+k),'sin muestra de '+k);
+    });
+  }
+  if ((opts.tanda || 0) >= 4) {
+    await caso('integración: un cuadro accesible en hall o pasillo no es una habitación sin kit',()=>{
+      for(const seed of [1013,1703]){const h=H.buildVecino(seed);try{const r=revisarUso(h);exigir(!r.errores.length,r.errores.join('; '));exigir(r.puntos.some(p=>['hall','pasillo'].includes(p.sala)&&p.tipo==='loot'&&p.ok),'no se ha comprobado el botín del paso');}finally{tirar(h);}}
+    });
+    await caso('integración: comida, nevera, ocultación, cajones y despertar alcanzables', () => {
+      for(let seed=1000;seed<2500;seed+=37){const h=H.buildVecino(seed);try {const r=revisarUso(h);exigir(!r.errores.length,seed+': '+r.errores.slice(0,3).join('; '));}finally{tirar(h);}}
+    });
+    await caso('integración: la casa completa respeta mallas, luces y montaje', async () => {
+      const res=await validarCasas([1000,1037,1074,1111,1148,1185],{exigirTodas:true});
+      for(const r of res){
+        exigir(Number.isFinite(r.mallas)&&Number.isFinite(r.luces)&&Number.isFinite(r.montaje_ms),'faltan mediciones de casa completa');
+        exigir(r.mallas<=60&&r.luces<=9&&r.montaje_ms<=1500,r.seed+': presupuesto de casa excedido '+JSON.stringify({mallas:r.mallas,luces:r.luces,ms:r.montaje_ms}));
+      }
+    });
+  }
+  if ((opts.tanda || 0) >= 5) {
+    await caso('acabado: cocina amplia con mesa y joven con tele apoyada y sofá',()=>{
+      for(const seed of [1594,1851,2813,3244]){
+        const h=H.buildVecino(seed);try{for(const e of h.estancias){
+          if(e.kit==='vivienda_cocina'&&e.W*e.D>17)exigir(e.colocados.some(p=>['va_mesa_comedor','mesa_camilla'].includes(p.obj)),seed+': cocina amplia sin mesa');
+          if(e.kit==='vivienda_joven'&&e.W*e.D>30){
+            exigir(e.colocados.some(p=>p.obj==='televisor_plano'&&p.sop!=null),seed+': TV ausente o en el suelo');
+            exigir(e.colocados.some(p=>p.obj==='sofa_dos_plazas'),seed+': rincón joven sin sofá');
+            const tele=e.colocados.find(p=>p.obj==='televisor_plano'),sofa=e.colocados.find(p=>p.obj==='sofa_dos_plazas');exigir(Math.cos(tele.ry-sofa.ry)<-.9,seed+': sofá no orientado hacia TV');
+          }
+        }}finally{tirar(h);}
+      }
+    });
+    await caso('acabado: el color de catálogo solo se convierte una vez a lineal',()=>{
+      const g=construir([{obj:'vb_armario',x:0,z:0,seed:1}]);
+      try {const m=g.children.find(m=>m.geometry?.attributes.color),esperado=new THREE.Color(OBJETOS.vb_armario.partes[0].c);exigir(Math.abs(m.geometry.attributes.color.getX(0)-esperado.r)<.00001,'la madera se oscurece por una conversión sRGB duplicada');}
+      finally{g.traverse(m=>m.geometry?.dispose());}
+    });
+    await caso('acabado: dos lienzos de semillas distintas conservan sus dibujos',()=>{
+      const gs=[1,2].map(seed=>construir([{obj:'vb_caballete',x:0,z:0,seed}]));
+      try {const images=gs.map(g=>g.children.find(m=>m.material.map)?.material.map.image.toDataURL());exigir(images[0]&&images[1]&&images[0]!==images[1],'la caché repite el mismo lienzo en todos los caballetes');}
+      finally{gs.forEach(g=>g.traverse(m=>m.geometry?.dispose()));}
+    });
+    await caso('Annie: habitaciones renovadas sin perder escalera ni funciones propias',async()=>{
+      const {buildAnnieHouse}=await import('/src/interiors.js');
+      const h=buildAnnieHouse(12,{x:-9700,z:-9700});
+      try {
+        exigir(h.estancias?.length===5&&h.personalizadas?.includes('dormitorio'),'faltan las cinco estancias por kit o el dormitorio personalizado');
+        exigir(h.levels.length===2&&h.doors.length===7,'se han alterado plantas o puertas');
+        exigir(Math.abs(h.floorY(-9697.4,-9692.8,0)-1.55)<.01,'ha cambiado la rampa de la escalera');
+        for(const tipo of ['safe','bed','mirror','tv','drawer','fridge','eat','read','exit'])exigir(h.inter.some(i=>i.type===tipo),'Annie sin acción '+tipo);
+        const caja=h.inter.find(i=>i.type==='safe');exigir(caja.y===3.1&&Math.abs(caja.x-(-9697.84))<.01,'ha cambiado la caja fuerte o su planta');
+        exigir(!h.fallosKit?.length,'kit de Annie fallido');
+        for(const e of h.estancias){const r=revisar({local:e,group:{traverse(){}}},{interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}});exigir(!r.errores.length,e.sala+': '+r.errores.join('; '));}
+        // Alcance real por los colliders de cada planta; no basta con alcanzar una zona del kit aislado.
+        for(const lv of [0,1]){
+          const S=.1,nx=64,nz=lv?105:135,libre=new Uint8Array(nx*nz),visit=new Uint8Array(nx*nz),col=h.levels[lv];
+          for(let z=0;z<nz;z++)for(let x=0;x<nx;x++){
+            const p={x:h.origin.x-3.2+(x+.5)*S,z:h.origin.z+(z+.5)*S,y:lv*3.1},q={...p};
+            if(lv&&x>51&&z>49&&z<94)continue;col.resolveCircle(q,.34);if(Math.hypot(q.x-p.x,q.z-p.z)<.005)libre[z*nx+x]=1;
+          }
+          const inicio=lv?{x:h.origin.x+2.56,z:h.origin.z+9.9}:h.spots.entrada;
+          const idx=p=>Math.max(0,Math.min(nz-1,Math.floor((p.z-h.origin.z)/S)))*nx+Math.max(0,Math.min(nx-1,Math.floor((p.x-h.origin.x+3.2)/S)));
+          const cola=[idx(inicio)];exigir(libre[cola[0]],'inicio de planta ocupado');visit[cola[0]]=1;
+          for(let k=0;k<cola.length;k++){const c=cola[k],x=c%nx,z=Math.floor(c/nx);for(const [dx,dz] of [[1,0],[-1,0],[0,1],[0,-1]]){const xx=x+dx,zz=z+dz,j=zz*nx+xx;if(xx>=0&&xx<nx&&zz>=0&&zz<nz&&libre[j]&&!visit[j]){visit[j]=1;cola.push(j);}}}
+          const cerca=(p,r)=>cola.some(c=>Math.hypot(h.origin.x-3.2+(c%nx+.5)*S-p.x,h.origin.z+(Math.floor(c/nx)+.5)*S-p.z)<=r);
+          exigir(lv||cerca({x:h.origin.x+2.56,z:h.origin.z+4.6},.2),'no se alcanza el pie de la escalera');
+          for(const i of h.inter.filter(i=>((i.y||0)>2?1:0)===lv))exigir(cerca(i,(i.r||.8)-.05),'acción de Annie inaccesible: '+i.type+'/'+lv);
+        }
+        let mallas=0;h.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});
+        exigir(mallas<=60&&h.lights.length<=9,'Annie excede presupuesto '+mallas+'/'+h.lights.length);
+      }finally{tirar(h);}
+    });
+  }
+  return { pruebas, errores };
+}

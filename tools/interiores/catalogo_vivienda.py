@@ -5,7 +5,7 @@
 # piece marked tinte take the colours of the house's style. The script is the model: it writes data/objetos/vivienda.json.
 # Frame of an object: x across, y up from its foot, z out of its front (+z faces whoever uses it; its back at -z).
 #   python3 tools/interiores/catalogo_vivienda.py
-import json, os
+import json, os, math
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 OUT = []
 
@@ -70,7 +70,9 @@ obj('mesa_centro_cristal', 'Mesa de centro de cristal', 'mesa', 'CARRY', 18, 'cr
     *patas(1.1, 0.6, 0.4, grosor=0.03, c=METAL, m='metal'), caja(1.1, 0.02, 0.6, y=0.41, c=CRISTAL, m='cristal')],
     rol='mesa', superficies=[{'y': 0.42, 'margen': 0.04}])
 obj('mesa_camilla', 'Mesa camilla con faldas', 'mesa', 'CARRY', 16, 'tela', 'suelo', [
-    cil(0.55, 0.62, 0.72, y=0.36, c=TELA, m='tela', tinte='tela', seg=20), cil(0.56, 0.56, 0.03, y=0.735, c=BLANCO, m='tela', seg=20)],
+    cil(0.49, 0.55, 0.69, y=0.345, c=TELA, m='tela', tinte='tela', seg=32),
+    *[cil(.022,.032,.69,x=.53*math.sin(i*math.pi/12),y=.345,z=.53*math.cos(i*math.pi/12),c=TELA,m='tela',tinte='tela',seg=6) for i in range(24)],
+    cil(0.56, 0.56, 0.03, y=0.735, c=BLANCO, m='tela', seg=32)],
     rol='mesa', superficies=[{'y': 0.75, 'margen': 0.06}], nota='con el brasero debajo, como en las casas de antes')
 obj('mesita_auxiliar', 'Mesita auxiliar', 'mesita', 'CARRY', 6, 'madera', 'suelo', [
     *patas(0.45, 0.45, 0.55, grosor=0.03, c=MADERA, tinte='madera'), caja(0.45, 0.03, 0.45, y=0.565, c=MADERA, tinte='madera')],
@@ -162,8 +164,8 @@ obj('chimenea', 'Chimenea de leña', 'obra', 'FIXED', 600, 'piedra', 'suelo', [
     caja(0.5, 0.06, 0.08, y=0.16, z=0.0, c='#5a3a20', r=[0, 20, 0]), caja(0.5, 0.06, 0.08, y=0.2, z=0.02, c='#4a3018', r=[0, -15, 0]), esf(0.12, 0, 0.2, 0, c='#e87a2a', m='comida', luz=True, s=[1.6, 0.5, 0.8])],
     rol='chimenea', motivo_fijo='estructural', superficies=[{'y': 1.14, 'margen': 0.04}], nota='la lumbre de las noches de invierno')
 obj('piano_pared', 'Piano de pared', 'instrumento', 'PUSH_HEAVY', 210, 'madera', 'suelo', [
-    caja(1.45, 1.2, 0.55, y=0.6, z=-0.05, c='#2c2622'), caja(1.45, 0.06, 0.62, y=0.72, z=0.01, c='#2c2622'), caja(1.3, 0.03, 0.15, y=0.735, z=0.2, c='#efece4', m='plastico'),
-    *[caja(0.012, 0.018, 0.09, x=-0.6 + i * 0.05, y=0.755, z=0.18, c=NEGRO, m='plastico') for i in range(25) if i % 7 not in (2, 6)],
+    caja(1.45, 1.2, 0.55, y=0.6, z=-0.05, c='#2c2622'), caja(1.45, 0.06, 0.62, y=0.72, z=0.01, c='#2c2622'), caja(1.3, 0.03, 0.25, y=0.735, z=0.35, c='#efece4', m='plastico'),
+    *[caja(0.012, 0.018, 0.09, x=-0.6 + i * 0.05, y=0.765, z=0.29, c=NEGRO, m='plastico') for i in range(25) if i % 7 not in (2, 6)],
     caja(0.06, 0.66, 0.06, x=-0.65, y=0.33, z=0.22, c='#2c2622'), caja(0.06, 0.66, 0.06, x=0.65, y=0.33, z=0.22, c='#2c2622')],
     rol='piano', modificadores=['USE'], superficies=[{'y': 1.2, 'margen': 0.05}])
 obj('banqueta_piano', 'Banqueta del piano', 'sillon', 'CARRY', 9, 'madera', 'suelo', [*patas(0.6, 0.34, 0.46, c='#2c2622'), caja(0.6, 0.06, 0.34, y=0.49, c='#2a2a2e', m='tela')],

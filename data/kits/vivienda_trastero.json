@@ -1,0 +1,286 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Trastero de la vivienda",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.5,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante_alto",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cajas_apiladas",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cajas_apiladas",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante_alto",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cajas_apiladas",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_caja_almacen",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cajas_apiladas",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 18
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "va_cajas_apiladas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "fe_pintura_blanca",
+    "fe_pintura_roja",
+    "fe_pintura_azul",
+    "fe_pintura_verde",
+    "fe_pintura_amarilla",
+    "fe_pintura_gris",
+    "fe_barniz",
+    "fe_pintura_cubo",
+    "fe_cajas_tornillos",
+    "fe_cajas_clavos_puntas",
+    "fe_tacos",
+    "fe_bisagras",
+    "fe_candados",
+    "fe_silicona",
+    "fe_cola",
+    "fe_cintas",
+    "fe_cable_bobinas",
+    "fe_enchufes",
+    "fe_grifos",
+    "fe_tuberias_pvc",
+    "fe_guantes_trabajo",
+    "fe_tijeras_poda",
+    "fe_regaderas",
+    "fe_abonos",
+    "fe_maletines",
+    "fe_taladros_caja",
+    "fe_brocas",
+    "fe_niveles_metros",
+    "fe_brochas",
+    "tal_llaves_juego",
+    "tal_martillo",
+    "tal_caja_herramientas",
+    "tal_trapos",
+    "tal_rollo_papel_taller",
+    "caja_carton",
+    "caja_archivo",
+    "vb_cesto",
+    "vb_ropa",
+    "vb_colcha"
+   ],
+   "en": [
+    "va_estante",
+    "va_estante_alto"
+   ],
+   "por_soporte": [
+    10,
+    16
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_plafon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Casa de Estudillo interior 04 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_04_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Casa de Estudillo interior 05 - storage room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_interior_05_-_storage_room.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Lanhydrock House, First floor storage room - geograph.org.uk - 4778882.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Lanhydrock_House%2C_First_floor_storage_room_-_geograph.org.uk_-_4778882.jpg",
+   "autor": "Michael Garlick",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Kattvind.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Kattvind.jpg",
+   "autor": "Shoepolish",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "HK SYP 西環 Sai Ying Pun ML 半山區 Mid-Levels 般咸道 64 Bonham Road FV 嘉麗苑 5B Skylight Tower store room January 2016 DSC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:HK_SYP_%E8%A5%BF%E7%92%B0_Sai_Ying_Pun_ML_%E5%8D%8A%E5%B1%B1%E5%8D%80_Mid-Levels_%E8%88%AC%E5%92%B8%E9%81%93_64_Bonham_Road_FV_%E5%98%89%E9%BA%97%E8%8B%91_5B_Skylight_Tower_store_room_January_2016_DSC.jpg",
+   "autor": "FUG TIAM Naim Sheim",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Alberton Attic (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Alberton_Attic_%281%29.jpg",
+   "autor": "Chefcat29",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Alberton Attic (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Alberton_Attic_%282%29.jpg",
+   "autor": "Chefcat29",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Copernicus house – attic.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Copernicus_house_%E2%80%93_attic.jpg",
+   "autor": "Ptjackyll",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Empty storage compartment in the attic in German house.jpeg",
+   "url": "https://commons.wikimedia.org/wiki/File:Empty_storage_compartment_in_the_attic_in_German_house.jpeg",
+   "autor": "Pittigrilli",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Attic Organized 2.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Attic_Organized_2.JPG",
+   "autor": "Scott Arneman",
+   "licencia": "CC BY-SA 3.0"
+  }
+ ]
+}

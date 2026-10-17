@@ -1,0 +1,252 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Cuarto de costura y labores",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.3,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_costura",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "silla_comedor",
+   "de": "va_costura",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "lados": [
+    "frente"
+   ],
+   "mira_ref": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_armario",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "sillon_orejero",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 14
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_paisaje",
+    "fotos_familia"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "pila_jerseys_rojo",
+    "pila_jerseys_azul_marino",
+    "pila_jerseys_verde",
+    "pila_jerseys_mostaza",
+    "pila_jerseys_gris",
+    "pila_jerseys_crudo",
+    "pila_camisetas_blanca",
+    "pila_camisetas_negra",
+    "pila_camisetas_rosa",
+    "pila_camisetas_turquesa",
+    "pila_pantalones_beige",
+    "pila_pantalones_gris",
+    "va_tela_lino",
+    "va_tela_algodon",
+    "va_hilo_0",
+    "va_hilo_1",
+    "va_hilo_2",
+    "va_hilo_3",
+    "va_hilo_4",
+    "va_hilo_5",
+    "va_hilo_dental",
+    "va_tijeras",
+    "va_cinta_metrica",
+    "va_alfiletero",
+    "va_botones",
+    "va_agujas",
+    "va_patrones",
+    "va_dedal",
+    "va_retales",
+    "va_bastidor",
+    "va_cierre",
+    "va_caja_hilos",
+    "va_ovillo",
+    "vb_colcha",
+    "vb_ropa",
+    "vb_cesto",
+    "lampara_mesa"
+   ],
+   "en": [
+    "va_estante",
+    "va_costura"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_lampara_trabajo",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Campbell House Spokane Sewing Room 2018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Campbell_House_Spokane_Sewing_Room_2018.jpg",
+   "autor": "Antony-22",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Looking ESE through sewing room - second floor - Tinsley Living Farm - Museum of the Rockies - 2013-07-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+   "autor": "Tim Evanson",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Looking SE through sewing room - second floor - Tinsley Living Farm - Museum of the Rockies - 2013-07-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Looking_SE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+   "autor": "Tim Evanson",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Loom - sewing room - second floor - Tinsley Living Farm - Museum of the Rockies - 2013-07-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Loom_-_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+   "autor": "Tim Evanson",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Lady Nuffield's Sewing room - geograph.org.uk - 4811605.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Lady_Nuffield%27s_Sewing_room_-_geograph.org.uk_-_4811605.jpg",
+   "autor": "Bill Nicholls",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Grove Museum sewing room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Grove_Museum_sewing_room.jpg",
+   "autor": "Northerner",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Sewing room wallpaper at Alberton, Auckland.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sewing_room_wallpaper_at_Alberton%2C_Auckland.jpg",
+   "autor": "Carol Green",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "A room dedicated to needlework.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:A_room_dedicated_to_needlework.jpg",
+   "autor": "Garth Weals",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Sewing room in the Emlen Physick House, Cape May, New Jersey LCCN2011631405.tif",
+   "url": "https://commons.wikimedia.org/wiki/File:Sewing_room_in_the_Emlen_Physick_House%2C_Cape_May%2C_New_Jersey_LCCN2011631405.tif",
+   "autor": "Carol M. Highsmith",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Lincoln Sewing Room (10531055433).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Lincoln_Sewing_Room_%2810531055433%29.jpg",
+   "autor": "Gary Todd from Xinzheng, China",
+   "licencia": "CC0"
+  }
+ ]
+}

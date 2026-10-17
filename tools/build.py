@@ -5,7 +5,7 @@ With --split the map data and the assets ship as separate files next to the page
 Each ES module becomes a scoped factory (so top-level names never collide); local imports turn into
 destructuring of the dependency's exports; 'three' and 'three/addons/*' imports are hoisted to the top.
 """
-import json, os, re, shutil, sys
+import json, os, re, shutil, sys, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
@@ -187,6 +187,12 @@ def main():
         page += '<script type="application/json" id="assetdata">' + blob + '</script>\n'
     # the public multiplayer server, if there is one (GUARENA_MP_URL=https://… python3 tools/build.py): the copies that
     # cannot host a game themselves (the published page, GitHub Pages) offer to go there
+    # Identidad verificable de la versión publicada, sin incluir rutas ni datos locales.
+    try:
+        revision = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+    except (OSError, subprocess.CalledProcessError):
+        revision = 'local-sin-git'
+    page += '<meta name="guarena-revision" content="' + revision + '">\n'
     mp_url = os.environ.get('GUARENA_MP_URL', '').strip()
     if mp_url:
         assert re.match(r'^https://[\w.-]+(:\d+)?/?$', mp_url), 'GUARENA_MP_URL debe ser https://servidor'

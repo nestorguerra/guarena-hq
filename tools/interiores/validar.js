@@ -9,7 +9,7 @@
 //  - variación: the same seed gives the same layout (its hash), another seed a different one (≥ 30 % of it).
 //   const V = await import('/tools/interiores/validar.js'); await V.validar('cafeteria', 7)
 import { buildLocal } from '/src/locales.js';
-import { PROFILES, buildVecino } from '/src/houses.js';
+import { PROFILES, buildVecino, kitDeEstancia } from '/src/houses.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { caja } from '/src/objetos.js';
 import { rot, partes, penetra, mapaPaso } from '/src/interiores_geo.js';
@@ -89,14 +89,17 @@ export function revisar(h, presupuesto) {
   // ---- luz
   const K_ = K.iluminacion, nl = L.luces.length;
   if (nl < K_.fuentes[0] || nl > K_.fuentes[1]) err.push(`luz: ${nl} fuentes, el kit pide ${K_.fuentes.join('–')}`);
-  for (const l of L.luces) if (l.k < K_.temperatura_k[0] || l.k > K_.temperatura_k[1]) err.push(`luz: ${l.k} K fuera de ${K_.temperatura_k.join('–')}`);
+  for (const l of L.luces) {
+    if(L.modoLuz==='casa'){if(!(l.intensidad>0)||!(l.alcance>0))err.push('luz: luminaria doméstica sin intensidad o alcance');}
+    else if (l.k < K_.temperatura_k[0] || l.k > K_.temperatura_k[1]) err.push(`luz: ${l.k} K fuera de ${K_.temperatura_k.join('–')}`);
+  }
   const luzZona = {};
   for (const Z of Object.values(L.zonas)) {
     if (!Z.publica) continue;
     let min = Infinity;
     for (let x = Z.x0 + 0.3; x < Z.x1 - 0.2; x += 0.6) for (let z = Z.z0 + 0.3; z < Z.z1 - 0.2; z += 0.6) {
       let e = 0;
-      for (const l of L.luces) { const dx = l.x - x, dz = l.z - z, dy = l.y - 0.8, d2 = dx * dx + dy * dy + dz * dz; e += (dy / Math.sqrt(d2)) / d2; }
+      for (const l of L.luces) { const dx = l.x - x, dz = l.z - z, dy = l.y - 0.8, d2 = dx * dx + dy * dy + dz * dz; e += (dy / Math.sqrt(d2)) / d2 * (L.modoLuz==='casa'?l.intensidad/5.5:1); }
       min = Math.min(min, e);
     }
     luzZona[Z.id] = +min.toFixed(3);
@@ -127,22 +130,26 @@ function diferencia(A, B) {
 
 // the households a home's room is laid out for, one per seed: every profile of neighbour in turn, with its styles and
 // what it has to take (src/houses.js PROFILES)
-function hogarDe(K, s) {
-  if (!K.objetos.some((e) => e.perfil || e.estilo || e.botin)) return null;
+function hogarDe(K, s, tip) {
+  if (!K.objetos.some((e) => e.perfil || e.estilo || e.botin || e.habitacion)) return null;
   const ids = Object.keys(PROFILES), id = ids[(s - 1) % ids.length], P = PROFILES[id];
-  return { perfil: id, estilo: P.styles[Math.floor((s - 1) / ids.length) % P.styles.length], botin: P.loot };
+  const habitacion=tip==='vivienda_ninos'?'ninos':tip==='vivienda_joven'?'dormJoven':Math.floor((s - 1) / (ids.length * 2)) % 2 ? 'dorm2' : 'dorm';
+  return { perfil: id, estilo: P.styles[Math.floor((s - 1) / ids.length) % P.styles.length], botin: P.loot, habitacion };
 }
 
 export async function validar(tip, seeds = [1, 2, 3]) {
   const presupuesto = await (await fetch('/data/quality_budgets.json')).json();
   const out = [];
   for (const s of seeds) {
-    const hogar = hogarDe(KITS[tip], s);
-    const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar);
+    const hogar = hogarDe(KITS[tip], s,tip);
+    // Las estancias usan puerta doméstica (0,86 m + sus márgenes), no el acceso de 1,5 m de un comercio.
+    const puertaLab = KITS[tip].puerta ?? 0;
+    const contexto = tip.startsWith('vivienda_') ? { libres: [{ cx: puertaLab, cz: 0.5, hw: 0.58, hd: 0.5, a: 0, y0: 0, y1: 2.4 }], inicio: { x: puertaLab, z: 0.5 } } : null;
+    const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
     const rep = revisar(h, presupuesto);
     // (I-03: the same seed again, the same layout)
-    const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar);
-    if (hogar) rep.hogar = `${hogar.perfil} · ${hogar.estilo}`;
+    const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
+    if (hogar) {rep.hogar = `${hogar.perfil} · ${hogar.estilo}`;rep.contexto_hogar=hogar;}
     rep.determinista = h2.local.hash === h.local.hash;
     if (!rep.determinista) rep.errores.push(`variación: la semilla ${s} da otro trazado la segunda vez`);
     rep._c = h.local.colocados.map((c) => ({ obj: c.obj, x: c.x, y: c.y, z: c.z, ry: c.ry }));
@@ -161,22 +168,65 @@ export async function validar(tip, seeds = [1, 2, 3]) {
 // the neighbours' houses (epic I, vivienda por estancia): each house built as the game builds it, and every room of it
 // furnished from a kit checked as an interior is — its household's entries, nothing floating or run into another, the way
 // through from its door — (its light is the house's: not checked here), and the house within the interior budget
-export async function validarCasas(seeds) {
+export async function validarCasas(seeds, opts = {}) {
   const presupuesto = await (await fetch('/data/quality_budgets.json')).json(), B = presupuesto.interior, out = [];
   for (const s of seeds) {
-    const h = buildVecino(s, ORIGIN), err = [];
-    let tris = 0;
-    h.group.traverse((o) => { if (o.isMesh) tris += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3; });
+    const t0=performance.now(),h = buildVecino(s, ORIGIN), err = [],montaje=performance.now()-t0;
+    let tris = 0,mallas=0;
+    h.group.traverse((o) => { if (o.isMesh&&o.visible) {mallas++;tris += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3;} });
     if (tris > B.triangulos_max) err.push(`rendimiento: ${Math.round(tris)} triángulos > ${B.triangulos_max}`);
+    if(mallas>B.mallas_max)err.push(`rendimiento: ${mallas} mallas > ${B.mallas_max}`);
+    if(h.lights.length>B.luces_max)err.push(`rendimiento: ${h.lights.length} luces > ${B.luces_max}`);
+    if(montaje>B.entrada_ms_max)err.push(`rendimiento: montaje ${montaje.toFixed(1)} ms > ${B.entrada_ms_max}`);
     const salas = [];
+    const habitables = h.rooms.filter((q) => q.type !== 'pasillo' && q.type !== 'hall');
+    const faltantes = habitables.filter((q) => !h.estancias.some((e) => e.sala === q.id)).map((q) => ({ sala: q.id, tipo: q.type, kit: kitDeEstancia(q.type, h.profile.id) }));
+    const cobertura = { habitables: habitables.length, porKit: h.estancias.length, faltantes };
+    for (const f of h.fallosKit || []) err.push(`montaje: ${f.sala} (${f.kit}): ${f.motivo}`);
+    for(const f of h.fallosUso||[])err.push('uso: '+f);
+    const uso=revisarUso(h);err.push(...uso.errores.map(e=>'uso: '+e));
+    for (const f of faltantes) if (opts.exigirTodas || (opts.exigirKits || []).includes(f.kit)) err.push(`cobertura: ${f.sala} sin ${f.kit || 'kit de habitación conocido'}`);
     for (const est of h.estancias) {
       const rep = revisar({ local: est, group: { traverse() {} } }, { interior: { triangulos_max: Infinity, mallas_max: Infinity, luces_max: Infinity } });
-      const e = rep.errores.filter((x) => !x.startsWith('luz'));
+      const e = rep.errores;
       for (const x of e) err.push(`${est.sala} (${est.kit}): ${x}`);
-      salas.push({ sala: est.sala, kit: est.kit, objetos: est.colocados.length, distintos: rep.distintos, errores: e.length });
+      salas.push({ sala: est.sala, kit: est.kit, objetos: est.colocados.length, distintos: rep.distintos,luces:est.luces,luz:rep.luz, errores: e.length });
     }
-    out.push({ seed: s, perfil: h.profile.id, estilo: h.profile.style, plano: h.profile.layout, triangulos: Math.round(tris), salas, errores: err });
+    out.push({ seed: s, perfil: h.profile.id, estilo: h.profile.style, plano: h.profile.layout, triangulos: Math.round(tris),mallas,luces:h.lights.length,montaje_ms:+montaje.toFixed(1), cobertura, salas, errores: err });
     h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
   }
   return out;
+}
+
+// Distancia de uso desde celdas alcanzables por un cuerpo de 0,8 m, incluida la planta alta.
+// Los muebles conservan sus anclajes; esto no confunde el centro de una cama con el sitio donde se despierta.
+export function revisarUso(h){
+  const errores=[],puntos=[],comprobados=new Set();
+  for(const est of h.estancias){
+    if(!est.origen){errores.push(est.sala+': falta marco mundial');continue;}
+    const M=mapaPaso(est,est.colocados.flatMap(partes),.05,est.ancho,est.inicio),or=est.origen;
+    const cerca=(x,z)=>{let d=Infinity;for(let c=0;c<M.reach.length;c++)if(M.reach[c])d=Math.min(d,Math.hypot(or.x-est.W/2+(c%M.nx+.5)*M.S-x,or.z+(Math.floor(c/M.nx)+.5)*M.S-z));return d;};
+    const rm=h.rooms.find(r=>r.id===est.sala);
+    for(const i of h.inter){
+      if(!['eat','fridge','hide','drawer','piano','guitar','read','mirror','loot'].includes(i.type)||Math.abs((i.y||0)-or.y)>.2)continue;
+      if(i.sala?i.sala!==est.sala:i.x<rm.x0||i.x>rm.x1||i.z<rm.z0||i.z>rm.z1)continue;
+      comprobados.add(i);
+      const d=cerca(i.x,i.z),ok=d<=(i.r||.8)-.05;puntos.push({sala:est.sala,tipo:i.type,distancia:+d.toFixed(3),ok});
+      if(!ok)errores.push(est.sala+'/'+i.type+': sin acceso a distancia de uso');
+    }
+    for(const b of h.pieces.bed.filter(b=>b.rm.id===est.sala)){
+      const d=cerca(b.side.x,b.side.z),ok=d<=.18;puntos.push({sala:est.sala,tipo:'despertar',distancia:+d.toFixed(3),ok});
+      if(!ok)errores.push(est.sala+'/despertar: salida de cama ocupada');
+    }
+  }
+  for(const i of h.inter)if(['eat','fridge','hide','drawer','piano','guitar','mirror','loot'].includes(i.type)&&!comprobados.has(i)){
+    const rm=h.rooms.find(r=>['hall','pasillo'].includes(r.type)&&r.lv===((i.y||0)>2?1:0)&&i.x>=r.x0&&i.x<=r.x1&&i.z>=r.z0&&i.z<=r.z1);
+    if(rm){
+      const q={x:i.x,z:i.z},col=h.levels?.[rm.lv]||h.collider;col.resolveCircle(q,.4);
+      const d=Math.hypot(q.x-i.x,q.z-i.z),ok=d<(i.r||.8)-.05;
+      puntos.push({sala:rm.id,tipo:i.type,distancia:+d.toFixed(3),ok});
+      if(!ok)errores.push(rm.id+'/'+i.type+': pasillo ocupado');
+    }else errores.push(i.type+': interacción fuera de su habitación o planta');
+  }
+  return {errores,puntos};
 }

@@ -69,8 +69,8 @@ function canvasTex(key, w, h, draw) {
 }
 function textura(tex, seed) {
   const k = tex.tipo;
-  if (TEX_FAMILIAS[k]) { const T = TEX_FAMILIAS[k]; return canvasTex(k + ':' + JSON.stringify(tex), T.w || 256, T.h || 256, (x, w, h) => T.draw(x, w, h, tex, seed)); }
-  if (k === 'paisaje' || k === 'foto' || k === 'calendario') {
+  if (TEX_FAMILIAS[k]) { const T = TEX_FAMILIAS[k]; return canvasTex(k + ':' + JSON.stringify(tex) + ':' + (seed % 17), T.w || 256, T.h || 256, (x, w, h) => T.draw(x, w, h, tex, seed % 17)); }
+  if (k === 'paisaje' || k === 'foto' || k === 'calendario' || k === 'virgen') {
     const key = k + ':' + (seed % 5);
     if (!TEX.has(key)) TEX.set(key, pictureTexture(k, seed % 5 + 1)); // (housekit's: already a texture)
     return TEX.get(key);
@@ -96,7 +96,15 @@ function textura(tex, seed) {
     for (let i = 0; i < 12; i++) { const a = (i / 12) * Math.PI * 2; x.fillStyle = '#222'; x.fillRect(64 + Math.sin(a) * 48 - 2, 64 - Math.cos(a) * 48 - 2, 4, 4); }
     x.lineWidth = 4; x.beginPath(); x.moveTo(64, 64); x.lineTo(64, 28); x.moveTo(64, 64); x.lineTo(90, 70); x.stroke();
   });
-  if (k === 'cartel_fiesta') return canvasTex('cartel', 192, 288, (x, w, h) => {
+  if (k === 'cartel_fiesta') return canvasTex('cartel:'+(seed%3), 192, 288, (x, w, h) => {
+    if(seed%3){
+      x.fillStyle=seed%3===1?'#dae3ce':'#d8dce9';x.fillRect(0,0,w,h);
+      x.fillStyle=seed%3===1?'#50654b':'#575473';x.fillRect(12,12,w-24,h-24);
+      x.fillStyle='#f2e8cd';x.font='bold 24px Georgia';x.textAlign='center';
+      x.fillText(seed%3===1?'LECTURAS':'MÚSICA',w/2,60);x.fillText(seed%3===1?'DE LA VEGA':'EN LA PLAZA',w/2,91);
+      x.lineWidth=4;x.strokeStyle='#d9be7c';x.beginPath();x.arc(w/2,167,42,0,Math.PI*2);x.stroke();
+      x.font='18px Georgia';x.fillText('Guareña',w/2,246);return;
+    }
     x.fillStyle = '#f2e2b0'; x.fillRect(0, 0, w, h); x.fillStyle = '#b8302a'; x.fillRect(0, 0, w, 60);
     x.fillStyle = '#f2e2b0'; x.font = 'bold 22px Georgia'; x.textAlign = 'center'; x.fillText('FERIA DE', w / 2, 26); x.fillText('SAN GREGORIO', w / 2, 52);
     x.fillStyle = '#3a2a1a'; x.beginPath(); x.ellipse(w / 2, 160, 60, 40, 0, 0, 7); x.fill();
@@ -168,7 +176,8 @@ export function construir(items) {
         extra.push(m); aparte.push({ i: ii, mesh: m });
         continue;
       }
-      _c.set(col0 || '#888888').convertSRGBToLinear();
+      // Color.set convierte sRGB a lineal con ColorManagement de three.js. Repetirlo borra el detalle oscuro.
+      _c.set(col0 || '#888888');
       const n = g.attributes.position.count, col = new Float32Array(n * 3);
       for (let i = 0; i < n; i++) { col[i * 3] = _c.r; col[i * 3 + 1] = _c.g; col[i * 3 + 2] = _c.b; }
       g.setAttribute('color', new THREE.BufferAttribute(col, 3));

@@ -5,7 +5,7 @@
 //   const I = await import('/tools/interiores/inventario.js'); await I.inventario()
 import { buildShop, SHOP_TYPES } from '/src/shops.js';
 import { buildHouse, buildAnnieHouse } from '/src/interiors.js';
-import { buildVecino } from '/src/houses.js';
+import { buildVecino, kitDeEstancia } from '/src/houses.js';
 import { buildChurch } from '/src/church.js';
 import { buildVenue } from '/src/venues.js';
 import { KITS } from '/src/interiores_datos.js';
@@ -37,7 +37,12 @@ function construye(fn) {
     const h = fn(), a = area(h);
     const extra = h && h.local ? { semilla_kit: h.local.seed, kit: h.local.kit } : {};
     // (a house: its rooms furnished from a kit, out of those that are not corridors)
-    if (h && h.estancias && h.rooms) { const salas = h.rooms.filter((q) => q.type !== 'pasillo' && q.type !== 'hall'); extra.estancias_kit = h.estancias.map((e) => e.kit); extra.estancias_total = salas.length; }
+    if (h && h.estancias && h.rooms) {
+      const salas = h.rooms.filter((q) => q.type !== 'pasillo' && q.type !== 'hall');
+      extra.estancias_kit = h.estancias.map((e) => e.kit); extra.estancias_total = salas.length;
+      extra.estancias=salas.map(q=>({sala:q.id,tipo:q.type,planta:q.lv,kit:h.estancias.find(e=>e.sala===q.id)?.kit||null,kit_esperado:h.personalizadas?.includes(q.id)?null:kitDeEstancia(q.type,h.profile?.id)}));
+      extra.fallos_kit=h.fallosKit||[];extra.estancias_personalizadas=h.personalizadas||[];
+    }
     tirar(h);
     return { ok: !!h, superficie_m2: a, ...extra };
   } catch (e) { return { ok: false, error: String(e && e.message || e).slice(0, 200) }; }
@@ -63,16 +68,16 @@ export async function inventario() {
     let id, tip, b, nombre = d.name, extra = {};
     if (d.church) { id = `iglesia:${d.church}`; tip = 'singular'; b = construye(() => buildChurch(d.seed, ORIGIN)); }
     else if (d.venue) { id = `edificio:${d.venue}`; tip = 'singular'; nombre = SINGULAR[d.venue] || d.name; b = construye(() => buildVenue(d.venue, d.seed, ORIGIN)); }
-    else if (d.owner === 'annie') { id = 'vivienda:annie'; tip = 'vivienda'; b = construye(() => buildAnnieHouse(d.seed, ORIGIN)); }
+    else if (d.owner === 'annie') { id = 'vivienda:annie'; tip = 'vivienda'; b = construye(() => buildAnnieHouse(d.seed, ORIGIN)); extra.constructor_especial='buildAnnieHouse';extra.migracion='cinco estancias por kit y dormitorio personalizado conservado'; }
     else if (d.seed >= 1000) { id = `vivienda:${d.seed}`; tip = 'vivienda'; b = construye(() => buildVecino(d.seed, ORIGIN)); }
     else { id = `vivienda:${d.seed}`; tip = 'vivienda'; b = construye(() => buildHouse('casa', d.seed, ORIGIN)); }
-    if (tip === 'vivienda') extra.estancias = ['salon', 'cocina', 'dormitorio', 'bano'];
     if (!b.ok) errores.push(`${id}: la puerta lleva a un interior que no se construye (${b.error})`);
-    if (b.estancias_kit) { extra.estancias_kit = b.estancias_kit; extra.estancias_total = b.estancias_total; }
-    const porKit = b.estancias_kit && b.estancias_kit.length === b.estancias_total; // (every room of the house from its kit)
+    if (b.estancias_kit) { extra.estancias_kit = b.estancias_kit; extra.estancias_total = b.estancias_total;extra.estancias=b.estancias;extra.fallos_kit=b.fallos_kit;extra.estancias_personalizadas=b.estancias_personalizadas; }
+    for(const f of b.fallos_kit||[]) errores.push(`${id}: ${f.sala}/${f.kit}: ${f.motivo}`);
+    const porKit = b.estancias_kit && b.estancias_kit.length+(b.estancias_personalizadas||[]).length === b.estancias_total && !b.fallos_kit.length;
     out.push({ interior_id: id, puerta: { x: +d.x.toFixed(2), z: +d.z.toFixed(2) }, building_id: edificio(d.fx ?? d.x, d.fz ?? d.z), poi_id: null, osm: null,
       tipologia: tip, nombre, superficie_m2: b.superficie_m2, accesible: true, estado: b.ok ? (tip === 'singular' || porKit ? 'completo' : 'basico') : 'vacio', kit: null,
-      constructor: tip === 'singular' ? 'a mano (pieza única)' : b.estancias_kit ? `houses.js: ${b.estancias_kit.length} de ${b.estancias_total} estancias por kit` : 'interiors.js / houses.js (a mano)', ...extra });
+      constructor: tip === 'singular' ? 'a mano (pieza única)' : b.estancias_kit ? `${d.owner==='annie'?'interiors.js (Annie)':'houses.js'}: ${b.estancias_kit.length} por kit, ${(b.estancias_personalizadas||[]).length} personalizadas, ${b.estancias_total} habitables` : 'interiors.js / houses.js (a mano)', ...extra });
   }
   // ---- the businesses of the map with no door yet
   map.pois.forEach((p, i) => {

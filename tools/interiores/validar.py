@@ -3,26 +3,38 @@
 # tools/interiores/validar.js. Writes data/interiores/validacion/<kit>.json; exit 1 on any blocking error.
 #   python3 tools/interiores/validar.py [kit …] [--semillas 1,2,3,4,5] [--juego]
 #   python3 tools/interiores/validar.py --casas [n]     (the neighbours' houses: every room furnished from a kit)
-import glob, json, os, sys
+import argparse, glob, json, os, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'perf'))
 from cdp import Tab
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith('--') and not a[0].isdigit()]
-    seeds = [int(s) for s in sys.argv[sys.argv.index('--semillas') + 1].split(',')] if '--semillas' in sys.argv else [1, 2, 3, 4, 5]
-    tips = args or sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT, 'data', 'kits', '*.json')) if not f.endswith('.schema.json'))
-    # (a page of its own, with nothing drawn: fast, and no WebGL needed; --juego, inside the game itself)
-    juego = '--juego' in sys.argv
+    parser = argparse.ArgumentParser(description='Valida kits y cobertura real de las viviendas.')
+    parser.add_argument('kits', nargs='*')
+    parser.add_argument('--semillas', default='1,2,3,4,5')
+    parser.add_argument('--juego', action='store_true')
+    parser.add_argument('--casas', nargs='?', const=60, type=int)
+    parser.add_argument('--casas-pueblo', action='store_true')
+    parser.add_argument('--exigir-kits', default='')
+    parser.add_argument('--exigir-todas', action='store_true')
+    opts = parser.parse_args()
+    seeds = [int(s) for s in opts.semillas.split(',')]
+    tips = opts.kits or sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT, 'data', 'kits', '*.json')) if not f.endswith('.schema.json'))
+    juego = opts.juego or opts.casas_pueblo
     T = Tab(9333, 'http://localhost:8920/' + ('index.html?estilo=plastilina' if juego else 'tools/interiores/validar.html'), w=1280, h=720, dpr=1)
     try:
+        if juego:
+            T.ev('''(async () => { const t0 = performance.now(); while (performance.now()-t0 < 180000) { const b = document.getElementById('bPlay'); if (window.game && b && document.getElementById('loading').hidden) { b.click(); break; } await new Promise(r=>setTimeout(r,250)); } })()''', timeout=240)
         T.ev('''(async () => { const t0 = performance.now(); while (performance.now() - t0 < 180000) { if (%s) break; await new Promise((r) => setTimeout(r, 250)); } })()''' % ("window.game && window.game.state === 'play'" if juego else 'window.__listo'), timeout=240)
         res = {}
-        if '--casas' in sys.argv: # (the neighbours' houses, as the game builds them: 60 of them)
-            n = int(sys.argv[sys.argv.index('--casas') + 1]) if len(sys.argv) > sys.argv.index('--casas') + 1 and sys.argv[sys.argv.index('--casas') + 1].isdigit() else 60
-            casas = json.loads(T.ev('(async () => { const V = await import("/tools/interiores/validar.js?" + Date.now()); return JSON.stringify(await V.validarCasas(%s)); })()' % json.dumps([1000 + 37 * k for k in range(n)]), timeout=900))
+        if opts.casas is not None or opts.casas_pueblo:
+            house_seeds = json.loads(T.ev('JSON.stringify(window.game.interiors.doors.filter(d => d.seed >= 1000 && !d.owner && !d.venue && !d.church).map(d => d.seed))')) if opts.casas_pueblo else [1000 + 37 * k for k in range(opts.casas)]
+            rules = {'exigirKits': [k for k in opts.exigir_kits.split(',') if k], 'exigirTodas': opts.exigir_todas}
+            casas = json.loads(T.ev('(async () => { const V = await import("/tools/interiores/validar.js?" + Date.now()); return JSON.stringify(await V.validarCasas(%s, %s)); })()' % (json.dumps(house_seeds), json.dumps(rules)), timeout=900))
             os.makedirs(os.path.join(ROOT, 'data', 'interiores', 'validacion'), exist_ok=True)
-            json.dump({'casas': len(casas), 'errores': sum(len(c['errores']) for c in casas), 'resultados': casas}, open(os.path.join(ROOT, 'data', 'interiores', 'validacion', 'casas.json'), 'w'), ensure_ascii=False, indent=1)
+            json.dump({'alcance': 'pueblo' if opts.casas_pueblo else 'sinteticas', 'exigencia': rules, 'casas': len(casas), 'habitables': sum(c['cobertura']['habitables'] for c in casas), 'pendientes': sum(len(c['cobertura']['faltantes']) for c in casas), 'errores': sum(len(c['errores']) for c in casas), 'resultados': casas}, open(os.path.join(ROOT, 'data', 'interiores', 'validacion', 'casas_pueblo.json' if opts.casas_pueblo else 'casas.json'), 'w'), ensure_ascii=False, indent=1)
+            if not casas: raise RuntimeError('la selección de casas está vacía')
+            print('cobertura:', sum(c['cobertura']['porKit'] for c in casas), '/', sum(c['cobertura']['habitables'] for c in casas), 'habitaciones por kit')
             mal = [c for c in casas if c['errores']]
             print('casas ·', len(casas), 'construidas,', sum(len(c['salas']) for c in casas), 'estancias por kit,', len(mal), 'con errores')
             for c in mal[:8]: print('   ', c['seed'], c['perfil'], c['estilo'], c['errores'][:3])
