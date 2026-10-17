@@ -1,5 +1,17 @@
 // Luz doméstica acotada por distancia, con transición continua entre focos.
 // Se restaura al terminar cada vista y se liberan sus mapas al quitar la casa.
+// Hipótesis de contraste sólo para vistas domésticas en Plastilina.
+// El exterior de WindowView se dibuja antes y conserva sus valores del cielo.
+export const PERFIL_AMBIENTE_VIVIENDA = Object.freeze({ ambiente: .55, rebote: .25 });
+export function prepararAmbienteVivienda(h, cam, scene, sky, perfil=PERFIL_AMBIENTE_VIVIENDA) {
+  if(!h||!['vecino','annie'].includes(h.kind)||!h.origin||h.powered===false)return ()=>{};
+  if(Math.hypot(cam.position.x-h.origin.x,cam.position.z-h.origin.z)>25)return ()=>{};
+  const ambiente=scene.environmentIntensity,rebote=sky?.bounce,intensidad=rebote?.intensity;
+  scene.environmentIntensity=ambiente*perfil.ambiente;
+  if(rebote)rebote.intensity=intensidad*perfil.rebote;
+  return ()=>{scene.environmentIntensity=ambiente;if(rebote)rebote.intensity=intensidad;};
+}
+
 const preparadas=new WeakSet();
 export function prepararLuzVivienda(h, cam, sombras=true) {
   if(!h||!['vecino','annie'].includes(h.kind))return ()=>{};

@@ -1075,3 +1075,8 @@ Las mejoras observadas y sus límites se registran en docs/beta-rendimiento-2026
 Se ajustan agrupación modular y contraste de cocina, baño y trastero. La revisión de evidencia detecta muebles fuera de plano en cocinas grandes y WC recortado en baño; se corrigen las cámaras sin cambiar semillas ni ocultar los vacíos. Las notas quedan en cocina 2,934/2,942, baño 2,986/2,972 y trastero 2,868/2,934: sin mejora uniforme ni objetivo 4/5 alcanzado. La colocación individual de muebles sigue dispersando el frente de cocina, pendiente de planificación conjunta. Pasan 33 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Evidencia y límites en docs/calidad-viviendas-4-2026-10-17.md.
 
 La revisión visual encuentra espacio frontal insuficiente del WC3244 (8,3 cm). Se bloquea la publicación y se corrige con una reserva de uso; el contrato reproduce el fallo y pasa con la nueva colocación. Evidencia anterior y notas desfavorables conservadas.
+
+
+### 2026-10-17 — Tanda 8, luz doméstica
+
+El relleno del cielo y de la calle se acota en casas durante su render y se restaura después. Ocho pares muestran ganancia diurna moderada, sin certificar 4/5. Se detecta pérdida de lectura en apagón y se corrige excluyendo casas sin electricidad. Permanecen pendientes el plafón lavado y la composición amplia. Notas cocina 3,040/3,042, baño 3,152/3,018 y trastero 2,938/2,700. La evidencia desfavorable no se repite para buscar una nota mejor. Tanda 7 ya publicada como 44e3de3 y verificada en el juego público.

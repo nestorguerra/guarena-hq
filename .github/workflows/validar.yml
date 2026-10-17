@@ -32,6 +32,8 @@ jobs:
           node-version: '24'
       - name: Adaptación de calidad y límites del navegador
         run: node tools/perf/tests/rendimiento.mjs
+      - name: Luz doméstica y restauración de las vistas
+        run: node --test tools/interiores/luz_ambiente_pruebas.mjs
       - name: Empaquetar el juego
         run: python3 tools/build.py
       - name: Marcas y marcadores en la copia publicable (R-07, V-02)

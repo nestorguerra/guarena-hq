@@ -9,7 +9,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { scenePass } from './post_scene.js';
 import { machineHints, initialProfile, automaticQuality, pixelBudget, QualityController } from './rendimiento.js';
 import { PLASTILINA, ClayLens, ClayGrade, STUDIO_AO } from './plastilina.js';
-import { prepararLuzVivienda, prepararOclusionVivienda } from './luz_vivienda.js';
+import { prepararLuzVivienda, prepararOclusionVivienda, prepararAmbienteVivienda } from './luz_vivienda.js';
 import { STYLE } from './style.js';
 import { Chant } from './chant.js';
 import { MapData } from './mapdata.js';
@@ -821,13 +821,14 @@ export class Game {
   renderView(cam) {
     const restaurar=prepararLuzVivienda(this.interior,cam,this.renderer.shadowMap.enabled);
     const restaurarAO=prepararOclusionVivienda(this.interior,cam,this.gtao,this.grade);
+    const restaurarAmbiente=prepararAmbienteVivienda(STYLE.plastilina?this.interior:null,cam,this.scene,this.sky);
     try {
     if (this.composer) {
       if (this.lens) this.focusLens(cam);
       const rp = this.composer.passes[0], keep = rp.camera; rp.camera = cam; if (this.gtao) this.gtao.camera = cam; this.composer.render(); rp.camera = keep; if (this.gtao) this.gtao.camera = keep;
     }
     else this.renderer.render(this.scene, cam);
-    }finally{restaurarAO();restaurar();}
+    }finally{restaurarAmbiente();restaurarAO();restaurar();}
   }
   // claymation: the lens focuses on the action — the player (or what they drive) at its distance; in first person, on
   // whatever is in the middle of the view

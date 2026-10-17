@@ -85,3 +85,17 @@ Notas finales A/B: cocina **2,934/2,942**, baño **2,986/2,972**, trastero **2,8
 Pasan 33 contratos, 200 casas/1166 habitaciones y 81 semillas de cada kit. Integración fuente con 96 recorridos de colisión sin escapes ni atravesamientos, paquete, partida ficticia, marcas y regeneración de 21 archivos sin diferencias. Máximos sintéticos: 70.556 triángulos, 59 mallas, nueve luces y 171 ms de montaje. No son una certificación universal de rendimiento. La publicación de esta tanda queda pendiente de su commit, Actions y comprobación pública.
 
 La revisión final detectó sólo 8,3 cm delante del WC de la casa 3244, aunque no había interpenetraciones. Se añade una reserva física de 0,60 × 0,65 m delante del inodoro; no crea un obstáculo para el jugador. El algoritmo prueba otra posición de los muebles y el validador comprueba el hueco por separado. El nuevo contrato falla antes de la corrección y pasa después, incluido un bloqueo deliberado. Se conservan las dos evaluaciones del candidato estrecho (3,010/3,014) y sus imágenes en el histórico. La reserva no certifica accesibilidad normativa ni el acceso universal a ese rectángulo; el paso y las interacciones existentes se comprueban aparte.
+
+
+Tanda 7 publicada y verificada: `44e3de33d69b5cf2a4822bc7abe8ed146fdc7fa8`, CI 39057155420 y Pages 39057301779 en verde. El juego público sirve ese commit, permite entrar en ocho casas, conserva la caja fuerte, siesta y decoración de Annie, y mantiene 321 € / 700 € tras recargar; tres comercios con compra y cero errores. Recibo: `data/interiores/validacion/publicacion_tanda7.json`.
+
+## Tanda 8: contraste de luz doméstica
+
+Se reduce el relleno ambiental durante el dibujo de casas en Plastilina y se restauran sus valores al salir de cada vista. La escena de calle por la ventana, comercios y Realista conservan sus valores. La comparación de ocho pares mantiene cámara, habitación, hora, clima y calidad alta manual. La mejora diurna es moderada; no resuelve las paredes vacías ni la distribución. El primer candidato oscurecía demasiado los apagones: se conserva su evidencia y se excluyen las casas sin electricidad del ajuste final.
+
+Notas A/B actuales: cocina **3,040/3,042**, baño **3,152/3,018**, trastero **2,938/2,700**. No hay mejora uniforme y ningún kit llega a 4. El procedimiento y las semillas se mantienen; los cambios de estas seis notas no certifican las otras 14 fichas ni eliminan la variabilidad del juicio. Los resultados e imágenes anteriores se conservan. La revisión de noche en cocina queda limitada por un residente que tapa parte de la encimera en ambos candidatos.
+
+Nueve contratos de luz y restauración pasan. La geometría es idéntica a tanda 7: sus 33 contratos, 200 casas y 81 semillas por kit se conservan como evidencia previa, sin presentarlos como nuevas ejecuciones. La integración completa del primer paquete de tanda 8 pasa; el paquete final corrige únicamente el guard de apagón y se comprueba por separado. Publicación pendiente de ese caso dirigido, revisión independiente, commit, Actions y prueba pública.
+
+
+El caso dirigido de apagón se ha ejecutado sobre el paquete final: cámara, estado, PMREM, HouseLife e intensidades coinciden con la base anterior; cero errores y contexto privado cerrado. El ambiente permanece en 0,45 durante y después del render. No se vuelve a puntuar la misma ficha diurna, cuyo render no cambia al añadir el guard.

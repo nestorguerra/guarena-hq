@@ -206,7 +206,7 @@
   "fichas": 17,
   "aprobadas": 0,
   "medias": {
-   "minimo": 2.868,
+   "minimo": 2.7,
    "maximo": 3.61
   },
   "hashes_fichas_validos": true,
@@ -216,12 +216,12 @@
     "B": 2.998
    },
    "bano": {
-    "A": 2.986,
-    "B": 2.972
+    "A": 3.152,
+    "B": 3.018
    },
    "cocina": {
-    "A": 2.934,
-    "B": 2.942
+    "A": 3.04,
+    "B": 3.042
    },
    "comedor": {
     "A": 3.15,
@@ -272,8 +272,8 @@
     "B": 3.218
    },
    "trastero": {
-    "A": 2.868,
-    "B": 2.934
+    "A": 2.938,
+    "B": 2.7
    },
    "trofeos": {
     "A": 2.992,
@@ -281,7 +281,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "en curso; kits de la tanda 7: cocina, bano, trastero. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
+  "objetivo_4": "En curso. Tanda 8 vuelve a evaluar cocina, baño y trastero. Otras 14 fichas conservan su última evaluación y no acreditan el nuevo render compartido."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -677,5 +677,42 @@
    "limite": "Hueco fisico y paso general; no certificacion normativa de accesibilidad"
   },
   "capturas": "Camaras secundarias corregidas para cobertura. No se atribuyen diferencias de notas solo al juego."
+ },
+ "calidad_tanda8": {
+  "fecha": "2026-10-17",
+  "tanda": 8,
+  "objetivo": 4,
+  "estado": "mejora_de_contraste_acotada_objetivo_no_alcanzado",
+  "base": "44e3de33d69b5cf2a4822bc7abe8ed146fdc7fa8",
+  "cambio": "Ambiente y rebote reducidos durante render doméstico en Plastilina, excepto casas sin electricidad. Restauración al finalizar.",
+  "pruebas_nuevas": {
+   "contratos_luz": 9,
+   "pares_visuales": 8,
+   "apagon_final_paquete": "data/interiores/validacion/luz_tanda8_apagon_final.json",
+   "integracion_paquete_candidato_inicial_errores": 0,
+   "marcas_paquete_final_errores": 0
+  },
+  "evidencia_geometria_previa": "data/interiores/validacion/calidad_tanda7.json; geometría sin cambios y no se repiten 200 casas",
+  "kits": {
+   "cocina": {
+    "A": 3.04,
+    "B": 3.042
+   },
+   "bano": {
+    "A": 3.152,
+    "B": 3.018
+   },
+   "trastero": {
+    "A": 2.938,
+    "B": 2.7
+   }
+  },
+  "revision_independiente": "data/interiores/revision_luz_tanda8_2026-10-17.md",
+  "limites": [
+   "No mejora uniforme de notas. Ninguna alcanza 4.",
+   "Plafón sigue lavado.",
+   "Residente ocluye encimera en comparación nocturna de cocina.",
+   "No se recertifican otras 14 fichas tras el render compartido."
+  ]
  }
 }
