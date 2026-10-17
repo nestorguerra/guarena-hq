@@ -72,12 +72,12 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
   }
   // Suelo y techo locales: el antiguo estampado no domina estas salas de servicio.
   const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
-  B.add(mat(wood?'#78644c':bath||kitchen?'#a8aaa1':'#a89c84'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+  B.add(mat(wood?'#78644c':bath||kitchen?'#858a7f':store?'#817662':'#a89c84'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
   const paso=bath||kitchen?.3:wood?.18:.6,pasoZ=wood?1.2:paso;
   for(let x=rm.x0+.076;x<rm.x1-.076;x+=paso)for(let z=rm.z0+.076;z<rm.z1-.076;z+=pasoZ){
     const tw=Math.min(paso-.003,rm.x1-.076-x),td=Math.min(pasoZ-.003,rm.z1-.076-z);
     if(tw<.001||td<.001)continue;
-    const col=wood?['#ab916a','#ad9570','#a38a67'][Math.floor(r()*3)]:bath||kitchen?['#c8c8bd','#c2c4b9','#cecec2'][Math.floor(r()*3)]:['#b7ac96','#b4a891','#beb29b'][Math.floor(r()*3)];
+    const col=wood?['#ab916a','#ad9570','#a38a67'][Math.floor(r()*3)]:bath||kitchen?['#9b9e92','#999c90','#a3a697'][Math.floor(r()*3)]:store?['#938875','#8e836f','#9a907d'][Math.floor(r()*3)]:['#b7ac96','#b4a891','#beb29b'][Math.floor(r()*3)];
     B.add(mat(col),planeGeo(tw,td).rotateX(-Math.PI/2),x+tw/2,y+.0095,z+td/2);
   }
   B.add(mat('#e9e3d4'),planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);

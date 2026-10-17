@@ -33,8 +33,9 @@
    "zona": "estancia",
    "regla": "contra_pared",
    "variantes": [
-    "va_bicicleta_guardada",
-    "va_escalera_guardada"
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
    ],
    "pared": "*",
    "cantidad": [
@@ -46,11 +47,50 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "variantes": [
     "va_estante_trastero_0",
     "va_estante_trastero_1",
     "va_estante_trastero_2"
+   ],
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_cajas_apiladas",
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 14,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "va_bicicleta_guardada",
+    "va_escalera_guardada"
    ],
    "pared": "*",
    "cantidad": [
@@ -74,102 +114,105 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_ventilador_guardado",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "variantes": [
-    "va_estante_trastero_0",
-    "va_estante_trastero_1",
-    "va_estante_trastero_2"
-   ],
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
-   ],
-   "obligatorio": true,
    "preferir": true,
-   "area_min": 10
+   "buscar_refs": true
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "variantes": [
     "va_estante_trastero_0",
     "va_estante_trastero_1",
     "va_estante_trastero_2"
    ],
-   "pared": "*",
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2"
+   ],
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 18
+   "area_min": 18,
+   "buscar_refs": true,
+   "si_no": false
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_utiles_guardados",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "va_cajas_apiladas",
-   "pared": "*",
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2",
+    "va_cajas_apiladas"
+   ],
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 16
+   "area_min": 16,
+   "buscar_refs": true,
+   "si_no": false
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "va_caja_almacen",
-   "pared": "*",
+   "de": [
+    "va_estante_trastero_0",
+    "va_estante_trastero_1",
+    "va_estante_trastero_2",
+    "va_cajas_apiladas"
+   ],
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 12
+   "area_min": 12,
+   "buscar_refs": true,
+   "si_no": false
   },
   {
    "zona": "estancia",
-   "regla": "suelo_libre",
-   "obj": "va_cajas_apiladas",
+   "regla": "junto_a",
+   "obj": "va_ventilador_guardado",
+   "de": [
+    "va_bicicleta_guardada",
+    "va_escalera_guardada"
+   ],
    "cantidad": [
-    1,
+    0,
     1
    ],
-   "obligatorio": true,
-   "area_min": 14
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_utiles_guardados",
+   "de": [
+    "va_bicicleta_guardada",
+    "va_escalera_guardada"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false
   },
   {
    "zona": "estancia",

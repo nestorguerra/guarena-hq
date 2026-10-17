@@ -12,7 +12,7 @@ import { buildLocal } from '/src/locales.js';
 import { PROFILES, buildVecino, kitDeEstancia } from '/src/houses.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { caja } from '/src/objetos.js';
-import { rot, partes, penetra, mapaPaso } from '/src/interiores_geo.js';
+import { rot, partes, penetra, mapaPaso, espacioFrontal } from '/src/interiores_geo.js';
 
 const ORIGIN = { x: -9400, z: -9400 };
 const DEG = Math.PI / 180;
@@ -71,6 +71,13 @@ export function revisar(h, presupuesto) {
   }
   // ---- interpenetraciones (> 1 cm), por piezas, de los objetos cuyas cajas se tocan
   const PZ = C.map(partes);
+  for (const [i,p] of C.entries()) {
+    const medidas=K.objetos[p.e]?.espacio_frontal;
+    if(!medidas)continue;
+    const R=espacioFrontal(p,caja(p.obj),medidas),Z=L.zonas[p.zona];
+    const fuera=[[-1,-1],[-1,1],[1,-1],[1,1]].some(([sx,sz])=>{const [dx,dz]=rot(sx*R.hw,sz*R.hd,R.a);return R.cx+dx<Z.x0-.005||R.cx+dx>Z.x1+.005||R.cz+dz<Z.z0-.005||R.cz+dz>Z.z1+.005;});
+    if(fuera||PZ.some((ps,j)=>j!==i&&ps.some(q=>penetra(R,q)>.005)))err.push(`uso frontal: ${p.obj} sin ${medidas[0]} × ${medidas[1]} m libres`);
+  }
   let inter = 0;
   for (let i = 0; i < C.length; i++) for (let j = i + 1; j < C.length; j++) {
     const a = C[i], b = C[j];

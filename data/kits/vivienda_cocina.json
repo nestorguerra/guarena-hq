@@ -71,7 +71,8 @@
    ],
    "obligatorio": true,
    "preferir": true,
-   "area_max": 14
+   "area_max": 14,
+   "buscar_refs": true
   },
   {
    "zona": "estancia",
@@ -89,7 +90,8 @@
    ],
    "obligatorio": true,
    "preferir": true,
-   "area_min": 14
+   "area_min": 14,
+   "buscar_refs": true
   },
   {
    "zona": "estancia",
@@ -106,31 +108,8 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_alacena",
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
-   ],
-   "obligatorio": true,
-   "preferir": true
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "va_lavadora",
-   "pared": "*",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true
+   "preferir": true,
+   "buscar_refs": true
   },
   {
    "zona": "estancia",
@@ -161,6 +140,42 @@
   {
    "zona": "estancia",
    "regla": "junto_a",
+   "obj": "va_lavadora",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_alacena",
+   "de": [
+    "va_cocina",
+    "va_cocina_amplia",
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
    "obj": "va_encimera_amplia",
    "de": [
     "va_cocina",
@@ -174,7 +189,8 @@
    ],
    "obligatorio": false,
    "preferir": true,
-   "area_min": 18
+   "area_min": 18,
+   "buscar_refs": true
   },
   {
    "zona": "estancia",

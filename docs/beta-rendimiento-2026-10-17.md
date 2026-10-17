@@ -47,6 +47,24 @@ Se conservan los ensayos incompletos: el primero carecía de mapa de importacion
 
 Las tres variantes empaquetadas conservan su contrato: Pages pesa 19.318.068 bytes y descarga la iglesia detallada bajo demanda; los HTML portátil y multijugador (31,9 MB) la incluyen. El modo realista cargó el modelo de 10.084.432 bytes con HTTP 200 y sin errores. Ocho casas, caja fuerte/siesta/decoración de Annie, tres tiendas y recarga 321 €/700 € pasan en el paquete; los testigos de las partidas Evolución y fija se mantienen. Evidencias: `.cache/perf-beta/packaged-compatibility.json` e `integracion_candidata.json`.
 
-La comparación visual de nueve vistas antes/después fija DPR 1,5, cámara, hora y clima, e incluye noche, lámpara y tres poses cercanas. Las rutas de render directo, copia sin gradación, depuración AO y destino fuera de pantalla funcionan sin errores WebGL. Las poses estáticas no certifican ausencia de parpadeo en movimiento continuo. La revisión independiente acepta ausencia de regresión importante relativa en los nueve pares. La noche es sólo comparación simétrica: el instrumento no refrescaba el mapa de ambiente ni el vidrio de ventana después de cambiar la hora. No certifica la iluminación nocturna real; se prepara un ensayo corregido separado.
+La comparación visual de nueve vistas antes/después fija DPR 1,5, cámara, hora y clima, e incluye noche, lámpara y tres poses cercanas. Las rutas de render directo, copia sin gradación, depuración AO y destino fuera de pantalla funcionan sin errores WebGL. Las poses estáticas no certifican ausencia de parpadeo en movimiento continuo. La revisión independiente acepta ausencia de regresión importante relativa en los nueve pares. La noche es sólo comparación simétrica: el instrumento no refrescaba el mapa de ambiente ni el vidrio de ventana después de cambiar la hora. No certifica la iluminación nocturna real. El ensayo corregido posterior se documenta a continuación; esta limitación del conjunto original se conserva.
 
 Los resúmenes, trazas, hashes de fuente/paquete y comprobación funcional se conservan en `data/rendimiento/beta_parcial_2026-10-17.json`. Revisión estática independiente sin P1/P2 abiertos; publicación parcial admitida con los límites anteriores.
+
+
+El ensayo adicional de render estático completó tres rondas, pero su control de igualdad rechazó las tres escenas: cambian la pose residual de una malla y la geometría de los 5.200 puntos del cielo entre sesiones/versiones. Todo lo demás del manifiesto coincide y cada medición permanece estable internamente; eso no convierte el par en una escena idéntica. No se publica un porcentaje causal a partir de este ensayo. Los datos completos se conservan en `.cache/perf-beta/replay-estricto/`; el objetivo de causalidad queda abierto.
+
+
+## Noche corregida: cierre relativo de tres pares
+
+El conjunto `visual-night-real-v2` registra una actualización forzada del entorno por estado, intensidad ambiental 0,6 de día y 0,45 de noche, y emisión de ventana 0,85 → 0,1. Los seis archivos coinciden con sus hashes; los tres pares conservan cámara, DPR 1,5, luces y clima comparables, sin errores registrados. La revisión visual independiente acepta ausencia de una regresión importante atribuible al postprocesado. Esta muestra corrige la reserva de ambiente y ventana diurnos retenidos en el ensayo anterior.
+
+El techo sigue lavado al mirar la lámpara en ambos pipelines. La iluminación nocturna no queda plenamente resuelta. Son tres pares estáticos de un interior: no certifican exterior nocturno, movimiento continuo, calidad 4/5 ni la tanda 7. Evidencia: `.cache/perf-beta/visual-night-real-v2/report.json`; dictamen: `.cache/revision-visual-post.md`.
+
+## Publicación parcial de rendimiento verificada
+
+El commit `6d34cc384fca3590a00e2cb3286c7e9da7382db8` está publicado y verificado funcionalmente en [Guareña HQ](https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=6d34cc3). Se releyeron los workflows: [validación 39055528734](https://github.com/nestorguerra/guarena-hq/actions/runs/39055528734), en `epica-i-interiores`, y [Pages 39055742146](https://github.com/nestorguerra/guarena-hq/actions/runs/39055742146), en `main`, ambos completos y correctos para ese SHA exacto.
+
+El informe público devuelve la misma revisión servida y cero errores registrados. Prueba ocho viviendas, Annie con cinco kits y dormitorio personalizado, caja fuerte, siesta y decoración; también bar, cafetería y farmacia. La recarga conserva 321 € de dinero, 700 € de banco, decoración y los testigos de las partidas Evolución y fija. Evidencia: `.cache/perf-beta/integracion_publica.json`, incorporada al registro JSON de rendimiento.
+
+Esta prueba pública acredita integración, no una nueva medición de velocidad: el instrumento adelanta la introducción y no ejecutó colisiones exhaustivas. La carga medida sigue en 22,28 %, por debajo del 25 %; el replay sigue rechazado como comparación causal. El objetivo visual 4/5 y la beta completa permanecen pendientes.

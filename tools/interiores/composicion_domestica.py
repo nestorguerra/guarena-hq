@@ -58,6 +58,31 @@ def mejorar_cocina_costura(out):
     for id in ['va_cocina','va_encimera','va_nevera','va_lavadora','va_alacena','va_alto_cocina']:
         for p in C[id]['partes']:
             if p['f']=='caja' and min(p['d'])>=.02:p['redondeo']=min(.014,min(p['d'])/3)
+    # Frentes pintados y encimera clara: se leen separados del suelo y del muro.
+    for id in ['va_cocina','va_encimera']:
+        for p in C[id]['partes']:
+            if p['m']=='madera' and p['p'][2]>.25:
+                p.pop('tinte',None);p['c']='#6b8275'
+    # El módulo de preparación deja de parecer una cómoda: tablero de piedra
+    # y armario superior con puertas, balda y vajilla en el mismo eje.
+    for p in C['va_encimera']['partes']:
+        p['d'][1]*=.855/.89;p['p'][1]*=.855/.89
+    C['va_encimera']['partes'].append(b(.67,.035,.53,y=.8725,c='#c4baa6',m='piedra'))
+    C['va_encimera']['superficies']=[dict(y=.89,margen=.045)]
+    C['va_alto_cocina']['partes']=[
+        b(.59,.58,.25,y=1.75,z=.125,c='#62796c'),
+        b(.273,.47,.018,x=-.143,y=1.78,z=.26,c='#839989'),
+        b(.273,.47,.018,x=.143,y=1.78,z=.26,c='#839989'),
+        b(.012,.13,.025,x=-.03,y=1.73,z=.279,c='#b6ae96',m='metal'),
+        b(.012,.13,.025,x=.03,y=1.73,z=.279,c='#b6ae96',m='metal'),
+        b(.62,.025,.29,y=1.34,z=.145,c='#9f845e'),
+    ]
+    for x in [-.18,0,.18]:
+        C['va_alto_cocina']['partes'] += [cil(.055,.045,.09,x=x,y=1.3975,z=.16,c='#d2c9ad',m='ceramica')]
+    # Dos puertas de nevera con volumen y zócalo; no una caja blanca sin juntas.
+    C['va_nevera']['partes'] += [b(.48,1.07,.025,y=.57,z=.269,c='#c9cec4',m='metal'),b(.48,.35,.025,y=1.35,z=.269,c='#d9dcd0',m='metal'),caja(.45,.04,.018,y=.03,z=.266,c='#707a72',m='metal')]
+    for p in C['va_nevera']['partes']:
+        if p['f']=='caja' and p['d'][0]<.02 and p['d'][1]>.3:p['p'][2]=.301
     # Campana, mandos y una olla sobre el fuego; todo conserva el plano de trabajo.
     C['va_cocina']['partes'] += [b(.5,.12,.38,x=-.3,y=1.78,z=-.045,c='#aab5ae',m='metal'),b(.22,.22,.2,x=-.3,y=1.95,z=-.13,c='#bdc5bc',m='metal'),cil(.12,.12,.16,x=-.3,y=1.0,z=.06,c='#698784',m='metal'),cil(.125,.125,.018,x=-.3,y=1.1,z=.06,c='#8d9f96',m='metal'),cil(.024,.024,.025,x=-.3,y=1.12,z=.06,c='#606f68',m='plastico')]
     for x in [-.46,-.34,-.22,-.1]:C['va_cocina']['partes'].append(cil(.018,.018,.018,x=x,y=.73,z=.276,c='#b8b8a9',m='metal',r=[90,0,0]))

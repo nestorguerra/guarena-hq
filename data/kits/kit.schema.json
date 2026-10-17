@@ -222,6 +222,10 @@
      "mira_ref": {
       "type": "boolean"
      },
+     "buscar_refs": {
+      "type": "boolean",
+      "description": "En junto_a, prueba todos los módulos de referencia antes de buscar otra pared."
+     },
      "area_max": {
       "type": "number",
       "minimum": 0
@@ -236,6 +240,16 @@
      "silla_frontal": {
       "type": "string",
       "description": "Asiento que se coloca y valida delante del mueble contra pared como parte del mismo puesto."
+     },
+     "espacio_frontal": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number",
+       "exclusiveMinimum": 0
+      },
+      "description": "Anchura y fondo del espacio de uso libre delante del objeto, en metros."
      }
     }
    }

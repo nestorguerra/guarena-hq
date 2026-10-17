@@ -8,7 +8,7 @@ def mejorar_bano_taller(out):
         cil(.125,.14,.3,z=.055,c='#e3e1d8',m='ceramica'),
         cil(.18,.12,.14,y=.35,z=.08,c='#e9e7dc',m='ceramica',s=[1,1,1.28]),
         cil(.185,.185,.025,y=.431,z=.09,c='#f0eee4',m='plastico',s=[1,1,1.28]),
-        cil(.125,.125,.006,y=.447,z=.105,c='#657e7d',m='ceramica',s=[1,1,1.3]),
+        cil(.125,.125,.006,y=.447,z=.105,c='#4f5d5b',m='ceramica',s=[1,1,1.3]),
         caja(.38,.37,.17,y=.6,z=-.22,c='#e5e4da',m='ceramica',redondeo=.025),
         caja(.39,.027,.18,y=.798,z=-.22,c='#edebe0',m='ceramica',redondeo=.01),
         cil(.018,.018,.006,y=.816,z=-.22,c='#a3aaa4',m='metal'),

@@ -6,6 +6,12 @@ import { OBJETOS } from './interiores_datos.js';
 const DEG = Math.PI / 180;
 export const rot = (x, z, a) => [x * Math.cos(a) + z * Math.sin(a), -x * Math.sin(a) + z * Math.cos(a)];
 
+// Zona de uso delante del mueble; no es un obstáculo para caminar.
+export function espacioFrontal(it, b, medidas) {
+  const [ancho, fondo] = medidas, [dx, dz] = rot((b.x0+b.x1)/2, b.z1+fondo/2, it.ry);
+  return {cx:it.x+dx, cz:it.z+dz, hw:ancho/2, hd:fondo/2, a:it.ry, y0:(it.y||0)+.08, y1:(it.y||0)+1.2};
+}
+
 // the parts of a placed object { obj, x, y, z, ry } as { cx, cz, hw, hd, a, y0, y1 } (a part turned about x or z: the
 // box round it)
 export function partes(it) {

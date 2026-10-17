@@ -1069,3 +1069,9 @@ Tanda6: trastero con pertenencias reconocibles y contraste. Las tres uniones geo
 Se conserva MSAA en la escena y se elimina de los destinos intermedios de pantalla. El modo automático elige perfil y presupuesto de píxeles mediante capacidades aproximadas del navegador; mide fotogramas para ajustar resolución y efectos con pausa e histéresis. Las elecciones manuales se conservan. La iglesia detallada se descarga bajo demanda en Pages; sigue integrada en portátil y multijugador.
 
 Las mejoras observadas y sus límites se registran en docs/beta-rendimiento-2026-10-17.md: no se considera alcanzado el objetivo global25%,4/5 visual ni beta final. Se mantienen pruebas funcionales, revisión independiente y comprobación pública por tanda.
+
+## 2026-10-17 · Tanda 7 de viviendas
+
+Se ajustan agrupación modular y contraste de cocina, baño y trastero. La revisión de evidencia detecta muebles fuera de plano en cocinas grandes y WC recortado en baño; se corrigen las cámaras sin cambiar semillas ni ocultar los vacíos. Las notas quedan en cocina 2,934/2,942, baño 2,986/2,972 y trastero 2,868/2,934: sin mejora uniforme ni objetivo 4/5 alcanzado. La colocación individual de muebles sigue dispersando el frente de cocina, pendiente de planificación conjunta. Pasan 33 contratos, 200 casas, 81 semillas por kit, fuente/paquete, colisiones, marcas y regeneración. Evidencia y límites en docs/calidad-viviendas-4-2026-10-17.md.
+
+La revisión visual encuentra espacio frontal insuficiente del WC3244 (8,3 cm). Se bloquea la publicación y se corrige con una reserva de uso; el contrato reproduce el fallo y pasa con la nueva colocación. Evidencia anterior y notas desfavorables conservadas.

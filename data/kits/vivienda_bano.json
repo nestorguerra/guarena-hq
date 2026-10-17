@@ -83,6 +83,25 @@
   },
   {
    "zona": "estancia",
+   "regla": "enfrente",
+   "obj": "va_inodoro",
+   "de": [
+    "va_lavabo",
+    "va_lavabo_amplio"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "area_min": 10,
+   "espacio_frontal": [
+    0.6,
+    0.65
+   ]
+  },
+  {
+   "zona": "estancia",
    "regla": "contra_pared",
    "obj": "va_ducha",
    "pared": "*",
@@ -103,7 +122,12 @@
     1
    ],
    "obligatorio": true,
-   "preferir": true
+   "preferir": true,
+   "area_max": 10,
+   "espacio_frontal": [
+    0.6,
+    0.65
+   ]
   },
   {
    "zona": "estancia",
@@ -148,9 +172,9 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "va_banera",
-   "pared": "*",
+   "de": "va_ducha",
    "cantidad": [
     0,
     1

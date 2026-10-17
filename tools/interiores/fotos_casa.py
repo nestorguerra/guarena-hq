@@ -7,7 +7,7 @@
 import argparse, json, os, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'perf'))
-from cdp import Tab
+from beta import PrivateTab
 from PIL import Image, ImageDraw
 from integracion import LISTO
 
@@ -42,10 +42,17 @@ JS = r'''(async () => {
       const est=h.estancias.find(e=>e.sala===rm.id),foco=(k===0&&tipo==='trastero'?est?.colocados.find(p=>['va_bicicleta_guardada','va_escalera_guardada'].includes(p.obj)):null)||est?.colocados.find(p=>p.obj==='vb_caballete'||(k===0&&(p.obj.startsWith('va_banco')||p.obj.startsWith('va_lavabo')||p.obj.startsWith('vb_mesa_despacho')||p.obj.startsWith('va_estante_trastero')||p.obj.startsWith('va_cocina')||p.obj.startsWith('va_costura'))));
       const hitos=(est?.colocados||[]).filter(p=>p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>.28).map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry),y:y+Math.min(b.h*.65,1.25),w:b.w,peso:Math.min(2,b.w*b.h)+(['va_banco','va_lavabo'].includes(p.obj)?1.5:0)};});
       const suma=hitos.reduce((a,p)=>a+p.peso,0)||1;
-      // El segundo ángulo del baño debe documentar la zona húmeda, también en
-      // salas estrechas: apuntar al centro repetía el lavabo y cortaba el WC.
+      // La segunda vista complementa el detalle: preparación y nevera en cocina,
+      // sanitario completo en baño. Se conservan altura humana y campo de visión.
       const sanitario=k===1&&tipo==='bano'?est?.colocados.find(p=>p.obj==='va_inodoro'):null;
-      const cx = foco?est.origen.x+foco.x:sanitario?est.origen.x+sanitario.x:(rm.x0+rm.x1)/2, cz = foco?est.origen.z+foco.z:sanitario?est.origen.z+sanitario.z:(rm.z0+rm.z1)/2,col=h.levels?.[rm.lv]||h.collider;
+      const preparacion=k===1&&tipo==='cocina'?est?.colocados.find(p=>['va_encimera','va_encimera_amplia'].includes(p.obj)):null;
+      const objetivos=preparacion?[preparacion,est.colocados.find(p=>p.obj==='va_nevera')].filter(Boolean):sanitario?[sanitario]:[];
+      const centros=objetivos.map(p=>{const b=caja(p.obj),lx=(b.x0+b.x1)/2,lz=(b.z0+b.z1)/2;return {p,x:est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),z:est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry)};});
+      const cx = foco?est.origen.x+foco.x:centros.length?centros.reduce((a,p)=>a+p.x,0)/centros.length:(rm.x0+rm.x1)/2, cz = foco?est.origen.z+foco.z:centros.length?centros.reduce((a,p)=>a+p.z,0)/centros.length:(rm.z0+rm.z1)/2,col=h.levels?.[rm.lv]||h.collider;
+      const alturaObjetivo=k===0?(tipo==='trastero'?.85:1.05):tipo==='bano'?.8:1.4;
+      const fov=foco?(tipo==='trastero'?68:60):tipo==='bano'?75:68;
+      const pruebaCam=objetivos.length?new THREE.PerspectiveCamera(fov,16/9,.05,1000):null;
+      const esquinas=objetivos.flatMap(p=>{const b=caja(p.obj),out=[];for(const lx of [b.x0,b.x1])for(const ly of [b.y0,b.y1])for(const lz of [b.z0,b.z1])out.push(new THREE.Vector3(est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),y+(p.y||0)+ly,est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry)));return out;});
       h.group.updateMatrixWorld(true);let mejor=-Infinity;
       const opacos=[];h.group.traverse(o=>{if(o.isMesh&&o.visible&&!o.material?.transparent)opacos.push(o);});
       const hojas=h.doors.flatMap(d=>{const m=[];d.pivot.traverse(o=>{if(o.isMesh)m.push(o);});return m;});
@@ -54,7 +61,13 @@ JS = r'''(async () => {
         if(Math.hypot(q.x-antes.x,q.z-antes.z)>.05)continue;
         if(!foco&&Math.hypot(q.x-cx,q.z-cz)<Math.min(1.15,Math.min(rm.x1-rm.x0,rm.z1-rm.z0)*.4))continue;
         if(!foco&&vistas.length&&Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)<.5)continue;
-        const pos=new THREE.Vector3(q.x,y+1.6,q.z),dest=new THREE.Vector3(cx,y+1,cz),dir=dest.clone().sub(pos),dist=dir.length();
+        if(preparacion&&centros.some(p=>(Math.sin(p.p.ry)*(q.x-p.x)+Math.cos(p.p.ry)*(q.z-p.z))/Math.max(.001,Math.hypot(q.x-p.x,q.z-p.z))<Math.cos(55*Math.PI/180)))continue;
+        const pos=new THREE.Vector3(q.x,y+1.6,q.z),dest=new THREE.Vector3(cx,y+(pruebaCam?alturaObjetivo:1),cz),dir=dest.clone().sub(pos),dist=dir.length();
+        let recortes=0;
+        if(pruebaCam){
+          pruebaCam.position.copy(pos);pruebaCam.lookAt(cx,y+alturaObjetivo,cz);pruebaCam.updateMatrixWorld(true);
+          for(const v of esquinas){const p=v.clone().project(pruebaCam);if(p.z< -1||p.z>1||Math.abs(p.x)>.94||Math.abs(p.y)>.94)recortes++;}
+        }
         const ray=new THREE.Raycaster(pos,dir.normalize(),0,dist);let tapa=ray.intersectObjects(hojas,false).length;
         if(foco){const b=caja(foco.obj);ray.far=Math.max(0,dist-Math.max(b.w,b.d)*.55-.05);tapa+=ray.intersectObjects(opacos,false).length;}
         if(foco&&(Math.sin(foco.ry)*(q.x-cx)+Math.cos(foco.ry)*(q.z-cz)<(tipo==='costura'?.15:.7)))continue;
@@ -66,18 +79,17 @@ JS = r'''(async () => {
         }
         const separacion=vistas.length?Math.min(2,Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)):0;
         const similitud=vistas.length?Math.max(0,((q.x-cx)*(vistas[0].x-cx)+(q.z-cz)*(vistas[0].z-cz))/Math.max(.001,Math.hypot(q.x-cx,q.z-cz)*Math.hypot(vistas[0].x-cx,vistas[0].z-cz))):0;
-        const nota=foco?(k===0?-Math.abs(dist-(tipo==='trastero'?2.1:1.6)):dist)-(tapa?10:0):lectura*3+separacion-similitud*5-(tapa?4:0)-Math.abs(dist-2)*.15;
+        const nota=(foco?(k===0?-Math.abs(dist-(tipo==='trastero'?2.1:1.6)):dist)-(tapa?10:0):lectura*3+separacion-similitud*5-(tapa?4:0)-Math.abs(dist-2)*.15)-recortes*100-(sanitario?Math.max(0,1.1-Math.hypot(q.x-cx,q.z-cz))*8:0);
         if(nota>mejor){mejor=nota;x=q.x;z=q.z;}
       }
       if(!Number.isFinite(mejor))throw Error('sin cámara libre: '+tipo+'/'+s);
       for (let i = 0; i < 3; i++) g.frame(1 / 30);
-      const alturaObjetivo=k===0?(tipo==='trastero'?.85:1.05):1.4;
-      cam.fov=foco?(tipo==='trastero'?68:60):tipo==='bano'?75:68;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + alturaObjetivo, cz); cam.updateMatrixWorld(true);
-      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov});
+      cam.fov=fov;cam.updateProjectionMatrix();cam.position.set(x, y + 1.6, z); cam.lookAt(cx, y + alturaObjetivo, cz); cam.updateMatrixWorld(true);
+      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
       g.render();
       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
     }
-    out.push({ seed: s, kit:H.kitDeEstancia(rm.type,prof.id),perfil: prof.id, estilo: prof.style, plano: prof.layout, sala: [+(rm.x1 - rm.x0).toFixed(1), +(rm.z1 - rm.z0).toFixed(1)], planta: rm.lv, vistas });
+    out.push({ seed: s, kit:H.kitDeEstancia(rm.type,prof.id),perfil: prof.id, estilo: prof.style, plano: prof.layout, sala: [+(rm.x1 - rm.x0).toFixed(1), +(rm.z1 - rm.z0).toFixed(1)], planta: rm.lv, quality:g.qKey, dpr:r.getPixelRatio(), vistas });
     await g.interiors.exit();
     await new Promise((res) => setTimeout(res, 300));
   }
@@ -89,9 +101,12 @@ def main():
     parser.add_argument('tipos');parser.add_argument('n',nargs='?',type=int,default=3)
     parser.add_argument('--kit');parser.add_argument('--perfil');parser.add_argument('--estilo',default='plastilina',choices=['plastilina','real'])
     opts=parser.parse_args();n=opts.n
-    T = Tab(9333, 'http://localhost:8920/index.html?estilo='+opts.estilo, w=1280, h=720, dpr=1)
-    try:
+    with PrivateTab() as T:
+        T.call('Emulation.setDeviceMetricsOverride',dict(width=1280,height=720,deviceScaleFactor=1,mobile=False))
+        T.call('Page.addScriptToEvaluateOnNewDocument',{'source':"localStorage.setItem('guarena_hq_save',JSON.stringify({quality:'alta',qualityMode:'manual',dynRes:false,weatherLive:false,pick:'annie'}));"})
+        T.call('Page.navigate',{'url':'http://localhost:8920/index.html?estilo='+opts.estilo})
         T.ev(LISTO,timeout=240)
+        if not T.ev("game.qKey==='alta'&&!game.autoQuality&&game.renderer.getPixelRatio()===1"):raise RuntimeError('La ficha requiere calidad alta fija y DPR1')
         for tipo in opts.tipos.split(','):
             res = json.loads(T.ev(JS % (json.dumps(tipo), n,json.dumps(opts.kit or ('vivienda_taller' if tipo=='taller' else None)),json.dumps(opts.perfil)), timeout=600))
             if not res:raise RuntimeError('ninguna casa para '+tipo+'/'+str(opts.kit))
@@ -105,8 +120,6 @@ def main():
             hoja.save(os.path.join(dest,nombre+'.jpg'),quality=85)
             json.dump(res,open(os.path.join(dest,nombre+'.json'),'w'),ensure_ascii=False,indent=1)
             print(len(res),'casas capturadas:',nombre,flush=True)
-    finally:
-        T.close()
 
 if __name__ == '__main__':
     main()

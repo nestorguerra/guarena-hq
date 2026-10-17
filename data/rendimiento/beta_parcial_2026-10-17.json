@@ -1,6 +1,6 @@
 {
  "fecha": "2026-10-17T17:48:20.961577+00:00",
- "estado": "tanda parcial validada localmente y revisada; publicación pendiente",
+ "estado": "tanda parcial publicada y verificada funcionalmente en el commit exacto; objetivo completo pendiente",
  "base": "3e93087815607c7286959d0913df367dd87f039d",
  "fuentes_sha256": {
   "src/game.js": "e3c07ab69474367ecc931eade8b0909b91c4a226a83e230e939aa04e8da3f968",
@@ -21,7 +21,7 @@
   "Una máquina M1; señales de memoria y procesador son aproximadas.",
   "Poses visuales estáticas; no certifican ausencia de parpadeo continuo.",
   "Objetivo visual4/5 y beta pública final pendientes.",
-  "Capturas noche: ambiente y vidrio no refrescados; sólo comparación relativa simétrica, no iluminación nocturna real."
+  "Las capturas nocturnas iniciales conservan su limitación; visual-night-real-v2 corrige ambiente y vidrio sólo en tres pares estáticos de un interior. Persiste techo lavado compartido; no certifica exterior nocturno, movimiento continuo ni calidad4/5."
  ],
  "informes": {
   "fluidez_juego_vivo": {
@@ -2252,11 +2252,1344 @@
      "errors": []
     }
    }
+  },
+  "integracion_publica": {
+   "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=6d34cc3",
+   "errores": [],
+   "revision_servida": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+   "carga_partida": {
+    "dinero": 321,
+    "banco": 700,
+    "decoracion": [
+     {
+      "id": "cuadro",
+      "x": 0,
+      "y": 4.7,
+      "z": 4.9,
+      "ry": 3.141592653589793,
+      "seed": 23
+     }
+    ],
+    "evo": "{\"testigo\":\"evo\"}",
+    "fija": "{\"testigo\":\"fija\"}"
+   },
+   "entradas": [
+    {
+     "seed": 2786,
+     "plano": "pasillo",
+     "plantas": 1,
+     "entrada_ms": 239.4,
+     "habitaciones": 6
+    },
+    {
+     "seed": 3244,
+     "plano": "dosPlantas",
+     "plantas": 2,
+     "entrada_ms": 143.7,
+     "habitaciones": 6
+    },
+    {
+     "seed": 1594,
+     "plano": "dosPlantas",
+     "plantas": 2,
+     "entrada_ms": 140.7,
+     "habitaciones": 6
+    },
+    {
+     "seed": 1689,
+     "plano": "pasillo",
+     "plantas": 1,
+     "entrada_ms": 82.7,
+     "habitaciones": 7
+    },
+    {
+     "seed": 2132,
+     "plano": "pasillo",
+     "plantas": 1,
+     "entrada_ms": 168.9,
+     "habitaciones": 7
+    },
+    {
+     "seed": 1639,
+     "plano": "lateral",
+     "plantas": 1,
+     "entrada_ms": 55,
+     "habitaciones": 4
+    },
+    {
+     "seed": 5157,
+     "plano": "pasillo",
+     "plantas": 1,
+     "entrada_ms": 72.1,
+     "habitaciones": 7
+    },
+    {
+     "seed": 3627,
+     "plano": "lateral",
+     "plantas": 1,
+     "entrada_ms": 62.7,
+     "habitaciones": 5
+    }
+   ],
+   "annie": {
+    "entrada_ms": 91.5,
+    "kits": 5,
+    "personalizadas": [
+     "dormitorio"
+    ],
+    "acciones": [
+     "exit",
+     "mirror",
+     "bed",
+     "safe",
+     "tv",
+     "read",
+     "drawer",
+     "eat",
+     "fridge"
+    ],
+    "decoracion": [
+     {
+      "id": "cuadro",
+      "x": 0,
+      "y": 4.7,
+      "z": 4.899999999999636
+     }
+    ],
+    "banco": 700,
+    "siesta": true
+   },
+   "comercios": [
+    {
+     "tipo": "bar",
+     "acciones": 1
+    },
+    {
+     "tipo": "cafeteria",
+     "acciones": 1
+    },
+    {
+     "tipo": "farmacia",
+     "acciones": 1
+    }
+   ],
+   "consola": [],
+   "recarga_partida": {
+    "dinero": 321,
+    "banco": 700,
+    "decoracion": [
+     {
+      "id": "cuadro",
+      "x": 0,
+      "y": 4.7,
+      "z": 4.9,
+      "ry": 3.141592653589793,
+      "seed": 23
+     }
+    ],
+    "evo": "{\"testigo\":\"evo\"}",
+    "fija": "{\"testigo\":\"fija\"}"
+   }
+  },
+  "noche_corregida": {
+   "before": {
+    "images": [
+     {
+      "hour": 12,
+      "night": 0,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.6,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.85
+      },
+      "light": {
+       "hemi": 0.7425000000000002,
+       "sun": 0.46175999999999995,
+       "bounce": 0.95,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.14,
+       "threshold": 0.95,
+       "radius": 0.75
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        -2.551941037572675,
+        -0.8893191276776842,
+        -2.662377297300047,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 4,
+      "direct": null,
+      "gl_error": 0,
+      "errors": [],
+      "file": "before_room_day.png",
+      "sha256": "0a3339a5db2a74c47302ecf782bd4f9d025cc38eb0315425c397dfffa1fd5348"
+     },
+     {
+      "hour": 23,
+      "night": 1,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.45,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.1
+      },
+      "light": {
+       "hemi": 0.7150000000000001,
+       "sun": 0.108,
+       "bounce": 0,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.6,
+       "threshold": 0.85,
+       "radius": 0.6
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        -2.551941037572675,
+        -0.8893191276776842,
+        -2.662377297300047,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 4,
+      "direct": null,
+      "gl_error": 0,
+      "errors": [],
+      "file": "before_room_night.png",
+      "sha256": "f1e1ab397cd4591e303313d2faac65fd1fe72ac1a11a1472aecda11f26bacfe7"
+     },
+     {
+      "hour": 23,
+      "night": 1,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.45,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.1
+      },
+      "light": {
+       "hemi": 0.7150000000000001,
+       "sun": 0.108,
+       "bounce": 0,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.6,
+       "threshold": 0.85,
+       "radius": 0.6
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        2.183549960013125,
+        0.9466958081493841,
+        -2.284700502915703,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 4,
+      "direct": null,
+      "gl_error": 0,
+      "errors": [],
+      "file": "before_lamp_night.png",
+      "sha256": "06685735a5f382aaed229671626e9aa64d736b0c4290eb6d9a2010c82fb599f6"
+     }
+    ]
+   },
+   "after": {
+    "images": [
+     {
+      "hour": 12,
+      "night": 0,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.6,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.85
+      },
+      "light": {
+       "hemi": 0.7425000000000002,
+       "sun": 0.46175999999999995,
+       "bounce": 0.95,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.14,
+       "threshold": 0.95,
+       "radius": 0.75
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        -2.551941037572675,
+        -0.8893191276776842,
+        -2.662377297300047,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 0,
+      "direct": true,
+      "gl_error": 0,
+      "errors": [],
+      "file": "after_room_day.png",
+      "sha256": "4e268c3f15ffe7ac9e88ae64752af3b323ec19a83f7b129be2193edba5321f1a"
+     },
+     {
+      "hour": 23,
+      "night": 1,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.45,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.1
+      },
+      "light": {
+       "hemi": 0.7150000000000001,
+       "sun": 0.108,
+       "bounce": 0,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.6,
+       "threshold": 0.85,
+       "radius": 0.6
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        -2.551941037572675,
+        -0.8893191276776842,
+        -2.662377297300047,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 0,
+      "direct": true,
+      "gl_error": 0,
+      "errors": [],
+      "file": "after_room_night.png",
+      "sha256": "913a97c6d8feda0428e2f0c3b3b5826e20e6c4abb27dcd60f07bb7d8fc6a1206"
+     },
+     {
+      "hour": 23,
+      "night": 1,
+      "exposure": 0.9,
+      "weather": {
+       "cover": 0.42,
+       "over": 0,
+       "rain": 0,
+       "snow": 0,
+       "fog": 0,
+       "fogFar": 3000,
+       "storm": 0,
+       "wind": 0,
+       "windX": 0,
+       "windZ": 0,
+       "flash": 0
+      },
+      "environment": {
+       "forced": true,
+       "updates": 1,
+       "replaced": false,
+       "intensity": 0.45,
+       "timer": 3
+      },
+      "window": {
+       "active": false,
+       "clearGlass": false,
+       "emissive": 0.1
+      },
+      "light": {
+       "hemi": 0.7150000000000001,
+       "sun": 0.108,
+       "bounce": 0,
+       "house": [
+        {
+         "position": [
+          -5200,
+          2.62,
+          -5198.103849502467
+         ],
+         "intensity": 11,
+         "distance": 13.639762336945909,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          2.62,
+          -5192.7001351923445
+         ],
+         "intensity": 7.015127625176682,
+         "distance": 7.015127625176682,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5194.10316071738
+         ],
+         "intensity": 10.676762885968945,
+         "distance": 11.876304811097345,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          2.62,
+          -5190.595596904792
+         ],
+         "intensity": 8.45117525731263,
+         "distance": 9.696962272316487,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5200,
+          5.52,
+          -5197.503849502466
+         ],
+         "intensity": 11,
+         "distance": 15.649691617881476,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5193.857699004933
+         ],
+         "intensity": 7.648437932574749,
+         "distance": 8.779137276842274,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5201.15,
+          5.52,
+          -5190.9501351923445
+         ],
+         "intensity": 9.575967376320001,
+         "distance": 10.85321661189714,
+         "decay": 1.6
+        },
+        {
+         "position": [
+          -5197.521441621892,
+          5.52,
+          -5192.100135192345
+         ],
+         "intensity": 5.815127625176682,
+         "distance": 6,
+         "decay": 1.6
+        }
+       ]
+      },
+      "bloom": {
+       "strength": 0.6,
+       "threshold": 0.85,
+       "radius": 0.6
+      },
+      "canvas": [
+       1920,
+       1080
+      ],
+      "camera": {
+       "fov": 68,
+       "position": [
+        -5200.654288324378,
+        4.7,
+        -5191.65316071738
+       ],
+       "rotation": [
+        2.183549960013125,
+        0.9466958081493841,
+        -2.284700502915703,
+        "XYZ"
+       ],
+       "near": 0.25,
+       "far": 4200
+      },
+      "pr": 1.5,
+      "scene_samples": 4,
+      "composer_samples": 0,
+      "direct": true,
+      "gl_error": 0,
+      "errors": [],
+      "file": "after_lamp_night.png",
+      "sha256": "2c02ad4b340db46ae645e3a9d99f317ace574931577c6a8c14993f51a61aaea1"
+     }
+    ]
+   }
   }
  },
  "revisiones": {
   "codigo": "Sin P1/P2 abiertos en el alcance de rendimiento.",
-  "visual": "Sin regresión importante relativa en9pares estáticos; noche no representativa.",
-  "publicacion": "Tanda parcial admisible tras CI y verificación pública del commit exacto; no beta completa."
+  "visual": "Aceptada regresión relativa en nueve pares estáticos iniciales y tres pares de noche corregida. Noche v2 refresca ambiente/vidrio; persiste techo lavado compartido. Sin aprobación4/5 ni de tanda7.",
+  "publicacion": "Commit6d34cc384fca3590a00e2cb3286c7e9da7382db8 verificado en Pages y prueba funcional pública; ocho casas, Annie, tres comercios y partida recargada sin errores registrados. Tanda parcial; no beta completa."
+ },
+ "ensayo_adicional_no_comparable": {
+  "metric": "render_plus_synchronous_1px_readback_ms_per_image",
+  "equivalent_rate_is_not_live_fps": true,
+  "views": {
+   "street_edge12": {
+    "comparable": false,
+    "reasons": [
+     "Scene/camera manifests differ across versions or rounds"
+    ],
+    "before": {
+     "round_mean_ms": [
+      80.7108333359162,
+      81.39499999632439,
+      77.30749999930461
+     ],
+     "median_of_round_means_ms": 80.7108333359162,
+     "equivalent_render_fps": 12.389910482500264,
+     "round_p95_ms": [
+      92.19999998807907,
+      91.10000002384186,
+      85
+     ],
+     "round_calls": [
+      [
+       1387
+      ],
+      [
+       1387
+      ],
+      [
+       1387
+      ]
+     ],
+     "round_triangles": [
+      [
+       4221080
+      ],
+      [
+       4221080
+      ],
+      [
+       4221080
+      ]
+     ]
+    },
+    "after": {
+     "round_mean_ms": [
+      60.00666667024294,
+      59.419166663785774,
+      57.84083333263795
+     ],
+     "median_of_round_means_ms": 59.419166663785774,
+     "equivalent_render_fps": 16.82958641372987,
+     "round_p95_ms": [
+      66.90000003576279,
+      65.69999998807907,
+      66.90000003576279
+     ],
+     "round_calls": [
+      [
+       1387
+      ],
+      [
+       1387
+      ],
+      [
+       1387
+      ]
+     ],
+     "round_triangles": [
+      [
+       4221080
+      ],
+      [
+       4221080
+      ],
+      [
+       4221080
+      ]
+     ]
+    },
+    "time_reduction_percent": null,
+    "equivalent_rate_gain_percent": null
+   },
+   "plaza": {
+    "comparable": false,
+    "reasons": [
+     "Scene/camera manifests differ across versions or rounds"
+    ],
+    "before": {
+     "round_mean_ms": [
+      73.91666666517655,
+      75.46999999980132,
+      71.5100000033776
+     ],
+     "median_of_round_means_ms": 73.91666666517655,
+     "equivalent_render_fps": 13.528748591028087,
+     "round_p95_ms": [
+      81.69999998807907,
+      83.19999998807907,
+      78.90000003576279
+     ],
+     "round_calls": [
+      [
+       991
+      ],
+      [
+       991
+      ],
+      [
+       991
+      ]
+     ],
+     "round_triangles": [
+      [
+       4378888
+      ],
+      [
+       4378888
+      ],
+      [
+       4378888
+      ]
+     ]
+    },
+    "after": {
+     "round_mean_ms": [
+      54.49166666865349,
+      55.05916666785876,
+      53.12500000198682
+     ],
+     "median_of_round_means_ms": 54.49166666865349,
+     "equivalent_render_fps": 18.351429881575882,
+     "round_p95_ms": [
+      58.5,
+      63.299999952316284,
+      58
+     ],
+     "round_calls": [
+      [
+       991
+      ],
+      [
+       991
+      ],
+      [
+       991
+      ]
+     ],
+     "round_triangles": [
+      [
+       4378888
+      ],
+      [
+       4378888
+      ],
+      [
+       4378888
+      ]
+     ]
+    },
+    "time_reduction_percent": null,
+    "equivalent_rate_gain_percent": null
+   },
+   "house_2606": {
+    "comparable": false,
+    "reasons": [
+     "Scene/camera manifests differ across versions or rounds"
+    ],
+    "before": {
+     "round_mean_ms": [
+      85.67250000039736,
+      90.87916667163373,
+      84.73916666805744
+     ],
+     "median_of_round_means_ms": 85.67250000039736,
+     "equivalent_render_fps": 11.672356940621107,
+     "round_p95_ms": [
+      91.59999996423721,
+      108.80000001192093,
+      90.79999995231628
+     ],
+     "round_calls": [
+      [
+       1078
+      ],
+      [
+       1078
+      ],
+      [
+       1078
+      ]
+     ],
+     "round_triangles": [
+      [
+       5115176
+      ],
+      [
+       5115176
+      ],
+      [
+       5115176
+      ]
+     ]
+    },
+    "after": {
+     "round_mean_ms": [
+      68.19166666666666,
+      72.67666666905085,
+      68.28333333532015
+     ],
+     "median_of_round_means_ms": 68.28333333532015,
+     "equivalent_render_fps": 14.644862093789163,
+     "round_p95_ms": [
+      72.70000004768372,
+      82.70000004768372,
+      72.90000003576279
+     ],
+     "round_calls": [
+      [
+       1078
+      ],
+      [
+       1078
+      ],
+      [
+       1078
+      ]
+     ],
+     "round_triangles": [
+      [
+       5115176
+      ],
+      [
+       5115176
+      ],
+      [
+       5115176
+      ]
+     ]
+    },
+    "time_reduction_percent": null,
+    "equivalent_rate_gain_percent": null
+   }
+  },
+  "comparability_errors": [
+   "street_edge12: Scene/camera manifests differ across versions or rounds",
+   "plaza: Scene/camera manifests differ across versions or rounds",
+   "house_2606: Scene/camera manifests differ across versions or rounds"
+  ]
+ },
+ "actualizado": "2026-10-17T18:00:15.035214+00:00",
+ "publicacion_verificada": {
+  "commit": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+  "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=6d34cc3",
+  "revision_servida": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+  "ci": {
+   "run_id": 39055528734,
+   "branch": "epica-i-interiores",
+   "head_sha": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+   "status": "completed",
+   "conclusion": "success",
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39055528734"
+  },
+  "pages": {
+   "run_id": 39055742146,
+   "branch": "main",
+   "head_sha": "6d34cc384fca3590a00e2cb3286c7e9da7382db8",
+   "status": "completed",
+   "conclusion": "success",
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39055742146"
+  },
+  "procedencia": "Workflows releídos mediante gh run view; informe funcional local del navegador público releído y contrastado con SHA exacto. Este pase no ejecutó navegador.",
+  "informe": ".cache/perf-beta/integracion_publica.json",
+  "informe_sha256": "a87b684faca05744a51db7397459b6945172e1f0a0b2749d1fe6d5c8a07327fc",
+  "limite": "La comprobación funcional adelanta la introducción; no es una nueva medición de carga pública. No ejecutó colisiones exhaustivas. Errores de consola consultados antes de la última recarga."
+ },
+ "evidencia_noche_corregida": {
+  "informe": ".cache/perf-beta/visual-night-real-v2/report.json",
+  "informe_sha256": "4830590095a50e9b055112d5eebc08bbaff4fd64a881d01274807955d5d5532e",
+  "revision_visual": ".cache/revision-visual-post.md",
+  "revision_visual_sha256": "7a8163a3511c15c520686a8c75023310dc9af4f6738b38a51ae2ab321a571c21",
+  "imagenes_hashes_verificados": 6,
+  "alcance": "Regresión relativa de tres pares estáticos de un interior; evaluación visual atribuida al informe independiente, no una nueva inspección en este pase."
  }
 }

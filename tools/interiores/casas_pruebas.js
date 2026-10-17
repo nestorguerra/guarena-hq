@@ -273,5 +273,38 @@ export async function probarCasas(opts = {}) {
   if(opts.tanda>=9)await caso('el puesto con silla se cuenta una vez y exige su asiento vinculado',()=>{
     const h=H.buildVecino(2606);try{const e=h.estancias.find(e=>e.kit==='vivienda_costura'),pres={interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}},r=revisar({local:e,group:{traverse(){}}},pres);exigir(!r.errores.length,r.errores.join('; '));const roto={...e,colocados:e.colocados.map(p=>p.obj==='silla_comedor'?{...p,de:null}:p)},rr=revisar({local:roto,group:{traverse(){}}},pres);exigir(rr.errores.some(e=>e.startsWith('asiento:')),'se acepta el puesto sin silla');}finally{tirar(h);}
   });
+  if(opts.tanda>=9)await caso('el frente modular prueba el extremo libre antes de dispersarse',()=>{
+    const id='__prueba_modulos',base=KITS.vivienda_cocina;
+    KITS[id]={...base,objetos:[
+      {zona:'estancia',regla:'contra_pared',obj:'va_cocina',pared:'N',cantidad:[1,1],centrado:true},
+      {zona:'estancia',regla:'junto_a',obj:'va_encimera',de:'va_cocina',lados:['derecha'],cantidad:[1,1]},
+      {zona:'estancia',regla:'junto_a',obj:'va_nevera',de:['va_cocina','va_encimera'],cantidad:[1,1],buscar_refs:true,si_no:false},
+    ]};
+    try{
+      const A=amueblar(id,37,{W:3.3,D:3,H:2.75}),c=A.P.find(p=>p.obj==='va_cocina'),n=A.P.find(p=>p.obj==='va_nevera');
+      exigir(c&&n&&Math.abs(c.ry-n.ry)<.01&&Math.abs(c.z-n.z)<.08,'la nevera no prolonga el extremo libre del frente');
+      KITS[id].objetos[2].buscar_refs=false;
+      exigir(!amueblar(id,37,{W:3.3,D:3,H:2.75}).P.some(p=>p.obj==='va_nevera'),'la muestra no reproduce el extremo bloqueado');
+    }finally{delete KITS[id];}
+  });
+  if(opts.tanda>=9)await caso('un armario alto preferido se intenta sobre la encimera',()=>{
+    const id='__prueba_alto',base=KITS.vivienda_cocina;
+    KITS[id]={...base,objetos:[
+      {zona:'estancia',regla:'contra_pared',obj:'va_encimera',pared:'N',cantidad:[1,1],centrado:true},
+      {zona:'estancia',regla:'pared',obj:'va_alto_cocina',pared:'*',sobre_de:'va_encimera',cantidad:[0,1],preferir:true},
+    ]};
+    try{for(const seed of [1,2,3,4,5,37])exigir(amueblar(id,seed,{W:4,D:3,H:2.75}).P.some(p=>p.obj==='va_alto_cocina'),seed+': se sortea un armario que cabe y se prefiere');}
+    finally{delete KITS[id];}
+  });
+  if(opts.tanda>=9)await caso('el inodoro conserva espacio frontal y el validador detecta su bloqueo',()=>{
+    const pres={interior:{triangulos_max:Infinity,mallas_max:Infinity,luces_max:Infinity}};
+    for(const seed of [2786,3244,1594]){const h=H.buildVecino(seed);try{
+      const e=h.estancias.find(e=>e.kit==='vivienda_bano'),r=revisar({local:e,group:{traverse(){}}},pres);
+      exigir(!r.errores.length,seed+': '+r.errores.join('; '));
+      const wc=e.colocados.find(p=>p.obj==='va_inodoro'),b=caja(wc.obj),dx=Math.sin(wc.ry)*(b.z1+.3),dz=Math.cos(wc.ry)*(b.z1+.3);
+      const roto={...e,colocados:e.colocados.map(p=>p.obj==='va_ducha'?{...p,x:wc.x+dx,z:wc.z+dz}:p)},rr=revisar({local:roto,group:{traverse(){}}},pres);
+      exigir(rr.errores.some(e=>e.startsWith('uso frontal:')),'se acepta el inodoro bloqueado por la ducha');
+    }finally{tirar(h);}}
+  });
   return { pruebas, errores };
 }

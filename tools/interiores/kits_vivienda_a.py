@@ -8,9 +8,25 @@ def generar():
     higiene_ids=['va_cepillero', 'va_dentifrico', 'va_jabonera', 'va_pastilla_jabon', 'va_peine', 'va_maquinilla', 'va_afeitado', 'va_esponja', 'va_algodon', 'va_bastoncillos', 'va_toalla', 'va_toalla_manos', 'va_secador', 'va_cortaunas', 'va_panuelos', 'va_colonia', 'va_desodorante', 'va_crema', 'va_locion', 'va_sales', 'va_hilo_dental', 'va_cepillo_pelo', 'va_gorro', 'va_cosmeticos', 'va_gel', 'va_champu']
     higiene=[k for k,o in C.items() if (k in higiene_ids or k.startswith(('per_cosm_','per_perfume_'))) and o['soporte']=='superficie']+['prod_papel_higienico','prod_gel_ducha','prod_champu_super','prod_dentifrico','prod_compresas','prod_esponjas']
     frentes=['va_cocina','va_cocina_amplia','va_encimera','va_encimera_amplia']
-    cocina=[pared('va_cocina',area_max=14),pared('va_cocina_amplia',area_min=14),junto('va_encimera',frentes,True,area_max=14),junto('va_encimera_amplia',frentes,True,area_min=14),junto('va_nevera',frentes,True),pared('va_alacena'),pared('va_lavadora',False),E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera',cantidad=[0,1],preferir=True,area_max=14),E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera_amplia',cantidad=[0,1],preferir=True,area_min=14),junto('va_encimera_amplia',frentes,area_min=18),pared('va_alacena',False,area_min=20),E('conjunto','mesa_camilla',cantidad=[0,1],preferir=True,area_min=13,estilo=['antiguo','rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),E('conjunto','va_mesa_comedor',cantidad=[0,1],preferir=True,area_min=13,estilo=['!antiguo','!rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),E('suelo_libre','va_isla_cocina',cantidad=[0,1],preferir=True,area_min=22)]+adornos(comida+vajilla,['va_encimera','va_encimera_amplia','va_alacena','va_lavadora','va_isla_cocina'])
+    # Un frente de trabajo continuo; la puerta puede obligar a usar otra pared.
+    cocina=[
+        pared('va_cocina',area_max=14),pared('va_cocina_amplia',area_min=14),
+        junto('va_encimera',frentes,True,area_max=14,buscar_refs=True),
+        junto('va_encimera_amplia',frentes,True,area_min=14,buscar_refs=True),
+        junto('va_nevera',frentes,True,buscar_refs=True),
+        E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera',cantidad=[0,1],preferir=True,area_max=14),
+        E('pared','va_alto_cocina',pared='*',sobre_de='va_encimera_amplia',cantidad=[0,1],preferir=True,area_min=14),
+        junto('va_lavadora',frentes,buscar_refs=True),junto('va_alacena',frentes,True,buscar_refs=True),
+        junto('va_encimera_amplia',frentes,area_min=18,buscar_refs=True),
+        pared('va_alacena',False,area_min=20),
+        E('conjunto','mesa_camilla',cantidad=[0,1],preferir=True,area_min=13,estilo=['antiguo','rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),
+        E('conjunto','va_mesa_comedor',cantidad=[0,1],preferir=True,area_min=13,estilo=['!antiguo','!rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),
+        E('suelo_libre','va_isla_cocina',cantidad=[0,1],preferir=True,area_min=22),
+    ]+adornos(comida+vajilla,['va_encimera','va_encimera_amplia','va_alacena','va_lavadora','va_isla_cocina'])
     kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
-    bano=[pared('va_lavabo',area_max=10),pared('va_lavabo_amplio',area_min=10),E('pared','va_espejo',pared='*',sobre_de='va_lavabo',cantidad=[1,1],obligatorio=True,area_max=10),E('pared','va_espejo_amplio',pared='*',sobre_de='va_lavabo_amplio',cantidad=[1,1],obligatorio=True,area_min=10),pared('va_ducha'),junto('va_inodoro','va_ducha',True),junto('va_toallero',['va_lavabo','va_lavabo_amplio'],True),E('pared','va_papel',pared='*',sobre_de='va_inodoro',cantidad=[0,1]),junto('va_armario_bano',['va_lavabo','va_lavabo_amplio']),pared('va_banera',False,area_min=10),pared('va_cesto_ropa',False),junto('va_alfombrilla_bano',['va_lavabo','va_lavabo_amplio'],lados=['frente'],si_no=False),E('sobre',['va_cepillero','va_jabonera','va_jabonera'],en=['va_lavabo','va_lavabo_amplio'],por_soporte=[1,1])]+adornos(higiene,['va_armario_bano'])
+    bano=[pared('va_lavabo',area_max=10),pared('va_lavabo_amplio',area_min=10),E('pared','va_espejo',pared='*',sobre_de='va_lavabo',cantidad=[1,1],obligatorio=True,area_max=10),E('pared','va_espejo_amplio',pared='*',sobre_de='va_lavabo_amplio',cantidad=[1,1],obligatorio=True,area_min=10),E('enfrente','va_inodoro',de=['va_lavabo','va_lavabo_amplio'],cantidad=[1,1],obligatorio=True,area_min=10),pared('va_ducha'),junto('va_inodoro','va_ducha',True,area_max=10),junto('va_toallero',['va_lavabo','va_lavabo_amplio'],True),E('pared','va_papel',pared='*',sobre_de='va_inodoro',cantidad=[0,1]),junto('va_armario_bano',['va_lavabo','va_lavabo_amplio']),junto('va_banera','va_ducha',area_min=10),pared('va_cesto_ropa',False),junto('va_alfombrilla_bano',['va_lavabo','va_lavabo_amplio'],lados=['frente'],si_no=False),E('sobre',['va_cepillero','va_jabonera','va_jabonera'],en=['va_lavabo','va_lavabo_amplio'],por_soporte=[1,1])]+adornos(higiene,['va_armario_bano'])
+    for e in bano:
+        if e.get('obj')=='va_inodoro':e['espacio_frontal']=[.6,.65]
     kit('bano','Baño doméstico','bano',bano,mood['bano'],fondo=(1.9,3.6))
     comedor=[E('conjunto','va_mesa_comedor',cantidad=[1,1],obligatorio=True,giro=[0,90],sillas=dict(variantes=['silla_comedor'],n=[2,4])),pared('aparador',False),pared('va_alacena',False),E('pared',['cuadro_paisaje','fotos_familia','cuadro_virgen'],pared='*',cantidad=[1,3]),E('sobre',vajilla,en=['va_mesa_comedor'],por_soporte=[2,4])]+adornos(vajilla+comida,['aparador','va_alacena'])
     kit('comedor','Comedor familiar','otra_estancia',comedor,mood['comedor'],fondo=(2.5,5))
@@ -28,7 +44,20 @@ def generar():
     kit('taller','Taller doméstico de bricolaje','otra_estancia',taller,mood['taller'],fondo=(2.5,5))
     almacen= herramientas+['caja_carton','caja_archivo','vb_cesto','vb_ropa','vb_colcha']
     estantes=['va_estante_trastero_0','va_estante_trastero_1','va_estante_trastero_2']
-    trastero=[pared(['va_bicicleta_guardada','va_escalera_guardada']),pared(estantes),junto('va_cesto_temporada',estantes,True),pared('va_ventilador_guardado',False),pared(estantes,area_min=10),pared(estantes,False,area_min=18),pared('va_utiles_guardados',False),pared('va_cajas_apiladas',False,area_min=16),pared('va_caja_almacen',False,area_min=12),E('suelo_libre','va_cajas_apiladas',cantidad=[1,1],obligatorio=True,area_min=14)]+adornos(almacen,estantes)
+    guardados=['va_bicicleta_guardada','va_escalera_guardada']
+    almacenaje=estantes+['va_cajas_apiladas']
+    # Se prioriza un frente de estantes y cajas; el mínimo admite otra pared.
+    # Los acompañantes opcionales solo se colocan si conservan su agrupación.
+    trastero=[
+        pared(estantes),junto(estantes,estantes,True,area_min=10,buscar_refs=True),
+        junto('va_cajas_apiladas',estantes,True,area_min=14,buscar_refs=True),
+        pared(guardados),junto('va_cesto_temporada',estantes,True,buscar_refs=True),
+        junto(estantes,estantes,area_min=18,buscar_refs=True,si_no=False),
+        junto('va_cajas_apiladas',almacenaje,area_min=16,buscar_refs=True,si_no=False),
+        junto('va_caja_almacen',almacenaje,area_min=12,buscar_refs=True,si_no=False),
+        junto('va_ventilador_guardado',guardados,buscar_refs=True,si_no=False),
+        junto('va_utiles_guardados',guardados,buscar_refs=True,si_no=False),
+    ]+adornos(almacen,estantes)
     trastero[-2]['por_soporte']=[2,4]
     kit('trastero','Trastero de la vivienda','otra_estancia',trastero,mood['trastero'],fondo=(2.5,5))
     telas=[k for k,o in C.items() if o['soporte']=='superficie' and k.startswith(('va_hilo','va_tela','pila_camiseta','pila_pantalon','pila_jersey'))]+['va_tijeras','va_cinta_metrica','va_alfiletero','va_botones','va_agujas','va_patrones','va_dedal','va_retales','va_bastidor','va_cierre','va_caja_hilos','va_ovillo','vb_colcha','vb_ropa','vb_cesto','lampara_mesa']

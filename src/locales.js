@@ -10,7 +10,7 @@ import * as THREE from 'three';
 import { INTERIOR_ORIGIN, planeGeo, boxGeo, HouseBuilder, std, texMat, glassMat, T as MURO } from './housekit.js';
 import { KITS, OBJETOS } from './interiores_datos.js';
 import { caja, construir, kelvin } from './objetos.js';
-import { rot, partes, penetra, superficie, mapaPaso } from './interiores_geo.js';
+import { rot, partes, penetra, superficie, mapaPaso, espacioFrontal } from './interiores_geo.js';
 import { mulberry32, hash1 } from './util.js';
 
 const TOL = 0.005; // (half the validator's centimetre: what the layout lets touch, the validator lets pass)
@@ -56,7 +56,7 @@ export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && e
 export function amueblar(kit, seed = 1, ctx = null) {
   const K = KITS[kit];
   if (!K) throw new Error('sin kit: ' + kit);
-  const tipologia = K.tipologia;
+  const tipologia = K.tipologia, reservaUso=K.objetos.some(e=>e.espacio_frontal);
   const r = mulberry32((seed * 2654435761 + 97) >>> 0);
   const U = (a) => (Array.isArray(a) ? a[0] + r() * (a[1] - a[0]) : a);
   const N = (a) => (Array.isArray(a) ? a[0] + Math.floor(r() * (a[1] - a[0] + 1)) : a);
@@ -119,6 +119,15 @@ export function amueblar(kit, seed = 1, ctx = null) {
   for (const Z of Object.values(zonas)) if (Z.publica && !debe.includes(Z.id)) avisos.push(`la zona pública «${Z.id}» no se alcanza ni con el local vacío`);
   const cierra = (nuevos, sin = -1) => {
     guardias++;
+    if(reservaUso){
+      const candidatos=P.filter((p,i)=>i!==sin).concat(nuevos);
+      for(const p of candidatos){
+        const e=K.objetos[p.e??entrada];
+        if(!e?.espacio_frontal)continue;
+        const R=espacioFrontal(p,caja(p.obj),e.espacio_frontal);
+        if(!dentro(R,zonas[e.zona])||candidatos.some(q=>q!==p&&partes(q).some(v=>penetra(R,v)>TOL)))return true;
+      }
+    }
     if(!ctx?.funciones){const a=alcanza(nuevos,sin);return debe.some(id=>!a.includes(id));}
     const objetos=P.filter((p,i)=>i!==sin).concat(nuevos),mapa=mapaPaso(planta,objetos.flatMap(partes),.05,ancho,inicio);
     if(debe.some(id=>!mapa.zonas[id]?.alcanzable))return true;
@@ -165,11 +174,15 @@ export function amueblar(kit, seed = 1, ctx = null) {
     junto_a(e, Z) {
       const ids = [].concat(e.de), n = cantidadPreferida(e);
       for(let k=0;k<n;k++) {
-        const ref=[...P].reverse().find(p=>p.zona===Z.id && ids.includes(p.obj));
-        if(!ref) break;
-        const obj=variante(e,k), b=caja(obj), rb=caja(ref.obj), lados=e.lados || ['derecha','izquierda'];
+        const refs=[...P].reverse().filter(p=>p.zona===Z.id && ids.includes(p.obj));
+        if(!refs.length) break;
+        if(!e.buscar_refs)refs.splice(1);
+        const obj=variante(e,k), b=caja(obj), lados=e.lados || ['derecha','izquierda'];
         let ok=false;
-        for(const lado of lados) {
+        // Un frente modular puede prolongarse por cualquiera de sus extremos.
+        // Los demás kits conservan su referencia anterior por defecto.
+        referencias: for(const ref of refs) for(const lado of lados) {
+          const rb=caja(ref.obj);
           const lx=lado==='derecha'?rb.x1+b.w/2+.04:lado==='izquierda'?rb.x0-b.w/2-.04:(rb.x0+rb.x1)/2;
           const lz=lado==='frente'?rb.z1+b.d/2+.06:rb.z0+b.d/2;
           const [dx,dz]=rot(lx,lz,ref.ry), ry=ref.ry+(lado==='frente'&&e.mira_ref?Math.PI:0);
@@ -180,7 +193,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
             else z=(cs>0?Z.z0:Z.z1)+cs*.003-bz;
           }
           const it={obj,x,y:0,z,ry}, v=volumen(it);
-          if(dentro(v,Z)&&libre(v)&&!cierra([it])) {poner(obj,Z.id,OBJETOS[obj].soporte==='pared'?'pared':'junto_a',x,0,z,ry);ok=true;break;}
+          if(dentro(v,Z)&&libre(v)&&!cierra([it])) {poner(obj,Z.id,OBJETOS[obj].soporte==='pared'?'pared':'junto_a',x,0,z,ry);ok=true;break referencias;}
         }
         if(!ok) {if(e.si_no!==false) (OBJETOS[obj].soporte==='pared'?reglas.pared:reglas.contra_pared)({...e,pared:'*',cantidad:1},Z);break;}
       }
@@ -289,7 +302,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
         }
         return;
       }
-      const n = N(e.cantidad || 1);
+      const n = cantidadPreferida(e);
       for (let puestos = 0, k = 0; puestos < n && k < n + 4; k++) {
         const obj = variante(e, puestos), w = caja(obj).w;
         let ok = false;
