@@ -1,0 +1,484 @@
+{
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "revision_esperada": "c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "alcance": "paquete Pages: ocho vecinos, cuatro casas reales de trofeos y tres bancos, Annie, tres comercios y persistencia",
+ "errores": [],
+ "http_status": 200,
+ "revision_servida": "c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "carga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ },
+ "entradas": [
+  {
+   "seed": 2786,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 172.7,
+   "habitaciones": 6,
+   "programaEstudio": null,
+   "programaSalon": null
+  },
+  {
+   "seed": 3244,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 138.8,
+   "habitaciones": 6,
+   "programaEstudio": {
+    "perfil": "artista",
+    "objetos": [
+     "vb_puesto_estudio_amplio",
+     "vb_silla_estudio",
+     "vb_guardado_estudio",
+     "vb_biblioteca_estudio",
+     "vb_ordenador",
+     "vb_panel_estudio_artista",
+     "vb_sillon_estudio",
+     "mesa_auxiliar_lectura",
+     "libro_tumbado",
+     "vb_consulta_baja_estudio",
+     "vb_consulta_estudio_artista",
+     "vb_consulta_estudio_artista",
+     "lb_cuadernos_rojos",
+     "cuadro_paisaje",
+     "vb_lampara_trabajo",
+     "vb_lampara_trabajo"
+    ]
+   },
+   "programaSalon": {
+    "perfil": "artista",
+    "composicion": {
+     "pared": "biblioteca_actual",
+     "offset": 1,
+     "biblioteca": 5,
+     "asiento": 26,
+     "mesita": 23,
+     "lampara": 25,
+     "movidos": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      26,
+      38,
+      39,
+      44
+     ],
+     "intentos": [
+      {
+       "pared": "biblioteca_actual",
+       "offset": 1,
+       "errores": []
+      }
+     ]
+    },
+    "composicionEstar": {
+     "sofa": 2,
+     "mesa": 4,
+     "alfombra": 3,
+     "gap": 0.55,
+     "lateral": 0,
+     "movidos": [
+      3,
+      4,
+      32,
+      33
+     ],
+     "intentos": [
+      {
+       "gap": 0.55,
+       "lateral": 0,
+       "errores": []
+      }
+     ]
+    },
+    "gap_real": 0.55,
+    "alfombra_y": 0.008,
+    "asiento_lectura": {
+     "x": -5198.474626779146,
+     "y": 0,
+     "z": -5198.495000013113,
+     "h": 0,
+     "registros": 1
+    },
+    "alcance_asiento": "registro pieces.seat consumido por terrace; no ejecuta sentarse"
+   }
+  },
+  {
+   "seed": 1594,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 123.2,
+   "habitaciones": 6,
+   "programaEstudio": {
+    "perfil": "estudiante",
+    "objetos": [
+     "vb_puesto_estudio_amplio",
+     "vb_silla_estudio",
+     "vb_guardado_estudio",
+     "vb_biblioteca_estudio",
+     "vb_ordenador",
+     "vb_panel_estudio_estudiante",
+     "vb_consulta_estudio_estudiante",
+     "vb_consulta_estudio_estudiante",
+     "lb_libros_cara_b",
+     "vb_cuaderno",
+     "poster_enmarcado",
+     "vb_lampara_trabajo",
+     "vb_lampara_trabajo"
+    ]
+   },
+   "programaSalon": {
+    "perfil": "estudiante",
+    "composicion": {
+     "pared": "biblioteca_actual",
+     "offset": 1,
+     "biblioteca": 5,
+     "asiento": 27,
+     "mesita": 24,
+     "lampara": 26,
+     "movidos": [
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      40,
+      41,
+      42,
+      43
+     ],
+     "intentos": [
+      {
+       "pared": "biblioteca_actual",
+       "offset": 1,
+       "errores": []
+      }
+     ]
+    },
+    "composicionEstar": {
+     "sofa": 2,
+     "mesa": 4,
+     "alfombra": 3,
+     "gap": 0.55,
+     "lateral": 0,
+     "movidos": [
+      3,
+      4,
+      35,
+      36,
+      37,
+      38,
+      39
+     ],
+     "intentos": [
+      {
+       "gap": 0.55,
+       "lateral": 0,
+       "errores": []
+      }
+     ]
+    },
+    "gap_real": 0.55,
+    "alfombra_y": 0.008,
+    "asiento_lectura": {
+     "x": -5198.520467742309,
+     "y": 0,
+     "z": -5198.495000013113,
+     "h": 0,
+     "registros": 1
+    },
+    "alcance_asiento": "registro pieces.seat consumido por terrace; no ejecuta sentarse"
+   }
+  },
+  {
+   "seed": 1689,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 68,
+   "habitaciones": 7,
+   "programaEstudio": null,
+   "programaSalon": null
+  },
+  {
+   "seed": 2132,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 84.2,
+   "habitaciones": 7,
+   "programaEstudio": null,
+   "programaSalon": null
+  },
+  {
+   "seed": 1639,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 49.6,
+   "habitaciones": 4,
+   "programaEstudio": null,
+   "programaSalon": null
+  },
+  {
+   "seed": 5157,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 56,
+   "habitaciones": 7,
+   "programaEstudio": null,
+   "programaSalon": null
+  },
+  {
+   "seed": 3627,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 54.4,
+   "habitaciones": 5,
+   "programaEstudio": null,
+   "programaSalon": null
+  }
+ ],
+ "trofeos": {
+  "estado": "PASS",
+  "alcance": "Cuatro puertas reales; tres bancos selección/sit/stand por métodos de producto, collider .34 y restauración; 2162 sin banco. Reposición privada al acceso; no recorrido desde entrada ni evaluación visual de animación. Residentes conservados. No compras ni recogida.",
+  "rows": [
+   {
+    "seed": 2132,
+    "estado": "PASS",
+    "entrada_ms": 89,
+    "programa": {
+     "perfil": "cazador",
+     "area": 14.335995450380073,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.239650459238,
+     "y": 0,
+     "z": -5197.475000052452,
+     "h": -1.5707963267948966,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.8196504580455,
+      "y": 0,
+      "z": -5197.475000052452,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 4204,
+    "estado": "PASS",
+    "entrada_ms": 91,
+    "programa": {
+     "perfil": "cazador",
+     "area": 15.991762687744414,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.568458024259,
+     "y": 0,
+     "z": -5196.412145199021,
+     "h": 3.141592653589793,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.568458024259,
+      "y": 0,
+      "z": -5196.992145197829,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 1679,
+    "estado": "PASS",
+    "entrada_ms": 79.7,
+    "programa": {
+     "perfil": "cazador",
+     "area": 14.587230606839851,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.244045484183,
+     "y": 0,
+     "z": -5197.475000052452,
+     "h": -1.5707963267948966,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.82404548299,
+      "y": 0,
+      "z": -5197.475000052452,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 2162,
+    "estado": "PASS",
+    "entrada_ms": 68.2,
+    "programa": {
+     "perfil": "cazador",
+     "area": 11.767969083226646,
+     "gap_real": 0.32000000000000006,
+     "banco": 0,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    }
+   }
+  ]
+ },
+ "annie": {
+  "entrada_ms": 89.5,
+  "kits": 5,
+  "personalizadas": [
+   "dormitorio"
+  ],
+  "acciones": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.899999999999636
+   }
+  ],
+  "banco": 700,
+  "siesta": true
+ },
+ "comercios": [
+  {
+   "tipo": "bar",
+   "acciones": 1
+  },
+  {
+   "tipo": "cafeteria",
+   "acciones": 1
+  },
+  {
+   "tipo": "farmacia",
+   "acciones": 1
+  }
+ ],
+ "consola": [],
+ "revision_tras_recarga": "c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "consola_tras_recarga": [],
+ "recarga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ }
+}
