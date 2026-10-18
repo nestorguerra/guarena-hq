@@ -1,0 +1,143 @@
+{
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "revision_esperada": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "alcance": "paquete Pages: ocho vecinos, Annie, tres comercios y persistencia",
+ "errores": [],
+ "http_status": 200,
+ "revision_servida": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "carga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ },
+ "entradas": [
+  {
+   "seed": 2786,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 159.1,
+   "habitaciones": 6
+  },
+  {
+   "seed": 3244,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 105.3,
+   "habitaciones": 6
+  },
+  {
+   "seed": 1594,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 110.9,
+   "habitaciones": 6
+  },
+  {
+   "seed": 1689,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 70.8,
+   "habitaciones": 7
+  },
+  {
+   "seed": 2132,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 70.4,
+   "habitaciones": 7
+  },
+  {
+   "seed": 1639,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 48.1,
+   "habitaciones": 4
+  },
+  {
+   "seed": 5157,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 66.2,
+   "habitaciones": 7
+  },
+  {
+   "seed": 3627,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 78.8,
+   "habitaciones": 5
+  }
+ ],
+ "annie": {
+  "entrada_ms": 80.5,
+  "kits": 5,
+  "personalizadas": [
+   "dormitorio"
+  ],
+  "acciones": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.899999999999636
+   }
+  ],
+  "banco": 700,
+  "siesta": true
+ },
+ "comercios": [
+  {
+   "tipo": "bar",
+   "acciones": 1
+  },
+  {
+   "tipo": "cafeteria",
+   "acciones": 1
+  },
+  {
+   "tipo": "farmacia",
+   "acciones": 1
+  }
+ ],
+ "consola": [],
+ "revision_tras_recarga": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "consola_tras_recarga": [],
+ "recarga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ }
+}

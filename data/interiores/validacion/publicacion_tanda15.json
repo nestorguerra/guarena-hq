@@ -1,0 +1,36 @@
+{
+ "tanda": 15,
+ "fecha": "2026-10-18T00:27:14.788636+00:00",
+ "estado": "publicada_y_verificada",
+ "commit": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "ci": {
+  "run": 39082348306,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082348306",
+  "arbol_ci_y_head_identico": "69067e01062eea1fb7fd13107644c2e7723dc06d"
+ },
+ "pages": {
+  "run": 39082644397,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082644397"
+ },
+ "integracion": {
+  "informe": "data/interiores/validacion/integracion_publica_tanda15.json",
+  "sha256": "ebf1a3f348703c19fc1def924789e1536af7cdb84cecb019cd1fdc64d3ebc9b9",
+  "estado": "PASS",
+  "casas": 8,
+  "annie_kits": 5,
+  "comercios_con_acciones": 3,
+  "partida_ficticia_y_recarga": true,
+  "revision_antes_y_despues": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+  "maximo_entrada_ms": 159.1,
+  "annie_entrada_ms": 80.5
+ },
+ "visual": {
+  "A": 3.488,
+  "B": 3.208,
+  "objetivo_4_alcanzado": false
+ },
+ "limites": "Muestras en M1; no demuestra rendimiento universal ni calidad visual 4/5. En los tres comercios se comprueba presencia de acciones, sin ejecutar compras. El contrato mecánico de botín pasa en CI; no se repite públicamente en esta tanda."
+}
