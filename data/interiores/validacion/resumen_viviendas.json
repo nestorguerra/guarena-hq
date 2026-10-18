@@ -295,9 +295,47 @@
   "objetivo_4": "Pausado por el usuario tras T20 parcial: dormitorio y cama individual compartida sin nueva puntuación formal. Las 34 evaluaciones e imágenes conservadas son históricas y no acreditan esta versión."
  },
  "publicacion": {
-  "destino": "GitHub Pages: nestorguerra/guarena-hq main",
-  "tipo": "versión de prueba autorizada",
-  "estado_al_generar": "previo a commit y despliegue; consultar Actions y guarena-revision en la página servida"
+  "fecha": "2026-10-18T05:44:33.607423+00:00",
+  "tanda": 20,
+  "estado": "publicada_y_verificada_mejoras_pausadas_por_usuario",
+  "commit": "1ad35cd69ec6482ae10acdb246f27af884a199a1",
+  "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=1ad35cd69ec6482ae10acdb246f27af884a199a1",
+  "ci": {
+   "run": 39101138505,
+   "estado": "success",
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39101138505"
+  },
+  "pages": {
+   "run": 39101471155,
+   "estado": "success",
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39101471155"
+  },
+  "prueba_publica": {
+   "informe": "data/interiores/validacion/integracion_publica_tanda20.json",
+   "sha256": "6c9995e9a033e9825b561fd6ffa666dcee228bf8d3ad631950dedb3c34ad8803",
+   "sha_antes_y_despues": "1ad35cd69ec6482ae10acdb246f27af884a199a1",
+   "vecinos": 8,
+   "trofeos_reales": 4,
+   "dormitorios_puertas": [
+    2786,
+    3244,
+    1689,
+    2132,
+    5157
+   ],
+   "joven_individual": 1594,
+   "camas_residente_y_salida": true,
+   "hide_unhide_y_salida": true,
+   "annie_kits": 5,
+   "comercios_con_acciones": 3,
+   "partida_ficticia_persistencia_explicita": true
+  },
+  "visual": {
+   "nueva_nota_formal": false,
+   "objetivo_4_alcanzado": false,
+   "revisiones_independientes": "Aceptan publicación parcial; pendientes documentados."
+  },
+  "limites": "No4/5,25%,FPS ni beta terminada. Reposición privada al punto de uso, no recorrido desde puerta. Prueba dormir por residente; siesta jugador en Annie. Lectura dormitorio por enlaces/soportes nominales/registro, sin sentarse/leer. Persistencia por game.persist() explícito, no certifica autoguardado. Mejoras pausadas por orden del usuario."
  },
  "calidad_tanda1": {
   "fecha": "2026-10-17",
