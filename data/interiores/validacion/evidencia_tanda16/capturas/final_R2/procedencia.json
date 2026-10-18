@@ -1,0 +1,53 @@
+{
+ "estado": "CAPTURA_FINAL_FUENTE_ACTIVA",
+ "fuentes_sin_cambio": 413,
+ "calidad": "alta_manual",
+ "dpr": 1,
+ "vistas_fisicamente_libres": 6,
+ "poses_con_base_T15": [
+  {
+   "seed": 2786,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 2786,
+   "vista": 1,
+   "misma_pose": true
+  },
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose": true
+  }
+ ],
+ "capturador_sha256": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0",
+ "archivos": {
+  "casa_cocina_3244_0.jpg": "a3ccf2e95133044fad761d5959561a80188b989540549c99739b1547fc999c55",
+  "casa_cocina_3244_1.jpg": "b16d1a88b492e67e438e8d84b9c8935ca0602ed322ffc30408c6c31b6d8d167f",
+  "capturador.py": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0",
+  "casa_cocina.json": "10aeeb984b5f8c7de009f74237e02c8ab5a70283e4f858e365089daabbbe031f",
+  "casa_cocina_1594_0.jpg": "4de76e302d46bac8520bba79a06d67ba9bea875ce12ceb121dd435823c85d9f3",
+  "casa_cocina_1594_1.jpg": "d18ff43767249fd8f3c7b8a6eb0f48df028a8e7d70c04f3cd70c104dcbe1570b",
+  "fuentes_congeladas.json": "f47224cd15adb93743fa42f36e2e79d659e925fc22a578c3693d4aa10e5d78e0",
+  "casa_cocina_2786_0.jpg": "95d77d51d305770e8273e167a6f1d485809697bdfbca2560fa3b497ef09ce6af",
+  "casa_cocina.jpg": "d445639e300adceccfb7f0c9ed2c9e95064091633584c115b2e4db0ab815fc91",
+  "casa_cocina_2786_1.jpg": "cda18136f9062e583c92747dcf81881e028210ce2806a27461d8ca95f9b052ba"
+ },
+ "limite": "Son capturas del candidato activo, no publicación ni prueba funcional. El capturador conserva algoritmo y reconoce familias nuevas de preparación. No se afirma igualdad de píxeles de iluminación."
+}

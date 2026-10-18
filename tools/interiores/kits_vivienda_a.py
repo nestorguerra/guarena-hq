@@ -24,7 +24,11 @@ def generar():
         E('conjunto','va_mesa_comedor',cantidad=[0,1],preferir=True,area_min=13,estilo=['!antiguo','!rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),
         E('suelo_libre','va_isla_cocina',cantidad=[0,1],preferir=True,area_min=22),
     ]+adornos(comida+vajilla,['va_encimera','va_encimera_amplia','va_alacena','va_lavadora','va_isla_cocina'])
-    kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
+    k=kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
+    from frente_cocina import programa_frente
+    k['composicion_cocina']=programa_frente()
+    k['objetos'].append(E('sobre','va_preparar_pan',en=['va_encimera','va_encimera_amplia'],cantidad=[1,1],obligatorio=True,fase='composicion_cocina'))
+    with open(os.path.join(ROOT,'data','kits','vivienda_cocina.json'),'w') as f:json.dump(k,f,ensure_ascii=False,indent=1)
     # En salas grandes, reservar el frente de aseo antes de comprometer el lavabo.
     # Armario opcional: si no cabe el conjunto, el fallback conserva su omisión.
     bano=[

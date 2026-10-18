@@ -1,0 +1,42 @@
+{
+  "state": "PASS_OFFLINE_NO_HELPER_NO_NETWORK",
+  "source_sha256": "f74cdba771d371ddc2ae8366ff58149a6434a554afb86ab652984d8e0a1ad705",
+  "validation": [
+    {
+      "name": "valid",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "name": "duplicate",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "confidence_out",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "missing_level",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "wrong_label",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "wrong_sum",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "wrong_score",
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "malformed_http200_preserved_before_parse": true
+}

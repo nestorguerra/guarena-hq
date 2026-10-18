@@ -1,0 +1,16 @@
+{
+ "estado": "PASS_CPU_SIN_RED",
+ "cliente_sha256": "f74cdba771d371ddc2ae8366ff58149a6434a554afb86ab652984d8e0a1ad705",
+ "recibos_aceptados": 34,
+ "mutantes_rechazados": {
+  "sin_confianza": true,
+  "nivel_duplicado": true,
+  "suma_invalida": true,
+  "score_incoherente": true,
+  "respuesta_ausente": true,
+  "respuesta_duplicada": true
+ },
+ "json_http200_incompleto_bytes_y_requestid_conservados": true,
+ "llamadas_api": 0,
+ "metodo": "Ejecutados nodos AST literales del cliente para gates y captura HTTP con opener local ficticio; no importar helper ni leer credenciales."
+}

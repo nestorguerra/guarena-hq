@@ -1,0 +1,342 @@
+{
+  "state": "PASS_REVIEWED_RUNTIME_INPUTS_MATCH_ACTIVE",
+  "sources": [
+    {
+      "source": "src/util.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/util.js",
+      "sha256": "8c5dcfb913978c17e00966a10ee18628c986de7d841890832ac31fa010720601"
+    },
+    {
+      "source": "src/collision.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/collision.js",
+      "sha256": "741797a927a683ed5a58240d0df9d0bbad777cc3a88de4ff39fbae030ddecc5d"
+    },
+    {
+      "source": "src/objetos.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/objetos.js",
+      "sha256": "cfaf0d3e8532cc9e969c441da2e90f0d5c00d6682fe468c6673f8f839a58fac3"
+    },
+    {
+      "source": "src/acabados_vivienda.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/acabados_vivienda.js",
+      "sha256": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9"
+    },
+    {
+      "source": "src/housekit.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/housekit.js",
+      "sha256": "f3da737e3c7d97ff8bf99948051b435602945251b4670a404c3e012ddc6dccdd"
+    },
+    {
+      "source": "src/casa_lotes.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/casa_lotes.js",
+      "sha256": "8a122a4ee74ec7e67361712adf82be46fe272efc616f346972b86310337985cc"
+    },
+    {
+      "source": "src/texturas/comercio.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/comercio.js",
+      "sha256": "8956f76bb940612546d544be71ad5876c3f6b099ee247124c4c2e704e4cfe628"
+    },
+    {
+      "source": "src/texturas/servicios.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/servicios.js",
+      "sha256": "c84e631bafbd70d364c41536be052657888e47cb42d0f0344fec2a33094adb4e"
+    },
+    {
+      "source": "src/texturas/tiendas_a.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/tiendas_a.js",
+      "sha256": "aa5524a267a2cc79980b76c792961a6ddeba210a09f7badf2e90653eebdb31ba"
+    },
+    {
+      "source": "src/texturas/tiendas_b.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/tiendas_b.js",
+      "sha256": "1dc5554c91c29a26b4dc4d7a82250e59987edf89df26bc93a3a531b01193d901"
+    },
+    {
+      "source": "src/texturas/vivienda_a.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/vivienda_a.js",
+      "sha256": "f65a89a841b6d26cbd83585e78610b071e610048096cfacb9830b5e44529e661"
+    },
+    {
+      "source": "src/texturas/vivienda_b.js",
+      "read_from": ".cache/calidad/cocina_t16/produccion_r1/base/src/texturas/vivienda_b.js",
+      "sha256": "508048d8b58ab97b9464c717994c7f518f45432d080bf7f6a4a418b6171f61b2"
+    },
+    {
+      "source": "src/locales.js",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/src/locales.js",
+      "sha256": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f"
+    },
+    {
+      "source": "src/houses.js",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/src/houses.js",
+      "sha256": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe"
+    },
+    {
+      "source": "tools/interiores/validar.js",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/tools/interiores/validar.js",
+      "sha256": "9f23556c92001f384e39a828926a32ddd1f97576175cb7250fa27d18c6460f5d"
+    },
+    {
+      "source": "data/objetos/tiendas_a.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/tiendas_a.json",
+      "sha256": "1c5507e0e8de22ad784c0757958915a629632048f602e439b7406fcf8a26638c"
+    },
+    {
+      "source": "data/objetos/servicios.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/servicios.json",
+      "sha256": "3a4c01fc9859de848092e14288a7a78ce6be30238c70962b60038b29611d9c7c"
+    },
+    {
+      "source": "data/objetos/vivienda_a.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/vivienda_a.json",
+      "sha256": "6d25c9b26e8d27c3cff3ac2bf505aa8c048a7f48b08505389c2a6795118a53d4"
+    },
+    {
+      "source": "data/objetos/vivienda.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/vivienda.json",
+      "sha256": "b0f228623fa616b4d33afdfb07d4cf0eb18f7651688cdeb220a2f91be4053d12"
+    },
+    {
+      "source": "data/objetos/vivienda_b.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/vivienda_b.json",
+      "sha256": "42d80ffe515d45e7f3dde04b602601ac008b3e184ca9150f5f0bf83b4b8f769e"
+    },
+    {
+      "source": "data/objetos/hosteleria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/hosteleria.json",
+      "sha256": "815410549f4ab7fdfb2661c1ac3e88181c3cb4177036a05f9afc8cbc3d3625ac"
+    },
+    {
+      "source": "data/objetos/tiendas_b.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/tiendas_b.json",
+      "sha256": "1ebe978cf264dc06cb8fa8f2146f66f87c3303c28bd30506c11aec0506da648b"
+    },
+    {
+      "source": "data/objetos/comercio.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/objetos/comercio.json",
+      "sha256": "a915fefde5709271d7b5a8298c48f3c47b88c793248b39a8380558106ff99486"
+    },
+    {
+      "source": "data/kits/vivienda_ninos.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_ninos.json",
+      "sha256": "13dfabff443feea41bb77bff2205674f2d9083e30182613814a52fb962bb0e1b"
+    },
+    {
+      "source": "data/kits/restaurante.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/restaurante.json",
+      "sha256": "2fddb1a1625437574c4fafd9c68b3c06b48009ce5a083456fe21085c135ca097"
+    },
+    {
+      "source": "data/kits/joyeria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/joyeria.json",
+      "sha256": "a8ba8664a0c2ea3a3911c330e28403c36203bca1748c2b62047103819f5a6927"
+    },
+    {
+      "source": "data/kits/oficina.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/oficina.json",
+      "sha256": "e8418105c5991454f9d7eae46b19829d5cc09b3e85a17d2ad77f9031f4244345"
+    },
+    {
+      "source": "data/kits/vivienda_despacho.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_despacho.json",
+      "sha256": "50f432e53e4bad0b83f16f0df482bb0e27ccb03d454feab8a42884621d1d18b7"
+    },
+    {
+      "source": "data/kits/vivienda_trastero.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_trastero.json",
+      "sha256": "970f68da349d8d640d2809495102770bb7445b77addd322834c3d5f58196206b"
+    },
+    {
+      "source": "data/kits/vivienda_salon.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_salon.json",
+      "sha256": "39fa736a80bd561e82df6a8a536782d5d86e7236053c2e8d78487f3e5e9ea9f2"
+    },
+    {
+      "source": "data/kits/perfumeria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/perfumeria.json",
+      "sha256": "6b8c2260842950bf61538951b2e9e277bf6e88504d14788ba74b31ce10041bac"
+    },
+    {
+      "source": "data/kits/vivienda_joven.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_joven.json",
+      "sha256": "38ed95390462eb204b2564413a612eb565a9e71016b3bffaad3faf4f99e98d53"
+    },
+    {
+      "source": "data/kits/vivienda_dormitorio.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_dormitorio.json",
+      "sha256": "61283e05cbc9ed4b07e3b002dee27f5f3284b4aa84becfd96d93bfec9c0f6fcc"
+    },
+    {
+      "source": "data/kits/estanco.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/estanco.json",
+      "sha256": "bc8ad277c7069da473cd4e29c74482998fed18eba1e72cdcc89c0116bdc775eb"
+    },
+    {
+      "source": "data/kits/muebles.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/muebles.json",
+      "sha256": "3128d9aaabf9116f16455e7754c43452090f2caf02d8cd77053b97869e93f938"
+    },
+    {
+      "source": "data/kits/electro.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/electro.json",
+      "sha256": "3e39a88166588776e91d2cf54e9bbc9e21ce70dad25453a216042112b01d70e5"
+    },
+    {
+      "source": "data/kits/libreria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/libreria.json",
+      "sha256": "54b1468ef421d9098db335078655545b1aeba58d12354fad6f8e939fb80d734f"
+    },
+    {
+      "source": "data/kits/floristeria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/floristeria.json",
+      "sha256": "14fcd1932cd248b8c4904d23b4861d3dbf5e2e74b52a3df952251db86dd2a0b8"
+    },
+    {
+      "source": "data/kits/bazar.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/bazar.json",
+      "sha256": "6e9894e5c6bcf94859bdd1c2ed57f8f25c2487ef4ece69618e83452e68f5a0c3"
+    },
+    {
+      "source": "data/kits/vivienda_taller.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_taller.json",
+      "sha256": "81c1daf167eb6fee79cd9d3299587e45c0c7f48d786ce760b8a75af275806b4e"
+    },
+    {
+      "source": "data/kits/informatica.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/informatica.json",
+      "sha256": "b7f194e691bcf85f15d0bb895caba1c4a989b1e0b00facb694f3fa8c1b31801f"
+    },
+    {
+      "source": "data/kits/gimnasio.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/gimnasio.json",
+      "sha256": "241db2535224fadd8701e68045f2bad6def48c3b4bb441f1cd7d2f571ca12413"
+    },
+    {
+      "source": "data/kits/vivienda_pintura.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_pintura.json",
+      "sha256": "902f5a6a5f758fca0c0a41d543a311ae7b1e94a7a5ad2c33cf33b37d0786a583"
+    },
+    {
+      "source": "data/kits/peluqueria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/peluqueria.json",
+      "sha256": "febcae67f955bf5d09cc51d0e13d9513ea16e66509b663e3f345b53393193cdc"
+    },
+    {
+      "source": "data/kits/vivienda_trofeos.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_trofeos.json",
+      "sha256": "e6e18eefd473c35326ece26cb0dd5f69927fa8d4c7bca34c6aef4e8b0580e9a3"
+    },
+    {
+      "source": "data/kits/supermercado.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/supermercado.json",
+      "sha256": "65d39a410f90707f70434940d8a3a4a0d2fc376b7058605ff69662a5b1d77d4a"
+    },
+    {
+      "source": "data/kits/fruteria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/fruteria.json",
+      "sha256": "34cafd0426849f5fcfcb659caa082d3ea6d16eef5803dc6521b5cf9e70384e8b"
+    },
+    {
+      "source": "data/kits/bar.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/bar.json",
+      "sha256": "f57765b39eb647e6d19fe91af546a3b6a49fe46244da409d585361ee27c1f5cb"
+    },
+    {
+      "source": "data/kits/farmacia.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/farmacia.json",
+      "sha256": "f9d598fb4bf77724288bdbd316776837d7eaa27f33de6c1fe9423e75b1131162"
+    },
+    {
+      "source": "data/kits/vivienda_despensa.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_despensa.json",
+      "sha256": "28195beeb86ac9b6f9a8f4244e821c97bd47b64db05dfe67adbd8244505e8880"
+    },
+    {
+      "source": "data/kits/vivienda_bano.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_bano.json",
+      "sha256": "5aba80f9775608db25c74d2ee2095061c5e638961366ecda3b70242bb94b6362"
+    },
+    {
+      "source": "data/kits/vivienda_comedor.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_comedor.json",
+      "sha256": "42873c6feb4013b88b1e160150b4ccf86340b5b28f73d3fe78b99e0eae381a83"
+    },
+    {
+      "source": "data/kits/vivienda_cocina.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_cocina.json",
+      "sha256": "fe4d8c3730b207bb8a057183ed492b5c651709f8cabd454cbecf8edf3faf5a7f"
+    },
+    {
+      "source": "data/kits/vivienda_costura.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_costura.json",
+      "sha256": "771825af8ce8040534cd53907175ee62a540f8c89803b33866fb8ebb12e979e6"
+    },
+    {
+      "source": "data/kits/taller.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/taller.json",
+      "sha256": "a828d6a3fe1ee596684bc51cc967ae149ac51f1a14e3ad4c1773e5974466fbdf"
+    },
+    {
+      "source": "data/kits/banco.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/banco.json",
+      "sha256": "204997907ae2d9e286fdd121c619fbce13f9cc57740ab7d57726a2416439af65"
+    },
+    {
+      "source": "data/kits/panaderia.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/panaderia.json",
+      "sha256": "4facae2ebd968e6583224ff30280dee7ab0360cec22cac161b7ffa913b26537a"
+    },
+    {
+      "source": "data/kits/vivienda_estudio.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_estudio.json",
+      "sha256": "758fc3ae8bc7e1491f86d98538f079e25542fa98dc5863970da624003b56a049"
+    },
+    {
+      "source": "data/kits/ferreteria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/ferreteria.json",
+      "sha256": "150bb7735a6e0ed968507c92c8e027305d331dc1dd99907fea45d5585b648ae8"
+    },
+    {
+      "source": "data/kits/kit.schema.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/kit.schema.json",
+      "sha256": "34b83cc9c176412ad8fe496413c24ef0e3795226901748a82d0ad94250d1e8a7"
+    },
+    {
+      "source": "data/kits/ropa.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/ropa.json",
+      "sha256": "655a3eaf2ee05faac4e73cb08104bee37d175cdeb46c478b34fbc92c7c4ec597"
+    },
+    {
+      "source": "data/kits/vivienda_musica.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/vivienda_musica.json",
+      "sha256": "4aaa56923537a718fe84c912f619ca65bf172a4c2015754fd89e50610c5b521b"
+    },
+    {
+      "source": "data/kits/jugueteria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/jugueteria.json",
+      "sha256": "ed5c8c28039fa2aad4367275707f741ba89bee8e17f8d4fcda9758254f631abd"
+    },
+    {
+      "source": "data/kits/cafeteria.json",
+      "read_from": ".cache/calidad/cocina_t16/artistica_r2/candidata/data/kits/cafeteria.json",
+      "sha256": "492c4949027d0059e315d9c5d6ebb0a06e432c224fe26549ba8345094720a63c"
+    },
+    {
+      "source": "src/interiors.js",
+      "read_from": "src/interiors.js",
+      "sha256": "ceb6c3bcad9db507fe633a22c3f69d0ccfadae11607bf46681b943d91f85c0af"
+    },
+    {
+      "source": "src/casa_annie.js",
+      "read_from": "src/casa_annie.js",
+      "sha256": "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09"
+    }
+  ],
+  "patch": "9a08c35a3f08437a88a268c10af26fa4cd71956b46e95691471aae3a79e585c8",
+  "before": "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+  "receipt": "4762fcc139c15537ec30fd09fa15c037d692631908396992606311d282b0b522",
+  "scripts": {
+    ".cache/calidad/cocina_t16/artistica_r2/revision_annie.cpu.mjs": "c91907c99bcf1f34fff81ab77f4e0c13f3348728e3c529c29776baaac2bf834b",
+    ".cache/calidad/cocina_t16/artistica_r2/revision_annie_runtime.cpu.mjs": "e393c662c86f9d96548bc1c3e57cf645123425334dfbb101847ef9506444efeb"
+  }
+}

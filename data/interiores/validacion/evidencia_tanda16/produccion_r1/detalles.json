@@ -1,0 +1,41 @@
+{
+  "state": "PASS_CPU",
+  "scope": "Source literal; no GPU, no visual approval",
+  "checks": [
+    {
+      "name": "12 frentes conservan geometria/funcion/superficies exactas",
+      "pass": true
+    },
+    {
+      "name": "13 compuestos nuevos sin interpenetraciones >1mm; ceramica/pan con apoyo completo",
+      "pass": true
+    },
+    {
+      "name": "negativo hogaza flotante3.6cm detectada",
+      "pass": true
+    },
+    {
+      "name": "negativo taza dentro de pila detectado",
+      "pass": true
+    },
+    {
+      "name": "consumidores no optantes invariantes resultado completo y siguienteU",
+      "pass": true,
+      "count": 39
+    },
+    {
+      "name": "18 composiciones: limites/huecos exactos y frente0.8m libres",
+      "pass": true
+    },
+    {
+      "name": "4 fallbacks exactos conservados",
+      "pass": true,
+      "seeds": [
+        3627,
+        2606,
+        4007,
+        4216
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "state": "PASS_AFFECTED_MODELS_CPU_NOT_VISUAL",
+  "scope": "Only3model deltas; actual3canonical full constructors/batching/validators; no GPU, no rerun22, no game publication",
+  "changed": [
+    "va_banda_vajillero",
+    "va_banda_vajillero_amplio",
+    "va_preparar_pan"
+  ],
+  "internal": [
+    {
+      "id": "va_banda_vajillero",
+      "parts": 11,
+      "supported": [
+        {
+          "part": 8,
+          "on": 3
+        },
+        {
+          "part": 9,
+          "on": 8
+        },
+        {
+          "part": 10,
+          "on": 9
+        }
+      ],
+      "penetrations": 0,
+      "bboxBefore": {
+        "x0": -0.6150000095367432,
+        "x1": 0.6150000095367432,
+        "y0": 1.5499999523162842,
+        "y1": 2.190000057220459,
+        "z0": -5.364418242947977e-9,
+        "z1": 0.30000001192092896,
+        "w": 1.2300000190734863,
+        "h": 0.6400001049041748,
+        "d": 0.3000000172853472
+      },
+      "bboxAfter": {
+        "x0": -0.6150000095367432,
+        "x1": 0.6150000095367432,
+        "y0": 1.5499999523162842,
+        "y1": 2.190000057220459,
+        "z0": -5.364418242947977e-9,
+        "z1": 0.30000001192092896,
+        "w": 1.2300000190734863,
+        "h": 0.6400001049041748,
+        "d": 0.3000000172853472
+      }
+    },
+    {
+      "id": "va_banda_vajillero_amplio",
+      "parts": 11,
+      "supported": [
+        {
+          "part": 8,
+          "on": 3
+        },
+        {
+          "part": 9,
+          "on": 8
+        },
+        {
+          "part": 10,
+          "on": 9
+        }
+      ],
+      "penetrations": 0,
+      "bboxBefore": {
+        "x0": -0.76910001039505,
+        "x1": 0.76910001039505,
+        "y0": 1.5499999523162842,
+        "y1": 2.190000057220459,
+        "z0": -5.364418242947977e-9,
+        "z1": 0.30000001192092896,
+        "w": 1.5382000207901,
+        "h": 0.6400001049041748,
+        "d": 0.3000000172853472
+      },
+      "bboxAfter": {
+        "x0": -0.76910001039505,
+        "x1": 0.76910001039505,
+        "y0": 1.5499999523162842,
+        "y1": 2.190000057220459,
+        "z0": -5.364418242947977e-9,
+        "z1": 0.30000001192092896,
+        "w": 1.5382000207901,
+        "h": 0.6400001049041748,
+        "d": 0.3000000172853472
+      }
+    },
+    {
+      "id": "va_preparar_pan",
+      "parts": 7,
+      "supported": [
+        {
+          "part": 1,
+          "on": 0
+        },
+        {
+          "part": 2,
+          "on": 1
+        },
+        {
+          "part": 3,
+          "on": 1
+        },
+        {
+          "part": 4,
+          "on": 1
+        },
+        {
+          "part": 5,
+          "on": 0
+        },
+        {
+          "part": 6,
+          "on": 0
+        }
+      ],
+      "penetrations": 0,
+      "bboxBefore": {
+        "x0": -0.17499999701976776,
+        "x1": 0.17499999701976776,
+        "y0": 3.8743019903364484e-10,
+        "y1": 0.10899999737739563,
+        "z0": -0.11500000208616257,
+        "z1": 0.11500000208616257,
+        "w": 0.3499999940395355,
+        "h": 0.10899999698996543,
+        "d": 0.23000000417232513
+      },
+      "bboxAfter": {
+        "x0": -0.17499999701976776,
+        "x1": 0.17499999701976776,
+        "y0": 3.8743019903364484e-10,
+        "y1": 0.10899999737739563,
+        "z0": -0.11500000208616257,
+        "z1": 0.11500000208616257,
+        "w": 0.3499999940395355,
+        "h": 0.10899999698996543,
+        "d": 0.23000000417232513
+      }
+    }
+  ],
+  "rows": [
+    {
+      "seed": 2786,
+      "beforeR1": {
+        "meshes": 54,
+        "triangles": 39980,
+        "materials": 43,
+        "lights": 7
+      },
+      "afterR2": {
+        "meshes": 54,
+        "triangles": 39980,
+        "materials": 43,
+        "lights": 7
+      },
+      "posesAndReferencesUnchanged": true,
+      "rolesAndRecipesUnchanged": true,
+      "lightsUnchanged": true,
+      "localErrors": [],
+      "useErrors": []
+    },
+    {
+      "seed": 3244,
+      "beforeR1": {
+        "meshes": 56,
+        "triangles": 51354,
+        "materials": 46,
+        "lights": 8
+      },
+      "afterR2": {
+        "meshes": 56,
+        "triangles": 51210,
+        "materials": 46,
+        "lights": 8
+      },
+      "posesAndReferencesUnchanged": true,
+      "rolesAndRecipesUnchanged": true,
+      "lightsUnchanged": true,
+      "localErrors": [],
+      "useErrors": []
+    },
+    {
+      "seed": 1594,
+      "beforeR1": {
+        "meshes": 58,
+        "triangles": 59590,
+        "materials": 44,
+        "lights": 8
+      },
+      "afterR2": {
+        "meshes": 58,
+        "triangles": 59590,
+        "materials": 44,
+        "lights": 8
+      },
+      "posesAndReferencesUnchanged": true,
+      "rolesAndRecipesUnchanged": true,
+      "lightsUnchanged": true,
+      "localErrors": [],
+      "useErrors": []
+    }
+  ]
+}

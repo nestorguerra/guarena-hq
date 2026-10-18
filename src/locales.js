@@ -54,7 +54,7 @@ export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && e
 // through starts there), libres the house's own clear areas (the swing of its doors; its windows: nothing tall or hung
 // there), filtro (whether an entry belongs to this household: its profile, its style)
 export function amueblar(kit, seed = 1, ctx = null) {
-  const K = KITS[kit];
+  let K = KITS[kit];
   if (!K) throw new Error('sin kit: ' + kit);
   // Separación optativa sólo en piezas individuales, nunca en grupos modulares.
   for(const e of K.objetos)if(e.separacion_pared!=null&&(!['contra_pared','enfrente'].includes(e.regla)||e.grupo_pared))throw new Error('separacion_pared sólo admite contra_pared/enfrente sin grupo_pared');
@@ -535,7 +535,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
   };
   // Grupos de módulos: probar el frente completo antes de comprometer su primera pieza.
   // La búsqueda no consume r ni modifica P/cursores si falla: conserva el fallback anterior.
-  const aplicable = e => zonas[e.zona] && reglas[e.regla] && !(e.area_min != null && W*D < e.area_min) && !(e.area_max != null && W*D >= e.area_max) && !(ctx?.filtro && !ctx.filtro(e));
+  const aplicable = e => !e.fase && zonas[e.zona] && reglas[e.regla] && !(e.area_min != null && W*D < e.area_min) && !(e.area_max != null && W*D >= e.area_max) && !(ctx?.filtro && !ctx.filtro(e));
   const entradasActivas = [...K.objetos.entries()].filter(([,e]) => aplicable(e));
   const gruposIntentados = new Set(), entradasAgrupadas = new Set();
   const probarGrupoPared = (miembros, Z) => {
@@ -646,7 +646,88 @@ export function amueblar(kit, seed = 1, ctx = null) {
     }
   }
 
-  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
+  // Composición declarada de cocina: sustituir sólo después de amueblar la base.
+  // No consume U/r, mueve el núcleo ni busca una nueva distribución de la mesa.
+  let composicionCocina;
+  if(K.composicion_cocina&&K.objetos.some(e=>e.fase==='composicion_cocina')){
+    if(tipologia!=='cocina')throw new Error('composicion_cocina requiere tipologia cocina');
+    const cfg=K.composicion_cocina,original=P.slice(),guardiasBase=guardias;
+    const entradaActividad=K.objetos.findIndex(e=>e.fase==='composicion_cocina'&&e.obj===cfg.actividad);
+    if(entradaActividad<0)throw new Error('composicion_cocina sin entrada de actividad');
+    const ip=original.findIndex(p=>['va_encimera','va_encimera_amplia'].includes(p.obj)),
+      inf=original.findIndex(p=>p.obj==='va_nevera'),ia=original.findIndex(p=>p.obj==='va_alacena');
+    const prep=original[ip],fridge=original[inf],pantry=original[ia];
+    const iu=prep?original.findIndex(p=>p.regla==='pared'&&cfg.versiones.some(v=>v.referencias.includes(p.obj))&&p.zona===prep.zona&&Math.abs(p.x-prep.x)+Math.abs(p.z-prep.z)<.35):-1;
+    const version=iu<0?null:cfg.versiones.find(v=>v.referencias.includes(original[iu].obj));
+    const intentos=[];
+    if(prep&&fridge&&pantry&&version&&prep.zona===fridge.zona&&prep.zona===pantry.zona&&Math.abs(fridge.ry-prep.ry)<1e-6){
+      const ry=prep.ry,pb=caja(prep.obj),fb=caja(fridge.obj),[rx,rz]=rot(fridge.x-prep.x,fridge.z-prep.z,-ry);
+      const min=Math.min(pb.x0,rx+fb.x0),max=Math.max(pb.x1,rx+fb.x1),lado=Math.sign(rx),
+        alto=version[prep.obj==='va_encimera_amplia'?'alto_amplio':'alto'];
+      // Sólo el frente contiguo existente y los dos anchos de modelo declarados.
+      if(lado&&Math.abs((pb.z0)-(rz+fb.z0))<.04&&Math.abs(caja(alto).w-(max-min))<1e-5){
+        const [wx,wz]=rot(0,pb.z0-.01,ry),wallX=prep.x+wx,wallZ=prep.z+wz;
+        const quitar=new Set([ia,iu]);
+        const despejar=new Set(original.flatMap((p,i)=>['va_encimera','va_encimera_amplia','va_lavadora','va_alacena'].includes(p.obj)&& (p.obj!=='va_alacena'||i===ia)?[i]:[]));
+        // Retirar dependientes recursivos: ningún sop/de puede quedar huérfano.
+        for(let cambio=true;cambio;){cambio=false;original.forEach((p,i)=>{if(!quitar.has(i)&&((p.sop!=null&&(quitar.has(p.sop)||despejar.has(p.sop)))||(p.de!=null&&quitar.has(p.de)))){quitar.add(i);cambio=true;}});}
+        const transformar={va_encimera:version.preparacion,va_encimera_amplia:version.preparacion_amplia,va_cocina:version.cocina,va_cocina_amplia:version.cocina_amplia};
+        const crear=(obj,x,y,z,angle,extra)=>{const p={obj,x,y,z,ry:angle,zona:prep.zona,...extra};p.v=volumen(p);return p;};
+        // La limpieza sólo retira decoración: un uso/botín futuro obliga a rollback.
+        const protegido=[...quitar].some(i=>{if(i===ia||i===iu)return false;const p=original[i],o=OBJETOS[p.obj],e=K.objetos[p.e];return o.rol||o.interaccion||o.interacciones||o.botin||o.vende||o.asientos?.length||e?.botin||e?.interaccion||e?.vende;});
+        for(const modo of protegido?[]:['extremo_amplio','extremo_compacto','huella_actual']){
+          const obj=modo==='extremo_amplio'?version.alacena_amplia:version.alacena,b=caja(obj);
+          let x,z,angle=ry;
+          if(modo==='huella_actual'){
+            angle=pantry.ry;const ab=caja(pantry.obj),[dx,dz]=rot(0,ab.z0,angle);x=pantry.x+dx;z=pantry.z+dz;
+          }else{
+            const [dx,dz]=rot(rx+(lado>0?fb.x1:fb.x0)+lado*(.04+b.w/2),.01,ry);x=wallX+dx;z=wallZ+dz;
+          }
+          const indices=new Map(),candidatos=[];
+          original.forEach((p,i)=>{if(quitar.has(i))return;indices.set(i,candidatos.length);candidatos.push(crear(transformar[p.obj]||p.obj,p.x,p.y,p.z,p.ry,{...p,obj:transformar[p.obj]||p.obj}));});
+          const columna=crear(obj,x,0,z,angle,{e:pantry.e,regla:modo==='huella_actual'?pantry.regla:'junto_a',de:modo==='huella_actual'?pantry.de:inf,sop:null,sup:null});
+          indices.set(ia,candidatos.length);candidatos.push(columna);
+          const [ux,uz]=rot((min+max)/2,.003,ry),banda=crear(alto,wallX+ux,0,wallZ+uz,ry,{e:original[iu].e,regla:'pared',sop:null,sup:null});
+          indices.set(iu,candidatos.length);candidatos.push(banda);
+          const [ax,az]=rot((pb.x0+pb.x1)/2,(pb.z0+pb.z1)/2,ry),actividad=crear(cfg.actividad,prep.x+ax,.89,prep.z+az,ry,{e:entradaActividad,regla:'sobre',sop:ip,sup:0});
+          candidatos.push(actividad);
+          for(const p of candidatos){if(p.sop!=null)p.sop=indices.get(p.sop);if(p.de!=null)p.de=indices.get(p.de);}
+          const errors=[],Z=zonas[prep.zona],nuevos=[columna,banda,actividad],pPrep=candidatos[indices.get(ip)];
+          for(const p of nuevos){
+            if(!dentro(p.v,Z)||p.v.y1>H+TOL)errors.push('fuera');
+            if(libres.some(l=>partes(p).some(v=>penetra(l,v)>.005)))errors.push('hueco');
+            if(candidatos.some(q=>q!==p&&!(p===actividad&&q===pPrep)&&hunde(p,q)>.005))errors.push('colision');
+          }
+          for(const [p,anchoUso]of [[columna,Math.min(.7,b.w)],[pPrep,Math.min(.8,pb.w-.05)],[candidatos[indices.get(inf)],.7]]){
+            const R=espacioFrontal(p,caja(p.obj),[anchoUso,.8]);
+            if(!dentro(R,Z)||candidatos.some(q=>q!==p&&q!==actividad&&partes(q).some(v=>penetra(R,v)>.005)))errors.push('frente_uso');
+          }
+          // Evaluar el conjunto literal con las reservas y acceso de la base.
+          P.splice(0,P.length,...candidatos);
+          if(!errors.length&&cierra([]))errors.push('paso_o_funcion');
+          P.splice(0,P.length,...original);
+          intentos.push({modo,errores:[...new Set(errors)]});
+          if(errors.length)continue;
+          // Metadatos de receta coherentes con todos los objetos comprometidos.
+          const nuevoK={...K,objetos:K.objetos.map(e=>({...e}))};
+          for(const p of candidatos){
+            if(p===actividad)continue;
+            const e=nuevoK.objetos[p.e];if(!e||e.regla==='conjunto')continue;
+            if(transformar[e.obj]||p===columna||p===banda){e.obj=p.obj;delete e.variantes;}
+          }
+          for(const[p,medidas]of[[columna,[Math.min(.7,b.w),.8]],[pPrep,[Math.min(.8,pb.w-.05),.8]],[candidatos[indices.get(inf)],[.7,.8]]])nuevoK.objetos[p.e].espacio_frontal=medidas;
+          nuevoK.objetos[entradaActividad]={...nuevoK.objetos[entradaActividad],en:[pPrep.obj]};
+          K=nuevoK;activas.push(actividad.e);P.splice(0,P.length,...candidatos);
+          composicionCocina={modo,intentos,retirados:[...quitar].map(i=>({indice:i,obj:original[i].obj,e:original[i].e,sop:original[i].sop,de:original[i].de})),indices:[...indices],actividad:actividad.e};
+          break;
+        }
+      }
+    }
+    // Rollback íntegro del resultado y del contador de guardas; jamás se llamó r/U.
+    if(!composicionCocina)guardias=guardiasBase;
+  }
+
+  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(composicionCocina?{composicionCocina}:{}), ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
 }
 
 // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
@@ -778,7 +859,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
   let hh = 2166136261;
   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
-  h.local = { kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+  h.local = { ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
   if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
   h.venue = false;

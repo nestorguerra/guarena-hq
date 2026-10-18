@@ -452,6 +452,21 @@
     0.42
    ],
    "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_preparar_pan",
+   "en": [
+    "va_encimera",
+    "va_encimera_amplia"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "fase": "composicion_cocina"
   }
  ],
  "iluminacion": {
@@ -533,5 +548,52 @@
    "autor": "Alina Zienowicz Ala z",
    "licencia": "CC BY-SA 3.0"
   }
- ]
+ ],
+ "composicion_cocina": {
+  "actividad": "va_preparar_pan",
+  "versiones": [
+   {
+    "referencias": [
+     "va_alto_cocina",
+     "va_alto_cocina_amplio"
+    ],
+    "alacena": "va_guardar_rustico",
+    "alacena_amplia": "va_guardar_rustico_amplia",
+    "alto": "va_banda_rustico",
+    "alto_amplio": "va_banda_rustico_amplio",
+    "preparacion": "va_encimera_rustico",
+    "preparacion_amplia": "va_encimera_amplia_rustico",
+    "cocina": "va_cocina_rustico",
+    "cocina_amplia": "va_cocina_amplia_rustico"
+   },
+   {
+    "referencias": [
+     "va_alto_cocina_liso",
+     "va_alto_cocina_liso_amplio"
+    ],
+    "alacena": "va_guardar_liso",
+    "alacena_amplia": "va_guardar_liso_amplia",
+    "alto": "va_banda_liso",
+    "alto_amplio": "va_banda_liso_amplio",
+    "preparacion": "va_encimera_liso",
+    "preparacion_amplia": "va_encimera_amplia_liso",
+    "cocina": "va_cocina_liso",
+    "cocina_amplia": "va_cocina_amplia_liso"
+   },
+   {
+    "referencias": [
+     "va_alto_cocina_abierto",
+     "va_alto_cocina_abierto_amplio"
+    ],
+    "alacena": "va_guardar_vajillero",
+    "alacena_amplia": "va_guardar_vajillero_amplia",
+    "alto": "va_banda_vajillero",
+    "alto_amplio": "va_banda_vajillero_amplio",
+    "preparacion": "va_encimera_vajillero",
+    "preparacion_amplia": "va_encimera_amplia_vajillero",
+    "cocina": "va_cocina_vajillero",
+    "cocina_amplia": "va_cocina_amplia_vajillero"
+   }
+  ]
+ }
 }

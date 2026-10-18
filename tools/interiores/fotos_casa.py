@@ -83,7 +83,7 @@ JS = r'''(async () => {
       // La segunda vista complementa el detalle: preparación y nevera en cocina,
       // sanitario completo en baño. Se conservan altura humana y campo de visión.
       const sanitario=k===1&&tipo==='bano'?est?.colocados.find(p=>p.obj==='va_inodoro'):null;
-      const preparacion=k===1&&tipo==='cocina'?est?.colocados.find(p=>['va_encimera','va_encimera_amplia'].includes(p.obj)):null;
+      const preparacion=k===1&&tipo==='cocina'?est?.colocados.find(p=>['va_encimera','va_encimera_amplia'].includes(p.obj.replace(/_(rustico|liso|vajillero)$/,''))):null;
       const mesaComedor=k===0&&tipo==='comedor'?est?.colocados.find(p=>['va_mesa_comedor','va_mesa_familiar'].includes(p.obj)):null;
       if(tipo==='comedor'&&k===0&&!mesaComedor)throw Error('comedor sin mesa para documentar: '+s);
       const puestosComedor=mesaComedor?[mesaComedor,...est.colocados.filter(p=>p.de===est.colocados.indexOf(mesaComedor))]:[];

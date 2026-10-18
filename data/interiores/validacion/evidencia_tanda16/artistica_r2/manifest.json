@@ -1,0 +1,60 @@
+{
+  "state": "SEALED_PRIVATE_CPU_PASS_INDEPENDENT_MODEL_AND_ART_CONTRACT_ACCEPTED",
+  "base_head": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+  "base_sources": {
+    "src/locales.js": "292727250d35dfae48ac125a8b767154135054b469f6f207772b984b26c7f516",
+    "src/houses.js": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706",
+    "tools/interiores/validar.js": "592dd322dc184ab6beb1e06981ff1fea978f1738925e61a7927b00e1f74af348",
+    "tools/interiores/datos.py": "6f5b0637fed4948715afb8b17e786dd2979800ca1c208d1da475b68dc77a37a6",
+    "data/kits/kit.schema.json": "4e23942f376a2fff838e16bb055dd65b9ef6105c66b614c967b8843dde31400c",
+    "tools/interiores/frente_cocina.py": null,
+    "tools/interiores/catalogo_vivienda_a.py": "cfed6ea37b35fc1aeef355b42a31219279b2da2f27254dec428c93b00c236690",
+    "tools/interiores/kits_vivienda_a.py": "ee47f465ab79dae2fe3854cd24afae17dc4275b3a07d5ce508ee885c8127cb93",
+    "tools/interiores/casas_pruebas.js": "38a4588abd651fffb47dfa1408ca85a75448c585edd23c36ab57aaddcea38f96",
+    "tools/interiores/fotos_casa.py": "6881d0b2f2d528552a0480ccc43188c8a4071ea73364418df387f077ebb69cae"
+  },
+  "candidate_sources": {
+    "src/locales.js": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f",
+    "src/houses.js": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+    "tools/interiores/validar.js": "9f23556c92001f384e39a828926a32ddd1f97576175cb7250fa27d18c6460f5d",
+    "tools/interiores/datos.py": "3334228a3a123c26f5c9391bb6d49ed8c553c46245759eaa87b9c88a4c3888c4",
+    "data/kits/kit.schema.json": "34b83cc9c176412ad8fe496413c24ef0e3795226901748a82d0ad94250d1e8a7",
+    "tools/interiores/frente_cocina.py": "ecc41c995bf854a705abaa9a436fe28b307194b42a8d7cec70a912e504fd2714",
+    "tools/interiores/catalogo_vivienda_a.py": "f2e1b39faa33d36415c42c8bc0787d8d1f366bb42d7659642ad9dd843c15d035",
+    "tools/interiores/kits_vivienda_a.py": "0a5f0803addf01d2e5cdfe98ca8020a4b74ddf0eec34188321b0e2ae9710f7e5",
+    "tools/interiores/casas_pruebas.js": "886f1cad61d16bad12e34b3d6835ee56d52bef73e362d80b618a3f8e0f23d9e8",
+    "tools/interiores/fotos_casa.py": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0"
+  },
+  "generated_private_from_current_source": {
+    "data/objetos/vivienda_a.json": "6d25c9b26e8d27c3cff3ac2bf505aa8c048a7f48b08505389c2a6795118a53d4",
+    "data/kits/vivienda_cocina.json": "fe4d8c3730b207bb8a057183ed492b5c651709f8cabd454cbecf8edf3faf5a7f",
+    "src/interiores_datos.js": "47340bec2a4461647af9de18b0261adae1c2fec1467132260668e44867db3dac"
+  },
+  "patches": {
+    "artistica.patch": "cbcef6a4015a645a62d403da91d98a2ff60ba51452a2e9c60b3ceb158ac64983",
+    "modelos_receta_r2.patch": "0dc8cce58d53f74d97e35a03ee5bcfb4cf60e0e8c13856317a89a4af25aea2a0",
+    "contratos_r2.patch": "b36de117d1ce0162cb7c800f06cb2cf6a26093603c20968d53677cd4b9f987e6",
+    "artistica_contratos.patch": "75069a188a6360942c5034e70a4ce9c1d838d21c35697a77c56c6d043dcede2a"
+  },
+  "receipts": {
+    "revision_contrato_cpu.json": "3b3fdcf486e8ad7fcc7ec6c730924571821e1370a0c05120b9bb1aed638218f5",
+    "revision_geometria_cpu.json": "8d6d23e07015166b1f2d305681b2f033a7dcfb588d784b7a9f4f34c6539a5d11",
+    "revision_manifest.json": "8a9411041d26451c9d96461a0a07de8ecae2dd5831d63ca4a8829df678578893",
+    "cpu.json": "8d6d23e07015166b1f2d305681b2f033a7dcfb588d784b7a9f4f34c6539a5d11",
+    "revision_contrato_manifest.json": "a29b9c59e7e342f926cbab98d4e909a1c91604e8362d4bed4cd9406b6897635b",
+    "contrato_arte.json": "1a2691e6789f0629d9511402e987181728b780858a79b733c94de71f04aa4137",
+    "revision_contrato_cpu_fd5547.json": "c3a5315886ef703b821d68445a90f146d3a3f959f3830f2a676b4844fd6ec8b5"
+  },
+  "notes": [
+    "Base historica conservada, integracion_observada separada porque raiz ya aplico las fuentes aceptadas",
+    "This author used private CPU only; no GPU/browser/game build/commit/push/API",
+    "R1 full22literal constructors; R2 only3affected models+3canonical full constructors",
+    "No old compiled catalog copied; generated privately from current raw source",
+    "Technical R1 acceptance in revision_final.md; R2 geometry separate independent review, not automatic transfer",
+    "Tanda19 runner/workflow integration and GPU final capture owned by root; art contract delta separately accepted; root owns integration"
+  ],
+  "independent_review": {
+    "revision.md": "9eed63edbf1220a6ea4618cb1affb3f8dccdf1026badafe48f3e3b984131ab2b",
+    "revision_contrato.md": "303269d3290521fb44c3886a8271116415c4a5184a041682942b2a2f584ed93b"
+  }
+}

@@ -1070,7 +1070,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       return false;
     }
     const P = A.P, K = A.K;
-    estancias.push({ kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
+    estancias.push({ ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
       colocados: P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: p.x, y: p.y || 0, z: p.z, ry: p.ry, sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v })) });
     // the loot: the first piece of each such entry; one the room had no room for goes back to the pool
     const deBotin = new Map();

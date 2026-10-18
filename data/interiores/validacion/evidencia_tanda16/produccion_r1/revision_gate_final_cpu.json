@@ -1,0 +1,20 @@
+{
+  "state": "MASK_REJECTED",
+  "seed": 2786,
+  "removed": "va_nevera",
+  "entry": 4,
+  "quotaMutationErrors": [
+    "receta efectiva: altera contrato 4/cantidad",
+    "receta efectiva: altera contrato 4/obligatorio"
+  ],
+  "missingButActiveErrors": [
+    "receta efectiva: reserva de programa ausente o reducida",
+    "obligatorio: estancia/va_nevera — 0 colocados, el kit pide 1"
+  ],
+  "missingAndOmittedErrors": [
+    "receta efectiva: activa obligatoria omitida 4",
+    "receta efectiva: reserva de programa ausente o reducida"
+  ],
+  "compositionStillPresent": true,
+  "missingEffectiveMetadataErrors": []
+}

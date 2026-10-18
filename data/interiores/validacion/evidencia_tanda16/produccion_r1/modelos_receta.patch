@@ -1,0 +1,95 @@
+--- /dev/null
++++ b/tools/interiores/frente_cocina.py
+@@ -0,0 +1,66 @@
++"""Frente doméstico de dos alturas; modelos propios exclusivos, sin cambiar paletas globales."""
++from vivienda_base import *
++
++def frente_cocina(out):
++    C={o['id']:o for o in out}
++    for estilo,color in [('rustico','#857052'),('liso','#697b72'),('vajillero','#77847b')]:
++        def panel(w,h,y,z):
++            # Panel, bastidor y tirador son estratos tangentes, no cajas solapadas.
++            q=[caja(w,h,.016,y=y,z=z,c='#c4b99f' if estilo=='rustico' else color)]
++            if estilo=='rustico':
++                for x in [-w/2+.012,w/2-.012]:q.append(caja(.024,h,.008,x=x,y=y,z=z+.012,c='#957a54',m='madera'))
++                for yy in [y-h/2+.012,y+h/2-.012]:q.append(caja(w-.048,.024,.008,y=yy,z=z+.012,c='#957a54',m='madera'))
++            q.append(caja(.10,.014,.016,y=y-h/2+.09,z=z+.016,c='#a9a38d',m='metal'))
++            return q
++        for w,d,suf in [(.65,.30,''),(.90,.35,'_amplia')]:
++            H=2.19;an=w-.048; fondo=d-.048
++            p=[caja(an,H,.018,y=H/2,z=.009,c='#a38e6a')]
++            for x in [-w/2+.012,w/2-.012]:p.append(caja(.024,H,d-.030,x=x,y=H/2,z=(d-.030)/2,c='#a28c66',tinte='madera'))
++            for y in [.036,1.0425,1.4375,H-.012]:p.append(caja(an,.024,fondo,y=y,z=.018+fondo/2,c='#a28c66'))
++            p+=panel(w-.058,.91,.545,d-.024)
++            p+=panel(w-.058,H-1.50,(1.465+H-.035)/2,d-.024)
++            # Un hueco diario amplio: recipientes apoyados en balda y sin hilera comercial.
++            y=1.0545
++            if estilo=='rustico':
++                p += [cil(.075,.09,.20,x=-w*.16,y=y+.1,z=d*.50,c='#b49a76',m='ceramica'),cil(.04,.055,.075,x=-w*.16,y=y+.2375,z=d*.50,c='#b49a76',m='ceramica'),cil(.06,.06,.085,x=w*.20,y=y+.0425,z=d*.52,c='#d1c7b0',m='ceramica')]
++            else:
++                for k in range(5 if estilo=='vajillero' else 3):p.append(cil(.105,.105,.012,x=-w*.18,y=y+.006+k*.012,z=d*.53,c='#d6d0bd',m='ceramica'))
++                p += [cil(.06,.055,.095,x=w*.21,y=y+.0475,z=d*.52,c='#b4beb0',m='ceramica')]
++            out.append(objeto('va_guardar_'+estilo+suf,'Alacena cerrada con hueco diario '+estilo,w,H,d,'armario',42 if suf else 34,partes=p))
++        for w,suf in [(1.23,''),(1.5382,'_amplio')]:
++            lo=1.55;H=.64;an=w-.048;d=.30
++            p=[caja(an,H,.018,y=lo+H/2,z=.009,c='#aa9571')]
++            for x in [-w/2+.012,w/2-.012]:p.append(caja(.024,H,d-.03,x=x,y=lo+H/2,z=(d-.03)/2,tinte='madera'))
++            for y in [lo+.012,lo+H-.012]:p.append(caja(an,.024,d-.048,y=y,z=.018+(d-.048)/2,tinte='madera'))
++            if estilo=='vajillero':
++                # Un tercio abierto da una silueta de vajillero, dos tercios cerrados.
++                corte=-w/6;p.append(caja(.024,H-.048,d-.048,x=corte,y=lo+H/2,z=.018+(d-.048)/2,tinte='madera'))
++                pw=w*2/3-.048;pp=panel(pw,H-.068,lo+H/2,d-.024)
++                for q in pp:q['p'][0]+=w/6
++                p+=pp
++                for k in range(5):p.append(cil(.105,.105,.012,x=-w/3-.055,y=lo+.024+.006+k*.012,z=.15,c='#d6d0bd',m='ceramica'))
++                p.append(cil(.06,.055,.095,x=-w/3+.125,y=lo+.024+.0475,z=.15,c='#b4beb0',m='ceramica'))
++            else:
++                for x in [-w/4,w/4]:
++                    pp=panel(w/2-.05,H-.068,lo+H/2,d-.024)
++                    for q in pp:q['p'][0]+=x
++                    p+=pp
++            out.append(objeto('va_banda_'+estilo+suf,'Banda de armarios sobre preparar y nevera '+estilo,w,H,d,None,28 if suf else 23,partes=p,soporte='pared'))
++        # Mismos cuerpos, funciones, superficies y envolventes del núcleo vigente.
++        # Sólo cambian frentes propios: la madera del resto de la casa sigue intacta.
++        for id in ['va_encimera','va_encimera_amplia','va_cocina','va_cocina_amplia']:
++            o=copy.deepcopy(C[id]);o['id']=id+'_'+estilo;o['nombre']+=' — frente '+estilo
++            for q in o['partes']:
++                if q['m']=='madera':q.pop('tinte',None);q['c']=color
++            out.append(o)
++    p=[caja(.35,.018,.23,y=.009,c='#a58a60'),dict(f='esfera',d=[.07],p=[-.025,.0635,0],s=[1.7,.65,1],c='#bc9b68',m='comida')]
++    out.append(objeto('va_preparar_pan','Tabla y hogaza en preparación',.35,.109,.23,None,.9,partes=p,soporte='superficie',categoria='alimento'))
++
++def programa_frente():
++    return dict(actividad='va_preparar_pan',versiones=[dict(
++        referencias=['va_alto_cocina'+suf,'va_alto_cocina'+suf+'_amplio'],
++        alacena='va_guardar_'+s,alacena_amplia='va_guardar_'+s+'_amplia',
++        alto='va_banda_'+s,alto_amplio='va_banda_'+s+'_amplio',
++        preparacion='va_encimera_'+s,preparacion_amplia='va_encimera_amplia_'+s,
++        cocina='va_cocina_'+s,cocina_amplia='va_cocina_amplia_'+s)
++        for s,suf in [('rustico',''),('liso','_liso'),('vajillero','_abierto')]])
+--- a/tools/interiores/catalogo_vivienda_a.py
++++ b/tools/interiores/catalogo_vivienda_a.py
+@@ -138,6 +138,8 @@
+     from composicion_domestica import mejorar_almacen, mejorar_cocina_costura, unidades_domesticas
+     mejorar_almacen(out)
+     mejorar_cocina_costura(out)
++    from frente_cocina import frente_cocina
++    frente_cocina(out)
+     unidades_domesticas(out)
+     from pertenencias_domesticas import pertenencias
+     pertenencias(out)
+--- a/tools/interiores/kits_vivienda_a.py
++++ b/tools/interiores/kits_vivienda_a.py
+@@ -24,7 +24,11 @@
+         E('conjunto','va_mesa_comedor',cantidad=[0,1],preferir=True,area_min=13,estilo=['!antiguo','!rustico'],sillas=dict(variantes=['silla_comedor'],n=[2,3])),
+         E('suelo_libre','va_isla_cocina',cantidad=[0,1],preferir=True,area_min=22),
+     ]+adornos(comida+vajilla,['va_encimera','va_encimera_amplia','va_alacena','va_lavadora','va_isla_cocina'])
+-    kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
++    k=kit('cocina','Cocina de una casa del pueblo','cocina',cocina,mood['cocina'],fondo=(2.4,4.8))
++    from frente_cocina import programa_frente
++    k['composicion_cocina']=programa_frente()
++    k['objetos'].append(E('sobre','va_preparar_pan',en=['va_encimera','va_encimera_amplia'],cantidad=[1,1],obligatorio=True,fase='composicion_cocina'))
++    with open(os.path.join(ROOT,'data','kits','vivienda_cocina.json'),'w') as f:json.dump(k,f,ensure_ascii=False,indent=1)
+     # En salas grandes, reservar el frente de aseo antes de comprometer el lavabo.
+     # Armario opcional: si no cabe el conjunto, el fallback conserva su omisión.
+     bano=[

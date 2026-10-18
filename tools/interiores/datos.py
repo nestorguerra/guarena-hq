@@ -96,6 +96,17 @@ def main():
             if it['zona'] not in {z['id'] for z in k['zonas']}: errs.append(f'{kid}: objeto {i} en una zona que no existe «{it["zona"]}»')
         for it in k['objetos']:
             for oid in it.get('en', []): ids.add(oid)
+        comp=k.get('composicion_cocina')
+        if comp:
+            if k['tipologia']!='cocina':errs.append(f'{kid}: composicion_cocina fuera de cocina')
+            actividad=[e for e in k['objetos'] if e.get('fase')=='composicion_cocina']
+            if len(actividad)!=1 or actividad[0].get('obj')!=comp['actividad'] or actividad[0]['regla']!='sobre' or actividad[0].get('cantidad')!=[1,1] or not actividad[0].get('obligatorio'):errs.append(f'{kid}: entrada diferida de actividad incoherente')
+            for version in comp['versiones']:
+                for oid in version['referencias']+list(v for key,v in version.items() if key!='referencias')+[comp['actividad']]:
+                    if oid not in OBJ:errs.append(f'{kid}: composicion nombra objeto ausente {oid}')
+                    else:ids.add(oid)
+        for e in k['objetos']:
+            if e.get('fase') and not comp:errs.append(f'{kid}: fase diferida sin programa')
         n_min = max(k['minimo_objetos_distintos'], MIN.get(k['tipologia'], 40))
         if len(ids) < n_min: errs.append(f'{kid}: {len(ids)} objetos distintos, la tipología pide {n_min}')
         mood = k['moodboard']

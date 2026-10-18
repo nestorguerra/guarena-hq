@@ -138,6 +138,8 @@ def objetos():
     from composicion_domestica import mejorar_almacen, mejorar_cocina_costura, unidades_domesticas
     mejorar_almacen(out)
     mejorar_cocina_costura(out)
+    from frente_cocina import frente_cocina
+    frente_cocina(out)
     unidades_domesticas(out)
     from pertenencias_domesticas import pertenencias
     pertenencias(out)

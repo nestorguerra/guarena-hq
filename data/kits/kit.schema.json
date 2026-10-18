@@ -289,6 +289,11 @@
      "suelo_determinista": {
       "type": "boolean",
       "description": "Opt-in sólo suelo_libre con obj fijo y obligatorio:true. Tras200intentos aleatorios incompletos prueba cuatro ejes y rejilla finita, sin relajar guardas ni tocar una colocación exitosa."
+     },
+     "fase": {
+      "enum": [
+       "composicion_cocina"
+      ]
      }
     }
    }
@@ -383,6 +388,69 @@
      },
      "titulo": {
       "type": "string"
+     }
+    }
+   }
+  },
+  "composicion_cocina": {
+   "type": "object",
+   "required": [
+    "actividad",
+    "versiones"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "actividad": {
+     "type": "string"
+    },
+    "versiones": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "referencias",
+       "alacena",
+       "alacena_amplia",
+       "alto",
+       "alto_amplio",
+       "preparacion",
+       "preparacion_amplia",
+       "cocina",
+       "cocina_amplia"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "referencias": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "alacena": {
+        "type": "string"
+       },
+       "alacena_amplia": {
+        "type": "string"
+       },
+       "alto": {
+        "type": "string"
+       },
+       "alto_amplio": {
+        "type": "string"
+       },
+       "preparacion": {
+        "type": "string"
+       },
+       "preparacion_amplia": {
+        "type": "string"
+       },
+       "cocina": {
+        "type": "string"
+       },
+       "cocina_amplia": {
+        "type": "string"
+       }
+      }
      }
     }
    }

@@ -8,7 +8,7 @@
 //  - rendimiento: triangles, meshes and lights within data/quality_budgets.json;
 //  - variación: the same seed gives the same layout (its hash), another seed a different one (≥ 30 % of it).
 //   const V = await import('/tools/interiores/validar.js'); await V.validar('cafeteria', 7)
-import { buildLocal } from '/src/locales.js';
+import { buildLocal, filtroHogar } from '/src/locales.js';
 import { PROFILES, buildVecino, kitDeEstancia } from '/src/houses.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { caja } from '/src/objetos.js';
@@ -18,7 +18,38 @@ const ORIGIN = { x: -9400, z: -9400 };
 const DEG = Math.PI / 180;
 
 export function revisar(h, presupuesto) {
-  const L = h.local, K = KITS[L.kit], C = L.colocados, err = [], av = [];
+  const L = h.local, base = KITS[L.kit], K = L.entradasEfectivas?{...base,objetos:L.entradasEfectivas}:base, C = L.colocados, err = [], av = [];
+  // Suelo de contrato desde KITS, incluso si falta metadata de la composición.
+  // Sólo cocina optante; los demás kits conservan su validación anterior.
+  if(base.composicion_cocina){
+    const cfg=base.composicion_cocina,ids=new Set([cfg.actividad,...cfg.versiones.flatMap(v=>Object.entries(v).filter(([k])=>k!=='referencias').map(([,id])=>id))]);
+    const comprometida=C.some(p=>ids.has(p.obj));
+    if(comprometida&&(!L.entradasEfectivas||!L.composicionCocina))err.push('receta efectiva: composicion sin metadatos requeridos');
+    if(L.entradasEfectivas){
+      if(K.objetos.length!==base.objetos.length)err.push('receta efectiva: longitud incoherente');
+      for(const[i,e]of K.objetos.entries())for(const key of ['zona','regla','cantidad','obligatorio','por_m2','por_soporte','fase'])
+        if(JSON.stringify(e[key])!==JSON.stringify(base.objetos[i]?.[key]))err.push('receta efectiva: altera contrato '+i+'/'+key);
+    }
+    const filtro=L.hogar?filtroHogar({...L.hogar,habitacion:'cocina'}):()=>true;
+    for(const[i,e]of base.objetos.entries()){
+      if((e.fase&&!comprometida)||e.botin||!L.zonas[e.zona]||!filtro(e)||(e.area_min!=null&&L.W*L.D<e.area_min)||(e.area_max!=null&&L.W*L.D>=e.area_max))continue;
+      if((e.obligatorio||(e.cantidad?.[0]||0)>0)&&!L.activas?.includes(i))err.push('receta efectiva: activa obligatoria omitida '+i);
+      if(e.espacio_frontal&&(!K.objetos[i]?.espacio_frontal||e.espacio_frontal.some((n,j)=>K.objetos[i].espacio_frontal[j]<n)))err.push('receta efectiva: rebaja reserva global '+i);
+    }
+    if(comprometida){
+      const es=(p,key)=>cfg.versiones.some(v=>[v[key],v[key+'_amplia']].includes(p.obj));
+      const columna=C.find(p=>es(p,'alacena')),prep=C.find(p=>es(p,'preparacion')),nevera=C.find(p=>p.obj==='va_nevera');
+      for(const[p,ancho]of[[columna,columna?Math.min(.7,caja(columna.obj).w):.7],[prep,prep?Math.min(.8,caja(prep.obj).w-.05):.8],[nevera,.7]]){
+        const reserva=p&&K.objetos[p.e]?.espacio_frontal;
+        if(!p||!reserva||reserva[0]<ancho-1e-6||reserva[1]<.8-1e-6)err.push('receta efectiva: reserva de programa ausente o reducida');
+      }
+    }
+    for(const[i,c]of C.entries()){
+      if(!K.objetos[c.e])err.push('referencia: entrada e inexistente '+i);
+      for(const key of ['sop','de'])if(c[key]!=null&&(!Number.isInteger(c[key])||c[key]<0||c[key]>=C.length||c[key]===i))err.push('referencia: '+key+' invalido '+i);
+      if(c.sop!=null&&!OBJETOS[C[c.sop]?.obj]?.superficies?.[c.sup])err.push('referencia: sup sin superficie '+i);
+    }
+  }
   const { W, D, H } = L;
   // ---- obligatorios y densidades
   const porEntrada = new Map();
@@ -59,7 +90,7 @@ export function revisar(h, presupuesto) {
   for (const c of C) {
     const v = c.v, b = caja(c.obj);
     let gap;
-    if (c.sop != null) { const s = C[c.sop], sup = OBJETOS[s.obj].superficies[c.sup]; gap = Math.abs(v.y0 - ((s.y || 0) + sup.y)); }
+    if (c.sop != null) { const s = C[c.sop], sup = OBJETOS[s?.obj]?.superficies?.[c.sup]; if(!sup){err.push('referencia: apoyo inexistente '+c.obj);continue;} gap = Math.abs(v.y0 - ((s.y || 0) + sup.y)); }
     else if (c.regla === 'techo') gap = Math.abs(v.y1 - H);
     else if (c.regla === 'pared') {
       // (its back against a wall of its zone, or of the room)

@@ -1,0 +1,6 @@
+{
+ "antes": "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+ "despues": "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09",
+ "causa": "El constructor propio de Annie omitía campos de receta efectiva que sí transmiten buildVecino y buildLocal. El contrato real69 falla antes; no se cambia validador ni se debilitan mínimos.",
+ "patch_sha256": "9a08c35a3f08437a88a268c10af26fa4cd71956b46e95691471aae3a79e585c8"
+}

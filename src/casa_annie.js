@@ -32,7 +32,7 @@ export function amueblarAnnie(B, seed, segs0, segs1) {
     }
     if(faltan.length)throw Error('Annie/'+s.id+': faltan entradas '+faltan.join(','));
     const colocados=A.P.map((p,i)=>({i,...p,clase:OBJETOS[p.obj].clase,de:p.de??null}));
-    const e={kit:'vivienda_'+s.tipo,sala:s.id,tipologia:A.K.tipologia,seed:A.seed,W,D,H:A.H,origen:{x:B.ox+ox,y,z:B.oz+oz},inicio,ancho:A.ancho,zonas:A.zonas,tabiques:[],libres,luces:[],activas:A.activas,debe:A.debe,avisos:A.avisos,hogar:{perfil:'annie',estilo:'alegre'},colocados};
+    const e={...(A.composicionCocina?{entradasEfectivas:A.K.objetos,composicionCocina:A.composicionCocina}:{}),kit:'vivienda_'+s.tipo,sala:s.id,tipologia:A.K.tipologia,seed:A.seed,W,D,H:A.H,origen:{x:B.ox+ox,y,z:B.oz+oz},inicio,ancho:A.ancho,zonas:A.zonas,tabiques:[],libres,luces:[],activas:A.activas,debe:A.debe,avisos:A.avisos,hogar:{perfil:'annie',estilo:'alegre'},colocados};
     estancias.push(e);rooms.push({id:s.id,type:s.tipo,lv:s.lv,x0:B.ox+x0,z0:B.oz+z0,x1:B.ox+x1,z1:B.oz+z1});
     // Proyectar cada acción a suelo alcanzable del kit, antes de añadir la pared de la casa.
     const mp=mapaPaso(e,colocados.flatMap(partes),.05,e.ancho,inicio),celdas=[];

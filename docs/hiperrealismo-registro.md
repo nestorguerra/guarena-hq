@@ -1110,3 +1110,10 @@ Se documentan los fallos del contrato de paso y del primer barrido CPU del labor
 
 
 Tanda 15 publicada y verificada: `1884bfd462612df7cf2fc802ebdd083628ce1c72`, CI 39082348306 y Pages 39082644397 completados con éxito. La página pública sirve ese SHA antes y después de recargar; ocho casas, Annie con cinco kits y funciones propias, acciones de tres comercios y persistencia de partida ficticia pasan sin errores. Entradas vecinales hasta 159.1 ms y Annie 80.5 ms en este M1. Las acciones comerciales están presentes; este instrumento no ejecuta compras. Recibo: `data/interiores/validacion/publicacion_tanda15.json`. El objetivo 4/5 sigue pendiente.
+
+
+## 2026-10-18 · Tanda 16 de cocina
+
+Frente de preparación, cocción y guardado coordinado en dos alturas; despensa con paneles y hueco diario, acabados propios y tarea reconocible sobre la tabla. Nuevo frente en 18 de 22 construcciones reales, fallback en cuatro. La revisión independiente acepta mejora parcial, con variedad y lectura funcional pendientes. Notas 3,276/3,256; objetivo 4/5 aún abierto. Se conservan cámaras y diferencias respecto a la ficha histórica, sin atribuir toda la subida exclusivamente al código.
+
+Se cierran los fallos de mínimos, acciones dependientes y contrato artístico, además del paso de metadatos efectivos en Annie detectado por la prueba real del navegador. Pasan 69 contratos, 200 casas, 81 cocinas, todos los kits en cinco semillas, 96 recorridos, fuente/paquete, recursos y marcas. Las 413 fuentes congeladas permanecen estables y 22 derivados se regeneran idénticos. Dossier: data/interiores/validacion/evidencia_tanda16. Publicación pendiente de CI y prueba pública. El siguiente estudio se prepara en privado.

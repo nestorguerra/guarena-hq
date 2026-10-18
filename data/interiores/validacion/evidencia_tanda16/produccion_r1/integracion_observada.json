@@ -1,0 +1,55 @@
+{
+  "scope": "Observacion separada posterior a snapshot; raiz confirma integracion local de4patchesR1 y modeloR2, workflow19 y regeneracion desde fuentes. Este autor solo lee activos; no modifica base historica ni producto. Fuente actual de pruebas sigue contratoR1; delta artistico separado.",
+  "sources": {
+    "src/locales.js": {
+      "sha256": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "src/houses.js": {
+      "sha256": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "tools/interiores/validar.js": {
+      "sha256": "9f23556c92001f384e39a828926a32ddd1f97576175cb7250fa27d18c6460f5d",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "tools/interiores/datos.py": {
+      "sha256": "3334228a3a123c26f5c9391bb6d49ed8c553c46245759eaa87b9c88a4c3888c4",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "data/kits/kit.schema.json": {
+      "sha256": "34b83cc9c176412ad8fe496413c24ef0e3795226901748a82d0ad94250d1e8a7",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "tools/interiores/frente_cocina.py": {
+      "sha256": "ecc41c995bf854a705abaa9a436fe28b307194b42a8d7cec70a912e504fd2714",
+      "equals_r1": false,
+      "equals_r2": true
+    },
+    "tools/interiores/catalogo_vivienda_a.py": {
+      "sha256": "f2e1b39faa33d36415c42c8bc0787d8d1f366bb42d7659642ad9dd843c15d035",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "tools/interiores/kits_vivienda_a.py": {
+      "sha256": "0a5f0803addf01d2e5cdfe98ca8020a4b74ddf0eec34188321b0e2ae9710f7e5",
+      "equals_r1": true,
+      "equals_r2": true
+    },
+    "tools/interiores/casas_pruebas.js": {
+      "sha256": "6b73efebfa36153027b17006fdc9330a6f6ef5380e529377856fcc31aeefef92",
+      "equals_r1": true,
+      "equals_r2": false
+    },
+    "tools/interiores/fotos_casa.py": {
+      "sha256": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0",
+      "equals_r1": true,
+      "equals_r2": true
+    }
+  }
+}

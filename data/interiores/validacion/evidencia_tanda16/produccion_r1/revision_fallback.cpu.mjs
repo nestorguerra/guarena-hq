@@ -1,0 +1,6 @@
+import fs from'node:fs';import assert from'node:assert/strict';import crypto from'node:crypto';import{runtime}from'./runtime.cpu.mjs';import{fixture}from'./fixture.cpu.mjs';
+const root='.cache/calidad/cocina_t16/produccion_r1/',a=runtime(false),b=runtime(true),rows=[],kitBefore=JSON.stringify(b.data.KITS);
+for(const seed of [3627,2606,4007,4216]){const f=fixture(seed)[0],x=a.amueblar('vivienda_cocina',f.seed,f.ctx),y=b.amueblar('vivienda_cocina',f.seed,f.ctx);assert(!y.composicionCocina);assert(y.P.length>10);for(const k of ['P','activas','guardias','avisos','debe','W','D','H','puertaX'])assert.deepEqual(y[k],x[k]);assert.equal(y.U([0,1]),x.U([0,1]));rows.push({seed,count:y.P.length,exact:true});}
+for(const id of ['bar','vivienda_ninos']){const x=a.amueblar(id,1),y=b.amueblar(id,1),plain=o=>JSON.parse(JSON.stringify(o));assert.deepEqual(plain(x),plain(y));assert.equal(y.U([0,1]),x.U([0,1]));rows.push({kit:id,exact:true});}
+assert.equal(JSON.stringify(b.data.KITS),kitBefore);
+fs.writeFileSync(root+'revision_fallback_cpu.json',JSON.stringify({state:'PASS',engineSHA:crypto.createHash('sha256').update(fs.readFileSync(root+'candidata/src/locales.js')).digest('hex'),rows},null,2)+'\n');console.log('PASS',rows);
