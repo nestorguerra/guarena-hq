@@ -159,7 +159,7 @@ JS = r'''(async () => {
       if(r.info.programs?.some(p=>p.diagnostics?.runnable===false))throw Error('programa WebGL no ejecutable');
       vistas[vistas.length-1].clearance.afterRender=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' después de render');
       if(JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov})!==poseAntes)throw Error('render cambió la pose de cámara: '+tipo+'/'+s+'/'+k);
-      await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
+      const snapResponse=await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });if(!snapResponse.ok)throw Error('captura HTTP '+snapResponse.status);
     }
     out.push({ seed: s, kit:H.kitDeEstancia(rm.type,prof.id),perfil: prof.id, estilo: prof.style, plano: prof.layout, sala: [+(rm.x1 - rm.x0).toFixed(1), +(rm.z1 - rm.z0).toFixed(1)], planta: rm.lv, quality:g.qKey, dpr:r.getPixelRatio(), vistas });
     await g.interiors.exit();

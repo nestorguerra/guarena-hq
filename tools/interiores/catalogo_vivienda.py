@@ -29,18 +29,23 @@ def patas(w, d, h, grosor=0.04, c=MADERA, m='madera', inset=0.05, **k):
 
 # ---------------------------------------------------------------- sitting
 def sofa(id, nombre, w, plazas, masa):
-    partes = [caja(w, 0.12, 0.84, y=0.06, c=MADERA, tinte='madera'),
-              caja(w, 0.3, 0.84, y=0.27, c=TELA, m='tela', tinte='tela'),
-              caja(w - 0.36, 0.06, 0.62, y=0.45, z=0.08, c=TELA, m='tela', tinte='tela'),
-              caja(w, 0.46, 0.2, y=0.65, z=-0.32, c=TELA, m='tela', tinte='tela'),
-              caja(0.18, 0.26, 0.84, x=-w / 2 + 0.09, y=0.55, c=TELA, m='tela', tinte='tela'),
-              caja(0.18, 0.26, 0.84, x=w / 2 - 0.09, y=0.55, c=TELA, m='tela', tinte='tela')]
+    # Misma huella, altura y plazas: patas, bastidor, cojines y brazos blandos.
+    partes = [*patas(w-.04,.78,.12,grosor=.055,c=MADERA,tinte='madera',inset=.055),
+              caja(w-.06,.08,.78,y=.16,c=MADERA,tinte='madera',redondeo=.018),
+              caja(w,.20,.84,y=.30,c=TELA,m='tela',tinte='tela',redondeo=.04),
+              caja(w,.46,.20,y=.65,z=-.32,c=TELA,m='tela',tinte='tela',redondeo=.045),
+              caja(.18,.27,.84,x=-w/2+.09,y=.545,c=TELA,m='tela',tinte='tela',redondeo=.055),
+              caja(.18,.27,.84,x=w/2-.09,y=.545,c=TELA,m='tela',tinte='tela',redondeo=.055)]
+    ancho = (w-.36)/plazas
     for i in range(plazas):
-        x = -((w - 0.36) / 2) + (w - 0.36) * (i + 0.5) / plazas
-        partes.append(caja((w - 0.36) / plazas - 0.04, 0.34, 0.12, x=x, y=0.66, z=-0.17, c=TELA2, m='tela', r=[-8, 0, 0]))
-    asientos = [{'p': [-((w - 0.36) / 2) + (w - 0.36) * (i + 0.5) / plazas, 0.45, 0.12], 'h': 0.45, 'anim': 'sofa'} for i in range(plazas)]
-    obj(id, nombre, 'sofa', 'PUSH', masa, 'tela', 'suelo', partes, rol='sofa', modificadores=['SEAT'], asientos=asientos,
-        superficies=[{'y': 0.48, 'margen': 0.2}], nota='el sofá: la gente de la casa se sienta aquí a ver la tele')
+        x = -(w-.36)/2 + ancho*(i+.5)
+        partes += [caja(ancho-.018,.12,.62,x=x,y=.42,z=.08,c=TELA,m='tela',tinte='tela',redondeo=.045),
+                   caja(ancho-.025,.34,.14,x=x,y=.66,z=-.17,c=TELA,m='tela',tinte='tela',redondeo=.04,r=[-8,0,0])]
+    for lado in [-1,1]:
+        partes.append(caja(.29,.30,.13,x=lado*(w/2-.34),y=.62,z=.12,c='#c6b79b',m='tela',redondeo=.055,r=[-9,0,lado*8]))
+    asientos = [{'p': [-((w-.36)/2)+(w-.36)*(i+.5)/plazas,.45,.12], 'h':.45,'anim':'sofa'} for i in range(plazas)]
+    obj(id,nombre,'sofa','PUSH',masa,'tela','suelo',partes,rol='sofa',modificadores=['SEAT'],asientos=asientos,
+        superficies=[{'y':.48,'margen':.2}],nota='sofá tapizado con cojines separados, brazos blandos y patas de madera')
 sofa('sofa_tres_plazas', 'Sofá de tres plazas', 2.0, 3, 55)
 sofa('sofa_dos_plazas', 'Sofá de dos plazas', 1.5, 2, 40)
 obj('sillon_orejero', 'Sillón orejero', 'sillon', 'CARRY', 22, 'tela', 'suelo', [
@@ -60,7 +65,12 @@ obj('silla_comedor', 'Silla de comedor', 'silla', 'CARRY', 5, 'madera', 'suelo',
     caja(0.035, 0.5, 0.035, x=-0.2, y=0.73, z=-0.2, c=MADERA, tinte='madera'), caja(0.035, 0.5, 0.035, x=0.2, y=0.73, z=-0.2, c=MADERA, tinte='madera'),
     caja(0.42, 0.14, 0.025, y=0.88, z=-0.2, c=MADERA, tinte='madera')],
     rol='silla', modificadores=['SEAT'], asientos=[{'p': [0, 0.5, 0.02], 'h': 0.5, 'anim': 'silla'}])
-obj('puff', 'Puf', 'sillon', 'CARRY', 8, 'tela', 'suelo', [cil(0.26, 0.26, 0.4, c=TELA, m='tela', tinte='tela', seg=14)], modificadores=['SEAT'], asientos=[{'p': [0, 0.4, 0], 'h': 0.4, 'anim': 'silla'}])
+obj('puff', 'Puf tapizado', 'sillon', 'CARRY', 8, 'tela', 'suelo', [
+    cil(.235,.235,.025,y=.0125,c='#6d6252',m='tela',seg=14),
+    cil(.26,.25,.295,y=.1725,c=TELA,m='tela',tinte='tela',seg=14),
+    esf(.26,y=.30,c=TELA,m='tela',tinte='tela',s=[.9749279022216797, .3846153846, 1]),
+    cil(.259,.259,.008,y=.307,c='#a6977d',m='tela',seg=14)],
+    modificadores=['SEAT'], asientos=[{'p':[0,.4,0],'h':.4,'anim':'silla'}])
 
 # ---------------------------------------------------------------- tables
 obj('mesa_centro', 'Mesa de centro', 'mesa', 'CARRY', 14, 'madera', 'suelo', [
@@ -188,8 +198,14 @@ obj('manta_doblada', 'Manta doblada', 'textil', 'PICKUP', 1.2, 'tela', 'superfic
 obj('cojin_suelto', 'Cojín', 'textil', 'PICKUP', 0.5, 'tela', 'superficie', [caja(0.4, 0.14, 0.38, c=TELA2, m='tela', tinte='tela', r=[0, 12, 0])])
 obj('telefono_casa', 'Teléfono de casa', 'pequeño_electrodomestico', 'PICKUP', 0.8, 'plastico', 'superficie', [caja(0.2, 0.07, 0.22, c='#e8e2d4', m='plastico'), caja(0.2, 0.05, 0.06, y=0.095, z=-0.04, c='#e8e2d4', m='plastico')], rol='telefono')
 obj('velas', 'Velas', 'decoracion', 'PICKUP', 0.5, 'comida', 'superficie', [cil(0.025, 0.025, 0.2, x=-0.04, c='#f4ecd8', m='comida'), cil(0.025, 0.025, 0.14, x=0.04, c='#f4ecd8', m='comida'), cil(0.07, 0.07, 0.015, c=LATON, seg=14)])
-obj('alfombra_salon', 'Alfombra', 'textil', 'PICKUP', 4, 'tela', 'suelo', [caja(2.0, 0.003, 1.4, y=0.0015, c='#7a2a2a', m='tela'), caja(1.8, 0.004, 1.2, y=0.002, c='#b8784a', m='tela', tinte='tela')],
-    motivo_clase='enrollada se lleva en brazos, pero pesa poco')
+# Tejido geométrico propio: cenefa, campo sereno y bandas amplias, sin fotografía.
+alfombra = [caja(2,.003,1.4,y=.0015,c='#687565',m='tela'),caja(1.8,.004,1.2,y=.002,c='#c8bda5',m='tela')]
+for x in [-.68,-.34,0,.34,.68]:
+    alfombra.append(caja(.055,.0004,1.12,x=x,y=.0038,c='#aaa58e',m='tela'))
+for z in [-.46,.46]:
+    alfombra.append(caja(1.72,.0004,.055,y=.0038,z=z,c='#8b7760',m='tela'))
+obj('alfombra_salon','Alfombra tejida','textil','PICKUP',4,'tela','suelo',alfombra,
+    motivo_clase='enrollada se lleva en brazos, pero pesa poco',nota='tejido propio de tonos naturales; cenefa y bandas agrupadas en el material mate')
 obj('planta_maceta_salon', 'Costilla de Adán en maceta', 'planta', 'CARRY', 9, 'ceramica', 'suelo', [cil(0.2, 0.15, 0.34, c='#b5552e', m='ceramica', seg=14), *[esf(0.18, x, 0.62 + dy, z, c='#3f7a35', m='comida', s=[1.2, 0.6, 1]) for x, z, dy in ((-0.1, 0, 0.1), (0.12, 0.06, 0.0), (0, -0.1, 0.25), (0.05, 0.1, 0.35))]])
 
 # ---------------------------------------------------------------- what can be taken (src/houses.js LOOT)

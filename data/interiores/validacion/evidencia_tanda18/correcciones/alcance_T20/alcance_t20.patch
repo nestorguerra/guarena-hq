@@ -1,0 +1,18 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -1183,7 +1183,14 @@
+         const paredes=planos.filter(p=>dentro(p)&&Math.abs(p.ny)<1e-6),acento='acabado_domestico_estudio_'+color,cal='acabado_domestico_estudio_#e9e3d4';
+         exigir(paredes.length>=4&&materiales.has(acento)&&materiales.has(cal),seed+': faltan paredes reales de estudio');
+         for(const key of[acento,cal])exigir(materiales.get(key)?.defines?.CLAY_LINT===0,seed+': paño de estudio conserva pelusa');
+-        for(const[key,m]of materiales)if(!key.startsWith('acabado_domestico_estudio_'))exigir(m.defines?.CLAY_LINT===undefined,seed+': el acabado invade otras salas');
++        for(const[key,m]of materiales){
++          if(key.startsWith('acabado_domestico_estudio_'))continue;
++          if(key==='acabado_domestico_salon_vertices'){
++            const esperado={CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003,...(e.hogar.perfil==='familia'?{}:{CLAY_LINT:0})};
++            exigir(m.vertexColors===true&&m.color.getHex()===0xffffff&&m.roughness===.92,seed+': material de salón fuera del perfil deliberado');
++            exigir(Object.keys(m.defines||{}).length===Object.keys(esperado).length&&Object.entries(esperado).every(([k,v])=>m.defines?.[k]===v),seed+': defines de salón fuera del perfil deliberado');
++          }else exigir(m.defines?.CLAY_LINT===undefined,seed+': el acabado invade otras salas');
++        }
+         let area=0;const opuestas=new Set();
+         for(const p of paredes){
+           const uso=Math.sin(p.ry)*Math.sin(mesa.ry)+Math.cos(p.ry)*Math.cos(mesa.ry)>.999;

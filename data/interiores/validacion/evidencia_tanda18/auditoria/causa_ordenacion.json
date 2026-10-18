@@ -1,0 +1,110 @@
+{
+ "estado": "REPRODUCIDO_EN_NAVEGADOR",
+ "traza": "diagnostico_traza.json",
+ "primera_divergencia_de_sitio": 444,
+ "antes": [
+  {
+   "value": 0.40853674290701747,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.43579747318290174,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.5890213481616229,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.7682075866032392,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.29596567596308887,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.11688937363214791,
+   "stack": [
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:618:24)",
+    "    at decorate (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:634:7)",
+    "    at Module.buildVecino (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:1138:7)"
+   ]
+  }
+ ],
+ "despues": [
+  {
+   "value": 0.40853674290701747,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.43579747318290174,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.5890213481616229,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.7682075866032392,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:41",
+    "    at Array.sort (<anonymous>)",
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:614:30)"
+   ]
+  },
+  {
+   "value": 0.29596567596308887,
+   "stack": [
+    "    at onWall (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:618:24)",
+    "    at decorate (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:634:7)",
+    "    at Module.buildVecino (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:1138:7)"
+   ]
+  },
+  {
+   "value": 0.11688937363214791,
+   "stack": [
+    "    at http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:161:87",
+    "    at canvasTex (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:83:3)",
+    "    at paintingTex (http://localhost:8920/.cache/calidad/tanda18/houses_traza.js:160:10)"
+   ]
+  }
+ ],
+ "extracciones_antes_patio": [
+  907,
+  883
+ ],
+ "limites": "Los valores r son deterministas por índice. El comparator aleatorio de onWall genera distinto número de llamadas. No se atribuye una razón interna al motor V8 ni a cachés sin evidencia."
+}

@@ -1,0 +1,198 @@
+{
+  "state": "PASS",
+  "seed": 3244,
+  "scope": "CPU constructor dos configuraciones; no suite browser",
+  "count": [
+    21,
+    21
+  ],
+  "acciones": [
+    [
+      null,
+      "exit",
+      "Salir a la calle",
+      null,
+      1.1,
+      null
+    ],
+    [
+      null,
+      "read",
+      "Hojear un libro",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "drawer",
+      "Registrar los cajones",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "mirror",
+      "Mirarse al espejo",
+      null,
+      0.6,
+      null
+    ],
+    [
+      "cuadro",
+      "loot",
+      "Coger: cuadro al óleo",
+      {
+        "name": "Cuadro al óleo",
+        "value": [
+          80,
+          300
+        ]
+      },
+      1.1,
+      null
+    ],
+    [
+      null,
+      "eat",
+      "Picar algo de la cocina",
+      null,
+      0.9,
+      null
+    ],
+    [
+      null,
+      "fridge",
+      "Abrir la nevera",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "hide",
+      "Esconderse en el armario",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "hide",
+      "Esconderse en el armario",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "mirror",
+      "Mirarse al espejo",
+      null,
+      0.6,
+      null
+    ],
+    [
+      null,
+      "hide",
+      "Esconderse en el armario",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "drawer",
+      "Registrar los cajones",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "read",
+      "Hojear un libro",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "read",
+      "Hojear un libro",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "drawer",
+      "Registrar los cajones",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "read",
+      "Hojear un libro",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "read",
+      "Hojear un libro",
+      null,
+      0.8,
+      null
+    ],
+    [
+      null,
+      "tv",
+      "Encender la tele",
+      null,
+      0.9,
+      null
+    ],
+    [
+      "portatil",
+      "loot",
+      "Coger: portátil",
+      {
+        "name": "Portátil",
+        "value": [
+          90,
+          220
+        ]
+      },
+      0.95,
+      null
+    ],
+    [
+      "cartera",
+      "loot",
+      "Coger: cartera",
+      {
+        "name": "Cartera",
+        "cash": [
+          15,
+          90
+        ]
+      },
+      0.95,
+      null
+    ],
+    [
+      null,
+      "well",
+      "Asomarse al pozo",
+      null,
+      0.9,
+      null
+    ]
+  ],
+  "erroresUso": []
+}

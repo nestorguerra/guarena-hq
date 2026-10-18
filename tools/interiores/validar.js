@@ -187,9 +187,11 @@ export async function validar(tip, seeds = [1, 2, 3]) {
     const hogar = hogarDe(KITS[tip], s,tip);
     // Las estancias usan puerta doméstica (0,86 m + sus márgenes), no el acceso de 1,5 m de un comercio.
     const puertaLab = KITS[tip].puerta ?? 0;
-    const contexto = tip.startsWith('vivienda_') ? { libres: [{ cx: puertaLab, cz: 0.5, hw: 0.58, hd: 0.5, a: 0, y0: 0, y1: 2.4 }], inicio: { x: puertaLab, z: 0.5 } } : null;
+    const contexto = tip.startsWith('vivienda_') ? { libres: [{ cx: puertaLab, cz: 0.5, hw: 0.58, hd: 0.5, a: 0, y0: 0, y1: 2.4 }], inicio: { x: puertaLab, z: 0.5 },...(tip==='vivienda_salon'?{funciones:true}:{}) } : null;
     const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
     const rep = revisar(h, presupuesto);
+    if(h.local.composicionLectura)rep.composicionLectura=h.local.composicionLectura;
+    if(h.local.composicionEstar)rep.composicionEstar=h.local.composicionEstar;
     if(h.local.generacion)rep.generacion=h.local.generacion;
     // (I-03: the same seed again, the same layout)
     const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);

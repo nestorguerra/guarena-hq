@@ -1,5 +1,6 @@
 // Acabados domésticos propios: superficies serenas que dejan leer muebles y usos.
 // Son láminas de pocos milímetros; no cambian el plano, los huecos ni los colliders.
+import * as THREE from 'three';
 import { planeGeo, std } from './housekit.js';
 import { mulberry32 } from './util.js';
 
@@ -19,6 +20,38 @@ export function panosPared(a, b, y0, y1, huecos) {
 }
 
 export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
+  if(rm.type==='salon'&&perfil!=='annie') {
+    // Pared de estar con color; los demás paños calmos conservan todos los huecos.
+    const y=(rm.lv||0)*3.1,clasico=['abuela','matrimonio'].includes(perfil);
+    // Todas las superficies nuevas comparten un material: color por vértice.
+    const defines={CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003,...(['familia','cazador'].includes(perfil)?{}:{CLAY_LINT:0})};
+    const material=B.mat('acabado_domestico_salon_vertices',()=>std(0xffffff,{vertexColors:true,roughness:.92,defines}));
+    const mat=c=>c,add=(color,geometry,...args)=>{const c=new THREE.Color(color),rgb=[];for(let i=0;i<geometry.attributes.position.count;i++)rgb.push(c.r,c.g,c.b);geometry.setAttribute('color',new THREE.Float32BufferAttribute(rgb,3));B.add(material,geometry,...args);};
+    const claro=mat('#e9e3d4'),techo=mat('#e9e3d4');
+    const acento=mat(estilo==='joven'?'#71858b':estilo==='bohemio'?'#738778':clasico?'#b4ac94':'#8e9582');
+    const sofa=estancia?.colocados?.find(p=>['sofa_tres_plazas','sofa_dos_plazas'].includes(p.obj));
+    const ang=sofa?Math.atan2(Math.sin(sofa.ry),Math.cos(sofa.ry)):null;
+    const pared=ang===null?null:Math.abs(ang)<.3?'s':Math.abs(Math.abs(ang)-Math.PI)<.3?'n':ang>0?'w':'e';
+    for(const side of ['s','n','w','e']) {
+      const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
+      const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
+      for(const [lo,hi,v0,v1]of panosPared(a,b,0,altura,huecos)){
+        const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
+        add(side===pared?acento:claro,planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
+      }
+    }
+    const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
+    // Junta estrecha y tonos cercanos: baldosa doméstica clásica o tabla ancha.
+    add(mat(clasico?'#966c55':'#9b8c72'),planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+    const step=clasico?.32:.28,deep=clasico?.32:1.6;
+    const colors=clasico?['#af856c','#ac8269','#b1876e']:['#b1a086','#ad9c82','#b4a38a'];
+    for(let x=rm.x0+.076;x<rm.x1-.076;x+=step)for(let z=rm.z0+.076;z<rm.z1-.076;z+=deep){
+      const tw=Math.min(step-.0015,rm.x1-.076-x),td=Math.min(deep-.0015,rm.z1-.076-z);
+      if(tw>.001&&td>.001)add(mat(colors[(Math.round((x-rm.x0)/step)+Math.round((z-rm.z0)/deep))%3]),planeGeo(tw,td).rotateX(-Math.PI/2),x+tw/2,y+.0095,z+td/2);
+    }
+    add(techo,planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);
+    return;
+  }
   if(rm.type==='estudio'&&perfil!=='annie') {
     // El estudio adulto reúne consulta y trabajo. Sólo su pared de uso lleva
     // acento; los huecos completos se recortan como en el resto de la vivienda.

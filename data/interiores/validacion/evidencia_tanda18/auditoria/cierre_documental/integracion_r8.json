@@ -1,0 +1,28 @@
+{
+ "estado": "INTEGRADA_PENDIENTE_GATES",
+ "fuentes": 417,
+ "copias_desde_snapshot_antes_delta": [
+  "src/composicion_estar_salon.js",
+  "src/locales.js",
+  "src/houses.js",
+  "tools/interiores/catalogo_vivienda.py",
+  "data/objetos/vivienda.json",
+  "src/interiores_datos.js",
+  "data/interiores/datos.json"
+ ],
+ "delta_instrumental": [
+  ".cache/calidad/tanda18/metadata_estar/metadata.patch",
+  ".cache/calidad/tanda18/contratos_r8/contratos.patch"
+ ],
+ "archivos_cambiados_respecto_R6": [
+  "data/objetos/vivienda.json",
+  "src/composicion_estar_salon.js",
+  "src/houses.js",
+  "src/interiores_datos.js",
+  "src/locales.js",
+  "tools/interiores/casas_pruebas.js",
+  "tools/interiores/catalogo_vivienda.py",
+  "tools/interiores/validar.js"
+ ],
+ "limites": "Dos deltas de metadatos/pruebas no son un cambio de arte; prueba de invariancia dirigida conservada aparte. Requiere gates reales, cierre independiente, CI y comprobación pública. Sin commit/push/despliegue."
+}

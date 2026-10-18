@@ -1,0 +1,21 @@
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -877,7 +877,7 @@
+   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
+   let hh = 2166136261;
+   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
+-  h.local = { ...(A.composicionLectura?{composicionLectura:A.composicionLectura}:{}),...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
++  h.local = { ...(A.composicionEstar?{composicionEstar:A.composicionEstar}:{}),...(A.composicionLectura?{composicionLectura:A.composicionLectura}:{}),...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+   if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
+   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
+   h.venue = false;
+--- a/tools/interiores/validar.js
++++ b/tools/interiores/validar.js
+@@ -191,6 +191,7 @@
+     const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
+     const rep = revisar(h, presupuesto);
+     if(h.local.composicionLectura)rep.composicionLectura=h.local.composicionLectura;
++    if(h.local.composicionEstar)rep.composicionEstar=h.local.composicionEstar;
+     if(h.local.generacion)rep.generacion=h.local.generacion;
+     // (I-03: the same seed again, the same layout)
+     const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);

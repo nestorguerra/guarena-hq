@@ -454,6 +454,79 @@
      }
     }
    }
+  },
+  "composicion_lectura": {
+   "type": "object",
+   "required": [
+    "area_min",
+    "perfiles",
+    "biblioteca",
+    "asiento",
+    "mesita",
+    "lampara",
+    "paredes"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "area_min": {
+     "type": "number",
+     "minimum": 0
+    },
+    "perfiles": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "biblioteca": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "asiento": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "mesita": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "lampara": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "paredes": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "uniqueItems": true,
+     "items": {
+      "enum": [
+       "E",
+       "W",
+       "N",
+       "S"
+      ]
+     }
+    }
+   }
   }
  }
 }

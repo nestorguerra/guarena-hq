@@ -1,3 +1,4 @@
+import { componerEstar } from './composicion_estar_salon.js';
 // The town's businesses inside, from their kit (technical backlog, epic I): a kit (data/kits/<tipología>.json) says the
 // room's size, its zones — the counter, behind it, the tables, the toilet, the storeroom —, its partitions and, zone by
 // zone, which objects of the catalogue (data/objetos) go there, how many and by what rule; buildLocal lays them out with
@@ -6,6 +7,7 @@
 // result (h.local.colocados) for the validator (tools/interiores/validar.py, I-04).
 // Frame: the street door at z = 0, the back wall at z = D, x from -W/2 to W/2 (metres, from the interior's origin): the
 // walls' inner faces, so a zone that runs to a wall ends at its face.
+import { componerLectura } from './composicion_lectura_salon.js';
 import * as THREE from 'three';
 import { INTERIOR_ORIGIN, planeGeo, boxGeo, HouseBuilder, std, texMat, glassMat, programaLuzDomestica, T as MURO } from './housekit.js';
 import { KITS, OBJETOS } from './interiores_datos.js';
@@ -727,13 +729,29 @@ export function amueblar(kit, seed = 1, ctx = null) {
     if(!composicionCocina)guardias=guardiasBase;
   }
 
-  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(composicionCocina?{composicionCocina}:{}), ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
+  let composicionLectura;
+  const lectura=componerLectura({P,K,ctx,planta,H,libres,inicio,aceptar:candidatos=>{
+    const original=P.slice(),g=guardias;
+    try{P.splice(0,P.length,...candidatos);return !cierra([]);}
+    finally{P.splice(0,P.length,...original);guardias=g;}
+  }});
+  if(lectura){P.splice(0,P.length,...lectura.P);composicionLectura=lectura.metadata;}
+
+  let composicionEstar;
+  const estar=componerEstar({P,K,ctx,planta,H,libres,inicio,asientoLectura:composicionLectura?.asiento,aceptar:candidatos=>{
+    const original=P.slice(),g=guardias;
+    try{P.splice(0,P.length,...candidatos);return !cierra([]);}
+    finally{P.splice(0,P.length,...original);guardias=g;}
+  }});
+  if(estar){P.splice(0,P.length,...estar.P);composicionEstar=estar.metadata;}
+
+  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(composicionEstar?{composicionEstar}:{}), ...(composicionLectura?{composicionLectura}:{}), ...(composicionCocina?{composicionCocina}:{}), ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
 }
 
 // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
 // household only
 export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null, contexto = null) {
-  const semillaSolicitada=seed,ctx=contexto||hogar?{...contexto,...(hogar?{filtro:filtroHogar(hogar)}:{})}:null;
+  const semillaSolicitada=seed,ctx=contexto||hogar?{...contexto,...(hogar?{filtro:filtroHogar(hogar),perfil:hogar.perfil}:{})}:null;
   let A=amueblar(kit,seed,ctx);
   const faltan=a=>a.activas.filter(i=>{const e=a.K.objetos[i];return a.P.filter(p=>p.e===i&&(e.regla!=='conjunto'||p.de==null)).length<Math.max(e.obligatorio?1:0,e.cantidad?.[0]||0);});
   const marco={W:A.W,D:A.D,H:A.H,puertaX:A.puertaX},intentos=[{seed:A.seed,faltan:faltan(A),...(A.busquedasSuelo?{busquedasSuelo:A.busquedasSuelo}:{})}];
@@ -859,7 +877,7 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
   let hh = 2166136261;
   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
-  h.local = { ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+  h.local = { ...(A.composicionEstar?{composicionEstar:A.composicionEstar}:{}),...(A.composicionLectura?{composicionLectura:A.composicionLectura}:{}),...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
   if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
   h.venue = false;

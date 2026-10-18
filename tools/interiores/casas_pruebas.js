@@ -1,12 +1,14 @@
 // Pruebas de contrato: ejercitan los constructores reales; los kits alterados se restauran siempre.
 import * as H from '/src/houses.js';
+import { componerLectura } from '/src/composicion_lectura_salon.js';
+import { componerEstar } from '/src/composicion_estar_salon.js';
 import { KITS, OBJETOS } from '/src/interiores_datos.js';
 import { filtroHogar, amueblar, buildLocal } from '/src/locales.js';
 import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
 import * as THREE from 'three';
 import { programaLuzDomestica, HouseBuilder } from '/src/housekit.js';
 import { construir, caja } from '/src/objetos.js';
-import { partes, penetra, espacioFrontal, mapaPaso } from '/src/interiores_geo.js';
+import { partes, penetra, espacioFrontal, mapaPaso, rot } from '/src/interiores_geo.js';
 
 const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
 const tirar = (h) => h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
@@ -1182,7 +1184,14 @@ export async function probarCasas(opts = {}) {
         const paredes=planos.filter(p=>dentro(p)&&Math.abs(p.ny)<1e-6),acento='acabado_domestico_estudio_'+color,cal='acabado_domestico_estudio_#e9e3d4';
         exigir(paredes.length>=4&&materiales.has(acento)&&materiales.has(cal),seed+': faltan paredes reales de estudio');
         for(const key of[acento,cal])exigir(materiales.get(key)?.defines?.CLAY_LINT===0,seed+': paño de estudio conserva pelusa');
-        for(const[key,m]of materiales)if(!key.startsWith('acabado_domestico_estudio_'))exigir(m.defines?.CLAY_LINT===undefined,seed+': el acabado invade otras salas');
+        for(const[key,m]of materiales){
+          if(key.startsWith('acabado_domestico_estudio_'))continue;
+          if(key==='acabado_domestico_salon_vertices'){
+            const esperado={CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003,...(['familia','cazador'].includes(e.hogar.perfil)?{}:{CLAY_LINT:0})};
+            exigir(m.vertexColors===true&&m.color.getHex()===0xffffff&&m.roughness===.92,seed+': material de salón fuera del perfil deliberado');
+            exigir(Object.keys(m.defines||{}).length===Object.keys(esperado).length&&Object.entries(esperado).every(([k,v])=>m.defines?.[k]===v),seed+': defines de salón fuera del perfil deliberado');
+          }else exigir(m.defines?.CLAY_LINT===undefined,seed+': el acabado invade otras salas');
+        }
         let area=0;const opuestas=new Set();
         for(const p of paredes){
           const uso=Math.sin(p.ry)*Math.sin(mesa.ry)+Math.cos(p.ry)*Math.cos(mesa.ry)>.999;
@@ -1279,6 +1288,204 @@ export async function probarCasas(opts = {}) {
         }
       }finally{try{if(h)tirar(h);}finally{for(const g of telas)g.dispose();telas=[];}}
     }}finally{proto.add=add;for(const g of telas)g.dispose();}
+  });
+  if(opts.tanda>=21)await caso('salon: lectura conserva inventario, acciones y fallbacks y registra asiento real',async()=>{
+    const K=KITS.vivienda_salon,cfg=K.composicion_lectura;
+    exigir(cfg,'falta configuración de lectura');
+    const igual=(a,b,m)=>exigir(JSON.stringify(a)===JSON.stringify(b),m);
+    const identidad=p=>[p.obj,p.e,p.sop,p.sup,p.de,p.clase];
+    const accion=i=>[i.id,i.type,i.label,i.def,i.r,i.crack];
+    const asiento=s=>[s.x,s.y,s.z,s.h,!!s.chair];
+    const presupuesto=await(await fetch('/data/quality_budgets.json')).json();
+    try{for(const seed of [3244,1594,4007,4685,2786]){
+      let a,b;
+      try{
+        delete K.composicion_lectura;a=H.buildVecino(seed);K.composicion_lectura=cfg;b=H.buildVecino(seed);
+        const x=a.estancias.find(e=>e.kit==='vivienda_salon'),e=b.estancias.find(e=>e.kit==='vivienda_salon');
+        exigir(x&&e,seed+': falta salón');const meta=e.composicionLectura,estar=e.composicionEstar,movidos=new Set([...(meta?.movidos||[]),...(estar?.movidos||[])]);
+        igual(x.colocados.map(identidad),e.colocados.map(identidad),seed+': cambia identidad/soporte');
+        igual(a.inter.map(accion),b.inter.map(accion),seed+': pierde acción o recompensa');
+        igual(a.estancias.filter(q=>q!==x),b.estancias.filter(q=>q!==e),seed+': altera otras habitaciones');
+        exigir(!revisarUso(b).errores.length,seed+': uso inaccesible');
+        exigir(!revisar({local:e,group:{traverse(){}}},presupuesto).errores.length,seed+': programa inválido');
+        let mallas=0;b.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});exigir(mallas<=presupuesto.interior.mallas_max,seed+': coste excedido');
+        exigir(!!meta===(seed===3244||seed===1594),seed+': cambia admisión de lectura');
+        if(meta||estar){
+          exigir(movidos.size>0&&[...movidos].every(i=>Number.isInteger(i)&&i>=0&&i<e.colocados.length),seed+': unión de movidos inválida');
+          for(let i=0;i<x.colocados.length;i++)if(!movidos.has(i))igual(x.colocados[i],e.colocados[i],seed+': mueve pieza ajena '+i);
+          if(meta){
+          exigir(meta.movidos.length>4,seed+': admisión/dependientes vacíos');
+          const p=e.colocados[meta.asiento],o=OBJETOS[p.obj];exigir(p.obj==='puff'&&o.asientos?.length===1,seed+': cambia fixture de asiento');
+          const st=o.asientos[0],[dx,dz]=rot(st.p[0],st.p[2],p.ry),sx=e.origen.x+p.x+dx,sz=e.origen.z+p.z+dz;
+          const nuevos=b.pieces.seat.filter(s=>Math.hypot(s.x-sx,s.z-sz)<1e-6&&Math.abs(s.h-p.ry)<1e-6);
+          exigir(nuevos.length===1&&b.pieces.seat.length===a.pieces.seat.length+1,seed+': puff sin asiento real o duplicado');
+          igual(a.pieces.seat.map(asiento),b.pieces.seat.filter(s=>s!==nuevos[0]).map(asiento),seed+': altera asientos existentes');
+          }else igual(a.pieces.seat.map(asiento),b.pieces.seat.map(asiento),seed+': estar altera asientos');
+        }else{
+          exigir(!meta,seed+': fallback/no optante alterado');igual(x.colocados,e.colocados,seed+': fallback parcial');igual(x.activas,e.activas,seed+': activas sin rollback');
+          igual(a.inter.map(i=>[...accion(i),i.x,i.y,i.z]),b.inter.map(i=>[...accion(i),i.x,i.y,i.z]),seed+': desplaza acciones en fallback');
+          igual(a.pieces.seat.map(asiento),b.pieces.seat.map(asiento),seed+': añade asiento en fallback');
+        }
+        if(seed===4007||seed===4685)for(const type of ['phone','drawer'])exigir(b.inter.some(i=>i.sala===e.sala&&i.type===type),seed+': pierde '+type);
+      }finally{K.composicion_lectura=cfg;if(a)tirar(a);if(b)tirar(b);}
+    }}finally{K.composicion_lectura=cfg;}
+  });
+  if(opts.tanda>=21)await caso('salon: postpaso conserva azar y soportes, rechaza inicio ocupado y excepción sin mutar',()=>{
+    const K=KITS.vivienda_salon,cfg=K.composicion_lectura;exigir(cfg,'falta configuración');let h;
+    const igual=(a,b,m)=>exigir(JSON.stringify(a)===JSON.stringify(b),m);
+    try{
+      delete K.composicion_lectura;h=H.buildVecino(3244);const e=h.estancias.find(e=>e.kit==='vivienda_salon');exigir(e,'falta fixture3244');
+      const ctx={W:e.W,D:e.D,H:e.H,inicio:e.inicio,libres:e.libres,funciones:true,perfil:e.hogar.perfil,filtro:x=>e.activas.includes(K.objetos.indexOf(x))};
+      const a=amueblar(e.kit,e.seed,ctx);K.composicion_lectura=cfg;const b=amueblar(e.kit,e.seed,ctx);
+      exigir(b.composicionLectura,'azar probado sólo en fallback');exigir(b.K===K,'clona receta e identidad de entradas');
+      igual(a.activas,b.activas,'cambia activas');exigir(a.guardias===b.guardias,'deja guardias de ensayo');
+      for(let i=0;i<12;i++)exigir(a.U([0,1])===b.U([0,1]),'consume azar '+i);
+      const planta={W:e.W,D:e.D,zonas:e.zonas,tabiques:e.tabiques},P=structuredClone(a.P),original=JSON.stringify(P);
+      const params={P,K,ctx,planta,H:e.H,libres:e.libres,inicio:e.inicio,aceptar:()=>true};
+      const positivo=componerLectura(params);exigir(positivo,'helper sin admisión');
+      const caminar=Q=>Q.flatMap(p=>partes(p).concat(p.sop==null&&!['pared','techo'].includes(p.regla)&&OBJETOS[p.obj].clase!=='PICKUP'&&caja(p.obj).h>=.3?[p.v]:[]));
+      const celda=(m,i)=>Math.floor(i.z/m.S)*m.nx+Math.floor((i.x+planta.W/2)/m.S);
+      const inicio={x:3.2903732327744373,z:.675},mb=mapaPaso(planta,caminar(P),.05,.8,inicio);
+      exigir(mb.free[celda(mb,inicio)],'negativo carece de inicio libre de base');
+      const malo=mapaPaso(planta,caminar(positivo.P),.05,.8,inicio);exigir(!malo.free[celda(malo,inicio)],'negativo no ocupa celda original');
+      const seguro=componerLectura({...params,inicio});
+      if(seguro){const m=mapaPaso(planta,caminar(seguro.P),.05,.8,inicio),c=celda(m,inicio);exigir(m.free[c]&&m.reach[c],'acepta inicio ocupado por vecindad');}
+      exigir(componerLectura({...params,aceptar:()=>false})===null,'ignora rechazo funcional');
+      let lanza=false;try{componerLectura({...params,aceptar:()=>{throw Error('rechazo_dirigido');}});}catch(err){exigir(err.message==='rechazo_dirigido','excepción ajena');lanza=true;}
+      exigir(lanza&&JSON.stringify(P)===original,'excepción/rechazo muta piezas base');
+      const ids=[cfg.biblioteca,cfg.asiento,cfg.mesita,cfg.lampara].map(xs=>P.findIndex(p=>xs.includes(p.obj)&&p.sop==null));exigir(ids.every(i=>i>=0),'raíces incompletas');
+      const hijo=P.findIndex(p=>p.sop===ids[0]);exigir(hijo>=0,'giro sin dependiente real');
+      const Q=[...ids,hijo].map((i,j)=>({...P[i],sop:j===4?0:null,de:null})),lib=P[ids[0]];
+      for(const i of [0,4]){const p=Q[i],[x,z]=rot(p.x-lib.x,p.z-lib.z,-lib.ry);p.x=x;p.z=.3+z;p.ry-=lib.ry;}
+      Q.forEach(p=>p.zona='estancia');const fijo=JSON.stringify(Q),room={W:9,D:9,zonas:{estancia:{id:'estancia',publica:true,x0:-4.5,x1:4.5,z0:0,z1:9}},tabiques:[]};
+      const giro=componerLectura({P:Q,K:{...K,composicion_lectura:{...cfg,paredes:['E']}},ctx,planta:room,H:2.95,libres:[],inicio:{x:0,z:7},aceptar:R=>Math.abs(Math.sin(R[0].ry-Q[0].ry))>.99});
+      exigir(giro,'giro90 sólo prueba rechazo');const relativo=(p,s)=>[...rot(p.x-s.x,p.z-s.z,-s.ry),p.y-s.y,p.ry-s.ry],r0=relativo(Q[4],Q[0]),r1=relativo(giro.P[4],giro.P[0]);
+      exigir(r0.every((n,i)=>Math.abs(n-r1[i])<1e-10),'giro pierde apoyo relativo');
+      exigir(giro.P[4].sop===0&&giro.P[4].sup===Q[4].sup&&JSON.stringify(Q)===fijo,'giro cambia referencias/base');
+      const reserva={cx:0,cz:4.5,hw:4.5,hd:4.5,a:0,y0:0,y1:3};
+      exigir(!componerLectura({P:Q,K:{...K,composicion_lectura:{...cfg,paredes:['E']}},ctx,planta:room,H:2.95,libres:[reserva],inicio:{x:0,z:7},aceptar:()=>true}),'acepta habitación reservada');
+    }finally{K.composicion_lectura=cfg;if(h)tirar(h);}
+  });
+  if(opts.tanda>=21)await caso('salon: caller pinta acento y conserva color por vertice en un material doméstico',()=>{
+    const proto=HouseBuilder.prototype,add=proto.add,planos=[];let h;
+    proto.add=function(key,geo,x,y,z,ry=0){
+      if(key==='acabado_domestico_salon_vertices'){
+        const c=geo.attributes.color,m=this.mats.get(key);exigir(m?.vertexColors&&m.color.getHex()===0xffffff,'material sin color blanco/vértices');
+        exigir(c&&c.count===geo.attributes.position.count,'paño sin color por vértice');
+        planos.push({x:this.ox+x,y,z:this.oz+z,ry,w:geo.parameters.width,h:geo.parameters.height,ny:geo.attributes.normal.getY(0),color:[c.getX(0),c.getY(0),c.getZ(0)],material:m});
+      }
+      return add.call(this,key,geo,x,y,z,ry);
+    };
+    try{for(const seed of [3244,4034,4204]){
+      planos.length=0;h=H.buildVecino(seed);const e=h.estancias.find(e=>e.kit==='vivienda_salon'),sofa=e?.colocados.find(p=>OBJETOS[p.obj].rol==='sofa');exigir(e&&sofa,'falta sofá real');
+      const acento=new THREE.Color(e.hogar.estilo==='joven'?'#71858b':e.hogar.estilo==='bohemio'?'#738778':'#8e9582');
+      const enSala=p=>Math.abs(p.x-e.origen.x)<=e.W/2+.1&&p.z>=e.origen.z-.1&&p.z<=e.origen.z+e.D+.1&&p.y>=e.origen.y&&p.y<=e.origen.y+e.H;
+      const propios=planos.filter(enSala),profundos=propios.filter(p=>Math.abs(p.ny)<.1&&p.color.every((c,i)=>Math.abs(c-[acento.r,acento.g,acento.b][i])<1e-6));
+      exigir(profundos.reduce((n,p)=>n+p.w*p.h,0)>.5,'caller no entrega sofá/acento real');
+      exigir(profundos.every(p=>Math.cos(p.ry-sofa.ry)>.99),'acento en otra orientación');
+      exigir(new Set(propios.map(p=>p.material)).size===1,'fragmenta familias de material');
+      exigir(propios.every(p=>p.material.roughness===.92&&p.material.defines.CLAY_LINT===(['familia','cazador'].includes(e.hogar.perfil)?undefined:0)),'perfil de material ajeno');
+      exigir(propios.some(p=>p.ny>.99&&Math.abs(p.y-e.origen.y-.0095)<1e-5),'faltan piezas de suelo');
+      exigir(propios.some(p=>p.ny<-.99&&Math.abs(p.y-e.origen.y-e.H+.008)<1e-5),'techo fuera de cota');
+      let areaAgrupada=0;h.group.updateMatrixWorld(true);
+      h.group.traverse(o=>{
+        if(!o.isMesh||o.material?.roughness!==.92)return;
+        const g=o.geometry,c=g.attributes.color,v=g.attributes.position,ix=g.index;if(!c)return;
+        for(let n=0;n<(ix?ix.count:v.count);n+=3){
+          const ids=[0,1,2].map(k=>ix?ix.getX(n+k):n+k);
+          if(!ids.every(i=>Math.abs(c.getX(i)-acento.r)<1e-6&&Math.abs(c.getY(i)-acento.g)<1e-6&&Math.abs(c.getZ(i)-acento.b)<1e-6))continue;
+          const t=ids.map(i=>new THREE.Vector3().fromBufferAttribute(v,i).applyMatrix4(o.matrixWorld)),center=t[0].clone().add(t[1]).add(t[2]).multiplyScalar(1/3);
+          if(!enSala(center))continue;
+          areaAgrupada+=t[1].clone().sub(t[0]).cross(t[2].clone().sub(t[0])).length()/2;
+        }
+      });exigir(areaAgrupada>.5,'pierde paño/color real tras agrupar');
+      let mallas=0;h.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});exigir(mallas<=60,seed+': excede60mallas');tirar(h);h=null;
+    }}finally{proto.add=add;if(h)tirar(h);}
+  });
+  if(opts.tanda>=21)await caso('salon: construir no ordena paredes con un comparador aleatorio',()=>{
+    // Las dos rutas activas (decoración y plantas) deben mezclar con consumo
+    // finito. No depender de cuántas veces V8 llama al comparador de sort.
+    const original=Array.prototype.sort,paredes=new Set(['s','n','w','e']);let h;
+    Array.prototype.sort=function(comparar){
+      if(typeof comparar==='function'&&this.length===4&&new Set(this).size===4&&this.every(x=>paredes.has(x)))throw Error('orden de paredes dependiente del comparador');
+      return original.call(this,comparar);
+    };
+    try{
+      h=H.buildVecino(3244);
+      exigir(h.estancias.some(e=>e.composicionLectura),'fixture sin admisión real de lectura');
+      exigir(h.loot.length===h.profile.loot.length&&h.inter.some(i=>i.type==='loot'),'fixture sin pertenencias/acciones');
+      exigir(!revisarUso(h).errores.length,'mezcla deja usos inaccesibles');
+    }finally{Array.prototype.sort=original;if(h)tirar(h);}
+  });
+  if(opts.tanda>=21)await caso('salon: alfombra interior y borde quedan visibles sobre el suelo agrupado',()=>{
+    for(const [seed,centro]of [[3244,'#c8bda5'],[1594,'#c8bda5'],[2786,null]]){
+      let h;try{
+        h=H.buildVecino(seed,{x:-5200,z:-5200});h.group.updateMatrixWorld(true);
+        const e=h.estancias.find(e=>e.kit==='vivienda_salon');exigir(e,seed+': falta salón');
+        const rugs=e.colocados.filter(p=>p.obj==='alfombra_salon');
+        if(centro===null){
+          exigir(!e.colocados.some(p=>OBJETOS[p.obj].rol==='sofa')&&rugs.length===0,seed+': fixture sin sofá recibió alfombra');
+          exigir(!revisarUso(h).errores.length,seed+': uso del caso sin alfombra');continue;
+        }
+        exigir(rugs.length===1,seed+': falta alfombra real');const p=rugs[0];
+        exigir(p.sop==null&&p.clase==='PICKUP'&&e.ancho===.8,seed+': cambia soporte, clase o paso');
+        for(const [x,z,top,ex,ez,col]of [[.85,.55,.004,.9,.6,centro],[.95,.65,.003,1,.7,'#687565']]){
+          const [dx,dz]=rot(x,z,p.ry),ray=new THREE.Raycaster(new THREE.Vector3(e.origen.x+p.x+dx,e.origen.y+.04,e.origen.z+p.z+dz),new THREE.Vector3(0,-1,0),0,.05);
+          const visible=o=>{for(;o;o=o.parent)if(!o.visible)return false;return true;};
+          const hits=ray.intersectObject(h.group,true).filter(i=>visible(i.object)),hit=hits[0];
+          const piso=hits.find(i=>Math.abs(i.point.y-e.origen.y-.0095)<1e-6);
+          exigir(piso&&hit&&hit.point.y>piso.point.y+.0001,seed+': alfombra oculta por suelo en '+x+','+z);
+          exigir(Math.abs(hit.point.y-(e.origen.y+p.y+top))<1e-6,seed+': primer triángulo no es la cara del textil');
+          const g=hit.object.geometry,c=g.attributes.color,pos=g.attributes.position,m=hit.object.material,expected=new THREE.Color(col);
+          exigir(hit.face&&c&&m.vertexColors&&!Array.isArray(m),seed+': color/triángulo real ausente');
+          for(const i of [hit.face.a,hit.face.b,hit.face.c]){
+            const v=new THREE.Vector3().fromBufferAttribute(pos,i).applyMatrix4(hit.object.matrixWorld),[lx,lz]=rot(v.x-e.origen.x-p.x,v.z-e.origen.z-p.z,-p.ry);
+            exigir(Math.abs(Math.abs(lx)-ex)<.001&&Math.abs(Math.abs(lz)-ez)<.001&&Math.abs(v.y-(e.origen.y+p.y+top))<1e-6,seed+': triángulo ajeno al rectángulo del textil');
+            exigir(Math.abs(c.getX(i)*m.color.r-expected.r)<1e-6&&Math.abs(c.getY(i)*m.color.g-expected.g)<1e-6&&Math.abs(c.getZ(i)*m.color.b-expected.b)<1e-6,seed+': pierde color propio del textil');
+          }
+        }
+        exigir(Math.abs(p.v.y0-p.y)<1e-6&&Math.abs(p.v.y1-p.y-.004)<1e-6,seed+': volumen y render discrepan');
+        exigir(!revisarUso(h).errores.length,seed+': alfombra altera usos');
+      }finally{if(h)tirar(h);}
+    }
+  });
+  if(opts.tanda>=21)await caso('salon: estar aislado conserva núcleo, dependientes, selección y rollback',async()=>{
+    const K=KITS.vivienda_salon,cfg=K.composicion_lectura,B=await(await fetch('/data/quality_budgets.json')).json();exigir(cfg,'falta programa');
+    const igual=(a,b,m)=>exigir(JSON.stringify(a)===JSON.stringify(b),m);
+    try{for(const seed of[3244,1594,2786]){let h;try{
+      delete K.composicion_lectura;h=H.buildVecino(seed);const e=h.estancias.find(e=>e.kit==='vivienda_salon');exigir(e,seed+': sin fixture');
+      const ctx={W:e.W,D:e.D,H:e.H,inicio:e.inicio,libres:e.libres,funciones:true,perfil:e.hogar.perfil,filtro:x=>e.activas.includes(K.objetos.indexOf(x))};
+      const legacy=amueblar(e.kit,e.seed,ctx);K.composicion_lectura=cfg;
+      const planta={W:e.W,D:e.D,zonas:e.zonas,tabiques:e.tabiques},aceptar=Q=>!revisar({local:{...e,colocados:Q},group:{traverse(){}}},B).errores.length;
+      const common={K,ctx,planta,H:e.H,libres:e.libres,inicio:e.inicio,aceptar};
+      const lectura=componerLectura({...common,P:legacy.P}),P=lectura?.P||legacy.P,sello=JSON.stringify(P),params={...common,P,asientoLectura:lectura?.metadata.asiento};
+      const estar=componerEstar(params),A=amueblar(e.kit,e.seed,ctx);
+      exigir(A.K===K,seed+': cambia identidad K');igual(legacy.activas,A.activas,seed+': cambia activas');exigir(legacy.guardias===A.guardias,seed+': deja guardias');
+      for(let i=0;i<12;i++)exigir(legacy.U([0,1])===A.U([0,1]),seed+': consume RNG conjunto');
+      exigir(!!estar===(seed!==2786)&&!!A.composicionEstar===(seed!==2786),seed+': admisión/fallback inesperado');
+      if(!estar){igual(P,A.P,seed+': fallback cambia poses');continue;}
+      exigir(lectura&&estar.metadata.movidos.some(i=>Math.hypot(estar.P[i].x-P[i].x,estar.P[i].z-P[i].z)>.1),seed+': prueba vacía de estar');
+      igual(estar.P,A.P,seed+': helper aislado difiere de integración real');
+      for(let i=0;i<P.length;i++){
+        const q=estar.P[i],p=P[i];igual([q.obj,q.e,q.sop,q.sup,q.de,q.clase],[p.obj,p.e,p.sop,p.sup,p.de,p.clase],seed+': cambia identidad/referencia');
+        if(!estar.metadata.movidos.includes(i))igual(q,p,seed+': mueve núcleo ajeno');
+        if(estar.metadata.movidos.includes(i)&&p.sop!=null){
+          const relativo=(v,s)=>[...rot(v.x-s.x,v.z-s.z,-s.ry),v.y-s.y,v.ry-s.ry],a=relativo(p,P[p.sop]),b=relativo(q,estar.P[q.sop]);
+          exigir(a.every((n,k)=>Math.abs(n-b[k])<1e-8),seed+': dependiente pierde apoyo relativo');
+        }
+      }
+      const caminar=Q=>Q.flatMap(p=>partes(p).concat(p.sop==null&&!['pared','techo'].includes(p.regla)&&OBJETOS[p.obj].clase!=='PICKUP'&&caja(p.obj).h>=.3?[p.v]:[]));
+      const antes=mapaPaso(planta,caminar(P),.05,.8,e.inicio),despues=mapaPaso(planta,caminar(estar.P),.05,.8,e.inicio);
+      const distancia=(m,x,z)=>{let d=Infinity;for(let i=0;i<m.reach.length;i++)if(m.reach[i])d=Math.min(d,Math.hypot(-e.W/2+(i%m.nx+.5)*m.S-x,(Math.floor(i/m.nx)+.5)*m.S-z));return d;};
+      let puff=false;
+      P.forEach((p,i)=>{if(!['sofa','sillon','silla'].includes(OBJETOS[p.obj].rol)&&i!==params.asientoLectura)return;for(const a of OBJETOS[p.obj].asientos||[]){const[x,z]=rot(a.p[0],a.p[2],p.ry);if(i===params.asientoLectura)puff=true;if(distancia(antes,p.x+x,p.z+z)<1.25)exigir(distancia(despues,p.x+x,p.z+z)<1.25,seed+': pierde asiento seleccionable');}});
+      exigir(puff,seed+': no comprueba asiento real de lectura');
+      let rechazos=0;exigir(componerEstar({...params,aceptar:()=>{rechazos++;return false;}})===null&&rechazos>0,seed+': rechazo vacío o ignorado');
+      let excepcion=false;try{componerEstar({...params,aceptar:()=>{throw Error('estar_rechazo');}});}catch(err){exigir(err.message==='estar_rechazo','excepción ajena');excepcion=true;}
+      exigir(excepcion&&JSON.stringify(P)===sello,seed+': excepción/rechazo muta base');
+      exigir(!componerEstar({...params,inicio:{x:-999,z:-999}}),seed+': acepta inicio exterior');
+      exigir(!componerEstar({...params,libres:[{cx:0,cz:e.D/2,hw:e.W/2,hd:e.D/2,a:0,y0:0,y1:e.H}]}),seed+': invade reserva total');
+    }finally{K.composicion_lectura=cfg;if(h)tirar(h);}}}finally{K.composicion_lectura=cfg;}
   });
   return { pruebas, errores };
 }

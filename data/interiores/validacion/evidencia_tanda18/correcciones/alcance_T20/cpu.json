@@ -1,0 +1,90 @@
+{
+  "state": "PASS",
+  "scope": "CPU callback T20 literal Three/HouseBuilder sobre final_r4; Canvas de trazas, sin WebGL. Guardia literal con materiales reales y mutaciones. No suite completa.",
+  "rows": [
+    {
+      "name": "callback_original.js",
+      "estado": "FAIL",
+      "error": "3244: el acabado invade otras salas",
+      "restauracion": true
+    },
+    {
+      "name": "callback.js",
+      "estado": "PASS",
+      "restauracion": true
+    },
+    {
+      "name": "salon deliberado",
+      "accepted": true,
+      "expected": true,
+      "estado": "PASS"
+    },
+    {
+      "name": "familia por defecto",
+      "accepted": true,
+      "expected": true,
+      "estado": "PASS"
+    },
+    {
+      "name": "no excepción prefijo",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: el acabado invade otras salas"
+    },
+    {
+      "name": "no contaminar baño",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: el acabado invade otras salas"
+    },
+    {
+      "name": "no cambiar rugosidad",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: material de salón fuera del perfil deliberado"
+    },
+    {
+      "name": "no teñir dos veces",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: material de salón fuera del perfil deliberado"
+    },
+    {
+      "name": "no quitar vertexColors",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: material de salón fuera del perfil deliberado"
+    },
+    {
+      "name": "no cambiar pelusa",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: defines de salón fuera del perfil deliberado"
+    },
+    {
+      "name": "familia no elimina pelusa",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: defines de salón fuera del perfil deliberado"
+    },
+    {
+      "name": "no defines extra",
+      "accepted": false,
+      "expected": false,
+      "estado": "PASS",
+      "error": "1: defines de salón fuera del perfil deliberado"
+    }
+  ],
+  "diagnosticoLimpio": {
+    "n": 21,
+    "proyeccionAccionIgual": true
+  },
+  "shaCallback": "f31643d40a9d1da757789eb0fa83d71ed91fdba5ad81239bad0c938eb3a08dc4"
+}

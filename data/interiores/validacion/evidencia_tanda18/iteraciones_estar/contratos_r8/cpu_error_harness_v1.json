@@ -1,0 +1,18 @@
+{
+  "state": "FAIL",
+  "scope": "Callbacks literales sobre R8 sellado. Three/Canvas trazas sin GPU. Coste CPU no sustituye renderer.",
+  "seal": "efe9f0cba1e9f48aa598210d73bc620b04f4feb88ea3a42f093b62764e51101f",
+  "rows": [
+    {
+      "name": "union.fragment.js",
+      "state": "PASS",
+      "cfgRestored": true
+    },
+    {
+      "name": "estar.fragment.js",
+      "state": "FAIL",
+      "error": "ReferenceError: componerLectura is not defined\n    at eval (eval at <anonymous> (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/probar.cpu.mjs:4:7), <anonymous>:12:21)\n    at async caso (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/probar.cpu.mjs:3:129)\n    at async eval (eval at <anonymous> (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/probar.cpu.mjs:4:7), <anonymous>:3:21)\n    at async file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/probar.cpu.mjs:4:1",
+      "cfgRestored": true
+    }
+  ]
+}

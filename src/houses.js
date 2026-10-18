@@ -563,7 +563,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // patio walls (over them, the roofs of the neighbours)
   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
   B.view('b', -hw, 3.2, D1, hw, 40, D);
-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
+  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio','salon'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
     // tiled skirting 1.1 m high round the room (skipping doors)
     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
       const along = side === 's' || side === 'n';
@@ -608,9 +608,19 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     B.add(M.wood, boxGeo(w + 0.05, h + 0.05, 0.02, 1), x - Math.sin(ry) * 0.016, y, z - Math.cos(ry) * 0.016, ry);
     return m;
   };
+  // Orden aleatorio finito: no depende del número de comparaciones de sort.
+  // Copiar preserva las preferencias del caller; n paredes consumen n-1 tiros.
+  const mezclarParedes = (sides) => {
+    const orden = [...sides];
+    for (let i = orden.length - 1; i > 0; i--) {
+      const j = Math.floor(r() * (i + 1));
+      [orden[i], orden[j]] = [orden[j], orden[i]];
+    }
+    return orden;
+  };
   // hang something on a free stretch of wall (not over windows, doors or tall furniture)
   const onWall = (rm, w, fn, sides = ['s', 'n', 'w', 'e']) => {
-    for (const side of sides.sort(() => r() - 0.5)) {
+    for (const side of mezclarParedes(sides)) {
       const along = side === 's' || side === 'n';
       const lo = (along ? rm.x0 : rm.z0) + 0.35 + w / 2, hi = (along ? rm.x1 : rm.z1) - 0.35 - w / 2;
       for (let k = 0; k < 8 && hi > lo; k++) {
@@ -639,7 +649,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     }
   };
   const plant = (rm, big = r() < 0.5) => {
-    const p = rm.fit(0.5, 0.5, ['s', 'n', 'w', 'e'].sort(() => r() - 0.5), false, r);
+    const p = rm.fit(0.5, 0.5, mezclarParedes(['s', 'n', 'w', 'e']), false, r);
     if (!p) return;
     const y = rm.lv ? F2 : 0;
     B.add(M.pot, cylGeo(big ? 0.22 : 0.15, big ? 0.16 : 0.11, big ? 0.36 : 0.24), p.x, y + (big ? 0.18 : 0.12), p.z);
@@ -1061,7 +1071,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     try {
       for(let intento=0;intento<12;intento++){
         for(const e of tomados)lootPool.push(e.botin);tomados.length=0;
-        A = amueblar(kid, (prof.seed * 131 + rooms.indexOf(rm) * 17 + 5+intento*104729) >>> 0, { W, D: Dd, H: rm.lv ? H2 : WALL_H, inicio, libres, filtro,funciones:true });
+        A = amueblar(kid, (prof.seed * 131 + rooms.indexOf(rm) * 17 + 5+intento*104729) >>> 0, { W, D: Dd, H: rm.lv ? H2 : WALL_H, inicio, libres, filtro,funciones:true,perfil:prof.id });
         const faltan=A.activas.some(ei=>{const e=A.K.objetos[ei],n=A.P.filter(p=>p.e===ei&&(e.regla!=='conjunto'||p.de==null)).length;return n<Math.max(e.obligatorio?1:0,e.cantidad?.[0]||0);});
         if(!faltan)break;
       }
@@ -1070,8 +1080,14 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       fallosKit.push({ sala: rm.id, tipo: rm.type, kit: kid, motivo: String(err.message || err) });
       return false;
     }
+    // El acabado llega a .0095 m: un textil de 3–4 mm no debe quedar debajo.
+    // Mover también su volumen mantiene la metadata de la geometría real.
+    if(kid==='vivienda_salon')for(const p of A.P){
+      if(p.obj!=='alfombra_salon'||p.sop!=null||!['entre','suelo_libre'].includes(p.regla)||Math.abs(p.y||0)>1e-6)continue;
+      p.y=.008;p.v={...p.v,y0:p.v.y0+.008,y1:p.v.y1+.008};
+    }
     const P = A.P, K = A.K;
-    estancias.push({ ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
+    estancias.push({ ...(A.composicionEstar?{composicionEstar:A.composicionEstar}:{}),...(A.composicionLectura?{composicionLectura:A.composicionLectura}:{}),...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
       colocados: P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: p.x, y: p.y || 0, z: p.z, ry: p.ry, sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v })) });
     // the loot: the first piece of each such entry; one the room had no room for goes back to the pool
     const deBotin = new Map();
@@ -1081,7 +1097,9 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const o = OBJETOS[p.obj], b = caja(p.obj), hx = ox + p.x, hz = oz + p.z, y = yl + (p.y || 0);
       const L = (lx, lz) => { const [a, c] = rot(lx, lz, p.ry); return [hx + a, hz + c]; }; // (a point of the piece, in the house)
       const cxz = L((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2), frente = L((b.x0 + b.x1) / 2, b.z1 + 0.5);
-      const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta };
+      const tejidosSalon={joven:'#526c78',bohemio:'#a27054',alegre:'#6b8271',moderno:'#767d79',lujo:'#61747a',rustico:'#826b54',antiguo:'#80755d'};
+      const paletaPieza=kid==='vivienda_salon'&&(o.rol==='sofa'||p.obj==='puff')?{...paleta,tela:[p.obj==='puff'?'#a99a7e':tejidosSalon[prof.style]||'#767d79']}:paleta;
+      const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta:paletaPieza };
       if (deBotin.has(i)) {
         const g = construir([it],{domestico:true}); g.userData.objetoBotin=p.obj; B.extra.push(g);
         const li = lootItem(deBotin.get(i), null, cxz[0], yl + Math.min(p.y || 0, 1.5), cxz[1], 0, { mesh: g, r: 0.95,sala:rm.id }); // (its storey by the floor it is on, not by how high it hangs)
@@ -1098,6 +1116,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       // its part in the life of the house
       const asientos = (o.asientos || []).map((a) => { const q = L(a.p[0], a.p[2]); return { x: cx0 + q[0], z: cz0 + q[1], y: yl, h: p.ry, rm }; });
       const top = o.superficies ? Math.max(...o.superficies.map((q) => q.y)) : 0;
+      if(A.composicionLectura?.asiento===i&&!o.rol)for(const st of asientos)pieces.seat.push(st);
       switch (o.rol) {
         case 'sofa': for (const st of asientos) pieces.seat.push(st); pieces.sofa.push({ x: cxz[0], z: cxz[1], ry: p.ry, y: yl, seat: asientos[Math.floor(asientos.length / 2)], rm }); break;
         case 'sillon': for (const st of asientos) pieces.seat.push(st); break;
@@ -1139,9 +1158,9 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
-    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
+    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio'&&rm.type!=='salon')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
     const porKit = amueblarEstancia(rm);
-    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
+    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio'||rm.type==='salon')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
     if (!porKit) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }

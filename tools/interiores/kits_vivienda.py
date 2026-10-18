@@ -89,5 +89,5 @@ salon = [
 ]
 kit('salon', 'salon', 'Salón de una casa del pueblo',
     'El salón de las casas de Guareña: la tele y, enfrente, el sofá o la mesa camilla con sus sillas; la estantería de libros, el aparador con las cosas buenas, la vitrina de la vajilla en las casas de los mayores, la lumbre en las rústicas; fotos de la familia, la Virgen o los pósteres según quién viva, y la vida encima de las mesas.',
-    {'ancho': [3.3, 7.8], 'fondo': [3.4, 4.8], 'alto': 2.75}, salon, 60)
+    {'ancho': [3.3, 7.8], 'fondo': [3.4, 4.8], 'alto': 2.75}, salon, 60, extra={'composicion_lectura': {'area_min': 22, 'perfiles': ['artista', 'estudiante', 'familia', 'rico'], 'biblioteca': ['estanteria_libros', 'estanteria_libros_ancha'], 'asiento': ['sillon_moderno', 'puff'], 'mesita': ['mesita_auxiliar'], 'lampara': ['lampara_pie'], 'paredes': ['E', 'W', 'N', 'S']}})
 print('kits de la vivienda: salón')

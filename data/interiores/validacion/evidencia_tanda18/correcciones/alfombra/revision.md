@@ -1,0 +1,13 @@
+# T18 — cota y visibilidad geométrica de la alfombra
+
+Sin P1/P2 detectados en las seis líneas revisadas. El cambio está en el caller vecinal, antes de copiar metadata y construir geometría; sólo afecta kit vivienda_salon, ID alfombra_salon, pieza sin soporte, reglas entre/suelo_libre y altura prácticamente cero. Asigna .008 y traslada ambos extremos verticales de v. Conserva huella, índices y clase; no cambia recetas, cuotas, luces ni RNG. No se extiende a buildLocal/Annie. El umbral previo de y de 1µm introduce a lo sumo esa diferencia al trasladar v; en las muestras actuales y=0 y v/render coinciden dentro de1µm.
+
+La geometría agrupada medida confirma top interior .0120000001 y borde .0109999999 frente al suelo .0094999997. La base original está en .0049999999. No se deduce visibilidad a partir de metadata: se usa Raycaster real sobre h.group tras updateMatrixWorld(true), con muestras interiores(.85,.55) y borde(.95,.65), rotadas por p.ry y trasladadas al origen/planta de la estancia.
+
+Contrato acumulativo21 privado: construye3244 y1594, exige una alfombra y conserva clase/apoyo/paso. El primer triángulo visible en un rayo vertical de5cm cerca del suelo debe ser el rectángulo real de la cara textil, con sus tres vértices/altura/color propio correctos, y quedar por encima del plano de acabado también intersectado. Verifica color lineal multiplicado por material después de agrupar: borde #7a2a2a, centros de las dos fixtures actuales #7a4a8a/#6a2a8a. Si en el futuro cambia deliberadamente esa paleta, habrá que revisar esas expectativas, no borrar la guarda geométrica. Comprueba v coherente y revisarUso sin errores.
+
+2786 es un control de ausencia legítima: el salón no contiene sofá ni alfombra. El contrato exige esa condición y usos válidos; no fabrica alfombra ni dispara rayos contra una pieza inexistente. No se presenta como prueba universal de ausencia de triángulos textiles en toda la casa.
+
+CPU del callback literal sobre Three/HouseBuilder/merge reales: GREEN las tres fixtures. Mutante que elimina sólo la subida mantiene mezcla/R4 y da RED en3244 por alfombra oculta bajo suelo, antes de verificar metadata. Mutante que borra los colores textiles da RED por color propio perdido. Todos los constructores se disponen en finally. Sintaxis y git apply --check PASS. Recibos y reproducción en cpu.json/probar.cpu.mjs; no GPU, API, build, barridos ni escritura de fuentes activas.
+
+Límites: el rayo comienza a4cm del suelo y demuestra la oclusión por pavimento, no que una mesa, residente o cámara a otra altura deje ver la alfombra. CPU no evalúa shader, sombra, calidad artística ni imágenes. La escena cambia respecto R4: siguen pendientes las nuevas capturas y juicios R5, además de gates sobre el congelado final.

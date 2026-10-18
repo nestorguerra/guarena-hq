@@ -1,0 +1,22 @@
+{
+  "state": "PRIVATE_SEAT_POLICY_FIX",
+  "files": {
+    "asientos.patch": "416a243ba85182e3ab32991fc0e99fb0faf883b49ebb92eb08b956511aa01735",
+    "composicion_estar_salon.js": "c79e36a7b09bbf63b96b8c8a8286d5dff3d6dbfad484eccf42a06ba5f1a25306",
+    "composicion_estar_salon.js.base": "1df6656ca6b64ea1743b4f55bfeb5b5c1ab4107eba31d427f4e850c9719c2b44",
+    "constructor.cpu.mjs": "9cd53d29fa8e5d7f8479239c10d689648c003a7c646db35be9c6aafb1a39c43c",
+    "constructor_cpu.json": "c729378d6fa3049cf54e19d5a3afa3809791e410aa75e3784f69085b6dd0d3de",
+    "locales.js": "34ad1d84f5ad02bff14ce7343449b5e24ca16ff3246c5b43c3e8b1e0aba68e66",
+    "locales.js.base": "0fce27d3157a9d6cc85ad82e35ce2cc8a424afa62a5f0642ccdfe84e571bcc97",
+    "politica.cpu.mjs": "c0906b0ee439062c5f3ba0b2a3958fcd00cbbd9fd4cdd83d44d1ae954b32c00e",
+    "politica_cpu.json": "8d11f5efddeca751904fbe6e6d994938ff55147996299a79b84b7216224d2ade",
+    "revision.md": "e8d2a2b26103517d2edecc86a8de6885a3b3d04cb0b9195d6fa36df394951659"
+  },
+  "reviewed_original": {
+    "composicion_estar_salon.js": "1df6656ca6b64ea1743b4f55bfeb5b5c1ab4107eba31d427f4e850c9719c2b44",
+    "locales.js": "0fce27d3157a9d6cc85ad82e35ce2cc8a424afa62a5f0642ccdfe84e571bcc97",
+    "houses.js": "3a1557b5050a227cbaaa00e4ce6d613dce23d8e66ca9e2a1732394c6ffd810f3",
+    "catalogo_vivienda.py": "fb1e16b8407adfef9ccb942c2293587293cc65a824b21e65f89259297d6abb1e"
+  },
+  "scope": "2 targeted actual houses plus controlled-reach negatives; noGPU/activewrites/newmodels"
+}

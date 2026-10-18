@@ -1,0 +1,111 @@
+2786 BASE
+3244 AssertionError [ERR_ASSERTION]: mueve pieza ajena
++ actual - expected
+... Skipped lines
+
+  {
+    clase: 'CARRY',
+    de: null,
+    e: 22,
+    i: 26,
+...
+      hd: 0.25999999046325684,
++     hw: 0.25999999046325684,
++     y0: -1.8626451769865326e-10,
+-     hw: 0.25348126888275146,
+-     y0: -2.9802322831784522e-9,
+      y1: 0.4000000059604645
+    },
+    x: 1.5253732208535093,
+    y: 0,
+    z: 1.4299999868869782,
+
+1594 AssertionError [ERR_ASSERTION]: mueve pieza ajena
++ actual - expected
+... Skipped lines
+
+  {
+    clase: 'CARRY',
+    de: null,
+    e: 22,
+    i: 27,
+...
+      hd: 0.25999999046325684,
++     hw: 0.25999999046325684,
++     y0: -1.8626451769865326e-10,
+-     hw: 0.25348126888275146,
+-     y0: -2.9802322831784522e-9,
+      y1: 0.4000000059604645
+    },
+    x: 1.479532257691028,
+    y: 0,
+    z: 1.4299999868869782,
+
+1689 BASE
+2132 BASE
+1639 AssertionError [ERR_ASSERTION]: fallback
++ actual - expected
+... Skipped lines
+
+  [
+    {
+      clase: 'PUSH',
+      de: null,
+      e: 1,
+...
+        a: 3.1481963249004767,
++       cx: -0.7398235644333124,
+-       cx: -0.742161914781176,
+        cz: 2.3481316955628864,
+        hd: 0.25999999046325684,
++       hw: 0.25999999046325684,
++       y0: -1.8626451769865326e-10,
+-       hw: 0.25348126888275146,
+-       y0: -2.9802322831784522e-9,
+        y1: 0.4000000059604645
+      },
++     x: -0.7398235644333124,
+-     x: -0.742161914781176,
+      y: 0,
+      z: 2.3481316955628864,
+      zona: 'estancia'
+    },
+    {
+
+5157 BASE
+3627 BASE
+2606 BASE
+4007 APLICADO gap0.85
+4204 BASE
+2268 BASE
+4216 BASE
+4473 BASE
+2720 BASE
+3981 BASE
+3429 BASE
+2728 BASE
+1679 BASE
+5045 APLICADO gap0.55
+2162 BASE
+4685 APLICADO gap0.55
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+3 !== 0
+
+    at file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/estar_r7/probar_modelos.mjs:17:170
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

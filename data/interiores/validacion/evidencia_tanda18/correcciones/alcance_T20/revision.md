@@ -1,0 +1,11 @@
+# T18 — alcance T20 y diagnóstico T21
+
+Parche privado acotado favorable: sólo modifica la prohibición de CLAY_LINT del callback de estudio. Mantiene intactas sus exigencias de caller, orientación, tres paredes claras, área y techo. Autoriza únicamente la clave exacta `acabado_domestico_salon_vertices`, blanco con vertexColors, roughness .92 y conjunto exacto de defines domésticos; familia sin CLAY_LINT y demás perfiles con valor 0. No permite cualquier prefijo salón ni modifica el producto.
+
+Prueba CPU del callback literal: original RED por alcance heredado; candidato GREEN en sus tres construcciones. Ambos restauran HouseBuilder.add/mat aun tras fallo. Diez casos dirigidos de guardia sobre materiales Three reales: dos positivos y ocho negativos esperados (otra clave, otra sala, rugosidad, tinte, vertexColors, pelusa, familia y define extra). Sintaxis y git apply --check PASS. Canvas de trazas y texturas placeholder: no demuestra shader ni navegador. Runtime usado: snapshot final_r4, sin editarlo.
+
+T21 permanece abierto y su aserción no se modifica. El diagnóstico limpio conserva 21/21 acciones con la proyección literal id/type/label/def/r/crack idéntica; sólo cambia posición de espejo, que esa aserción no compara. En el recibo posterior de suite completa, las primeras 20 tuplas son idénticas y BEFORE tiene una acción adicional well/Asomarse al pozo. La aserción detecta correctamente esa diferencia, aunque su mensaje sea genérico.
+
+No se ha demostrado fuga de estado del callback T20: sus dos prototypes se restauran por finally tanto en código como en la reproducción CPU. T21 restaura la configuración del salón antes de disponer las casas y además dispone de finally exterior. Esto no demuestra restauración de todos los contratos anteriores ni explica aún el pozo. El RNG de buildVecino se crea por semilla dentro de cada llamada; la causa global/caché aún es hipótesis. Antes del pozo hay cinco colocaciones plant con sort de comparador aleatorio; debe observarse la cuenta de extracciones al entrar al patio y tras cada planta para acotar la divergencia. No se propone cambiar RNG ni eliminar la acción del contrato sin diagnóstico.
+
+Sin GPU, API, build, barridos o modificación de activos. No se aprueba el cierre integrado mientras T21 siga fallando. Los FAIL originales quedan intactos en sus rutas de raíz.

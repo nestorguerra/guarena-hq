@@ -1,0 +1,52 @@
+{
+ "estado": "FINAL_R8_SALON_PRIVADA",
+ "base_git": "a1a5b6a",
+ "inputs_estables": 494,
+ "guardas_libres": 6,
+ "comparacion_poses": [
+  {
+   "seed": 2786,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 2786,
+   "vista": 1,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose_historica": true
+  }
+ ],
+ "archivos": {
+  "instrumento_poses_fijas.py": "9965edad73213d12b0cee34153ee0bacb166e2c962bcb63e1ce2ab6399e9768d",
+  "casa_salon.json": "fb038c8a8371c566d1924d448ad0bbd27aa4ac3f7bf9868220e0cf6a514063d9",
+  "casa_salon_1594_0.jpg": "5ec70b19a1c573fce004969e29fc376fc020bb0bc8bcf2b4f9d569974448fb61",
+  "casa_salon.jpg": "c1db0f3df8ed77d1d4b175d00f3a7fd73231822401811311c68db10c2d5c799b",
+  "casa_salon_1594_1.jpg": "ce8a109ba6209ca6753478515227e7a8aa014cb5f87c3ef97d43f6ca5c007f65",
+  "casa_salon_2786_0.jpg": "cf4afceabcd1ae863ad0c99f5836ba2e846ff8b713de904f87dabd586732dc7c",
+  "casa_salon_2786_1.jpg": "065c0491faeb17cbc68db0f2d97fc26015e033baf69d0b6ef33ef6c08df9760b",
+  "capturador.py": "ca7a624059a108b2b9944c2352524b6d0f912ad9f0acd2859bca1d0c0719c8be",
+  "casa_salon_3244_0.jpg": "1eb4e9938e72b233d387605f26141ed6175185c8e6a94beec8497e92df81bacf",
+  "casa_salon_3244_1.jpg": "5f31acce1466d19d3c25e04de1c94b2aa13d9d19659f9f3998278f3a7db82a31",
+  "fuentes_antes_captura.json": "79194b3b6e35e664d0a61f41cb6cc242d12a00a37f107238a44e2781b73ca10a"
+ },
+ "limites": "R8 con programa de estar y modelos, URL8935; guardas físicas/shader activas. Seis poses exactas de R6, sin mover muebles para la cámara. Cambia programa de estar, modelos y textiles; cota alfombra y mezcla finita de R6 conservadas. Sin publicación niAPIeneste instrumento."
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Helper exacto y mapaPaso/partes/caja reales. aceptar neutral: reproduce guarda de inicio del helper, no un buildVecino completo.",
+  "baselineAdmitted": "biblioteca_actual",
+  "baseUnmutated": true,
+  "blockedStartAccepted": {
+    "inicio": {
+      "x": 3.2903732327744373,
+      "z": 0.675
+    },
+    "beforeFree": true,
+    "afterFree": false,
+    "afterReach": false,
+    "admitted": "biblioteca_actual",
+    "offset": 1
+  }
+}
