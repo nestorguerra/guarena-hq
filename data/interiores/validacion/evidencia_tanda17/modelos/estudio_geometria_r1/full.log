@@ -1,0 +1,207 @@
+{
+  "state": "PASS_LITERAL_FULL_HOUSES_GREYBOX_NOT_FINAL_MODELS",
+  "studyRows": [
+    {
+      "seed": 3244,
+      "documentedTownSeed": true,
+      "hasStudy": true,
+      "profile": "artista",
+      "before": {
+        "meshes": 56,
+        "tris": 51210,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 56,
+        "tris": 48206,
+        "lights": 8
+      },
+      "architectureEqual": true,
+      "lightsExact": true,
+      "otherRoomsEqual": true,
+      "lootExact": true,
+      "errors": [],
+      "details": [
+        {
+          "sala": "A2",
+          "originalFrame": [
+            5.469253534451127,
+            3.3143072992563254,
+            2.75
+          ],
+          "sourceSeed": 425071,
+          "unchangedFrame": true,
+          "linked": [
+            0,
+            2,
+            3
+          ],
+          "seat": 1,
+          "computerIndependent": {
+            "i": 4,
+            "sop": 0,
+            "id": "vb_ordenador",
+            "clase": "PICKUP",
+            "sourceDefinitionExact": true,
+            "parentPenetration": 0,
+            "negativeShiftBack4cm": 0.017500000000000106
+          },
+          "actionsBefore": [
+            "drawer",
+            "read",
+            "read"
+          ],
+          "actionsAfter": [
+            "drawer",
+            "read",
+            "read"
+          ],
+          "inicio": {
+            "x": 2.2346267672255635,
+            "z": 0.7249999999999996
+          },
+          "origen": {
+            "x": -5201.15,
+            "y": 3.1,
+            "z": -5192.038677196391
+          },
+          "validatorErrors": []
+        }
+      ]
+    },
+    {
+      "seed": 1594,
+      "documentedTownSeed": true,
+      "hasStudy": true,
+      "profile": "estudiante",
+      "before": {
+        "meshes": 58,
+        "tris": 59590,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 58,
+        "tris": 58358,
+        "lights": 8
+      },
+      "architectureEqual": true,
+      "lightsExact": true,
+      "otherRoomsEqual": true,
+      "lootExact": true,
+      "errors": [],
+      "details": [
+        {
+          "sala": "A1",
+          "originalFrame": [
+            4.360935460776091,
+            2.15,
+            2.75
+          ],
+          "sourceSeed": 208904,
+          "unchangedFrame": true,
+          "linked": [
+            0,
+            2,
+            3
+          ],
+          "seat": 1,
+          "computerIndependent": {
+            "i": 4,
+            "sop": 0,
+            "id": "vb_ordenador",
+            "clase": "PICKUP",
+            "sourceDefinitionExact": true,
+            "parentPenetration": 0,
+            "negativeShiftBack4cm": 0.017500000000000106
+          },
+          "actionsBefore": [
+            "drawer",
+            "read"
+          ],
+          "actionsAfter": [
+            "drawer",
+            "read"
+          ],
+          "inicio": {
+            "x": 1.6804677303880453,
+            "z": 0.6749999999999998
+          },
+          "origen": {
+            "x": -5201.15,
+            "y": 3.1,
+            "z": -5194.732349349559
+          },
+          "validatorErrors": []
+        }
+      ]
+    },
+    {
+      "seed": 1481,
+      "documentedTownSeed": false,
+      "hasStudy": true,
+      "profile": "musico",
+      "before": {
+        "meshes": 58,
+        "tris": 45034,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 58,
+        "tris": 43216,
+        "lights": 8
+      },
+      "architectureEqual": true,
+      "lightsExact": true,
+      "otherRoomsEqual": true,
+      "lootExact": true,
+      "errors": [],
+      "details": [
+        {
+          "sala": "A2",
+          "originalFrame": [
+            4.161097171530127,
+            3.412504189461471,
+            2.75
+          ],
+          "sourceSeed": 194118,
+          "unchangedFrame": true,
+          "linked": [
+            0,
+            2,
+            3
+          ],
+          "seat": 1,
+          "computerIndependent": {
+            "i": 4,
+            "sop": 0,
+            "id": "vb_ordenador",
+            "clase": "PICKUP",
+            "sourceDefinitionExact": true,
+            "parentPenetration": 0,
+            "negativeShiftBack4cm": 0.017500000000000106
+          },
+          "actionsBefore": [
+            "drawer",
+            "read"
+          ],
+          "actionsAfter": [
+            "drawer",
+            "read"
+          ],
+          "inicio": {
+            "x": 1.5805485857650634,
+            "z": 0.7250000000000005
+          },
+          "origen": {
+            "x": -5201.15,
+            "y": 3.1,
+            "z": -5192.714350175299
+          },
+          "validatorErrors": []
+        }
+      ]
+    }
+  ],
+  "controls": 20,
+  "maxMeshes": 59
+}

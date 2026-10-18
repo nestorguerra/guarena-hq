@@ -1,0 +1,16 @@
+{
+  "state": "PASS_ONLY_TWO_KIT_JSON_AND_REGENERATED_DERIVED_JS_DIFFER",
+  "changed": [
+    "data/kits/vivienda_estudio.json",
+    "data/kits/vivienda_estudio_grey_amplio.json",
+    "src/interiores_datos.js"
+  ],
+  "unchangedCount": 121,
+  "unchangedSources": {
+    "src/locales.js": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f",
+    "src/houses.js": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+    "src/acabados_vivienda.js": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+    "data/objetos/vivienda_b.json": "ccf1b59af627ea3f66f9197a97b554b1d3ea991ce149253ec702c562a3aebe0f"
+  },
+  "R1_manifest": "63461d72a6baaa29da7968773a23c6dcb8b12eea96cc71b26938c0d615533f07"
+}

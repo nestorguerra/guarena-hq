@@ -1,0 +1,136 @@
+{
+  "state": "PASS_REAL_PARTS_VS_ORIGINAL_DOOR_WINDOW_RESERVES_THRESHOLD_0_005",
+  "rows": [
+    {
+      "seed": 3244,
+      "frame": [
+        5.469253534451127,
+        3.3143072992563254,
+        2.75
+      ],
+      "sameOriginalFrame": true,
+      "sourceSeed": 425071,
+      "tests": [
+        {
+          "opening": {
+            "side": "n",
+            "a": -3.0596267672255637,
+            "b": -1.9596267672255636,
+            "door": false
+          },
+          "reserve": {
+            "cx": -1.3596267672255637,
+            "cz": 3.1243072992563254,
+            "hw": 0.6000000000000001,
+            "hd": 0.19,
+            "a": 0,
+            "y0": 0.92,
+            "y1": 2.4
+          },
+          "maxPenetration": 0,
+          "allObjectsChecked": 12
+        },
+        {
+          "opening": {
+            "side": "e",
+            "a": 8.236322803609074,
+            "b": 9.136322803609074,
+            "door": true
+          },
+          "reserve": {
+            "cx": 2.2346267672255635,
+            "cz": 0.7249999999999996,
+            "hw": 0.5,
+            "hd": 0.6000000000000002,
+            "a": 0,
+            "y0": 0,
+            "y1": 2.4
+          },
+          "maxPenetration": 0,
+          "allObjectsChecked": 12
+        }
+      ]
+    },
+    {
+      "seed": 1594,
+      "frame": [
+        4.360935460776091,
+        2.15,
+        2.75
+      ],
+      "sameOriginalFrame": true,
+      "sourceSeed": 208904,
+      "tests": [
+        {
+          "opening": {
+            "side": "e",
+            "a": 5.492650650441647,
+            "b": 6.392650650441647,
+            "door": true
+          },
+          "reserve": {
+            "cx": 1.6804677303880453,
+            "cz": 0.6749999999999998,
+            "hw": 0.5,
+            "hd": 0.6000000000000002,
+            "a": 0,
+            "y0": 0,
+            "y1": 2.4
+          },
+          "maxPenetration": 0,
+          "allObjectsChecked": 11
+        }
+      ]
+    },
+    {
+      "seed": 1481,
+      "frame": [
+        4.161097171530127,
+        3.412504189461471,
+        2.75
+      ],
+      "sameOriginalFrame": true,
+      "sourceSeed": 194118,
+      "tests": [
+        {
+          "opening": {
+            "side": "n",
+            "a": -2.405548585765064,
+            "b": -1.305548585765064,
+            "door": false
+          },
+          "reserve": {
+            "cx": -0.7055485857650639,
+            "cz": 3.222504189461471,
+            "hw": 0.6000000000000001,
+            "hd": 0.19,
+            "a": 0,
+            "y0": 0.92,
+            "y1": 2.4
+          },
+          "maxPenetration": 0,
+          "allObjectsChecked": 13
+        },
+        {
+          "opening": {
+            "side": "e",
+            "a": 7.560649824701249,
+            "b": 8.46064982470125,
+            "door": true
+          },
+          "reserve": {
+            "cx": 1.5805485857650634,
+            "cz": 0.7250000000000005,
+            "hw": 0.5,
+            "hd": 0.6000000000000002,
+            "a": 0,
+            "y0": 0,
+            "y1": 2.4
+          },
+          "maxPenetration": 0,
+          "allObjectsChecked": 13
+        }
+      ]
+    }
+  ]
+}

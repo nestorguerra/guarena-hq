@@ -19,6 +19,31 @@ export function panosPared(a, b, y0, y1, huecos) {
 }
 
 export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
+  if(rm.type==='estudio'&&perfil!=='annie') {
+    // El estudio adulto reúne consulta y trabajo. Sólo su pared de uso lleva
+    // acento; los huecos completos se recortan como en el resto de la vivienda.
+    const y=(rm.lv||0)*3.1;
+    const mat=c=>B.mat('acabado_domestico_estudio_'+c,()=>std(c,{roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003,CLAY_LINT:0}}));
+    // Los paños de estudio conservan una clave propia: su acabado sin pelusa
+    // no puede compartirse con la cal de otras estancias. Sin una paleta por tablilla.
+    const claro=mat('#e9e3d4'),suelo=mat('#b1a38b');
+    const acento=mat(perfil==='estudiante'?'#637b86':perfil==='musico'?'#81735e':'#657b71');
+    const puesto=estancia?.colocados?.find(p=>/^vb_(puesto|mesa)_estudio/.test(p.obj)||p.obj==='vb_escritorio');
+    const ang=puesto?Math.atan2(Math.sin(puesto.ry),Math.cos(puesto.ry)):null;
+    const pared=ang===null?null:Math.abs(ang)<.3?'s':Math.abs(Math.abs(ang)-Math.PI)<.3?'n':ang>0?'w':'e';
+    for(const side of ['s','n','w','e']) {
+      const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
+      const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
+      for(const [lo,hi,v0,v1] of panosPared(a,b,0,altura,huecos)) {
+        const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
+        B.add(side===pared?acento:claro,planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
+      }
+    }
+    const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
+    B.add(suelo,planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
+    B.add(claro,planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);
+    return;
+  }
   if(rm.type==='comedor') {
     // Paños domésticos serenos; el zócalo heredado se excluye en houses.js.
     const y=(rm.lv||0)*3.1,limite=1.02;

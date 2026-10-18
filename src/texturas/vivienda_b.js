@@ -2,6 +2,32 @@
 // canvas, never a photograph. Each one: tipo → { w, h, draw(ctx, w, h, tex, seed) }. Read by src/objetos.js (textura).
 // (No «export { … }» anywhere: the game's packer, tools/build.py, only understands export const/function/class.)
 export const TEXTURAS = {
+  // Atlas propio: consulta de un estudio adulto, sin imágenes ni textos externos.
+  vivienda_consulta_estudio_b:{w:384,h:128,draw(ctx,w,h,tex,seed){
+    ctx.fillStyle='#b49672';ctx.fillRect(0,0,w,h);
+    const papel=(x,y,ww,hh)=>{ctx.fillStyle='#e5dcc8';ctx.fillRect(x,y,ww,hh);ctx.fillStyle='#8c8069';ctx.fillRect(x+ww*.43,y-2,ww*.14,4);};
+    papel(12,9,106,110);papel(270,12,102,104);
+    ctx.lineCap='round';ctx.lineWidth=1.7;
+    const trazo=pts=>{ctx.beginPath();pts.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.stroke();};
+    ctx.strokeStyle='#637b86';
+    if(tex.tema==='musico'){
+      for(const x of[20,279])for(const y of[29,65,97]){
+        ctx.lineWidth=.8;for(let k=0;k<5;k++)trazo([[x,y+k*3],[x+83,y+k*3]]);
+        ctx.fillStyle='#5e665e';ctx.lineWidth=1.4;
+        for(let k=0;k<4;k++){const xx=x+17+k*16,yy=y+6+((k+Math.floor(y/8))%3-1)*3;ctx.beginPath();ctx.ellipse(xx,yy,3,2,-.3,0,Math.PI*2);ctx.fill();trazo([[xx+3,yy],[xx+3,yy-12]]);}
+      }
+    }else if(tex.tema==='artista'){
+      trazo([[29,90],[30,45],[62,28],[98,46],[98,91],[29,90],[64,71],[98,91]]);trazo([[62,28],[64,71],[30,45]]);trazo([[64,71],[64,107]]);
+      ctx.strokeStyle='#8b674b';ctx.beginPath();ctx.ellipse(323,63,28,34,.3,0,Math.PI*2);ctx.stroke();trazo([[291,96],[355,96]]);
+      for(const[x,c]of[[285,'#637b86'],[311,'#84907b'],[337,'#ae8962']]){ctx.fillStyle=c;ctx.fillRect(x,103,18,6);}
+    }else{
+      ctx.fillStyle='#637b86';ctx.fillRect(22,20,75,6);ctx.strokeStyle='#8a846e';
+      for(let k=0;k<5;k++)trazo([[23,40+k*13],[101-(k%2)*19,40+k*13]]);
+      ctx.strokeStyle='#637b86';ctx.strokeRect(282,25,32,24);ctx.strokeRect(328,63,31,25);trazo([[314,37],[344,37],[344,63]]);trazo([[291,60],[307,60],[307,102],[350,102]]);
+      ctx.fillStyle='#84907b';ctx.fillRect(285,69,15,20);
+    }
+  }},
+
   vivienda_lienzo_b: {w:256,h:192,draw(ctx,w,h,tex,seed){
     if(seed%3===1){ctx.fillStyle='#d9c4a2';ctx.fillRect(0,0,w,h);for(let i=0;i<7;i++){ctx.fillStyle=['#8f5d58','#718d82','#be9757'][i%3];ctx.fillRect(18+i*29,24+(i%3)*22,24,105-(i%3)*15);}return;}
     if(seed%3===2){ctx.fillStyle='#c1ced6';ctx.fillRect(0,0,w,h);ctx.fillStyle='#927962';ctx.fillRect(0,h*.68,w,h*.32);for(let i=0;i<4;i++){ctx.fillStyle=['#b17058','#d8bb75','#79948c','#667e99'][i];ctx.beginPath();ctx.ellipse(48+i*52,116-i*11,23,36,0,0,Math.PI*2);ctx.fill();}return;}

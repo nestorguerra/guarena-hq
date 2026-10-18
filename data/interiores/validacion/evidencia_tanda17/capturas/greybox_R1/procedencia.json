@@ -1,0 +1,52 @@
+{
+ "estado": "GREYBOX_CAPTURADO_SIN_MODELOS_FINALES",
+ "inputs_estables": 490,
+ "vistas_libres": 6,
+ "calidad": "alta_manual",
+ "dpr": 1,
+ "poses_con_base": [
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose_base": false
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose_base": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose_base": false
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose_base": false
+  },
+  {
+   "seed": 1481,
+   "vista": 0,
+   "misma_pose_base": false
+  },
+  {
+   "seed": 1481,
+   "vista": 1,
+   "misma_pose_base": true
+  }
+ ],
+ "archivos": {
+  "capturador.py": "c9410f0867e79a274676168864edac0d45c84bac89098ca77c4b593d55082149",
+  "casa_estudio.jpg": "bb2e46af8b6bd003f841ff28a9e8901d0d228c1f2b66485e12d62adc80ec220a",
+  "casa_estudio.json": "e7ce13d6ddc87e8a24a47dc6a407302ab7fe215e615d97d3a776fe26fc0f45d2",
+  "casa_estudio_1481_0.jpg": "b5c94f97a4621f502b93df90635fd60fc942634898e2b3e56560815fcd2f6cc5",
+  "casa_estudio_1481_1.jpg": "1f16aeab8b4a8b3a996d100fa5a5e200babf3370ce3a633d0656fbe56d7b932d",
+  "casa_estudio_1594_0.jpg": "c615b1b240fec4c3ebfb9bf0b5e5df62a79c801b81d03981f41daebf57551820",
+  "casa_estudio_1594_1.jpg": "b397d305ae33cef673f12d8b830638ce07fb83eb770a9f8a081a9ba1009a2627",
+  "casa_estudio_3244_0.jpg": "24748ba553518b5c7f8cac5306126004625a51b5378675d4ab59efecf6c97592",
+  "casa_estudio_3244_1.jpg": "55dac6f2cfb11d0e4a8f81c6f8312d9f2fc700ca0733340331f49d29254a80da",
+  "fuentes_antes_captura.json": "03166f904a70e80d3bf67217d958001676b403869d16390b4092e051cc276ac0"
+ },
+ "limites": "No incorpora acabados R2. Modelos grises conservadores. Sin API ni aprobación de calidad ni cambio activo. Cámara/procedimiento original, sólo URL privada8922."
+}

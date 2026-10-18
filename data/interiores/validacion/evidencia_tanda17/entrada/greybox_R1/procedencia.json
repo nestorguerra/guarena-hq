@@ -1,0 +1,22 @@
+{
+ "estado": "DIAGNOSTICO_ADICIONAL_SIN_EVALUACION_FORMAL",
+ "punto_fisico_igual": [
+  -5199.469532269612,
+  4.7,
+  -5194.0573493495585
+ ],
+ "FOV": 75,
+ "calidad": "alta_manual_DPR1",
+ "guardas_libres": 4,
+ "fuentes_base_T16_estables": 413,
+ "fuentes_greybox_estables": 490,
+ "objetivo_camara": "Centro real del escritorio en cada estado; cambia con su posición, no son poses idénticas ni comparación fotométrica.",
+ "archivos": {
+  "base_T16.jpg": "6b4cb400c6fa329a3ebccc53f85ddd72dd685ecfe728455d8c05ddd321823830",
+  "base_T16.json": "972f0ebfb416675c057cd85d8a17ce0eca768a032ac74b651386d388c4d1742b",
+  "capturador.py": "158d898153c1a95d5cb25854cc3f90e3dbeede16b8c2b6e3df2f3ba7c807a860",
+  "greybox.jpg": "161bea3fefde38e2fb865947e0a2038adfb58f5e41678a031156c53c0643a222",
+  "greybox.json": "c30e951a5502b3a7a02b867dfa6bb9368266c82bd479468232952af9376a16ef"
+ },
+ "limite": "No modifica ni sustituye las cámaras/fichas canónicas. Orden de capturaT16→greybox, contextos separados y dispuestos, sin sonido. El script se conserva como ejecutado desde la raíz; su destino existente impide sobrescribir evidencia."
+}

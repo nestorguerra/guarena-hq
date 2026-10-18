@@ -1,6 +1,64 @@
 """Mobiliario doméstico de dormitorios y habitaciones personales, en metros."""
 from vivienda_base import *
 
+def modelos_estudio():
+    """Frente adulto de trabajo/consulta: envolventes R2, materiales propios contenidos."""
+    out=[];madera='#ae8962';canto='#8b674b';papel='#e5dcc8';azul='#637b86';oliva='#84907b'
+    def b(w,h,d,**kw):return caja(w,h,d,redondeo=min(.006,min(w,h,d)/4),**kw)
+    p=[b(1.30,.04,.60,y=.73,c=madera)]
+    for x in [-.595,.595]:
+        for z in [-.245,.245]:p.append(b(.045,.71,.045,x=x,y=.355,z=z,c=canto))
+    for x in [-.595,.595]:p.append(b(.04,.47,.05,x=x,y=.985,z=-.265,c=canto))
+    p.append(b(1.20,.38,.02,y=1.01,z=-.28,c='#b49672'))
+    out.append(objeto('vb_puesto_estudio_amplio','Puesto adulto con respaldo de consulta',1.30,1.22,.60,'mesa',32,partes=p,superficies=[dict(y=.75,margen=.04,fondo=.24)]))
+    # Biblioteca abierta: laterales finos, baldas reales y trasera ligera.
+    p=[b(.95,1.64,.016,y=.85,z=-.162,c='#9b805f')]
+    for x in [-.4875,.4875]:p.append(b(.025,1.70,.34,x=x,c=madera))
+    for y in [.015,.400,.800,1.200,1.685]:p.append(b(1.,.03,.34,y=y,c=madera))
+    # Consulta baja integrada: dos carpetas y un estuche cerrado, con apoyo real.
+    p += [b(.57,.075,.27,x=-.16,y=.0675,z=.012,c='#9b8064',m='carton'),
+          b(.50,.035,.25,x=-.16,y=.1225,z=.012,c=papel,m='papel')]
+    for x,h,c in[(.22,.27,azul),(.31,.24,oliva),(.40,.29,'#a18b68')]:p.append(b(.06,h,.25,x=x,y=.03+h/2,z=.012,c=c,m='papel'))
+    out.append(objeto('vb_biblioteca_estudio','Biblioteca abierta de consulta adulta',1.,1.70,.34,'libros',30,partes=p,superficies=[dict(y=y,margen=.035,fondo=.30)for y in [.415,.815,1.215]]))
+    # Cajones entre el puesto y la biblioteca; cuerpo hueco, sin frentes superpuestos.
+    p=[b(.90,.035,.35,y=.0175,c=canto),b(.90,.035,.35,y=.7625,c=madera)]
+    for x in[-.435,.435]:p.append(b(.03,.71,.35,x=x,y=.39,c=madera))
+    p.append(b(.84,.71,.018,y=.39,z=-.166,c=canto))
+    for j in range(3):
+        y=.15+j*.225
+        p += [b(.84,.015,.32,y=.0425+j*.225,z=-.005,c=canto),
+                  b(.3375,.20,.022,x=-.24375,y=y,z=.164,c='#bd9b73'),
+                  b(.3375,.20,.022,x=.24375,y=y,z=.164,c='#bd9b73'),
+                  b(.15,.18,.022,y=y-.01,z=.164,c='#bd9b73')]
+    out.append(objeto('vb_guardado_estudio','Guardado bajo de cajones para el estudio',.90,.78,.35,'comoda',30,partes=p,superficies=[dict(y=.78,margen=.04)]))
+    # Consulta por perfil: masas de libros/carpetas, no una fila comercial.
+    for tema in ['estudiante','artista','musico']:
+        if tema=='estudiante':
+            p=[]
+            for x,h,c in[(-.23,.25,azul),(-.17,.22,oliva),(-.11,.24,'#a18b68')]:p.append(b(.045,h,.21,x=x,y=h/2,z=-.01,c=c,m='papel'))
+            p += [b(.28,.045,.25,x=.115,y=.0225,c='#bca17b',m='papel'),b(.25,.025,.21,x=.115,y=.0575,c=papel,m='papel')]
+        elif tema=='artista':
+            p=[b(.55,.035,.25,y=.0175,c=canto,m='carton'),b(.52,.022,.24,y=.046,c=papel,m='papel'),b(.46,.028,.23,x=-.015,y=.071,c='#a9b09a',m='carton')]
+            for x,h in[(.14,.18),(.185,.25)]:p.append(b(.035,h,.18,x=x,y=.085+h/2,z=-.025,c=azul,m='papel'))
+        else:
+            p=[]
+            for x,h,c in[(-.22,.25,canto),(-.14,.25,azul),(-.06,.23,oliva)]:
+                p += [b(.06,h,.23,x=x,y=h/2,c=c,m='papel'),caja(.025,.09,.001,x=x,y=.14,z=.1155,c=papel,m='papel')]
+            p += [b(.25,.025,.25,x=.14,y=.0125,c=papel,m='papel'),b(.23,.025,.22,x=.14,y=.0375,c='#9b8064',m='papel')]
+        out.append(objeto('vb_consulta_estudio_'+tema,'Consulta adulta de '+tema,.55,.34,.25,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
+        # Un único atlas propio: dos zonas de papel sobre el respaldo existente.
+        p=[dict(f='caja',d=[1.10,.42,.001],p=[0,.21,-.0945],c='#b49672',m='papel',tex=dict(tipo='vivienda_consulta_estudio_b',tema=tema))]
+        out.append(objeto('vb_panel_estudio_'+tema,'Notas de consulta de '+tema,1.10,.42,.001,None,.3,'papel',partes=p,soporte='superficie',categoria='cuadro'))
+    p=[b(.45,.055,.27,y=.0275,c=canto,m='papel'),b(.38,.04,.23,y=.075,c=papel,m='papel'),b(.32,.025,.21,y=.1075,c=azul,m='papel')]
+    out.append(objeto('vb_consulta_baja_estudio','Libros de consulta sobre el bajo',.45,.12,.27,'libros',5,'papel',partes=p,soporte='superficie',categoria='decoracion'))
+    for old,id,nombre in [('silla_comedor','vb_silla_estudio','Silla de trabajo del estudio'),('sillon_orejero','vb_sillon_estudio','Sillón de lectura del estudio')]:
+        o=copiar(old,id,nombre)
+        for p in o['partes']:
+            if p.get('tinte')=='tela':p['c']=azul if id=='vb_silla_estudio'else'#8b9380';p.pop('tinte')
+            elif p.get('tinte')=='madera':p['c']=canto;p.pop('tinte')
+        out.append(o)
+    return out
+
 def objetos():
     out=[]
     for id,nombre,w,rol in [('vb_cama_doble','Cama de matrimonio compacta',1.35,'cama_doble'),('vb_cama_individual','Cama individual',.85,'cama')]:
@@ -139,6 +197,7 @@ def objetos():
     out.append(objeto('vb_bloques','Bloques de construcción de colores',.22,.13,.17,None,.35,'madera',partes=[caja(.07,.07,.07,x=-.07,y=.035,c='#ba645c'),caja(.07,.12,.07,y=.06,c='#799aaa'),caja(.07,.07,.07,x=.07,y=.035,c='#bda15f')],soporte='superficie',categoria='decoracion'))
     from composicion_domestica import mejorar_despacho
     mejorar_despacho(out)
+    out.extend(modelos_estudio())
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())

@@ -1,0 +1,30 @@
+{
+  "estudio_geometria_r1": {
+    "manifestSha256": "63461d72a6baaa29da7968773a23c6dcb8b12eea96cc71b26938c0d615533f07",
+    "entries": 45,
+    "allExact": true
+  },
+  "estudio_geometria_r2": {
+    "manifestSha256": "d5d6138512f7943655b7360a9aa308ecb03aaa4674968dbc4bb3725462998504",
+    "entries": 47,
+    "allExact": true
+  },
+  "actualBudget": {
+    "thresholds": {
+      "triangulos_max": 350000,
+      "mallas_max": 60,
+      "luces_max": 9,
+      "entrada_ms_max": 1500,
+      "propuesta": true
+    },
+    "allObservedUnderBudget": true
+  },
+  "activeSourcesUnwritten": {
+    "tools/interiores/catalogo_vivienda_b.py": true,
+    "tools/interiores/kits_vivienda_b.py": true,
+    "src/texturas/vivienda_b.js": true,
+    "src/houses.js": true,
+    "src/acabados_vivienda.js": true
+  },
+  "annieActiveByteExact": true
+}

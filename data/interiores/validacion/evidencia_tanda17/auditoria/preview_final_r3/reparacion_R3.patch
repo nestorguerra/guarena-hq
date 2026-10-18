@@ -1,0 +1,46 @@
+--- a/src/acabados_vivienda.js
++++ b/src/acabados_vivienda.js
+@@ -24,8 +24,8 @@
+     // acento; los huecos completos se recortan como en el resto de la vivienda.
+     const y=(rm.lv||0)*3.1;
+     const mat=c=>B.mat('acabado_domestico_estudio_'+c,()=>std(c,{roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003,CLAY_LINT:0}}));
+-    // La cal ya se comparte con los techos domésticos. Suelo y acento suman
+-    // dos familias; se evita una paleta por mueble o por tablilla.
++    // Los paños de estudio conservan una clave propia: su acabado sin pelusa
++    // no puede compartirse con la cal de otras estancias. Sin una paleta por tablilla.
+     const claro=mat('#e9e3d4'),suelo=mat('#b1a38b');
+     const acento=mat(perfil==='estudiante'?'#637b86':perfil==='musico'?'#81735e':'#657b71');
+     const puesto=estancia?.colocados?.find(p=>/^vb_(puesto|mesa)_estudio/.test(p.obj)||p.obj==='vb_escritorio');
+--- a/src/plastilina.js
++++ b/src/plastilina.js
+@@ -349,7 +349,7 @@
+   // the colour never quite even: kneaded by hand, a little marbled
+   float mb = clayNoise(vec3(cp.x * 1.1, cp.y * 2.2, cp.z * 1.1) + 3.1);
+   diffuseColor.rgb *= (0.95 + 0.1 * mb * CLAY_TONE) * (1.0 - cl.y * CLAY_TONE);
+-  diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.92, 0.9, 0.86) * (0.6 + 0.4 * clayHash(floor(cp / 0.06))), cl.z * 0.7 * CLAY_LINT);
++  diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.92, 0.9, 0.86) * (0.6 + 0.4 * clayHash(floor(cp / 0.06))), cl.z * 0.7 * float(CLAY_LINT));
+ }
+ #endif
+ ` + C.roughnessmap_fragment;
+--- a/tools/interiores/fotos_casa.py
++++ b/tools/interiores/fotos_casa.py
+@@ -153,7 +153,10 @@
+       const clearanceAntes=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' antes de render');
+       const poseAntes=JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov});
+       vistas.push({clearance:{candidate:clearanceElegido,beforeRender:clearanceAntes},encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(tipo==='comedor'?{cobertura:{hoja_cercana_fraccion:puertaElegida,muestras:35,distancia_max:1.25,limite:.12,medido:'pose_final_antes_render',esquinas_evaluadas:esquinas.length,esquinas_recortadas:recortesElegidos}}:{}),...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
++      if(window.__errs?.length)throw Error('errores antes de captura: '+JSON.stringify(window.__errs));
+       g.render();
++      if(window.__errs?.length)throw Error('errores de render: '+JSON.stringify(window.__errs));
++      if(r.info.programs?.some(p=>p.diagnostics?.runnable===false))throw Error('programa WebGL no ejecutable');
+       vistas[vistas.length-1].clearance.afterRender=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' después de render');
+       if(JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov})!==poseAntes)throw Error('render cambió la pose de cámara: '+tipo+'/'+s+'/'+k);
+       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
+@@ -173,7 +176,7 @@
+     with PrivateTab() as T:
+         T.call('Emulation.setDeviceMetricsOverride',dict(width=1280,height=720,deviceScaleFactor=1,mobile=False))
+         T.call('Page.addScriptToEvaluateOnNewDocument',{'source':"localStorage.setItem('guarena_hq_save',JSON.stringify({quality:'alta',qualityMode:'manual',dynRes:false,weatherLive:false,pick:'annie'}));"})
+-        T.call('Page.navigate',{'url':'http://localhost:8925/index.html?estilo='+opts.estilo})
++        T.call('Page.navigate',{'url':'http://localhost:8926/index.html?estilo='+opts.estilo})
+         T.ev(LISTO,timeout=240)
+         if not T.ev("game.qKey==='alta'&&!game.autoQuality&&game.renderer.getPixelRatio()===1"):raise RuntimeError('La ficha requiere calidad alta fija y DPR1')
+         for tipo in opts.tipos.split(','):

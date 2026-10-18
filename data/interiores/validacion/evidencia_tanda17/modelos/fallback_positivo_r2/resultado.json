@@ -1,0 +1,1067 @@
+{
+  "state": "FAIL_SINGLE_DIRECTED_CASE",
+  "scope": "Actual buildLocal, geometry and validator CPU; Canvas tracing stub and texture placeholders; no browser/GPU or interaction execution.",
+  "sourceManifest": {
+    "sha256": "d5d6138512f7943655b7360a9aa308ecb03aaa4674968dbc4bb3725462998504",
+    "entries": 47
+  },
+  "requestedSeed": 4,
+  "effectiveSeed": 1152023,
+  "hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+      "portatil",
+      "guitarra",
+      "altavoz",
+      "consola"
+    ],
+    "habitacion": "dorm"
+  },
+  "ctx": {
+    "W": 3.2,
+    "D": 2.8,
+    "H": 2.75,
+    "libres": [
+      {
+        "cx": -0.75,
+        "cz": 0.5,
+        "hw": 0.58,
+        "hd": 0.5,
+        "a": 0,
+        "y0": 0,
+        "y1": 2.4
+      }
+    ],
+    "inicio": {
+      "x": -0.75,
+      "z": 0.5
+    }
+  },
+  "group": {
+    "widths": [
+      1.2999999523162842,
+      0.8999999761581421,
+      1
+    ],
+    "groupWidth": 3.2799999284744263,
+    "impossibleOnBothWallLengths": true,
+    "firstAttemptEqualIndividualPAndActivasAndGuardias": true,
+    "nextU": [
+      0.7724398700520396,
+      0.13110289839096367,
+      0.8653107269201428
+    ]
+  },
+  "originalLab": {
+    "wallThickness": 0.14,
+    "frontHoleIntervals": [
+      [
+        0.27000000000000013,
+        1.5700000000000003,
+        0,
+        2.35
+      ],
+      [
+        1.9200000000000004,
+        2.87,
+        0.45,
+        2.6
+      ]
+    ]
+  },
+  "generation": {
+    "semillaSolicitada": 4,
+    "semillaEfectiva": 1152023,
+    "intento": 11,
+    "maximo": 12,
+    "agotado": true,
+    "marco": {
+      "W": 3.2,
+      "D": 2.8,
+      "H": 2.75,
+      "puertaX": -0.75
+    },
+    "intentos": [
+      {
+        "seed": 4,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 104733,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 209462,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 314191,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 418920,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 523649,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 628378,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 733107,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 837836,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 942565,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 1047294,
+        "faltan": [
+          12
+        ]
+      },
+      {
+        "seed": 1152023,
+        "faltan": [
+          12
+        ]
+      }
+    ]
+  },
+  "missing": [
+    {
+      "i": 12,
+      "obj": "t17_biblioteca",
+      "min": 1,
+      "n": 0
+    }
+  ],
+  "local": {
+    "kit": "vivienda_estudio",
+    "tipologia": "otra_estancia",
+    "seed": 4,
+    "W": 3.2,
+    "D": 2.8,
+    "H": 2.75,
+    "puertaX": -0.75,
+    "ancho": 0.8,
+    "zonas": {
+      "estancia": {
+        "id": "estancia",
+        "publica": true,
+        "x0": -1.6,
+        "z0": 0,
+        "x1": 1.6,
+        "z1": 2.8
+      }
+    },
+    "tabiques": [],
+    "libres": [
+      {
+        "cx": -0.75,
+        "cz": 0.5,
+        "hw": 0.58,
+        "hd": 0.5,
+        "a": 0,
+        "y0": 0,
+        "y1": 2.4
+      }
+    ],
+    "colocados": [
+      {
+        "i": 0,
+        "e": 10,
+        "obj": "t17_mesa_amplio",
+        "zona": "estancia",
+        "regla": "contra_pared",
+        "x": -0.02,
+        "y": 0,
+        "z": 2.49,
+        "ry": 3.1416,
+        "sop": null,
+        "sup": null,
+        "de": null,
+        "clase": "PUSH",
+        "v": {
+          "cx": -0.020000023841857617,
+          "cz": 2.489999988079071,
+          "hw": 0.6499999761581421,
+          "hd": 0.30000001192092896,
+          "a": 3.141592653589793,
+          "y0": 1.0728836485895954e-8,
+          "y1": 1.2200000286102295
+        }
+      },
+      {
+        "i": 1,
+        "e": 10,
+        "obj": "silla_comedor",
+        "zona": "estancia",
+        "regla": "junto_a",
+        "x": -0.02,
+        "y": 0,
+        "z": 1.91,
+        "ry": 6.2832,
+        "sop": null,
+        "sup": null,
+        "de": 0,
+        "clase": "CARRY",
+        "v": {
+          "cx": -0.020000023841857548,
+          "cz": 1.909999977350235,
+          "hw": 0.2199999988079071,
+          "hd": 0.2199999988079071,
+          "a": 6.283185307179586,
+          "y0": 1.19209286886246e-9,
+          "y1": 0.9800000190734863
+        }
+      },
+      {
+        "i": 2,
+        "e": 11,
+        "obj": "t17_guardado_bajo",
+        "zona": "estancia",
+        "regla": "junto_a",
+        "x": 1.12,
+        "y": 0,
+        "z": 2.615,
+        "ry": 3.1416,
+        "sop": null,
+        "sup": null,
+        "de": null,
+        "clase": "PUSH",
+        "v": {
+          "cx": 1.1199999403953556,
+          "cz": 2.6150000029802323,
+          "hw": 0.44999998807907104,
+          "hd": 0.17499999701976776,
+          "a": 3.141592653589793,
+          "y0": 1.4305114426349519e-8,
+          "y1": 0.7799999713897705
+        }
+      },
+      {
+        "i": 3,
+        "e": 13,
+        "obj": "vb_ordenador",
+        "zona": "estancia",
+        "regla": "sobre",
+        "x": -0.02,
+        "y": 0.75,
+        "z": 2.665,
+        "ry": 3.1416,
+        "sop": 0,
+        "sup": 0,
+        "de": null,
+        "clase": "PICKUP",
+        "v": {
+          "cx": -0.020000023841857638,
+          "cz": 2.652499988824129,
+          "hw": 0.1899999976158142,
+          "hd": 0.0924999974668026,
+          "a": 3.141592653589793,
+          "y0": 0.7500000003874302,
+          "y1": 1.0600000023841858
+        }
+      },
+      {
+        "i": 4,
+        "e": 20,
+        "obj": "poster_enmarcado",
+        "zona": "estancia",
+        "regla": "pared",
+        "x": 0.11,
+        "y": 0,
+        "z": 2.797,
+        "ry": 3.1416,
+        "sop": null,
+        "sup": null,
+        "de": null,
+        "clase": "PICKUP",
+        "v": {
+          "cx": 0.10999999046325667,
+          "cz": 2.7889999997038393,
+          "hw": 0.25999999046325684,
+          "hd": 0.008000000296160575,
+          "a": 3.141592653589793,
+          "y0": 1.2400000095367432,
+          "y1": 1.9600000381469727
+        }
+      },
+      {
+        "i": 5,
+        "e": 21,
+        "obj": "libro_tumbado",
+        "zona": "estancia",
+        "regla": "sobre",
+        "x": 1.04,
+        "y": 0.78,
+        "z": 2.625,
+        "ry": 2.8994,
+        "sop": 2,
+        "sup": 0,
+        "de": null,
+        "clase": "PICKUP",
+        "v": {
+          "cx": 1.0398445662384566,
+          "cz": 2.624585197936719,
+          "hw": 0.12006333470344543,
+          "hd": 0.09453048557043076,
+          "a": 2.899441378545486,
+          "y0": 0.7800000003352762,
+          "y1": 0.8650000008940697
+        }
+      },
+      {
+        "i": 6,
+        "e": 22,
+        "obj": "vb_lampara_trabajo",
+        "zona": "estancia",
+        "regla": "techo",
+        "x": 0,
+        "y": 2.75,
+        "z": 1.4,
+        "ry": 0,
+        "sop": null,
+        "sup": null,
+        "de": null,
+        "clase": "FIXED",
+        "v": {
+          "cx": 0,
+          "cz": 1.4,
+          "hw": 0.4000000059604645,
+          "hd": 0.09000000357627869,
+          "a": 0,
+          "y0": 2.6450000032782555,
+          "y1": 2.7500000000745057
+        }
+      }
+    ],
+    "luces": [
+      {
+        "x": 0,
+        "y": 2.68,
+        "z": 1.4,
+        "k": 2766,
+        "zona": "estancia"
+      }
+    ],
+    "avisos": [],
+    "guardias": 2,
+    "debe": [
+      "estancia"
+    ],
+    "activas": [
+      10,
+      11,
+      12,
+      13,
+      20,
+      21,
+      22
+    ],
+    "hogar": {
+      "perfil": "estudiante",
+      "estilo": "joven",
+      "botin": [
+        "portatil",
+        "guitarra",
+        "altavoz",
+        "consola"
+      ],
+      "habitacion": "dorm"
+    },
+    "hash": "69252c21",
+    "title": "Único caso dirigido",
+    "generacion": {
+      "semillaSolicitada": 4,
+      "semillaEfectiva": 1152023,
+      "intento": 11,
+      "maximo": 12,
+      "agotado": true,
+      "marco": {
+        "W": 3.2,
+        "D": 2.8,
+        "H": 2.75,
+        "puertaX": -0.75
+      },
+      "intentos": [
+        {
+          "seed": 4,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 104733,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 209462,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 314191,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 418920,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 523649,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 628378,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 733107,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 837836,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 942565,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 1047294,
+          "faltan": [
+            12
+          ]
+        },
+        {
+          "seed": 1152023,
+          "faltan": [
+            12
+          ]
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "i": 0,
+      "e": 10,
+      "obj": "t17_mesa_amplio",
+      "zona": "estancia",
+      "regla": "contra_pared",
+      "x": -0.02,
+      "y": 0,
+      "z": 2.49,
+      "ry": 3.1416,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PUSH",
+      "v": {
+        "cx": -0.020000023841857617,
+        "cz": 2.489999988079071,
+        "hw": 0.6499999761581421,
+        "hd": 0.30000001192092896,
+        "a": 3.141592653589793,
+        "y0": 1.0728836485895954e-8,
+        "y1": 1.2200000286102295
+      },
+      "rol": "mesa",
+      "entry": {
+        "zona": "estancia",
+        "regla": "contra_pared",
+        "obj": "t17_mesa_amplio",
+        "pared": [
+          "N",
+          "S",
+          "E",
+          "W"
+        ],
+        "centrado": true,
+        "cantidad": [
+          1,
+          1
+        ],
+        "obligatorio": true,
+        "preferir": true,
+        "silla_frontal": "silla_comedor",
+        "grupo_pared": "trabajo_consulta",
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.6499999761581421,
+        "x1": 0.6499999761581421,
+        "y0": 1.0728836485895954e-8,
+        "y1": 1.2200000286102295,
+        "z0": -0.30000001192092896,
+        "z1": 0.30000001192092896,
+        "w": 1.2999999523162842,
+        "h": 1.220000017881393,
+        "d": 0.6000000238418579
+      }
+    },
+    {
+      "i": 1,
+      "e": 10,
+      "obj": "silla_comedor",
+      "zona": "estancia",
+      "regla": "junto_a",
+      "x": -0.02,
+      "y": 0,
+      "z": 1.91,
+      "ry": 6.2832,
+      "sop": null,
+      "sup": null,
+      "de": 0,
+      "clase": "CARRY",
+      "v": {
+        "cx": -0.020000023841857548,
+        "cz": 1.909999977350235,
+        "hw": 0.2199999988079071,
+        "hd": 0.2199999988079071,
+        "a": 6.283185307179586,
+        "y0": 1.19209286886246e-9,
+        "y1": 0.9800000190734863
+      },
+      "rol": "silla",
+      "entry": {
+        "zona": "estancia",
+        "regla": "contra_pared",
+        "obj": "t17_mesa_amplio",
+        "pared": [
+          "N",
+          "S",
+          "E",
+          "W"
+        ],
+        "centrado": true,
+        "cantidad": [
+          1,
+          1
+        ],
+        "obligatorio": true,
+        "preferir": true,
+        "silla_frontal": "silla_comedor",
+        "grupo_pared": "trabajo_consulta",
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.2199999988079071,
+        "x1": 0.2199999988079071,
+        "y0": 1.19209286886246e-9,
+        "y1": 0.9800000190734863,
+        "z0": -0.2199999988079071,
+        "z1": 0.2199999988079071,
+        "w": 0.4399999976158142,
+        "h": 0.9800000178813935,
+        "d": 0.4399999976158142
+      }
+    },
+    {
+      "i": 2,
+      "e": 11,
+      "obj": "t17_guardado_bajo",
+      "zona": "estancia",
+      "regla": "junto_a",
+      "x": 1.12,
+      "y": 0,
+      "z": 2.615,
+      "ry": 3.1416,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PUSH",
+      "v": {
+        "cx": 1.1199999403953556,
+        "cz": 2.6150000029802323,
+        "hw": 0.44999998807907104,
+        "hd": 0.17499999701976776,
+        "a": 3.141592653589793,
+        "y0": 1.4305114426349519e-8,
+        "y1": 0.7799999713897705
+      },
+      "rol": "comoda",
+      "entry": {
+        "zona": "estancia",
+        "regla": "junto_a",
+        "obj": "t17_guardado_bajo",
+        "de": [
+          "t17_mesa_amplio"
+        ],
+        "cantidad": [
+          1,
+          1
+        ],
+        "obligatorio": true,
+        "preferir": true,
+        "buscar_refs": true,
+        "si_no": false,
+        "grupo_pared": "trabajo_consulta",
+        "espacio_frontal": [
+          0.7,
+          0.8
+        ],
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.44999998807907104,
+        "x1": 0.44999998807907104,
+        "y0": 1.4305114426349519e-8,
+        "y1": 0.7799999713897705,
+        "z0": -0.17499999701976776,
+        "z1": 0.17499999701976776,
+        "w": 0.8999999761581421,
+        "h": 0.7799999570846561,
+        "d": 0.3499999940395355
+      }
+    },
+    {
+      "i": 3,
+      "e": 13,
+      "obj": "vb_ordenador",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": -0.02,
+      "y": 0.75,
+      "z": 2.665,
+      "ry": 3.1416,
+      "sop": 0,
+      "sup": 0,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": -0.020000023841857638,
+        "cz": 2.652499988824129,
+        "hw": 0.1899999976158142,
+        "hd": 0.0924999974668026,
+        "a": 3.141592653589793,
+        "y0": 0.7500000003874302,
+        "y1": 1.0600000023841858
+      },
+      "rol": null,
+      "entry": {
+        "zona": "estancia",
+        "regla": "sobre",
+        "obj": "vb_ordenador",
+        "en": [
+          "t17_mesa_amplio"
+        ],
+        "cantidad": [
+          1,
+          1
+        ],
+        "obligatorio": true,
+        "centrado": true,
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.1899999976158142,
+        "x1": 0.1899999976158142,
+        "y0": 3.8743019903364484e-10,
+        "y1": 0.3100000023841858,
+        "z0": -0.07999999821186066,
+        "z1": 0.10499999672174454,
+        "w": 0.3799999952316284,
+        "h": 0.3100000019967556,
+        "d": 0.1849999949336052
+      }
+    },
+    {
+      "i": 4,
+      "e": 20,
+      "obj": "poster_enmarcado",
+      "zona": "estancia",
+      "regla": "pared",
+      "x": 0.11,
+      "y": 0,
+      "z": 2.797,
+      "ry": 3.1416,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": 0.10999999046325667,
+        "cz": 2.7889999997038393,
+        "hw": 0.25999999046325684,
+        "hd": 0.008000000296160575,
+        "a": 3.141592653589793,
+        "y0": 1.2400000095367432,
+        "y1": 1.9600000381469727
+      },
+      "rol": null,
+      "entry": {
+        "zona": "estancia",
+        "regla": "pared",
+        "variantes": [
+          "cuadro_paisaje",
+          "fotos_familia",
+          "poster_enmarcado"
+        ],
+        "pared": "*",
+        "cantidad": [
+          1,
+          3
+        ],
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.25999999046325684,
+        "x1": 0.25999999046325684,
+        "y0": 1.2400000095367432,
+        "y1": 1.9600000381469727,
+        "z0": 1.6763807009212428e-10,
+        "z1": 0.01600000075995922,
+        "w": 0.5199999809265137,
+        "h": 0.7200000286102295,
+        "d": 0.01600000059232115
+      }
+    },
+    {
+      "i": 5,
+      "e": 21,
+      "obj": "libro_tumbado",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": 1.04,
+      "y": 0.78,
+      "z": 2.625,
+      "ry": 2.8994,
+      "sop": 2,
+      "sup": 0,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": 1.0398445662384566,
+        "cz": 2.624585197936719,
+        "hw": 0.12006333470344543,
+        "hd": 0.09453048557043076,
+        "a": 2.899441378545486,
+        "y0": 0.7800000003352762,
+        "y1": 0.8650000008940697
+      },
+      "rol": null,
+      "entry": {
+        "zona": "estancia",
+        "regla": "sobre",
+        "variantes": [
+          "lb_libros_rojos",
+          "lb_libros_azules",
+          "lb_libros_verdes",
+          "lb_libros_ocres",
+          "lb_libros_negros",
+          "lb_libros_crema",
+          "lb_libros_morados",
+          "lb_libros_granates",
+          "lb_libros_mixtos_a",
+          "lb_libros_mixtos_b",
+          "lb_libros_infantiles",
+          "lb_libros_turquesas",
+          "lb_libros_grises",
+          "lb_libros_bolsillo",
+          "lb_libros_enciclopedia",
+          "lb_libros_atlas",
+          "lb_pila_novedad_a",
+          "lb_pila_novedad_b",
+          "lb_pila_novedad_c",
+          "lb_pila_grandes",
+          "lb_libros_cara_a",
+          "lb_libros_cara_b",
+          "lb_libros_cara_c",
+          "lb_comics_a",
+          "lb_comics_b",
+          "lb_comics_c",
+          "lb_comics_d",
+          "lb_cuadernos_espiral",
+          "lb_cuadernos_rojos",
+          "lb_carpetas_anillas",
+          "lb_estuches",
+          "lb_rotuladores",
+          "lb_papel_folios",
+          "lb_sobres",
+          "lb_agendas",
+          "lb_diccionarios",
+          "lb_calculadoras",
+          "lb_gomas_tijeras",
+          "libro_tumbado",
+          "portarretratos",
+          "reloj_sobremesa",
+          "lampara_mesa",
+          "vb_cuaderno",
+          "vb_despertador",
+          "movil",
+          "cartera"
+        ],
+        "en": [
+          "t17_guardado_bajo"
+        ],
+        "por_soporte": [
+          0,
+          1
+        ],
+        "area_max": 16,
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.12006333470344543,
+        "x1": 0.12006333470344543,
+        "y0": 3.3527614018424856e-10,
+        "y1": 0.08500000089406967,
+        "z0": -0.09453048557043076,
+        "z1": 0.09453048557043076,
+        "w": 0.24012666940689087,
+        "h": 0.08500000055879353,
+        "d": 0.1890609711408615
+      }
+    },
+    {
+      "i": 6,
+      "e": 22,
+      "obj": "vb_lampara_trabajo",
+      "zona": "estancia",
+      "regla": "techo",
+      "x": 0,
+      "y": 2.75,
+      "z": 1.4,
+      "ry": 0,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "FIXED",
+      "v": {
+        "cx": 0,
+        "cz": 1.4,
+        "hw": 0.4000000059604645,
+        "hd": 0.09000000357627869,
+        "a": 0,
+        "y0": 2.6450000032782555,
+        "y1": 2.7500000000745057
+      },
+      "rol": null,
+      "entry": {
+        "zona": "estancia",
+        "regla": "techo",
+        "obj": "vb_lampara_trabajo",
+        "por_m": [
+          0.4,
+          0.42
+        ],
+        "obligatorio": true,
+        "perfil": [
+          "artista",
+          "estudiante",
+          "musico"
+        ]
+      },
+      "box": {
+        "x0": -0.4000000059604645,
+        "x1": 0.4000000059604645,
+        "y0": -0.10499999672174454,
+        "y1": 7.450580430390374e-11,
+        "z0": -0.09000000357627869,
+        "z1": 0.09000000357627869,
+        "w": 0.800000011920929,
+        "h": 0.10499999679625034,
+        "d": 0.18000000715255737
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "exit",
+      "x": -9400.75,
+      "z": -9399.3,
+      "r": 1.1,
+      "label": "Salir a la calle"
+    },
+    {
+      "type": "asiento",
+      "x": -9400.020000023842,
+      "z": -9398.07000002265,
+      "r": 0.7,
+      "seat": {
+        "kind": "local",
+        "x": -9400.020000023842,
+        "z": -9398.07000002265,
+        "y": 0.03999999999999998,
+        "h": 6.283185307179586,
+        "sirve": false,
+        "tx": -9400.020000023842,
+        "tz": -9397.51000001192,
+        "mesaY": 0.75
+      },
+      "label": "Sentarse a la mesa"
+    }
+  ],
+  "houseKeys": [
+    "group",
+    "collider",
+    "lights",
+    "inter",
+    "spots",
+    "doors",
+    "views",
+    "pieces",
+    "local",
+    "venue",
+    "origin",
+    "bounds",
+    "kind",
+    "bloom"
+  ],
+  "validation": {
+    "kit": "vivienda_estudio",
+    "tipologia": "otra_estancia",
+    "seed": 4,
+    "W": 3.2,
+    "D": 2.8,
+    "guardias": 2,
+    "objetos": 7,
+    "distintos": 7,
+    "hash": "69252c21",
+    "errores": [
+      "obligatorio: estancia/t17_biblioteca — 0 colocados, el kit pide 1"
+    ],
+    "avisos": [],
+    "recuento": [
+      {
+        "entrada": 10,
+        "obj": "t17_mesa_amplio",
+        "n": 1
+      },
+      {
+        "entrada": 11,
+        "obj": "t17_guardado_bajo",
+        "n": 1
+      },
+      {
+        "entrada": 12,
+        "obj": "t17_biblioteca",
+        "n": 0
+      },
+      {
+        "entrada": 13,
+        "obj": "vb_ordenador",
+        "n": 1
+      },
+      {
+        "entrada": 20,
+        "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+        "n": 1
+      },
+      {
+        "entrada": 21,
+        "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+        "n": 1
+      },
+      {
+        "entrada": 22,
+        "obj": "vb_lampara_trabajo",
+        "n": 1
+      }
+    ],
+    "paso": {
+      "estancia": {
+        "alcanzable_m2": 2.98,
+        "libre_m2": 2.98
+      }
+    },
+    "luz": {
+      "estancia": 0.115
+    },
+    "flotando": 0,
+    "interpenetraciones": 0,
+    "triangulos": 490,
+    "mallas": 11,
+    "luces": 1
+  },
+  "budget": {
+    "nota": "Presupuestos de rendimiento (backlog V-03). La plataforma mínima del juego es un portátil con gráficos integrados en un navegador (Chrome 120+, WebGL2); los valores marcados como propuesta los fija dirección técnica.",
+    "plataforma_minima": "portátil con gráficos integrados, Chrome 120+, WebGL2, 1080p",
+    "fps_objetivo": 30,
+    "ms_p95": 33.3,
+    "interior": {
+      "triangulos_max": 350000,
+      "mallas_max": 60,
+      "luces_max": 9,
+      "entrada_ms_max": 1500,
+      "propuesta": true
+    },
+    "fisica": {
+      "cuerpos_activos_max": 40,
+      "propuesta": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+ "estado": "ENTRADA_R2_CAPTURADA_Y_GUARDAS_LIBRES",
+ "snapshot_fuentes_estables": 490,
+ "root_fuentes_T16_estables": 413,
+ "misma_pose_R1": true,
+ "punto_fisico_fijo": [
+  -5199.469532269612,
+  4.7,
+  -5194.0573493495585
+ ],
+ "objetivo": [
+  -5202.15046775423,
+  4.08,
+  -5192.892349361479
+ ],
+ "fov": 75,
+ "archivos": {
+  "greybox_r2.json": "c30e951a5502b3a7a02b867dfa6bb9368266c82bd479468232952af9376a16ef",
+  "greybox_r2.jpg": "466018e4cacebd4925b57f0f37c4d9d69ec84dcab3979754a5e3a9a60a4eb5db",
+  "capturador.py": "ce8371d985e94197b6483bd83b9b3f2d95efbc2b636e288f5b226bf9a022a30b"
+ },
+ "limites": "Extra diagnóstico, no sustituye canónicas. Misma pose entrada R1/R2; T16 miraba otro puesto. Sin acabados/modelos finales ni evaluación formal."
+}

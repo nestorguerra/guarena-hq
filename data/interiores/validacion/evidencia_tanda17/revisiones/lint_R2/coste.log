@@ -1,0 +1,69 @@
+{
+  "state": "PASS_BOUNDED_RECOST",
+  "maxMeshes": 59,
+  "changes": [
+    {
+      "seed": 3244,
+      "canonical": true,
+      "synthetic": false,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 56,
+        "tris": 53988,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 53988,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1594,
+      "canonical": true,
+      "synthetic": false,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 58,
+        "tris": 63274,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 63274,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1481,
+      "canonical": true,
+      "synthetic": true,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 58,
+        "tris": 48516,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 48516,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    }
+  ]
+}

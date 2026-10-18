@@ -1,0 +1,1549 @@
+{
+  "state": "PASS_FINAL_MODEL_SUPPORTS_AND_WRITING_CPU_NOT_VISUAL",
+  "compounds": [
+    {
+      "id": "vb_consulta_estudio_estudiante",
+      "parts": 5,
+      "badOverlap": [],
+      "unsupported": []
+    },
+    {
+      "id": "vb_consulta_estudio_artista",
+      "parts": 5,
+      "badOverlap": [],
+      "unsupported": []
+    },
+    {
+      "id": "vb_consulta_estudio_musico",
+      "parts": 8,
+      "badOverlap": [],
+      "unsupported": []
+    },
+    {
+      "id": "vb_consulta_baja_estudio",
+      "parts": 3,
+      "badOverlap": [],
+      "unsupported": []
+    }
+  ],
+  "structural": [
+    {
+      "id": "vb_puesto_estudio_amplio",
+      "parts": 8,
+      "allPartsConnectedToFloor": true,
+      "joints": [
+        {
+          "i": 7,
+          "j": 5,
+          "depth": 0.01999999999999999
+        },
+        {
+          "i": 7,
+          "j": 6,
+          "depth": 0.01999999999999999
+        }
+      ],
+      "interpretation": "uniones físicas estructurales de tablero/lateral/trasera; no objetos flotantes ni penetraciones entre pertenencias"
+    },
+    {
+      "id": "vb_guardado_estudio",
+      "parts": 17,
+      "allPartsConnectedToFloor": true,
+      "joints": [
+        {
+          "i": 5,
+          "j": 4,
+          "depth": 0.008000000000000007
+        },
+        {
+          "i": 9,
+          "j": 4,
+          "depth": 0.008000000000000007
+        },
+        {
+          "i": 13,
+          "j": 4,
+          "depth": 0.008000000000000007
+        }
+      ],
+      "interpretation": "uniones físicas estructurales de tablero/lateral/trasera; no objetos flotantes ni penetraciones entre pertenencias"
+    },
+    {
+      "id": "vb_biblioteca_estudio",
+      "parts": 13,
+      "allPartsConnectedToFloor": true,
+      "joints": [
+        {
+          "i": 3,
+          "j": 1,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 3,
+          "j": 2,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 4,
+          "j": 0,
+          "depth": 0.016000000000000014
+        },
+        {
+          "i": 4,
+          "j": 1,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 4,
+          "j": 2,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 5,
+          "j": 0,
+          "depth": 0.016000000000000014
+        },
+        {
+          "i": 5,
+          "j": 1,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 5,
+          "j": 2,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 6,
+          "j": 0,
+          "depth": 0.016000000000000014
+        },
+        {
+          "i": 6,
+          "j": 1,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 6,
+          "j": 2,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 7,
+          "j": 1,
+          "depth": 0.024999999999999967
+        },
+        {
+          "i": 7,
+          "j": 2,
+          "depth": 0.024999999999999967
+        }
+      ],
+      "interpretation": "uniones físicas estructurales de tablero/lateral/trasera; no objetos flotantes ni penetraciones entre pertenencias"
+    }
+  ],
+  "canonical": [
+    {
+      "seed": 3244,
+      "core": [
+        {
+          "from": "t17_mesa_amplio",
+          "to": "vb_puesto_estudio_amplio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.6499999761581421,
+            "x1": 0.6499999761581421,
+            "y0": 1.0728836485895954e-8,
+            "y1": 1.2200000286102295,
+            "z0": -0.30000001192092896,
+            "z1": 0.30000001192092896,
+            "w": 1.2999999523162842,
+            "h": 1.220000017881393,
+            "d": 0.6000000238418579
+          }
+        },
+        {
+          "from": "t17_guardado_bajo",
+          "to": "vb_guardado_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.44999998807907104,
+            "x1": 0.44999998807907104,
+            "y0": -7.450580430390374e-11,
+            "y1": 0.7799999713897705,
+            "z0": -0.17499999701976776,
+            "z1": 0.17499999701976776,
+            "w": 0.8999999761581421,
+            "h": 0.7799999714642764,
+            "d": 0.3499999940395355
+          }
+        },
+        {
+          "from": "t17_biblioteca",
+          "to": "vb_biblioteca_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.5,
+            "x1": 0.5,
+            "y0": -2.3841858265427618e-8,
+            "y1": 1.7000000476837158,
+            "z0": -0.17000000178813934,
+            "z1": 0.17000000178813934,
+            "w": 1,
+            "h": 1.700000071525574,
+            "d": 0.3400000035762787
+          }
+        },
+        {
+          "from": "silla_comedor",
+          "to": "vb_silla_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.2199999988079071,
+            "x1": 0.2199999988079071,
+            "y0": 1.19209286886246e-9,
+            "y1": 0.9800000190734863,
+            "z0": -0.2199999988079071,
+            "z1": 0.2199999988079071,
+            "w": 0.4399999976158142,
+            "h": 0.9800000178813935,
+            "d": 0.4399999976158142
+          }
+        },
+        {
+          "from": "vb_ordenador",
+          "to": "vb_ordenador",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.1899999976158142,
+            "x1": 0.1899999976158142,
+            "y0": 3.8743019903364484e-10,
+            "y1": 0.3100000023841858,
+            "z0": -0.07999999821186066,
+            "z1": 0.10499999672174454,
+            "w": 0.3799999952316284,
+            "h": 0.3100000019967556,
+            "d": 0.1849999949336052
+          }
+        }
+      ],
+      "writing": {
+        "size": [
+          0.6,
+          0.3
+        ],
+        "rect": [
+          -0.3,
+          -0.02,
+          0.3,
+          0.28
+        ],
+        "clear": true,
+        "objectsChecked": [
+          "vb_puesto_estudio_amplio",
+          "vb_ordenador",
+          "vb_panel_estudio_artista"
+        ]
+      },
+      "panel": {
+        "obj": "vb_panel_estudio_artista",
+        "supportAt": 0.75,
+        "backingTouchesBoard": true
+      }
+    },
+    {
+      "seed": 1594,
+      "core": [
+        {
+          "from": "t17_mesa_amplio",
+          "to": "vb_puesto_estudio_amplio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.6499999761581421,
+            "x1": 0.6499999761581421,
+            "y0": 1.0728836485895954e-8,
+            "y1": 1.2200000286102295,
+            "z0": -0.30000001192092896,
+            "z1": 0.30000001192092896,
+            "w": 1.2999999523162842,
+            "h": 1.220000017881393,
+            "d": 0.6000000238418579
+          }
+        },
+        {
+          "from": "t17_guardado_bajo",
+          "to": "vb_guardado_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.44999998807907104,
+            "x1": 0.44999998807907104,
+            "y0": -7.450580430390374e-11,
+            "y1": 0.7799999713897705,
+            "z0": -0.17499999701976776,
+            "z1": 0.17499999701976776,
+            "w": 0.8999999761581421,
+            "h": 0.7799999714642764,
+            "d": 0.3499999940395355
+          }
+        },
+        {
+          "from": "t17_biblioteca",
+          "to": "vb_biblioteca_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.5,
+            "x1": 0.5,
+            "y0": -2.3841858265427618e-8,
+            "y1": 1.7000000476837158,
+            "z0": -0.17000000178813934,
+            "z1": 0.17000000178813934,
+            "w": 1,
+            "h": 1.700000071525574,
+            "d": 0.3400000035762787
+          }
+        },
+        {
+          "from": "silla_comedor",
+          "to": "vb_silla_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.2199999988079071,
+            "x1": 0.2199999988079071,
+            "y0": 1.19209286886246e-9,
+            "y1": 0.9800000190734863,
+            "z0": -0.2199999988079071,
+            "z1": 0.2199999988079071,
+            "w": 0.4399999976158142,
+            "h": 0.9800000178813935,
+            "d": 0.4399999976158142
+          }
+        },
+        {
+          "from": "vb_ordenador",
+          "to": "vb_ordenador",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.1899999976158142,
+            "x1": 0.1899999976158142,
+            "y0": 3.8743019903364484e-10,
+            "y1": 0.3100000023841858,
+            "z0": -0.07999999821186066,
+            "z1": 0.10499999672174454,
+            "w": 0.3799999952316284,
+            "h": 0.3100000019967556,
+            "d": 0.1849999949336052
+          }
+        }
+      ],
+      "writing": {
+        "size": [
+          0.6,
+          0.3
+        ],
+        "rect": [
+          -0.3,
+          -0.02,
+          0.3,
+          0.28
+        ],
+        "clear": true,
+        "objectsChecked": [
+          "vb_puesto_estudio_amplio",
+          "vb_ordenador",
+          "vb_panel_estudio_estudiante"
+        ]
+      },
+      "panel": {
+        "obj": "vb_panel_estudio_estudiante",
+        "supportAt": 0.75,
+        "backingTouchesBoard": true
+      }
+    },
+    {
+      "seed": 1481,
+      "core": [
+        {
+          "from": "t17_mesa_amplio",
+          "to": "vb_puesto_estudio_amplio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.6499999761581421,
+            "x1": 0.6499999761581421,
+            "y0": 1.0728836485895954e-8,
+            "y1": 1.2200000286102295,
+            "z0": -0.30000001192092896,
+            "z1": 0.30000001192092896,
+            "w": 1.2999999523162842,
+            "h": 1.220000017881393,
+            "d": 0.6000000238418579
+          }
+        },
+        {
+          "from": "t17_guardado_bajo",
+          "to": "vb_guardado_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.44999998807907104,
+            "x1": 0.44999998807907104,
+            "y0": -7.450580430390374e-11,
+            "y1": 0.7799999713897705,
+            "z0": -0.17499999701976776,
+            "z1": 0.17499999701976776,
+            "w": 0.8999999761581421,
+            "h": 0.7799999714642764,
+            "d": 0.3499999940395355
+          }
+        },
+        {
+          "from": "t17_biblioteca",
+          "to": "vb_biblioteca_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.5,
+            "x1": 0.5,
+            "y0": -2.3841858265427618e-8,
+            "y1": 1.7000000476837158,
+            "z0": -0.17000000178813934,
+            "z1": 0.17000000178813934,
+            "w": 1,
+            "h": 1.700000071525574,
+            "d": 0.3400000035762787
+          }
+        },
+        {
+          "from": "silla_comedor",
+          "to": "vb_silla_estudio",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.2199999988079071,
+            "x1": 0.2199999988079071,
+            "y0": 1.19209286886246e-9,
+            "y1": 0.9800000190734863,
+            "z0": -0.2199999988079071,
+            "z1": 0.2199999988079071,
+            "w": 0.4399999976158142,
+            "h": 0.9800000178813935,
+            "d": 0.4399999976158142
+          }
+        },
+        {
+          "from": "vb_ordenador",
+          "to": "vb_ordenador",
+          "poseExactR2": true,
+          "envelope": {
+            "x0": -0.1899999976158142,
+            "x1": 0.1899999976158142,
+            "y0": 3.8743019903364484e-10,
+            "y1": 0.3100000023841858,
+            "z0": -0.07999999821186066,
+            "z1": 0.10499999672174454,
+            "w": 0.3799999952316284,
+            "h": 0.3100000019967556,
+            "d": 0.1849999949336052
+          }
+        }
+      ],
+      "writing": {
+        "size": [
+          0.6,
+          0.3
+        ],
+        "rect": [
+          -0.3,
+          -0.02,
+          0.3,
+          0.28
+        ],
+        "clear": true,
+        "objectsChecked": [
+          "vb_puesto_estudio_amplio",
+          "vb_ordenador",
+          "vb_panel_estudio_musico"
+        ]
+      },
+      "panel": {
+        "obj": "vb_panel_estudio_musico",
+        "supportAt": 0.75,
+        "backingTouchesBoard": true
+      }
+    }
+  ],
+  "effectivePools": [
+    {
+      "profile": "artista",
+      "effectiveDistinctDeclared": 54,
+      "ids": [
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_artista",
+        "vb_sillon_estudio",
+        "mesa_auxiliar_lectura",
+        "libro_tumbado",
+        "vb_consulta_baja_estudio",
+        "vb_consulta_estudio_artista",
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_pila_grandes",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_comics_a",
+        "lb_comics_b",
+        "lb_comics_c",
+        "lb_comics_d",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_carpetas_anillas",
+        "lb_estuches",
+        "lb_rotuladores",
+        "lb_papel_folios",
+        "lb_sobres",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "bloc_notas",
+        "vb_cuaderno",
+        "vb_partituras",
+        "grapadora",
+        "cuadro_paisaje",
+        "fotos_familia",
+        "poster_enmarcado",
+        "vb_lampara_trabajo"
+      ],
+      "provenUsableMinimum": 33,
+      "provenUseful": [
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_estuches",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_artista",
+        "vb_consulta_estudio_artista"
+      ],
+      "libraryPoolSupport": [
+        {
+          "id": "lb_libros_rojos",
+          "w": 0.4172883927822113,
+          "d": 0.20200000703334808,
+          "h": 0.26812765229304203,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_azules",
+          "w": 0.39686158299446106,
+          "d": 0.20200000703334808,
+          "h": 0.269907869351973,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_verdes",
+          "w": 0.4071822315454483,
+          "d": 0.20200000703334808,
+          "h": 0.26447689886433023,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_ocres",
+          "w": 0.386691689491272,
+          "d": 0.20200000703334808,
+          "h": 0.2761204585387089,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_negros",
+          "w": 0.39027543365955353,
+          "d": 0.20200000703334808,
+          "h": 0.23678963104850692,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_crema",
+          "w": 0.4048358201980591,
+          "d": 0.20200000703334808,
+          "h": 0.25065693483466234,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_granates",
+          "w": 0.39650867879390717,
+          "d": 0.20200000703334808,
+          "h": 0.2628137534078001,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_a",
+          "w": 0.3770601451396942,
+          "d": 0.20200000703334808,
+          "h": 0.2767611514808599,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_b",
+          "w": 0.40345898270606995,
+          "d": 0.20200000703334808,
+          "h": 0.27969012372785373,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_turquesas",
+          "w": 0.4127586781978607,
+          "d": 0.20200000703334808,
+          "h": 0.2683307855739181,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_grises",
+          "w": 0.3782805800437927,
+          "d": 0.20200000703334808,
+          "h": 0.2500628857388083,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_bolsillo",
+          "w": 0.2998739629983902,
+          "d": 0.20200000703334808,
+          "h": 0.18605852476868567,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_enciclopedia",
+          "w": 0.39226891100406647,
+          "d": 0.24199999868869781,
+          "h": 0.2786043639709037,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_atlas",
+          "w": 0.3738167732954025,
+          "d": 0.24199999868869781,
+          "h": 0.27565304028757254,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_a",
+          "w": 0.17419075220823288,
+          "d": 0.24023567885160446,
+          "h": 0.17079919533330984,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_b",
+          "w": 0.17560675740242004,
+          "d": 0.2336340770125389,
+          "h": 0.21432809535931627,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_c",
+          "w": 0.16903723776340485,
+          "d": 0.24326059222221375,
+          "h": 0.16714178066070848,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_grandes",
+          "w": 0.28752368688583374,
+          "d": 0.34185072779655457,
+          "h": 0.12976986147186564,
+          "fits": false
+        },
+        {
+          "id": "lb_libros_cara_a",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_b",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_c",
+          "w": 0.5199999809265137,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_comics_a",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_b",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_c",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_d",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_cuadernos_espiral",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_cuadernos_rojos",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_carpetas_anillas",
+          "w": 0.2720000147819519,
+          "d": 0.3009999990463257,
+          "h": 0.2800000025033951,
+          "fits": false
+        },
+        {
+          "id": "lb_estuches",
+          "w": 0.6259999871253967,
+          "d": 0.23499999940395355,
+          "h": 0.07199999740719792,
+          "fits": true
+        },
+        {
+          "id": "lb_rotuladores",
+          "w": 0.4519999921321869,
+          "d": 0.38200001046061516,
+          "h": 0.032099999152123915,
+          "fits": false
+        },
+        {
+          "id": "lb_papel_folios",
+          "w": 0.22599999606609344,
+          "d": 0.5019999742507935,
+          "h": 0.2849999967962503,
+          "fits": false
+        },
+        {
+          "id": "lb_sobres",
+          "w": 0.25600001215934753,
+          "d": 0.38349999487400055,
+          "h": 0.21850000482797627,
+          "fits": false
+        },
+        {
+          "id": "lb_diccionarios",
+          "w": 0.296999990940094,
+          "d": 0.19200000166893005,
+          "h": 0.2700000160932543,
+          "fits": true
+        },
+        {
+          "id": "lb_calculadoras",
+          "w": 0.44600000977516174,
+          "d": 0.08330749347805977,
+          "h": 0.16121407417813316,
+          "fits": true
+        },
+        {
+          "id": "lb_gomas_tijeras",
+          "w": 0.5460000038146973,
+          "d": 0.07500000111758709,
+          "h": 0.20000000447034838,
+          "fits": true
+        }
+      ],
+      "fitLimits": "Prueba conservadora sin rotación en balda real930x290mm, altura libre370mm. Se conservan variantes que no caben en esta balda: el motor las omite; no se cuentan en mínimo probado."
+    },
+    {
+      "profile": "estudiante",
+      "effectiveDistinctDeclared": 54,
+      "ids": [
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_estudiante",
+        "vb_sillon_estudio",
+        "mesa_auxiliar_lectura",
+        "libro_tumbado",
+        "vb_consulta_baja_estudio",
+        "vb_consulta_estudio_estudiante",
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_pila_grandes",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_comics_a",
+        "lb_comics_b",
+        "lb_comics_c",
+        "lb_comics_d",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_carpetas_anillas",
+        "lb_estuches",
+        "lb_rotuladores",
+        "lb_papel_folios",
+        "lb_sobres",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "bloc_notas",
+        "vb_cuaderno",
+        "vb_partituras",
+        "grapadora",
+        "cuadro_paisaje",
+        "fotos_familia",
+        "poster_enmarcado",
+        "vb_lampara_trabajo"
+      ],
+      "provenUsableMinimum": 33,
+      "provenUseful": [
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_estuches",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_estudiante",
+        "vb_consulta_estudio_estudiante"
+      ],
+      "libraryPoolSupport": [
+        {
+          "id": "lb_libros_rojos",
+          "w": 0.4172883927822113,
+          "d": 0.20200000703334808,
+          "h": 0.26812765229304203,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_azules",
+          "w": 0.39686158299446106,
+          "d": 0.20200000703334808,
+          "h": 0.269907869351973,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_verdes",
+          "w": 0.4071822315454483,
+          "d": 0.20200000703334808,
+          "h": 0.26447689886433023,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_ocres",
+          "w": 0.386691689491272,
+          "d": 0.20200000703334808,
+          "h": 0.2761204585387089,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_negros",
+          "w": 0.39027543365955353,
+          "d": 0.20200000703334808,
+          "h": 0.23678963104850692,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_crema",
+          "w": 0.4048358201980591,
+          "d": 0.20200000703334808,
+          "h": 0.25065693483466234,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_granates",
+          "w": 0.39650867879390717,
+          "d": 0.20200000703334808,
+          "h": 0.2628137534078001,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_a",
+          "w": 0.3770601451396942,
+          "d": 0.20200000703334808,
+          "h": 0.2767611514808599,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_b",
+          "w": 0.40345898270606995,
+          "d": 0.20200000703334808,
+          "h": 0.27969012372785373,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_turquesas",
+          "w": 0.4127586781978607,
+          "d": 0.20200000703334808,
+          "h": 0.2683307855739181,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_grises",
+          "w": 0.3782805800437927,
+          "d": 0.20200000703334808,
+          "h": 0.2500628857388083,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_bolsillo",
+          "w": 0.2998739629983902,
+          "d": 0.20200000703334808,
+          "h": 0.18605852476868567,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_enciclopedia",
+          "w": 0.39226891100406647,
+          "d": 0.24199999868869781,
+          "h": 0.2786043639709037,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_atlas",
+          "w": 0.3738167732954025,
+          "d": 0.24199999868869781,
+          "h": 0.27565304028757254,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_a",
+          "w": 0.17419075220823288,
+          "d": 0.24023567885160446,
+          "h": 0.17079919533330984,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_b",
+          "w": 0.17560675740242004,
+          "d": 0.2336340770125389,
+          "h": 0.21432809535931627,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_c",
+          "w": 0.16903723776340485,
+          "d": 0.24326059222221375,
+          "h": 0.16714178066070848,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_grandes",
+          "w": 0.28752368688583374,
+          "d": 0.34185072779655457,
+          "h": 0.12976986147186564,
+          "fits": false
+        },
+        {
+          "id": "lb_libros_cara_a",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_b",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_c",
+          "w": 0.5199999809265137,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_comics_a",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_b",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_c",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_d",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_cuadernos_espiral",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_cuadernos_rojos",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_carpetas_anillas",
+          "w": 0.2720000147819519,
+          "d": 0.3009999990463257,
+          "h": 0.2800000025033951,
+          "fits": false
+        },
+        {
+          "id": "lb_estuches",
+          "w": 0.6259999871253967,
+          "d": 0.23499999940395355,
+          "h": 0.07199999740719792,
+          "fits": true
+        },
+        {
+          "id": "lb_rotuladores",
+          "w": 0.4519999921321869,
+          "d": 0.38200001046061516,
+          "h": 0.032099999152123915,
+          "fits": false
+        },
+        {
+          "id": "lb_papel_folios",
+          "w": 0.22599999606609344,
+          "d": 0.5019999742507935,
+          "h": 0.2849999967962503,
+          "fits": false
+        },
+        {
+          "id": "lb_sobres",
+          "w": 0.25600001215934753,
+          "d": 0.38349999487400055,
+          "h": 0.21850000482797627,
+          "fits": false
+        },
+        {
+          "id": "lb_diccionarios",
+          "w": 0.296999990940094,
+          "d": 0.19200000166893005,
+          "h": 0.2700000160932543,
+          "fits": true
+        },
+        {
+          "id": "lb_calculadoras",
+          "w": 0.44600000977516174,
+          "d": 0.08330749347805977,
+          "h": 0.16121407417813316,
+          "fits": true
+        },
+        {
+          "id": "lb_gomas_tijeras",
+          "w": 0.5460000038146973,
+          "d": 0.07500000111758709,
+          "h": 0.20000000447034838,
+          "fits": true
+        }
+      ],
+      "fitLimits": "Prueba conservadora sin rotación en balda real930x290mm, altura libre370mm. Se conservan variantes que no caben en esta balda: el motor las omite; no se cuentan en mínimo probado."
+    },
+    {
+      "profile": "musico",
+      "effectiveDistinctDeclared": 54,
+      "ids": [
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_musico",
+        "vb_sillon_estudio",
+        "mesa_auxiliar_lectura",
+        "libro_tumbado",
+        "vb_consulta_baja_estudio",
+        "vb_consulta_estudio_musico",
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_pila_grandes",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_comics_a",
+        "lb_comics_b",
+        "lb_comics_c",
+        "lb_comics_d",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_carpetas_anillas",
+        "lb_estuches",
+        "lb_rotuladores",
+        "lb_papel_folios",
+        "lb_sobres",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "bloc_notas",
+        "vb_cuaderno",
+        "vb_partituras",
+        "grapadora",
+        "cuadro_paisaje",
+        "fotos_familia",
+        "poster_enmarcado",
+        "vb_lampara_trabajo"
+      ],
+      "provenUsableMinimum": 33,
+      "provenUseful": [
+        "lb_libros_rojos",
+        "lb_libros_azules",
+        "lb_libros_verdes",
+        "lb_libros_ocres",
+        "lb_libros_negros",
+        "lb_libros_crema",
+        "lb_libros_granates",
+        "lb_libros_mixtos_a",
+        "lb_libros_mixtos_b",
+        "lb_libros_turquesas",
+        "lb_libros_grises",
+        "lb_libros_bolsillo",
+        "lb_libros_enciclopedia",
+        "lb_libros_atlas",
+        "lb_pila_novedad_a",
+        "lb_pila_novedad_b",
+        "lb_pila_novedad_c",
+        "lb_libros_cara_a",
+        "lb_libros_cara_b",
+        "lb_libros_cara_c",
+        "lb_cuadernos_espiral",
+        "lb_cuadernos_rojos",
+        "lb_estuches",
+        "lb_diccionarios",
+        "lb_calculadoras",
+        "lb_gomas_tijeras",
+        "vb_puesto_estudio_amplio",
+        "vb_silla_estudio",
+        "vb_guardado_estudio",
+        "vb_biblioteca_estudio",
+        "vb_ordenador",
+        "vb_panel_estudio_musico",
+        "vb_consulta_estudio_musico"
+      ],
+      "libraryPoolSupport": [
+        {
+          "id": "lb_libros_rojos",
+          "w": 0.4172883927822113,
+          "d": 0.20200000703334808,
+          "h": 0.26812765229304203,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_azules",
+          "w": 0.39686158299446106,
+          "d": 0.20200000703334808,
+          "h": 0.269907869351973,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_verdes",
+          "w": 0.4071822315454483,
+          "d": 0.20200000703334808,
+          "h": 0.26447689886433023,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_ocres",
+          "w": 0.386691689491272,
+          "d": 0.20200000703334808,
+          "h": 0.2761204585387089,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_negros",
+          "w": 0.39027543365955353,
+          "d": 0.20200000703334808,
+          "h": 0.23678963104850692,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_crema",
+          "w": 0.4048358201980591,
+          "d": 0.20200000703334808,
+          "h": 0.25065693483466234,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_granates",
+          "w": 0.39650867879390717,
+          "d": 0.20200000703334808,
+          "h": 0.2628137534078001,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_a",
+          "w": 0.3770601451396942,
+          "d": 0.20200000703334808,
+          "h": 0.2767611514808599,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_mixtos_b",
+          "w": 0.40345898270606995,
+          "d": 0.20200000703334808,
+          "h": 0.27969012372785373,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_turquesas",
+          "w": 0.4127586781978607,
+          "d": 0.20200000703334808,
+          "h": 0.2683307855739181,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_grises",
+          "w": 0.3782805800437927,
+          "d": 0.20200000703334808,
+          "h": 0.2500628857388083,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_bolsillo",
+          "w": 0.2998739629983902,
+          "d": 0.20200000703334808,
+          "h": 0.18605852476868567,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_enciclopedia",
+          "w": 0.39226891100406647,
+          "d": 0.24199999868869781,
+          "h": 0.2786043639709037,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_atlas",
+          "w": 0.3738167732954025,
+          "d": 0.24199999868869781,
+          "h": 0.27565304028757254,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_a",
+          "w": 0.17419075220823288,
+          "d": 0.24023567885160446,
+          "h": 0.17079919533330984,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_b",
+          "w": 0.17560675740242004,
+          "d": 0.2336340770125389,
+          "h": 0.21432809535931627,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_novedad_c",
+          "w": 0.16903723776340485,
+          "d": 0.24326059222221375,
+          "h": 0.16714178066070848,
+          "fits": true
+        },
+        {
+          "id": "lb_pila_grandes",
+          "w": 0.28752368688583374,
+          "d": 0.34185072779655457,
+          "h": 0.12976986147186564,
+          "fits": false
+        },
+        {
+          "id": "lb_libros_cara_a",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_b",
+          "w": 0.6600000262260437,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_libros_cara_c",
+          "w": 0.5199999809265137,
+          "d": 0.10100000351667404,
+          "h": 0.20911346353590488,
+          "fits": true
+        },
+        {
+          "id": "lb_comics_a",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_b",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_c",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_comics_d",
+          "w": 0.9459999799728394,
+          "d": 0.13407303765416145,
+          "h": 0.25901320612430573,
+          "fits": false
+        },
+        {
+          "id": "lb_cuadernos_espiral",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_cuadernos_rojos",
+          "w": 0.8960000276565552,
+          "d": 0.12000000104308128,
+          "h": 0.23999999743700018,
+          "fits": true
+        },
+        {
+          "id": "lb_carpetas_anillas",
+          "w": 0.2720000147819519,
+          "d": 0.3009999990463257,
+          "h": 0.2800000025033951,
+          "fits": false
+        },
+        {
+          "id": "lb_estuches",
+          "w": 0.6259999871253967,
+          "d": 0.23499999940395355,
+          "h": 0.07199999740719792,
+          "fits": true
+        },
+        {
+          "id": "lb_rotuladores",
+          "w": 0.4519999921321869,
+          "d": 0.38200001046061516,
+          "h": 0.032099999152123915,
+          "fits": false
+        },
+        {
+          "id": "lb_papel_folios",
+          "w": 0.22599999606609344,
+          "d": 0.5019999742507935,
+          "h": 0.2849999967962503,
+          "fits": false
+        },
+        {
+          "id": "lb_sobres",
+          "w": 0.25600001215934753,
+          "d": 0.38349999487400055,
+          "h": 0.21850000482797627,
+          "fits": false
+        },
+        {
+          "id": "lb_diccionarios",
+          "w": 0.296999990940094,
+          "d": 0.19200000166893005,
+          "h": 0.2700000160932543,
+          "fits": true
+        },
+        {
+          "id": "lb_calculadoras",
+          "w": 0.44600000977516174,
+          "d": 0.08330749347805977,
+          "h": 0.16121407417813316,
+          "fits": true
+        },
+        {
+          "id": "lb_gomas_tijeras",
+          "w": 0.5460000038146973,
+          "d": 0.07500000111758709,
+          "h": 0.20000000447034838,
+          "fits": true
+        }
+      ],
+      "fitLimits": "Prueba conservadora sin rotación en balda real930x290mm, altura libre370mm. Se conservan variantes que no caben en esta balda: el motor las omite; no se cuentan en mínimo probado."
+    }
+  ],
+  "negatives": {
+    "raiseArtistFolder36mm": {
+      "badOverlap": [
+        {
+          "i": 3,
+          "j": 2,
+          "penetration": 0.027999999999999997
+        },
+        {
+          "i": 4,
+          "j": 2,
+          "penetration": 0.027999999999999997
+        }
+      ],
+      "unsupported": [
+        2,
+        3,
+        4
+      ]
+    },
+    "moveFlatBooksIntoUpright": {
+      "badOverlap": [
+        {
+          "i": 3,
+          "j": 0,
+          "penetration": 0.045
+        },
+        {
+          "i": 3,
+          "j": 1,
+          "penetration": 0.045
+        },
+        {
+          "i": 3,
+          "j": 2,
+          "penetration": 0.045
+        }
+      ],
+      "unsupported": [
+        4
+      ]
+    }
+  },
+  "limitations": "Cajas analíticas de partes finales, uniones de estructura declaradas; aspecto de texturas no rasterizado."
+}

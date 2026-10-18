@@ -1,0 +1,17 @@
+{
+  "state": "PASS_T16_RECIPE_CONSTRAINTS_EXACT_AFTER_CONTEXT_ELIGIBILITY",
+  "scope": "Clarification only; no changed source/model/pose. Raw K objects differ by added profile scope; after resolving the family context, original T16 entries retain every rule/quota/reservation/reference/variant/role dependency exactly. This does not assert byte-identical full KITS JSON. Annie geometry/actions/colliders exact are checked separately in annie.json.",
+  "originalEntries": 10,
+  "profileScopeAddedToOldEntries": [
+    "!artista",
+    "!estudiante",
+    "!musico"
+  ],
+  "eligibleForFamily": true,
+  "newProgramProfiles": [
+    "artista",
+    "estudiante",
+    "musico"
+  ],
+  "sealedManifestUnchanged": "63461d72a6baaa29da7968773a23c6dcb8b12eea96cc71b26938c0d615533f07"
+}

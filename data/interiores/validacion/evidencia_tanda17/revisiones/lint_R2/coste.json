@@ -1,0 +1,509 @@
+{
+  "state": "PASS_BOUNDED_RECOST",
+  "scope": "23 identities from sealed report, including canonical3244/1594 and synthetic1481 once each; only after finish source overridden. Canvas trace/no raster; no GPU. No81/200 or timing claim.",
+  "baselineManifestSha256": "5bb39f7bc90b1a8091a9cb302669777719e99e6ae2de19e44c0ee1fee7be9c5a",
+  "finishSha256": "e48fdae7e33789da3a212e28f6426c9cd4b93029a9a3ea6011d921bb6d650777",
+  "budget": {
+    "nota": "Presupuestos de rendimiento (backlog V-03). La plataforma mínima del juego es un portátil con gráficos integrados en un navegador (Chrome 120+, WebGL2); los valores marcados como propuesta los fija dirección técnica.",
+    "plataforma_minima": "portátil con gráficos integrados, Chrome 120+, WebGL2, 1080p",
+    "fps_objetivo": 30,
+    "ms_p95": 33.3,
+    "interior": {
+      "triangulos_max": 350000,
+      "mallas_max": 60,
+      "luces_max": 9,
+      "entrada_ms_max": 1500,
+      "propuesta": true
+    },
+    "fisica": {
+      "cuerpos_activos_max": 40,
+      "propuesta": true
+    }
+  },
+  "rows": [
+    {
+      "seed": 2786,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 54,
+        "tris": 39980,
+        "lights": 7,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 54,
+        "tris": 39980,
+        "lights": 7,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 3244,
+      "canonical": true,
+      "synthetic": false,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 56,
+        "tris": 53988,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 53988,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1594,
+      "canonical": true,
+      "synthetic": false,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 58,
+        "tris": 63274,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 63274,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1689,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 58,
+        "tris": 44150,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 58,
+        "tris": 44150,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2132,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 46944,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 46944,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1639,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 48,
+        "tris": 32874,
+        "lights": 5,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 48,
+        "tris": 32874,
+        "lights": 5,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 5157,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 41984,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 41984,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 3627,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 51,
+        "tris": 40854,
+        "lights": 6,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 51,
+        "tris": 40854,
+        "lights": 6,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2606,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 49110,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 49110,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 4007,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 57,
+        "tris": 46818,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 46818,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 4204,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 43640,
+        "lights": 9,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 43640,
+        "lights": 9,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2268,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 54,
+        "tris": 39798,
+        "lights": 7,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 54,
+        "tris": 39798,
+        "lights": 7,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 4216,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 52224,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 52224,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 4473,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 51,
+        "tris": 42302,
+        "lights": 6,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 51,
+        "tris": 42302,
+        "lights": 6,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2720,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 47,
+        "tris": 35460,
+        "lights": 5,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 47,
+        "tris": 35460,
+        "lights": 5,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 3981,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 57,
+        "tris": 49996,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 49996,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 3429,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 59,
+        "tris": 42622,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 42622,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2728,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 48,
+        "tris": 38124,
+        "lights": 6,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 48,
+        "tris": 38124,
+        "lights": 6,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1679,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 57,
+        "tris": 44890,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 44890,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 5045,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 58,
+        "tris": 45048,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 58,
+        "tris": 45048,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 2162,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 57,
+        "tris": 36102,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 57,
+        "tris": 36102,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 4685,
+      "canonical": false,
+      "synthetic": false,
+      "studyRooms": 0,
+      "before": {
+        "meshes": 58,
+        "tris": 59486,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 58,
+        "tris": 59486,
+        "lights": 8,
+        "lint0": 0
+      },
+      "deltaMeshes": 0,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    },
+    {
+      "seed": 1481,
+      "canonical": true,
+      "synthetic": true,
+      "studyRooms": 1,
+      "before": {
+        "meshes": 58,
+        "tris": 48516,
+        "lights": 8,
+        "lint0": 0
+      },
+      "after": {
+        "meshes": 59,
+        "tris": 48516,
+        "lights": 8,
+        "lint0": 1
+      },
+      "deltaMeshes": 1,
+      "withinBudget": true,
+      "estanciasRoomsLightsExact": true
+    }
+  ],
+  "maxMeshes": 59
+}

@@ -1,0 +1,58 @@
+{
+ "estado": "GREYBOX_R2_CAPTURADO_SIN_ACABADOS_NI_MODELOS_FINALES",
+ "inputs_estables": 490,
+ "vistas_libres": 6,
+ "calidad": "alta_manual",
+ "dpr": 1,
+ "poses": [
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_R1": false
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose_base": false,
+   "misma_pose_R1": false
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_R1": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose_base": false,
+   "misma_pose_R1": true
+  },
+  {
+   "seed": 1481,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_R1": true
+  },
+  {
+   "seed": 1481,
+   "vista": 1,
+   "misma_pose_base": true,
+   "misma_pose_R1": true
+  }
+ ],
+ "archivos": {
+  "casa_estudio_3244_1.jpg": "220991e68f6aa0a1aa0cebf110637c1049064867845f168cf22c2ffb16c365a1",
+  "casa_estudio_3244_0.jpg": "1afe7b33e7ed8c9e0e42936db9d4e4b8403bddd2809a20b9405ff2e7a5c4b090",
+  "casa_estudio_1481_1.jpg": "934a663cbad29dfbfd5a384e84a0023a4661422370e0118fafdcdf5aaab59b87",
+  "casa_estudio_1481_0.jpg": "caa175f8b9e41ef9dc8cc485423af32803b822cd7216f33f5446e2321ed227ae",
+  "capturador.py": "db25d8b28bcb1cd3a5ec771fa4c0fa66305f8059755bd3a3105e6a1a0a732736",
+  "casa_estudio_1594_1.jpg": "0ed4c63fbe273d898c3dbd04b3343dbe5633b0572dfa07821eed76482e02ff6a",
+  "casa_estudio.jpg": "037ea9f862ee10933d6769828fc0b7a567c2b739a6ffcf636138276fa0f24163",
+  "casa_estudio_1594_0.jpg": "0a2bbf3ee5e61033e4290673f6459273a1d9bd2b1ebe5802babd11a17863683a",
+  "casa_estudio.json": "a2606f95d3802b56e3a726c19611e5b0bc2779c94f48d5bd261e37120f82f6cd",
+  "fuentes_antes_captura.json": "f7927b3a216ac66f2840a5ccb744e480056346026b22915fe120793548b7c2c7"
+ },
+ "limites": "Cambia distribución. Modelos grises conservadores. Sin API, fuentes activas o aprobación visual. Capturador original con URL8923."
+}

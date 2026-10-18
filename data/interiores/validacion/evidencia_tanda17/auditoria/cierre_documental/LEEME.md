@@ -1,0 +1,1 @@
+La auditoría independiente verificó el sello previo de 294 archivos, preservado aquí. Los originales permanecen idénticos. El manifiesto raíz posterior añade esta adenda y sus recibos, junto a la revisión del helper de publicación. No cambia producto ni reinterpreta la auditoría como aprobación de CI/Pages.

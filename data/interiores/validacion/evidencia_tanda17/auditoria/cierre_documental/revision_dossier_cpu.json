@@ -1,0 +1,192 @@
+{
+  "state": "PASS",
+  "scope": "Auditoría documental CPU, sin ejecución de tests/GPU/API/build/generadores. No CI/publicación ni puntuación artística nueva.",
+  "date": "2026-10-18T02:33:15.958406+00:00",
+  "rows": [
+    {
+      "check": "seal_identity",
+      "PASS": true,
+      "sha256": "127241ea73700f0b86f413889645a9ade73a9a5279f67c4e1b63f4edef8a9e88"
+    },
+    {
+      "check": "inventory_exact",
+      "PASS": true,
+      "files": 294,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "check": "all_hashes",
+      "PASS": true,
+      "mismatch": []
+    },
+    {
+      "check": "freeze415",
+      "PASS": true
+    },
+    {
+      "check": "freeze_copies_exact",
+      "PASS": true
+    },
+    {
+      "check": "regen22",
+      "PASS": true
+    },
+    {
+      "check": "gates9",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/contratos.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/validacion_ejecuciones.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/integracion_paquete.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/kits81.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/contratos.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/integracion_fuente.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/marcas.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/casas.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/casas200.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/estado_candidato.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/integracion_juego.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/regeneracion.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/kits5.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/vivienda_estudio.json",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/integracion_paquete.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/recursos.log",
+      "PASS": true
+    },
+    {
+      "check": "copy:gates_finales/build.log",
+      "PASS": true
+    },
+    {
+      "check": "contracts73",
+      "PASS": true
+    },
+    {
+      "check": "casas200",
+      "PASS": true
+    },
+    {
+      "check": "lab81",
+      "PASS": true
+    },
+    {
+      "check": "40kits5",
+      "PASS": true
+    },
+    {
+      "check": "source96routes",
+      "PASS": true
+    },
+    {
+      "check": "integration_clean",
+      "PASS": true
+    },
+    {
+      "check": "quality_copy",
+      "PASS": true
+    },
+    {
+      "check": "quality_maxima",
+      "PASS": true,
+      "observed": {
+        "triangulos": 70192,
+        "mallas": 60,
+        "luces": 9,
+        "montaje_ms": 154.8
+      }
+    },
+    {
+      "check": "image_chain",
+      "PASS": true
+    },
+    {
+      "check": "formal_bytes:A",
+      "PASS": true
+    },
+    {
+      "check": "formal_answers:A",
+      "PASS": true
+    },
+    {
+      "check": "formal_schema_math:A",
+      "PASS": true,
+      "mean": 3.222
+    },
+    {
+      "check": "formal_active_equal:A",
+      "PASS": true
+    },
+    {
+      "check": "formal_bytes:B",
+      "PASS": true
+    },
+    {
+      "check": "formal_answers:B",
+      "PASS": true
+    },
+    {
+      "check": "formal_schema_math:B",
+      "PASS": true,
+      "mean": 3.208
+    },
+    {
+      "check": "formal_active_equal:B",
+      "PASS": true
+    },
+    {
+      "check": "previous_review_exact",
+      "PASS": true
+    },
+    {
+      "check": "previous36",
+      "PASS": true
+    }
+  ]
+}

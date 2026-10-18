@@ -153,7 +153,10 @@ JS = r'''(async () => {
       const clearanceAntes=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' antes de render');
       const poseAntes=JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov});
       vistas.push({clearance:{candidate:clearanceElegido,beforeRender:clearanceAntes},encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(tipo==='comedor'?{cobertura:{hoja_cercana_fraccion:puertaElegida,muestras:35,distancia_max:1.25,limite:.12,medido:'pose_final_antes_render',esquinas_evaluadas:esquinas.length,esquinas_recortadas:recortesElegidos}}:{}),...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
+      if(window.__errs?.length)throw Error('errores antes de captura: '+JSON.stringify(window.__errs));
       g.render();
+      if(window.__errs?.length)throw Error('errores de render: '+JSON.stringify(window.__errs));
+      if(r.info.programs?.some(p=>p.diagnostics?.runnable===false))throw Error('programa WebGL no ejecutable');
       vistas[vistas.length-1].clearance.afterRender=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' después de render');
       if(JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov})!==poseAntes)throw Error('render cambió la pose de cámara: '+tipo+'/'+s+'/'+k);
       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });

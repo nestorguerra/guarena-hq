@@ -241,6 +241,10 @@ vClayP = position; vClayN = objectNormal;
 #ifndef CLAY_CAV
 #define CLAY_CAV 0.12
 #endif
+// Pelusa de la maqueta; los paños pintados pueden pedir una superficie limpia.
+#ifndef CLAY_LINT
+#define CLAY_LINT 1.0
+#endif
 uniform sampler2D uClayTex;
 vec4 clayDetail(vec3 p, vec3 n) { // from the three sides, blended by how the surface faces
   vec3 w = pow(abs(n), vec3(4.0)); w /= max(w.x + w.y + w.z, 1e-4);
@@ -345,7 +349,7 @@ vec3 clayPerturb(vec3 surf_pos, vec3 surf_norm, vec2 dHdxy, float faceDirection)
   // the colour never quite even: kneaded by hand, a little marbled
   float mb = clayNoise(vec3(cp.x * 1.1, cp.y * 2.2, cp.z * 1.1) + 3.1);
   diffuseColor.rgb *= (0.95 + 0.1 * mb * CLAY_TONE) * (1.0 - cl.y * CLAY_TONE);
-  diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.92, 0.9, 0.86) * (0.6 + 0.4 * clayHash(floor(cp / 0.06))), cl.z * 0.7);
+  diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.92, 0.9, 0.86) * (0.6 + 0.4 * clayHash(floor(cp / 0.06))), cl.z * 0.7 * float(CLAY_LINT));
 }
 #endif
 ` + C.roughnessmap_fragment;

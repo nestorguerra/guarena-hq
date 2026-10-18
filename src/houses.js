@@ -330,7 +330,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   const holeDoor = (a, w = 0.9) => [a, a + w, 0, 2.1];
   const winHole = (a, w = 1.3, y0 = 0.95, y1 = 2.05) => [a, a + w, y0, y1];
   // a window seen from inside: sill, glass with the light of the hour, a half-lowered shutter, curtains, a grille (ground floor)
-  const windowIn = (x, z, ry, y = 0, w = 1.3, grille = true) => {
+  const windowIn = (x, z, ry, y = 0, w = 1.3, grille = true, room = null) => {
     const c = Math.cos(ry), s = Math.sin(ry);
     const P = (lx, lz) => [x + lx * c + lz * s, z - lx * s + lz * c];
     const q0 = P(0, -0.03), q1 = P(0, -0.01), q2 = P(0, 0.04), hS = 0.35 + r() * 0.4;
@@ -338,7 +338,8 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     B.add(M.shutter, boxGeo(w, hS, 0.03, 1), q1[0], y + 2.05 - hS / 2, q1[1], ry);
     B.add(M.wood, boxGeo(w + 0.12, 0.06, 0.22, 1), q2[0], y + 0.95, q2[1], ry);
     if (grille) for (let i = 0; i < 7; i++) { const q = P(-w / 2 + 0.12 + (i * (w - 0.24)) / 6, -0.08); B.add(M.iron, boxGeo(0.018, 1.1, 0.018, 1), q[0], y + 1.5, q[1], ry); }
-    for (const sx of [-1, 1]) { const q = P(sx * (w / 2 + 0.06), 0.1); B.add(M.curtain, curtainGeo(0.38, 2.05), q[0], y + 1.2, q[1], ry); }
+    const corta=room?.type==='estudio'&&['artista','estudiante','musico'].includes(prof.id);
+    for (const sx of [-1, 1]) { const q = P(sx * (w / 2 + 0.06), 0.1); B.add(M.curtain, curtainGeo(0.38, corta ? .945 : 2.05), q[0], y + (corta ? 1.7525 : 1.2), q[1], ry); }
     B.view(z < 1 ? 'f' : 'b', x - w / 2, y + 0.95, z - 0.12, x + w / 2, y + 2.05, z + 0.12); // the street shows through it
   };
   const lampAt = (x, z, y, area) => {
@@ -381,7 +382,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
     L[0].win('s', wl - 0.65, wl + 0.65); R[0].win('s', wr - 0.65, wr + 0.65);
-    windowIn(wl, 0.03, 0); windowIn(wr, 0.03, 0);
+    windowIn(wl, 0.03, 0, 0, 1.3, true, L[0]); windowIn(wr, 0.03, 0, 0, 1.3, true, R[0]);
     B.wall(M.wall(1), -hw, 0, -hw, D1); B.wall(M.wall(1), hw, 0, hw, D1);
     // corridor walls with a door into every room
     const holesL = [], holesR = [];
@@ -399,7 +400,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     B.wall(M.wall(3), -hw, D1, hw, D1, WALL_H, backHoles);
     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, WALL_H + 0.25, backHoles, 0, false);
     L[2].win('n', -3.2, -1.9);
-    windowIn(-2.55, D1 - 0.03, Math.PI, 0, 1.3, false);
+    windowIn(-2.55, D1 - 0.03, Math.PI, 0, 1.3, false, L[2]);
     leaf(-0.5, D1, 1, 0, -1, 1.6, 1.0);
     rooms[0].door('n', -0.5, 0.5); rooms[0].door('s', -0.55, 0.55);
     rooms[0].doorsAlong = [...L, ...R].map((rm) => rm.doorAt);
@@ -425,7 +426,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const facadeHoles = [holeDoor(doorX - 0.5 + hw, 1.0), winHole(wx - 0.7 + hw, 1.4)];
     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
-    RR[0].win('s', wx - 0.7, wx + 0.7); windowIn(wx, 0.03, 0, 0, 1.4);
+    RR[0].win('s', wx - 0.7, wx + 0.7); windowIn(wx, 0.03, 0, 0, 1.4, true, RR[0]);
     B.wall(M.wall(1), -hw, 0, -hw, D1); B.wall(M.wall(1), hw, 0, hw, D1);
     const holes = [];
     RR.forEach((rm, i) => { const zc = rm.z0 + 0.65 + r() * Math.max(0, rm.d - 1.5); holes.push(holeDoor(zc - 0.45)); rm.door('w', zc - 0.45, zc + 0.45); rm.doorAt = { x: xr, z: zc, nx: -1, nz: 0 }; leaf(xr, zc - 0.45, 0, 1, 1, ajar()); });
@@ -437,7 +438,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const backHoles = [holeDoor(doorX - 0.5 + hw, 1.0), [kx - 0.65 + hw, kx + 0.65 + hw, 1.0, 2.0]];
     B.wall(M.wall(3), -hw, D1, hw, D1, WALL_H, backHoles);
     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, WALL_H + 0.25, backHoles, 0, false);
-    RR[RR.length - 1].win('n', kx - 0.65, kx + 0.65); windowIn(kx, D1 - 0.03, Math.PI, 0, 1.3, false);
+    RR[RR.length - 1].win('n', kx - 0.65, kx + 0.65); windowIn(kx, D1 - 0.03, Math.PI, 0, 1.3, false, RR[RR.length - 1]);
     leaf(doorX - 0.5, D1, 1, 0, -1, 1.6, 1.0);
     rooms[0].door('n', doorX - 0.5, doorX + 0.5); rooms[0].door('s', doorX - 0.5, doorX + 0.5);
     rooms[0].doorsAlong = RR.map((rm) => rm.doorAt);
@@ -465,7 +466,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const facadeHoles = [holeDoor(doorX - 0.55 + hw, 1.1), winHole(wx - 0.65 + hw)].sort((p, q) => p[0] - q[0]);
     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
-    salon.win('s', wx - 0.65, wx + 0.65); windowIn(wx, 0.03, 0);
+    salon.win('s', wx - 0.65, wx + 0.65); windowIn(wx, 0.03, 0, 0, 1.3, true, salon);
     salon.door('s', doorX - 0.55, doorX + 0.55);
     B.wall(M.wall(0), -hw, 0, -hw, a); B.wall(M.wall(0), hw, 0, hw, a);
     B.wall(M.wall(1), -hw, a, -hw, D1); B.wall(M.wall(2), hw, a, hw, D1, F2);
@@ -525,14 +526,14 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
     const upFacade = fw ? [[hw - 1.3 + hw - 1.0, hw - 0.3 + hw - 1.0, 0, 2.15]] : [winHole(-0.65 + hw)];
     B.wall(M.wall(3), -hw, 0, hw, 0, H2, upFacade, Y);
     B.wall(M.out, -hw, -0.02, hw, -0.02, H2 + 0.3, upFacade, Y, false);
-    if (fw) { up0.win('s', hw - 2.3, hw - 1.3); segs1.push([B.ox + hw - 2.3, B.oz + 0.05, B.ox + hw - 1.3, B.oz + 0.05, 1.1]); windowIn(hw - 1.8, 0.03, 0, Y, 1.0, false); }
-    else { up0.win('s', -0.65, 0.65); windowIn(0, 0.03, 0, Y, 1.3, false); }
+    if (fw) { up0.win('s', hw - 2.3, hw - 1.3); segs1.push([B.ox + hw - 2.3, B.oz + 0.05, B.ox + hw - 1.3, B.oz + 0.05, 1.1]); windowIn(hw - 1.8, 0.03, 0, Y, 1.0, false, up0); }
+    else { up0.win('s', -0.65, 0.65); windowIn(0, 0.03, 0, Y, 1.3, false, up0); }
     B.wall(M.wall(3), -hw, 0, -hw, SZ0, H2, [], Y); B.wall(M.wall(3), hw, 0, hw, SZ0, H2, [], Y);
     B.wall(M.wall(1), -hw, SZ0, -hw, D1, H2, [], Y); B.wall(M.wall(2), hw, SZ0, hw, D1, H2, [], Y);
     const upBack = [[0.9, 2.0, 1.1, 1.9]];
     B.wall(M.wall(1), -hw, D1, hw, D1, H2, upBack, Y);
     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, H2 + 0.3, upBack, Y, false);
-    up2.win('n', -hw + 0.9, -hw + 2.0); windowIn(-hw + 1.45, D1 - 0.03, Math.PI, Y, 1.1, false);
+    up2.win('n', -hw + 0.9, -hw + 2.0); windowIn(-hw + 1.45, D1 - 0.03, Math.PI, Y, 1.1, false, up2);
     // bedroom door from the landing (beside the stairwell), and the two back rooms' doors
     B.wall(M.wall(3), -hw, SZ0, hw, SZ0, H2, [holeDoor(xk + 0.1 + hw)], Y);
     up0.door('n', xk + 0.1, xk + 1.0); land.door('s', xk + 0.1, xk + 1.0);
@@ -562,7 +563,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // patio walls (over them, the roofs of the neighbours)
   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
   B.view('b', -hw, 3.2, D1, hw, 40, D);
-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
+  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
     // tiled skirting 1.1 m high round the room (skipping doors)
     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
       const along = side === 's' || side === 'n';
@@ -1138,9 +1139,9 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
-    if(rm.type!=='bano'&&rm.type!=='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
+    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
     const porKit = amueblarEstancia(rm);
-    if(rm.type==='bano'||rm.type==='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
+    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
     if (!porKit) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }

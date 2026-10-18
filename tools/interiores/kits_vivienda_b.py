@@ -20,6 +20,29 @@ def infantiles(C):
     # aparece en mesita o estante; no se añaden referencias ajenas para sumar IDs.
     return bajos,[i for i in bajos if altura(i)<=.160001]
 
+def programa_estudio(p,C):
+    """Receta base para contextos no optantes; frente adulto R2 en tres perfiles."""
+    base=copy.deepcopy(p);perfiles=['artista','estudiante','musico']
+    for e in base:e['perfil']=['!'+x for x in perfiles]
+    mesa='vb_puesto_estudio_amplio';bajo='vb_guardado_estudio';bib='vb_biblioteca_estudio'
+    nuevo=[E('contra_pared',mesa,pared=['N','S','E','W'],centrado=True,cantidad=[1,1],obligatorio=True,preferir=True,silla_frontal='vb_silla_estudio',grupo_pared='trabajo_consulta'),
+           junto(bajo,[mesa],True,buscar_refs=True,si_no=False,grupo_pared='trabajo_consulta',espacio_frontal=[.70,.8]),
+           junto(bib,[bajo],True,buscar_refs=True,si_no=True,grupo_pared='trabajo_consulta',espacio_frontal=[.75,.8]),
+           E('sobre','vb_ordenador',en=[mesa],cantidad=[1,1],obligatorio=True,centrado=True)]
+    for tema in perfiles:nuevo.append(E('sobre','vb_panel_estudio_'+tema,en=[mesa],cantidad=[1,1],obligatorio=True,centrado=True,perfil=[tema]))
+    nuevo += [E('enfrente','vb_sillon_estudio',de=[mesa],cantidad=[0,1],preferir=True,area_min=11,si_no=False,espacio_frontal=[.70,.8]),
+              junto('mesa_auxiliar_lectura',['vb_sillon_estudio'],si_no=False,area_min=11),E('sobre','libro_tumbado',en=['mesa_auxiliar_lectura'],cantidad=[0,1],preferir=True,centrado=True,area_min=11),
+              E('sobre','vb_consulta_baja_estudio',en=[bajo],cantidad=[1,1],obligatorio=True,centrado=True,area_min=16)]
+    for tema in perfiles:nuevo.append(E('sobre','vb_consulta_estudio_'+tema,en=[bib],cantidad=[2,2],obligatorio=True,centrado=True,perfil=[tema]))
+    # Pool adulto existente: sólo sobre biblioteca, nunca sus hileras en el bajo.
+    libros=[i for i,o in C.items()if i.startswith('lb_') and o['soporte']=='superficie' and i not in ['lb_libros_infantiles','lb_libros_morados','lb_agendas']]
+    nuevo += [E('sobre',libros,en=[bib],cantidad=[0,1],preferir=True,centrado=True),
+              E('sobre',['bloc_notas','vb_cuaderno','vb_partituras','grapadora','libro_tumbado'],en=[bajo],por_soporte=[0,1],area_max=16),
+              E('pared',['cuadro_paisaje','fotos_familia','poster_enmarcado'],pared='*',cantidad=[0,1],preferir=True),copy.deepcopy(p[-1])]
+    for e in nuevo:
+        if 'perfil' not in e:e['perfil']=perfiles.copy()
+    return base+nuevo
+
 def generar():
     C=catalogo();mood=json.load(open(os.path.join(ROOT,'tools','interiores','moodboard_vivienda_b.json')))
     dormitorio=[pared('vb_cama_doble',habitacion=['dorm'],area_max=18,centrado=True),pared('vb_cama_amplia',habitacion=['dorm'],area_min=18,centrado=True),pared(['vb_cama_individual','vb_cama_doble'],habitacion=['dorm2']),junto('vb_mesita',['vb_cama_doble','vb_cama_individual','vb_cama_amplia'],True),pared('vb_armario'),pared('vb_comoda',False),junto('vb_mesita',['vb_cama_doble','vb_cama_individual','vb_cama_amplia'],area_min=16),pared('sillon_orejero',False,area_min=16),pared('vb_escritorio',False,area_min=22),junto('silla_comedor','vb_escritorio',lados=['frente'],mira_ref=True,area_min=22),pared('estanteria_libros',False,area_min=22),E('suelo_libre','vb_alfombra',cantidad=[0,1],area_min=16,area_max=26),E('suelo_libre','vb_alfombra',cantidad=[1,1],area_min=26,obligatorio=True),E('pared',['fotos_familia','cuadro_paisaje','cuadro_foto_antigua','cuadro_virgen','poster_enmarcado'],pared='*',cantidad=[1,3])]+adornos(personales(C),['vb_mesita','vb_comoda','vb_escritorio'])
@@ -69,6 +92,7 @@ def generar():
             p[-2]=E('sobre','vb_ordenador',en=mesas,cantidad=[1,1])
             p += [junto('vb_mesa_lectura','sillon_orejero',lados=['derecha','izquierda']),E('suelo_libre','vb_alfombra',cantidad=[0,1],preferir=True,area_min=13)]
         p+=adornos([x for x in papeles if x!='vb_ordenador'] if id=='despacho' else papeles,(mesas if id=='despacho' else ['vb_escritorio'])+['vb_comoda','estanteria_libros'])
+        if id=='estudio':p=programa_estudio(p,C)
         kit(id,nombre,'otra_estancia',p,mood[id],fondo=(2.1,5))
     musica=[pared('piano_pared'),junto('banqueta_piano','piano_pared',lados=['frente'],mira_ref=True),pared('guitarra_soporte'),pared('guitarra_soporte',False,botin='guitarra'),pared('vb_altavoz'),pared('vb_altavoz',False,botin='altavoz'),pared('estanteria_libros',False),pared('vb_escritorio',False),E('sobre','vb_vinilos',en=['vb_escritorio'],cantidad=[0,1],botin='vinilos'),E('pared',['poster_enmarcado','cuadro_paisaje'],pared='*',cantidad=[1,3])]+adornos(papeles+['vb_vinilos','vb_partituras','vb_auriculares','vb_metronomo'],['vb_escritorio','estanteria_libros'])
     kit('musica','Cuarto de música','otra_estancia',musica,mood['musica'],fondo=(2.1,5))

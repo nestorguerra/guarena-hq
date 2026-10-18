@@ -1,0 +1,21 @@
+{
+  "state": "PASS_CPU_FINAL_AND_PATCH_DRYRUN",
+  "syntax": "all private Python AST and JS --check PASS",
+  "patchDryRun": [
+    "git apply --check greybox_r2_contra_t16.patch PASS against active T16 read-only",
+    "git apply --check --directory=R1/candidata orden_r2_contra_r1.patch PASS read-only"
+  ],
+  "activeCriticalBytesUnchanged": {
+    "src/locales.js": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f",
+    "src/houses.js": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+    "src/acabados_vivienda.js": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+    "src/casa_annie.js": "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09",
+    "tools/interiores/validar.js": "9f23556c92001f384e39a828926a32ddd1f97576175cb7250fa27d18c6460f5d",
+    "data/kits/vivienda_estudio.json": "758fc3ae8bc7e1491f86d98538f079e25542fa98dc5863970da624003b56a049",
+    "data/objetos/vivienda_b.json": "42d80ffe515d45e7f3dde04b602601ac008b3e184ca9150f5f0bf83b4b8f769e"
+  },
+  "R1ManifestAnd45FilesUnchanged": true,
+  "noGPU": true,
+  "noActiveWrites": true,
+  "productionFallbackPositiveNotRun": true
+}

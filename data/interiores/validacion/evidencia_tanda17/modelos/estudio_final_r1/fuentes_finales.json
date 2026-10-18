@@ -1,0 +1,47 @@
+{
+  "combinedSources": [
+    "tools/interiores/catalogo_vivienda_b.py",
+    "tools/interiores/kits_vivienda_b.py",
+    "src/texturas/vivienda_b.js",
+    "src/houses.js",
+    "src/acabados_vivienda.js"
+  ],
+  "includesRootFinishR2": true,
+  "rootFinishPatchSha256": "35515f621d0051b3d2e1afcece1337b2ded07a523058b4a43f4756feef298279",
+  "patchSha256": "222f89128d77a6ff61a28d2d226c192765877cdd1cb0116625a2b94601bb0dd9",
+  "changedCandidateFiles": [
+    "tools/interiores/catalogo_vivienda_b.py",
+    "tools/interiores/kits_vivienda_b.py",
+    "data/interiores/datos.json",
+    "data/kits/vivienda_estudio.json",
+    "data/objetos/vivienda_b.json",
+    "src/interiores_datos.js",
+    "src/houses.js",
+    "src/acabados_vivienda.js",
+    "src/texturas/vivienda_b.js"
+  ],
+  "sources": {
+    "tools/interiores/catalogo_vivienda_b.py": {
+      "base": "59410aeb5fe499213ab19ff528acc131aae08aa3e582d0cd76f88a6ea93e9f70",
+      "final": "ab1662cd752e4246b4c4173d67b2de6a00d70096bec703e51f876d5edf19280f"
+    },
+    "tools/interiores/kits_vivienda_b.py": {
+      "base": "486141fa1c52bb22a71c92c5a08a81047562e6bad04495d8a85d4a5a1517a551",
+      "final": "a4f36f87975650fff14f0a24e95a922b9204a2a363d9415699c4c84dab2ce2cd"
+    },
+    "src/texturas/vivienda_b.js": {
+      "base": "508048d8b58ab97b9464c717994c7f518f45432d080bf7f6a4a418b6171f61b2",
+      "final": "495260611de11b2860621e19862fb14c077daaff35b360e9a936b94b7afeffbe"
+    },
+    "src/houses.js": {
+      "base": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+      "final": "8c8eb246c0b919abdd0f807122272eadafc40d83033ac0dc6348cb7f51d12983"
+    },
+    "src/acabados_vivienda.js": {
+      "base": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+      "final": "843cb7422549df103084a39ff0525cb1fe1d328119e1913de02457e773a500b8"
+    }
+  },
+  "annieSha256": "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09",
+  "engineUnchanged": true
+}
