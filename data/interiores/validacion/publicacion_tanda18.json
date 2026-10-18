@@ -1,0 +1,40 @@
+{
+ "tanda": 18,
+ "fecha": "2026-10-18T04:26:12.810964+00:00",
+ "estado": "publicada_y_verificada",
+ "commit": "fa499954f4a7a6b24c4b2e4b9f91f621ed0dc447",
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=fa499954f4a7a6b24c4b2e4b9f91f621ed0dc447",
+ "ci": {
+  "run": 39096586804,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39096586804",
+  "arbol_ci_y_head_identico": "5b034416c861d6ff89cad698286c5d76a7329cf8"
+ },
+ "pages": {
+  "run": 39096885748,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39096885748"
+ },
+ "integracion": {
+  "informe": "data/interiores/validacion/integracion_publica_tanda18.json",
+  "sha256": "7fd6f39be97dd447375dbeed743702136fb4f67550b90c33d5443931d7f3983b",
+  "estado": "PASS",
+  "casas": 8,
+  "salones_reales": [
+   1594,
+   3244
+  ],
+  "annie_kits": 5,
+  "comercios_con_acciones": 3,
+  "partida_ficticia_y_recarga": true,
+  "revision_antes_y_despues": "fa499954f4a7a6b24c4b2e4b9f91f621ed0dc447",
+  "maximo_entrada_ms": 189.4,
+  "annie_entrada_ms": 94.9
+ },
+ "visual": {
+  "A": 3.248,
+  "B": 3.366,
+  "objetivo_4_alcanzado": false
+ },
+ "limites": "Muestras en M1; no acredita rendimiento universal ni calidad visual4/5. Comprueba acciones comerciales presentes sin compras; registro exacto del asiento de lectura sin ejecutar sentarse. Botín se cubre en CI; no se repite su recogida públicamente aquí."
+}
