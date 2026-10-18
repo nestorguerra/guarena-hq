@@ -1,0 +1,538 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "data/kits/kit.schema.json",
+ "title": "Kit de objetos de una tipología de interior (backlog técnico, I-02)",
+ "type": "object",
+ "required": [
+  "tipologia",
+  "nombre",
+  "superficie",
+  "zonas",
+  "objetos",
+  "iluminacion",
+  "ambiente",
+  "minimo_objetos_distintos",
+  "moodboard"
+ ],
+ "properties": {
+  "tipologia": {
+   "enum": [
+    "alimentacion",
+    "tienda_ropa",
+    "tienda_especializada",
+    "farmacia",
+    "restaurante",
+    "bar",
+    "cafeteria",
+    "sucursal_bancaria",
+    "gimnasio",
+    "oficina",
+    "salon",
+    "cocina",
+    "dormitorio",
+    "bano",
+    "otra_estancia"
+   ]
+  },
+  "nombre": {
+   "type": "string"
+  },
+  "nota": {
+   "type": "string"
+  },
+  "superficie": {
+   "type": "object",
+   "required": [
+    "ancho",
+    "fondo"
+   ],
+   "properties": {
+    "ancho": {
+     "type": "array"
+    },
+    "fondo": {
+     "type": "array"
+    },
+    "alto": {
+     "type": "number"
+    }
+   }
+  },
+  "variables": {
+   "type": "object"
+  },
+  "puerta": {},
+  "paso_libre": {
+   "type": "number"
+  },
+  "pared": {
+   "type": "string"
+  },
+  "suelo": {
+   "type": "string"
+  },
+  "suelo_color": {
+   "type": "string"
+  },
+  "puntos": {
+   "type": "object"
+  },
+  "pedir": {
+   "type": "string"
+  },
+  "zonas": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "rect"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "publica": {
+      "type": "boolean"
+     },
+     "rect": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  "tabiques": {
+   "type": "array"
+  },
+  "libres": {
+   "type": "array",
+   "description": "rectángulos que se dejan libres de muebles (el sitio para pedir en la barra, un paso)",
+   "items": {
+    "type": "object",
+    "required": [
+     "rect"
+    ],
+    "properties": {
+     "rect": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+     },
+     "nota": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "objetos": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "zona",
+     "regla"
+    ],
+    "properties": {
+     "zona": {
+      "type": "string"
+     },
+     "obj": {
+      "type": "string"
+     },
+     "variantes": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "regla": {
+      "enum": [
+       "modulos",
+       "filas",
+       "fila",
+       "contra_pared",
+       "pared",
+       "esquina",
+       "suelo_libre",
+       "conjunto",
+       "sobre",
+       "vida",
+       "techo",
+       "enfrente",
+       "entre",
+       "junto_a"
+      ]
+     },
+     "obligatorio": {
+      "type": "boolean"
+     },
+     "vende": {
+      "description": "lo que se compra donde está (un id de src/items.js, o varios): un punto de compra delante de las primeras piezas de la entrada"
+     },
+     "interaccion": {
+      "type": "object",
+      "description": "algo que hacer allí, de las del juego (p. ej. {\"type\": \"train\", \"label\": \"Entrenar una hora\"} en las máquinas del gimnasio): delante de las primeras piezas de la entrada"
+     },
+     "maximo": {
+      "type": "number",
+      "description": "en una fila de pared (cada), cuántas piezas como mucho"
+     },
+     "perfil": {
+      "type": "array",
+      "description": "solo en las casas de estos vecinos (src/houses.js PROFILES: abuela, matrimonio, familia, estudiante, cazador, musico, rico, agricultor, artista); «!x» excluye"
+     },
+     "estilo": {
+      "type": "array",
+      "description": "solo en las casas de estos estilos (antiguo, rustico, moderno, alegre, joven, lujo, bohemio); «!x» excluye"
+     },
+     "botin": {
+      "type": "string",
+      "description": "una cosa que se puede llevar (src/houses.js LOOT): la entrada solo se pone si el perfil de la casa la tiene, y lo puesto es el botín"
+     },
+     "de": {
+      "description": "enfrente: la pieza (o piezas) contra cuya pared de enfrente se pone"
+     },
+     "a": {
+      "description": "entre: la primera pieza"
+     },
+     "b": {
+      "description": "entre: la segunda (la nueva mira como ella, girada)"
+     },
+     "habitacion": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "area_min": {
+      "type": "number",
+      "minimum": 0
+     },
+     "lados": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "derecha",
+        "izquierda",
+        "frente"
+       ]
+      }
+     },
+     "mira_ref": {
+      "type": "boolean"
+     },
+     "buscar_refs": {
+      "type": "boolean",
+      "description": "En junto_a, prueba todos los módulos de referencia antes de buscar otra pared."
+     },
+     "area_max": {
+      "type": "number",
+      "minimum": 0
+     },
+     "centrado": {
+      "type": "boolean"
+     },
+     "preferir": {
+      "type": "boolean",
+      "description": "Intenta el máximo de cantidad; el mínimo conserva los obligatorios."
+     },
+     "silla_frontal": {
+      "type": "string",
+      "description": "Asiento que se coloca y valida delante del mueble contra pared como parte del mismo puesto."
+     },
+     "espacio_frontal": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number",
+       "exclusiveMinimum": 0
+      },
+      "description": "Anchura y fondo del espacio de uso libre delante del objeto, en metros."
+     },
+     "grupo_pared": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Grupo opcional de 2–4 módulos de suelo, obj fijo y entradas activas consecutivas. Raíz contra_pared obligatoria y unitaria; acompañantes junto_a unitarios obligatorios o preferir:true/cantidad:[0,1]. Cada de admite el obj inmediatamente anterior. Se prueba el conjunto completo; al fallar se conservan las reglas individuales y la opcionalidad."
+     },
+     "reserva_lateral": {
+      "type": "object",
+      "properties": {
+       "obj": {
+        "type": "string"
+       },
+       "lado": {
+        "enum": [
+         "izquierda",
+         "derecha"
+        ]
+       }
+      },
+      "required": [
+       "obj",
+       "lado"
+      ],
+      "additionalProperties": false,
+      "description": "Precondición de la raíz de grupo_pared: debe caber este acompañante de pared al lado indicado. Prueba su volumen real sin colocarlo ni sustituir su entrada posterior. No cambia los mínimos ni actúa como collider."
+     },
+     "sobre_de": {
+      "type": "string",
+      "description": "Mueble de referencia para pared o luminaria de techo; el techo sigue su centro en planta."
+     },
+     "separacion_frontal": {
+      "type": "number",
+      "minimum": 0.06,
+      "maximum": 1,
+      "description": "Holgura frontal entre referencia y acompañante, por defecto 0.06 m. Sólo junto_a sin grupo_pared y con frente explícito en lados; no cambia laterales ni el fallback a pared."
+     },
+     "separacion_pared": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.5,
+      "description": "Distancia de la trasera a la pared, por defecto 0.01 m (sustituye esa holgura, no la suma). Sólo contra_pared/enfrente individual, sin grupo_pared; otros usos se rechazan al amueblar."
+     },
+     "suelo_determinista": {
+      "type": "boolean",
+      "description": "Opt-in sólo suelo_libre con obj fijo y obligatorio:true. Tras200intentos aleatorios incompletos prueba cuatro ejes y rejilla finita, sin relajar guardas ni tocar una colocación exitosa."
+     },
+     "fase": {
+      "enum": [
+       "composicion_cocina"
+      ]
+     }
+    }
+   }
+  },
+  "iluminacion": {
+   "type": "object",
+   "required": [
+    "fuentes",
+    "temperatura_k"
+   ],
+   "properties": {
+    "fuentes": {
+     "type": "array"
+    },
+    "temperatura_k": {
+     "type": "array"
+    }
+   }
+  },
+  "ambiente": {
+   "type": "object",
+   "required": [
+    "sonido",
+    "vida"
+   ],
+   "properties": {
+    "sonido": {
+     "type": "string"
+    },
+    "vida": {
+     "type": "array"
+    },
+    "horario_defecto": {
+     "type": "string"
+    },
+    "cerrado": {
+     "type": "string"
+    },
+    "clientela": {
+     "type": "object",
+     "description": "la gente sentada en sus asientos (I-08): cuántos como mucho, qué parte de los asientos se llena a cada hora y lo que dicen",
+     "required": [
+      "maximo",
+      "horas"
+     ],
+     "properties": {
+      "maximo": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 12
+      },
+      "horas": {
+       "type": "array",
+       "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3
+       }
+      },
+      "frases": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      }
+     },
+     "additionalProperties": false
+    }
+   }
+  },
+  "minimo_objetos_distintos": {
+   "type": "number"
+  },
+  "moodboard": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "url",
+     "autor",
+     "licencia"
+    ],
+    "properties": {
+     "url": {
+      "type": "string"
+     },
+     "autor": {
+      "type": "string"
+     },
+     "licencia": {
+      "type": "string"
+     },
+     "titulo": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "composicion_cocina": {
+   "type": "object",
+   "required": [
+    "actividad",
+    "versiones"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "actividad": {
+     "type": "string"
+    },
+    "versiones": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "referencias",
+       "alacena",
+       "alacena_amplia",
+       "alto",
+       "alto_amplio",
+       "preparacion",
+       "preparacion_amplia",
+       "cocina",
+       "cocina_amplia"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "referencias": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "alacena": {
+        "type": "string"
+       },
+       "alacena_amplia": {
+        "type": "string"
+       },
+       "alto": {
+        "type": "string"
+       },
+       "alto_amplio": {
+        "type": "string"
+       },
+       "preparacion": {
+        "type": "string"
+       },
+       "preparacion_amplia": {
+        "type": "string"
+       },
+       "cocina": {
+        "type": "string"
+       },
+       "cocina_amplia": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  "composicion_lectura": {
+   "type": "object",
+   "required": [
+    "area_min",
+    "perfiles",
+    "biblioteca",
+    "asiento",
+    "mesita",
+    "lampara",
+    "paredes"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "area_min": {
+     "type": "number",
+     "minimum": 0
+    },
+    "perfiles": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "biblioteca": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "asiento": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "mesita": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "lampara": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {
+      "type": "string"
+     }
+    },
+    "paredes": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "uniqueItems": true,
+     "items": {
+      "enum": [
+       "E",
+       "W",
+       "N",
+       "S"
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,187 @@
+{
+ "request_id": "req_d8129d6dc81f4f73a461554550022581",
+ "request_sha256": "1fc5c608f7190a020bdc096072f4cd3347c0e62d379dfef85f0614be9dcff05f",
+ "ficha_sha256": "c8a411c871c821ad153645e46117ca99b7098a27bba8241c8f6e581fae7cf792",
+ "respuesta": {
+  "model": "gpt-6-luna",
+  "answers": [
+   {
+    "type": "score",
+    "name": "densidad",
+    "score": 2.01,
+    "probabilities": [
+     {
+      "value": 0,
+      "label": "1",
+      "probability": 0.0
+     },
+     {
+      "value": 1,
+      "label": "2",
+      "probability": 0.04
+     },
+     {
+      "value": 2,
+      "label": "3",
+      "probability": 0.91
+     },
+     {
+      "value": 3,
+      "label": "4",
+      "probability": 0.05
+     },
+     {
+      "value": 4,
+      "label": "5",
+      "probability": 0.0
+     }
+    ],
+    "confidence": 0.93
+   },
+   {
+    "type": "score",
+    "name": "coherencia",
+    "score": 2.42,
+    "probabilities": [
+     {
+      "value": 0,
+      "label": "1",
+      "probability": 0.0
+     },
+     {
+      "value": 1,
+      "label": "2",
+      "probability": 0.04
+     },
+     {
+      "value": 2,
+      "label": "3",
+      "probability": 0.52
+     },
+     {
+      "value": 3,
+      "label": "4",
+      "probability": 0.42
+     },
+     {
+      "value": 4,
+      "label": "5",
+      "probability": 0.02
+     }
+    ],
+    "confidence": 0.58
+   },
+   {
+    "type": "score",
+    "name": "iluminacion",
+    "score": 2.94,
+    "probabilities": [
+     {
+      "value": 0,
+      "label": "1",
+      "probability": 0.0
+     },
+     {
+      "value": 1,
+      "label": "2",
+      "probability": 0.01
+     },
+     {
+      "value": 2,
+      "label": "3",
+      "probability": 0.11
+     },
+     {
+      "value": 3,
+      "label": "4",
+      "probability": 0.81
+     },
+     {
+      "value": 4,
+      "label": "5",
+      "probability": 0.07
+     }
+    ],
+    "confidence": 0.83
+   },
+   {
+    "type": "score",
+    "name": "variedad",
+    "score": 2.11,
+    "probabilities": [
+     {
+      "value": 0,
+      "label": "1",
+      "probability": 0.0
+     },
+     {
+      "value": 1,
+      "label": "2",
+      "probability": 0.04
+     },
+     {
+      "value": 2,
+      "label": "3",
+      "probability": 0.82
+     },
+     {
+      "value": 3,
+      "label": "4",
+      "probability": 0.13
+     },
+     {
+      "value": 4,
+      "label": "5",
+      "probability": 0.01
+     }
+    ],
+    "confidence": 0.84
+   },
+   {
+    "type": "score",
+    "name": "lectura_funcional",
+    "score": 2.05,
+    "probabilities": [
+     {
+      "value": 0,
+      "label": "1",
+      "probability": 0.0
+     },
+     {
+      "value": 1,
+      "label": "2",
+      "probability": 0.03
+     },
+     {
+      "value": 2,
+      "label": "3",
+      "probability": 0.89
+     },
+     {
+      "value": 3,
+      "label": "4",
+      "probability": 0.08
+     },
+     {
+      "value": 4,
+      "label": "5",
+      "probability": 0.0
+     }
+    ],
+    "confidence": 0.91
+   }
+  ],
+  "usage": {
+   "input_tokens": 3985,
+   "input_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0
+   },
+   "output_tokens": 0,
+   "output_tokens_details": {
+    "reasoning_tokens": 0
+   },
+   "total_tokens": 3985
+  }
+ }
+}

@@ -60,6 +60,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
   if (!K) throw new Error('sin kit: ' + kit);
   // Separación optativa sólo en piezas individuales, nunca en grupos modulares.
   for(const e of K.objetos)if(e.separacion_pared!=null&&(!['contra_pared','enfrente'].includes(e.regla)||e.grupo_pared))throw new Error('separacion_pared sólo admite contra_pared/enfrente sin grupo_pared');
+  for(const e of K.objetos)if(e.separacion_frontal!=null&&(!Number.isFinite(e.separacion_frontal)||e.separacion_frontal<.06||e.separacion_frontal>1||e.regla!=='junto_a'||e.grupo_pared||!e.lados?.includes('frente')))throw new Error('separacion_frontal exige junto_a sin grupo, lado frente y distancia entre .06 y 1 m');
   const tipologia = K.tipologia, reservaUso=K.objetos.some(e=>e.espacio_frontal);
   const r = mulberry32((seed * 2654435761 + 97) >>> 0);
   const U = (a) => (Array.isArray(a) ? a[0] + r() * (a[1] - a[0]) : a);
@@ -189,7 +190,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
         referencias: for(const ref of refs) for(const lado of lados) {
           const rb=caja(ref.obj);
           const lx=lado==='derecha'?rb.x1+b.w/2+.04:lado==='izquierda'?rb.x0-b.w/2-.04:(rb.x0+rb.x1)/2;
-          const lz=lado==='frente'?rb.z1+b.d/2+.06:rb.z0+b.d/2;
+          const lz=lado==='frente'?rb.z1+b.d/2+(e.separacion_frontal??.06):rb.z0+b.d/2;
           const [dx,dz]=rot(lx,lz,ref.ry), ry=ref.ry+(lado==='frente'&&e.mira_ref?Math.PI:0);
           let [x,z]=origen(obj,ref.x+dx,ref.z+dz,ry);
           if(OBJETOS[obj].soporte==='pared'){

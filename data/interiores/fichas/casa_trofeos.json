@@ -14,28 +14,201 @@
   "dpr": 1,
   "vistas": [
    {
-    "encuadre": "uso",
-    "x": -5195.773435970502,
-    "y": 1.6,
-    "z": -5198.588799228519,
-    "objetivo": [
-     -5197.091614235609,
-     1.05,
-     -5198.235999035649
-    ],
-    "fov": 68
-   },
-   {
-    "encuadre": "conjunto",
-    "x": -5197.091614235609,
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5198.761306704745,
+       "z": -5196.895358302742
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5198.761306704745,
+       "z": -5196.895358302742
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5198.761306704745,
+       "z": -5196.895358302742
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "frente_completo",
+    "x": -5198.761306704745,
     "y": 1.6,
     "z": -5196.895358302742,
     "objetivo": [
-     -5197.091614235609,
-     1.4,
-     -5198.235999035649
+     -5195.115250460802,
+     1.0885285142436625,
+     -5198.633000016689
     ],
-    "fov": 68
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_armero",
+     "vb_guardado_campo",
+     "vb_banco_equipo_campo",
+     "vb_cornamenta",
+     "vb_cornamenta"
+    ]
+   },
+   {
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5196.212828725537,
+       "z": -5198.235999035649
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5196.212828725537,
+       "z": -5198.235999035649
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5196.212828725537,
+       "z": -5198.235999035649
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.873578010788,
+       "x1": -5195.30965046043,
+       "z0": -5199.585,
+       "z1": -5196.886998071298
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "consulta_completa",
+    "cobertura_consulta": {
+     "esquinas_evaluadas": 16,
+     "esquinas_recortadas": 0,
+     "visibilidad": [
+      {
+       "obj": "vb_sillon_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      },
+      {
+       "obj": "vb_mesa_consulta_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      }
+     ],
+     "limite": 0.6,
+     "limites": "Cinco rayos por raíz; lectura humana adicional obligatoria."
+    },
+    "x": -5196.212828725537,
+    "y": 1.6,
+    "z": -5198.235999035649,
+    "objetivo": [
+     -5197.895663677742,
+     0.5643407079577445,
+     -5198.307473204733
+    ],
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_sillon_campo",
+     "vb_mesa_consulta_campo"
+    ]
    }
   ]
  },
@@ -54,28 +227,201 @@
   "dpr": 1,
   "vistas": [
    {
-    "encuadre": "uso",
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5196.309255339432,
+       "z": -5198.820143560064
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5196.309255339432,
+       "z": -5198.820143560064
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5196.309255339432,
+       "z": -5198.820143560064
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "frente_completo",
     "x": -5196.309255339432,
     "y": 1.6,
     "z": -5198.820143560064,
     "objetivo": [
-     -5197.184741805824,
-     1.05,
-     -5198.033572600107
+     -5197.106457988495,
+     1.0885285142436625,
+     -5196.287745200585
     ],
-    "fov": 68
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_armero",
+     "vb_guardado_campo",
+     "vb_banco_equipo_campo",
+     "vb_cornamenta",
+     "vb_cornamenta"
+    ]
    },
    {
-    "encuadre": "conjunto",
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5198.497971505414,
+       "z": -5198.426858080085
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5198.497971505414,
+       "z": -5198.426858080085
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5198.497971505414,
+       "z": -5198.426858080085
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.958457971807,
+       "x1": -5195.411025639842,
+       "z0": -5199.585,
+       "z1": -5196.482145200213
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "consulta_completa",
+    "cobertura_consulta": {
+     "esquinas_evaluadas": 16,
+     "esquinas_recortadas": 0,
+     "visibilidad": [
+      {
+       "obj": "vb_sillon_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      },
+      {
+       "obj": "vb_mesa_consulta_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      }
+     ],
+     "limite": 0.6,
+     "limites": "Cinco rayos por raíz; lectura humana adicional obligatoria."
+    },
     "x": -5198.497971505414,
     "y": 1.6,
-    "z": -5199.213429040043,
+    "z": -5198.426858080085,
     "objetivo": [
-     -5197.184741805824,
-     1.4,
-     -5198.033572600107
+     -5197.180931176538,
+     0.5643407079577445,
+     -5198.607085666955
     ],
-    "fov": 68
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_sillon_campo",
+     "vb_mesa_consulta_campo"
+    ]
    }
   ]
  },
@@ -94,28 +440,201 @@
   "dpr": 1,
   "vistas": [
    {
-    "encuadre": "uso",
-    "x": -5195.779459717715,
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5197.540288182397,
+       "z": -5199.283876459161
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5197.540288182397,
+       "z": -5199.283876459161
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5197.540288182397,
+       "z": -5199.283876459161
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "frente_completo",
+    "x": -5197.540288182397,
     "y": 1.6,
-    "z": -5198.567752918321,
+    "z": -5199.283876459161,
     "objetivo": [
-     -5197.100081066226,
-     1.05,
-     -5198.209691147902
+     -5195.119645485746,
+     1.0885285142436625,
+     -5198.633000016689
     ],
-    "fov": 68
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_armero",
+     "vb_guardado_campo",
+     "vb_banco_equipo_campo",
+     "vb_cornamenta",
+     "vb_cornamenta"
+    ]
    },
    {
-    "encuadre": "conjunto",
-    "x": -5196.659873950056,
+    "clearance": {
+     "candidate": {
+      "free": true,
+      "position": {
+       "x": -5197.100081066226,
+       "z": -5196.8490564203075
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "beforeRender": {
+      "free": true,
+      "position": {
+       "x": -5197.100081066226,
+       "z": -5196.8490564203075
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     },
+     "afterRender": {
+      "free": true,
+      "position": {
+       "x": -5197.100081066226,
+       "z": -5196.8490564203075
+      },
+      "radius": 0.34,
+      "tolerance": 1e-06,
+      "bounds": {
+       "x0": -5198.886116647078,
+       "x1": -5195.314045485375,
+       "z0": -5199.585,
+       "z1": -5196.834382295804
+      },
+      "inBounds": true,
+      "delta": 0,
+      "contact": false,
+      "depth": 0,
+      "insideFloorFurniture": [],
+      "circleCentres": [],
+      "testedOnlyOnClone": true,
+      "cameraMoved": false
+     }
+    },
+    "encuadre": "consulta_completa",
+    "cobertura_consulta": {
+     "esquinas_evaluadas": 16,
+     "esquinas_recortadas": 0,
+     "visibilidad": [
+      {
+       "obj": "vb_sillon_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      },
+      {
+       "obj": "vb_mesa_consulta_campo",
+       "muestras": 5,
+       "visibles": 5,
+       "fraccion": 1
+      }
+     ],
+     "limite": 0.6,
+     "limites": "Cinco rayos por raíz; lectura humana adicional obligatoria."
+    },
+    "x": -5197.100081066226,
     "y": 1.6,
-    "z": -5197.1355058366435,
+    "z": -5196.8490564203075,
     "objetivo": [
-     -5197.100081066226,
-     1.4,
-     -5198.209691147902
+     -5197.908202314033,
+     0.5643407079577445,
+     -5198.207473204732
     ],
-    "fov": 68
+    "fov": 68,
+    "objetos_objetivo": [
+     "vb_sillon_campo",
+     "vb_mesa_consulta_campo"
+    ]
    }
   ]
  }

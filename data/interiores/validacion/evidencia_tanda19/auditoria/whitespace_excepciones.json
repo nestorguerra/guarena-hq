@@ -1,0 +1,12 @@
+{
+ "estado": "FUENTES_PRODUCTO_PASS_EVIDENCIAS_CRUDAS_CONSERVADAS",
+ "git_diff_cached_check_exit": 2,
+ "rutas": [
+  "data/interiores/validacion/evidencia_tanda19/contratos/contratos.patch",
+  "data/interiores/validacion/evidencia_tanda19/gates/contratos.log",
+  "data/interiores/validacion/evidencia_tanda19/instrumentacion/revision_R7/base.js"
+ ],
+ "fuentes_y_docs_sin_evidencia_exit": 0,
+ "motivo": "Espacios finales en log stdout y contexto de patch/JS generado ya auditados por hash. Se conservan bytes de evidencia; no afectan código de producto ni validación funcional.",
+ "sha256_salida": "a5bfc20cc24b7d1e70ac5dcd0f8f45d44e8b6c06d5c343baad362f9fd8831a2f"
+}

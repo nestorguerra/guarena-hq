@@ -280,6 +280,12 @@
       "type": "string",
       "description": "Mueble de referencia para pared o luminaria de techo; el techo sigue su centro en planta."
      },
+     "separacion_frontal": {
+      "type": "number",
+      "minimum": 0.06,
+      "maximum": 1,
+      "description": "Holgura frontal entre referencia y acompañante, por defecto 0.06 m. Sólo junto_a sin grupo_pared y con frente explícito en lados; no cambia laterales ni el fallback a pared."
+     },
      "separacion_pared": {
       "type": "number",
       "minimum": 0,

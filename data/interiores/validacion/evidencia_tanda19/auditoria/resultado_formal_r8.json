@@ -1,0 +1,25 @@
+{
+ "estado": "EVALUADO_OBJETIVO4_PENDIENTE",
+ "A": 3.306,
+ "B": 3.368,
+ "todas_dimensiones_min3": true,
+ "puntuaciones": {
+  "A": {
+   "densidad": 3.01,
+   "coherencia": 3.42,
+   "iluminacion": 3.94,
+   "variedad": 3.11,
+   "lectura_funcional": 3.05
+  },
+  "B": {
+   "densidad": 3.28,
+   "coherencia": 3.36,
+   "iluminacion": 4.04,
+   "variedad": 3.04,
+   "lectura_funcional": 3.12
+  }
+ },
+ "ficha_sha256": "c8a411c871c821ad153645e46117ca99b7098a27bba8241c8f6e581fae7cf792",
+ "decision_raiz": "Avance incremental publicable sólo tras gates y revisión de integración: programa real y contraste mejoran visualmente; ambas evaluaciones >=3 en cada dimensión. No se considera objetivo4 alcanzado ni se repiten llamadas.",
+ "limites": "Cámaras nuevas: no adjudicar toda diferencia respecto histórico3.034/3.222 a cambios del juego."
+}

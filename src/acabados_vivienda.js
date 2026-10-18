@@ -20,7 +20,7 @@ export function panosPared(a, b, y0, y1, huecos) {
 }
 
 export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
-  if(rm.type==='salon'&&perfil!=='annie') {
+  if(['salon','trofeos'].includes(rm.type)&&perfil!=='annie') {
     // Pared de estar con color; los demás paños calmos conservan todos los huecos.
     const y=(rm.lv||0)*3.1,clasico=['abuela','matrimonio'].includes(perfil);
     // Todas las superficies nuevas comparten un material: color por vértice.
@@ -28,8 +28,8 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
     const material=B.mat('acabado_domestico_salon_vertices',()=>std(0xffffff,{vertexColors:true,roughness:.92,defines}));
     const mat=c=>c,add=(color,geometry,...args)=>{const c=new THREE.Color(color),rgb=[];for(let i=0;i<geometry.attributes.position.count;i++)rgb.push(c.r,c.g,c.b);geometry.setAttribute('color',new THREE.Float32BufferAttribute(rgb,3));B.add(material,geometry,...args);};
     const claro=mat('#e9e3d4'),techo=mat('#e9e3d4');
-    const acento=mat(estilo==='joven'?'#71858b':estilo==='bohemio'?'#738778':clasico?'#b4ac94':'#8e9582');
-    const sofa=estancia?.colocados?.find(p=>['sofa_tres_plazas','sofa_dos_plazas'].includes(p.obj));
+    const acento=mat(rm.type==='trofeos'?'#5f7465':estilo==='joven'?'#71858b':estilo==='bohemio'?'#738778':clasico?'#b4ac94':'#8e9582');
+    const sofa=estancia?.colocados?.find(p=>rm.type==='trofeos'?p.obj==='vb_armero':['sofa_tres_plazas','sofa_dos_plazas'].includes(p.obj));
     const ang=sofa?Math.atan2(Math.sin(sofa.ry),Math.cos(sofa.ry)):null;
     const pared=ang===null?null:Math.abs(ang)<.3?'s':Math.abs(Math.abs(ang)-Math.PI)<.3?'n':ang>0?'w':'e';
     for(const side of ['s','n','w','e']) {

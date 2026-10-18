@@ -59,6 +59,135 @@ def modelos_estudio():
         out.append(o)
     return out
 
+
+def mejorar_trofeos(out):
+    """Guardado de campo y consulta: superficies físicas y formas propias."""
+    ids={o['id']:o for o in out};madera='#916e50';canto='#514332';verde='#596f60';lino='#b4b79d'
+    def b(w,h,d,**kw):return caja(w,h,d,redondeo=min(.012,min(w,h,d)/4),**kw)
+    ar=ids['vb_armero'];ar['nombre']='Armero de roble con vano y apoyo inferior'
+    # El vano central queda libre desde la base hasta el remate; los travesaños
+    # están detrás del rifle independiente. No hay un arma fundida en el soporte.
+    ar['partes']=[b(.68,.12,.28,c=canto),b(.68,1.33,.025,y=.785,z=-.1275,c=madera),b(.68,.04,.28,y=1.47,c=canto)]
+    for x in [-.3225,.3225]:ar['partes'].append(b(.035,1.31,.28,x=x,y=.785,c=madera))
+    for y in [.68,1.10]:ar['partes'].append(b(.61,.04,.035,y=y,z=-.09,c=canto))
+    ar['superficies']=[dict(y=.12,margen=.10)]
+    p=[b(1.18,.05,.40,y=.085,c=canto),b(1.18,.045,.40,y=.8175,c=madera),b(1.11,.67,.022,y=.46,z=-.189,c=canto)]
+    for x in [-.5725,.5725]:p.append(b(.035,.69,.40,x=x,y=.4625,c=madera))
+    for x in [-.2875,.2875]:
+        p += [b(.54,.30,.025,x=x,y=.625,z=.1875,c='#a17e58'),b(.54,.30,.025,x=x,y=.285,z=.1875,c='#a17e58')]
+        for y in [.625,.285]:p.append(b(.12,.016,.026,x=x,y=y+.035,z=.213,c='#545d53',m='madera'))
+    for x in [-.50,.50]:
+        for z in [-.15,.15]:p.append(b(.055,.06,.055,x=x,y=.03,z=z,c=canto))
+    out.append(objeto('vb_guardado_campo','Mueble bajo de equipo y consulta de campo',1.18,.84,.45,'comoda',35,partes=p,superficies=[dict(y=.84,margen=.04)]))
+    # Ámbito real de equiparse: un asiento libre sobre banco zapatero abierto.
+    # Botas y bolsa son parte del modelo propio; no sustituyen el botín suelto.
+    p=[b(1.14,.045,.44,y=.4375,c=madera),b(1.10,.025,.40,y=.1125,c=canto),
+       b(1.10,.29,.02,y=.275,z=-.205,c=canto)]
+    for x in [-.535,.535]:
+        for z in [-.165,.165]:p.append(b(.045,.415,.045,x=x,y=.2075,z=z,c=canto))
+    p += [caja(.65,.045,.385,x=-.19,y=.4825,z=.008,c='#ad9060',m='tela',redondeo=.018),
+          b(.025,.30,.38,x=.115,y=.275,c=madera)]
+    # Par de botas con caña, interior oscuro del puño, puntera y suela; apoyadas en balda.
+    for x in [.255,.425]:
+        p += [caja(.125,.045,.24,x=x,y=.1475,z=.045,c='#3f4438',m='goma',redondeo=.015),
+              caja(.115,.085,.22,x=x,y=.2025,z=.045,c='#6a7255',m='tela',redondeo=.025),
+              caja(.105,.145,.105,x=x,y=.285,z=-.015,c='#667052',m='tela',redondeo=.02),
+              caja(.075,.002,.075,x=x,y=.358,z=-.015,c='#30392e',m='tela',redondeo=.012)]
+    # Bolsa sobre el extremo derecho; asa de dos montantes y travesaño unidos.
+    p += [caja(.245,.19,.25,x=.405,y=.555,z=.005,c='#7c7255',m='tela',redondeo=.025),
+          caja(.245,.045,.25,x=.405,y=.6325,z=.005,c='#927a56',m='tela',redondeo=.012)]
+    for x in [.34,.47]:p.append(b(.018,.09,.025,x=x,y=.69,z=.005,c=canto))
+    p.append(b(.148,.018,.025,x=.405,y=.726,z=.005,c=canto))
+    out.append(objeto('vb_banco_equipo_campo','Banco zapatero para equiparse',1.14,.735,.44,'silla',20,
+                      partes=p,modificadores=['SEAT'],asientos=[dict(p=[-.19,.505,.04],h=.505,anim='silla')],
+                      nota='Un puesto libre para calzarse; botas en balda y bolsa integrada junto al asiento.'))
+    # Dos cornamentas de escala doméstica: placa pequeña, astas con ramas y
+    # curvatura escalonada. La geometría continúa a la altura de pared original.
+    asta=[b(.21,.30,.025,y=1.665,z=.0125,c=canto)]
+    for sign in [-1,1]:
+        for x,y,h,a,rt,rb in [(.065,1.80,.16,-32,.015,.024),(.135,1.94,.18,-20,.010,.017),(.19,2.095,.17,-18,.004,.011)]:
+            asta.append(cil(rt,rb,h,x=sign*x,y=y,z=.095,c='#dfd5b7',m='hueso',r=[0,0,sign*a],seg=9))
+        for x,y,h,a in [(.09,1.85,.14,40),(.15,1.98,.13,38),(.192,2.075,.105,35)]:
+            asta.append(cil(.003,.009,h,x=sign*x,y=y,z=.11,c='#dfd5b7',m='hueso',r=[0,0,sign*a],seg=8))
+    asta.append(dict(f='esfera',d=[.06],p=[0,1.77,.065],s=[.78,1,.9],c='#dfd5b7',m='hueso'))
+    ids['vb_cornamenta']['partes']=asta
+    # Un orejero propio: la silla compartida de los otros cuartos no cambia.
+    seat=copiar('sillon_orejero','vb_sillon_campo','Sillón de consulta de campo')
+    seat['nota']='Tapizado mate, brazos curvos y patas de madera; asiento a 43 cm.'
+    # Tapizado continuo sobre bastidor: radios visibles sin piezas esféricas
+    # aisladas. Los montantes conservan la unión física del respaldo reclinado.
+    def tap(w,h,d,**kw):return caja(w,h,d,redondeo=min(.065,min(w,h,d)/2),m='tela',c=verde,**kw)
+    p=[b(.66,.13,.65,y=.335,z=.005,c=canto),
+       tap(.59,.15,.56,y=.405,z=.035),
+       tap(.62,.70,.16,y=.78,z=-.245,r=[-8,0,0])]
+    for x in [-.18,.18]:p.append(b(.04,.59,.035,x=x,y=.685,z=-.30,c=canto))
+    for sign in [-1,1]:
+        p += [tap(.11,.25,.52,x=sign*.315,y=.42),
+              tap(.14,.25,.64,x=sign*.315,y=.55,z=.01),
+              tap(.12,.20,.16,x=sign*.29,y=.99,z=-.225)]
+    for x in [-.27,.27]:
+        for z in [-.27,.27]:p.append(b(.055,.27,.055,x=x,y=.135,z=z,c=canto))
+    p.append(caja(.40,.24,.10,y=.66,z=-.135,c=lino,m='tela',redondeo=.04))
+    # Manta de cuatro milímetros siguiendo el brazo y cayendo por el lateral.
+    # Tiras unidas sobre dos cuartos de arco; no es un tablero horizontal grueso.
+    import math
+    def paño(a,b):
+        dx,dy=b[0]-a[0],b[1]-a[1]
+        return caja(math.hypot(dx,dy)+.001,.004,.28,x=(a[0]+b[0])/2,y=(a[1]+b[1])/2,z=.08,c='#b6a37f',m='tela',r=[0,0,math.degrees(math.atan2(dy,dx))])
+    for cx,lo,hi in [(.305,math.pi,math.pi/2),(.325,math.pi/2,0)]:
+        points=[(cx+.063*math.cos(lo+(hi-lo)*i/5),.615+.063*math.sin(lo+(hi-lo)*i/5))for i in range(6)]
+        p.extend(paño(a,b)for a,b in zip(points,points[1:]))
+    p += [paño((.305,.678),(.325,.678)),paño((.388,.615),(.388,.355))]
+    seat['partes']=p;out.append(seat)
+    out.append(mesa('vb_mesa_campo','Mesa auxiliar de consulta de campo',.48,.40,.55))
+    p=[b(.66,1.30,.022,y=.67,z=-.139,c=canto)]
+    for x in [-.338,.338]:p.append(b(.024,1.34,.30,x=x,c=madera))
+    for y in [.03,.44,.88,1.328]:p.append(b(.70,.024,.30,y=y,c=madera))
+    out.append(objeto('vb_biblioteca_campo','Biblioteca baja de consulta de campo',.70,1.34,.30,'libros',24,partes=p,superficies=[dict(y=y,margen=.03,fondo=.28) for y in [.452,.892]]))
+    # Mesa central baja: una superficie de consulta delante del asiento,
+    # con atlas propio abierto integrado y espacio libre para el libro recogible.
+    p=[b(.90,.045,.55,y=.5975,c=madera)]
+    for x in [-.395,.395]:
+        for z in [-.22,.22]:p.append(b(.05,.575,.05,x=x,y=.2875,z=z,c=canto))
+    p.append(b(.86,.04,.43,y=.18,c=canto))
+    p.append(caja(.42,.006,.34,y=.623,c='#667c69',m='carton'))
+    import math
+    for sign in [-1,1]:
+        angle=sign*math.radians(5);px=sign*.10
+        p.append(caja(.196,.009,.32,x=px,y=.638,c='#e3dcc5',m='papel',r=[0,0,sign*5]))
+        # Gráfico de campo propio en las páginas. Cada trazo sigue el giro del
+        # papel y queda sobre su cara; no hay imágenes ni textos prestados.
+        def pagina(lx,lz,w,d,col):
+            sy=.0051
+            return caja(w,.001,d,x=px+lx*math.cos(angle)-sy*math.sin(angle),y=.638+lx*math.sin(angle)+sy*math.cos(angle),z=lz,c=col,m='papel',r=[0,0,sign*5])
+        if sign<0:
+            p += [pagina(-.043,-.065,.062,.09,'#abb995'),pagina(.038,.045,.067,.11,'#c1ae86'),pagina(-.025,.045,.014,.14,'#829fa0')]
+        else:
+            p += [pagina(0,z,.12,.004,'#7c8a71')for z in [-.10,-.055,-.01,.035,.08]]
+    out.append(objeto('vb_mesa_consulta_campo','Mesa baja de consulta con atlas abierto',.90,.65,.55,'mesa',18,partes=p,superficies=[dict(y=.62,margen=.04)]))
+    # Esquema de campo propio: papel, parcelas, caminos y cauce. Son formas
+    # originales, sin fotografías ni una ruta real presentada como cartografía.
+    mapa=[caja(1.08,.76,.025,y=1.83,z=.0125,c=canto),caja(1.02,.70,.002,y=1.83,z=.026,c='#e2ddc8',m='papel')]
+    for x,y,w,h,col in [(-.31,2.02,.27,.20,'#a7b69a'),(.13,2.04,.35,.16,'#b7b58d'),(-.29,1.67,.31,.15,'#c5b28e'),(.27,1.70,.25,.17,'#b5bf9b')]:
+        mapa.append(caja(w,h,.001,x=x,y=y,z=.0275,c=col,m='papel'))
+    def trazo(a,b,w,col):
+        import math
+        dx,dy=b[0]-a[0],b[1]-a[1]
+        mapa.append(caja(math.hypot(dx,dy),w,.001,x=(a[0]+b[0])/2,y=(a[1]+b[1])/2,z=.029,c=col,m='papel',r=[0,0,math.degrees(math.atan2(dy,dx))]))
+    for pa,pb in [((-.46,1.59),(-.17,1.78)),((-.17,1.78),(.17,1.92)),((.17,1.92),(.44,2.10)),((-.17,1.78),(-.34,2.12))]:trazo(pa,pb,.018,'#f6eed8')
+    for pa,pb in [((-.08,2.14),(.015,1.95)),((.015,1.95),(.01,1.78)),((.01,1.78),(.18,1.51))]:trazo(pa,pb,.022,'#829fa0')
+    for x,col in [(.27,'#a7b69a'),(.34,'#c5b28e'),(.41,'#829fa0')]:mapa.append(caja(.04,.025,.001,x=x,y=1.53,z=.029,c=col,m='papel'))
+    out.append(objeto('vb_mapa_campo','Esquema de caminos de campo para consulta',1.08,.76,.03,None,1.5,'papel',partes=mapa,soporte='pared',categoria='cuadro'))
+    # Prismáticos con dos cuerpos y oculares; bolsa con solapa, base y asa.
+    ids['vb_prismaticos']['partes']=[b(.055,.05,.105,x=x,y=.035,c='#47594d',m='plastico')for x in [-.0375,.0375]]+[b(.03,.025,.045,y=.04,c='#66735b',m='plastico')]
+    for x in [-.0375,.0375]:
+        ids['vb_prismaticos']['partes'] += [cil(.023,.023,.015,x=x,y=.035,z=.06,c='#52696b',m='plastico',r=[90,0,0],seg=12),cil(.017,.017,.013,x=x,y=.035,z=-.061,c='#303f3c',m='plastico',r=[90,0,0],seg=12)]
+    for p in ids['vb_prismaticos']['partes']:p['p'][1]-=.01
+    ids['vb_bolsa_caza']['partes']=[b(.26,.145,.15,y=.0725,c='#8e7953',m='tela'),b(.27,.035,.16,y=.155,c='#a79168',m='tela'),b(.21,.07,.012,y=.125,z=.080,c='#a79168',m='tela'),b(.028,.04,.008,y=.12,z=.091,c='#5b6351',m='metal')]
+    for x in [-.055,.055]:ids['vb_bolsa_caza']['partes'].append(b(.014,.03,.02,x=x,y=.18,c=canto))
+    ids['vb_bolsa_caza']['partes'].append(b(.124,.014,.02,y=.202,c=canto))
+
+
 def objetos():
     out=[]
     for id,nombre,w,rol in [('vb_cama_doble','Cama de matrimonio compacta',1.35,'cama_doble'),('vb_cama_individual','Cama individual',.85,'cama')]:
@@ -198,6 +327,7 @@ def objetos():
     from composicion_domestica import mejorar_despacho
     mejorar_despacho(out)
     out.extend(modelos_estudio())
+    mejorar_trofeos(out)
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())

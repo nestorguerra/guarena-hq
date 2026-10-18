@@ -1,0 +1,74 @@
+{
+  "estado": "PASS_PREFLIGHT_Y_RECIBOS",
+  "capturador": "2f2570cfd76ce7a4406e615811e448e59e0fb1e4c2cc5fafb2525e53e50e8dd2",
+  "ramas": [
+    {
+      "base": false,
+      "sintaxis": "PASS",
+      "generated_sha": "821d5cfbe3a0c55b9fd8e7e5db0f9b506f55c652ef2cedde90e03952bf968151",
+      "snapshot": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda19/prototipo_r7",
+      "seal": "71d241048d58aaba68c7b4fc171fc314a1818cf1b8e8941c4d9adb6ffe3d5be4"
+    },
+    {
+      "base": true,
+      "sintaxis": "PASS",
+      "generated_sha": "8e46752551cb6b9711511cd90941dba1518ab0f033ed4b414f9ed966de24e396",
+      "snapshot": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda19/base_T18",
+      "seal": "0c1fdd7cbe19f830fb143704b67e6d7b4d15ab56289beb3866b45b9bdb68aea2"
+    }
+  ],
+  "poses": [
+    {
+      "seed": 2132,
+      "k": 0,
+      "pose_exacta": true,
+      "libre_ambas": true
+    },
+    {
+      "seed": 2132,
+      "k": 1,
+      "pose_exacta": true,
+      "libre_ambas": true
+    },
+    {
+      "seed": 4204,
+      "k": 0,
+      "pose_exacta": true,
+      "libre_ambas": true
+    },
+    {
+      "seed": 4204,
+      "k": 1,
+      "pose_exacta": true,
+      "libre_ambas": true
+    },
+    {
+      "seed": 1679,
+      "k": 0,
+      "pose_exacta": true,
+      "libre_ambas": true
+    },
+    {
+      "seed": 1679,
+      "k": 1,
+      "pose_exacta": true,
+      "libre_ambas": true
+    }
+  ],
+  "archivos_recibo": 17,
+  "fuentes_actuales": [
+    {
+      "path": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda19/base_T18",
+      "archivos": 494,
+      "estado_actual": "COINCIDE",
+      "limite": "Lectura actual del revisor; no observaci\u00f3n propia de la captura pasada."
+    },
+    {
+      "path": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda19/prototipo_r7",
+      "archivos": 494,
+      "estado_actual": "COINCIDE",
+      "limite": "Lectura actual del revisor; no observaci\u00f3n propia de la captura pasada."
+    }
+  ],
+  "limites": "No ejecuci\u00f3n JS/browser/GPU/API. K0 general sin guardia de cobertura del frente. Historial de estabilidad antes/durante capture depende del wrapper de ra\u00edz."
+}

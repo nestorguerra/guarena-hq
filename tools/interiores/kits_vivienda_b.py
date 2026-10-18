@@ -96,7 +96,22 @@ def generar():
         kit(id,nombre,'otra_estancia',p,mood[id],fondo=(2.1,5))
     musica=[pared('piano_pared'),junto('banqueta_piano','piano_pared',lados=['frente'],mira_ref=True),pared('guitarra_soporte'),pared('guitarra_soporte',False,botin='guitarra'),pared('vb_altavoz'),pared('vb_altavoz',False,botin='altavoz'),pared('estanteria_libros',False),pared('vb_escritorio',False),E('sobre','vb_vinilos',en=['vb_escritorio'],cantidad=[0,1],botin='vinilos'),E('pared',['poster_enmarcado','cuadro_paisaje'],pared='*',cantidad=[1,3])]+adornos(papeles+['vb_vinilos','vb_partituras','vb_auriculares','vb_metronomo'],['vb_escritorio','estanteria_libros'])
     kit('musica','Cuarto de música','otra_estancia',musica,mood['musica'],fondo=(2.1,5))
-    trofeos=[pared('vb_armero'),pared('vb_rifle',botin='rifle'),E('pared','vb_cornamenta',pared='*',cantidad=[2,4],obligatorio=True),pared('sillon_orejero'),pared('estanteria_libros',False),pared('vb_comoda',False),E('sobre','vb_prismaticos',en=['vb_comoda','estanteria_libros'],cantidad=[0,1],botin='prismaticos')]+adornos(libros+['vb_brujula','vb_linterna','vb_bolsa_caza','vb_prismaticos','libro_tumbado','reloj_sobremesa'],['vb_comoda','estanteria_libros'])
+    campo=[k for k in libros if k not in ['lb_libros_infantiles','lb_libros_morados','lb_comics_a','lb_comics_b','lb_comics_c','lb_comics_d','lb_estuches','lb_rotuladores','lb_gomas_tijeras','lb_calculadoras','lb_cuadernos_espiral','lb_cuadernos_rojos','lb_agendas','lb_pila_grandes','lb_papel_folios','lb_sobres']]+['vb_cuaderno','bloc_notas','vb_brujula','vb_linterna','vb_bolsa_caza','vb_prismaticos','libro_tumbado','reloj_sobremesa']
+    trofeos=[E('contra_pared','vb_armero',pared='*',centrado=True,cantidad=[1,1],obligatorio=True,preferir=True,grupo_pared='guardado_campo'),
+             junto('vb_guardado_campo','vb_armero',True,buscar_refs=True,si_no=True,grupo_pared='guardado_campo'),
+             junto('vb_banco_equipo_campo','vb_guardado_campo',False,buscar_refs=True,si_no=False,grupo_pared='guardado_campo',area_min=13,espacio_frontal=[.70,.65]),
+             E('sobre','vb_rifle',en=['vb_armero'],centrado=True,cantidad=[1,1],obligatorio=True,preferir=True,botin='rifle'),
+             E('pared','vb_cornamenta',pared='*',sobre_de='vb_armero',cantidad=[1,1],obligatorio=True,si_no=False),
+             E('pared','vb_cornamenta',pared='*',sobre_de='vb_guardado_campo',cantidad=[1,1],obligatorio=True,si_no=False),
+             E('enfrente','vb_sillon_campo',de='vb_guardado_campo',cantidad=[1,1],obligatorio=True,preferir=True,si_no=True,area_min=11,separacion_pared=.50,centrado=True),
+             E('enfrente','vb_sillon_campo',de='vb_guardado_campo',cantidad=[1,1],obligatorio=True,preferir=True,si_no=True,area_max=11),
+             junto('vb_mesa_consulta_campo','vb_sillon_campo',True,lados=['frente'],buscar_refs=True,si_no=True,area_min=11,separacion_frontal=.32),
+             junto('vb_mesa_campo','vb_sillon_campo',True,buscar_refs=True,si_no=True,area_max=11),
+             E('sobre','libro_tumbado',en=['vb_mesa_campo'],cantidad=[1,1],obligatorio=True,centrado=True,area_max=11),
+             E('sobre','vb_prismaticos',en=['vb_guardado_campo'],cantidad=[1,1],obligatorio=True,preferir=True,botin='prismaticos'),
+             E('sobre','vb_bolsa_caza',en=['vb_guardado_campo'],cantidad=[1,1],obligatorio=True,preferir=True),
+             pared('vb_biblioteca_campo',True,centrado=True),
+             E('pared','vb_mapa_campo',pared='*',sobre_de='vb_biblioteca_campo',cantidad=[0,1],preferir=True,si_no=False)]+adornos(campo,['vb_guardado_campo','vb_biblioteca_campo'])
     kit('trofeos','Cuarto de trofeos del cazador','otra_estancia',trofeos,mood['trofeos'],fondo=(2.1,5))
     arte=['vb_paleta','vb_pinceles','vb_carboncillos','vb_acuarelas','vb_tubos_oleo','vb_trapo']+[k for k,o in C.items() if k.startswith('fe_pintura') and o['soporte']=='superficie']+libros+['lb_rotuladores','lb_papel_folios']
     pintura=[pared('vb_caballete'),pared('vb_escritorio'),junto('silla_comedor','vb_escritorio',True,lados=['frente'],mira_ref=True),pared('estanteria_libros',False),pared('vb_caballete',False,area_min=12),E('pared','cuadro_paisaje',pared='*',cantidad=[0,1],botin='cuadro'),E('pared',['cuadro_paisaje','poster_enmarcado'],pared='*',cantidad=[1,3])]+adornos(arte,['vb_escritorio','estanteria_libros'])

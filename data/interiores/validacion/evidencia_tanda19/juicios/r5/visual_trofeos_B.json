@@ -1,0 +1,225 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_adee9a7589af405fbc6ba120f8b906e0",
+ "request_sha256": "4a84a66a8bcfbf3bd43d42b3d2f74e163a6f2c5c9ac9765a2921bc0980006821",
+ "fecha": "2026-10-18T04:35:37.065044+00:00",
+ "kit": "trofeos",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_trofeos.jpg",
+ "ficha_sha256": "01150072af5bcbf216abfe7d13ff24392efa79f9912911c7d0a0245a6cf96410",
+ "ficha_snapshot": "data/interiores/validacion/imagenes/01150072af5bcbf216abfe7d13ff24392efa79f9912911c7d0a0245a6cf96410.jpg",
+ "referencias": [
+  {
+   "titulo": "Antler trophy room panorama (38373754584).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Antler_trophy_room_panorama_%2838373754584%29.jpg",
+   "autor": "Thomas Quine",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Antler_trophy_room_panorama_%2838373754584%29.jpg/960px-Antler_trophy_room_panorama_%2838373754584%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "20080316505DR Gaußig (Doberschau-G) Schloß Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg",
+   "autor": "Jörg Blobelt",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg/960px-20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.92,
+  "coherencia": 3.07,
+  "iluminacion": 3.91,
+  "variedad": 2.87,
+  "lectura_funcional": 2.79
+ },
+ "media": 3.112,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.92,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.12
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.82
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.83
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 2.07,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.65
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.2
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.69
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.91,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.02
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.14
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.75
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.09
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.87,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.2
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.71
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.07
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.74
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.79,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.74
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.77
+  }
+ ],
+ "uso": {
+  "input_tokens": 3985,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 3985
+ }
+}

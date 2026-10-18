@@ -1,0 +1,42 @@
+{
+ "estado": "INTEGRADA_PENDIENTE_GATES",
+ "fuentes_congeladas": 417,
+ "fuentes_snapshot": [
+  "tools/interiores/catalogo_vivienda_b.py",
+  "tools/interiores/kits_vivienda_b.py",
+  "data/objetos/vivienda_b.json",
+  "data/kits/vivienda_trofeos.json",
+  "src/interiores_datos.js",
+  "data/interiores/datos.json",
+  "src/acabados_vivienda.js",
+  "src/houses.js",
+  "src/locales.js",
+  "data/kits/kit.schema.json"
+ ],
+ "deltas_instrumentales": [
+  "tools/interiores/casas_pruebas.js",
+  "tools/interiores/fotos_casa.py",
+  ".github/workflows/validar.yml"
+ ],
+ "cambiados": [
+  ".github/workflows/validar.yml",
+  "data/interiores/datos.json",
+  "data/kits/kit.schema.json",
+  "data/kits/vivienda_trofeos.json",
+  "data/objetos/vivienda_b.json",
+  "src/acabados_vivienda.js",
+  "src/houses.js",
+  "src/interiores_datos.js",
+  "src/locales.js",
+  "tools/interiores/casas_pruebas.js",
+  "tools/interiores/catalogo_vivienda_b.py",
+  "tools/interiores/fotos_casa.py",
+  "tools/interiores/kits_vivienda_b.py"
+ ],
+ "patches": {
+  ".cache/calidad/tanda19/contratos_t22_r8/contratos.patch": "16d68d671913eb7d9b8aa40907ab9a92d525cb6733231d4e5c69c191e812fd7f",
+  "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda19/fotos_mantenidas/fotos.patch": "2b8d0305e6584178fa9a5f40684ccc610bb3fa4203e76a614276f9c1541a6b6b"
+ },
+ "recuperacion": "Copias exactas previas en antes_integracion; todo reversible y sin publicación.",
+ "limites": "Arte exactoR8, test/capturador/CI propios. Fotos privadas fueron tomadas con lista de puntos comunes; mantenido añade veto final al frente y elimina esa lista. Sin nota4/CI/público aún."
+}
