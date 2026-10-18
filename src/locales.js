@@ -56,6 +56,8 @@ export const filtroHogar = (hogar) => (e) => encaja(e.perfil, hogar.perfil) && e
 export function amueblar(kit, seed = 1, ctx = null) {
   const K = KITS[kit];
   if (!K) throw new Error('sin kit: ' + kit);
+  // Separación optativa sólo en piezas individuales, nunca en grupos modulares.
+  for(const e of K.objetos)if(e.separacion_pared!=null&&(!['contra_pared','enfrente'].includes(e.regla)||e.grupo_pared))throw new Error('separacion_pared sólo admite contra_pared/enfrente sin grupo_pared');
   const tipologia = K.tipologia, reservaUso=K.objetos.some(e=>e.espacio_frontal);
   const r = mulberry32((seed * 2654435761 + 97) >>> 0);
   const U = (a) => (Array.isArray(a) ? a[0] + r() * (a[1] - a[0]) : a);
@@ -166,6 +168,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
   const tantos = (e, len = 0, area = 0, sops = 0) => (e.cantidad ? N(e.cantidad) : e.por_m ? Math.max(1, Math.round(len * U(e.por_m))) : e.por_m2 ? Math.max(1, Math.round(area * U(e.por_m2))) : e.por_soporte && !Array.isArray(e.por_soporte) ? sops * e.por_soporte : 1);
   const cantidadPreferida=e=>e.preferir&&Array.isArray(e.cantidad)?e.cantidad[1]:N(e.cantidad||1);
   const variante = (e, k) => (e.variantes ? (e.todas && k < e.variantes.length ? e.variantes[k] : e.variantes[Math.floor(r() * e.variantes.length)]) : e.obj);
+  const busquedasSuelo = [];
   const cursores = {}, estantes = {}, activas = []; // (activas: the entries laid out for this household)
 
   const reglas = {
@@ -233,7 +236,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
         while(s+b.w<=pw.b-.03+1e-6){slots.push(s);s+=.1;}
         if(e.centrado) slots.sort((a,b0)=>Math.abs(a+b.w/2-(pw.a+pw.b)/2)-Math.abs(b0+b.w/2-(pw.a+pw.b)/2));
         for (s of slots) {
-          const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + 0.01);
+          const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + (e.separacion_pared ?? 0.01));
           const [x, z] = origen(obj, pw.eje === 'z' ? off : c, pw.eje === 'z' ? c : off, pw.ry);
           const it = { obj, x, y: 0, z, ry: pw.ry }, v = volumen(it);
           if (!dentro(v,Z)||!libre(v))continue;
@@ -358,6 +361,21 @@ export function amueblar(kit, seed = 1, ctx = null) {
         const [x, z] = origen(obj, cx, cz, ry);
         const it = { obj, x, y: 0, z, ry }, v = volumen(it);
         if (dentro(v, Z) && libre(v) && !cierra([it])) { poner(obj, Z.id, 'suelo_libre', x, 0, z, ry); puestos++; }
+      }
+      // Opt-in de objetos obligatorios: sólo después de agotar el azar.
+      // Cuatro ejes y rejilla finita de 5 cm, incluyendo ambos límites reales
+      // de la huella rotada. No se consume RNG ni se afloja ninguna guarda.
+      if(puestos<n && e.suelo_determinista===true && e.obligatorio===true && e.obj && !e.variantes){
+        const b=caja(e.obj),busqueda={entrada,probados:0,colocados:0,limite:16000};busquedasSuelo.push(busqueda);
+        const eje=(a,b)=>{if(a>b+1e-6)return [];const v=[];for(let k=0;a+k*.05<=b+1e-6;k++)v.push(Math.min(b,a+k*.05));if(!v.length||b-v[v.length-1]>1e-6)v.push(b);return v;};
+        buscar: for(const ry of [0,Math.PI/2,Math.PI,Math.PI*1.5]){
+          const ex=Math.abs(Math.cos(ry))*b.w/2+Math.abs(Math.sin(ry))*b.d/2,ez=Math.abs(Math.sin(ry))*b.w/2+Math.abs(Math.cos(ry))*b.d/2;
+          for(const cz of eje(Z.z0+ez+.01,Z.z1-ez-.01))for(const cx of eje(Z.x0+ex+.01,Z.x1-ex-.01)){
+            if(puestos>=n||busqueda.probados>=busqueda.limite)break buscar;
+            busqueda.probados++;const [x,z]=origen(e.obj,cx,cz,ry),it={obj:e.obj,x,y:0,z,ry},v=volumen(it);
+            if(dentro(v,Z)&&libre(v)&&!cierra([it])){poner(e.obj,Z.id,'suelo_libre',x,0,z,ry);puestos++;busqueda.colocados++;}
+          }
+        }
       }
     },
     // rows of units end to end, back to back in pairs (doble), an aisle between and at both ends: a supermarket's gondolas,
@@ -527,7 +545,7 @@ export function amueblar(kit, seed = 1, ctx = null) {
       ? e.cantidad===1 || (Array.isArray(e.cantidad)&&e.cantidad[0]===1&&e.cantidad[1]===1)
       : k>0 && e.preferir===true && Array.isArray(e.cantidad)&&e.cantidad[0]===0&&e.cantidad[1]===1;
     if(miembros.length<2 || miembros.length>4 || e0.regla!=='contra_pared')return false;
-    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !unidadGrupo(e,k) || e.silla_frontal || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
+    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !unidadGrupo(e,k) || (e.silla_frontal && (k>0 || OBJETOS[e.silla_frontal]?.soporte!=='suelo')) || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
     // Sólo cadenas inmediatas: no convertir A<-B y A<-C en A-B-C.
     // Si falta esa referencia adyacente, se ejecutan las reglas originales (incluido si_no).
     let semilla=(seed*2654435761+97)>>>0;
@@ -554,7 +572,18 @@ export function amueblar(kit, seed = 1, ctx = null) {
         }
         // También se comprueban usos frontales y accesos de las tres piezas juntas.
         if(nuevos.length!==miembros.length)continue;
-        let prueba=nuevos;
+        // Puesto opt-in en la raíz: probar su silla junto a todo el frente,
+        // antes de comprometer mesa o biblioteca. Misma pose que contra_pared.
+        let silla=null;
+        if(e0.silla_frontal){
+          const ref=nuevos.find(p=>p.e===raiz[0]),b=caja(ref.obj),sb=caja(e0.silla_frontal);
+          const [dx,dz]=rot((b.x0+b.x1)/2,b.z1+sb.d/2+.06,ref.ry);
+          const [x,z]=origen(e0.silla_frontal,ref.x+dx,ref.z+dz,ref.ry+Math.PI);
+          silla={obj:e0.silla_frontal,x,y:0,z,ry:ref.ry+Math.PI,e:raiz[0],zona:Z.id};
+          const v=volumen(silla);
+          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>hunde(silla,q)>.005))continue;
+        }
+        let prueba=silla?nuevos.concat(silla):nuevos;
         // Precondición opt-in: el acompañante de pared debe caber junto a la raíz.
         // No se compromete aquí: su entrada conserva índice, mínimo y regla propios.
         if(e0.reserva_lateral){
@@ -567,8 +596,8 @@ export function amueblar(kit, seed = 1, ctx = null) {
           if(Math.abs(sn)>.5)x=(sn>0?Z.x0:Z.x1)+sn*.003-bx;
           else z=(cs>0?Z.z0:Z.z1)+cs*.003-bz;
           const it={obj,x,y:0,z,ry,e:-1,zona:Z.id},v=volumen(it);
-          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>choca(volumen(q),v)))continue;
-          prueba=nuevos.concat(it);
+          if(!dentro(v,Z)||!libre(v)||prueba.some(q=>choca(volumen(q),v)))continue;
+          prueba=prueba.concat(it);
         }
         if(cierra(prueba))continue;
         const anterior=entrada;let previo=null;
@@ -576,6 +605,10 @@ export function amueblar(kit, seed = 1, ctx = null) {
           const it=nuevos.find(p=>p.e===ei);entrada=ei;
           const puesto=poner(it.obj,Z.id,ei===raiz[0]?'contra_pared':'junto_a',it.x,it.y,it.z,it.ry);
           if(previo)puesto.de=P.indexOf(previo);
+          if(ei===raiz[0]&&silla){
+            const asiento=poner(silla.obj,Z.id,'junto_a',silla.x,0,silla.z,silla.ry);
+            asiento.de=P.indexOf(puesto);
+          }
           previo=puesto;entradasAgrupadas.add(ei);
         }
         entrada=anterior;cursores[key]=s+anchoGrupo+.03;return true;
@@ -613,13 +646,23 @@ export function amueblar(kit, seed = 1, ctx = null) {
     }
   }
 
-  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas };
+  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
 }
 
 // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
 // household only
 export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null, contexto = null) {
-  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas } = amueblar(kit, seed, contexto || hogar ? { ...contexto, ...(hogar ? { filtro: filtroHogar(hogar) } : {}) } : null);
+  const semillaSolicitada=seed,ctx=contexto||hogar?{...contexto,...(hogar?{filtro:filtroHogar(hogar)}:{})}:null;
+  let A=amueblar(kit,seed,ctx);
+  const faltan=a=>a.activas.filter(i=>{const e=a.K.objetos[i];return a.P.filter(p=>p.e===i&&(e.regla!=='conjunto'||p.de==null)).length<Math.max(e.obligatorio?1:0,e.cantidad?.[0]||0);});
+  const marco={W:A.W,D:A.D,H:A.H,puertaX:A.puertaX},intentos=[{seed:A.seed,faltan:faltan(A),...(A.busquedasSuelo?{busquedasSuelo:A.busquedasSuelo}:{})}];
+  if(kit.startsWith('vivienda_'))for(let intento=1;intento<12&&faltan(A).length;intento++){
+    A=amueblar(kit,(semillaSolicitada+intento*104729)>>>0,{...ctx,W:marco.W,D:marco.D,H:marco.H});
+    if(A.puertaX!==marco.puertaX)throw new Error('el reintento doméstico cambió la puerta');
+    intentos.push({seed:A.seed,faltan:faltan(A),...(A.busquedasSuelo?{busquedasSuelo:A.busquedasSuelo}:{})});
+  }
+  seed=A.seed;
+  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas }=A;
   const t2 = MURO / 2;
   // ---- the room (its walls outside the frame: their faces at its edges)
   const B = new HouseBuilder(origin.x, origin.z, false);
@@ -735,7 +778,8 @@ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null
   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
   let hh = 2166136261;
   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
-  h.local = { kit, tipologia, seed, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+  h.local = { kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+  if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
   h.venue = false;
   // (what the game asks of any interior: where it stands, its extent, what it is; the street seen from its windows)

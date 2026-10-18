@@ -1,0 +1,9 @@
+# Revisión de raíz de la sección de paso T17
+
+El FAIL completo de navegador se preserva en historico_paso_v1. Se leyó el diagnóstico independiente paso_bv3_revision/diagnostico.md, el parche f1b0e175 y los recibos de rutas/bloque exacto. En las dos casas dirigidas el hueco conservador es 0,8304 m; la exigencia es 0,8 m. El rectángulo anterior exigía todo el fondo de 1,2904 m hasta la pared, incluido un extremo que no necesita formar parte del espacio de uso. El cuadrado inmediatamente ante la silla conserva 0,8 × 0,8 m. Se conserva d>=0,8 y revisarUso, los checks de ocultación/salida y los presupuestos. No se cambia el producto para liberar el test.
+
+El revisor midió continuidad analítica de rutas para radios .34/.40 contra segmentos reales Float32, círculos y OBB, además de resolver en nodos sin desplazamiento/profundidad. Umbral de entrada .40 y destinos exactos de lectura/ocultación .34 quedan documentados. Alcance: sólo 4007/5045; no una sesión de jugador ni cobertura universal de hojas animadas.
+
+Root preparó paso_t17_raiz.patch (253176aac731d78a06a9804513b1cd5ef142126bec8633abdcd2b8986c230ecc), con una mejora del negativo: el banco clonado se adelanta hasta dejar 0,79 m. Esto evita que una mejora futura a un hueco superior a .84 produzca un falso fallo porque +4 cm aún fueran válidos. Se conserva el RED independiente de +4 cm como evidencia histórica de estas dos casas. El original colocado nunca se modifica; partes del clon se calculan desde su posición.
+
+De las 412 entradas congeladas, sólo cambia tools/interiores/casas_pruebas.js. Cámara, imágenes, muebles, solver, colliders y luces son idénticos; las evaluaciones 3,488/3,208 siguen ligadas a la misma ficha 8a9023. El FAIL anterior no se recodifica como PASS; se ejecutan de nuevo los gates completos con el contrato corregido. La variante final se remite al revisor independiente y al navegador, sin adelantar su resultado.

@@ -1100,3 +1100,10 @@ Se integra colocación atómica del frente de cocina, respetando referencias inm
 CI agota la espera durante el vuelo con SwiftShader, antes del contrato nuevo de recogida. Se registra el driver y se usa la reanudación existente sólo cuando se pide --sin-intro; CI lo solicita en baja. No cambia producto ni criterios de recompensa/recarga. Fuente y paquete M1 y 14 casos CPU independientes pasan; CI sigue pendiente. Las capturas y la introducción de las pruebas M1 mantienen su evidencia aparte.
 
 Tanda 14 publicada como `feb5ca0`: CI 39076081332 y Pages 39076312316 pasan. Integración pública exacta con ocho casas, Annie, tres comercios, recarga y botín real persistente, sin errores. La prueba estricta conserva el límite de 1.500 ms y pasa antes del mundo completo. Se cambia el orden del ensayo; no se demuestra una causa ni una mejora de rendimiento. El objetivo visual de 4/5 continúa abierto. Biblioteca B privada pendiente. Recibo: `validacion/publicacion_tanda14.json`.
+
+
+## 2026-10-18 · Tanda 15 infantil
+
+Se atiende la petición de subir calidad a 4/5 y publicar cada tanda validada. Se relacionan biblioteca–escritorio–silla, contraste de fondo de cama y lectura/juego a escala doméstica. Notas 3,488/3,208: mejora parcial, objetivo pendiente. Revisión independiente sin defectos nuevos bloqueantes; conserva límites de cobertura, paño ocre y variedad.
+
+Se documentan los fallos del contrato de paso y del primer barrido CPU del laboratorio. La reparación mantiene paso, marcos, puertas y mínimos, con búsqueda finita de alfombra y reintentos domésticos acotados; el navegador literal pasa 81 casos. Los 66 contratos, 200 casas, todos los kits en cinco semillas, 96 recorridos y las integraciones fuente/paquete pasan. Ficha exacta reutilizada tras demostrar invariancia de las 31 construcciones por semilla, sin repetir API para mejorar nota. Dossier con FAIL, errata, fuentes congeladas y recibos: data/interiores/validacion/evidencia_tanda15. Publicación pendiente de commit, CI y prueba pública.

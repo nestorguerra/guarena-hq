@@ -1,0 +1,114 @@
+{
+  "state": "PRIVATE_CANDIDATE_CPU_COMPLETE_PENDING_INDEPENDENT_RENDER_REVIEW",
+  "base_commit": "05d95051d1dfbd13a66b7f647a9783d985ca04b2",
+  "base_provenance": "active local Bv2, uncommitted sources frozen by SHA, not HEAD alone",
+  "root_reported_local_integration_only": true,
+  "author_did_not_edit_active_or_use_GPU": true,
+  "scope_excludes": [
+    "finish design/caller",
+    "cameras",
+    "photographic evidence changes",
+    "GPU/performance/visual approval/publication"
+  ],
+  "hashes": {
+    "motor.patch": "a88e141f77e12dfae700ece9242ccfdd1fc7fe7c2fb0e1c8f6fa7845116e359e",
+    "modelos.patch": "ac0b1d112a806f97cafc0ebec59de49c4903bc2fa72653059e0c9bbcfeadd5d9",
+    "contratos.patch": "0d67f92a95bcee0d841dca4adf5f2f9b000c7701474924da8651919d2f3bc45d",
+    "cpu_layout.json": "fdbb4fe8de7e53b0b8ae3b3d630dd695bcd2a79187fdf2979ca34b70fef3b4d3",
+    "cpu_full.json": "d0da38dd41bbd6a9bb33eb39b477aaedb54e484f24327e98bee7a2cb2c4be54d",
+    "cpu_detalles.json": "c56884ad870dc8e03244f00967ca1f64cf36d38dc3c9c1f2a9f74ea76e37dc5e",
+    "cpu_contratos.json": "cf66b3f09ad2e3652de34cf0b4ec9aa6062e23a3c242dc6c9ad3fbf70fdedbd3",
+    "layout.cpu.mjs": "aba51ca0bfc2f9177539ad4414a4ce943c99bc21ed23726f364e2d1bdae25ece",
+    "full.cpu.mjs": "74c852d8ca7866a89989229db94a7aaeeaae9c80706d17d857e1d7865ca15d46",
+    "detalles.cpu.mjs": "b49f030a72d9dba51ef513354e037a8e34bddcc49f412d44a2adc8c0f70744b5",
+    "contratos.cpu.mjs": "65a6122050b518120813cfb96d0d774a7387e927fb7481d5b2b66092234cba81",
+    "contratos.inc": "b650c9fa477f5257829c097f009e3037f099fefea4ee16f4a92042fd679e1333",
+    "runtime.cpu.mjs": "863052e017c65498e9d10172d34a644c33c75ec2e82e9c373c25da8b0867da35",
+    "src/locales.js": "6a86a62488f1d3162387c32414bd7c244b321f0d85658507ecf9cddbbf10dad3",
+    "data/kits/kit.schema.json": "cf5e7b21bae83b8b075d3df7a9cacfcee79b8e7d13f0c4b3b46264ed10bc7fcf",
+    "data/objetos/vivienda_b.json": "42d80ffe515d45e7f3dde04b602601ac008b3e184ca9150f5f0bf83b4b8f769e",
+    "data/kits/vivienda_ninos.json": "e04c07747886e8b397591a75b8be28cd0f527eff5812fe522a90f7a63fe8ad66",
+    "tools/interiores/catalogo_vivienda_b.py": "59410aeb5fe499213ab19ff528acc131aae08aa3e582d0cd76f88a6ea93e9f70",
+    "tools/interiores/kits_vivienda_b.py": "94451968e615f6e470be96e005eabfb85bcbe1d4939f280f6a20b7699886be12",
+    "data/interiores/datos.json": "0184d3cbe27fef3e8a295a72988e17da1cf8849ad50b91896af09a11fa29c211",
+    "src/interiores_datos.js": "877eca8e1153aa9c03e8e8b38fef29909122aef443503b330e10dfd8017d06a6"
+  },
+  "active_matches_delivered_files_after_root_integration": {
+    "src/locales.js": true,
+    "data/kits/kit.schema.json": true,
+    "data/objetos/vivienda_b.json": true,
+    "data/kits/vivienda_ninos.json": true,
+    "tools/interiores/catalogo_vivienda_b.py": true,
+    "tools/interiores/kits_vivienda_b.py": true
+  },
+  "layout": {
+    "scope": "base local Bv2 congelada, sin acabado de raíz, selección CPU real; cortinas como envolventes conservadoras de la malla real .38×2.05 y pliegue .035, no geometría reducida",
+    "counts": {
+      "rooms": 31,
+      "houses": 31,
+      "kitSeeds": 81,
+      "problems": 0,
+      "banksReal": 24,
+      "banksSynthetic": 59,
+      "rugsReal": 31,
+      "rugsSynthetic": 81
+    },
+    "negative_count": 12,
+    "all_31_main_furniture_identical": true,
+    "synthetic_retry_changes": [
+      {
+        "seed": 29,
+        "beforeAttempt": 0,
+        "afterAttempt": 1
+      },
+      {
+        "seed": 51,
+        "beforeAttempt": 1,
+        "afterAttempt": 2
+      },
+      {
+        "seed": 63,
+        "beforeAttempt": 0,
+        "afterAttempt": 1
+      }
+    ],
+    "private_red_curtain_seeds": [
+      3072,
+      4848,
+      5144,
+      6291,
+      8030
+    ]
+  },
+  "full_geometry": {
+    "state": "CPU_full_geometry_PASS_no_GPU",
+    "scope": "Bv2 local congelada + contraste/caller contemporáneos de raíz cc5b244 frente a Bv3 + el mismo contraste/caller; hashes externos explícitos, leídos sólo en memoria una vez para ambos lados. buildVecino real, StaticCollider y batches r170; Canvas sin píxeles; no GPU/navegador ni aprobación visual",
+    "external_common_read_only_sources": {
+      "finish": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+      "houses": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706"
+    },
+    "houses": 31,
+    "max_meshes": 60,
+    "max_triangles": 63264,
+    "max_lights": 8,
+    "meshes_materials_lights_identical_all": true,
+    "registered_banks": 24,
+    "hide_unhide_exact_radius": 0.34,
+    "hide_unhide_all_pass": true
+  },
+  "details": "CPU_details_PASS_no_GPU",
+  "contracts": {
+    "state": "CPU_exact_runtime_callbacks18_PASS_no_GPU",
+    "count": 2,
+    "gate": 18,
+    "apply_check": "PASS on active before integration of these contracts"
+  },
+  "limits": [
+    "CPU Canvas stub does not rasterize own texture or atlas pixels",
+    "No measured GPU cost or living-game frame rate",
+    "No manual score or visual approval",
+    "Rug physical free footprint does not by itself prove recognizability in final render",
+    "Optional bank absent in7/31 real and22/81 synthetic cases; no substitution/fallback to another wall",
+    "Optional decoration/luminaires may change through shared deterministic RNG; no lighting-system redesign"
+  ]
+}

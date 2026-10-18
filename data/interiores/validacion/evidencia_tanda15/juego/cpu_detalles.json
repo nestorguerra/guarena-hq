@@ -1,0 +1,141 @@
+{
+  "state": "CPU_details_PASS_no_GPU",
+  "checks": [
+    {
+      "name": "banco ocho subpiezas con contacto y sin penetracion",
+      "pass": true
+    },
+    {
+      "name": "negativo asiento elevado 10mm",
+      "pass": true
+    },
+    {
+      "name": "negativo caja contra division",
+      "pass": true
+    },
+    {
+      "name": "frontera 12 y ambos lados, filtro real",
+      "pass": true,
+      "evidence": [
+        {
+          "W": 3,
+          "D": 3.9999999,
+          "area": 11.9999997,
+          "active": [
+            "vb_alfombra_juego_compacta"
+          ],
+          "placed": [
+            "vb_alfombra_juego_compacta"
+          ]
+        },
+        {
+          "W": 3,
+          "D": 4,
+          "area": 12,
+          "active": [
+            "vb_alfombra_juego"
+          ],
+          "placed": [
+            "vb_alfombra_juego"
+          ]
+        },
+        {
+          "W": 3,
+          "D": 4.0000001,
+          "area": 12.0000003,
+          "active": [
+            "vb_alfombra_juego"
+          ],
+          "placed": [
+            "vb_alfombra_juego"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "trasera S distancia default",
+      "pass": true,
+      "actual": 0.010000000000000009
+    },
+    {
+      "name": "trasera S distancia 0",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "trasera S distancia 0.14",
+      "pass": true,
+      "actual": 0.14
+    },
+    {
+      "name": "trasera N distancia default",
+      "pass": true,
+      "actual": 0.009999999999999731
+    },
+    {
+      "name": "trasera N distancia 0",
+      "pass": true,
+      "actual": -5.551115123125783e-17
+    },
+    {
+      "name": "trasera N distancia 0.14",
+      "pass": true,
+      "actual": 0.14000000000000007
+    },
+    {
+      "name": "trasera W distancia default",
+      "pass": true,
+      "actual": 0.010000000000000009
+    },
+    {
+      "name": "trasera W distancia 0",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "trasera W distancia 0.14",
+      "pass": true,
+      "actual": 0.14000000000000012
+    },
+    {
+      "name": "trasera E distancia default",
+      "pass": true,
+      "actual": 0.009999999999999981
+    },
+    {
+      "name": "trasera E distancia 0",
+      "pass": true,
+      "actual": -2.7755575615628914e-17
+    },
+    {
+      "name": "trasera E distancia 0.14",
+      "pass": true,
+      "actual": 0.1400000000000001
+    },
+    {
+      "name": "rechaza separador en sobre",
+      "pass": true
+    },
+    {
+      "name": "rechaza separador en suelo_libre",
+      "pass": true
+    },
+    {
+      "name": "rechaza separador en esquina",
+      "pass": true
+    },
+    {
+      "name": "rechaza grupo sin ampliar motor modular",
+      "pass": true
+    },
+    {
+      "name": "enfrente transmite separador y no recoloca ante pared bloqueada",
+      "pass": true
+    },
+    {
+      "name": "81 semillas de receta Bv2 no optante identicas incluido RNG",
+      "pass": true
+    }
+  ],
+  "catalog_sha256": "42d80ffe515d45e7f3dde04b602601ac008b3e184ca9150f5f0bf83b4b8f769e"
+}

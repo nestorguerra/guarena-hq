@@ -1,0 +1,140 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -6,6 +6,7 @@
+ import * as THREE from 'three';
+ import { programaLuzDomestica } from '/src/housekit.js';
+ import { construir, caja } from '/src/objetos.js';
++import { partes, penetra, espacioFrontal } from '/src/interiores_geo.js';
+ 
+ const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
+ const tirar = (h) => h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
+@@ -772,5 +773,129 @@
+       }finally{tirar(h);}
+     }
+   });
++  if(opts.tanda>=17)await caso('biblioteca infantil conserva los apoyos internos de cuentos y manualidades',()=>{
++    const EPS=1e-6;
++    const sinApoyo=id=>{
++      const P=partes({obj:id,x:0,y:0,z:0,ry:0});
++      return P.flatMap((p,i)=>{
++        exigir(p.f==='caja'&&Math.abs(p.a)<EPS,'oráculo acotado a cajas sin giro: '+id);
++        if(Math.abs(p.y0)<EPS)return [];
++        const apoyo=P.some((q,j)=>j!==i&&Math.abs(q.y1-p.y0)<EPS&&
++          p.cx-p.hw>=q.cx-q.hw-EPS&&p.cx+p.hw<=q.cx+q.hw+EPS&&
++          p.cz-p.hd>=q.cz-q.hd-EPS&&p.cz+p.hd<=q.cz+q.hd+EPS);
++        return apoyo?[]:[i];
++      });
++    };
++    const solapes=id=>{
++      const P=partes({obj:id,x:0,y:0,z:0,ry:0}),mal=[];
++      for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){
++        const profundidad=penetra(P[i],P[j]);
++        if(profundidad>EPS)mal.push({i,j,profundidad});
++      }
++      return mal;
++    };
++    for(const id of ['vb_cuentos_biblioteca','vb_hacer_biblioteca']){
++      exigir(OBJETOS[id], 'falta la pertenencia '+id);
++      exigir(!sinApoyo(id).length,'subpieza sin contacto o huella completa: '+id);
++      exigir(!solapes(id).length,'subpiezas interpenetradas: '+id);
++    }
++    const obj=OBJETOS.vb_hacer_biblioteca,original=structuredClone(obj.partes);
++    try{
++      obj.partes[0].d[1]=.18;obj.partes[0].p[1]=.09;
++      exigir(sinApoyo(obj.id).includes(1),'no detecta el cuaderno original flotante');
++      obj.partes=structuredClone(original);obj.partes[1].p[1]+=.01;
++      exigir(sinApoyo(obj.id).includes(1),'no detecta elevar el cuaderno');
++      obj.partes=structuredClone(original);obj.partes.splice(0,1);
++      exigir(sinApoyo(obj.id).includes(0),'no detecta retirar la caja de apoyo');
++      obj.partes=structuredClone(original);
++      obj.partes[2].d[0]=.26;obj.partes[2].p[0]=.13;obj.partes[3].p[0]=.13;
++      const mal=solapes(obj.id);
++      exigir(!sinApoyo(obj.id).length,'el negativo de solape debe seguir apoyado');
++      exigir(mal.some(p=>p.i===0&&p.j===2&&p.profundidad>.02)&&mal.some(p=>p.i===0&&p.j===3&&p.profundidad>.01),'no detecta las dos penetraciones originales de la pila');
++    }finally{obj.partes=original;}
++  });
++  if(opts.tanda>=17)await caso('infantil agrupa biblioteca con puesto y conserva salida exacta del armario',async()=>{
++    const {Interiors}=await import('/src/interiors.js'),EPS=1e-6;
++    const css=document.body.classList.contains('hiding');
++    const dentro=(p,b,x,z)=>{
++      const dx=x-p.x,dz=z-p.z,lx=dx*Math.cos(p.ry)-dz*Math.sin(p.ry),lz=dx*Math.sin(p.ry)+dz*Math.cos(p.ry);
++      return lx>b.x0+EPS&&lx<b.x1-EPS&&lz>b.z0+EPS&&lz<b.z1-EPS;
++    };
++    const libre=(h,e,p)=>{
++      const col=h.levels?h.levels[p.y>h.split?1:0]:h.collider,q=p.clone(),r=col.resolveCircle(q,.34);
++      if(Math.hypot(q.x-p.x,q.z-p.z)>EPS||r.depth>EPS)return false;
++      if(p.x<e.origen.x-e.W/2||p.x>e.origen.x+e.W/2||p.z<e.origen.z||p.z>e.origen.z+e.D)return false;
++      for(const sala of h.estancias){
++        if(Math.abs(sala.origen.y-p.y)>.2)continue;
++        for(const c of sala.colocados){
++          const b=caja(c.obj);
++          if(c.sop!=null||['pared','techo'].includes(c.regla)||OBJETOS[c.obj].clase==='PICKUP'||b.h<.3)continue;
++          if(dentro(c,b,p.x-sala.origen.x,p.z-sala.origen.z))return false;
++        }
++      }
++      return true;
++    };
++    try{for(const seed of [4007,5045,1296,3405,1555,4034]){
++      const h=H.buildVecino(seed,{x:-5200,z:-5200});try{
++        const e=h.estancias.find(e=>e.kit==='vivienda_ninos');exigir(e,seed+': falta cuarto infantil');
++        const C=e.colocados,m=C.find(p=>p.obj==='vb_mesa_ninos'),b=C.find(p=>p.obj==='vb_biblioteca_ninos'),a=C.find(p=>p.obj==='vb_armario_ninos'),c=C.find(p=>p.obj==='vb_silla_ninos');
++        exigir(m&&b&&a&&c,seed+': pierde un volumen esencial');
++        exigir(b.de===C.indexOf(m)&&c.de===C.indexOf(m)&&c.e===m.e&&C.indexOf(c)===C.indexOf(m)+1,seed+': grupo o vínculo inmediato de silla incorrectos');
++        exigir(a.de==null,seed+': armario vuelve a formar parte del grupo de estudio');
++        exigir(Math.abs(Math.sin(b.ry-m.ry))<EPS&&Math.cos(b.ry-m.ry)>.99,seed+': biblioteca gira fuera del frente');
++        const dx=b.v.cx-m.v.cx,dz=b.v.cz-m.v.cz,lateral=Math.abs(dx*Math.cos(m.ry)-dz*Math.sin(m.ry));
++        exigir(Math.abs(lateral-b.v.hw-m.v.hw-.04)<.001,seed+': biblioteca separada del puesto');
++        const baldas=OBJETOS[b.obj].superficies,pertenencias=C.filter(p=>['vb_cuentos_biblioteca','vb_hacer_biblioteca'].includes(p.obj)&&p.sop===C.indexOf(b));
++        exigir(baldas.length===2&&baldas[1].y-baldas[0].y>.4,seed+': faltan dos baldas útiles');
++        exigir(pertenencias.length===2&&new Set(pertenencias.map(p=>p.sup)).size===2&&pertenencias.every(p=>[0,1].includes(p.sup)),seed+': balda sin pertenencia apoyada');
++        exigir(C.some(p=>p.obj==='vb_bloques'&&p.sop===C.indexOf(b)),seed+': juego sin apoyo en biblioteca');
++        exigir(C.some(p=>p.obj==='vb_cama_ninos')&&C.some(p=>p.obj==='vb_mesita')&&h.pieces.bed.some(p=>p.rm.id===e.sala)&&h.pieces.table.some(p=>p.rm.id===e.sala)&&h.pieces.seat.some(p=>p.rm.id===e.sala),seed+': pérdida de descanso, mesa o asiento');
++        const wb=caja(a.obj);exigir(wb.w>=.949&&wb.d>=.419&&wb.h>=1.49,seed+': armario encogido');
++        const R=espacioFrontal(a,wb,[.7,.6]),Z=e.zonas.estancia;
++        for(const sx of [-1,1])for(const sz of [-1,1]){
++          const x=R.cx+sx*R.hw*Math.cos(R.a)+sz*R.hd*Math.sin(R.a),z=R.cz-sx*R.hw*Math.sin(R.a)+sz*R.hd*Math.cos(R.a);
++          exigir(x>=Z.x0-EPS&&x<=Z.x1+EPS&&z>=Z.z0-EPS&&z<=Z.z1+EPS,seed+': reserva de armario sale del cuarto');
++        }
++        exigir(!C.some(p=>p!==a&&partes(p).some(q=>penetra(R,q)>.005)),seed+': reserva frontal invadida');
++        if([4007,5045].includes(seed)){
++          exigir(Math.abs(Math.sin(m.ry))<EPS,seed+': cambió el eje de la sección estrecha');
++          const norte=Math.cos(m.ry)<0,d=norte?c.v.cz-c.v.hd:e.D-c.v.cz-c.v.hd;
++          const paso={cx:c.v.cx,cz:norte?d/2:e.D-d/2,hw:.4,hd:d/2,a:0,y0:.08,y1:1.2};
++          exigir(d>=.8-EPS&&!C.some(p=>p!==c&&p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>=.3&&partes(p).some(q=>penetra(paso,q)>EPS)),seed+': sección física de paso0,8 invadida');
++        }
++        exigir(e.ancho>=.8&&!revisarUso(h).errores.length,seed+': pierde paso o acceso');
++        const it=h.inter.find(i=>i.sala===e.sala&&i.type==='hide');exigir(it&&h.inter.some(i=>i.sala===e.sala&&i.type==='read'),seed+': pierde ocultación o lectura');
++        const p={pos:new THREE.Vector3(it.x,e.origen.y,it.z),hidden:false},start=p.pos.clone(),cam={fovOverride:0,setFirstPerson(v){this.firstPerson=v;}},owner=Object.create(Interiors.prototype);
++        owner.game={player:p,audio:{sfx(){}},cam};
++        exigir(libre(h,e,p.pos),seed+': entrada real del armario ocupada');
++        owner.hideIn(it);
++        exigir(p.hidden&&owner.hiding===it&&cam.fovOverride===55&&cam.firstPerson&&document.body.classList.contains('hiding'),seed+': no entra en ocultación real');
++        exigir(p.pos.x===it.hx&&p.pos.y===e.origen.y&&p.pos.z===it.hz&&dentro(a,wb,p.pos.x-e.origen.x,p.pos.z-e.origen.z),seed+': centro oculto fuera del armario');
++        owner.unhide();
++        exigir(!p.hidden&&owner.hiding==null&&cam.fovOverride===0&&!document.body.classList.contains('hiding')&&p.pos.equals(start),seed+': no restaura la salida real');
++        exigir(libre(h,e,p.pos),seed+': salida exacta ocupada para radio0,34');
++        const malo={...it,x:it.hx,z:it.hz};owner.hideIn(malo);owner.unhide();
++        exigir(!libre(h,e,p.pos),seed+': negativo acepta salida al interior de una huella sólida');
++      }finally{tirar(h);}
++    }}finally{document.body.classList.toggle('hiding',css);}
++  });
++  if(opts.tanda>=17)await caso('grupo de estudio comprueba ambos órdenes y conserva fallback y RNG',()=>{
++    const id='__infantil_grupo_asiento',K=KITS.vivienda_ninos,puesto=K.objetos.find(e=>e.obj==='vb_mesa_ninos'),biblioteca=K.objetos.find(e=>e.obj==='vb_biblioteca_ninos');
++    const base=[{...puesto,pared:['N']},{...biblioteca}],ctx={W:2,D:2.8,H:2.75,funciones:true,inicio:{x:0,z:.5}};
++    const pareja=A=>{const m=A.P.find(p=>p.obj==='vb_mesa_ninos'),b=A.P.find(p=>p.obj==='vb_biblioteca_ninos'),c=A.P.find(p=>p.obj==='vb_silla_ninos');return m&&b&&c&&b.de===A.P.indexOf(m)&&c.de===A.P.indexOf(m)&&c.e===m.e;};
++    try{
++      KITS[id]={...K,objetos:base};const A=amueblar(id,7,ctx);
++      exigir(pareja(A)&&A.P.find(p=>p.obj==='vb_mesa_ninos').x<A.P.find(p=>p.obj==='vb_biblioteca_ninos').x,'no compone el primer orden');
++      const libres=[{cx:-.5,cz:2.8-.675,hw:.32,hd:.22,a:0,y0:0,y1:2.4}],B=amueblar(id,7,{...ctx,libres});
++      exigir(pareja(B)&&B.P.find(p=>p.obj==='vb_mesa_ninos').x>B.P.find(p=>p.obj==='vb_biblioteca_ninos').x,'no prueba el orden inverso al bloquear la silla');
++      for(const seed of [1,37,81])for(const contexto of [{...ctx,W:1.6},{...ctx,libres:[{cx:0,cz:2.8-.675,hw:1,hd:.22,a:0,y0:0,y1:2.4}]}]){
++        const objetos=base.concat(K.objetos.filter(e=>e.regla==='techo'||(e.regla==='sobre'&&e.en?.includes('vb_mesa_ninos'))));
++        KITS[id]={...K,objetos};const agrupado=amueblar(id,seed,contexto);
++        KITS[id]={...K,objetos:objetos.map(({grupo_pared,...e})=>e)};const individual=amueblar(id,seed,contexto);
++        exigir(!pareja(agrupado)&&JSON.stringify(agrupado.P)===JSON.stringify(individual.P)&&JSON.stringify(agrupado.activas)===JSON.stringify(individual.activas),seed+': fallback alterado');
++        exigir(agrupado.U([0,1])===individual.U([0,1]),seed+': el grupo imposible consume RNG externo');
++      }
++    }finally{delete KITS[id];}
++  });
+   return { pruebas, errores };
+ }

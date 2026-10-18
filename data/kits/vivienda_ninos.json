@@ -56,8 +56,41 @@
   {
    "zona": "estancia",
    "regla": "contra_pared",
+   "obj": "vb_mesa_ninos",
+   "pared": [
+    "N",
+    "S",
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "silla_frontal": "vb_silla_ninos",
+   "grupo_pared": "estudio_infantil"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_biblioteca_ninos",
+   "de": "vb_mesa_ninos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "grupo_pared": "estudio_infantil"
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
    "obj": "vb_armario_ninos",
-   "pared": "*",
    "cantidad": [
     1,
     1
@@ -68,32 +101,6 @@
     0.7,
     0.6
    ]
-  },
-  {
-   "zona": "estancia",
-   "regla": "contra_pared",
-   "obj": "vb_mesa_ninos",
-   "pared": "*",
-   "cantidad": [
-    1,
-    1
-   ],
-   "obligatorio": true,
-   "preferir": true,
-   "silla_frontal": "vb_silla_ninos"
-  },
-  {
-   "zona": "estancia",
-   "regla": "junto_a",
-   "obj": "vb_estante_ninos",
-   "de": "vb_mesa_ninos",
-   "cantidad": [
-    0,
-    1
-   ],
-   "obligatorio": false,
-   "preferir": true,
-   "buscar_refs": true
   },
   {
    "zona": "estancia",
@@ -116,11 +123,42 @@
    "regla": "suelo_libre",
    "obj": "vb_alfombra_juego",
    "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "suelo_determinista": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "vb_alfombra_juego_compacta",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "suelo_determinista": true,
+   "area_max": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "enfrente",
+   "obj": "vb_banco_lectura_ninos",
+   "de": "vb_biblioteca_ninos",
+   "cantidad": [
     0,
     1
    ],
    "preferir": true,
-   "area_min": 12
+   "centrado": true,
+   "si_no": false,
+   "separacion_pared": 0.14,
+   "espacio_frontal": [
+    0.7,
+    0.55
+   ]
   },
   {
    "zona": "estancia",
@@ -153,8 +191,7 @@
    "regla": "sobre",
    "obj": "vb_bloques",
    "en": [
-    "vb_mesa_ninos",
-    "vb_estante_ninos"
+    "vb_biblioteca_ninos"
    ],
    "cantidad": [
     1,
@@ -269,12 +306,26 @@
     "vb_auriculares"
    ],
    "en": [
-    "vb_mesita",
-    "vb_estante_ninos"
+    "vb_mesita"
    ],
    "por_soporte": [
     1,
     2
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "vb_cuentos_biblioteca",
+    "vb_hacer_biblioteca"
+   ],
+   "en": [
+    "vb_biblioteca_ninos"
+   ],
+   "por_soporte": [
+    1,
+    1
    ]
   },
   {

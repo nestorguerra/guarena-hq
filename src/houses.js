@@ -1138,9 +1138,9 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
-    if(rm.type!=='bano')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
+    if(rm.type!=='bano'&&rm.type!=='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
     const porKit = amueblarEstancia(rm);
-    if(rm.type==='bano')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
+    if(rm.type==='bano'||rm.type==='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
     if (!porKit) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }

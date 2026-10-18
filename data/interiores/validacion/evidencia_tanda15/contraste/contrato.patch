@@ -1,0 +1,51 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -4,7 +4,7 @@
+ import { filtroHogar, amueblar, buildLocal } from '/src/locales.js';
+ import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
+ import * as THREE from 'three';
+-import { programaLuzDomestica } from '/src/housekit.js';
++import { programaLuzDomestica, HouseBuilder } from '/src/housekit.js';
+ import { construir, caja } from '/src/objetos.js';
+ import { partes, penetra, espacioFrontal } from '/src/interiores_geo.js';
+ 
+@@ -897,5 +897,39 @@
+       }
+     }finally{delete KITS[id];}
+   });
++  if(opts.tanda>=18)await caso('el acabado infantil usa la cama real para colorear una sola pared alta',()=>{
++    const proto=HouseBuilder.prototype,add=proto.add,mat=proto.mat;
++    let planos=[],materiales=new Map();
++    proto.mat=function(...args){const key=mat.apply(this,args);if(key.startsWith('infantil_'))materiales.set(key,this.mats.get(key));return key;};
++    proto.add=function(key,geo,x,y,z,ry=0){
++      if(key.startsWith('infantil_')&&geo.type==='PlaneGeometry')planos.push({key,x:this.ox+x,y,z:this.oz+z,ry,w:geo.parameters.width,h:geo.parameters.height,ny:geo.attributes.normal.getY(0)});
++      return add.call(this,key,geo,x,y,z,ry);
++    };
++    try{for(const seed of [4007,5045,1296,3405,1555,4034]){
++      planos=[];materiales=new Map();let h;
++      try{
++        h=H.buildVecino(seed,{x:-5200,z:-5200});
++        const salas=h.estancias.filter(e=>e.kit==='vivienda_ninos');exigir(salas.length===1,seed+': falta la sala infantil dirigida');
++        const e=salas[0],cama=e.colocados.find(p=>p.obj==='vb_cama_ninos');exigir(cama,seed+': falta cama para probar el caller');
++        const x0=e.origen.x-e.W/2,x1=e.origen.x+e.W/2,z0=e.origen.z,z1=z0+e.D,y=e.origen.y;
++        const deSala=p=>p.x>=x0-1e-6&&p.x<=x1+1e-6&&p.z>=z0-1e-6&&p.z<=z1+1e-6&&p.y>=y-1e-6&&p.y<=y+e.H+1e-6;
++        const paredes=planos.filter(p=>deSala(p)&&Math.abs(p.ny)<1e-6);
++        const bajos=paredes.filter(p=>p.y+p.h/2<=y+.92+1e-6),altos=paredes.filter(p=>p.y-p.h/2>=y+.92-1e-6);
++        const techo=planos.filter(p=>deSala(p)&&p.ny<-.99&&Math.abs(p.y-(y+e.H-.008))<1e-6);
++        const keys=[...new Set(bajos.map(p=>p.key))];exigir(keys.length===1&&techo.length===1&&altos.length>=4,seed+': evidencia incompleta de bandas y techo');
++        const bajo=keys[0],cal=techo[0].key;
++        exigir(bajo!==cal&&materiales.get(bajo)&&materiales.get(cal)&&!materiales.get(bajo).color.equals(materiales.get(cal).color),seed+': pared de uso indistinguible del techo');
++        // La normal frontal de la cama apunta al interior. La pared de cabecero
++        // tiene esa misma normal, con independencia del número de fragmentos.
++        const nx=Math.sin(cama.ry),nz=Math.cos(cama.ry);let area=0,opuestos=0;
++        for(const p of altos){
++          const cabecero=Math.sin(p.ry)*nx+Math.cos(p.ry)*nz>.999;
++          exigir(p.key===(cabecero?bajo:cal),seed+': acabado alto no sigue la cama amueblada');
++          if(cabecero)area+=p.w*p.h;else opuestos++;
++        }
++        exigir(area>.25&&opuestos>=3,seed+': falta una pared alta de uso y tres paredes claras');
++      }finally{if(h)tirar(h);}
++    }}finally{proto.add=add;proto.mat=mat;}
++  });
+   return { pruebas, errores };
+ }

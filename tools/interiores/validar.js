@@ -159,6 +159,7 @@ export async function validar(tip, seeds = [1, 2, 3]) {
     const contexto = tip.startsWith('vivienda_') ? { libres: [{ cx: puertaLab, cz: 0.5, hw: 0.58, hd: 0.5, a: 0, y0: 0, y1: 2.4 }], inicio: { x: puertaLab, z: 0.5 } } : null;
     const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
     const rep = revisar(h, presupuesto);
+    if(h.local.generacion)rep.generacion=h.local.generacion;
     // (I-03: the same seed again, the same layout)
     const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
     if (hogar) {rep.hogar = `${hogar.perfil} · ${hogar.estilo}`;rep.contexto_hogar=hogar;}

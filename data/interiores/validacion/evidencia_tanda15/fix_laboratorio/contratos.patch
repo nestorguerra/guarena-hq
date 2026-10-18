@@ -1,0 +1,46 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -1017,5 +1017,43 @@
+       }
+     }finally{delete KITS[id];}
+   });
++  if(opts.tanda>=18)await caso('laboratorio infantil resuelve29/51/63 sin cambiar el marco original',async()=>{
++    const B=await(await fetch('/data/quality_budgets.json')).json(),ctx={libres:[{cx:-.75,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}],inicio:{x:-.75,z:.5}},contexto=JSON.stringify(ctx),ids=Object.keys(H.PROFILES);
++    const hogar=seed=>{const id=ids[(seed-1)%ids.length],p=H.PROFILES[id];return{perfil:id,estilo:p.styles[Math.floor((seed-1)/ids.length)%p.styles.length],botin:p.loot,habitacion:'ninos'};};
++    for(const[seed,W,D]of[[29,5.9,2.1],[51,3.5,2.1],[63,3.5,3.6]]){
++      const h=buildLocal('vivienda_ninos',seed,{x:-5200,z:-5200},'Regresión',hogar(seed),ctx),a=buildLocal('vivienda_ninos',seed,{x:-5200,z:-5200},'Regresión',hogar(seed),ctx);
++      try{
++        const r=revisar(h,B),L=h.local,g=L.generacion;exigir(!r.errores.length,seed+': '+r.errores.join('; '));
++        exigir(L.seed===seed&&L.W===W&&L.D===D&&L.H===2.75&&L.puertaX===-.75,seed+': cambió semilla solicitada o marco');
++        exigir(g&&!g.agotado&&g.maximo===12&&g.intento<12&&g.marco.W===W&&g.marco.D===D&&g.marco.H===2.75&&g.marco.puertaX===-.75,seed+': falta traza del marco fijo');
++        exigir(g.semillaEfectiva===((seed+g.intento*104729)>>>0)&&g.intentos.length===g.intento+1,seed+': semilla efectiva no corresponde al intento');
++        exigir(g.intentos.every((t,i)=>t.seed===((seed+i*104729)>>>0)&&(i===g.intento?t.faltan.length===0:t.faltan.length>0)),seed+': elige un intento saltándose un éxito');
++        exigir(g.intentos.every(t=>!t.busquedasSuelo||t.busquedasSuelo.every(b=>b.probados<=16000&&b.limite===16000)),seed+': búsqueda sin límite');
++        exigir(JSON.stringify(L)===JSON.stringify(a.local),seed+': montaje no determinista');
++      }finally{tirar(h);tirar(a);}
++    }
++    // Si los200tiros ya daban una solución, el opt-in no cambia P ni U posterior.
++    const K=KITS.vivienda_ninos,flags=K.objetos.filter(e=>e.suelo_determinista),save=flags.map(e=>e.suelo_determinista),filtro=filtroHogar(hogar(1));let viejo,h;
++    try{
++      for(const e of flags)delete e.suelo_determinista;
++      const A=amueblar('vivienda_ninos',1,{...ctx,filtro});viejo={P:JSON.stringify(A.P),U:A.U([0,1])};
++      flags.forEach((e,i)=>{e.suelo_determinista=save[i];});const A2=amueblar('vivienda_ninos',1,{...ctx,filtro});
++      exigir(JSON.stringify(A2.P)===viejo.P&&A2.U([0,1])===viejo.U,'opt-in modifica una colocación previa válida o su RNG');
++      h=buildLocal('vivienda_ninos',1,{x:-5200,z:-5200},'Control',hogar(1),ctx);exigir(!h.local.generacion,'reintenta el laboratorio que ya cumplía mínimos');
++    }finally{flags.forEach((e,i)=>{e.suelo_determinista=save[i];});if(h)tirar(h);}
++    exigir(JSON.stringify(ctx)===contexto,'mutación del contexto original');
++  });
++  if(opts.tanda>=18)await caso('laboratorio bloqueado conserva el error tras12 intentos y dimensiones fijas',async()=>{
++    const B=await(await fetch('/data/quality_budgets.json')).json(),seed=51,ids=Object.keys(H.PROFILES),id=ids[(seed-1)%ids.length],p=H.PROFILES[id],hogar={perfil:id,estilo:p.styles[Math.floor((seed-1)/ids.length)%p.styles.length],botin:p.loot,habitacion:'ninos'};
++    const ctx={W:3.5,D:2.1,H:2.75,libres:[{cx:0,cz:1.05,hw:1.75,hd:1.05,a:0,y0:0,y1:3}],inicio:{x:-.75,z:.5}},original=JSON.stringify(ctx),h=buildLocal('vivienda_ninos',seed,{x:-5200,z:-5200},'Bloqueado',hogar,ctx);
++    try{
++      const L=h.local,g=L.generacion,r=revisar(h,B);
++      exigir(r.errores.some(e=>e.includes('obligatorio:')&&e.includes('alfombra')),'convierte la cuota incumplida en un verde');
++      exigir(g?.agotado&&g.intento===11&&g.intentos.length===12&&g.intentos.every(t=>t.faltan.length>0),'no agota exactamente12 intentos fallidos');
++      exigir(g.semillaEfectiva===((seed+11*104729)>>>0)&&L.seed===seed,'traza incorrecta del fallo agotado');
++      exigir(L.W===3.5&&L.D===2.1&&L.H===2.75&&L.puertaX===-.75&&g.marco.W===3.5&&g.marco.D===2.1&&g.marco.H===2.75,'ensancha o cambia el marco para pasar');
++      exigir(JSON.stringify(ctx)===original,'mutación de reservas o entrada');
++    }finally{tirar(h);}
++  });
+   return { pruebas, errores };
+ }

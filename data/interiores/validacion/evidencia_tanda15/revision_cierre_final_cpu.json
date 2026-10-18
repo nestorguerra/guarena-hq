@@ -1,0 +1,88 @@
+{
+  "estado": "READ_ONLY_COHERENT_NO_P1_P2",
+  "snapshot_sha256": "e2105a5963fa83b8834af4d2aa92184473f9ede890291acd5ed69644ac08135e",
+  "frozen_entries": 412,
+  "source_differences": [],
+  "gates": [
+    {
+      "nombre": "contratos",
+      "exit_code": 0
+    },
+    {
+      "nombre": "kits5",
+      "exit_code": 0
+    },
+    {
+      "nombre": "casas200",
+      "exit_code": 0
+    },
+    {
+      "nombre": "kits81",
+      "exit_code": 0
+    },
+    {
+      "nombre": "integracion_fuente",
+      "exit_code": 0
+    },
+    {
+      "nombre": "build",
+      "exit_code": 0
+    },
+    {
+      "nombre": "recursos",
+      "exit_code": 0
+    },
+    {
+      "nombre": "marcas",
+      "exit_code": 0
+    },
+    {
+      "nombre": "integracion_paquete",
+      "exit_code": 0
+    }
+  ],
+  "routes": [
+    {
+      "name": "Casa de Paco y Mari",
+      "kind": "vecino",
+      "levels": 1,
+      "runs": 16,
+      "tunnels": [],
+      "escapes": []
+    },
+    {
+      "name": "Casa de Marisa la pintora",
+      "kind": "vecino",
+      "levels": 2,
+      "runs": 32,
+      "tunnels": [],
+      "escapes": []
+    },
+    {
+      "name": "Casa de Luc\u00eda la del coro",
+      "kind": "vecino",
+      "levels": 1,
+      "runs": 16,
+      "tunnels": [],
+      "escapes": []
+    },
+    {
+      "name": "Casa de Annie",
+      "kind": "annie",
+      "levels": 2,
+      "runs": 32,
+      "tunnels": [],
+      "escapes": []
+    }
+  ],
+  "maxima_casas200": {
+    "triangulos": 70192,
+    "mallas": 60,
+    "luces": 9,
+    "montaje_ms": 166
+  },
+  "evidence_manifest_sha256": "e66641bfdc79c9d7da92436c1f468a5497caa26602af7f49d3964b0a95e4456e",
+  "aggregate_sha256": "7bbe5306d373d2b93c37636d7bf75276c41cd2918170d286c7a8380c6d4a2e8f",
+  "visual_reuse_exact_sha256": "8a902376baea6e83f2457ae80ecd4cb4cdd6a82faeab26f1476ea741004a782e",
+  "limits": "Read-only hashes and receipt inspection; no GPU, benchmark, rerun, artistic score, CI or publication verification."
+}

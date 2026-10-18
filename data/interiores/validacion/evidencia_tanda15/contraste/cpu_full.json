@@ -1,0 +1,846 @@
+{
+  "state": "CPU_full_geometry_PASS_no_GPU",
+  "scope": "Comparación Bv2 vs Bv2+contraste: constructores, geometrías y agrupación reales; distribución y luces exactas, mismo número de mallas; Canvas y texturas sin rasterizar; no GPU ni juicio visual",
+  "rows": [
+    {
+      "seed": 4007,
+      "before": {
+        "meshes": 57,
+        "triangles": 46722,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 57,
+        "triangles": 46734,
+        "lights": 8
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5199.388060748949,
+          "y": 3.1,
+          "z": -5193.916561789997,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5199.372908110056,
+            3.1,
+            -5193.205753667723
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5199.388060748949,
+          "y": 3.1,
+          "z": -5193.916561789997,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5199.388060748949,
+          "y": 3.1,
+          "z": -5193.916561789997,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5199.372908110056,
+            3.1,
+            -5193.205753667723
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5199.388060748949,
+          "y": 3.1,
+          "z": -5193.916561789997,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    },
+    {
+      "seed": 5045,
+      "before": {
+        "meshes": 58,
+        "triangles": 46730,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 58,
+        "triangles": 46742,
+        "lights": 8
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5199.336971059814,
+          "y": 3.1,
+          "z": -5193.952925701067,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5199.287710808118,
+            3.1,
+            -5193.201579211978
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5199.336971059814,
+          "y": 3.1,
+          "z": -5193.952925701067,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5199.336971059814,
+          "y": 3.1,
+          "z": -5193.952925701067,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5199.287710808118,
+            3.1,
+            -5193.201579211978
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5199.336971059814,
+          "y": 3.1,
+          "z": -5193.952925701067,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    },
+    {
+      "seed": 1296,
+      "before": {
+        "meshes": 60,
+        "triangles": 46064,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 60,
+        "triangles": 46080,
+        "lights": 8
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5195.4704872044185,
+          "y": 0,
+          "z": -5197.8,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5195.453843005836,
+            0,
+            -5197.078002218453
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5195.4704872044185,
+          "y": 0,
+          "z": -5197.8,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5195.4704872044185,
+          "y": 0,
+          "z": -5197.8,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5195.453843005836,
+            0,
+            -5197.078002218453
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5195.4704872044185,
+          "y": 0,
+          "z": -5197.8,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    },
+    {
+      "seed": 3405,
+      "before": {
+        "meshes": 56,
+        "triangles": 37718,
+        "lights": 7
+      },
+      "after": {
+        "meshes": 56,
+        "triangles": 37734,
+        "lights": 7
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5196.12908740846,
+          "y": 0,
+          "z": -5198.95,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5196.177515787925,
+            0,
+            -5199.661566759166
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5196.12908740846,
+          "y": 0,
+          "z": -5198.95,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5196.12908740846,
+          "y": 0,
+          "z": -5198.95,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5196.177515787925,
+            0,
+            -5199.661566759166
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5196.12908740846,
+          "y": 0,
+          "z": -5198.95,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    },
+    {
+      "seed": 1555,
+      "before": {
+        "meshes": 59,
+        "triangles": 62628,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 59,
+        "triangles": 62644,
+        "lights": 8
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5198.888847502507,
+          "y": 3.1,
+          "z": -5189.554948606156,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5198.901152491532,
+            3.1,
+            -5188.822500777813
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5198.888847502507,
+          "y": 3.1,
+          "z": -5189.554948606156,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5198.888847502507,
+          "y": 3.1,
+          "z": -5189.554948606156,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5198.901152491532,
+            3.1,
+            -5188.822500777813
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5198.888847502507,
+          "y": 3.1,
+          "z": -5189.554948606156,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    },
+    {
+      "seed": 4034,
+      "before": {
+        "meshes": 60,
+        "triangles": 40396,
+        "lights": 8
+      },
+      "after": {
+        "meshes": 60,
+        "triangles": 40412,
+        "lights": 8
+      },
+      "budgetPassed": true,
+      "otherRoomMetadataIdentical": true,
+      "realRoomValidationErrors": [],
+      "fullHouseUseErrors": [],
+      "beforeHide": {
+        "entry": {
+          "x": -5196.872570050783,
+          "y": 0,
+          "z": -5199.400000000001,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5196.132160846209,
+            0,
+            -5199.410000005961
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5196.872570050783,
+          "y": 0,
+          "z": -5199.400000000001,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      },
+      "hide": {
+        "entry": {
+          "x": -5196.872570050783,
+          "y": 0,
+          "z": -5199.400000000001,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "hidden": {
+          "position": [
+            -5196.132160846209,
+            0,
+            -5199.410000005961
+          ],
+          "hidden": true,
+          "storedInteraction": true,
+          "fov": 55,
+          "firstPerson": true,
+          "css": true
+        },
+        "exit": {
+          "x": -5196.872570050783,
+          "y": 0,
+          "z": -5199.400000000001,
+          "radius": 0.34,
+          "moved": 0,
+          "depth": 0,
+          "hit": false,
+          "occupied": [],
+          "insideRoom": true,
+          "pass": true
+        },
+        "wardrobeBox": {
+          "x0": -0.4749999940395355,
+          "x1": 0.4749999940395355,
+          "y0": 0,
+          "y1": 1.5,
+          "z0": -0.20999999344348907,
+          "z1": 0.2485000044107437,
+          "w": 0.949999988079071,
+          "h": 1.5,
+          "d": 0.4584999978542328
+        },
+        "pass": true
+      }
+    }
+  ],
+  "negative": [
+    {
+      "seed": 4007,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5199.372908110056,
+        "y": 3.1,
+        "z": -5193.205753667723,
+        "radius": 0.34,
+        "moved": 0.11069507397314737,
+        "depth": 0.22150390625014554,
+        "hit": true,
+        "occupied": [
+          "A1/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    },
+    {
+      "seed": 5045,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5199.287710808118,
+        "y": 3.1,
+        "z": -5193.201579211978,
+        "radius": 0.34,
+        "moved": 0.11070074287241093,
+        "depth": 0.221288941023764,
+        "hit": true,
+        "occupied": [
+          "A1/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    },
+    {
+      "seed": 1296,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5195.453843005836,
+        "y": 0,
+        "z": -5197.078002218453,
+        "radius": 0.34,
+        "moved": 0.11097921040003537,
+        "depth": 0.22144177523573977,
+        "hit": true,
+        "occupied": [
+          "R0/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    },
+    {
+      "seed": 3405,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5196.177515787925,
+        "y": 0,
+        "z": -5199.661566759166,
+        "radius": 0.34,
+        "moved": 0.11123569718205986,
+        "depth": 0.22172866057055196,
+        "hit": true,
+        "occupied": [
+          "R0/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    },
+    {
+      "seed": 1555,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5198.901152491532,
+        "y": 3.1,
+        "z": -5188.822500777813,
+        "radius": 0.34,
+        "moved": 0.11074296531296568,
+        "depth": 0.22150390625014554,
+        "hit": true,
+        "occupied": [
+          "A2/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    },
+    {
+      "seed": 4034,
+      "kind": "unhide_destination_inside_wardrobe",
+      "detected": true,
+      "evidence": {
+        "x": -5196.132160846209,
+        "y": 0,
+        "z": -5199.410000005961,
+        "radius": 0.34,
+        "moved": 0.11067118504070095,
+        "depth": 0.22150390625014554,
+        "hit": true,
+        "occupied": [
+          "R0/vb_armario_ninos"
+        ],
+        "insideRoom": true,
+        "pass": false
+      }
+    }
+  ],
+  "source_sha256": {
+    "src/houses.js": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706",
+    "src/housekit.js": "f3da737e3c7d97ff8bf99948051b435602945251b4670a404c3e012ddc6dccdd",
+    "src/collision.js": "741797a927a683ed5a58240d0df9d0bbad777cc3a88de4ff39fbae030ddecc5d",
+    "src/util.js": "8c5dcfb913978c17e00966a10ee18628c986de7d841890832ac31fa010720601",
+    "src/interiores_geo.js": "824930bc65d52e366d6943ea8a83e9a5badbc866f6e4b3ed4ff04805a00146ba",
+    "src/locales.js": "c24286ee0e4ed23bf79f76b7e5f887001a7a254206aaaaf2f2488f664852cae0",
+    "src/casa_lotes.js": "8a122a4ee74ec7e67361712adf82be46fe272efc616f346972b86310337985cc",
+    "src/interiores_datos.js": "afc3be61ac82fcd6cf6e44fa40558c4393d6e6e20481f1a4493b57d8b5bdf38f",
+    "src/texturas/comercio.js": "8956f76bb940612546d544be71ad5876c3f6b099ee247124c4c2e704e4cfe628",
+    "src/texturas/servicios.js": "c84e631bafbd70d364c41536be052657888e47cb42d0f0344fec2a33094adb4e",
+    "src/texturas/tiendas_a.js": "aa5524a267a2cc79980b76c792961a6ddeba210a09f7badf2e90653eebdb31ba",
+    "src/texturas/tiendas_b.js": "1dc5554c91c29a26b4dc4d7a82250e59987edf89df26bc93a3a531b01193d901",
+    "src/texturas/vivienda_a.js": "f65a89a841b6d26cbd83585e78610b071e610048096cfacb9830b5e44529e661",
+    "src/texturas/vivienda_b.js": "508048d8b58ab97b9464c717994c7f518f45432d080bf7f6a4a418b6171f61b2",
+    "src/objetos.js": "cfaf0d3e8532cc9e969c441da2e90f0d5c00d6682fe468c6673f8f839a58fac3",
+    "src/acabados_vivienda_base.js": "a12a4ac16dac616d4a0a0ccd033b20eed0d8e7416b18725e9acef6f75039dfd0",
+    "src/houses_base.js": "a234706e81332076072aa362be06f387704b50a91577ab8843e10a4457fd15ea",
+    "tools/interiores/validar.js": "2d512d0f60c20f81641844bf03c8f338c2569c30949c95d2fc774325fa285dd5",
+    "src/interiors.js": "ceb6c3bcad9db507fe633a22c3f69d0ccfadae11607bf46681b943d91f85c0af",
+    "data/quality_budgets.json": "810f946235ab30794aff2b6b0f2352c428921e344bea5e399b47e1875ea7c2ee"
+  }
+}

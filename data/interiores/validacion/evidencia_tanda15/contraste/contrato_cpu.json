@@ -1,0 +1,24 @@
+{
+  "state": "PASS_CPU_no_GPU",
+  "results": [
+    {
+      "label": "candidate_six_real_houses",
+      "result": "PASS",
+      "error": null,
+      "prototypesRestored": true
+    },
+    {
+      "label": "old_caller_before_furniture",
+      "result": "RED_expected",
+      "error": "4007: acabado alto no sigue la cama amueblada",
+      "prototypesRestored": true
+    },
+    {
+      "label": "caller_without_infantil_estancia",
+      "result": "RED_expected",
+      "error": "4007: acabado alto no sigue la cama amueblada",
+      "prototypesRestored": true
+    }
+  ],
+  "limits": "Exact maintained callback; real constructors/geometry; Canvas stub, no browser."
+}

@@ -279,6 +279,16 @@
      "sobre_de": {
       "type": "string",
       "description": "Mueble de referencia para pared o luminaria de techo; el techo sigue su centro en planta."
+     },
+     "separacion_pared": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.5,
+      "description": "Distancia de la trasera a la pared, por defecto 0.01 m (sustituye esa holgura, no la suma). Sólo contra_pared/enfrente individual, sin grupo_pared; otros usos se rechazan al amueblar."
+     },
+     "suelo_determinista": {
+      "type": "boolean",
+      "description": "Opt-in sólo suelo_libre con obj fijo y obligatorio:true. Tras200intentos aleatorios incompletos prueba cuatro ejes y rejilla finita, sin relajar guardas ni tocar una colocación exitosa."
      }
     }
    }

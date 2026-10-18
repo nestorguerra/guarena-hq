@@ -55,6 +55,25 @@ def objetos():
     juego['partes'][0].pop('tinte',None);juego['partes'][0]['c']='#647b78'
     juego['partes'][1]['tex']=dict(tipo='vivienda_juego_ninos_b')
     out.append(juego)
+    # Una huella de juego proporcionada también a los dormitorios estrechos.
+    # Misma textura propia y dos piezas de la alfombra grande; no hay juguetitos nuevos.
+    compacta=copy.deepcopy(juego)
+    compacta['id']='vb_alfombra_juego_compacta';compacta['nombre']='Alfombra compacta de juego con circuito'
+    for pieza in compacta['partes']:
+        pieza['d'][0]*=1.2/1.8;pieza['p'][0]*=1.2/1.8
+        pieza['d'][2]*=.85/1.3;pieza['p'][2]*=.85/1.3
+    out.append(compacta)
+    # Banco infantil de lectura: asiento de 90 × 32 cm a 40 cm y guardado bajo real.
+    # Cada tablero apoya en el inferior; el asiento puentea laterales y división.
+    # Dos cajas textiles integradas, sin superficies para acumular adornos.
+    p=[caja(.9,.035,.32,y=.0175,c='#c6b28d')]
+    for x in [-.435,.435]:p.append(caja(.03,.30,.32,x=x,y=.185,c='#c6b28d'))
+    p += [caja(.84,.30,.025,y=.185,z=-.1475,c='#8b7965'),
+          caja(.025,.30,.295,y=.185,z=.0125,c='#c6b28d'),
+          caja(.9,.065,.32,y=.3675,c='#567c91',m='tela')]
+    for x in [-.21625,.21625]:p.append(caja(.33,.22,.25,x=x,y=.145,z=.0125,c='#a4b1a0',m='tela'))
+    out.append(objeto('vb_banco_lectura_ninos','Banco de lectura con dos cajas de guardado',.9,.4,.32,'sillon',18,
+                      partes=p,asientos=[dict(p=[0,0,.015],h=.4,anim='banco')]))
     # Armario bajo de ropa: cuerpo de 95 × 42 × 150 cm, no una cómoda.
     p=[caja(.95,1.5,.42,c='#cbb591')]
     for x in [-.2345,.2345]:
@@ -67,6 +86,31 @@ def objetos():
     for x in [-.22,.22]:
         p += [caja(.34,.22,.24,x=x,y=.162,z=.012,c='#a4b1a0',m='tela'),caja(.09,.025,.008,x=x,y=.24,z=.136,c='#677e78')]
     out.append(objeto('vb_estante_ninos','Guardado bajo de cuentos y juegos',.88,.76,.3,'libros',20,partes=p,superficies=[dict(y=.76,margen=.025)]))
+    # Biblioteca exclusiva: cuentos y juego junto al puesto, en dos niveles reales.
+    # La caja inferior izquierda guarda piezas; el hueco inferior derecho queda libre.
+    p=[caja(.92,1.34,.018,z=-.141,c='#8b7965')]
+    for x in [-.448,.448]:p.append(caja(.024,1.34,.30,x=x,c='#c6b28d'))
+    for y in [.028,.468,.918,1.328]:p.append(caja(.92,.024,.30,y=y,c='#c6b28d'))
+    p += [caja(.024,.416,.30,y=.26,c='#c6b28d'),
+          caja(.34,.27,.24,x=-.225,y=.175,z=.014,c='#718f96',m='tela'),
+          caja(.09,.025,.008,x=-.225,y=.25,z=.138,c='#c2b79f',m='tela')]
+    out.append(objeto('vb_biblioteca_ninos','Biblioteca infantil de cuentos y juegos',.92,1.34,.30,'libros',23,partes=p,
+                      superficies=[dict(y=.48,margen=.035,fondo=.28),dict(y=.93,margen=.035,fondo=.28)]))
+    # Dos pertenencias compuestas propias, misma envolvente; pocas masas legibles.
+    # Cada una ocupa menos de 2/3 de la balda, sin dibujos de una falsa biblioteca.
+    p=[caja(.26,.07,.21,x=.13,y=.035,c='#ae8967',m='carton')]
+    for x,h,c in [(-.20,.24,'#567c91'),(-.14,.20,'#be9a65'),(-.08,.22,'#8b9a78')]:
+        p.append(caja(.045,h,.17,x=x,y=h/2,z=-.012,c=c,m='papel'))
+    p.append(caja(.23,.018,.18,x=.13,y=.079,c='#75938c',m='madera'))
+    out.append(objeto('vb_cuentos_biblioteca','Cuentos y caja de construcciones',.48,.24,.21,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
+    # La caja alcanza la base real del cuaderno: contacto a y=.216, sin aire.
+    p=[caja(.28,.216,.21,x=-.0825,y=.108,c='#75938c',m='carton'),
+       caja(.26,.024,.18,x=-.0825,y=.228,c='#be9a65',m='papel'),
+       caja(.19,.025,.21,x=.165,y=.0125,c='#ae7868',m='papel'),
+       caja(.18,.025,.18,x=.165,y=.0375,c='#c7b58c',m='papel'),
+       caja(.08,.10,.08,x=.13,y=.10,c='#718f96',m='madera'),
+       caja(.06,.045,.04,x=.13,y=.1725,c='#b99b70',m='madera')]
+    out.append(objeto('vb_hacer_biblioteca','Cuadernos y caja de dibujo y manualidades',.48,.24,.21,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
     out.append(objeto('vb_ordenador','Ordenador doméstico sin marca',.38,.31,.22,None,2,'plastico',partes=[caja(.38,.24,.025,y=.19,z=-.06,c='#57616c',m='plastico'),caja(.34,.2,.005,y=.19,z=-.044,c='#8aabc1',m='cristal'),caja(.04,.08,.04,y=.04,z=-.06,c='#81878e',m='metal'),caja(.32,.018,.13,y=.009,z=.04,c='#69747e',m='plastico')],soporte='superficie',categoria='informatica'))
     out.append(objeto('vb_caballete','Caballete con lienzo pintado',.72,1.65,.48,None,7,partes=[caja(.045,1.6,.045,x=-.26,y=.8,z=.13,r=[0,0,-8]),caja(.045,1.6,.045,x=.26,y=.8,z=.13,r=[0,0,8]),caja(.05,1.4,.05,y=.7,z=-.18),caja(.72,.045,.12,y=.72,z=.12),dict(f='plano',d=[.62,.54],p=[0,1.05,.19],c='#e8d4b4',m='tela',tex=dict(tipo='vivienda_lienzo_b'))]))
     out.append(objeto('vb_rifle','Rifle de caza guardado',.12,1.12,.08,None,3.5,'madera',partes=[caja(.09,.34,.045,y=.17,c='#825a3d',m='madera'),caja(.045,.4,.04,y=.52,c='#6b747c',m='metal'),cil(.012,.012,.45,y=.895,c='#697078',m='metal')],categoria='decoracion'))

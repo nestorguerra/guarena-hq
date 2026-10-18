@@ -1,0 +1,610 @@
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -527,7 +527,7 @@
+       ? e.cantidad===1 || (Array.isArray(e.cantidad)&&e.cantidad[0]===1&&e.cantidad[1]===1)
+       : k>0 && e.preferir===true && Array.isArray(e.cantidad)&&e.cantidad[0]===0&&e.cantidad[1]===1;
+     if(miembros.length<2 || miembros.length>4 || e0.regla!=='contra_pared')return false;
+-    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !unidadGrupo(e,k) || e.silla_frontal || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
++    if(miembros.some(([i,e],k)=>!e.obj || e.variantes || !unidadGrupo(e,k) || (e.silla_frontal && (k>0 || OBJETOS[e.silla_frontal]?.soporte!=='suelo')) || e.llenar || OBJETOS[e.obj]?.soporte!=='suelo' || (k>0 && (e.regla!=='junto_a' || e.mira_ref || (e.lados && (e.lados.length!==2 || !e.lados.includes('derecha') || !e.lados.includes('izquierda'))) || ![].concat(e.de).includes(miembros[k-1][1].obj)))))return false;
+     // Sólo cadenas inmediatas: no convertir A<-B y A<-C en A-B-C.
+     // Si falta esa referencia adyacente, se ejecutan las reglas originales (incluido si_no).
+     let semilla=(seed*2654435761+97)>>>0;
+@@ -554,7 +554,18 @@
+         }
+         // También se comprueban usos frontales y accesos de las tres piezas juntas.
+         if(nuevos.length!==miembros.length)continue;
+-        let prueba=nuevos;
++        // Puesto opt-in en la raíz: probar su silla junto a todo el frente,
++        // antes de comprometer mesa o biblioteca. Misma pose que contra_pared.
++        let silla=null;
++        if(e0.silla_frontal){
++          const ref=nuevos.find(p=>p.e===raiz[0]),b=caja(ref.obj),sb=caja(e0.silla_frontal);
++          const [dx,dz]=rot((b.x0+b.x1)/2,b.z1+sb.d/2+.06,ref.ry);
++          const [x,z]=origen(e0.silla_frontal,ref.x+dx,ref.z+dz,ref.ry+Math.PI);
++          silla={obj:e0.silla_frontal,x,y:0,z,ry:ref.ry+Math.PI,e:raiz[0],zona:Z.id};
++          const v=volumen(silla);
++          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>hunde(silla,q)>.005))continue;
++        }
++        let prueba=silla?nuevos.concat(silla):nuevos;
+         // Precondición opt-in: el acompañante de pared debe caber junto a la raíz.
+         // No se compromete aquí: su entrada conserva índice, mínimo y regla propios.
+         if(e0.reserva_lateral){
+@@ -567,8 +578,8 @@
+           if(Math.abs(sn)>.5)x=(sn>0?Z.x0:Z.x1)+sn*.003-bx;
+           else z=(cs>0?Z.z0:Z.z1)+cs*.003-bz;
+           const it={obj,x,y:0,z,ry,e:-1,zona:Z.id},v=volumen(it);
+-          if(!dentro(v,Z)||!libre(v)||nuevos.some(q=>choca(volumen(q),v)))continue;
+-          prueba=nuevos.concat(it);
++          if(!dentro(v,Z)||!libre(v)||prueba.some(q=>choca(volumen(q),v)))continue;
++          prueba=prueba.concat(it);
+         }
+         if(cierra(prueba))continue;
+         const anterior=entrada;let previo=null;
+@@ -576,6 +587,10 @@
+           const it=nuevos.find(p=>p.e===ei);entrada=ei;
+           const puesto=poner(it.obj,Z.id,ei===raiz[0]?'contra_pared':'junto_a',it.x,it.y,it.z,it.ry);
+           if(previo)puesto.de=P.indexOf(previo);
++          if(ei===raiz[0]&&silla){
++            const asiento=poner(silla.obj,Z.id,'junto_a',silla.x,0,silla.z,silla.ry);
++            asiento.de=P.indexOf(puesto);
++          }
+           previo=puesto;entradasAgrupadas.add(ei);
+         }
+         entrada=anterior;cursores[key]=s+anchoGrupo+.03;return true;
+--- a/tools/interiores/catalogo_vivienda_b.py
++++ b/tools/interiores/catalogo_vivienda_b.py
+@@ -67,6 +67,31 @@
+     for x in [-.22,.22]:
+         p += [caja(.34,.22,.24,x=x,y=.162,z=.012,c='#a4b1a0',m='tela'),caja(.09,.025,.008,x=x,y=.24,z=.136,c='#677e78')]
+     out.append(objeto('vb_estante_ninos','Guardado bajo de cuentos y juegos',.88,.76,.3,'libros',20,partes=p,superficies=[dict(y=.76,margen=.025)]))
++    # Biblioteca exclusiva: cuentos y juego junto al puesto, en dos niveles reales.
++    # La caja inferior izquierda guarda piezas; el hueco inferior derecho queda libre.
++    p=[caja(.92,1.34,.018,z=-.141,c='#8b7965')]
++    for x in [-.448,.448]:p.append(caja(.024,1.34,.30,x=x,c='#c6b28d'))
++    for y in [.028,.468,.918,1.328]:p.append(caja(.92,.024,.30,y=y,c='#c6b28d'))
++    p += [caja(.024,.416,.30,y=.26,c='#c6b28d'),
++          caja(.34,.27,.24,x=-.225,y=.175,z=.014,c='#718f96',m='tela'),
++          caja(.09,.025,.008,x=-.225,y=.25,z=.138,c='#c2b79f',m='tela')]
++    out.append(objeto('vb_biblioteca_ninos','Biblioteca infantil de cuentos y juegos',.92,1.34,.30,'libros',23,partes=p,
++                      superficies=[dict(y=.48,margen=.035,fondo=.28),dict(y=.93,margen=.035,fondo=.28)]))
++    # Dos pertenencias compuestas propias, misma envolvente; pocas masas legibles.
++    # Cada una ocupa menos de 2/3 de la balda, sin dibujos de una falsa biblioteca.
++    p=[caja(.26,.07,.21,x=.13,y=.035,c='#ae8967',m='carton')]
++    for x,h,c in [(-.20,.24,'#567c91'),(-.14,.20,'#be9a65'),(-.08,.22,'#8b9a78')]:
++        p.append(caja(.045,h,.17,x=x,y=h/2,z=-.012,c=c,m='papel'))
++    p.append(caja(.23,.018,.18,x=.13,y=.079,c='#75938c',m='madera'))
++    out.append(objeto('vb_cuentos_biblioteca','Cuentos y caja de construcciones',.48,.24,.21,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
++    # La caja alcanza la base real del cuaderno: contacto a y=.216, sin aire.
++    p=[caja(.28,.216,.21,x=-.0825,y=.108,c='#75938c',m='carton'),
++       caja(.26,.024,.18,x=-.0825,y=.228,c='#be9a65',m='papel'),
++       caja(.19,.025,.21,x=.165,y=.0125,c='#ae7868',m='papel'),
++       caja(.18,.025,.18,x=.165,y=.0375,c='#c7b58c',m='papel'),
++       caja(.08,.10,.08,x=.13,y=.10,c='#718f96',m='madera'),
++       caja(.06,.045,.04,x=.13,y=.1725,c='#b99b70',m='madera')]
++    out.append(objeto('vb_hacer_biblioteca','Cuadernos y caja de dibujo y manualidades',.48,.24,.21,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
+     out.append(objeto('vb_ordenador','Ordenador doméstico sin marca',.38,.31,.22,None,2,'plastico',partes=[caja(.38,.24,.025,y=.19,z=-.06,c='#57616c',m='plastico'),caja(.34,.2,.005,y=.19,z=-.044,c='#8aabc1',m='cristal'),caja(.04,.08,.04,y=.04,z=-.06,c='#81878e',m='metal'),caja(.32,.018,.13,y=.009,z=.04,c='#69747e',m='plastico')],soporte='superficie',categoria='informatica'))
+     out.append(objeto('vb_caballete','Caballete con lienzo pintado',.72,1.65,.48,None,7,partes=[caja(.045,1.6,.045,x=-.26,y=.8,z=.13,r=[0,0,-8]),caja(.045,1.6,.045,x=.26,y=.8,z=.13,r=[0,0,8]),caja(.05,1.4,.05,y=.7,z=-.18),caja(.72,.045,.12,y=.72,z=.12),dict(f='plano',d=[.62,.54],p=[0,1.05,.19],c='#e8d4b4',m='tela',tex=dict(tipo='vivienda_lienzo_b'))]))
+     out.append(objeto('vb_rifle','Rifle de caza guardado',.12,1.12,.08,None,3.5,'madera',partes=[caja(.09,.34,.045,y=.17,c='#825a3d',m='madera'),caja(.045,.4,.04,y=.52,c='#6b747c',m='metal'),cil(.012,.012,.45,y=.895,c='#697078',m='metal')],categoria='decoracion'))
+--- a/tools/interiores/kits_vivienda_b.py
++++ b/tools/interiores/kits_vivienda_b.py
+@@ -33,15 +33,18 @@
+         p=[pared('vb_cama_individual'),junto('vb_mesita','vb_cama_individual',True),pared(mesa_id),junto(silla,mesa_id,True,lados=['frente'],mira_ref=True),pared('vb_armario'),pared('vb_estante_bajo',False),pared('vb_cama_individual',False,area_min=20,habitacion=['ninos']),E('pared',['poster_enmarcado','fotos_familia','cuadro_paisaje'],pared='*',cantidad=[1,3])]
+         if id=='ninos':
+             # Un puesto se admite sólo con su silla frontal: no hay silla dispersa.
+-            # El armario conserva su interacción; las reservas se prueban antes de colocar.
++            # Descanso conservado; estudio completo con silla, biblioteca vinculada
++            # al puesto, probados juntos; armario independiente en esquina libre.
++            # Reglas generales: no se leen semillas, perfiles ni cámaras.
+             p=[pared('vb_cama_ninos'),junto('vb_mesita','vb_cama_ninos',True),
+-               pared('vb_armario_ninos',espacio_frontal=[.7,.6]),pared(mesa_id,silla_frontal=silla),
+-               junto('vb_estante_ninos',mesa_id,False,buscar_refs=True),
++               E('contra_pared',mesa_id,pared=['N','S','E','W'],cantidad=[1,1],obligatorio=True,preferir=True,silla_frontal=silla,grupo_pared='estudio_infantil'),
++               junto('vb_biblioteca_ninos',mesa_id,True,buscar_refs=True,si_no=False,grupo_pared='estudio_infantil'),
++               E('esquina','vb_armario_ninos',cantidad=[1,1],obligatorio=True,preferir=True,espacio_frontal=[.7,.6]),
+                pared('vb_cama_ninos',False,area_min=20,habitacion=['ninos']),
+                E('suelo_libre','vb_alfombra_juego',cantidad=[0,1],preferir=True,area_min=12),
+                E('pared','vb_dibujos_ninos',pared='*',sobre_de='vb_cama_ninos',cantidad=[0,1],preferir=True,si_no=False)]
+-            soportes=['vb_mesita',mesa_id,'vb_estante_ninos']
+-        if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=[mesa_id,'vb_estante_ninos'],cantidad=[1,1],obligatorio=True)]
++            soportes=['vb_mesita',mesa_id,'vb_biblioteca_ninos']
++        if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=['vb_biblioteca_ninos'],cantidad=[1,1],obligatorio=True)]
+         if id=='joven':p += [pared('guitarra_soporte',False),E('sobre','vb_ordenador',en=[mesa_id],cantidad=[1,1])]
+         if id=='joven':p += [pared('estanteria_libros',False,area_min=16),pared('mueble_tv',False,area_min=22),E('sobre','televisor_plano',en=['mueble_tv'],cantidad=[1,1],area_min=22),E('enfrente','sofa_dos_plazas',de='televisor_plano',cantidad=[0,1],preferir=True,si_no=False,area_min=22,area_max=30),E('enfrente','sofa_dos_plazas',de='televisor_plano',cantidad=[1,1],obligatorio=True,si_no=False,area_min=30),E('entre','mesa_centro',a='televisor_plano',b='sofa_dos_plazas',cantidad=[0,1],area_min=22),pared('vb_comoda',False,area_min=18),E('suelo_libre','vb_alfombra',cantidad=[0,1],area_min=18)]
+         if id=='joven':soportes+=['estanteria_libros','mesa_centro','vb_comoda']
+@@ -50,7 +53,8 @@
+             # La mesa queda para juego y deberes: piezas pequeñas, sin hileras altas de libros.
+             bajos,tablero=infantiles(C)
+             p[-2:-1]=[E('sobre',tablero,en=[mesa_id],por_soporte=[1,2]),
+-                       E('sobre',bajos,en=['vb_mesita','vb_estante_ninos'],por_soporte=[1,2])]
++                       E('sobre',bajos,en=['vb_mesita'],por_soporte=[1,2]),
++                       E('sobre',['vb_cuentos_biblioteca','vb_hacer_biblioteca'],en=['vb_biblioteca_ninos'],por_soporte=[1,1])]
+         kit(id,nombre,'dormitorio',p,mood[id],fondo=(2.1,5.2))
+     for id,nombre in [('estudio','Estudio para leer y trabajar'),('despacho','Despacho doméstico')]:
+         p=[pared('vb_escritorio'),junto('silla_comedor','vb_escritorio',True,lados=['frente'],mira_ref=True),pared('estanteria_libros'),pared('vb_comoda',False),pared('sillon_orejero',False,area_min=11),pared('estanteria_libros',False,area_min=16),E('pared',['cuadro_paisaje','fotos_familia','poster_enmarcado'],pared='*',cantidad=[1,3]),E('sobre','vb_ordenador',en=['vb_escritorio'],cantidad=[1,1])]
+--- a/data/objetos/vivienda_b.json
++++ b/data/objetos/vivienda_b.json
+@@ -2186,6 +2186,367 @@
+    ]
+   },
+   {
++   "id": "vb_biblioteca_ninos",
++   "nombre": "Biblioteca infantil de cuentos y juegos",
++   "categoria": "mueble",
++   "clase": "CARRY",
++   "masa": 23,
++   "material": "madera",
++   "soporte": "suelo",
++   "partes": [
++    {
++     "f": "caja",
++     "d": [
++      0.92,
++      1.34,
++      0.018
++     ],
++     "p": [
++      0,
++      0.67,
++      -0.141
++     ],
++     "c": "#8b7965",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.024,
++      1.34,
++      0.3
++     ],
++     "p": [
++      -0.448,
++      0.67,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.024,
++      1.34,
++      0.3
++     ],
++     "p": [
++      0.448,
++      0.67,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.92,
++      0.024,
++      0.3
++     ],
++     "p": [
++      0,
++      0.028,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.92,
++      0.024,
++      0.3
++     ],
++     "p": [
++      0,
++      0.468,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.92,
++      0.024,
++      0.3
++     ],
++     "p": [
++      0,
++      0.918,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.92,
++      0.024,
++      0.3
++     ],
++     "p": [
++      0,
++      1.328,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.024,
++      0.416,
++      0.3
++     ],
++     "p": [
++      0,
++      0.26,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.34,
++      0.27,
++      0.24
++     ],
++     "p": [
++      -0.225,
++      0.175,
++      0.014
++     ],
++     "c": "#718f96",
++     "m": "tela"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.09,
++      0.025,
++      0.008
++     ],
++     "p": [
++      -0.225,
++      0.25,
++      0.138
++     ],
++     "c": "#c2b79f",
++     "m": "tela"
++    }
++   ],
++   "rol": "libros",
++   "superficies": [
++    {
++     "y": 0.48,
++     "margen": 0.035,
++     "fondo": 0.28
++    },
++    {
++     "y": 0.93,
++     "margen": 0.035,
++     "fondo": 0.28
++    }
++   ]
++  },
++  {
++   "id": "vb_cuentos_biblioteca",
++   "nombre": "Cuentos y caja de construcciones",
++   "categoria": "decoracion",
++   "clase": "PICKUP",
++   "masa": 1.8,
++   "material": "papel",
++   "soporte": "superficie",
++   "partes": [
++    {
++     "f": "caja",
++     "d": [
++      0.26,
++      0.07,
++      0.21
++     ],
++     "p": [
++      0.13,
++      0.035,
++      0
++     ],
++     "c": "#ae8967",
++     "m": "carton"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.045,
++      0.24,
++      0.17
++     ],
++     "p": [
++      -0.2,
++      0.12,
++      -0.012
++     ],
++     "c": "#567c91",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.045,
++      0.2,
++      0.17
++     ],
++     "p": [
++      -0.14,
++      0.1,
++      -0.012
++     ],
++     "c": "#be9a65",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.045,
++      0.22,
++      0.17
++     ],
++     "p": [
++      -0.08,
++      0.11,
++      -0.012
++     ],
++     "c": "#8b9a78",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.23,
++      0.018,
++      0.18
++     ],
++     "p": [
++      0.13,
++      0.079,
++      0
++     ],
++     "c": "#75938c",
++     "m": "madera"
++    }
++   ]
++  },
++  {
++   "id": "vb_hacer_biblioteca",
++   "nombre": "Cuadernos y caja de dibujo y manualidades",
++   "categoria": "decoracion",
++   "clase": "PICKUP",
++   "masa": 1.8,
++   "material": "papel",
++   "soporte": "superficie",
++   "partes": [
++    {
++     "f": "caja",
++     "d": [
++      0.28,
++      0.216,
++      0.21
++     ],
++     "p": [
++      -0.0825,
++      0.108,
++      0
++     ],
++     "c": "#75938c",
++     "m": "carton"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.26,
++      0.024,
++      0.18
++     ],
++     "p": [
++      -0.0825,
++      0.228,
++      0
++     ],
++     "c": "#be9a65",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.19,
++      0.025,
++      0.21
++     ],
++     "p": [
++      0.165,
++      0.0125,
++      0
++     ],
++     "c": "#ae7868",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.18,
++      0.025,
++      0.18
++     ],
++     "p": [
++      0.165,
++      0.0375,
++      0
++     ],
++     "c": "#c7b58c",
++     "m": "papel"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.08,
++      0.1,
++      0.08
++     ],
++     "p": [
++      0.13,
++      0.1,
++      0
++     ],
++     "c": "#718f96",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.06,
++      0.045,
++      0.04
++     ],
++     "p": [
++      0.13,
++      0.1725,
++      0
++     ],
++     "c": "#b99b70",
++     "m": "madera"
++    }
++   ]
++  },
++  {
+    "id": "vb_ordenador",
+    "nombre": "Ordenador doméstico sin marca",
+    "categoria": "informatica",
+--- a/data/kits/vivienda_ninos.json
++++ b/data/kits/vivienda_ninos.json
+@@ -56,8 +56,41 @@
+   {
+    "zona": "estancia",
+    "regla": "contra_pared",
++   "obj": "vb_mesa_ninos",
++   "pared": [
++    "N",
++    "S",
++    "E",
++    "W"
++   ],
++   "cantidad": [
++    1,
++    1
++   ],
++   "obligatorio": true,
++   "preferir": true,
++   "silla_frontal": "vb_silla_ninos",
++   "grupo_pared": "estudio_infantil"
++  },
++  {
++   "zona": "estancia",
++   "regla": "junto_a",
++   "obj": "vb_biblioteca_ninos",
++   "de": "vb_mesa_ninos",
++   "cantidad": [
++    1,
++    1
++   ],
++   "obligatorio": true,
++   "preferir": true,
++   "buscar_refs": true,
++   "si_no": false,
++   "grupo_pared": "estudio_infantil"
++  },
++  {
++   "zona": "estancia",
++   "regla": "esquina",
+    "obj": "vb_armario_ninos",
+-   "pared": "*",
+    "cantidad": [
+     1,
+     1
+@@ -68,32 +101,6 @@
+     0.7,
+     0.6
+    ]
+-  },
+-  {
+-   "zona": "estancia",
+-   "regla": "contra_pared",
+-   "obj": "vb_mesa_ninos",
+-   "pared": "*",
+-   "cantidad": [
+-    1,
+-    1
+-   ],
+-   "obligatorio": true,
+-   "preferir": true,
+-   "silla_frontal": "vb_silla_ninos"
+-  },
+-  {
+-   "zona": "estancia",
+-   "regla": "junto_a",
+-   "obj": "vb_estante_ninos",
+-   "de": "vb_mesa_ninos",
+-   "cantidad": [
+-    0,
+-    1
+-   ],
+-   "obligatorio": false,
+-   "preferir": true,
+-   "buscar_refs": true
+   },
+   {
+    "zona": "estancia",
+@@ -153,8 +160,7 @@
+    "regla": "sobre",
+    "obj": "vb_bloques",
+    "en": [
+-    "vb_mesa_ninos",
+-    "vb_estante_ninos"
++    "vb_biblioteca_ninos"
+    ],
+    "cantidad": [
+     1,
+@@ -269,12 +275,26 @@
+     "vb_auriculares"
+    ],
+    "en": [
+-    "vb_mesita",
+-    "vb_estante_ninos"
++    "vb_mesita"
+    ],
+    "por_soporte": [
+     1,
+     2
++   ]
++  },
++  {
++   "zona": "estancia",
++   "regla": "sobre",
++   "variantes": [
++    "vb_cuentos_biblioteca",
++    "vb_hacer_biblioteca"
++   ],
++   "en": [
++    "vb_biblioteca_ninos"
++   ],
++   "por_soporte": [
++    1,
++    1
+    ]
+   },
+   {

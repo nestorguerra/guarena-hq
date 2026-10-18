@@ -1,0 +1,20 @@
+{
+  "state": "PASS_exact_changed_block_no_GPU",
+  "rows": [
+    {
+      "seed": 4007,
+      "original": "RED_expected",
+      "candidate": "PASS",
+      "bankAdvanced4cm": "RED_expected",
+      "noInputMutation": true
+    },
+    {
+      "seed": 5045,
+      "original": "RED_expected",
+      "candidate": "PASS",
+      "bankAdvanced4cm": "RED_expected",
+      "noInputMutation": true
+    }
+  ],
+  "limits": "Exact changed T17 block; two real constructors. Full T17 and browser still pending."
+}

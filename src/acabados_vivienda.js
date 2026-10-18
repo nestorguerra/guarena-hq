@@ -44,13 +44,22 @@ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.
     // Color a escala infantil; los paños conservan todos los huecos de la casa.
     const y=(rm.lv||0)*3.1,r=mulberry32(seed*347+rm.x0*13+rm.z0*53);
     const mat=c=>B.mat('infantil_'+c,()=>std(c,{roughness:.94,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
-    const color=['#718d82','#aa895b','#6e879b'][Math.floor(r()*3)],limite=.92;
+    const color=['#57786a','#826945','#526e85'][Math.floor(r()*3)],limite=.92;
+    const cama=estancia?.colocados?.find(p=>p.obj==='vb_cama_ninos');
+    const angCama=cama?Math.atan2(Math.sin(cama.ry),Math.cos(cama.ry)):null;
+    const paredCama=angCama===null?null:Math.abs(angCama)<.3?'s':Math.abs(Math.abs(angCama)-Math.PI)<.3?'n':angCama>0?'w':'e';
     for(const side of ['s','n','w','e']) {
       const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
       const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
       for(const [lo,hi,v0,v1] of panosPared(a,b,0,limite,huecos)) {
         const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
         B.add(mat(color),planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
+      }
+      // El fondo del descanso reutiliza el color inferior. Los otros paños
+      // comparten la cal cálida del techo: no se añade una familia material.
+      for(const [lo,hi,v0,v1] of panosPared(a,b,limite,altura,huecos)) {
+        const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
+        B.add(mat(side===paredCama?color:'#e9e3d4'),planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
       }
     }
     // Tabla ancha de poco contraste: orienta la sala sin recuperar el terrazo ruidoso.

@@ -91,10 +91,10 @@
    "seed": 1,
    "W": 6.2,
    "D": 4.2,
-   "guardias": 6,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "c9f8a31e",
+   "guardias": 7,
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "c2581206",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -110,17 +110,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -131,43 +131,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.82,
-     "libre_m2": 12.82
+     "alcanzable_m2": 12.02,
+     "libre_m2": 12.02
     }
    },
    "luz": {
@@ -175,7 +185,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4218,
+   "triangulos": 4324,
    "mallas": 15,
    "luces": 3,
    "hogar": "abuela · antiguo",
@@ -198,10 +208,10 @@
    "seed": 2,
    "W": 5.9,
    "D": 2.4,
-   "guardias": 14,
+   "guardias": 8,
    "objetos": 16,
    "distintos": 15,
-   "hash": "53241030",
+   "hash": "2e23b2f2",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -217,17 +227,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -236,40 +246,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.23,
-     "libre_m2": 4.23
+     "alcanzable_m2": 4.42,
+     "libre_m2": 4.42
     }
    },
    "luz": {
@@ -277,8 +297,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4346,
-   "mallas": 16,
+   "triangulos": 3640,
+   "mallas": 15,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -301,10 +321,10 @@
    "seed": 3,
    "W": 5,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "6fcae691",
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "fff1949",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -320,54 +340,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.69,
-     "libre_m2": 2.69
+     "alcanzable_m2": 2.44,
+     "libre_m2": 2.44
     }
    },
    "luz": {
@@ -375,8 +410,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3374,
-   "mallas": 13,
+   "triangulos": 3926,
+   "mallas": 14,
    "luces": 2,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -400,10 +435,10 @@
    "seed": 4,
    "W": 4.4,
    "D": 5.1,
-   "guardias": 8,
+   "guardias": 7,
    "objetos": 17,
    "distintos": 15,
-   "hash": "4e2b45b5",
+   "hash": "9c7b1665",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -419,17 +454,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -443,40 +478,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.7,
-     "libre_m2": 10.7
+     "alcanzable_m2": 0.47,
+     "libre_m2": 9.82
     }
    },
    "luz": {
@@ -484,7 +529,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3868,
+   "triangulos": 3784,
    "mallas": 15,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -508,10 +553,10 @@
    "seed": 5,
    "W": 6.5,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "86a51dfa",
+   "guardias": 9,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "c1bf9d97",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -527,17 +572,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -548,43 +593,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.96,
-     "libre_m2": 15.96
+     "alcanzable_m2": 15.3,
+     "libre_m2": 15.3
     }
    },
    "luz": {
@@ -592,8 +647,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5572,
-   "mallas": 14,
+   "triangulos": 4384,
+   "mallas": 15,
    "luces": 3,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -616,10 +671,10 @@
    "seed": 6,
    "W": 3.5,
    "D": 3.9,
-   "guardias": 5,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "33cf1aaf",
+   "guardias": 6,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "11f43765",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -635,59 +690,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.2,
-     "libre_m2": 5.2
+     "alcanzable_m2": 5.36,
+     "libre_m2": 5.36
     }
    },
    "luz": {
@@ -695,7 +760,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3424,
+   "triangulos": 3654,
    "mallas": 14,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -719,10 +784,10 @@
    "seed": 7,
    "W": 4.7,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "3bd1a97e",
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "d971309c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -738,54 +803,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.7,
-     "libre_m2": 2.7
+     "alcanzable_m2": 2.37,
+     "libre_m2": 2.37
     }
    },
    "luz": {
@@ -793,8 +873,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4886,
-   "mallas": 13,
+   "triangulos": 3554,
+   "mallas": 14,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -818,10 +898,10 @@
    "seed": 8,
    "W": 5.9,
    "D": 4.8,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "a3ee0ac6",
+   "guardias": 14,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "c4428fde",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -837,17 +917,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -861,40 +941,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.08,
-     "libre_m2": 16.08
+     "alcanzable_m2": 13.96,
+     "libre_m2": 14.13
     }
    },
    "luz": {
@@ -902,7 +992,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3868,
+   "triangulos": 4476,
    "mallas": 15,
    "luces": 2,
    "hogar": "agricultor · rustico",
@@ -926,10 +1016,10 @@
    "seed": 9,
    "W": 4.1,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "86c8da8f",
+   "guardias": 6,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "22fefcf0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -945,46 +1035,61 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
@@ -992,7 +1097,7 @@
    "paso": {
     "estancia": {
      "alcanzable_m2": 0.22,
-     "libre_m2": 0.97
+     "libre_m2": 0.73
     }
    },
    "luz": {
@@ -1000,8 +1105,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3534,
-   "mallas": 13,
+   "triangulos": 3602,
+   "mallas": 14,
    "luces": 2,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
@@ -1023,10 +1128,10 @@
    "seed": 10,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
-   "objetos": 13,
-   "distintos": 11,
-   "hash": "cd3a25bb",
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "92de4309",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1042,54 +1147,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.39,
-     "libre_m2": 2.39
+     "alcanzable_m2": 2.7,
+     "libre_m2": 2.7
     }
    },
    "luz": {
@@ -1097,8 +1217,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3498,
-   "mallas": 13,
+   "triangulos": 3578,
+   "mallas": 14,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -1121,10 +1241,10 @@
    "seed": 11,
    "W": 5,
    "D": 2.7,
-   "guardias": 7,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "7dffb936",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "8870326e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1140,59 +1260,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.64,
-     "libre_m2": 4.64
+     "alcanzable_m2": 4.16,
+     "libre_m2": 4.16
     }
    },
    "luz": {
@@ -1200,8 +1330,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3530,
-   "mallas": 13,
+   "triangulos": 3638,
+   "mallas": 14,
    "luces": 2,
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
@@ -1224,10 +1354,10 @@
    "seed": 12,
    "W": 6.2,
    "D": 5.1,
-   "guardias": 6,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "d1d70c8",
+   "guardias": 15,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "f00c72db",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1243,17 +1373,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -1264,43 +1394,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.75,
-     "libre_m2": 18.75
+     "alcanzable_m2": 16.73,
+     "libre_m2": 16.94
     }
    },
    "luz": {
@@ -1308,8 +1448,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4216,
-   "mallas": 14,
+   "triangulos": 4348,
+   "mallas": 15,
    "luces": 3,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -1333,10 +1473,10 @@
    "seed": 13,
    "W": 6.2,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "8b721c8e",
+   "guardias": 6,
+   "objetos": 20,
+   "distintos": 17,
+   "hash": "c50c399d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1352,59 +1492,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.8,
-     "libre_m2": 5.8
+     "alcanzable_m2": 5,
+     "libre_m2": 5
     }
    },
    "luz": {
@@ -1412,8 +1562,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3988,
-   "mallas": 14,
+   "triangulos": 4580,
+   "mallas": 15,
    "luces": 3,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -1436,10 +1586,10 @@
    "seed": 14,
    "W": 6.2,
    "D": 4.5,
-   "guardias": 7,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "5354e9d9",
+   "guardias": 8,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "fa5de84d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1455,17 +1605,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -1476,43 +1626,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.18,
-     "libre_m2": 14.18
+     "alcanzable_m2": 14.68,
+     "libre_m2": 14.68
     }
    },
    "luz": {
@@ -1520,8 +1680,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4468,
-   "mallas": 14,
+   "triangulos": 4350,
+   "mallas": 16,
    "luces": 3,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -1544,10 +1704,10 @@
    "seed": 15,
    "W": 3.5,
    "D": 5.1,
-   "guardias": 5,
-   "objetos": 15,
+   "guardias": 7,
+   "objetos": 16,
    "distintos": 14,
-   "hash": "15045fc",
+   "hash": "22468014",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1563,59 +1723,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.22,
-     "libre_m2": 8.22
+     "alcanzable_m2": 8.63,
+     "libre_m2": 8.63
     }
    },
    "luz": {
@@ -1623,8 +1793,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3618,
-   "mallas": 13,
+   "triangulos": 3640,
+   "mallas": 15,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -1647,10 +1817,10 @@
    "seed": 16,
    "W": 6.2,
    "D": 3.3,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "461adbe4",
+   "guardias": 9,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "d002db89",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1666,17 +1836,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -1690,40 +1860,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.87,
-     "libre_m2": 7.87
+     "alcanzable_m2": 7.33,
+     "libre_m2": 7.33
     }
    },
    "luz": {
@@ -1731,8 +1911,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4504,
-   "mallas": 15,
+   "triangulos": 4326,
+   "mallas": 16,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -1756,10 +1936,10 @@
    "seed": 17,
    "W": 6.2,
    "D": 2.7,
-   "guardias": 15,
-   "objetos": 17,
-   "distintos": 15,
-   "hash": "5c04b666",
+   "guardias": 8,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "a9dbe233",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1775,17 +1955,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -1794,40 +1974,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.16,
-     "libre_m2": 7.16
+     "alcanzable_m2": 7.13,
+     "libre_m2": 7.13
     }
    },
    "luz": {
@@ -1835,8 +2025,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4038,
-   "mallas": 16,
+   "triangulos": 4084,
+   "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · antiguo",
    "contexto_hogar": {
@@ -1859,10 +2049,10 @@
    "seed": 18,
    "W": 4.1,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 15,
+   "guardias": 8,
+   "objetos": 16,
    "distintos": 14,
-   "hash": "2c949b4b",
+   "hash": "e8077f21",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1878,17 +2068,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -1897,40 +2087,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.31,
-     "libre_m2": 6.31
+     "alcanzable_m2": 5.57,
+     "libre_m2": 5.57
     }
    },
    "luz": {
@@ -1938,7 +2138,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3434,
+   "triangulos": 3638,
    "mallas": 14,
    "luces": 2,
    "hogar": "artista · alegre",
@@ -1961,10 +2161,10 @@
    "seed": 19,
    "W": 5.6,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 17,
+   "guardias": 14,
+   "objetos": 18,
    "distintos": 15,
-   "hash": "929eb07d",
+   "hash": "ec118fd4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -1980,17 +2180,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2001,43 +2201,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.73,
-     "libre_m2": 9.73
+     "alcanzable_m2": 8.53,
+     "libre_m2": 8.63
     }
    },
    "luz": {
@@ -2045,7 +2255,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3858,
+   "triangulos": 3904,
    "mallas": 15,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -2069,10 +2279,10 @@
    "seed": 20,
    "W": 6.2,
    "D": 3,
-   "guardias": 5,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "c8c871d5",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "edaf4946",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2088,69 +2298,79 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.09,
-     "libre_m2": 9.09
+     "alcanzable_m2": 8.38,
+     "libre_m2": 8.38
     }
    },
    "luz": {
-    "estancia": 0.106
+    "estancia": 0.14
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4192,
-   "mallas": 14,
-   "luces": 3,
+   "triangulos": 3678,
+   "mallas": 16,
+   "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
     "perfil": "matrimonio",
@@ -2164,7 +2384,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.944
   },
   {
    "kit": "vivienda_ninos",
@@ -2172,10 +2392,10 @@
    "seed": 21,
    "W": 5.6,
    "D": 2.7,
-   "guardias": 10,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "753929c9",
+   "guardias": 8,
+   "objetos": 18,
+   "distintos": 17,
+   "hash": "b9f918f1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2191,59 +2411,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.79,
-     "libre_m2": 5.79
+     "alcanzable_m2": 5.33,
+     "libre_m2": 5.33
     }
    },
    "luz": {
@@ -2251,8 +2481,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4860,
-   "mallas": 14,
+   "triangulos": 3836,
+   "mallas": 15,
    "luces": 2,
    "hogar": "familia · moderno",
    "contexto_hogar": {
@@ -2276,10 +2506,10 @@
    "seed": 22,
    "W": 4.4,
    "D": 3,
-   "guardias": 7,
+   "guardias": 8,
    "objetos": 16,
-   "distintos": 15,
-   "hash": "ccc48015",
+   "distintos": 14,
+   "hash": "26194661",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2295,17 +2525,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2314,40 +2544,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 0.25,
-     "libre_m2": 3.85
+     "alcanzable_m2": 0.24,
+     "libre_m2": 3.46
     }
    },
    "luz": {
@@ -2355,7 +2595,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3578,
+   "triangulos": 3938,
    "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -2379,10 +2619,10 @@
    "seed": 23,
    "W": 4.4,
    "D": 3,
-   "guardias": 7,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "405541c9",
+   "guardias": 6,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "46cf087f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2398,17 +2638,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2417,40 +2657,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 1
+     "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
      "n": 1
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.87,
-     "libre_m2": 3.87
+     "alcanzable_m2": 4.02,
+     "libre_m2": 4.02
     }
    },
    "luz": {
@@ -2458,7 +2708,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3398,
+   "triangulos": 3530,
    "mallas": 14,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -2482,10 +2732,10 @@
    "seed": 24,
    "W": 5.300000000000001,
    "D": 3.6,
-   "guardias": 5,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "d4d12fa3",
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "e54f65b0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2501,59 +2751,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 0
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.86,
-     "libre_m2": 9.86
+     "alcanzable_m2": 9,
+     "libre_m2": 9
     }
    },
    "luz": {
@@ -2561,8 +2821,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3472,
-   "mallas": 14,
+   "triangulos": 3628,
+   "mallas": 15,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -2585,10 +2845,10 @@
    "seed": 25,
    "W": 7.7,
    "D": 3.6,
-   "guardias": 12,
-   "objetos": 16,
-   "distintos": 11,
-   "hash": "b0aa4a33",
+   "guardias": 9,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "7ba5f88a",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2604,17 +2864,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2625,43 +2885,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.29,
-     "libre_m2": 14.29
+     "alcanzable_m2": 13.53,
+     "libre_m2": 13.53
     }
    },
    "luz": {
@@ -2669,8 +2939,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4180,
-   "mallas": 14,
+   "triangulos": 4348,
+   "mallas": 15,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -2694,10 +2964,10 @@
    "seed": 26,
    "W": 6.5,
    "D": 3.9,
-   "guardias": 10,
+   "guardias": 9,
    "objetos": 19,
-   "distintos": 16,
-   "hash": "f886e7d9",
+   "distintos": 15,
+   "hash": "450f70d5",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2713,17 +2983,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2737,40 +3007,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 0
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.49,
-     "libre_m2": 12.49
+     "alcanzable_m2": 11.45,
+     "libre_m2": 11.45
     }
    },
    "luz": {
@@ -2778,7 +3058,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4204,
+   "triangulos": 4324,
    "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · rustico",
@@ -2805,7 +3085,7 @@
    "guardias": 8,
    "objetos": 18,
    "distintos": 15,
-   "hash": "c6d47203",
+   "hash": "b43f1721",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2821,17 +3101,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2845,40 +3125,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.81,
-     "libre_m2": 11.81
+     "alcanzable_m2": 12.67,
+     "libre_m2": 12.67
     }
    },
    "luz": {
@@ -2886,8 +3176,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4530,
-   "mallas": 16,
+   "triangulos": 5584,
+   "mallas": 15,
    "luces": 3,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
@@ -2909,10 +3199,10 @@
    "seed": 28,
    "W": 7.1,
    "D": 4.2,
-   "guardias": 8,
-   "objetos": 16,
-   "distintos": 12,
-   "hash": "14c01461",
+   "guardias": 9,
+   "objetos": 20,
+   "distintos": 17,
+   "hash": "98999697",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -2928,17 +3218,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -2952,40 +3242,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 16.39,
-     "libre_m2": 16.39
+     "alcanzable_m2": 14.98,
+     "libre_m2": 14.98
     }
    },
    "luz": {
@@ -2993,7 +3293,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4108,
+   "triangulos": 5088,
    "mallas": 15,
    "luces": 3,
    "hogar": "abuela · antiguo",
@@ -3017,10 +3317,10 @@
    "seed": 29,
    "W": 5.9,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "7c1984a8",
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "bd24b7b0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3036,59 +3336,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.49,
-     "libre_m2": 3.49
+     "alcanzable_m2": 2.69,
+     "libre_m2": 2.69
     }
    },
    "luz": {
@@ -3096,9 +3406,42 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3532,
-   "mallas": 14,
+   "triangulos": 3688,
+   "mallas": 15,
    "luces": 2,
+   "generacion": {
+    "semillaSolicitada": 29,
+    "semillaEfectiva": 104758,
+    "intento": 1,
+    "maximo": 12,
+    "agotado": false,
+    "marco": {
+     "W": 5.9,
+     "D": 2.1,
+     "H": 2.75,
+     "puertaX": -0.75
+    },
+    "intentos": [
+     {
+      "seed": 29,
+      "faltan": [
+       6
+      ],
+      "busquedasSuelo": [
+       {
+        "entrada": 6,
+        "probados": 4124,
+        "colocados": 0,
+        "limite": 16000
+       }
+      ]
+     },
+     {
+      "seed": 104758,
+      "faltan": []
+     }
+    ]
+   },
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
     "perfil": "matrimonio",
@@ -3120,10 +3463,10 @@
    "seed": 30,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "ed5e8e5b",
+   "guardias": 7,
+   "objetos": 18,
+   "distintos": 16,
+   "hash": "254ad3f3",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3139,54 +3482,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.82,
-     "libre_m2": 2.82
+     "alcanzable_m2": 0.17,
+     "libre_m2": 2.38
     }
    },
    "luz": {
@@ -3194,8 +3552,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3494,
-   "mallas": 13,
+   "triangulos": 3842,
+   "mallas": 14,
    "luces": 2,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -3219,10 +3577,10 @@
    "seed": 31,
    "W": 5,
    "D": 3.9,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "dd22ca7c",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "ec82b34b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3238,59 +3596,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10,
-     "libre_m2": 10
+     "alcanzable_m2": 9.2,
+     "libre_m2": 9.2
     }
    },
    "luz": {
@@ -3298,8 +3666,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3446,
-   "mallas": 13,
+   "triangulos": 3602,
+   "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -3323,9 +3691,9 @@
    "W": 4.4,
    "D": 4.8,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "c8187b4c",
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "faed3033",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3341,17 +3709,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -3365,40 +3733,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.54,
-     "libre_m2": 8.54
+     "alcanzable_m2": 8.23,
+     "libre_m2": 8.23
     }
    },
    "luz": {
@@ -3406,7 +3784,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3722,
+   "triangulos": 3854,
    "mallas": 14,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -3422,7 +3800,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.889
   },
   {
    "kit": "vivienda_ninos",
@@ -3431,9 +3809,9 @@
    "W": 4.1,
    "D": 2.7,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "483d0768",
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "d88af39",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3449,54 +3827,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 2.15,
-     "libre_m2": 2.19
+     "alcanzable_m2": 1.53,
+     "libre_m2": 2.27
     }
    },
    "luz": {
@@ -3504,8 +3897,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3662,
-   "mallas": 13,
+   "triangulos": 3542,
+   "mallas": 14,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -3520,7 +3913,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.944
   },
   {
    "kit": "vivienda_ninos",
@@ -3529,9 +3922,9 @@
    "W": 7.4,
    "D": 4.5,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "95cfc819",
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "d55d4008",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3547,17 +3940,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -3571,40 +3964,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 18.81,
-     "libre_m2": 18.81
+     "alcanzable_m2": 18.66,
+     "libre_m2": 18.66
     }
    },
    "luz": {
@@ -3612,8 +4015,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4752,
-   "mallas": 15,
+   "triangulos": 4350,
+   "mallas": 16,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -3638,9 +4041,9 @@
    "W": 7.4,
    "D": 4.8,
    "guardias": 8,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "7abd8416",
+   "objetos": 19,
+   "distintos": 14,
+   "hash": "8a91b6ff",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3656,17 +4059,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -3680,40 +4083,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 20.78,
-     "libre_m2": 20.78
+     "alcanzable_m2": 20.23,
+     "libre_m2": 20.23
     }
    },
    "luz": {
@@ -3721,7 +4134,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4120,
+   "triangulos": 4372,
    "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · antiguo",
@@ -3745,10 +4158,10 @@
    "seed": 36,
    "W": 3.5,
    "D": 3.9,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "91fd3900",
+   "guardias": 6,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "3ff83b8e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3764,59 +4177,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.56,
-     "libre_m2": 5.56
+     "alcanzable_m2": 5.36,
+     "libre_m2": 5.36
     }
    },
    "luz": {
@@ -3824,8 +4247,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3410,
-   "mallas": 13,
+   "triangulos": 3554,
+   "mallas": 14,
    "luces": 2,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -3847,10 +4270,10 @@
    "seed": 37,
    "W": 7.1,
    "D": 3.6,
-   "guardias": 6,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "300fb147",
+   "guardias": 12,
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "174161d3",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3866,17 +4289,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -3887,43 +4310,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.93,
-     "libre_m2": 11.93
+     "alcanzable_m2": 11.25,
+     "libre_m2": 11.25
     }
    },
    "luz": {
@@ -3931,8 +4364,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5314,
-   "mallas": 15,
+   "triangulos": 4326,
+   "mallas": 16,
    "luces": 3,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -3955,10 +4388,10 @@
    "seed": 38,
    "W": 3.2,
    "D": 3.9,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "e3d37627",
+   "guardias": 7,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "47b9c508",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -3974,59 +4407,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 4.42,
-     "libre_m2": 4.42
+     "alcanzable_m2": 4.45,
+     "libre_m2": 4.45
     }
    },
    "luz": {
@@ -4034,8 +4477,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3546,
-   "mallas": 13,
+   "triangulos": 3506,
+   "mallas": 14,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -4058,10 +4501,10 @@
    "seed": 39,
    "W": 7.7,
    "D": 3.3,
-   "guardias": 10,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "3af8c2a6",
+   "guardias": 9,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "40022d75",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4077,17 +4520,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4101,40 +4544,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.22,
-     "libre_m2": 12.22
+     "alcanzable_m2": 10.78,
+     "libre_m2": 10.78
     }
    },
    "luz": {
@@ -4142,7 +4595,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4300,
+   "triangulos": 4552,
    "mallas": 15,
    "luces": 3,
    "hogar": "familia · moderno",
@@ -4167,10 +4620,10 @@
    "seed": 40,
    "W": 5.6,
    "D": 3.3,
-   "guardias": 7,
+   "guardias": 8,
    "objetos": 17,
    "distintos": 16,
-   "hash": "62e5a201",
+   "hash": "4a4acce",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4186,17 +4639,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4205,40 +4658,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 0
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.24,
-     "libre_m2": 9.24
+     "alcanzable_m2": 8.66,
+     "libre_m2": 8.66
     }
    },
    "luz": {
@@ -4246,8 +4709,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3570,
-   "mallas": 16,
+   "triangulos": 3664,
+   "mallas": 15,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -4270,10 +4733,10 @@
    "seed": 41,
    "W": 3.8000000000000003,
    "D": 3,
-   "guardias": 5,
+   "guardias": 7,
    "objetos": 16,
-   "distintos": 15,
-   "hash": "1bf2da05",
+   "distintos": 14,
+   "hash": "8d78ec3c",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4289,54 +4752,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 0
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.55,
-     "libre_m2": 3.55
+     "alcanzable_m2": 3.73,
+     "libre_m2": 3.73
     }
    },
    "luz": {
@@ -4344,8 +4822,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3506,
-   "mallas": 13,
+   "triangulos": 3590,
+   "mallas": 14,
    "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -4368,10 +4846,10 @@
    "seed": 42,
    "W": 5.300000000000001,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "ad090302",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "bb1492f1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4387,17 +4865,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4406,40 +4884,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.45,
-     "libre_m2": 8.45
+     "alcanzable_m2": 7.43,
+     "libre_m2": 7.43
     }
    },
    "luz": {
@@ -4447,7 +4935,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4068,
+   "triangulos": 3688,
    "mallas": 15,
    "luces": 2,
    "hogar": "musico · bohemio",
@@ -4471,10 +4959,10 @@
    "seed": 43,
    "W": 4.1,
    "D": 4.2,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "19d371cc",
+   "guardias": 7,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "8c5c0765",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4490,51 +4978,61 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
@@ -4542,7 +5040,7 @@
    "paso": {
     "estancia": {
      "alcanzable_m2": 0.22,
-     "libre_m2": 6.93
+     "libre_m2": 6.63
     }
    },
    "luz": {
@@ -4550,8 +5048,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3566,
-   "mallas": 13,
+   "triangulos": 3614,
+   "mallas": 14,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -4575,10 +5073,10 @@
    "seed": 44,
    "W": 3.8000000000000003,
    "D": 2.7,
-   "guardias": 22,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "d5147ed1",
+   "guardias": 6,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "8e8fe9f4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4594,54 +5092,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 0.18,
-     "libre_m2": 1.44
+     "alcanzable_m2": 0.17,
+     "libre_m2": 1.41
     }
    },
    "luz": {
@@ -4649,7 +5162,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3400,
+   "triangulos": 3602,
    "mallas": 14,
    "luces": 2,
    "hogar": "agricultor · rustico",
@@ -4673,10 +5186,10 @@
    "seed": 45,
    "W": 7.7,
    "D": 3.3,
-   "guardias": 7,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "279d5feb",
+   "guardias": 8,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "5ca209cf",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4692,17 +5205,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4716,40 +5229,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.61,
-     "libre_m2": 11.61
+     "alcanzable_m2": 11.56,
+     "libre_m2": 11.56
     }
    },
    "luz": {
@@ -4757,7 +5280,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4156,
+   "triangulos": 4540,
    "mallas": 15,
    "luces": 3,
    "hogar": "artista · bohemio",
@@ -4780,10 +5303,10 @@
    "seed": 46,
    "W": 4.1,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 16,
+   "guardias": 7,
+   "objetos": 17,
    "distintos": 15,
-   "hash": "80186ee",
+   "hash": "915d3570",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4799,17 +5322,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4818,40 +5341,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.1,
-     "libre_m2": 5.1
+     "alcanzable_m2": 5.29,
+     "libre_m2": 5.29
     }
    },
    "luz": {
@@ -4859,7 +5392,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3830,
+   "triangulos": 3518,
    "mallas": 14,
    "luces": 2,
    "hogar": "abuela · antiguo",
@@ -4883,10 +5416,10 @@
    "seed": 47,
    "W": 7.4,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "30fef538",
+   "guardias": 14,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "8e9f4d06",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -4902,17 +5435,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -4923,43 +5456,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.54,
-     "libre_m2": 14.54
+     "alcanzable_m2": 14.18,
+     "libre_m2": 14.18
     }
    },
    "luz": {
@@ -4967,8 +5510,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4132,
-   "mallas": 14,
+   "triangulos": 4336,
+   "mallas": 15,
    "luces": 3,
    "hogar": "matrimonio · rustico",
    "contexto_hogar": {
@@ -4991,10 +5534,10 @@
    "seed": 48,
    "W": 5.6,
    "D": 4.5,
-   "guardias": 14,
-   "objetos": 17,
-   "distintos": 13,
-   "hash": "5031233e",
+   "guardias": 8,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "5bc8e2db",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5010,17 +5553,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5034,40 +5577,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11,
-     "libre_m2": 11
+     "alcanzable_m2": 10.58,
+     "libre_m2": 10.58
     }
    },
    "luz": {
@@ -5075,7 +5628,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3796,
+   "triangulos": 4112,
    "mallas": 15,
    "luces": 2,
    "hogar": "familia · alegre",
@@ -5092,7 +5645,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.895
   },
   {
    "kit": "vivienda_ninos",
@@ -5100,10 +5653,10 @@
    "seed": 49,
    "W": 3.5,
    "D": 5.1,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "ba7449cf",
+   "guardias": 6,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "8bc104d3",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5119,59 +5672,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.53,
-     "libre_m2": 8.53
+     "alcanzable_m2": 8.79,
+     "libre_m2": 8.79
     }
    },
    "luz": {
@@ -5179,8 +5742,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3386,
-   "mallas": 13,
+   "triangulos": 3650,
+   "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -5203,10 +5766,10 @@
    "seed": 50,
    "W": 6.2,
    "D": 2.4,
-   "guardias": 7,
+   "guardias": 8,
    "objetos": 17,
-   "distintos": 15,
-   "hash": "5779a1c",
+   "distintos": 16,
+   "hash": "396b3e1f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5222,17 +5785,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5241,50 +5804,60 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
-     "n": 3
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.04,
-     "libre_m2": 6.04
+     "alcanzable_m2": 5,
+     "libre_m2": 5
     }
    },
    "luz": {
-    "estancia": 0.287
+    "estancia": 0.17
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3964,
+   "triangulos": 3652,
    "mallas": 15,
-   "luces": 3,
+   "luces": 2,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
     "perfil": "cazador",
@@ -5306,10 +5879,10 @@
    "seed": 51,
    "W": 3.5,
    "D": 2.1,
-   "guardias": 5,
-   "objetos": 14,
+   "guardias": 7,
+   "objetos": 15,
    "distintos": 14,
-   "hash": "c8b1a473",
+   "hash": "7418dcdd",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5325,54 +5898,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 0.26,
-     "libre_m2": 0.48
+     "alcanzable_m2": 0.15,
+     "libre_m2": 0.47
     }
    },
    "luz": {
@@ -5380,9 +5968,50 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4230,
-   "mallas": 13,
+   "triangulos": 3268,
+   "mallas": 15,
    "luces": 1,
+   "generacion": {
+    "semillaSolicitada": 51,
+    "semillaEfectiva": 104780,
+    "intento": 1,
+    "maximo": 12,
+    "agotado": false,
+    "marco": {
+     "W": 3.5,
+     "D": 2.1,
+     "H": 2.75,
+     "puertaX": -0.75
+    },
+    "intentos": [
+     {
+      "seed": 51,
+      "faltan": [
+       7
+      ],
+      "busquedasSuelo": [
+       {
+        "entrada": 7,
+        "probados": 4496,
+        "colocados": 0,
+        "limite": 16000
+       }
+      ]
+     },
+     {
+      "seed": 104780,
+      "faltan": [],
+      "busquedasSuelo": [
+       {
+        "entrada": 7,
+        "probados": 468,
+        "colocados": 1,
+        "limite": 16000
+       }
+      ]
+     }
+    ]
+   },
    "hogar": "musico · bohemio",
    "contexto_hogar": {
     "perfil": "musico",
@@ -5406,8 +6035,8 @@
    "D": 3.3,
    "guardias": 6,
    "objetos": 16,
-   "distintos": 15,
-   "hash": "8f823e5e",
+   "distintos": 14,
+   "hash": "4707851d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5423,17 +6052,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5442,40 +6071,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 1
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 1
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.33,
-     "libre_m2": 5.33
+     "alcanzable_m2": 5.43,
+     "libre_m2": 5.43
     }
    },
    "luz": {
@@ -5483,7 +6122,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3674,
+   "triangulos": 3506,
    "mallas": 14,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -5508,10 +6147,10 @@
    "seed": 53,
    "W": 3.5,
    "D": 3.3,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 14,
-   "hash": "748a12b3",
+   "guardias": 6,
+   "objetos": 16,
+   "distintos": 16,
+   "hash": "ef8b9705",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5527,54 +6166,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 1
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.55,
-     "libre_m2": 3.55
+     "alcanzable_m2": 3.93,
+     "libre_m2": 3.93
     }
    },
    "luz": {
@@ -5582,8 +6236,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3098,
-   "mallas": 13,
+   "triangulos": 3218,
+   "mallas": 14,
    "luces": 1,
    "hogar": "agricultor · antiguo",
    "contexto_hogar": {
@@ -5606,10 +6260,10 @@
    "seed": 54,
    "W": 5.9,
    "D": 4.5,
-   "guardias": 7,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "32f3717b",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 14,
+   "hash": "5e5ee3be",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5625,17 +6279,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5646,43 +6300,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 13.04,
-     "libre_m2": 13.04
+     "alcanzable_m2": 12.75,
+     "libre_m2": 12.75
     }
    },
    "luz": {
@@ -5690,8 +6354,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3736,
-   "mallas": 14,
+   "triangulos": 3880,
+   "mallas": 15,
    "luces": 2,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -5713,10 +6377,10 @@
    "seed": 55,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "2411b082",
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "81f3ff7f",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5732,59 +6396,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.16,
-     "libre_m2": 10.16
+     "alcanzable_m2": 9.3,
+     "libre_m2": 9.3
     }
    },
    "luz": {
@@ -5792,8 +6466,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3448,
-   "mallas": 14,
+   "triangulos": 3664,
+   "mallas": 15,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -5817,9 +6491,9 @@
    "W": 4.4,
    "D": 3.3,
    "guardias": 7,
-   "objetos": 14,
-   "distintos": 13,
-   "hash": "78bfb232",
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "8723af63",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5835,17 +6509,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5854,40 +6528,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.98,
-     "libre_m2": 5.98
+     "alcanzable_m2": 5.3,
+     "libre_m2": 5.3
     }
    },
    "luz": {
@@ -5895,8 +6579,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3376,
-   "mallas": 15,
+   "triangulos": 3626,
+   "mallas": 14,
    "luces": 2,
    "hogar": "matrimonio · antiguo",
    "contexto_hogar": {
@@ -5919,10 +6603,10 @@
    "seed": 57,
    "W": 5.9,
    "D": 3.3,
-   "guardias": 10,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "dafd1cc9",
+   "guardias": 7,
+   "objetos": 18,
+   "distintos": 17,
+   "hash": "464bd375",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -5938,17 +6622,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -5957,40 +6641,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.49,
-     "libre_m2": 9.49
+     "alcanzable_m2": 9.3,
+     "libre_m2": 9.3
     }
    },
    "luz": {
@@ -5998,7 +6692,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4654,
+   "triangulos": 4870,
    "mallas": 16,
    "luces": 2,
    "hogar": "familia · moderno",
@@ -6023,10 +6717,10 @@
    "seed": 58,
    "W": 4.7,
    "D": 3,
-   "guardias": 7,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "cde2db78",
+   "guardias": 6,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "3bffc6c8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6042,17 +6736,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6061,40 +6755,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 1
+     "n": 0
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.79,
-     "libre_m2": 5.79
+     "alcanzable_m2": 5.76,
+     "libre_m2": 5.76
     }
    },
    "luz": {
@@ -6102,7 +6806,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3422,
+   "triangulos": 3542,
    "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -6126,10 +6830,10 @@
    "seed": 59,
    "W": 6.5,
    "D": 3,
-   "guardias": 11,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "b48166f7",
+   "guardias": 7,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "6b1627f1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6145,59 +6849,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.46,
-     "libre_m2": 9.46
+     "alcanzable_m2": 8.78,
+     "libre_m2": 8.78
     }
    },
    "luz": {
@@ -6205,8 +6919,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5204,
-   "mallas": 14,
+   "triangulos": 4192,
+   "mallas": 15,
    "luces": 3,
    "hogar": "cazador · rustico",
    "contexto_hogar": {
@@ -6230,9 +6944,9 @@
    "W": 5.300000000000001,
    "D": 2.7,
    "guardias": 7,
-   "objetos": 16,
-   "distintos": 15,
-   "hash": "307f577d",
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "ed1f77c4",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6248,17 +6962,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6267,40 +6981,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 6.19,
-     "libre_m2": 6.19
+     "alcanzable_m2": 4.71,
+     "libre_m2": 4.71
     }
    },
    "luz": {
@@ -6308,8 +7032,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3810,
-   "mallas": 16,
+   "triangulos": 3664,
+   "mallas": 15,
    "luces": 2,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -6332,10 +7056,10 @@
    "seed": 61,
    "W": 4.4,
    "D": 3,
-   "guardias": 7,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "967238e5",
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "f934cd28",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6351,17 +7075,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6370,40 +7094,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.29,
-     "libre_m2": 5.29
+     "alcanzable_m2": 4.2,
+     "libre_m2": 4.2
     }
    },
    "luz": {
@@ -6411,7 +7145,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3386,
+   "triangulos": 3590,
    "mallas": 14,
    "luces": 2,
    "hogar": "rico · lujo",
@@ -6436,10 +7170,10 @@
    "seed": 62,
    "W": 7.1,
    "D": 2.1,
-   "guardias": 6,
-   "objetos": 18,
-   "distintos": 16,
-   "hash": "f64a590a",
+   "guardias": 9,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "c95aadaf",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6455,17 +7189,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6474,40 +7208,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.17,
-     "libre_m2": 5.17
+     "alcanzable_m2": 4.85,
+     "libre_m2": 4.85
     }
    },
    "luz": {
@@ -6515,7 +7259,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4016,
+   "triangulos": 4072,
    "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · rustico",
@@ -6539,10 +7283,10 @@
    "seed": 63,
    "W": 3.5,
    "D": 3.6,
-   "guardias": 7,
-   "objetos": 15,
+   "guardias": 6,
+   "objetos": 16,
    "distintos": 15,
-   "hash": "56e1e329",
+   "hash": "ac92d891",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6558,17 +7302,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6577,50 +7321,87 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
-     "n": 1
+     "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.53,
-     "libre_m2": 3.53
+     "alcanzable_m2": 3.31,
+     "libre_m2": 3.31
     }
    },
    "luz": {
-    "estancia": 0.082
+    "estancia": 0.18
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3694,
+   "triangulos": 3530,
    "mallas": 14,
-   "luces": 1,
+   "luces": 2,
+   "generacion": {
+    "semillaSolicitada": 63,
+    "semillaEfectiva": 63,
+    "intento": 0,
+    "maximo": 12,
+    "agotado": false,
+    "marco": {
+     "W": 3.5,
+     "D": 3.6,
+     "H": 2.75,
+     "puertaX": -0.75
+    },
+    "intentos": [
+     {
+      "seed": 63,
+      "faltan": [],
+      "busquedasSuelo": [
+       {
+        "entrada": 6,
+        "probados": 1683,
+        "colocados": 1,
+        "limite": 16000
+       }
+      ]
+     }
+    ]
+   },
    "hogar": "artista · bohemio",
    "contexto_hogar": {
     "perfil": "artista",
@@ -6641,10 +7422,10 @@
    "seed": 64,
    "W": 4.7,
    "D": 2.4,
-   "guardias": 5,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "4764f8a6",
+   "guardias": 8,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "160b933b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6660,54 +7441,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.61,
-     "libre_m2": 3.61
+     "alcanzable_m2": 3.03,
+     "libre_m2": 3.03
     }
    },
    "luz": {
@@ -6715,8 +7511,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3746,
-   "mallas": 13,
+   "triangulos": 3686,
+   "mallas": 14,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -6739,10 +7535,10 @@
    "seed": 65,
    "W": 7.4,
    "D": 3.6,
-   "guardias": 8,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "1595120",
+   "guardias": 9,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "dbf94ed1",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6758,17 +7554,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6782,40 +7578,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 14.28,
-     "libre_m2": 14.28
+     "alcanzable_m2": 12.23,
+     "libre_m2": 12.23
     }
    },
    "luz": {
@@ -6823,7 +7629,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4252,
+   "triangulos": 4528,
    "mallas": 15,
    "luces": 3,
    "hogar": "matrimonio · rustico",
@@ -6847,10 +7653,10 @@
    "seed": 66,
    "W": 5.9,
    "D": 4.5,
-   "guardias": 6,
-   "objetos": 15,
-   "distintos": 13,
-   "hash": "4d060f15",
+   "guardias": 10,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "171f3c8e",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6866,17 +7672,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6887,43 +7693,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 11.69,
-     "libre_m2": 11.69
+     "alcanzable_m2": 11.42,
+     "libre_m2": 11.42
     }
    },
    "luz": {
@@ -6931,8 +7747,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3676,
-   "mallas": 14,
+   "triangulos": 5108,
+   "mallas": 15,
    "luces": 2,
    "hogar": "familia · alegre",
    "contexto_hogar": {
@@ -6948,7 +7764,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.947
   },
   {
    "kit": "vivienda_ninos",
@@ -6956,10 +7772,10 @@
    "seed": 67,
    "W": 5.6,
    "D": 5.1,
-   "guardias": 8,
-   "objetos": 18,
+   "guardias": 9,
+   "objetos": 19,
    "distintos": 15,
-   "hash": "f7966c49",
+   "hash": "4f406011",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -6975,17 +7791,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -6999,40 +7815,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 1
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 15.12,
-     "libre_m2": 15.12
+     "alcanzable_m2": 14.09,
+     "libre_m2": 14.09
     }
    },
    "luz": {
@@ -7040,7 +7866,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3906,
+   "triangulos": 3930,
    "mallas": 16,
    "luces": 2,
    "hogar": "estudiante · joven",
@@ -7065,9 +7891,9 @@
    "W": 5.9,
    "D": 2.4,
    "guardias": 13,
-   "objetos": 17,
-   "distintos": 16,
-   "hash": "beaa54cb",
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "4839b019",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7083,17 +7909,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7102,40 +7928,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
      "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
-     "entrada": 8,
+     "entrada": 10,
      "obj": "vb_osito",
      "n": 1
     },
     {
-     "entrada": 9,
+     "entrada": 11,
      "obj": "vb_bloques",
      "n": 1
     },
     {
-     "entrada": 10,
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 0
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 5.26,
-     "libre_m2": 5.26
+     "alcanzable_m2": 5.22,
+     "libre_m2": 5.22
     }
    },
    "luz": {
@@ -7143,7 +7979,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3664,
+   "triangulos": 3568,
    "mallas": 15,
    "luces": 2,
    "hogar": "cazador · rustico",
@@ -7167,10 +8003,10 @@
    "seed": 69,
    "W": 7.7,
    "D": 4.2,
-   "guardias": 12,
-   "objetos": 17,
-   "distintos": 13,
-   "hash": "615fdcfc",
+   "guardias": 9,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "34b9603b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7186,17 +8022,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7207,43 +8043,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.59,
-     "libre_m2": 17.59
+     "alcanzable_m2": 17.3,
+     "libre_m2": 17.3
     }
    },
    "luz": {
@@ -7251,8 +8097,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4468,
-   "mallas": 14,
+   "triangulos": 4324,
+   "mallas": 15,
    "luces": 3,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -7275,10 +8121,10 @@
    "seed": 70,
    "W": 5.300000000000001,
    "D": 3.9,
-   "guardias": 6,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "489ea6ac",
+   "guardias": 8,
+   "objetos": 18,
+   "distintos": 16,
+   "hash": "d0d54f08",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7294,17 +8140,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7315,43 +8161,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.03,
-     "libre_m2": 9.03
+     "alcanzable_m2": 7.91,
+     "libre_m2": 7.91
     }
    },
    "luz": {
@@ -7359,8 +8215,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3784,
-   "mallas": 14,
+   "triangulos": 3940,
+   "mallas": 15,
    "luces": 2,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -7376,7 +8232,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.889
   },
   {
    "kit": "vivienda_ninos",
@@ -7385,9 +8241,9 @@
    "W": 5,
    "D": 3.9,
    "guardias": 7,
-   "objetos": 15,
-   "distintos": 14,
-   "hash": "c1656346",
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "1b5f2e19",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7403,17 +8259,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7422,40 +8278,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 9.14,
-     "libre_m2": 9.14
+     "alcanzable_m2": 0.32,
+     "libre_m2": 8.19
     }
    },
    "luz": {
@@ -7487,10 +8353,10 @@
    "seed": 72,
    "W": 7.7,
    "D": 2.7,
-   "guardias": 6,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "22b2fb3f",
+   "guardias": 14,
+   "objetos": 21,
+   "distintos": 18,
+   "hash": "24bf1a76",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7506,17 +8372,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7527,43 +8393,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 7.39,
-     "libre_m2": 7.39
+     "alcanzable_m2": 7.35,
+     "libre_m2": 7.35
     }
    },
    "luz": {
@@ -7571,8 +8447,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5480,
-   "mallas": 14,
+   "triangulos": 4588,
+   "mallas": 15,
    "luces": 3,
    "hogar": "artista · alegre",
    "contexto_hogar": {
@@ -7594,10 +8470,10 @@
    "seed": 73,
    "W": 3.5,
    "D": 5.1,
-   "guardias": 5,
-   "objetos": 13,
-   "distintos": 12,
-   "hash": "f97470b4",
+   "guardias": 7,
+   "objetos": 16,
+   "distintos": 14,
+   "hash": "1631e568",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7613,59 +8489,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
-     "n": 1
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 0.26,
-     "libre_m2": 7.19
+     "alcanzable_m2": 7.37,
+     "libre_m2": 7.37
     }
    },
    "luz": {
@@ -7673,8 +8559,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3614,
-   "mallas": 13,
+   "triangulos": 3518,
+   "mallas": 14,
    "luces": 2,
    "hogar": "abuela · antiguo",
    "contexto_hogar": {
@@ -7689,7 +8575,7 @@
     "habitacion": "ninos"
    },
    "determinista": true,
-   "diferencia_con_semilla_1": 1
+   "diferencia_con_semilla_1": 0.944
   },
   {
    "kit": "vivienda_ninos",
@@ -7697,10 +8583,10 @@
    "seed": 74,
    "W": 6.5,
    "D": 4.8,
-   "guardias": 8,
-   "objetos": 19,
+   "guardias": 9,
+   "objetos": 20,
    "distintos": 16,
-   "hash": "7f524c0d",
+   "hash": "4412042",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7716,17 +8602,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7740,40 +8626,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 1
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.77,
-     "libre_m2": 17.77
+     "alcanzable_m2": 16.55,
+     "libre_m2": 16.55
     }
    },
    "luz": {
@@ -7781,7 +8677,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4276,
+   "triangulos": 4348,
    "mallas": 15,
    "luces": 3,
    "hogar": "matrimonio · antiguo",
@@ -7805,10 +8701,10 @@
    "seed": 75,
    "W": 7.4,
    "D": 4.5,
-   "guardias": 8,
-   "objetos": 16,
-   "distintos": 13,
-   "hash": "53da4a2f",
+   "guardias": 9,
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "5b503def",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7824,17 +8720,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -7848,40 +8744,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 19.61,
-     "libre_m2": 19.61
+     "alcanzable_m2": 18.2,
+     "libre_m2": 18.2
     }
    },
    "luz": {
@@ -7889,7 +8795,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4252,
+   "triangulos": 4324,
    "mallas": 15,
    "luces": 3,
    "hogar": "familia · moderno",
@@ -7914,10 +8820,10 @@
    "seed": 76,
    "W": 4.7,
    "D": 2.4,
-   "guardias": 10,
-   "objetos": 16,
-   "distintos": 14,
-   "hash": "9bfbddc",
+   "guardias": 7,
+   "objetos": 18,
+   "distintos": 17,
+   "hash": "6bca638d",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -7933,54 +8839,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 7,
-     "obj": "vb_dibujos_ninos",
+     "obj": "vb_alfombra_juego_compacta",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 2
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 2
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 3.48,
-     "libre_m2": 3.48
+     "alcanzable_m2": 2.93,
+     "libre_m2": 2.93
     }
    },
    "luz": {
@@ -7988,8 +8909,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 3738,
-   "mallas": 13,
+   "triangulos": 4010,
+   "mallas": 14,
    "luces": 2,
    "hogar": "estudiante · joven",
    "contexto_hogar": {
@@ -8012,10 +8933,10 @@
    "seed": 77,
    "W": 7.4,
    "D": 5.1,
-   "guardias": 8,
-   "objetos": 19,
+   "guardias": 9,
+   "objetos": 20,
    "distintos": 16,
-   "hash": "3a326b50",
+   "hash": "ac2c0f34",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -8031,17 +8952,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -8055,40 +8976,50 @@
      "n": 1
     },
     {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
-     "n": 1
-    },
-    {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 3
+     "n": 1
     },
     {
-     "entrada": 12,
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 22.66,
-     "libre_m2": 22.66
+     "alcanzable_m2": 22.51,
+     "libre_m2": 22.51
     }
    },
    "luz": {
@@ -8096,7 +9027,7 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4362,
+   "triangulos": 4542,
    "mallas": 16,
    "luces": 3,
    "hogar": "cazador · rustico",
@@ -8120,10 +9051,10 @@
    "seed": 78,
    "W": 6.8,
    "D": 2.7,
-   "guardias": 5,
-   "objetos": 14,
-   "distintos": 12,
-   "hash": "47a26ad3",
+   "guardias": 7,
+   "objetos": 19,
+   "distintos": 16,
+   "hash": "9d11677b",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -8139,59 +9070,69 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 8.77,
-     "libre_m2": 8.77
+     "alcanzable_m2": 8.34,
+     "libre_m2": 8.34
     }
    },
    "luz": {
@@ -8199,8 +9140,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4000,
-   "mallas": 14,
+   "triangulos": 4108,
+   "mallas": 15,
    "luces": 3,
    "hogar": "musico · bohemio",
    "contexto_hogar": {
@@ -8223,10 +9164,10 @@
    "seed": 79,
    "W": 6.8,
    "D": 3.6,
-   "guardias": 12,
-   "objetos": 17,
+   "guardias": 9,
+   "objetos": 18,
    "distintos": 14,
-   "hash": "2bd2126a",
+   "hash": "d5b156c0",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -8242,17 +9183,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -8263,43 +9204,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
-     "n": 2
+     "obj": "vb_osito",
+     "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
-     "n": 2
+     "obj": "vb_bloques",
+     "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 10.42,
-     "libre_m2": 10.63
+     "alcanzable_m2": 11.06,
+     "libre_m2": 11.06
     }
    },
    "luz": {
@@ -8307,8 +9258,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4180,
-   "mallas": 14,
+   "triangulos": 4312,
+   "mallas": 15,
    "luces": 3,
    "hogar": "rico · lujo",
    "contexto_hogar": {
@@ -8332,10 +9283,10 @@
    "seed": 80,
    "W": 7.1,
    "D": 4.5,
-   "guardias": 12,
-   "objetos": 17,
-   "distintos": 14,
-   "hash": "4dbeb85",
+   "guardias": 8,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "60cbafa8",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -8351,17 +9302,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -8372,43 +9323,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
      "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
      "n": 2
     },
     {
-     "entrada": 11,
+     "entrada": 13,
      "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
      "n": 2
     },
     {
-     "entrada": 12,
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 17.96,
-     "libre_m2": 17.96
+     "alcanzable_m2": 16.97,
+     "libre_m2": 16.97
     }
    },
    "luz": {
@@ -8416,8 +9377,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 4752,
-   "mallas": 14,
+   "triangulos": 4980,
+   "mallas": 15,
    "luces": 3,
    "hogar": "agricultor · rustico",
    "contexto_hogar": {
@@ -8440,10 +9401,10 @@
    "seed": 81,
    "W": 7.4,
    "D": 3.3,
-   "guardias": 6,
-   "objetos": 15,
-   "distintos": 12,
-   "hash": "99fb75c8",
+   "guardias": 8,
+   "objetos": 19,
+   "distintos": 15,
+   "hash": "9bfed506",
    "errores": [],
    "avisos": [],
    "recuento": [
@@ -8459,17 +9420,17 @@
     },
     {
      "entrada": 2,
-     "obj": "vb_armario_ninos",
-     "n": 1
-    },
-    {
-     "entrada": 3,
      "obj": "vb_mesa_ninos",
      "n": 1
     },
     {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
      "entrada": 4,
-     "obj": "vb_estante_ninos",
+     "obj": "vb_armario_ninos",
      "n": 1
     },
     {
@@ -8480,43 +9441,53 @@
     {
      "entrada": 6,
      "obj": "vb_alfombra_juego",
-     "n": 0
-    },
-    {
-     "entrada": 7,
-     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 8,
-     "obj": "vb_osito",
+     "obj": "vb_banco_lectura_ninos",
      "n": 1
     },
     {
      "entrada": 9,
-     "obj": "vb_bloques",
+     "obj": "vb_dibujos_ninos",
      "n": 1
     },
     {
      "entrada": 10,
-     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "obj": "vb_osito",
      "n": 1
     },
     {
      "entrada": 11,
-     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "obj": "vb_bloques",
      "n": 1
     },
     {
      "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
      "obj": "lampara_techo_salon",
      "n": 3
     }
    ],
    "paso": {
     "estancia": {
-     "alcanzable_m2": 12.21,
-     "libre_m2": 12.21
+     "alcanzable_m2": 10.4,
+     "libre_m2": 10.4
     }
    },
    "luz": {
@@ -8524,8 +9495,8 @@
    },
    "flotando": 0,
    "interpenetraciones": 0,
-   "triangulos": 5324,
-   "mallas": 14,
+   "triangulos": 4384,
+   "mallas": 15,
    "luces": 3,
    "hogar": "artista · bohemio",
    "contexto_hogar": {
