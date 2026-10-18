@@ -3,37 +3,37 @@
  "kits": [
   {
    "kit": "vivienda_bano",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_cocina",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_comedor",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_costura",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_despacho",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_despensa",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
@@ -45,7 +45,7 @@
   },
   {
    "kit": "vivienda_estudio",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
@@ -57,43 +57,43 @@
   },
   {
    "kit": "vivienda_musica",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_ninos",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_pintura",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_salon",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_taller",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_trastero",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   },
   {
    "kit": "vivienda_trofeos",
-   "semillas": 81,
+   "semillas": 5,
    "errores": 0,
    "avisos": 0
   }
@@ -112,10 +112,10 @@
  "habitaciones_sinteticas": 1166,
  "errores_casas": 0,
  "maximos_sinteticas": {
-  "triangulos": 73424,
+  "triangulos": 75676,
   "mallas": 60,
   "luces": 9,
-  "montaje_ms": 677
+  "montaje_ms": 687.6
  },
  "casas_pueblo": 22,
  "habitaciones_pueblo": 132,
@@ -146,8 +146,8 @@
  },
  "paquete": {
   "errores": 0,
-  "maximo_entrada_ms": 182,
-  "annie_entrada_ms": 96.4,
+  "maximo_entrada_ms": 230.7,
+  "annie_entrada_ms": 151.7,
   "comercios": [
    {
     "tipo": "bar",
@@ -192,7 +192,7 @@
    "data/kits/vivienda_costura.json": "771825af8ce8040534cd53907175ee62a540f8c89803b33866fb8ebb12e979e6",
    "data/kits/vivienda_despacho.json": "50f432e53e4bad0b83f16f0df482bb0e27ccb03d454feab8a42884621d1d18b7",
    "data/kits/vivienda_despensa.json": "28195beeb86ac9b6f9a8f4244e821c97bd47b64db05dfe67adbd8244505e8880",
-   "data/kits/vivienda_dormitorio.json": "61283e05cbc9ed4b07e3b002dee27f5f3284b4aa84becfd96d93bfec9c0f6fcc",
+   "data/kits/vivienda_dormitorio.json": "2c84e2870f02cc3c6850e72ad81ae64e36935eb521c44c71400de6a9a6c90b66",
    "data/kits/vivienda_estudio.json": "98faedebba14826ce9f3c41ff53ca43155af459ed717fc0cf6ba1609610a47d4",
    "data/kits/vivienda_joven.json": "38ed95390462eb204b2564413a612eb565a9e71016b3bffaad3faf4f99e98d53",
    "data/kits/vivienda_musica.json": "4aaa56923537a718fe84c912f619ca65bf172a4c2015754fd89e50610c5b521b",
@@ -204,15 +204,15 @@
    "data/kits/vivienda_trofeos.json": "6d4b63527faede89f5516c0b5d673e6e6c72fe83dce94b75596e3e4d48e56620",
    "data/objetos/vivienda.json": "2e35c468f178d6b3b9987cfe4df38c2cba6579b0f6431f5ae51ba9c5118ac7be",
    "data/objetos/vivienda_a.json": "6d25c9b26e8d27c3cff3ac2bf505aa8c048a7f48b08505389c2a6795118a53d4",
-   "data/objetos/vivienda_b.json": "6ef2375ceae0a7bf20d2199e1f34cbe5f4c16245cf75a9ca5a0b93da5559592c",
-   "src/interiores_datos.js": "b588c2028ecfee20c362d48a7a404952e97520b8bfa4f153c597cd798d6b33b7",
-   "data/interiores/datos.json": "835becc80bc66c4d3a224703bd5b2f56b78a36cd564e63048399ac8dc8816e0d"
+   "data/objetos/vivienda_b.json": "509ac92e0506630b275143deccd872b622bd4ab6fd195b7275296d7322479c2e",
+   "src/interiores_datos.js": "9dcd360a829a6a690685c84ded0a63d02cd24e4c8f3e7d5a75fd3342ad6718a3",
+   "data/interiores/datos.json": "ddad5503730b038982838a7542149965a3b4d477be10cc34b3367fc47a4506fd"
   },
   "entradas_congeladas_estables": 417
  },
  "revision_visual": {
   "fecha": "2026-10-18",
-  "estado": "revision_completada_objetivo_formal_no_superado",
+  "estado": "objetivo_no_alcanzado_mejoras_pausadas_por_usuario",
   "evaluaciones": 34,
   "fichas": 17,
   "aprobadas": 0,
@@ -292,7 +292,7 @@
    }
   },
   "autorizacion_publicacion": "Solicitud expresa del usuario; versión de prueba, sin atribuir aprobación de calidad.",
-  "objetivo_4": "en curso; kits de la tanda 19: trofeos. Las otras fichas conservan su última evaluación; no acreditan esta versión tras cambios compartidos."
+  "objetivo_4": "Pausado por el usuario tras T20 parcial: dormitorio y cama individual compartida sin nueva puntuación formal. Las 34 evaluaciones e imágenes conservadas son históricas y no acreditan esta versión."
  },
  "publicacion": {
   "destino": "GitHub Pages: nestorguerra/guarena-hq main",
@@ -1103,5 +1103,41 @@
   },
   "revision_independiente": "data/interiores/revision_calidad_tanda19_2026-10-18.md",
   "pendiente": "Objetivo 4/5 no alcanzado. Composición amplia, variedad y contraste aún requieren trabajo."
+ },
+ "calidad_tanda20": {
+  "fecha": "2026-10-18",
+  "tanda": 20,
+  "estado": "avance_parcial_publicacion_solicitada",
+  "objetivo": 4,
+  "objetivo_4_alcanzado": false,
+  "nueva_puntuacion_formal": false,
+  "base": "7767e2cdd7bea78100669cddcd48a276fcf044a2",
+  "contratos": 82,
+  "casas": 200,
+  "habitaciones": 1166,
+  "maximos": {
+   "triangulos": 75676,
+   "mallas": 60,
+   "luces": 9,
+   "montaje_ms": 687.6
+  },
+  "kits": {
+   "dormitorio": {
+    "semillas_laboratorio": 81,
+    "errores": 0,
+    "nota": "R1 sin nueva puntuación; evaluación anterior histórica"
+   },
+   "joven": {
+    "semillas_laboratorio": 81,
+    "errores": 0,
+    "nota": "Sólo cama individual compartida; resto de programa y paleta sin editar"
+   }
+  },
+  "integracion": {
+   "fuente_errores": 0,
+   "paquete_errores": 0
+  },
+  "revision_independiente": "data/interiores/revision_calidad_tanda20_2026-10-18.md",
+  "pendiente": "Usuario detiene las mejoras y solicita probar lo actual. 4/5 pendiente; centro de sala amplia, ribete morado/alfombra y paños/carteles. CI/Pages y prueba pública todavía pendientes en este commit."
  }
 }

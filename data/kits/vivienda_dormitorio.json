@@ -140,15 +140,51 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "enfrente",
    "obj": "sillon_orejero",
-   "pared": "*",
+   "de": [
+    "vb_cama_doble",
+    "vb_cama_amplia",
+    "vb_cama_individual"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": true,
+   "centrado": true,
+   "separacion_pared": 0.2,
+   "area_min": 16
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "mesa_auxiliar_lectura",
+   "de": "sillon_orejero",
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
    "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "area_min": 16
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "libro_tumbado",
+   "en": [
+    "mesa_auxiliar_lectura"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "centrado": true,
    "area_min": 16
   },
   {
@@ -183,36 +219,53 @@
   },
   {
    "zona": "estancia",
-   "regla": "contra_pared",
+   "regla": "junto_a",
    "obj": "estanteria_libros",
-   "pared": "*",
+   "de": "sillon_orejero",
    "cantidad": [
     0,
     1
    ],
    "obligatorio": false,
    "preferir": true,
+   "buscar_refs": true,
+   "si_no": true,
    "area_min": 22
   },
   {
    "zona": "estancia",
-   "regla": "suelo_libre",
+   "regla": "entre",
    "obj": "vb_alfombra",
+   "a": [
+    "vb_cama_doble",
+    "vb_cama_amplia",
+    "vb_cama_individual"
+   ],
+   "b": "sillon_orejero",
    "cantidad": [
     0,
     1
    ],
+   "preferir": true,
+   "si_no": false,
    "area_min": 16,
    "area_max": 26
   },
   {
    "zona": "estancia",
-   "regla": "suelo_libre",
+   "regla": "entre",
    "obj": "vb_alfombra",
+   "a": [
+    "vb_cama_doble",
+    "vb_cama_amplia",
+    "vb_cama_individual"
+   ],
+   "b": "sillon_orejero",
    "cantidad": [
     1,
     1
    ],
+   "si_no": true,
    "area_min": 26,
    "obligatorio": true
   },
@@ -323,6 +376,27 @@
     0.42
    ],
    "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_atlas",
+    "lb_diccionarios",
+    "lb_libros_bolsillo",
+    "hilera_libros_a",
+    "hilera_libros_b",
+    "lb_libros_cara_a",
+    "lb_libros_cara_b"
+   ],
+   "en": [
+    "estanteria_libros"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "area_min": 22
   }
  ],
  "iluminacion": {

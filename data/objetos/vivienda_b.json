@@ -39,9 +39,9 @@
       0.395,
       0
      ],
-     "c": "#d2bca4",
+     "c": "#e2dccc",
      "m": "tela",
-     "tinte": "tela"
+     "redondeo": 0.055
     },
     {
      "f": "caja",
@@ -57,7 +57,8 @@
      ],
      "c": "#926b45",
      "m": "madera",
-     "tinte": "madera"
+     "tinte": "madera",
+     "redondeo": 0.02
     },
     {
      "f": "caja",
@@ -73,7 +74,8 @@
      ],
      "c": "#997f95",
      "m": "tela",
-     "tinte": "tela"
+     "tinte": "tela",
+     "redondeo": 0.016
     },
     {
      "f": "caja",
@@ -152,7 +154,8 @@
       -0.58
      ],
      "c": "#e4decf",
-     "m": "tela"
+     "m": "tela",
+     "redondeo": 0.04
     },
     {
      "f": "caja",
@@ -167,10 +170,28 @@
       -0.58
      ],
      "c": "#e4decf",
-     "m": "tela"
+     "m": "tela",
+     "redondeo": 0.04
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.31,
+      0.014,
+      0.12
+     ],
+     "p": [
+      0,
+      0.5215,
+      -0.215
+     ],
+     "c": "#e5dfcf",
+     "m": "tela",
+     "redondeo": 0.006
     }
    ],
-   "rol": "cama_doble"
+   "rol": "cama_doble",
+   "nota": "Colchón crema, colcha y vuelta de sábana diferenciadas; huella y altura de descanso conservadas."
   },
   {
    "id": "vb_cama_individual",
@@ -209,9 +230,9 @@
       0.395,
       0
      ],
-     "c": "#d2bca4",
+     "c": "#e2dccc",
      "m": "tela",
-     "tinte": "tela"
+     "redondeo": 0.055
     },
     {
      "f": "caja",
@@ -227,7 +248,8 @@
      ],
      "c": "#926b45",
      "m": "madera",
-     "tinte": "madera"
+     "tinte": "madera",
+     "redondeo": 0.02
     },
     {
      "f": "caja",
@@ -243,7 +265,8 @@
      ],
      "c": "#997f95",
      "m": "tela",
-     "tinte": "tela"
+     "tinte": "tela",
+     "redondeo": 0.016
     },
     {
      "f": "caja",
@@ -322,10 +345,28 @@
       -0.58
      ],
      "c": "#e4decf",
-     "m": "tela"
+     "m": "tela",
+     "redondeo": 0.04
+    },
+    {
+     "f": "caja",
+     "d": [
+      0.8099999999999999,
+      0.014,
+      0.12
+     ],
+     "p": [
+      0,
+      0.5215,
+      -0.215
+     ],
+     "c": "#e5dfcf",
+     "m": "tela",
+     "redondeo": 0.006
     }
    ],
-   "rol": "cama"
+   "rol": "cama",
+   "nota": "Colchón crema, colcha y vuelta de sábana diferenciadas; huella y altura de descanso conservadas."
   },
   {
    "id": "vb_cama_amplia",
@@ -364,9 +405,9 @@
       0.395,
       0
      ],
-     "c": "#d2bca4",
+     "c": "#e2dccc",
      "m": "tela",
-     "tinte": "tela"
+     "redondeo": 0.055
     },
     {
      "f": "caja",
@@ -382,7 +423,8 @@
      ],
      "c": "#926b45",
      "m": "madera",
-     "tinte": "madera"
+     "tinte": "madera",
+     "redondeo": 0.02
     },
     {
      "f": "caja",
@@ -398,7 +440,8 @@
      ],
      "c": "#997f95",
      "m": "tela",
-     "tinte": "tela"
+     "tinte": "tela",
+     "redondeo": 0.016
     },
     {
      "f": "caja",
@@ -477,7 +520,8 @@
       -0.58
      ],
      "c": "#e4decf",
-     "m": "tela"
+     "m": "tela",
+     "redondeo": 0.04
     },
     {
      "f": "caja",
@@ -492,10 +536,28 @@
       -0.58
      ],
      "c": "#e4decf",
-     "m": "tela"
+     "m": "tela",
+     "redondeo": 0.04
+    },
+    {
+     "f": "caja",
+     "d": [
+      1.5525925925925925,
+      0.014,
+      0.12
+     ],
+     "p": [
+      0,
+      0.5215,
+      -0.215
+     ],
+     "c": "#e5dfcf",
+     "m": "tela",
+     "redondeo": 0.006
     }
    ],
-   "rol": "cama_doble"
+   "rol": "cama_doble",
+   "nota": "Colchón crema, colcha y vuelta de sábana diferenciadas; huella y altura de descanso conservadas."
   },
   {
    "id": "vb_armario",

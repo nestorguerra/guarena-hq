@@ -60,6 +60,25 @@ def modelos_estudio():
     return out
 
 
+def mejorar_dormitorio(out):
+    """Descanso adulto: misma huella y anclas, textil diferenciado de madera.
+
+    Se aplica al final, después de fabricar las copias infantiles. Los tres IDs
+    también sirven al cuarto joven: su cambio compartido se declara y valida.
+    """
+    for o in out:
+        if o['id'] not in ['vb_cama_doble','vb_cama_individual','vb_cama_amplia']:continue
+        ps=o['partes'];mattress=ps[1];mattress.pop('tinte',None)
+        mattress.update(c='#e2dccc',redondeo=.055)
+        ps[2]['redondeo']=.02
+        ps[3]['redondeo']=.016
+        for p in ps[4:]:
+            if p.get('m')=='tela':p['redondeo']=.04
+        # Vuelta de sábana apoyada sobre la colcha, dentro de la envolvente vieja.
+        ps.append(caja(ps[3]['d'][0],.014,.12,y=.5215,z=-.215,c='#e5dfcf',m='tela',redondeo=.006))
+        o['nota']='Colchón crema, colcha y vuelta de sábana diferenciadas; huella y altura de descanso conservadas.'
+
+
 def mejorar_trofeos(out):
     """Guardado de campo y consulta: superficies físicas y formas propias."""
     ids={o['id']:o for o in out};madera='#916e50';canto='#514332';verde='#596f60';lino='#b4b79d'
@@ -328,6 +347,7 @@ def objetos():
     mejorar_despacho(out)
     out.extend(modelos_estudio())
     mejorar_trofeos(out)
+    mejorar_dormitorio(out)
     return out
 
 if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())

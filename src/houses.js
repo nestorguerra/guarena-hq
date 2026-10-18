@@ -563,7 +563,7 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
   // patio walls (over them, the roofs of the neighbours)
   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
   B.view('b', -hw, 3.2, D1, hw, 40, D);
-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio','salon'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
+  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio','salon','dorm','dorm2'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
     // tiled skirting 1.1 m high round the room (skipping doors)
     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
       const along = side === 's' || side === 'n';
@@ -1098,7 +1098,8 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       const L = (lx, lz) => { const [a, c] = rot(lx, lz, p.ry); return [hx + a, hz + c]; }; // (a point of the piece, in the house)
       const cxz = L((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2), frente = L((b.x0 + b.x1) / 2, b.z1 + 0.5);
       const tejidosSalon={joven:'#526c78',bohemio:'#a27054',alegre:'#6b8271',moderno:'#767d79',lujo:'#61747a',rustico:'#826b54',antiguo:'#80755d'};
-      const paletaPieza=kid==='vivienda_salon'&&(o.rol==='sofa'||p.obj==='puff')?{...paleta,tela:[p.obj==='puff'?'#a99a7e':tejidosSalon[prof.style]||'#767d79']}:paleta;
+      const tejidosDormitorio={rustico:'#5e7977',antiguo:'#6b7d86',bohemio:'#9a6953',joven:'#607c8c',alegre:'#788b69',moderno:'#72817a',lujo:'#697b85'};
+      const paletaPieza=kid==='vivienda_dormitorio'&&['cama','cama_doble'].includes(o.rol)?{...paleta,tela:[tejidosDormitorio[prof.style]||'#70817b']}:kid==='vivienda_salon'&&(o.rol==='sofa'||p.obj==='puff')?{...paleta,tela:[p.obj==='puff'?'#a99a7e':tejidosSalon[prof.style]||'#767d79']}:paleta;
       const it = { obj: p.obj, x: B.ox + hx, y, z: B.oz + hz, ry: p.ry, seed: prof.seed + rooms.indexOf(rm) * 97 + i, paleta:paletaPieza };
       if (deBotin.has(i)) {
         const g = construir([it],{domestico:true}); g.userData.objetoBotin=p.obj; B.extra.push(g);
@@ -1158,9 +1159,9 @@ export function buildVecino(seed, origin = INTERIOR_ORIGIN) {
       rm.along = along;
       continue;
     }
-    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio'&&rm.type!=='salon'&&rm.type!=='trofeos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
+    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio'&&rm.type!=='salon'&&rm.type!=='trofeos'&&rm.type!=='dorm'&&rm.type!=='dorm2')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
     const porKit = amueblarEstancia(rm);
-    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio'||rm.type==='salon'||rm.type==='trofeos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
+    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio'||rm.type==='salon'||rm.type==='trofeos'||rm.type==='dorm'||rm.type==='dorm2')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
     if (!porKit) switch (rm.type) {
       case 'salon':
         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }
