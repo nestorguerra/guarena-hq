@@ -1,0 +1,188 @@
+{
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=765c1590078779d4b5d318ed98f838a4f678f751",
+ "revision_esperada": "765c1590078779d4b5d318ed98f838a4f678f751",
+ "alcance": "paquete Pages: ocho vecinos, Annie, tres comercios y persistencia",
+ "errores": [],
+ "http_status": 200,
+ "revision_servida": "765c1590078779d4b5d318ed98f838a4f678f751",
+ "carga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ },
+ "entradas": [
+  {
+   "seed": 2786,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 177.2,
+   "habitaciones": 6,
+   "programaEstudio": null
+  },
+  {
+   "seed": 3244,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 119.2,
+   "habitaciones": 6,
+   "programaEstudio": {
+    "perfil": "artista",
+    "objetos": [
+     "vb_puesto_estudio_amplio",
+     "vb_silla_estudio",
+     "vb_guardado_estudio",
+     "vb_biblioteca_estudio",
+     "vb_ordenador",
+     "vb_panel_estudio_artista",
+     "vb_sillon_estudio",
+     "mesa_auxiliar_lectura",
+     "libro_tumbado",
+     "vb_consulta_baja_estudio",
+     "vb_consulta_estudio_artista",
+     "vb_consulta_estudio_artista",
+     "lb_cuadernos_rojos",
+     "cuadro_paisaje",
+     "vb_lampara_trabajo",
+     "vb_lampara_trabajo"
+    ]
+   }
+  },
+  {
+   "seed": 1594,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 115.9,
+   "habitaciones": 6,
+   "programaEstudio": {
+    "perfil": "estudiante",
+    "objetos": [
+     "vb_puesto_estudio_amplio",
+     "vb_silla_estudio",
+     "vb_guardado_estudio",
+     "vb_biblioteca_estudio",
+     "vb_ordenador",
+     "vb_panel_estudio_estudiante",
+     "vb_consulta_estudio_estudiante",
+     "vb_consulta_estudio_estudiante",
+     "lb_libros_cara_b",
+     "vb_cuaderno",
+     "poster_enmarcado",
+     "vb_lampara_trabajo",
+     "vb_lampara_trabajo"
+    ]
+   }
+  },
+  {
+   "seed": 1689,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 71,
+   "habitaciones": 7,
+   "programaEstudio": null
+  },
+  {
+   "seed": 2132,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 68.8,
+   "habitaciones": 7,
+   "programaEstudio": null
+  },
+  {
+   "seed": 1639,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 48.6,
+   "habitaciones": 4,
+   "programaEstudio": null
+  },
+  {
+   "seed": 5157,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 59,
+   "habitaciones": 7,
+   "programaEstudio": null
+  },
+  {
+   "seed": 3627,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 55.6,
+   "habitaciones": 5,
+   "programaEstudio": null
+  }
+ ],
+ "annie": {
+  "entrada_ms": 87.4,
+  "kits": 5,
+  "personalizadas": [
+   "dormitorio"
+  ],
+  "acciones": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.899999999999636
+   }
+  ],
+  "banco": 700,
+  "siesta": true
+ },
+ "comercios": [
+  {
+   "tipo": "bar",
+   "acciones": 1
+  },
+  {
+   "tipo": "cafeteria",
+   "acciones": 1
+  },
+  {
+   "tipo": "farmacia",
+   "acciones": 1
+  }
+ ],
+ "consola": [],
+ "revision_tras_recarga": "765c1590078779d4b5d318ed98f838a4f678f751",
+ "consola_tras_recarga": [],
+ "recarga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ }
+}
