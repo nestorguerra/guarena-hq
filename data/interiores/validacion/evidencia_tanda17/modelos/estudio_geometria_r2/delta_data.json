@@ -1,0 +1,30 @@
+{
+  "state": "PASS_DATA_ONLY_ORDER_DE_DELTA",
+  "catalogExactR1": true,
+  "receipt": [
+    {
+      "kit": "vivienda_estudio",
+      "oldPositions": {
+        "biblioteca": 11,
+        "bajo": 12
+      },
+      "newPositions": {
+        "bajo": 11,
+        "biblioteca": 12
+      },
+      "onlyOrderAndImmediateDeChanged": true
+    },
+    {
+      "kit": "vivienda_estudio_grey_amplio",
+      "oldPositions": {
+        "biblioteca": 11,
+        "bajo": 12
+      },
+      "newPositions": {
+        "bajo": 11,
+        "biblioteca": 12
+      },
+      "onlyOrderAndImmediateDeChanged": true
+    }
+  ]
+}

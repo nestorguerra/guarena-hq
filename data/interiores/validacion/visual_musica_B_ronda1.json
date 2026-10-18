@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_0f431ebbc471408bbfcc05324dbe9fc3",
+ "request_sha256": "2f28dffa3116f5e5bac18cef5cd353db1a1c4f328808dc249367d2465eb2c0ca",
+ "fecha": "2026-10-17T14:11:09.746767+00:00",
+ "kit": "musica",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_musica.jpg",
+ "ficha_sha256": "8d1adc7ff353cec8a2d6d1318afb0f943d644c4e01c68413e83b4c28e67d07a3",
+ "referencias": [
+  {
+   "titulo": "Music room-Interior of Schloss Sanssouci.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Music_room-Interior_of_Schloss_Sanssouci.jpg",
+   "autor": "Yair Haklai",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Music_room-Interior_of_Schloss_Sanssouci.jpg/960px-Music_room-Interior_of_Schloss_Sanssouci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Peles Castle Interior - New Music Room (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg/960px-Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.97,
+  "coherencia": 2.95,
+  "iluminacion": 3.47,
+  "variedad": 2.99,
+  "lectura_funcional": 2.14
+ },
+ "media": 2.904,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.97,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.21
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.57
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.18
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.61
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.95,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.14
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.77
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.81
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.47,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.48
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.42
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.05
+    }
+   ],
+   "confidence": 0.53
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.99,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.52
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.19
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.04
+    }
+   ],
+   "confidence": 0.54
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.14,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.26
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.41
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.28
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.45
+  }
+ ],
+ "uso": {
+  "input_tokens": 3940,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 3940
+ }
+}

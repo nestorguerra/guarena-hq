@@ -1,0 +1,24 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -860,8 +860,19 @@
+         if([4007,5045].includes(seed)){
+           exigir(Math.abs(Math.sin(m.ry))<EPS,seed+': cambió el eje de la sección estrecha');
+           const norte=Math.cos(m.ry)<0,d=norte?c.v.cz-c.v.hd:e.D-c.v.cz-c.v.hd;
+-          const paso={cx:c.v.cx,cz:norte?d/2:e.D-d/2,hw:.4,hd:d/2,a:0,y0:.08,y1:1.2};
+-          exigir(d>=.8-EPS&&!C.some(p=>p!==c&&p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>=.3&&partes(p).some(q=>penetra(paso,q)>EPS)),seed+': sección física de paso0,8 invadida');
++          // Conservar una sección de .8 x .8 junto a la silla, sin exigir
++          // que también quede vacío el fondo sobrante hasta la pared opuesta.
++          const paso={cx:c.v.cx,cz:norte?d-.4:e.D-d+.4,hw:.4,hd:.4,a:0,y0:.08,y1:1.2};
++          const librePaso=lista=>!lista.some(p=>p!==c&&p.sop==null&&!['pared','techo'].includes(p.regla)&&caja(p.obj).h>=.3&&partes(p).some(q=>penetra(paso,q)>EPS));
++          exigir(d>=.8-EPS&&librePaso(C),seed+': sección física de paso0,8 invadida');
++          const banco=C.find(p=>p.obj==='vb_banco_lectura_ninos');
++          if(banco){
++            const frente=p=>{const extremos=partes(p).map(q=>q.cz+(norte?1:-1)*(Math.abs(Math.cos(q.a))*q.hd+Math.abs(Math.sin(q.a))*q.hw));return norte?Math.max(...extremos):Math.min(...extremos);};
++            const hueco=p=>norte?d-frente(p):frente(p)-(e.D-d);
++            exigir(hueco(banco)>=.8-EPS,seed+': banco reduce el paso por debajo de0,8');
++            const avance=hueco(banco)-.79,adelantado={...banco,z:banco.z+(norte?avance:-avance)};
++            exigir(hueco(adelantado)<.8-EPS&&!librePaso(C.map(p=>p===banco?adelantado:p)),seed+': negativo de hueco0,79 no detectado');
++          }
+         }
+         exigir(e.ancho>=.8&&!revisarUso(h).errores.length,seed+': pierde paso o acceso');
+         const it=h.inter.find(i=>i.sala===e.sala&&i.type==='hide');exigir(it&&h.inter.some(i=>i.sala===e.sala&&i.type==='read'),seed+': pierde ocultación o lectura');

@@ -1,0 +1,55 @@
+{
+  "scope": "Exact final effective attempt only; reproduction of the two existing junto_a positions, no altered recipe or pose search.",
+  "slots": [
+    {
+      "side": "derecha",
+      "p": {
+        "obj": "t17_biblioteca",
+        "x": 0.12999995231628447,
+        "z": 2.6199999982118607,
+        "y": 0,
+        "ry": 3.141592653589793
+      },
+      "bounds": {
+        "x0": -0.3700000476837155,
+        "x1": 0.6299999523162845,
+        "z0": 2.4499999982118608,
+        "z1": 2.7899999982118606
+      },
+      "outside": false,
+      "collisions": [
+        {
+          "obj": "t17_mesa_amplio",
+          "depth": 0.07749997615814208
+        },
+        {
+          "obj": "vb_ordenador",
+          "depth": 0.08350001013278975
+        },
+        {
+          "obj": "poster_enmarcado",
+          "depth": 0.010999998044222664
+        }
+      ]
+    },
+    {
+      "side": "izquierda",
+      "p": {
+        "obj": "t17_biblioteca",
+        "x": 2.1099999284744264,
+        "z": 2.6199999982118607,
+        "y": 0,
+        "ry": 3.141592653589793
+      },
+      "bounds": {
+        "x0": 1.6099999284744264,
+        "x1": 2.6099999284744264,
+        "z0": 2.4499999982118608,
+        "z1": 2.7899999982118606
+      },
+      "outside": true,
+      "collisions": []
+    }
+  ],
+  "rule": "Only derecha/izquierda preserve ref.ry; si_no:false prevents another wall. buscar_refs finds the sole low cabinet. No corner bend exists in these rules."
+}

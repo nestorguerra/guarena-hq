@@ -1,0 +1,40 @@
+{
+  "state": "PASS",
+  "scope": "CPU dirigido: un amueblar real de3244 y fixture9x9 de giro con piezas reales; noGPU ni barrido.",
+  "sourceHashes": {
+    "helper": "c28598fe5154a4405795977f973e00ae5778cc4a2618c7343eeea7e12f2016c3",
+    "locales": "65448df1c41c24221f6915519d08be14cd336cafdd004e4767d8ec5ac9417e76"
+  },
+  "rng": {
+    "seed": 424969,
+    "admitted": "biblioteca_actual",
+    "next12Equal": true,
+    "KIdentity": true,
+    "guardiasEqual": true,
+    "indicesEqual": true
+  },
+  "exception": {
+    "literalCallback": true,
+    "temporaryPSeen": true,
+    "PAndReferencesRestored": true,
+    "guardiasRestored": true
+  },
+  "rotation": {
+    "wall": "E",
+    "quarterTurn": true,
+    "relativeBefore": [
+      -0.48221230797469605,
+      5.551115123125783e-17,
+      0.04,
+      0
+    ],
+    "relativeAfter": [
+      -0.48221230797469605,
+      -2.9526987973533464e-17,
+      0.04,
+      0
+    ],
+    "indicesPreserved": true,
+    "originalUnmutated": true
+  }
+}

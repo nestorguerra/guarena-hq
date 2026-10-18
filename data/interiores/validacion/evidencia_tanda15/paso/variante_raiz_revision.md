@@ -1,0 +1,2 @@
+Aceptada estáticamente, sin P1/P2: `paso_t17_raiz.patch` SHA `253176aac731d78a06a9804513b1cd5ef142126bec8633abdcd2b8986c230ecc` conserva sección .8×.8 y d>=.8; sólo calcula el avance del clon para obtener un hueco negativo de .79 m, sin mover el producto.
+CPU del bloque exacto en 4007/5045 PASS: caso actual válido, banco +4 cm rechazado, datos intactos; un hueco hipotético .03 m mayor reproduce el falso fallo del negativo fijo y pasa con el adaptativo. Recibo `variante_raiz_cpu.json`; sin GPU ni repetición de barridos. El PASS de navegador sigue pendiente de raíz.

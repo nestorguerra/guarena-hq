@@ -1,0 +1,532 @@
+{
+  "candidateSHA": "6881d0b2f2d528552a0480ccc43188c8a4071ea73364418df387f077ebb69cae",
+  "scope": "exact candidate helpers and final guard blocks; real StaticCollider, caja, Three geometry/camera; renderer is an explicit CPU stub; no browser/GPU or house screenshots",
+  "cases": [
+    {
+      "name": "cancelled displacement with positive depth",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": -0.13999999701976779,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": true,
+        "depth": 0.27999999403953557,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "small penetration previously accepted and silently moved",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": 0.32,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0.020000000000000018,
+        "contact": true,
+        "depth": 0.020000000000000018,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "inside rotated bed OBB with no border contact",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [
+          {
+            "room": "ninos",
+            "obj": "vb_cama_ninos",
+            "local": [
+              0,
+              0
+            ],
+            "bounds": [
+              -0.42500001192092896,
+              -0.9104999899864197,
+              0.42500001192092896,
+              0.9100000262260437
+            ]
+          }
+        ],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "exact live circular prop centre",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [
+          0
+        ],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "front of real bed is free",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 1.8,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "outside real usable room bounds",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": 2.8,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": false,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "usable bounds border is accepted",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 2.66,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "furniture on another floor excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "supported object excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "wall object excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "ceiling object excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "catalogue PICKUP class excluded without p.clase",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "low floor object excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "inactive circular prop excluded",
+      "pass": true,
+      "expectedFree": true,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": true,
+        "position": {
+          "x": 0,
+          "z": 0
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": -2.66,
+          "x1": 2.66,
+          "z0": -1.66,
+          "z1": 3.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    },
+    {
+      "name": "nonzero origin and upper floor OBB",
+      "pass": true,
+      "expectedFree": false,
+      "pointUnchanged": true,
+      "oldDeltaOnlyAccepted": true,
+      "result": {
+        "free": false,
+        "position": {
+          "x": 10,
+          "z": 20
+        },
+        "radius": 0.34,
+        "tolerance": 0.000001,
+        "bounds": {
+          "x0": 7.34,
+          "x1": 12.66,
+          "z0": 18.34,
+          "z1": 23.66
+        },
+        "inBounds": true,
+        "delta": 0,
+        "contact": false,
+        "depth": 0,
+        "insideFloorFurniture": [
+          {
+            "room": "ninos",
+            "obj": "vb_cama_ninos",
+            "local": [
+              0,
+              0
+            ],
+            "bounds": [
+              -0.42500001192092896,
+              -0.9104999899864197,
+              0.42500001192092896,
+              0.9100000262260437
+            ]
+          }
+        ],
+        "circleCentres": [],
+        "testedOnlyOnClone": true,
+        "cameraMoved": false
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "name": "remove penetration guard",
+      "negativeLost": true
+    },
+    {
+      "name": "remove OBB guard",
+      "negativeLost": true
+    },
+    {
+      "name": "remove circle guard",
+      "negativeLost": true
+    },
+    {
+      "name": "remove bounds guard",
+      "negativeLost": true
+    }
+  ],
+  "finalCases": [
+    {
+      "name": "normal",
+      "pass": true,
+      "renderCalls": 1,
+      "error": null
+    },
+    {
+      "name": "occupied before",
+      "pass": true,
+      "renderCalls": 0,
+      "error": "cámara ocupada ninos/5045/1 antes de render: {\"free\":false,\"position\":{\"x\":0,\"z\":0},\"radius\":0.34,\"tolerance\":0.000001,\"bounds\":{\"x0\":-2.66,\"x1\":2.66,\"z0\":-1.66,\"z1\":3.66},\"inBounds\":true,\"delta\":0,\"contact\":false,\"depth\":0,\"insideFloorFurniture\":[],\"circleCentres\":[0],\"testedOnlyOnClone\":true,\"cameraMoved\":false}"
+    },
+    {
+      "name": "occupied after",
+      "pass": true,
+      "renderCalls": 1,
+      "error": "cámara ocupada ninos/5045/1 después de render: {\"free\":false,\"position\":{\"x\":0,\"z\":0},\"radius\":0.34,\"tolerance\":0.000001,\"bounds\":{\"x0\":-2.66,\"x1\":2.66,\"z0\":-1.66,\"z1\":3.66},\"inBounds\":true,\"delta\":0,\"contact\":false,\"depth\":0,\"insideFloorFurniture\":[],\"circleCentres\":[0],\"testedOnlyOnClone\":true,\"cameraMoved\":false}"
+    },
+    {
+      "name": "render moves free camera",
+      "pass": true,
+      "renderCalls": 1,
+      "error": "render cambió la pose de cámara: ninos/5045/1"
+    }
+  ]
+}

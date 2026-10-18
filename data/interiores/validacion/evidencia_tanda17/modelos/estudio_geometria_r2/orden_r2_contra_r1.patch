@@ -1,0 +1,72 @@
+--- a/data/kits/vivienda_estudio.json
++++ b/data/kits/vivienda_estudio.json
+@@ -283,9 +283,35 @@
+   {
+    "zona": "estancia",
+    "regla": "junto_a",
++   "obj": "t17_guardado_bajo",
++   "de": [
++    "t17_mesa_amplio"
++   ],
++   "cantidad": [
++    1,
++    1
++   ],
++   "obligatorio": true,
++   "preferir": true,
++   "buscar_refs": true,
++   "si_no": false,
++   "grupo_pared": "trabajo_consulta",
++   "espacio_frontal": [
++    0.7,
++    0.8
++   ],
++   "perfil": [
++    "artista",
++    "estudiante",
++    "musico"
++   ]
++  },
++  {
++   "zona": "estancia",
++   "regla": "junto_a",
+    "obj": "t17_biblioteca",
+    "de": [
+-    "t17_mesa_amplio"
++    "t17_guardado_bajo"
+    ],
+    "cantidad": [
+     1,
+@@ -298,32 +324,6 @@
+    "grupo_pared": "trabajo_consulta",
+    "espacio_frontal": [
+     0.75,
+-    0.8
+-   ],
+-   "perfil": [
+-    "artista",
+-    "estudiante",
+-    "musico"
+-   ]
+-  },
+-  {
+-   "zona": "estancia",
+-   "regla": "junto_a",
+-   "obj": "t17_guardado_bajo",
+-   "de": [
+-    "t17_biblioteca"
+-   ],
+-   "cantidad": [
+-    1,
+-    1
+-   ],
+-   "obligatorio": true,
+-   "preferir": true,
+-   "buscar_refs": true,
+-   "si_no": false,
+-   "grupo_pared": "trabajo_consulta",
+-   "espacio_frontal": [
+-    0.7,
+     0.8
+    ],
+    "perfil": [

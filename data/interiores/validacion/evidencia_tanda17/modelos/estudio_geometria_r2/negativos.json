@@ -1,0 +1,188 @@
+{
+  "state": "PASS_NEGATIVES_FAIL_HONESTLY",
+  "rows": [
+    {
+      "name": "recinto_entero_reservado",
+      "seed": 3244,
+      "errors": [
+        "obligatorio: estancia/t17_mesa_amplio — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/t17_guardado_bajo — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/t17_biblioteca — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_ordenador — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/t17_consulta_artista — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/cuadro_paisaje… — 0 colocados, el kit pide 1"
+      ],
+      "frame": [
+        5.469253534451127,
+        3.3143072992563254,
+        2.75
+      ],
+      "attempts": {
+        "semillaSolicitada": 425071,
+        "semillaEfectiva": 1577090,
+        "intento": 11,
+        "maximo": 12,
+        "agotado": true,
+        "marco": {
+          "W": 5.469253534451127,
+          "D": 3.3143072992563254,
+          "H": 2.75,
+          "puertaX": -0.75
+        },
+        "intentos": [
+          {
+            "seed": 425071,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 529800,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 634529,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 739258,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 843987,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 948716,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1053445,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1158174,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1262903,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1367632,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1472361,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          },
+          {
+            "seed": 1577090,
+            "faltan": [
+              10,
+              11,
+              12,
+              13,
+              18,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "libro_4cm_sobre_mesita",
+      "errors": [
+        "flotando: libro_tumbado (estancia) a 4.0 cm de su apoyo"
+      ]
+    },
+    {
+      "name": "guardado_bloquea_uso_biblioteca",
+      "errors": [
+        "uso frontal: t17_biblioteca sin 0.75 × 0.8 m libres"
+      ]
+    },
+    {
+      "name": "puesto_sin_silla",
+      "errors": [
+        "asiento: entrada 10 sin una silla frontal vinculada al puesto 0",
+        "asiento: entrada 10 con auxiliares sin correspondencia"
+      ]
+    }
+  ]
+}

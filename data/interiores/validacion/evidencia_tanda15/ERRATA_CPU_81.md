@@ -1,0 +1,7 @@
+El PASS81 de la simulación CPU inicial del autor NO acredita los 81 montajes buildLocal con marco fijo: su wrapper recalculaba W/D al reintentar. Los recibos se conservan con esta limitación. Las 31 casas reales sí usaban marcos explícitos y su evidencia no se amplía a las sintéticas. El navegador posterior detectó29/51/63sin alfombra; su FAIL y reproducción exacta están preservados. La corrección del dominio de búsqueda y de los reintentos con marco fijo queda pendiente al preparar esta carpeta. No se declara publicación ni gate verde por los recibos históricos.
+
+Actualización posterior: la corrección y revisión independientes están en fix_laboratorio/. El nuevo recibo CPU usa buildLocal literal y dimensiones fijas:81montajes completos,78antesválidos idénticos;31construcciones por semilla idénticas y39otroskits sólosemilla1. El gate real de navegador se ejecuta de nuevo; su resultado final se incorpora por separado, sin recodificar los FAIL históricos.
+
+Cierre 18 de octubre: el navegador real final pasa los 81 montajes literales con marco fijo y los 66 contratos. También pasan 200 casas/1166 habitaciones, los 40 kits en cinco semillas y las integraciones fuente/paquete. Son nuevas ejecuciones sobre el candidato congelado; los FAIL anteriores no se sustituyen. Recibos en gates_finales/. CI y publicación aún pendientes.
+
+Precisión de alcance: 31 construcciones por semilla no acreditan 31 casas del inventario público; 1296 es una fixture sintética conocida.

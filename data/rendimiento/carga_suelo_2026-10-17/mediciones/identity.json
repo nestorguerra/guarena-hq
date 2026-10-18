@@ -1,0 +1,29 @@
+{
+ "source_commit": "f667142e230a7f52d746f4b69901b1fdfe429bf2",
+ "patch_sha256": "51de064c0f0693ce23bb36b7b9778dfcd789ca5a4b4e52f4c186edbfe9cb51dd",
+ "summary": {
+  "rounds": 3,
+  "adaptive": false,
+  "load_network_mbps": 12.0,
+  "control_ms": {
+   "before": 49859,
+   "after": 36921.5
+  },
+  "control_ms_range": {
+   "before": [
+    49519.39999997616,
+    51492.19999998808
+   ],
+   "after": [
+    36321.19999998808,
+    39171.60000002384
+   ]
+  },
+  "load_reduction_percent": 25.948173850257728,
+  "ready_method": "normal_intro_no_fast_forward",
+  "load_25_percent": true
+ },
+ "baseline_html_sha256": "f1ea98026a24a5624d7f74d7282b1dd8754fe5bac210fe0666afc1d068e1edff",
+ "candidate_html_sha256": "f89a2eb725cfa8b59c23e168b23d864efda7cd21502a3dcd85639b6890dbcf56",
+ "scope": "Mediana de carga fría completa en M1; Plastilina, alta manual, DPR 1.5, 12 Mbps/40 ms. Resultado acumulado frente a base original. No confirma Internet/otros dispositivos ni render idéntico."
+}

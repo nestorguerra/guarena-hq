@@ -1,0 +1,3050 @@
+{
+ "alcance": "pueblo",
+ "exigencia": {
+  "exigirTodas": true
+ },
+ "casas": 22,
+ "habitables": 132,
+ "pendientes": 0,
+ "errores": 1,
+ "resultados": [
+  {
+   "seed": 2786,
+   "perfil": "matrimonio",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 40310,
+   "mallas": 55,
+   "luces": 7,
+   "montaje_ms": 123,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 37,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.197475674234738,
+       "color": "#ffc890",
+       "intensidad": 9.18210132459032,
+       "alcance": 10.462881557294363
+      }
+     ],
+     "luz": {
+      "estancia": 0.115
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 11,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5152143719606102,
+       "color": "#ffc890",
+       "intensidad": 7.626288323675643,
+       "alcance": 8.752447705507755
+      }
+     ],
+     "luz": {
+      "estancia": 0.143
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 8,
+     "distintos": 8,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3517476285105658,
+       "color": "#ffc890",
+       "intensidad": 7.253522517044169,
+       "alcance": 8.290395839316604
+      }
+     ],
+     "luz": {
+      "estancia": 0.148
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 17,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.8132458430009137,
+       "color": "#ffc890",
+       "intensidad": 8.305912443907614,
+       "alcance": 9.53742105485274
+      }
+     ],
+     "luz": {
+      "estancia": 0.136
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 11,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 0.989350473122613,
+       "color": "#ffc890",
+       "intensidad": 6.427120368827894,
+       "alcance": 7.1605110007239885
+      }
+     ],
+     "luz": {
+      "estancia": 0.154
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 55,
+     "distintos": 43,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.2618413585823873,
+       "color": "#ffc890",
+       "intensidad": 9.328879352574623,
+       "alcance": 10.610022446872529
+      }
+     ],
+     "luz": {
+      "estancia": 0.112
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 3244,
+   "perfil": "artista",
+   "estilo": "bohemio",
+   "plano": "dosPlantas",
+   "triangulos": 54662,
+   "mallas": 57,
+   "luces": 8,
+   "montaje_ms": 169.6,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "salon",
+     "kit": "vivienda_salon",
+     "objetos": 48,
+     "distintos": 31,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.118161401804173,
+       "color": "#ffd8a8",
+       "intensidad": 11,
+       "alcance": 15.323774991571076
+      }
+     ],
+     "luz": {
+      "estancia": 0.042
+     },
+     "errores": 0
+    },
+    {
+     "sala": "cocina",
+     "kit": "vivienda_cocina",
+     "objetos": 29,
+     "distintos": 26,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.0142921897768247,
+       "color": "#ffd8a8",
+       "intensidad": 11,
+       "alcance": 12.598743957083785
+      }
+     ],
+     "luz": {
+      "estancia": 0.086
+     },
+     "errores": 0
+    },
+    {
+     "sala": "bano",
+     "kit": "vivienda_bano",
+     "objetos": 14,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.317861459852793,
+       "color": "#ffd8a8",
+       "intensidad": 9.009178676012784,
+       "alcance": 10.286831364942758
+      }
+     ],
+     "luz": {
+      "estancia": 0.091
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A0",
+     "kit": "vivienda_dormitorio",
+     "objetos": 22,
+     "distintos": 19,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 2.7181614018045366,
+       "color": "#ffd8a8",
+       "intensidad": 11,
+       "alcance": 17.29332428030443
+      }
+     ],
+     "luz": {
+      "estancia": 0.032
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A1",
+     "kit": "vivienda_pintura",
+     "objetos": 20,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.0749999999989086,
+       "color": "#ffd8a8",
+       "intensidad": 8.135770601356029,
+       "alcance": 9.347093342512748
+      }
+     ],
+     "luz": {
+      "estancia": 0.087
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A2",
+     "kit": "vivienda_estudio",
+     "objetos": 16,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.6571536496285262,
+       "color": "#ffd8a8",
+       "intensidad": 10.229382731446702,
+       "alcance": 11.47151734522559
+      }
+     ],
+     "luz": {
+      "estancia": 0.09
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 1594,
+   "perfil": "estudiante",
+   "estilo": "joven",
+   "plano": "dosPlantas",
+   "triangulos": 62812,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 109,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "salon",
+     "kit": "vivienda_salon",
+     "objetos": 46,
+     "distintos": 31,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9213253252200957,
+       "color": "#e8f0ff",
+       "intensidad": 11,
+       "alcance": 13.558367035438524
+      }
+     ],
+     "luz": {
+      "estancia": 0.062
+     },
+     "errores": 0
+    },
+    {
+     "sala": "cocina",
+     "kit": "vivienda_cocina",
+     "objetos": 13,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.0899535279440897,
+       "color": "#e8f0ff",
+       "intensidad": 10.250218009686801,
+       "alcance": 11.490685595500107
+      }
+     ],
+     "luz": {
+      "estancia": 0.105
+     },
+     "errores": 0
+    },
+    {
+     "sala": "bano",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.368302351962484,
+       "color": "#e8f0ff",
+       "intensidad": 8.166812006457867,
+       "alcance": 9.38210550124131
+      }
+     ],
+     "luz": {
+      "estancia": 0.12
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A0",
+     "kit": "vivienda_joven",
+     "objetos": 48,
+     "distintos": 39,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 2.5213253252204595,
+       "color": "#e8f0ff",
+       "intensidad": 11,
+       "alcance": 15.4621998798839
+      }
+     ],
+     "luz": {
+      "estancia": 0.047
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A1",
+     "kit": "vivienda_estudio",
+     "objetos": 13,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.0750000000007276,
+       "color": "#e8f0ff",
+       "intensidad": 7.320048499131203,
+       "alcance": 8.374725341415482
+      }
+     ],
+     "luz": {
+      "estancia": 0.123
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A2",
+     "kit": "vivienda_trastero",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.7832558799054823,
+       "color": "#e8f0ff",
+       "intensidad": 9.364782300075447,
+       "alcance": 10.645704583966898
+      }
+     ],
+     "luz": {
+      "estancia": 0.112
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 1689,
+   "perfil": "agricultor",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 45038,
+   "mallas": 58,
+   "luces": 8,
+   "montaje_ms": 74.1,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 29,
+     "distintos": 25,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8622842173081153,
+       "color": "#ffc890",
+       "intensidad": 9.039194044810024,
+       "alcance": 10.317605061089116
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8435794754877861,
+       "color": "#ffc890",
+       "intensidad": 8.990539942974895,
+       "alcance": 10.267675311157083
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.2873081557227124,
+       "color": "#ffc890",
+       "intensidad": 10.144751030313264,
+       "alcance": 11.393325480972083
+      }
+     ],
+     "luz": {
+      "estancia": 0.106
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_despensa",
+     "objetos": 39,
+     "distintos": 30,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8973130546037282,
+       "color": "#ffc890",
+       "intensidad": 9.130309796808461,
+       "alcance": 10.410465621555012
+      }
+     ],
+     "luz": {
+      "estancia": 0.12
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.142941517777217,
+       "color": "#ffc890",
+       "intensidad": 7.168065681060353,
+       "alcance": 8.180793819208498
+      }
+     ],
+     "luz": {
+      "estancia": 0.135
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_taller",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3853443996995338,
+       "color": "#ffc890",
+       "intensidad": 7.798595341137636,
+       "alcance": 8.957975585004268
+      }
+     ],
+     "luz": {
+      "estancia": 0.133
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_dormitorio",
+     "objetos": 14,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.492572876439226,
+       "color": "#ffc890",
+       "intensidad": 8.07751419909173,
+       "alcance": 9.281028361976533
+      }
+     ],
+     "luz": {
+      "estancia": 0.13
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 2132,
+   "perfil": "cazador",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 47844,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 90.7,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 50,
+     "distintos": 34,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.1081788441624667,
+       "color": "#ffc890",
+       "intensidad": 10.139346989265206,
+       "alcance": 11.388314412072907
+      }
+     ],
+     "luz": {
+      "estancia": 0.108
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5466736537855468,
+       "color": "#ffc890",
+       "intensidad": 8.560330588840992,
+       "alcance": 9.815140533342657
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 13,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.150096138846493,
+       "color": "#ffc890",
+       "intensidad": 10.257223185069243,
+       "alcance": 11.497123109047227
+      }
+     ],
+     "luz": {
+      "estancia": 0.106
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_trofeos",
+     "objetos": 24,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6890009643502708,
+       "color": "#ffc890",
+       "intensidad": 8.960571159116492,
+       "alcance": 10.236799584652223
+      }
+     ],
+     "luz": {
+      "estancia": 0.118
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 14,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.1509767388561158,
+       "color": "#ffc890",
+       "intensidad": 7.447585900136991,
+       "alcance": 8.53406422171722
+      }
+     ],
+     "luz": {
+      "estancia": 0.119
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 37,
+     "distintos": 28,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3665976330648846,
+       "color": "#ffc890",
+       "intensidad": 8.05393635612771,
+       "alcance": 9.254156121613567
+      }
+     ],
+     "luz": {
+      "estancia": 0.123
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5233733005243266,
+       "color": "#ffc890",
+       "intensidad": 8.494807347794248,
+       "alcance": 9.744373003028645
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 1639,
+   "perfil": "musico",
+   "estilo": "bohemio",
+   "plano": "lateral",
+   "triangulos": 33066,
+   "mallas": 48,
+   "luces": 5,
+   "montaje_ms": 55.5,
+   "cobertura": {
+    "habitables": 4,
+    "porKit": 4,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "R0",
+     "kit": "vivienda_salon",
+     "objetos": 36,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.0084377535149542,
+       "color": "#ffd8a8",
+       "intensidad": 10.558624932877263,
+       "alcance": 11.770766827485463
+      }
+     ],
+     "luz": {
+      "estancia": 0.1
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5657964602123684,
+       "color": "#ffd8a8",
+       "intensidad": 9.165198026944228,
+       "alcance": 10.445803383138935
+      }
+     ],
+     "luz": {
+      "estancia": 0.105
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_bano",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 0.9889294824097306,
+       "color": "#ffd8a8",
+       "intensidad": 7.349231057362788,
+       "alcance": 8.41145089070779
+      }
+     ],
+     "luz": {
+      "estancia": 0.102
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.760823292472196,
+       "color": "#ffd8a8",
+       "intensidad": 9.779139020613737,
+       "alcance": 11.049176974348143
+      }
+     ],
+     "luz": {
+      "estancia": 0.1
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 5157,
+   "perfil": "matrimonio",
+   "estilo": "antiguo",
+   "plano": "pasillo",
+   "triangulos": 43064,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 61.9,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 31,
+     "distintos": 27,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.734004695479598,
+       "color": "#ffd2a0",
+       "intensidad": 8.871872459984495,
+       "alcance": 10.144865978275538
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8956394696615462,
+       "color": "#ffd2a0",
+       "intensidad": 9.307174815401952,
+       "alcance": 10.588393078053262
+      }
+     ],
+     "luz": {
+      "estancia": 0.117
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 13,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6936560492740682,
+       "color": "#ffd2a0",
+       "intensidad": 8.763208586005561,
+       "alcance": 10.031090737271171
+      }
+     ],
+     "luz": {
+      "estancia": 0.123
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 17,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.4617987505152996,
+       "color": "#ffd2a0",
+       "intensidad": 8.138788322596445,
+       "alcance": 9.350502837540338
+      }
+     ],
+     "luz": {
+      "estancia": 0.126
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.1575375118627562,
+       "color": "#ffd2a0",
+       "intensidad": 7.319375331059312,
+       "alcance": 8.373876274977317
+      }
+     ],
+     "luz": {
+      "estancia": 0.126
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 39,
+     "distintos": 33,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.1793185468777665,
+       "color": "#ffd2a0",
+       "intensidad": 7.3780343411163365,
+       "alcance": 8.447542569060106
+      }
+     ],
+     "luz": {
+      "estancia": 0.128
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_dormitorio",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.4496454051586625,
+       "color": "#ffd2a0",
+       "intensidad": 8.106057866619913,
+       "alcance": 9.313456524424522
+      }
+     ],
+     "luz": {
+      "estancia": 0.127
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 3627,
+   "perfil": "agricultor",
+   "estilo": "antiguo",
+   "plano": "lateral",
+   "triangulos": 40672,
+   "mallas": 53,
+   "luces": 6,
+   "montaje_ms": 62.5,
+   "cobertura": {
+    "habitables": 5,
+    "porKit": 5,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "R0",
+     "kit": "vivienda_salon",
+     "objetos": 31,
+     "distintos": 26,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8831721266142267,
+       "color": "#ffd2a0",
+       "intensidad": 10.159166077118162,
+       "alcance": 11.40668152352476
+      }
+     ],
+     "luz": {
+      "estancia": 0.102
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.670311374029552,
+       "color": "#ffd2a0",
+       "intensidad": 9.489641315405173,
+       "alcance": 10.768875186756242
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_bano",
+     "objetos": 14,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0508249604154116,
+       "color": "#ffd2a0",
+       "intensidad": 7.541130430113753,
+       "alcance": 8.649068177332923
+      }
+     ],
+     "luz": {
+      "estancia": 0.103
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_despensa",
+     "objetos": 50,
+     "distintos": 43,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.4488176199156442,
+       "color": "#ffd2a0",
+       "intensidad": 8.792962612798906,
+       "alcance": 10.062372244922015
+      }
+     ],
+     "luz": {
+      "estancia": 0.106
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R4",
+     "kit": "vivienda_cocina",
+     "objetos": 33,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.735662465542191,
+       "color": "#ffd2a0",
+       "intensidad": 9.69519435156057,
+       "alcance": 10.96863622683864
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 2606,
+   "perfil": "abuela",
+   "estilo": "antiguo",
+   "plano": "pasillo",
+   "triangulos": 49486,
+   "mallas": 60,
+   "luces": 8,
+   "montaje_ms": 78.7,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 35,
+     "distintos": 25,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.14928141143173,
+       "color": "#ffd2a0",
+       "intensidad": 9.799131424871952,
+       "alcance": 11.068272283894176
+      }
+     ],
+     "luz": {
+      "estancia": 0.111
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 10,
+     "distintos": 9,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.469010735721895,
+       "color": "#ffd2a0",
+       "intensidad": 8.025534328456729,
+       "alcance": 9.221681662725535
+      }
+     ],
+     "luz": {
+      "estancia": 0.127
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 30,
+     "distintos": 23,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8229996928257606,
+       "color": "#ffd2a0",
+       "intensidad": 8.948451938899224,
+       "alcance": 10.224287124745965
+      }
+     ],
+     "luz": {
+      "estancia": 0.122
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 20,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.7314673721084546,
+       "color": "#ffd2a0",
+       "intensidad": 8.709809492523267,
+       "alcance": 9.974704282812299
+      }
+     ],
+     "luz": {
+      "estancia": 0.127
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.2049939963253564,
+       "color": "#ffd2a0",
+       "intensidad": 7.33719167439712,
+       "alcance": 8.396319081695214
+      }
+     ],
+     "luz": {
+      "estancia": 0.134
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_costura",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3921266230754554,
+       "color": "#ffd2a0",
+       "intensidad": 7.825082590905912,
+       "alcance": 8.989152892953118
+      }
+     ],
+     "luz": {
+      "estancia": 0.132
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_despensa",
+     "objetos": 38,
+     "distintos": 31,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0377038484657533,
+       "color": "#ffd2a0",
+       "intensidad": 6.901033934401604,
+       "alcance": 7.828431635023319
+      }
+     ],
+     "luz": {
+      "estancia": 0.134
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 4007,
+   "perfil": "familia",
+   "estilo": "alegre",
+   "plano": "dosPlantas",
+   "triangulos": 47778,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 84,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "salon",
+     "kit": "vivienda_salon",
+     "objetos": 46,
+     "distintos": 30,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7667191050004476,
+       "color": "#ffe8c0",
+       "intensidad": 11,
+       "alcance": 13.273873760698065
+      }
+     ],
+     "luz": {
+      "estancia": 0.059
+     },
+     "errores": 0
+    },
+    {
+     "sala": "cocina",
+     "kit": "vivienda_cocina",
+     "objetos": 40,
+     "distintos": 32,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.00929955160791,
+       "color": "#ffe8c0",
+       "intensidad": 10.371115453755245,
+       "alcance": 11.601285013332772
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    },
+    {
+     "sala": "bano",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3145330344050308,
+       "color": "#ffe8c0",
+       "intensidad": 8.247410302503496,
+       "alcance": 9.472409547754276
+      }
+     ],
+     "luz": {
+      "estancia": 0.112
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A0",
+     "kit": "vivienda_dormitorio",
+     "objetos": 23,
+     "distintos": 19,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 2.3667191050008114,
+       "color": "#ffe8c0",
+       "intensidad": 11,
+       "alcance": 15.283887666621592
+      }
+     ],
+     "luz": {
+      "estancia": 0.045
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A1",
+     "kit": "vivienda_ninos",
+     "objetos": 18,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.0749999999989086,
+       "color": "#ffe8c0",
+       "intensidad": 7.51522542245388,
+       "alcance": 8.61737413887422
+      }
+     ],
+     "luz": {
+      "estancia": 0.113
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A2",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.6488325860118493,
+       "color": "#ffe8c0",
+       "intensidad": 9.269269678611536,
+       "alcance": 10.55051287666475
+      }
+     ],
+     "luz": {
+      "estancia": 0.11
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 4204,
+   "perfil": "cazador",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 42976,
+   "mallas": 61,
+   "luces": 9,
+   "montaje_ms": 86.1,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 39,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8896752981454483,
+       "color": "#ffc890",
+       "intensidad": 9.5041492300288,
+       "alcance": 10.783095681869767
+      }
+     ],
+     "luz": {
+      "estancia": 0.114
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8663629998463875,
+       "color": "#ffc890",
+       "intensidad": 9.438838504705373,
+       "alcance": 10.718930143064698
+      }
+     ],
+     "luz": {
+      "estancia": 0.115
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6334862885069015,
+       "color": "#ffc890",
+       "intensidad": 8.78642119553685,
+       "alcance": 10.055503356655796
+      }
+     ],
+     "luz": {
+      "estancia": 0.12
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_trofeos",
+     "objetos": 23,
+     "distintos": 19,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8914273998925637,
+       "color": "#ffc890",
+       "intensidad": 9.50905784240226,
+       "alcance": 10.787902804565295
+      }
+     ],
+     "luz": {
+      "estancia": 0.114
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0918704262221581,
+       "color": "#ffc890",
+       "intensidad": 7.269053651817147,
+       "alcance": 8.310159950003204
+      }
+     ],
+     "luz": {
+      "estancia": 0.124
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 43,
+     "distintos": 33,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3237822353839874,
+       "color": "#ffc890",
+       "intensidad": 7.918767732830251,
+       "alcance": 9.098569577468705
+      }
+     ],
+     "luz": {
+      "estancia": 0.124
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_dormitorio",
+     "objetos": 8,
+     "distintos": 7,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0074445249974815,
+       "color": "#ffc890",
+       "intensidad": 7.032529703221366,
+       "alcance": 8.00388593000621
+      }
+     ],
+     "luz": {
+      "estancia": 0.123
+     },
+     "errores": 0
+    }
+   ],
+   "errores": [
+    "rendimiento: 61 mallas > 60"
+   ]
+  },
+  {
+   "seed": 2268,
+   "perfil": "matrimonio",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 39582,
+   "mallas": 55,
+   "luces": 7,
+   "montaje_ms": 60.2,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 39,
+     "distintos": 25,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7584801461071038,
+       "color": "#ffc890",
+       "intensidad": 8.014522951489145,
+       "alcance": 9.209060611713237
+      }
+     ],
+     "luz": {
+      "estancia": 0.13
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 10,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.4180975106537517,
+       "color": "#ffc890",
+       "intensidad": 7.269233232798802,
+       "alcance": 8.310388200491882
+      }
+     ],
+     "luz": {
+      "estancia": 0.15
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 9,
+     "distintos": 8,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8644675039213325,
+       "color": "#ffc890",
+       "intensidad": 8.246589102526894,
+       "alcance": 9.471493799337072
+      }
+     ],
+     "luz": {
+      "estancia": 0.132
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 19,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.8946865486905153,
+       "color": "#ffc890",
+       "intensidad": 8.312755648728917,
+       "alcance": 9.544996756384904
+      }
+     ],
+     "luz": {
+      "estancia": 0.134
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 9,
+     "distintos": 9,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.1384797876453376,
+       "color": "#ffc890",
+       "intensidad": 6.65699220633325,
+       "alcance": 7.491926344992315
+      }
+     ],
+     "luz": {
+      "estancia": 0.158
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 48,
+     "distintos": 37,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.007878824348154,
+       "color": "#ffc890",
+       "intensidad": 8.560597431752676,
+       "alcance": 9.815427690415495
+      }
+     ],
+     "luz": {
+      "estancia": 0.125
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 4216,
+   "perfil": "abuela",
+   "estilo": "antiguo",
+   "plano": "pasillo",
+   "triangulos": 53356,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 75.4,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 29,
+     "distintos": 24,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9722159191951505,
+       "color": "#ffd2a0",
+       "intensidad": 9.3107272487322,
+       "alcance": 10.591936231372795
+      }
+     ],
+     "luz": {
+      "estancia": 0.117
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.4154250157080241,
+       "color": "#ffd2a0",
+       "intensidad": 7.866343881407092,
+       "alcance": 9.03750598864116
+      }
+     ],
+     "luz": {
+      "estancia": 0.132
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 41,
+     "distintos": 31,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.5312068505918432,
+       "color": "#ffd2a0",
+       "intensidad": 10.760817756193674,
+       "alcance": 11.95082738138207
+      }
+     ],
+     "luz": {
+      "estancia": 0.097
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 20,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.7699347472043883,
+       "color": "#ffd2a0",
+       "intensidad": 8.785985270161486,
+       "alcance": 10.055045441576155
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 12,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.201910257070267,
+       "color": "#ffd2a0",
+       "intensidad": 7.312460611911247,
+       "alcance": 8.365149755182216
+      }
+     ],
+     "luz": {
+      "estancia": 0.135
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_costura",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.4826919940314838,
+       "color": "#ffd2a0",
+       "intensidad": 8.040842609837489,
+       "alcance": 9.239199106676777
+      }
+     ],
+     "luz": {
+      "estancia": 0.129
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_despensa",
+     "objetos": 38,
+     "distintos": 28,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3893107871881512,
+       "color": "#ffd2a0",
+       "intensidad": 7.7986003944227456,
+       "alcance": 8.957981543415933
+      }
+     ],
+     "luz": {
+      "estancia": 0.133
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 4473,
+   "perfil": "agricultor",
+   "estilo": "antiguo",
+   "plano": "lateral",
+   "triangulos": 42126,
+   "mallas": 53,
+   "luces": 6,
+   "montaje_ms": 65.4,
+   "cobertura": {
+    "habitables": 5,
+    "porKit": 5,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "R0",
+     "kit": "vivienda_salon",
+     "objetos": 41,
+     "distintos": 28,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.1447298030598176,
+       "color": "#ffd2a0",
+       "intensidad": 11,
+       "alcance": 12.609854068207598
+      }
+     ],
+     "luz": {
+      "estancia": 0.089
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 18,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8167683319188654,
+       "color": "#ffd2a0",
+       "intensidad": 10.41491995386592,
+       "alcance": 11.641098918290213
+      }
+     ],
+     "luz": {
+      "estancia": 0.097
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_bano",
+     "objetos": 14,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0174520818982273,
+       "color": "#ffd2a0",
+       "intensidad": 7.704466630807238,
+       "alcance": 8.846290611086824
+      }
+     ],
+     "luz": {
+      "estancia": 0.094
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_despensa",
+     "objetos": 51,
+     "distintos": 37,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.455998566303606,
+       "color": "#ffd2a0",
+       "intensidad": 9.19156235286161,
+       "alcance": 10.472428309814372
+      }
+     ],
+     "luz": {
+      "estancia": 0.096
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R4",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6702316640876234,
+       "color": "#ffd2a0",
+       "intensidad": 9.918019261226576,
+       "alcance": 11.181151858972823
+      }
+     ],
+     "luz": {
+      "estancia": 0.098
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 2720,
+   "perfil": "agricultor",
+   "estilo": "antiguo",
+   "plano": "lateral",
+   "triangulos": 35682,
+   "mallas": 50,
+   "luces": 5,
+   "montaje_ms": 57.8,
+   "cobertura": {
+    "habitables": 4,
+    "porKit": 4,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "R0",
+     "kit": "vivienda_salon",
+     "objetos": 37,
+     "distintos": 23,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.193187644938007,
+       "color": "#ffd2a0",
+       "intensidad": 11,
+       "alcance": 13.231583771603614
+      }
+     ],
+     "luz": {
+      "estancia": 0.077
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 17,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.626602612062925,
+       "color": "#ffd2a0",
+       "intensidad": 10.217361319588704,
+       "alcance": 11.460443179751442
+      }
+     ],
+     "luz": {
+      "estancia": 0.09
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_bano",
+     "objetos": 15,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.159680885310081,
+       "color": "#ffd2a0",
+       "intensidad": 8.51131017544089,
+       "alcance": 9.762245000827873
+      }
+     ],
+     "luz": {
+      "estancia": 0.085
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_cocina",
+     "objetos": 9,
+     "distintos": 8,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5846105269156396,
+       "color": "#ffd2a0",
+       "intensidad": 10.063929511201142,
+       "alcance": 11.31814962456868
+      }
+     ],
+     "luz": {
+      "estancia": 0.09
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 3981,
+   "perfil": "abuela",
+   "estilo": "antiguo",
+   "plano": "pasillo",
+   "triangulos": 50702,
+   "mallas": 60,
+   "luces": 8,
+   "montaje_ms": 80,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 31,
+     "distintos": 22,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.214529243250581,
+       "color": "#ffd2a0",
+       "intensidad": 10.222194574224844,
+       "alcance": 11.464896876138916
+      }
+     ],
+     "luz": {
+      "estancia": 0.106
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3934294760219927,
+       "color": "#ffd2a0",
+       "intensidad": 7.99071291413835,
+       "alcance": 9.181710641877833
+      }
+     ],
+     "luz": {
+      "estancia": 0.127
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 9,
+     "distintos": 8,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9487262195907533,
+       "color": "#ffd2a0",
+       "intensidad": 9.499828552254044,
+       "alcance": 10.778862563664436
+      }
+     ],
+     "luz": {
+      "estancia": 0.115
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_comedor",
+     "objetos": 19,
+     "distintos": 15,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.37,
+       "z": 1.5393105003277014,
+       "color": "#ffd2a0",
+       "intensidad": 8.387170011418462,
+       "alcance": 9.626991559735316
+      }
+     ],
+     "luz": {
+      "estancia": 0.128
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0211021436480223,
+       "color": "#ffd2a0",
+       "intensidad": 6.978848525789887,
+       "alcance": 7.932728099923215
+      }
+     ],
+     "luz": {
+      "estancia": 0.128
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_costura",
+     "objetos": 10,
+     "distintos": 9,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3710679246123618,
+       "color": "#ffd2a0",
+       "intensidad": 7.929941502603118,
+       "alcance": 9.111531937193156
+      }
+     ],
+     "luz": {
+      "estancia": 0.127
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_despensa",
+     "objetos": 52,
+     "distintos": 37,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.550204370276333,
+       "color": "#ffd2a0",
+       "intensidad": 8.416776000805772,
+       "alcance": 9.659419910999931
+      }
+     ],
+     "luz": {
+      "estancia": 0.125
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 3429,
+   "perfil": "agricultor",
+   "estilo": "antiguo",
+   "plano": "pasillo",
+   "triangulos": 42946,
+   "mallas": 60,
+   "luces": 8,
+   "montaje_ms": 62.9,
+   "cobertura": {
+    "habitables": 7,
+    "porKit": 7,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 37,
+     "distintos": 26,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7287791985545482,
+       "color": "#ffd2a0",
+       "intensidad": 8.047929462019727,
+       "alcance": 9.247297436828056
+      }
+     ],
+     "luz": {
+      "estancia": 0.136
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 12,
+     "distintos": 12,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7049248773600993,
+       "color": "#ffd2a0",
+       "intensidad": 7.99439707311187,
+       "alcance": 9.185947864509588
+      }
+     ],
+     "luz": {
+      "estancia": 0.137
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.6229083016751247,
+       "color": "#ffd2a0",
+       "intensidad": 10.054478568620773,
+       "alcance": 11.309326229361051
+      }
+     ],
+     "luz": {
+      "estancia": 0.096
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_despensa",
+     "objetos": 37,
+     "distintos": 32,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6112604583140637,
+       "color": "#ffd2a0",
+       "intensidad": 7.784201190100461,
+       "alcance": 8.940987089850442
+      }
+     ],
+     "luz": {
+      "estancia": 0.141
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.0682906229267246,
+       "color": "#ffd2a0",
+       "intensidad": 6.565701943956665,
+       "alcance": 7.362095731928819
+      }
+     ],
+     "luz": {
+      "estancia": 0.155
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_taller",
+     "objetos": 9,
+     "distintos": 9,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3457204793594428,
+       "color": "#ffd2a0",
+       "intensidad": 7.188292830017216,
+       "alcance": 8.206868223269684
+      }
+     ],
+     "luz": {
+      "estancia": 0.15
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_dormitorio",
+     "objetos": 11,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9563408169888135,
+       "color": "#ffd2a0",
+       "intensidad": 8.558609139678028,
+       "alcance": 9.813287832102874
+      }
+     ],
+     "luz": {
+      "estancia": 0.126
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 2728,
+   "perfil": "matrimonio",
+   "estilo": "rustico",
+   "plano": "lateral",
+   "triangulos": 38706,
+   "mallas": 49,
+   "luces": 6,
+   "montaje_ms": 65.9,
+   "cobertura": {
+    "habitables": 4,
+    "porKit": 4,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "R0",
+     "kit": "vivienda_salon",
+     "objetos": 30,
+     "distintos": 25,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.197676245657931,
+       "color": "#ffc890",
+       "intensidad": 11,
+       "alcance": 13.985917554410806
+      }
+     ],
+     "luz": {
+      "estancia": 0.064
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 16,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7363541652448475,
+       "color": "#ffc890",
+       "intensidad": 11,
+       "alcance": 12.4860153499985
+      }
+     ],
+     "luz": {
+      "estancia": 0.075
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_bano",
+     "objetos": 15,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.1251533714112156,
+       "color": "#ffc890",
+       "intensidad": 8.889724457716827,
+       "alcance": 10.163435893892773
+      }
+     ],
+     "luz": {
+      "estancia": 0.072
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R3",
+     "kit": "vivienda_cocina",
+     "objetos": 14,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5726318242959678,
+       "color": "#ffc890",
+       "intensidad": 10.712863389361614,
+       "alcance": 11.908368448291482
+      }
+     ],
+     "luz": {
+      "estancia": 0.077
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 1679,
+   "perfil": "cazador",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 44768,
+   "mallas": 58,
+   "luces": 8,
+   "montaje_ms": 63.2,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 44,
+     "distintos": 32,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8728678090956237,
+       "color": "#ffc890",
+       "intensidad": 9.487777733909155,
+       "alcance": 10.767047163862099
+      }
+     ],
+     "luz": {
+      "estancia": 0.114
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 13,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.5039927867237566,
+       "color": "#ffc890",
+       "intensidad": 8.448536711024403,
+       "alcance": 9.69408778691376
+      }
+     ],
+     "luz": {
+      "estancia": 0.121
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 12,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6964064721960312,
+       "color": "#ffc890",
+       "intensidad": 8.990628702018402,
+       "alcance": 10.267766618410198
+      }
+     ],
+     "luz": {
+      "estancia": 0.118
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_trofeos",
+     "objetos": 24,
+     "distintos": 16,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7153088520972233,
+       "color": "#ffc890",
+       "intensidad": 9.04388285975191,
+       "alcance": 10.322404051976415
+      }
+     ],
+     "luz": {
+      "estancia": 0.118
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 13,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.129148325380811,
+       "color": "#ffc890",
+       "intensidad": 7.3924778352502285,
+       "alcance": 8.465582925567565
+      }
+     ],
+     "luz": {
+      "estancia": 0.123
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 53,
+     "distintos": 38,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.2288098905355582,
+       "color": "#ffc890",
+       "intensidad": 10.490582451949823,
+       "alcance": 11.70954970515263
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 5045,
+   "perfil": "familia",
+   "estilo": "moderno",
+   "plano": "dosPlantas",
+   "triangulos": 45424,
+   "mallas": 56,
+   "luces": 8,
+   "montaje_ms": 471.9,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "salon",
+     "kit": "vivienda_salon",
+     "objetos": 49,
+     "distintos": 31,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7485371494658466,
+       "color": "#fff1dc",
+       "intensidad": 11,
+       "alcance": 13.299171534473214
+      }
+     ],
+     "luz": {
+      "estancia": 0.058
+     },
+     "errores": 0
+    },
+    {
+     "sala": "cocina",
+     "kit": "vivienda_cocina",
+     "objetos": 14,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9986381799353694,
+       "color": "#fff1dc",
+       "intensidad": 10.468347178276385,
+       "alcance": 11.689475357820324
+      }
+     ],
+     "luz": {
+      "estancia": 0.098
+     },
+     "errores": 0
+    },
+    {
+     "sala": "bano",
+     "kit": "vivienda_bano",
+     "objetos": 14,
+     "distintos": 13,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3074254532893974,
+       "color": "#fff1dc",
+       "intensidad": 8.312231452184257,
+       "alcance": 9.544416662499202
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A0",
+     "kit": "vivienda_dormitorio",
+     "objetos": 25,
+     "distintos": 18,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 2.3485371494662104,
+       "color": "#fff1dc",
+       "intensidad": 11,
+       "alcance": 15.33176382474523
+      }
+     ],
+     "luz": {
+      "estancia": 0.046
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A1",
+     "kit": "vivienda_ninos",
+     "objetos": 18,
+     "distintos": 16,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.0750000000007276,
+       "color": "#fff1dc",
+       "intensidad": 7.587221400046349,
+       "alcance": 8.705173868222227
+      }
+     ],
+     "luz": {
+      "estancia": 0.103
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A2",
+     "kit": "vivienda_dormitorio",
+     "objetos": 13,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.6310636332254944,
+       "color": "#fff1dc",
+       "intensidad": 9.321763456477067,
+       "alcance": 10.602936056492938
+      }
+     ],
+     "luz": {
+      "estancia": 0.102
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 2162,
+   "perfil": "cazador",
+   "estilo": "rustico",
+   "plano": "pasillo",
+   "triangulos": 36112,
+   "mallas": 56,
+   "luces": 8,
+   "montaje_ms": 51.8,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "L0",
+     "kit": "vivienda_salon",
+     "objetos": 35,
+     "distintos": 25,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.8939657134469599,
+       "color": "#ffc890",
+       "intensidad": 8.697743093352777,
+       "alcance": 9.961918632827585
+      }
+     ],
+     "luz": {
+      "estancia": 0.124
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L1",
+     "kit": "vivienda_dormitorio",
+     "objetos": 10,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.7710365302391438,
+       "color": "#ffc890",
+       "intensidad": 8.404447116972706,
+       "alcance": 9.645928951949026
+      }
+     ],
+     "luz": {
+      "estancia": 0.124
+     },
+     "errores": 0
+    },
+    {
+     "sala": "L2",
+     "kit": "vivienda_cocina",
+     "objetos": 8,
+     "distintos": 8,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.343338689650409,
+       "color": "#ffc890",
+       "intensidad": 7.384005489702361,
+       "alcance": 8.455005379653072
+      }
+     ],
+     "luz": {
+      "estancia": 0.141
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R0",
+     "kit": "vivienda_trofeos",
+     "objetos": 20,
+     "distintos": 18,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.6445086240528326,
+       "color": "#ffc890",
+       "intensidad": 8.102564969740774,
+       "alcance": 9.30949434640646
+      }
+     ],
+     "luz": {
+      "estancia": 0.133
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R1",
+     "kit": "vivienda_bano",
+     "objetos": 11,
+     "distintos": 11,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.164798451900424,
+       "color": "#ffc890",
+       "intensidad": 6.958027442933638,
+       "alcance": 7.904956023405386
+      }
+     ],
+     "luz": {
+      "estancia": 0.14
+     },
+     "errores": 0
+    },
+    {
+     "sala": "R2",
+     "kit": "vivienda_despensa",
+     "objetos": 36,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.199033857381437,
+       "color": "#ffc890",
+       "intensidad": 9.425603287353432,
+       "alcance": 10.705880134082449
+      }
+     ],
+     "luz": {
+      "estancia": 0.112
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  },
+  {
+   "seed": 4685,
+   "perfil": "rico",
+   "estilo": "lujo",
+   "plano": "dosPlantas",
+   "triangulos": 60540,
+   "mallas": 59,
+   "luces": 8,
+   "montaje_ms": 97.8,
+   "cobertura": {
+    "habitables": 6,
+    "porKit": 6,
+    "faltantes": []
+   },
+   "salas": [
+    {
+     "sala": "salon",
+     "kit": "vivienda_salon",
+     "objetos": 38,
+     "distintos": 29,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.9448155906975444,
+       "color": "#fff4e0",
+       "intensidad": 11,
+       "alcance": 14.035173599552117
+      }
+     ],
+     "luz": {
+      "estancia": 0.054
+     },
+     "errores": 0
+    },
+    {
+     "sala": "cocina",
+     "kit": "vivienda_cocina",
+     "objetos": 13,
+     "distintos": 10,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 2.0282822307799506,
+       "color": "#fff4e0",
+       "intensidad": 10.614090690533622,
+       "alcance": 11.82043424910958
+      }
+     ],
+     "luz": {
+      "estancia": 0.099
+     },
+     "errores": 0
+    },
+    {
+     "sala": "bano",
+     "kit": "vivienda_bano",
+     "objetos": 15,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.62,
+       "z": 1.3271881538548769,
+       "color": "#fff4e0",
+       "intensidad": 8.409393793689084,
+       "alcance": 9.65134414947897
+      }
+     ],
+     "luz": {
+      "estancia": 0.106
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A0",
+     "kit": "vivienda_dormitorio",
+     "objetos": 22,
+     "distintos": 18,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 2.544815590697908,
+       "color": "#fff4e0",
+       "intensidad": 11,
+       "alcance": 15.984434996948833
+      }
+     ],
+     "luz": {
+      "estancia": 0.042
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A1",
+     "kit": "vivienda_bano",
+     "objetos": 15,
+     "distintos": 14,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.0750000000007276,
+       "color": "#fff4e0",
+       "intensidad": 7.616349809265136,
+       "alcance": 8.740445624836642
+      }
+     ],
+     "luz": {
+      "estancia": 0.105
+     },
+     "errores": 0
+    },
+    {
+     "sala": "A2",
+     "kit": "vivienda_despacho",
+     "objetos": 39,
+     "distintos": 28,
+     "luces": [
+      {
+       "x": 0,
+       "y": 2.4199999999999995,
+       "z": 1.680470384633736,
+       "color": "#fff4e0",
+       "intensidad": 9.520343470123587,
+       "alcance": 10.79894697673624
+      }
+     ],
+     "luz": {
+      "estancia": 0.104
+     },
+     "errores": 0
+    }
+   ],
+   "errores": []
+  }
+ ]
+}

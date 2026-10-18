@@ -1,0 +1,64 @@
+{
+  "state": "PASS_PRELIMINARY_NOT_FROZEN",
+  "scope": "3 actual constructors CPU; Canvas stub, no action execution or persistence browser",
+  "hashes": {
+    "src/locales.js": "f37d728f34c12ffbe636cbd364d2bfec5927f2685854d4c10e73eb4a52917356",
+    "src/houses.js": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+    "tools/interiores/validar.js": "1cf461bf6faa157624429467ec87baf078a106f2aef0f6db50f6e0eff4cda6c9",
+    "data/kits/vivienda_cocina.json": "fe4d8c3730b207bb8a057183ed492b5c651709f8cabd454cbecf8edf3faf5a7f",
+    "data/objetos/vivienda_a.json": "b01ebb89e7be0c1a732d5851174c121a15f2f56a47f28a98dfb529b3628ad909"
+  },
+  "rows": [
+    {
+      "seed": 2786,
+      "lootIDs": [
+        "cartera",
+        "colchon",
+        "joyero",
+        "lata"
+      ],
+      "lootIdentityAndDefsExact": true,
+      "kitchenActionsExact": true,
+      "kitchenTypes": [
+        "eat",
+        "fridge",
+        "hide"
+      ],
+      "lootPosesExact": true
+    },
+    {
+      "seed": 3244,
+      "lootIDs": [
+        "cuadro",
+        "portatil",
+        "cartera"
+      ],
+      "lootIdentityAndDefsExact": true,
+      "kitchenActionsExact": true,
+      "kitchenTypes": [
+        "eat",
+        "fridge",
+        "hide",
+        "hide"
+      ],
+      "lootPosesExact": true
+    },
+    {
+      "seed": 1594,
+      "lootIDs": [
+        "guitarra",
+        "consola",
+        "portatil",
+        "altavoz"
+      ],
+      "lootIdentityAndDefsExact": true,
+      "kitchenActionsExact": true,
+      "kitchenTypes": [
+        "eat",
+        "fridge",
+        "hide"
+      ],
+      "lootPosesExact": true
+    }
+  ]
+}

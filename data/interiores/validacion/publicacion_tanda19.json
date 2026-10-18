@@ -1,0 +1,54 @@
+{
+ "tanda": 19,
+ "fecha": "2026-10-18T05:18:11.248985+00:00",
+ "estado": "publicada_y_verificada",
+ "commit": "c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+ "ci": {
+  "run": 39099689341,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39099689341",
+  "arbol_ci_y_head_identico": "f48456ac256d5e2333031de6ac51bdb5ff0e7565"
+ },
+ "pages": {
+  "run": 39099907357,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39099907357"
+ },
+ "integracion": {
+  "informe": "data/interiores/validacion/integracion_publica_tanda19.json",
+  "sha256": "49f9d5d4e92190fec333f8d60ae65b92cc08a0d5939526ac2e48d38b1fbc7630",
+  "estado": "PASS",
+  "casas": 8,
+  "trofeos_reales": [
+   2132,
+   4204,
+   1679,
+   2162
+  ],
+  "bancos_seleccion_sentarse_levantarse": [
+   2132,
+   4204,
+   1679
+  ],
+  "sin_banco": 2162,
+  "gap_consulta": 0.32,
+  "annie_kits": 5,
+  "comercios_con_acciones": 3,
+  "partida_ficticia_y_recarga": true,
+  "revision_antes_y_despues": "c486ed205510c1b94ba013846d17a2a1ad55ed4c",
+  "maximo_entrada_ms": 172.7,
+  "maximo_trofeos_entrada_ms": 91,
+  "annie_entrada_ms": 89.5
+ },
+ "validacion_previa": {
+  "contratos": 82,
+  "gates": 10
+ },
+ "visual": {
+  "A": 3.306,
+  "B": 3.368,
+  "objetivo_4_alcanzado": false
+ },
+ "limites": "Avance parcial. No acredita 4/5, reducción de carga del25% ni FPS. Entrada medida localmente; no rendimiento universal. Bancos por métodos reales con reposición a un acceso validado, sin certificar recorrido desde puerta ni aspecto de animación. Acciones comerciales presentes sin compras. Botín por identidad/premio sin recoger públicamente."
+}

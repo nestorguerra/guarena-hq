@@ -1,0 +1,81 @@
+{
+  "state": "PASS",
+  "scope": "CPU literal contrato con constructor real R4 más houses candidata; Canvas de trazas/texturas placeholder. No GPU/suite global. Mutantes por helper conservados en memoria.",
+  "shaProducto": "23f54b354fe3c1953ecb22389c604e240631a5f361a027e66531b037fb2dc3b0",
+  "shaContrato": "feb3be932d64da88e1c90fdabe220b4d4ca08ec9849ef5e64461a2effaf972ae",
+  "rows": [
+    {
+      "mode": "candidate",
+      "state": "PASS",
+      "sortRestored": true
+    },
+    {
+      "mode": "onWall",
+      "state": "FAIL",
+      "error": "orden de paredes dependiente del comparador",
+      "sortRestored": true
+    },
+    {
+      "mode": "plant",
+      "state": "FAIL",
+      "error": "orden de paredes dependiente del comparador",
+      "sortRestored": true
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 0,
+      "rvalue": 0,
+      "calls": 0,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 0,
+      "rvalue": 0.999999,
+      "calls": 0,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 1,
+      "rvalue": 0,
+      "calls": 0,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 1,
+      "rvalue": 0.999999,
+      "calls": 0,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 2,
+      "rvalue": 0,
+      "calls": 1,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 2,
+      "rvalue": 0.999999,
+      "calls": 1,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 4,
+      "rvalue": 0,
+      "calls": 3,
+      "state": "PASS"
+    },
+    {
+      "mode": "consumo y permutación",
+      "n": 4,
+      "rvalue": 0.999999,
+      "calls": 3,
+      "state": "PASS"
+    }
+  ]
+}

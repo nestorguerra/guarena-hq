@@ -1,0 +1,1317 @@
+{
+ "kit": "perfumeria",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "perfumeria",
+   "tipologia": "tienda_especializada",
+   "seed": 1,
+   "W": 6.300000000000001,
+   "D": 9.899999999999999,
+   "guardias": 34,
+   "objetos": 140,
+   "distintos": 58,
+   "hash": "91b67bf2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "per_mostrador_vitrina_negro",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "per_perfumes_escaparate",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "per_cesto_regalo|per_bolsas_regalo|per_t",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "per_perfume_azahar|per_perfume_oud|per_p",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 8,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 36
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "carril_focos",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "per_estanteria_luz",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 49
+    },
+    {
+     "entrada": 13,
+     "obj": "per_cartel_belleza",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "per_mesa_expositora_negra|per_mesa_expos",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 16,
+     "obj": "per_torre_tester",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "per_tocador_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "per_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "per_pizarra_tratamientos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "per_cartel_perfume",
+     "n": 0
+    },
+    {
+     "entrada": 27,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "per_taburete_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "per_camilla_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_toallas_dobladas|per_bolsas_regalo",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "per_carrito_estetica|per_lampara_lupa|pe",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "per_cosm_crema_facial|per_cosm_serum|per",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "per_taburete_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "per_estante_cabina",
+     "n": 0
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "planta_pequena",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.59,
+     "libre_m2": 4.59
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.01,
+     "libre_m2": 0.01
+    },
+    "sala": {
+     "alcanzable_m2": 6.45,
+     "libre_m2": 6.45
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.98,
+     "libre_m2": 1.98
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.25,
+     "libre_m2": 0.25
+    },
+    "maquillaje": {
+     "alcanzable_m2": 4.32,
+     "libre_m2": 4.32
+    },
+    "fondo": {
+     "alcanzable_m2": 2.2,
+     "libre_m2": 2.2
+    },
+    "cabina": {
+     "alcanzable_m2": 0.17,
+     "libre_m2": 0.28
+    },
+    "luces": {
+     "alcanzable_m2": 21,
+     "libre_m2": 21.1
+    }
+   },
+   "luz": {
+    "entrada": 0.187,
+    "sala": 0.325,
+    "frente_barra": 0.394,
+    "maquillaje": 0.208,
+    "fondo": 0.297
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 106520,
+   "mallas": 25,
+   "luces": 8,
+   "determinista": true
+  },
+  {
+   "kit": "perfumeria",
+   "tipologia": "tienda_especializada",
+   "seed": 2,
+   "W": 6.300000000000001,
+   "D": 9,
+   "guardias": 36,
+   "objetos": 126,
+   "distintos": 57,
+   "hash": "82b479ec",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "per_mostrador_vitrina_negro",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "per_perfumes_escaparate",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "per_cesto_regalo|per_bolsas_regalo|per_t",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "per_perfume_azahar|per_perfume_oud|per_p",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 8,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 36
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "carril_focos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 37
+    },
+    {
+     "entrada": 13,
+     "obj": "per_cartel_belleza",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "per_mesa_expositora_negra|per_mesa_expos",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 2
+    },
+    {
+     "entrada": 16,
+     "obj": "per_torre_tester",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "per_tocador_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 4
+    },
+    {
+     "entrada": 24,
+     "obj": "per_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "per_pizarra_tratamientos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "per_cartel_perfume",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "per_taburete_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "per_camilla_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_toallas_dobladas|per_bolsas_regalo",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "per_carrito_estetica|per_lampara_lupa|pe",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "per_cosm_crema_facial|per_cosm_serum|per",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "per_taburete_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "per_estante_cabina",
+     "n": 0
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "planta_pequena",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "lampara_panel_led",
+     "n": 7
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.89,
+     "libre_m2": 4.89
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "sala": {
+     "alcanzable_m2": 6.03,
+     "libre_m2": 6.03
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.88,
+     "libre_m2": 1.88
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.23,
+     "libre_m2": 0.23
+    },
+    "maquillaje": {
+     "alcanzable_m2": 3.64,
+     "libre_m2": 3.64
+    },
+    "fondo": {
+     "alcanzable_m2": 1.81,
+     "libre_m2": 1.81
+    },
+    "cabina": {
+     "alcanzable_m2": 0.7,
+     "libre_m2": 0.7
+    },
+    "luces": {
+     "alcanzable_m2": 19.3,
+     "libre_m2": 19.3
+    }
+   },
+   "luz": {
+    "entrada": 0.202,
+    "sala": 0.347,
+    "frente_barra": 0.412,
+    "maquillaje": 0.208,
+    "fondo": 0.204
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 91336,
+   "mallas": 25,
+   "luces": 7,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.886
+  },
+  {
+   "kit": "perfumeria",
+   "tipologia": "tienda_especializada",
+   "seed": 3,
+   "W": 6,
+   "D": 8.7,
+   "guardias": 30,
+   "objetos": 119,
+   "distintos": 52,
+   "hash": "cb328859",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "per_mostrador_vitrina_negro",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "per_perfumes_escaparate",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "per_cesto_regalo|per_bolsas_regalo|per_t",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "per_perfume_azahar|per_perfume_oud|per_p",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 8,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 35
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "carril_focos",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 12,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 36
+    },
+    {
+     "entrada": 13,
+     "obj": "per_cartel_belleza",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "per_mesa_expositora_negra|per_mesa_expos",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "per_torre_tester",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "per_tocador_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "per_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "per_pizarra_tratamientos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "per_cartel_perfume",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "per_taburete_maquillaje",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "per_camilla_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_toallas_dobladas|per_bolsas_regalo",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "per_carrito_estetica|per_lampara_lupa|pe",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "per_cosm_crema_facial|per_cosm_serum|per",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "per_taburete_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "per_estante_cabina",
+     "n": 0
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "planta_pequena",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.74,
+     "libre_m2": 4.74
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.01,
+     "libre_m2": 0.01
+    },
+    "sala": {
+     "alcanzable_m2": 3.58,
+     "libre_m2": 3.58
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.87
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.19
+    },
+    "maquillaje": {
+     "alcanzable_m2": 4.27,
+     "libre_m2": 4.27
+    },
+    "fondo": {
+     "alcanzable_m2": 1.74,
+     "libre_m2": 1.74
+    },
+    "cabina": {
+     "alcanzable_m2": 0.26,
+     "libre_m2": 0.26
+    },
+    "luces": {
+     "alcanzable_m2": 16.37,
+     "libre_m2": 16.46
+    }
+   },
+   "luz": {
+    "entrada": 0.22,
+    "sala": 0.375,
+    "frente_barra": 0.455,
+    "maquillaje": 0.244,
+    "fondo": 0.348
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 90364,
+   "mallas": 25,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "perfumeria",
+   "tipologia": "tienda_especializada",
+   "seed": 4,
+   "W": 5.7,
+   "D": 10.5,
+   "guardias": 35,
+   "objetos": 155,
+   "distintos": 59,
+   "hash": "d0b25fcf",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "per_mostrador_vitrina_negro",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "per_perfumes_escaparate",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "per_cesto_regalo|per_bolsas_regalo|per_t",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "per_perfume_azahar|per_perfume_oud|per_p",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 8,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 36
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_cajera",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "carril_focos",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "per_estanteria_luz",
+     "n": 5
+    },
+    {
+     "entrada": 12,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 61
+    },
+    {
+     "entrada": 13,
+     "obj": "per_cartel_belleza",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "per_mesa_expositora_negra|per_mesa_expos",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 3
+    },
+    {
+     "entrada": 16,
+     "obj": "per_torre_tester",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "per_tocador_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 4
+    },
+    {
+     "entrada": 24,
+     "obj": "per_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "per_pizarra_tratamientos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "per_cartel_perfume",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 28,
+     "obj": "per_taburete_maquillaje",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "per_camilla_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_toallas_dobladas|per_bolsas_regalo",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "per_carrito_estetica|per_lampara_lupa|pe",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "per_cosm_crema_facial|per_cosm_serum|per",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "per_taburete_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "per_estante_cabina",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_calentador_toallas",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "planta_pequena",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.99,
+     "libre_m2": 3.99
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.01,
+     "libre_m2": 0.01
+    },
+    "sala": {
+     "alcanzable_m2": 4.41,
+     "libre_m2": 4.41
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 2.16,
+     "libre_m2": 2.16
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.38,
+     "libre_m2": 0.38
+    },
+    "maquillaje": {
+     "alcanzable_m2": 4.07,
+     "libre_m2": 4.07
+    },
+    "fondo": {
+     "alcanzable_m2": 0.83,
+     "libre_m2": 0.83
+    },
+    "cabina": {
+     "alcanzable_m2": 0.4,
+     "libre_m2": 0.4
+    },
+    "luces": {
+     "alcanzable_m2": 18.62,
+     "libre_m2": 18.62
+    }
+   },
+   "luz": {
+    "entrada": 0.24,
+    "sala": 0.407,
+    "frente_barra": 0.489,
+    "maquillaje": 0.245,
+    "fondo": 0.267
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 108944,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "perfumeria",
+   "tipologia": "tienda_especializada",
+   "seed": 5,
+   "W": 6.6000000000000005,
+   "D": 10.2,
+   "guardias": 40,
+   "objetos": 145,
+   "distintos": 62,
+   "hash": "d43c62c5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "per_mostrador_vitrina_negro",
+     "n": 3
+    },
+    {
+     "entrada": 1,
+     "obj": "per_perfumes_escaparate",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "per_cesto_regalo|per_bolsas_regalo|per_t",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "per_perfume_azahar|per_perfume_oud|per_p",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "per_estanteria_luz",
+     "n": 3
+    },
+    {
+     "entrada": 8,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 36
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_cajera",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "carril_focos",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "per_estanteria_luz",
+     "n": 4
+    },
+    {
+     "entrada": 12,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 48
+    },
+    {
+     "entrada": 13,
+     "obj": "per_cartel_belleza",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "per_mesa_expositora_negra|per_mesa_expos",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "per_perfume_azahar|per_perfume_jazmin|pe",
+     "n": 4
+    },
+    {
+     "entrada": 16,
+     "obj": "per_torre_tester",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 18,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "per_tocador_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "per_cosm_pintalabios_rojos|per_cosm_pint",
+     "n": 3
+    },
+    {
+     "entrada": 24,
+     "obj": "per_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "per_pizarra_tratamientos",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "per_cartel_perfume",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 28,
+     "obj": "per_taburete_maquillaje",
+     "n": 1
+    },
+    {
+     "entrada": 29,
+     "obj": "per_camilla_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_toallas_dobladas|per_bolsas_regalo",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "per_carrito_estetica|per_lampara_lupa|pe",
+     "n": 3
+    },
+    {
+     "entrada": 32,
+     "obj": "per_cosm_crema_facial|per_cosm_serum|per",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "per_taburete_estetica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "per_estante_cabina",
+     "n": 0
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 36,
+     "obj": "planta_pequena",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 5.18,
+     "libre_m2": 5.18
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.02,
+     "libre_m2": 0.02
+    },
+    "sala": {
+     "alcanzable_m2": 6.9,
+     "libre_m2": 6.9
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.46,
+     "libre_m2": 1.46
+    },
+    "trasbarra": {
+     "alcanzable_m2": 0.24,
+     "libre_m2": 0.24
+    },
+    "maquillaje": {
+     "alcanzable_m2": 4.32,
+     "libre_m2": 4.32
+    },
+    "fondo": {
+     "alcanzable_m2": 2.63,
+     "libre_m2": 2.63
+    },
+    "cabina": {
+     "alcanzable_m2": 0.41,
+     "libre_m2": 0.55
+    },
+    "luces": {
+     "alcanzable_m2": 22.94,
+     "libre_m2": 23.08
+    }
+   },
+   "luz": {
+    "entrada": 0.259,
+    "sala": 0.394,
+    "frente_barra": 0.545,
+    "maquillaje": 0.089,
+    "fondo": 0.118
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 91954,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

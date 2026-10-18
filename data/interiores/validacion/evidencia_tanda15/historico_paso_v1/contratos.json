@@ -1,0 +1,264 @@
+{
+  "pruebas": [
+    {
+      "nombre": "grupo ramificado respeta referencia inmediata y si_no sin alterar fallback",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el grupo rechaza el hueco aislado y compromete tres entradas originales",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "grupo imposible conserva colocación individual y estado aleatorio",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "frentes reales completos respetan obligatorios y accesos",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "grupo con opcional preferido conserva fallback y aleatorio sin compromiso parcial",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el grupo de aseo rechaza un rincón sin pared para su toalla",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "banos grandes conservan conjuntos de aseo, espejo y reserva frontal WC",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "selecciona dormitorio, pintura y taller sin confundirlos",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el filtro de dormitorio no coloca muebles exclusivos de otra habitacion",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "la cobertura cuenta tambien habitaciones sin kit",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "exigir todas detecta un kit ausente aunque el mobiliario anterior funcione",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "un kit fallido conserva el diagnostico y hace fallar la validacion",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 1: cama apoyada y mesita junto al cabecero; espejo sobre lavabo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 1: las casas no superponen pantalla heredada y lámpara del kit",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 1: cocina, baño y dormitorio se montan en casas reales",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 1: los muebles conservan sueño, comida, nevera y ocultacion",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 2: comedor, niños, joven, estudio y despacho por kit",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 2: camas, mesa y asientos, escritorio y lectura por habitación",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 3: ninguna habitación de vecinos vuelve al mobiliario anterior",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "tanda 3: instrumentos, pintura, costura y botín del cazador",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "integración: un cuadro accesible en hall o pasillo no es una habitación sin kit",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "integración: comida, nevera, ocultación, cajones y despertar alcanzables",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "integración: la casa completa respeta mallas, luces y montaje",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "acabado: cocina amplia con mesa y joven con tele apoyada y sofá",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "acabado: el color de catálogo solo se convierte una vez a lineal",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "acabado: dos lienzos de semillas distintas conservan sus dibujos",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "Annie: habitaciones renovadas sin perder escalera ni funciones propias",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "los revestimientos dejan libres los huecos de puertas y ventanas",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "los lotes conservan el acabado sereno de los materiales domésticos",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el bisel conserva la envolvente física de una pieza",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "la luz por habitación se restaura y respeta apagones",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el cruce entre dos luces no produce un salto de brillo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "las cocinas usan unidades domésticas sin bloques de stock comercial",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "costura conserva el asiento frente al puesto de trabajo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "la oclusión doméstica conserva el exterior y restaura cada vista",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "los umbrales de superficie conservan los muebles esenciales",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el puesto con silla se cuenta una vez y exige su asiento vinculado",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el frente modular prueba el extremo libre antes de dispersarse",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "un armario alto preferido se intenta sobre la encimera",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el inodoro conserva espacio frontal y el validador detecta su bloqueo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el útil suspendido exige su referencia sólo cuando se solicita",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "las pertenencias de trastero conservan huella y apoyo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "trastero ofrece pertenencias reproducibles sin seleccionar la ficha",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "trastero compone pareja alta y baja antes de prolongar el almacenaje",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "altos de cocina proporcionados, estilos excluyentes y huecos protegidos",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "infantil 5045 y fichas conservan puesto unido, usos y paso real",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "infantil conserva volumen, roles y reservas negativas del puesto",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "despensa: cada envase cabe bajo las baldas reales de sus soportes",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "despensa: fichas, perfiles y fallback conservan el programa obligatorio",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "identidad infantil conserva dibujos distintos y variación textil al montar",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "galería infantil sigue la cama y respeta paredes bloqueadas",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "comedor doméstico ofrece mesa y sillas reales, comida servida y paso",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "comedor conserva capacidad en umbral y no fuerza cuatro sillas donde no caben",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "comedor conserva todo el botín y lo apoya fuera de la mesa puesta",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "comedor sin aparador ni alacena conserva pertenencias con fallback visible y accesible",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "botín sobre un mueble bajo no invade la reserva alta de una ventana",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "jarra de un servicio centrado respeta la reserva alta aunque la mesa quepa debajo",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "laboratorio comedor usa el foco doméstico real y conserva el mínimo de luz",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "biblioteca infantil conserva los apoyos internos de cuentos y manualidades",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "infantil agrupa biblioteca con puesto y conserva salida exacta del armario",
+      "estado": "FAIL",
+      "motivo": "4007: sección física de paso0,8 invadida"
+    },
+    {
+      "nombre": "grupo de estudio comprueba ambos órdenes y conserva fallback y RNG",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "el acabado infantil usa la cama real para colorear una sola pared alta",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "infantil recupera juego libre y banco de lectura utilizable sin invadir cortinas",
+      "estado": "PASS"
+    },
+    {
+      "nombre": "banco conserva apoyos y separacion optativa sin hueco en frontera de alfombras",
+      "estado": "PASS"
+    }
+  ],
+  "errores": [
+    "infantil agrupa biblioteca con puesto y conserva salida exacta del armario: 4007: sección física de paso0,8 invadida"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+ "estado": "GUARDA_DE_BYTES_CORREGIDA_SIN_CAMBIO_DE_JUEGO",
+ "motivo": "JSON privado escrito manualmente tenía un salto final adicional; el generador no lo añade. El assert literal detuvo la integración después de fuentes/contratos/datos, antes de fichas/historia/congelación. No repetir esas mutaciones.",
+ "comparacion": {
+  "json_semanticamente_identico": true,
+  "unico_byte_extra_privado": "LF al final",
+  "activo_sha256": "ec990cc1d9064c0d327920451f5e8a3cceceb5a3a34ee98f290ed6727ea5842d",
+  "privado_sha256": "63af22fcc8b422481b9f2273fbfded8520be9b73dd6984ea47ee3bcbae20c41c"
+ },
+ "datos_runtime_identicos": true,
+ "recaptura_y_repuntuar": "No corresponde; bytes JS consumidos por el juego idénticos."
+}

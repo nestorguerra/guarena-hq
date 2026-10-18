@@ -1,0 +1,11 @@
+# Revisión independiente — metadatos de Annie
+
+**Sin P1/P2 encontrados.** Corrección acotada aceptada técnicamente sobre `src/casa_annie.js` SHA `7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09`; patch `9a08c35a3f08437a88a268c10af26fa4cd71956b46e95691471aae3a79e585c8`.
+
+Comprobé que retirar exactamente la inserción condicional de `entradasEfectivas:A.K.objetos` y `composicionCocina:A.composicionCocina` reproduce byte a byte la fuente anterior `843af324…`. Es el mismo transporte que ya hacen buildVecino/buildLocal: la receta efectiva sigue validándose contra el suelo global. No cambia mínimo ni validador. El consumidor es el registro de estancia; mapaPaso sólo usa datos geométricos que permanecen iguales.
+
+CPU propio con el cuerpo real completo de buildAnnieHouse, amueblarAnnie antes/después, HouseBuilder, Three r170, agrupación y StaticCollider reales. Semillas12 (default) y13, origen−9700/−9700. Fuentes y datos consumidos cotejados con activos en `revision_manifest.json`; sólo se sustituye en A/B el módulo Annie anterior por el actual. Canvas/texturas son dobles sin raster, tal como declara el runtime privado.
+
+Ambas semillas reproducen **RED anterior:4 errores** (metadata y tres reservas del programa); con inserción actual, **GREEN:0 errores** en las cinco estancias. A/B compara íntegramente estancias quitando únicamente los dos campos nuevos, buffers de atributos/índices de cada malla y jerarquía/poses/visibilidad/sombras, segmentos y círculos de los dos colliders, acciones registradas con posiciones/labels y mallas, puertas, luces/color/intensidad/alcance, rooms/spots/bounds/origen. Todo igual. Ambas casas tienen60mallas visibles,9luces,7puertas y dos plantas. Caja fuerte en planta3.1 y x−9697.84; cama/siesta y otras acciones siguen presentes; altura de rampa1.5500000000005125 e igualdad de floorY/ceilY en muestras de ambas plantas.
+
+Recibo `revision_cpu.json`. Las acciones se compararon como registros construidos, **no se ejecutaron en navegador**, ni se verificó persistencia. No es repetición de69contratos ni navegación completa: raíz realizará esos gates. Tampoco certifica visual/GPU/publicación. El archivo corregido no participa en buildVecino de las tres canónicas de la ficha; la evidencia gráfica conserva su procedencia histórica y no se atribuye a una recaptura.

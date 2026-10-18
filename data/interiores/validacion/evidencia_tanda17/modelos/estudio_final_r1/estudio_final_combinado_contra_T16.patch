@@ -1,0 +1,288 @@
+--- a/tools/interiores/catalogo_vivienda_b.py
++++ b/tools/interiores/catalogo_vivienda_b.py
+@@ -1,5 +1,63 @@
+ """Mobiliario doméstico de dormitorios y habitaciones personales, en metros."""
+ from vivienda_base import *
++
++def modelos_estudio():
++    """Frente adulto de trabajo/consulta: envolventes R2, materiales propios contenidos."""
++    out=[];madera='#ae8962';canto='#8b674b';papel='#e5dcc8';azul='#637b86';oliva='#84907b'
++    def b(w,h,d,**kw):return caja(w,h,d,redondeo=min(.006,min(w,h,d)/4),**kw)
++    p=[b(1.30,.04,.60,y=.73,c=madera)]
++    for x in [-.595,.595]:
++        for z in [-.245,.245]:p.append(b(.045,.71,.045,x=x,y=.355,z=z,c=canto))
++    for x in [-.595,.595]:p.append(b(.04,.47,.05,x=x,y=.985,z=-.265,c=canto))
++    p.append(b(1.20,.38,.02,y=1.01,z=-.28,c='#b49672'))
++    out.append(objeto('vb_puesto_estudio_amplio','Puesto adulto con respaldo de consulta',1.30,1.22,.60,'mesa',32,partes=p,superficies=[dict(y=.75,margen=.04,fondo=.24)]))
++    # Biblioteca abierta: laterales finos, baldas reales y trasera ligera.
++    p=[b(.95,1.64,.016,y=.85,z=-.162,c='#9b805f')]
++    for x in [-.4875,.4875]:p.append(b(.025,1.70,.34,x=x,c=madera))
++    for y in [.015,.400,.800,1.200,1.685]:p.append(b(1.,.03,.34,y=y,c=madera))
++    # Consulta baja integrada: dos carpetas y un estuche cerrado, con apoyo real.
++    p += [b(.57,.075,.27,x=-.16,y=.0675,z=.012,c='#9b8064',m='carton'),
++          b(.50,.035,.25,x=-.16,y=.1225,z=.012,c=papel,m='papel')]
++    for x,h,c in[(.22,.27,azul),(.31,.24,oliva),(.40,.29,'#a18b68')]:p.append(b(.06,h,.25,x=x,y=.03+h/2,z=.012,c=c,m='papel'))
++    out.append(objeto('vb_biblioteca_estudio','Biblioteca abierta de consulta adulta',1.,1.70,.34,'libros',30,partes=p,superficies=[dict(y=y,margen=.035,fondo=.30)for y in [.415,.815,1.215]]))
++    # Cajones entre el puesto y la biblioteca; cuerpo hueco, sin frentes superpuestos.
++    p=[b(.90,.035,.35,y=.0175,c=canto),b(.90,.035,.35,y=.7625,c=madera)]
++    for x in[-.435,.435]:p.append(b(.03,.71,.35,x=x,y=.39,c=madera))
++    p.append(b(.84,.71,.018,y=.39,z=-.166,c=canto))
++    for j in range(3):
++        y=.15+j*.225
++        p += [b(.84,.015,.32,y=.0425+j*.225,z=-.005,c=canto),
++                  b(.3375,.20,.022,x=-.24375,y=y,z=.164,c='#bd9b73'),
++                  b(.3375,.20,.022,x=.24375,y=y,z=.164,c='#bd9b73'),
++                  b(.15,.18,.022,y=y-.01,z=.164,c='#bd9b73')]
++    out.append(objeto('vb_guardado_estudio','Guardado bajo de cajones para el estudio',.90,.78,.35,'comoda',30,partes=p,superficies=[dict(y=.78,margen=.04)]))
++    # Consulta por perfil: masas de libros/carpetas, no una fila comercial.
++    for tema in ['estudiante','artista','musico']:
++        if tema=='estudiante':
++            p=[]
++            for x,h,c in[(-.23,.25,azul),(-.17,.22,oliva),(-.11,.24,'#a18b68')]:p.append(b(.045,h,.21,x=x,y=h/2,z=-.01,c=c,m='papel'))
++            p += [b(.28,.045,.25,x=.115,y=.0225,c='#bca17b',m='papel'),b(.25,.025,.21,x=.115,y=.0575,c=papel,m='papel')]
++        elif tema=='artista':
++            p=[b(.55,.035,.25,y=.0175,c=canto,m='carton'),b(.52,.022,.24,y=.046,c=papel,m='papel'),b(.46,.028,.23,x=-.015,y=.071,c='#a9b09a',m='carton')]
++            for x,h in[(.14,.18),(.185,.25)]:p.append(b(.035,h,.18,x=x,y=.085+h/2,z=-.025,c=azul,m='papel'))
++        else:
++            p=[]
++            for x,h,c in[(-.22,.25,canto),(-.14,.25,azul),(-.06,.23,oliva)]:
++                p += [b(.06,h,.23,x=x,y=h/2,c=c,m='papel'),caja(.025,.09,.001,x=x,y=.14,z=.1155,c=papel,m='papel')]
++            p += [b(.25,.025,.25,x=.14,y=.0125,c=papel,m='papel'),b(.23,.025,.22,x=.14,y=.0375,c='#9b8064',m='papel')]
++        out.append(objeto('vb_consulta_estudio_'+tema,'Consulta adulta de '+tema,.55,.34,.25,None,1.8,'papel',partes=p,soporte='superficie',categoria='decoracion'))
++        # Un único atlas propio: dos zonas de papel sobre el respaldo existente.
++        p=[dict(f='caja',d=[1.10,.42,.001],p=[0,.21,-.0945],c='#b49672',m='papel',tex=dict(tipo='vivienda_consulta_estudio_b',tema=tema))]
++        out.append(objeto('vb_panel_estudio_'+tema,'Notas de consulta de '+tema,1.10,.42,.001,None,.3,'papel',partes=p,soporte='superficie',categoria='cuadro'))
++    p=[b(.45,.055,.27,y=.0275,c=canto,m='papel'),b(.38,.04,.23,y=.075,c=papel,m='papel'),b(.32,.025,.21,y=.1075,c=azul,m='papel')]
++    out.append(objeto('vb_consulta_baja_estudio','Libros de consulta sobre el bajo',.45,.12,.27,'libros',5,'papel',partes=p,soporte='superficie',categoria='decoracion'))
++    for old,id,nombre in [('silla_comedor','vb_silla_estudio','Silla de trabajo del estudio'),('sillon_orejero','vb_sillon_estudio','Sillón de lectura del estudio')]:
++        o=copiar(old,id,nombre)
++        for p in o['partes']:
++            if p.get('tinte')=='tela':p['c']=azul if id=='vb_silla_estudio'else'#8b9380';p.pop('tinte')
++            elif p.get('tinte')=='madera':p['c']=canto;p.pop('tinte')
++        out.append(o)
++    return out
+ 
+ def objetos():
+     out=[]
+@@ -139,6 +197,7 @@
+     out.append(objeto('vb_bloques','Bloques de construcción de colores',.22,.13,.17,None,.35,'madera',partes=[caja(.07,.07,.07,x=-.07,y=.035,c='#ba645c'),caja(.07,.12,.07,y=.06,c='#799aaa'),caja(.07,.07,.07,x=.07,y=.035,c='#bda15f')],soporte='superficie',categoria='decoracion'))
+     from composicion_domestica import mejorar_despacho
+     mejorar_despacho(out)
++    out.extend(modelos_estudio())
+     return out
+ 
+ if __name__=='__main__':guardar_catalogo('vivienda_b',objetos())
+--- a/tools/interiores/kits_vivienda_b.py
++++ b/tools/interiores/kits_vivienda_b.py
+@@ -19,6 +19,29 @@
+     # En el tablero de deberes, ninguna pieza supera 16 cm. Lo más alto sólo
+     # aparece en mesita o estante; no se añaden referencias ajenas para sumar IDs.
+     return bajos,[i for i in bajos if altura(i)<=.160001]
++
++def programa_estudio(p,C):
++    """Receta base para contextos no optantes; frente adulto R2 en tres perfiles."""
++    base=copy.deepcopy(p);perfiles=['artista','estudiante','musico']
++    for e in base:e['perfil']=['!'+x for x in perfiles]
++    mesa='vb_puesto_estudio_amplio';bajo='vb_guardado_estudio';bib='vb_biblioteca_estudio'
++    nuevo=[E('contra_pared',mesa,pared=['N','S','E','W'],centrado=True,cantidad=[1,1],obligatorio=True,preferir=True,silla_frontal='vb_silla_estudio',grupo_pared='trabajo_consulta'),
++           junto(bajo,[mesa],True,buscar_refs=True,si_no=False,grupo_pared='trabajo_consulta',espacio_frontal=[.70,.8]),
++           junto(bib,[bajo],True,buscar_refs=True,si_no=True,grupo_pared='trabajo_consulta',espacio_frontal=[.75,.8]),
++           E('sobre','vb_ordenador',en=[mesa],cantidad=[1,1],obligatorio=True,centrado=True)]
++    for tema in perfiles:nuevo.append(E('sobre','vb_panel_estudio_'+tema,en=[mesa],cantidad=[1,1],obligatorio=True,centrado=True,perfil=[tema]))
++    nuevo += [E('enfrente','vb_sillon_estudio',de=[mesa],cantidad=[0,1],preferir=True,area_min=11,si_no=False,espacio_frontal=[.70,.8]),
++              junto('mesa_auxiliar_lectura',['vb_sillon_estudio'],si_no=False,area_min=11),E('sobre','libro_tumbado',en=['mesa_auxiliar_lectura'],cantidad=[0,1],preferir=True,centrado=True,area_min=11),
++              E('sobre','vb_consulta_baja_estudio',en=[bajo],cantidad=[1,1],obligatorio=True,centrado=True,area_min=16)]
++    for tema in perfiles:nuevo.append(E('sobre','vb_consulta_estudio_'+tema,en=[bib],cantidad=[2,2],obligatorio=True,centrado=True,perfil=[tema]))
++    # Pool adulto existente: sólo sobre biblioteca, nunca sus hileras en el bajo.
++    libros=[i for i,o in C.items()if i.startswith('lb_') and o['soporte']=='superficie' and i not in ['lb_libros_infantiles','lb_libros_morados','lb_agendas']]
++    nuevo += [E('sobre',libros,en=[bib],cantidad=[0,1],preferir=True,centrado=True),
++              E('sobre',['bloc_notas','vb_cuaderno','vb_partituras','grapadora','libro_tumbado'],en=[bajo],por_soporte=[0,1],area_max=16),
++              E('pared',['cuadro_paisaje','fotos_familia','poster_enmarcado'],pared='*',cantidad=[0,1],preferir=True),copy.deepcopy(p[-1])]
++    for e in nuevo:
++        if 'perfil' not in e:e['perfil']=perfiles.copy()
++    return base+nuevo
+ 
+ def generar():
+     C=catalogo();mood=json.load(open(os.path.join(ROOT,'tools','interiores','moodboard_vivienda_b.json')))
+@@ -69,6 +92,7 @@
+             p[-2]=E('sobre','vb_ordenador',en=mesas,cantidad=[1,1])
+             p += [junto('vb_mesa_lectura','sillon_orejero',lados=['derecha','izquierda']),E('suelo_libre','vb_alfombra',cantidad=[0,1],preferir=True,area_min=13)]
+         p+=adornos([x for x in papeles if x!='vb_ordenador'] if id=='despacho' else papeles,(mesas if id=='despacho' else ['vb_escritorio'])+['vb_comoda','estanteria_libros'])
++        if id=='estudio':p=programa_estudio(p,C)
+         kit(id,nombre,'otra_estancia',p,mood[id],fondo=(2.1,5))
+     musica=[pared('piano_pared'),junto('banqueta_piano','piano_pared',lados=['frente'],mira_ref=True),pared('guitarra_soporte'),pared('guitarra_soporte',False,botin='guitarra'),pared('vb_altavoz'),pared('vb_altavoz',False,botin='altavoz'),pared('estanteria_libros',False),pared('vb_escritorio',False),E('sobre','vb_vinilos',en=['vb_escritorio'],cantidad=[0,1],botin='vinilos'),E('pared',['poster_enmarcado','cuadro_paisaje'],pared='*',cantidad=[1,3])]+adornos(papeles+['vb_vinilos','vb_partituras','vb_auriculares','vb_metronomo'],['vb_escritorio','estanteria_libros'])
+     kit('musica','Cuarto de música','otra_estancia',musica,mood['musica'],fondo=(2.1,5))
+--- a/src/texturas/vivienda_b.js
++++ b/src/texturas/vivienda_b.js
+@@ -2,6 +2,32 @@
+ // canvas, never a photograph. Each one: tipo → { w, h, draw(ctx, w, h, tex, seed) }. Read by src/objetos.js (textura).
+ // (No «export { … }» anywhere: the game's packer, tools/build.py, only understands export const/function/class.)
+ export const TEXTURAS = {
++  // Atlas propio: consulta de un estudio adulto, sin imágenes ni textos externos.
++  vivienda_consulta_estudio_b:{w:384,h:128,draw(ctx,w,h,tex,seed){
++    ctx.fillStyle='#b49672';ctx.fillRect(0,0,w,h);
++    const papel=(x,y,ww,hh)=>{ctx.fillStyle='#e5dcc8';ctx.fillRect(x,y,ww,hh);ctx.fillStyle='#8c8069';ctx.fillRect(x+ww*.43,y-2,ww*.14,4);};
++    papel(12,9,106,110);papel(270,12,102,104);
++    ctx.lineCap='round';ctx.lineWidth=1.7;
++    const trazo=pts=>{ctx.beginPath();pts.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.stroke();};
++    ctx.strokeStyle='#637b86';
++    if(tex.tema==='musico'){
++      for(const x of[20,279])for(const y of[29,65,97]){
++        ctx.lineWidth=.8;for(let k=0;k<5;k++)trazo([[x,y+k*3],[x+83,y+k*3]]);
++        ctx.fillStyle='#5e665e';ctx.lineWidth=1.4;
++        for(let k=0;k<4;k++){const xx=x+17+k*16,yy=y+6+((k+Math.floor(y/8))%3-1)*3;ctx.beginPath();ctx.ellipse(xx,yy,3,2,-.3,0,Math.PI*2);ctx.fill();trazo([[xx+3,yy],[xx+3,yy-12]]);}
++      }
++    }else if(tex.tema==='artista'){
++      trazo([[29,90],[30,45],[62,28],[98,46],[98,91],[29,90],[64,71],[98,91]]);trazo([[62,28],[64,71],[30,45]]);trazo([[64,71],[64,107]]);
++      ctx.strokeStyle='#8b674b';ctx.beginPath();ctx.ellipse(323,63,28,34,.3,0,Math.PI*2);ctx.stroke();trazo([[291,96],[355,96]]);
++      for(const[x,c]of[[285,'#637b86'],[311,'#84907b'],[337,'#ae8962']]){ctx.fillStyle=c;ctx.fillRect(x,103,18,6);}
++    }else{
++      ctx.fillStyle='#637b86';ctx.fillRect(22,20,75,6);ctx.strokeStyle='#8a846e';
++      for(let k=0;k<5;k++)trazo([[23,40+k*13],[101-(k%2)*19,40+k*13]]);
++      ctx.strokeStyle='#637b86';ctx.strokeRect(282,25,32,24);ctx.strokeRect(328,63,31,25);trazo([[314,37],[344,37],[344,63]]);trazo([[291,60],[307,60],[307,102],[350,102]]);
++      ctx.fillStyle='#84907b';ctx.fillRect(285,69,15,20);
++    }
++  }},
++
+   vivienda_lienzo_b: {w:256,h:192,draw(ctx,w,h,tex,seed){
+     if(seed%3===1){ctx.fillStyle='#d9c4a2';ctx.fillRect(0,0,w,h);for(let i=0;i<7;i++){ctx.fillStyle=['#8f5d58','#718d82','#be9757'][i%3];ctx.fillRect(18+i*29,24+(i%3)*22,24,105-(i%3)*15);}return;}
+     if(seed%3===2){ctx.fillStyle='#c1ced6';ctx.fillRect(0,0,w,h);ctx.fillStyle='#927962';ctx.fillRect(0,h*.68,w,h*.32);for(let i=0;i<4;i++){ctx.fillStyle=['#b17058','#d8bb75','#79948c','#667e99'][i];ctx.beginPath();ctx.ellipse(48+i*52,116-i*11,23,36,0,0,Math.PI*2);ctx.fill();}return;}
+--- a/src/houses.js
++++ b/src/houses.js
+@@ -330,7 +330,7 @@
+   const holeDoor = (a, w = 0.9) => [a, a + w, 0, 2.1];
+   const winHole = (a, w = 1.3, y0 = 0.95, y1 = 2.05) => [a, a + w, y0, y1];
+   // a window seen from inside: sill, glass with the light of the hour, a half-lowered shutter, curtains, a grille (ground floor)
+-  const windowIn = (x, z, ry, y = 0, w = 1.3, grille = true) => {
++  const windowIn = (x, z, ry, y = 0, w = 1.3, grille = true, room = null) => {
+     const c = Math.cos(ry), s = Math.sin(ry);
+     const P = (lx, lz) => [x + lx * c + lz * s, z - lx * s + lz * c];
+     const q0 = P(0, -0.03), q1 = P(0, -0.01), q2 = P(0, 0.04), hS = 0.35 + r() * 0.4;
+@@ -338,7 +338,8 @@
+     B.add(M.shutter, boxGeo(w, hS, 0.03, 1), q1[0], y + 2.05 - hS / 2, q1[1], ry);
+     B.add(M.wood, boxGeo(w + 0.12, 0.06, 0.22, 1), q2[0], y + 0.95, q2[1], ry);
+     if (grille) for (let i = 0; i < 7; i++) { const q = P(-w / 2 + 0.12 + (i * (w - 0.24)) / 6, -0.08); B.add(M.iron, boxGeo(0.018, 1.1, 0.018, 1), q[0], y + 1.5, q[1], ry); }
+-    for (const sx of [-1, 1]) { const q = P(sx * (w / 2 + 0.06), 0.1); B.add(M.curtain, curtainGeo(0.38, 2.05), q[0], y + 1.2, q[1], ry); }
++    const corta=room?.type==='estudio'&&['artista','estudiante','musico'].includes(prof.id);
++    for (const sx of [-1, 1]) { const q = P(sx * (w / 2 + 0.06), 0.1); B.add(M.curtain, curtainGeo(0.38, corta ? .945 : 2.05), q[0], y + (corta ? 1.7525 : 1.2), q[1], ry); }
+     B.view(z < 1 ? 'f' : 'b', x - w / 2, y + 0.95, z - 0.12, x + w / 2, y + 2.05, z + 0.12); // the street shows through it
+   };
+   const lampAt = (x, z, y, area) => {
+@@ -381,7 +382,7 @@
+     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
+     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
+     L[0].win('s', wl - 0.65, wl + 0.65); R[0].win('s', wr - 0.65, wr + 0.65);
+-    windowIn(wl, 0.03, 0); windowIn(wr, 0.03, 0);
++    windowIn(wl, 0.03, 0, 0, 1.3, true, L[0]); windowIn(wr, 0.03, 0, 0, 1.3, true, R[0]);
+     B.wall(M.wall(1), -hw, 0, -hw, D1); B.wall(M.wall(1), hw, 0, hw, D1);
+     // corridor walls with a door into every room
+     const holesL = [], holesR = [];
+@@ -399,7 +400,7 @@
+     B.wall(M.wall(3), -hw, D1, hw, D1, WALL_H, backHoles);
+     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, WALL_H + 0.25, backHoles, 0, false);
+     L[2].win('n', -3.2, -1.9);
+-    windowIn(-2.55, D1 - 0.03, Math.PI, 0, 1.3, false);
++    windowIn(-2.55, D1 - 0.03, Math.PI, 0, 1.3, false, L[2]);
+     leaf(-0.5, D1, 1, 0, -1, 1.6, 1.0);
+     rooms[0].door('n', -0.5, 0.5); rooms[0].door('s', -0.55, 0.55);
+     rooms[0].doorsAlong = [...L, ...R].map((rm) => rm.doorAt);
+@@ -425,7 +426,7 @@
+     const facadeHoles = [holeDoor(doorX - 0.5 + hw, 1.0), winHole(wx - 0.7 + hw, 1.4)];
+     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
+     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
+-    RR[0].win('s', wx - 0.7, wx + 0.7); windowIn(wx, 0.03, 0, 0, 1.4);
++    RR[0].win('s', wx - 0.7, wx + 0.7); windowIn(wx, 0.03, 0, 0, 1.4, true, RR[0]);
+     B.wall(M.wall(1), -hw, 0, -hw, D1); B.wall(M.wall(1), hw, 0, hw, D1);
+     const holes = [];
+     RR.forEach((rm, i) => { const zc = rm.z0 + 0.65 + r() * Math.max(0, rm.d - 1.5); holes.push(holeDoor(zc - 0.45)); rm.door('w', zc - 0.45, zc + 0.45); rm.doorAt = { x: xr, z: zc, nx: -1, nz: 0 }; leaf(xr, zc - 0.45, 0, 1, 1, ajar()); });
+@@ -437,7 +438,7 @@
+     const backHoles = [holeDoor(doorX - 0.5 + hw, 1.0), [kx - 0.65 + hw, kx + 0.65 + hw, 1.0, 2.0]];
+     B.wall(M.wall(3), -hw, D1, hw, D1, WALL_H, backHoles);
+     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, WALL_H + 0.25, backHoles, 0, false);
+-    RR[RR.length - 1].win('n', kx - 0.65, kx + 0.65); windowIn(kx, D1 - 0.03, Math.PI, 0, 1.3, false);
++    RR[RR.length - 1].win('n', kx - 0.65, kx + 0.65); windowIn(kx, D1 - 0.03, Math.PI, 0, 1.3, false, RR[RR.length - 1]);
+     leaf(doorX - 0.5, D1, 1, 0, -1, 1.6, 1.0);
+     rooms[0].door('n', doorX - 0.5, doorX + 0.5); rooms[0].door('s', doorX - 0.5, doorX + 0.5);
+     rooms[0].doorsAlong = RR.map((rm) => rm.doorAt);
+@@ -465,7 +466,7 @@
+     const facadeHoles = [holeDoor(doorX - 0.55 + hw, 1.1), winHole(wx - 0.65 + hw)].sort((p, q) => p[0] - q[0]);
+     B.wall(M.wall(0), -hw, 0, hw, 0, WALL_H, facadeHoles);
+     B.wall(M.out, -hw, -0.02, hw, -0.02, WALL_H + 0.4, facadeHoles, 0, false);
+-    salon.win('s', wx - 0.65, wx + 0.65); windowIn(wx, 0.03, 0);
++    salon.win('s', wx - 0.65, wx + 0.65); windowIn(wx, 0.03, 0, 0, 1.3, true, salon);
+     salon.door('s', doorX - 0.55, doorX + 0.55);
+     B.wall(M.wall(0), -hw, 0, -hw, a); B.wall(M.wall(0), hw, 0, hw, a);
+     B.wall(M.wall(1), -hw, a, -hw, D1); B.wall(M.wall(2), hw, a, hw, D1, F2);
+@@ -525,14 +526,14 @@
+     const upFacade = fw ? [[hw - 1.3 + hw - 1.0, hw - 0.3 + hw - 1.0, 0, 2.15]] : [winHole(-0.65 + hw)];
+     B.wall(M.wall(3), -hw, 0, hw, 0, H2, upFacade, Y);
+     B.wall(M.out, -hw, -0.02, hw, -0.02, H2 + 0.3, upFacade, Y, false);
+-    if (fw) { up0.win('s', hw - 2.3, hw - 1.3); segs1.push([B.ox + hw - 2.3, B.oz + 0.05, B.ox + hw - 1.3, B.oz + 0.05, 1.1]); windowIn(hw - 1.8, 0.03, 0, Y, 1.0, false); }
+-    else { up0.win('s', -0.65, 0.65); windowIn(0, 0.03, 0, Y, 1.3, false); }
++    if (fw) { up0.win('s', hw - 2.3, hw - 1.3); segs1.push([B.ox + hw - 2.3, B.oz + 0.05, B.ox + hw - 1.3, B.oz + 0.05, 1.1]); windowIn(hw - 1.8, 0.03, 0, Y, 1.0, false, up0); }
++    else { up0.win('s', -0.65, 0.65); windowIn(0, 0.03, 0, Y, 1.3, false, up0); }
+     B.wall(M.wall(3), -hw, 0, -hw, SZ0, H2, [], Y); B.wall(M.wall(3), hw, 0, hw, SZ0, H2, [], Y);
+     B.wall(M.wall(1), -hw, SZ0, -hw, D1, H2, [], Y); B.wall(M.wall(2), hw, SZ0, hw, D1, H2, [], Y);
+     const upBack = [[0.9, 2.0, 1.1, 1.9]];
+     B.wall(M.wall(1), -hw, D1, hw, D1, H2, upBack, Y);
+     B.wall(M.out, -hw, D1 + 0.02, hw, D1 + 0.02, H2 + 0.3, upBack, Y, false);
+-    up2.win('n', -hw + 0.9, -hw + 2.0); windowIn(-hw + 1.45, D1 - 0.03, Math.PI, Y, 1.1, false);
++    up2.win('n', -hw + 0.9, -hw + 2.0); windowIn(-hw + 1.45, D1 - 0.03, Math.PI, Y, 1.1, false, up2);
+     // bedroom door from the landing (beside the stairwell), and the two back rooms' doors
+     B.wall(M.wall(3), -hw, SZ0, hw, SZ0, H2, [holeDoor(xk + 0.1 + hw)], Y);
+     up0.door('n', xk + 0.1, xk + 1.0); land.door('s', xk + 0.1, xk + 1.0);
+@@ -562,7 +563,7 @@
+   // patio walls (over them, the roofs of the neighbours)
+   B.wall(M.out, -hw, D1, -hw, D, 3.6); B.wall(M.out, hw, D1, hw, D, 3.6); B.wall(M.out, -hw, D, hw, D, 3.6);
+   B.view('b', -hw, 3.2, D1, hw, 40, D);
+-  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
++  if (S.zocalo) for (const rm of rooms) if (rm.lv === 0 && !['bano','cocina','costura','despacho','trastero','despensa','comedor','estudio'].includes(rm.type) && !(rm.type==='taller'&&prof.id!=='artista')) {
+     // tiled skirting 1.1 m high round the room (skipping doors)
+     for (const [side, ax, az, bx, bz] of [['s', rm.x0, rm.z0 + INSET - 0.07, rm.x1, rm.z0 + INSET - 0.07], ['n', rm.x0, rm.z1 - INSET + 0.07, rm.x1, rm.z1 - INSET + 0.07], ['w', rm.x0 + INSET - 0.07, rm.z0, rm.x0 + INSET - 0.07, rm.z1], ['e', rm.x1 - INSET + 0.07, rm.z0, rm.x1 - INSET + 0.07, rm.z1]]) {
+       const along = side === 's' || side === 'n';
+@@ -1138,9 +1139,9 @@
+       rm.along = along;
+       continue;
+     }
+-    if(rm.type!=='bano'&&rm.type!=='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
++    if(rm.type!=='bano'&&rm.type!=='ninos'&&rm.type!=='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H});
+     const porKit = amueblarEstancia(rm);
+-    if(rm.type==='bano'||rm.type==='ninos')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
++    if(rm.type==='bano'||rm.type==='ninos'||rm.type==='estudio')revestirEstancia(B,rm,{seed:prof.seed,perfil:prof.id,estilo:prof.style,altura:rm.lv?H2:WALL_H,estancia:porKit?estancias[estancias.length-1]:null});
+     if (!porKit) switch (rm.type) {
+       case 'salon':
+         if (old) { F.camilla(rm); F.tv(rm); F.armchair(rm); F.vitrina(rm); if (r() < 0.6) F.shelf(rm); }
+--- a/src/acabados_vivienda.js
++++ b/src/acabados_vivienda.js
+@@ -19,6 +19,31 @@
+ }
+ 
+ export function revestirEstancia(B, rm, {seed=1, perfil='', estilo='', altura=2.95, inset=.076, estancia=null}={}) {
++  if(rm.type==='estudio'&&perfil!=='annie') {
++    // El estudio adulto reúne consulta y trabajo. Sólo su pared de uso lleva
++    // acento; los huecos completos se recortan como en el resto de la vivienda.
++    const y=(rm.lv||0)*3.1;
++    const mat=c=>B.mat('acabado_domestico_'+c,()=>std(c,{roughness:.92,defines:{CLAY_TONE:.10,CLAY_CAV:.015,CLAY_RELIEF:.12,CLAY_AMP:.0003}}));
++    // La cal ya se comparte con los techos domésticos. Suelo y acento suman
++    // dos familias; se evita una paleta por mueble o por tablilla.
++    const claro=mat('#e9e3d4'),suelo=mat('#b1a38b');
++    const acento=mat(perfil==='estudiante'?'#637b86':perfil==='musico'?'#81735e':'#657b71');
++    const puesto=estancia?.colocados?.find(p=>/^vb_(puesto|mesa)_estudio/.test(p.obj)||p.obj==='vb_escritorio');
++    const ang=puesto?Math.atan2(Math.sin(puesto.ry),Math.cos(puesto.ry)):null;
++    const pared=ang===null?null:Math.abs(ang)<.3?'s':Math.abs(Math.abs(ang)-Math.PI)<.3?'n':ang>0?'w':'e';
++    for(const side of ['s','n','w','e']) {
++      const horizontal=side==='s'||side==='n',a=horizontal?rm.x0:rm.z0,b=horizontal?rm.x1:rm.z1;
++      const huecos=(rm.open||[]).filter(o=>o.side===side).map(o=>[o.a,o.b,o.door?0:.92,o.door?2.1:2.08]);
++      for(const [lo,hi,v0,v1] of panosPared(a,b,0,altura,huecos)) {
++        const c=(lo+hi)/2,x=horizontal?c:side==='w'?rm.x0+inset:rm.x1-inset,z=horizontal?(side==='s'?rm.z0+inset:rm.z1-inset):c;
++        B.add(side===pared?acento:claro,planeGeo(hi-lo,v1-v0),x,y+(v0+v1)/2,z,{s:0,n:Math.PI,w:Math.PI/2,e:-Math.PI/2}[side]);
++      }
++    }
++    const w=rm.x1-rm.x0,d=rm.z1-rm.z0,cx=(rm.x0+rm.x1)/2,cz=(rm.z0+rm.z1)/2;
++    B.add(suelo,planeGeo(w-.15,d-.15).rotateX(-Math.PI/2),cx,y+.009,cz);
++    B.add(claro,planeGeo(w-.15,d-.15).rotateX(Math.PI/2),cx,y+altura-.008,cz);
++    return;
++  }
+   if(rm.type==='comedor') {
+     // Paños domésticos serenos; el zócalo heredado se excluye en houses.js.
+     const y=(rm.lv||0)*3.1,limite=1.02;

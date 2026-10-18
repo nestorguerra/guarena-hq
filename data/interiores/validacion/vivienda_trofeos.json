@@ -1,0 +1,538 @@
+{
+ "kit": "vivienda_trofeos",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_trofeos",
+   "tipologia": "otra_estancia",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.2,
+   "guardias": 4,
+   "objetos": 22,
+   "distintos": 16,
+   "hash": "c543db79",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_armero",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_guardado_campo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_banco_equipo_campo",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_sillon_campo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_mesa_consulta_campo",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_bolsa_caza",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "vb_biblioteca_campo",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_mapa_campo",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 10
+    },
+    {
+     "entrada": 16,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.51,
+     "libre_m2": 13.51
+    }
+   },
+   "luz": {
+    "estancia": 0.091
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13474,
+   "mallas": 11,
+   "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_trofeos",
+   "tipologia": "otra_estancia",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.4,
+   "guardias": 4,
+   "objetos": 21,
+   "distintos": 17,
+   "hash": "a17f2da5",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_armero",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_guardado_campo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_banco_equipo_campo",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_sillon_campo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_mesa_consulta_campo",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_bolsa_caza",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "vb_biblioteca_campo",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_mapa_campo",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 9
+    },
+    {
+     "entrada": 16,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.45,
+     "libre_m2": 4.3
+    }
+   },
+   "luz": {
+    "estancia": 0.183
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13042,
+   "mallas": 11,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trofeos",
+   "tipologia": "otra_estancia",
+   "seed": 3,
+   "W": 5,
+   "D": 2.1,
+   "guardias": 4,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "1dd7801f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_armero",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_guardado_campo",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_sillon_campo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_campo",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "libro_tumbado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_bolsa_caza",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "vb_biblioteca_campo",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_mapa_campo",
+     "n": 0
+    },
+    {
+     "entrada": 15,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 7
+    },
+    {
+     "entrada": 16,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.84,
+     "libre_m2": 3.84
+    }
+   },
+   "luz": {
+    "estancia": 0.249
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 9164,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.818
+  },
+  {
+   "kit": "vivienda_trofeos",
+   "tipologia": "otra_estancia",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.8,
+   "guardias": 4,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "9c537695",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_armero",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_guardado_campo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_banco_equipo_campo",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_sillon_campo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_mesa_consulta_campo",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_bolsa_caza",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "vb_biblioteca_campo",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_mapa_campo",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 5
+    },
+    {
+     "entrada": 16,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.35,
+     "libre_m2": 9.35
+    }
+   },
+   "luz": {
+    "estancia": 0.107
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 12344,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_trofeos",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.2,
+   "guardias": 4,
+   "objetos": 23,
+   "distintos": 17,
+   "hash": "f4b38e18",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_armero",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_guardado_campo",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_banco_equipo_campo",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_rifle",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cornamenta",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_sillon_campo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_mesa_consulta_campo",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_prismaticos",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_bolsa_caza",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "vb_biblioteca_campo",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_mapa_campo",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 8
+    },
+    {
+     "entrada": 16,
+     "obj": "lampara_techo_salon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.39,
+     "libre_m2": 14.39
+    }
+   },
+   "luz": {
+    "estancia": 0.066
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13798,
+   "mallas": 11,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -168,6 +168,7 @@
+   const tantos = (e, len = 0, area = 0, sops = 0) => (e.cantidad ? N(e.cantidad) : e.por_m ? Math.max(1, Math.round(len * U(e.por_m))) : e.por_m2 ? Math.max(1, Math.round(area * U(e.por_m2))) : e.por_soporte && !Array.isArray(e.por_soporte) ? sops * e.por_soporte : 1);
+   const cantidadPreferida=e=>e.preferir&&Array.isArray(e.cantidad)?e.cantidad[1]:N(e.cantidad||1);
+   const variante = (e, k) => (e.variantes ? (e.todas && k < e.variantes.length ? e.variantes[k] : e.variantes[Math.floor(r() * e.variantes.length)]) : e.obj);
++  const busquedasSuelo = [];
+   const cursores = {}, estantes = {}, activas = []; // (activas: the entries laid out for this household)
+ 
+   const reglas = {
+@@ -360,6 +361,21 @@
+         const [x, z] = origen(obj, cx, cz, ry);
+         const it = { obj, x, y: 0, z, ry }, v = volumen(it);
+         if (dentro(v, Z) && libre(v) && !cierra([it])) { poner(obj, Z.id, 'suelo_libre', x, 0, z, ry); puestos++; }
++      }
++      // Opt-in de objetos obligatorios: sólo después de agotar el azar.
++      // Cuatro ejes y rejilla finita de 5 cm, incluyendo ambos límites reales
++      // de la huella rotada. No se consume RNG ni se afloja ninguna guarda.
++      if(puestos<n && e.suelo_determinista===true && e.obligatorio===true && e.obj && !e.variantes){
++        const b=caja(e.obj),busqueda={entrada,probados:0,colocados:0,limite:16000};busquedasSuelo.push(busqueda);
++        const eje=(a,b)=>{if(a>b+1e-6)return [];const v=[];for(let k=0;a+k*.05<=b+1e-6;k++)v.push(Math.min(b,a+k*.05));if(!v.length||b-v[v.length-1]>1e-6)v.push(b);return v;};
++        buscar: for(const ry of [0,Math.PI/2,Math.PI,Math.PI*1.5]){
++          const ex=Math.abs(Math.cos(ry))*b.w/2+Math.abs(Math.sin(ry))*b.d/2,ez=Math.abs(Math.sin(ry))*b.w/2+Math.abs(Math.cos(ry))*b.d/2;
++          for(const cz of eje(Z.z0+ez+.01,Z.z1-ez-.01))for(const cx of eje(Z.x0+ex+.01,Z.x1-ex-.01)){
++            if(puestos>=n||busqueda.probados>=busqueda.limite)break buscar;
++            busqueda.probados++;const [x,z]=origen(e.obj,cx,cz,ry),it={obj:e.obj,x,y:0,z,ry},v=volumen(it);
++            if(dentro(v,Z)&&libre(v)&&!cierra([it])){poner(e.obj,Z.id,'suelo_libre',x,0,z,ry);puestos++;busqueda.colocados++;}
++          }
++        }
+       }
+     },
+     // rows of units end to end, back to back in pairs (doble), an aisle between and at both ends: a supermarket's gondolas,
+@@ -630,13 +646,23 @@
+     }
+   }
+ 
+-  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas };
++  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
+ }
+ 
+ // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
+ // household only
+ export function buildLocal(kit, seed = 1, origin = INTERIOR_ORIGIN, title = null, hogar = null, contexto = null) {
+-  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas } = amueblar(kit, seed, contexto || hogar ? { ...contexto, ...(hogar ? { filtro: filtroHogar(hogar) } : {}) } : null);
++  const semillaSolicitada=seed,ctx=contexto||hogar?{...contexto,...(hogar?{filtro:filtroHogar(hogar)}:{})}:null;
++  let A=amueblar(kit,seed,ctx);
++  const faltan=a=>a.activas.filter(i=>{const e=a.K.objetos[i];return a.P.filter(p=>p.e===i&&(e.regla!=='conjunto'||p.de==null)).length<Math.max(e.obligatorio?1:0,e.cantidad?.[0]||0);});
++  const marco={W:A.W,D:A.D,H:A.H,puertaX:A.puertaX},intentos=[{seed:A.seed,faltan:faltan(A),...(A.busquedasSuelo?{busquedasSuelo:A.busquedasSuelo}:{})}];
++  if(kit.startsWith('vivienda_'))for(let intento=1;intento<12&&faltan(A).length;intento++){
++    A=amueblar(kit,(semillaSolicitada+intento*104729)>>>0,{...ctx,W:marco.W,D:marco.D,H:marco.H});
++    if(A.puertaX!==marco.puertaX)throw new Error('el reintento doméstico cambió la puerta');
++    intentos.push({seed:A.seed,faltan:faltan(A),...(A.busquedasSuelo?{busquedasSuelo:A.busquedasSuelo}:{})});
++  }
++  seed=A.seed;
++  const { K, tipologia, W, D, H, ev, U, puertaX, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas }=A;
+   const t2 = MURO / 2;
+   // ---- the room (its walls outside the frame: their faces at its edges)
+   const B = new HouseBuilder(origin.x, origin.z, false);
+@@ -752,7 +778,8 @@
+   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
+   let hh = 2166136261;
+   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
+-  h.local = { kit, tipologia, seed, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
++  h.local = { kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
++  if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
+   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
+   h.venue = false;
+   // (what the game asks of any interior: where it stands, its extent, what it is; the street seen from its windows)
+--- a/data/kits/kit.schema.json
++++ b/data/kits/kit.schema.json
+@@ -285,6 +285,10 @@
+       "minimum": 0,
+       "maximum": 0.5,
+       "description": "Distancia de la trasera a la pared, por defecto 0.01 m (sustituye esa holgura, no la suma). Sólo contra_pared/enfrente individual, sin grupo_pared; otros usos se rechazan al amueblar."
++     },
++     "suelo_determinista": {
++      "type": "boolean",
++      "description": "Opt-in sólo suelo_libre con obj fijo y obligatorio:true. Tras200intentos aleatorios incompletos prueba cuatro ejes y rejilla finita, sin relajar guardas ni tocar una colocación exitosa."
+      }
+     }
+    }
+--- a/tools/interiores/kits_vivienda_b.py
++++ b/tools/interiores/kits_vivienda_b.py
+@@ -43,8 +43,8 @@
+                pared('vb_cama_ninos',False,area_min=20,habitacion=['ninos']),
+                # Lectura frente a los libros: sólo si cabe con el cuerpo y su uso.
+                # Separar la trasera deja intactas las cortinas hasta el suelo.
+-               E('suelo_libre','vb_alfombra_juego',cantidad=[1,1],obligatorio=True,area_min=12),
+-               E('suelo_libre','vb_alfombra_juego_compacta',cantidad=[1,1],obligatorio=True,area_max=12),
++               E('suelo_libre','vb_alfombra_juego',cantidad=[1,1],obligatorio=True,suelo_determinista=True,area_min=12),
++               E('suelo_libre','vb_alfombra_juego_compacta',cantidad=[1,1],obligatorio=True,suelo_determinista=True,area_max=12),
+                E('enfrente','vb_banco_lectura_ninos',de='vb_biblioteca_ninos',cantidad=[0,1],preferir=True,centrado=True,si_no=False,separacion_pared=.14,espacio_frontal=[.7,.55]),
+                E('pared','vb_dibujos_ninos',pared='*',sobre_de='vb_cama_ninos',cantidad=[0,1],preferir=True,si_no=False)]
+             soportes=['vb_mesita',mesa_id,'vb_biblioteca_ninos']
+--- a/data/kits/vivienda_ninos.json
++++ b/data/kits/vivienda_ninos.json
+@@ -127,7 +127,8 @@
+     1
+    ],
+    "obligatorio": true,
+-   "area_min": 12
++   "area_min": 12,
++   "suelo_determinista": true
+   },
+   {
+    "zona": "estancia",
+@@ -138,7 +139,8 @@
+     1
+    ],
+    "obligatorio": true,
+-   "area_max": 12
++   "area_max": 12,
++   "suelo_determinista": true
+   },
+   {
+    "zona": "estancia",
+--- a/tools/interiores/validar.js
++++ b/tools/interiores/validar.js
+@@ -159,6 +159,7 @@
+     const contexto = tip.startsWith('vivienda_') ? { libres: [{ cx: puertaLab, cz: 0.5, hw: 0.58, hd: 0.5, a: 0, y0: 0, y1: 2.4 }], inicio: { x: puertaLab, z: 0.5 } } : null;
+     const h = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
+     const rep = revisar(h, presupuesto);
++    if(h.local.generacion)rep.generacion=h.local.generacion;
+     // (I-03: the same seed again, the same layout)
+     const h2 = buildLocal(tip, s, ORIGIN, 'Validación', hogar, contexto);
+     if (hogar) {rep.hogar = `${hogar.perfil} · ${hogar.estilo}`;rep.contexto_hogar=hogar;}

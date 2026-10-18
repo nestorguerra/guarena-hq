@@ -1,0 +1,168 @@
+data/interiores/validacion/evidencia_tanda19/contratos/contratos.patch:9: trailing whitespace.
++ 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:1: trailing whitespace.
++PASS grupo ramificado respeta referencia inmediata y si_no sin alterar fallback 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:2: trailing whitespace.
++PASS el grupo rechaza el hueco aislado y compromete tres entradas originales 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:3: trailing whitespace.
++PASS grupo imposible conserva colocación individual y estado aleatorio 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:4: trailing whitespace.
++PASS frentes reales completos respetan obligatorios y accesos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:5: trailing whitespace.
++PASS grupo con opcional preferido conserva fallback y aleatorio sin compromiso parcial 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:6: trailing whitespace.
++PASS el grupo de aseo rechaza un rincón sin pared para su toalla 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:7: trailing whitespace.
++PASS banos grandes conservan conjuntos de aseo, espejo y reserva frontal WC 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:8: trailing whitespace.
++PASS selecciona dormitorio, pintura y taller sin confundirlos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:9: trailing whitespace.
++PASS el filtro de dormitorio no coloca muebles exclusivos de otra habitacion 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:10: trailing whitespace.
++PASS la cobertura cuenta tambien habitaciones sin kit 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:11: trailing whitespace.
++PASS exigir todas detecta un kit ausente aunque el mobiliario anterior funcione 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:12: trailing whitespace.
++PASS un kit fallido conserva el diagnostico y hace fallar la validacion 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:13: trailing whitespace.
++PASS tanda 1: cama apoyada y mesita junto al cabecero; espejo sobre lavabo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:14: trailing whitespace.
++PASS tanda 1: las casas no superponen pantalla heredada y lámpara del kit 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:15: trailing whitespace.
++PASS tanda 1: cocina, baño y dormitorio se montan en casas reales 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:16: trailing whitespace.
++PASS tanda 1: los muebles conservan sueño, comida, nevera y ocultacion 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:17: trailing whitespace.
++PASS tanda 2: comedor, niños, joven, estudio y despacho por kit 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:18: trailing whitespace.
++PASS tanda 2: camas, mesa y asientos, escritorio y lectura por habitación 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:19: trailing whitespace.
++PASS tanda 3: ninguna habitación de vecinos vuelve al mobiliario anterior 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:20: trailing whitespace.
++PASS tanda 3: instrumentos, pintura, costura y botín del cazador 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:21: trailing whitespace.
++PASS integración: un cuadro accesible en hall o pasillo no es una habitación sin kit 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:22: trailing whitespace.
++PASS integración: comida, nevera, ocultación, cajones y despertar alcanzables 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:23: trailing whitespace.
++PASS integración: la casa completa respeta mallas, luces y montaje 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:24: trailing whitespace.
++PASS acabado: cocina amplia con mesa y joven con tele apoyada y sofá 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:25: trailing whitespace.
++PASS acabado: el color de catálogo solo se convierte una vez a lineal 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:26: trailing whitespace.
++PASS acabado: dos lienzos de semillas distintas conservan sus dibujos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:27: trailing whitespace.
++PASS Annie: habitaciones renovadas sin perder escalera ni funciones propias 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:28: trailing whitespace.
++PASS los revestimientos dejan libres los huecos de puertas y ventanas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:29: trailing whitespace.
++PASS los lotes conservan el acabado sereno de los materiales domésticos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:30: trailing whitespace.
++PASS el bisel conserva la envolvente física de una pieza 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:31: trailing whitespace.
++PASS la luz por habitación se restaura y respeta apagones 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:32: trailing whitespace.
++PASS el cruce entre dos luces no produce un salto de brillo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:33: trailing whitespace.
++PASS las cocinas usan unidades domésticas sin bloques de stock comercial 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:34: trailing whitespace.
++PASS costura conserva el asiento frente al puesto de trabajo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:35: trailing whitespace.
++PASS la oclusión doméstica conserva el exterior y restaura cada vista 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:36: trailing whitespace.
++PASS los umbrales de superficie conservan los muebles esenciales 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:37: trailing whitespace.
++PASS el puesto con silla se cuenta una vez y exige su asiento vinculado 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:38: trailing whitespace.
++PASS el frente modular prueba el extremo libre antes de dispersarse 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:39: trailing whitespace.
++PASS un armario alto preferido se intenta sobre la encimera 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:40: trailing whitespace.
++PASS el inodoro conserva espacio frontal y el validador detecta su bloqueo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:41: trailing whitespace.
++PASS el útil suspendido exige su referencia sólo cuando se solicita 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:42: trailing whitespace.
++PASS las pertenencias de trastero conservan huella y apoyo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:43: trailing whitespace.
++PASS trastero ofrece pertenencias reproducibles sin seleccionar la ficha 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:44: trailing whitespace.
++PASS trastero compone pareja alta y baja antes de prolongar el almacenaje 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:45: trailing whitespace.
++PASS altos de cocina proporcionados, estilos excluyentes y huecos protegidos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:46: trailing whitespace.
++PASS infantil 5045 y fichas conservan puesto unido, usos y paso real 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:47: trailing whitespace.
++PASS infantil conserva volumen, roles y reservas negativas del puesto 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:48: trailing whitespace.
++PASS despensa: cada envase cabe bajo las baldas reales de sus soportes 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:49: trailing whitespace.
++PASS despensa: fichas, perfiles y fallback conservan el programa obligatorio 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:50: trailing whitespace.
++PASS identidad infantil conserva dibujos distintos y variación textil al montar 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:51: trailing whitespace.
++PASS galería infantil sigue la cama y respeta paredes bloqueadas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:52: trailing whitespace.
++PASS comedor doméstico ofrece mesa y sillas reales, comida servida y paso 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:53: trailing whitespace.
++PASS comedor conserva capacidad en umbral y no fuerza cuatro sillas donde no caben 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:54: trailing whitespace.
++PASS comedor conserva todo el botín y lo apoya fuera de la mesa puesta 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:55: trailing whitespace.
++PASS comedor sin aparador ni alacena conserva pertenencias con fallback visible y accesible 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:56: trailing whitespace.
++PASS botín sobre un mueble bajo no invade la reserva alta de una ventana 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:57: trailing whitespace.
++PASS jarra de un servicio centrado respeta la reserva alta aunque la mesa quepa debajo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:58: trailing whitespace.
++PASS laboratorio comedor usa el foco doméstico real y conserva el mínimo de luz 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:59: trailing whitespace.
++PASS biblioteca infantil conserva los apoyos internos de cuentos y manualidades 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:60: trailing whitespace.
++PASS infantil agrupa biblioteca con puesto y conserva salida exacta del armario 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:61: trailing whitespace.
++PASS grupo de estudio comprueba ambos órdenes y conserva fallback y RNG 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:62: trailing whitespace.
++PASS el acabado infantil usa la cama real para colorear una sola pared alta 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:63: trailing whitespace.
++PASS infantil recupera juego libre y banco de lectura utilizable sin invadir cortinas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:64: trailing whitespace.
++PASS banco conserva apoyos y separacion optativa sin hueco en frontera de alfombras 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:65: trailing whitespace.
++PASS laboratorio infantil resuelve29/51/63 sin cambiar el marco original 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:66: trailing whitespace.
++PASS laboratorio bloqueado conserva el error tras12 intentos y dimensiones fijas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:67: trailing whitespace.
++PASS cocina: programa compuesto conserva núcleo, puestos, cuotas y receta efectiva 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:68: trailing whitespace.
++PASS cocina: rollback no vacío conserva cuatro fallbacks y aleatorio íntegros 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:69: trailing whitespace.
++PASS cocina: nicho, vajilla y pan conservan apoyos sin penetración interna 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:70: trailing whitespace.
++PASS estudio: programa adulto completo, apoyos y usos en tres marcos reales 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:71: trailing whitespace.
++PASS estudio: caller real entrega mesa y pinta su pared con huecos 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:72: trailing whitespace.
++PASS estudio: fallback no vacio conserva programa y paso en marco pequeño fijo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:73: trailing whitespace.
++PASS estudio: tela real libre del puesto y ordenador, con negativo de paño largo 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:74: trailing whitespace.
++PASS salon: lectura conserva inventario, acciones y fallbacks y registra asiento real 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:75: trailing whitespace.
++PASS salon: postpaso conserva azar y soportes, rechaza inicio ocupado y excepción sin mutar 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:76: trailing whitespace.
++PASS salon: caller pinta acento y conserva color por vertice en un material doméstico 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:77: trailing whitespace.
++PASS salon: construir no ordena paredes con un comparador aleatorio 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:78: trailing whitespace.
++PASS salon: alfombra interior y borde quedan visibles sobre el suelo agrupado 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:79: trailing whitespace.
++PASS salon: estar aislado conserva núcleo, dependientes, selección y rollback 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:80: trailing whitespace.
++PASS trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:81: trailing whitespace.
++PASS junto_a: separación frontal optativa conserva default, RNG y reservas 
+data/interiores/validacion/evidencia_tanda19/gates/contratos.log:82: trailing whitespace.
++PASS trofeos: banco opcional no fuerza huecos ni pierde el guardado 
+data/interiores/validacion/evidencia_tanda19/instrumentacion/revision_R7/base.js:78: trailing whitespace.
++      

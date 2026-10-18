@@ -1,0 +1,22 @@
+{
+ "base": "4640cfa891989d9e5d7430609f6c0689e033b997",
+ "fragment_sha256": "e2b3f3fdf7a453b6ebb49573fa987916df178d93bae2168263c90c372b16ed64",
+ "expectedRed": true,
+ "pruebas": [
+  {
+   "nombre": "estudio: programa adulto completo, apoyos y usos en tres marcos reales",
+   "estado": "FAIL",
+   "motivo": "3244: falta programa adulto de trabajo/consulta"
+  },
+  {
+   "nombre": "estudio: caller real entrega mesa y pinta su pared con huecos",
+   "estado": "FAIL",
+   "motivo": "3244: falta mesa del caller"
+  },
+  {
+   "nombre": "estudio: fallback no vacio conserva programa y paso en marco pequeño fijo",
+   "estado": "FAIL",
+   "motivo": "falta vb_puesto_estudio_amplio en fallback pequeño"
+  }
+ ]
+}

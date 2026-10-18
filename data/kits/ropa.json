@@ -1,0 +1,1108 @@
+{
+ "tipologia": "tienda_ropa",
+ "nombre": "Tienda de ropa",
+ "nota": "La tienda de ropa de un pueblo de las Vegas Altas: un escaparate con maniquíes, el mostrador con la caja junto a la puerta, estanterías de pared con ropa doblada, barras con prendas colgadas, mesas de jerseys y vaqueros, zapatos y bolsos, espejos, dos probadores con cortina al fondo y un almacén pequeño. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.3,
+   8.1
+  ],
+  "fondo": [
+   8.7,
+   11.7
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-1.9",
+  "z0": "1.7",
+  "z1": "4.0",
+  "zb": "D-1.7"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f1ece2",
+ "suelo": "herringbone_parquet",
+ "suelo_color": "#d8c8ac",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.75",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pagar en caja",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.5"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.2"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.5",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "probador_a",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "-W/2+1.4",
+    "D"
+   ]
+  },
+  {
+   "id": "probador_b",
+   "publica": false,
+   "rect": [
+    "-W/2+1.4",
+    "zb",
+    "-W/2+2.8",
+    "D"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": false,
+   "rect": [
+    "-W/2+2.8",
+    "zb",
+    "W/2-2.4",
+    "D"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "W/2-2.4",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2+1.4",
+    "zb"
+   ],
+   "a": [
+    "-W/2+1.4",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "-W/2+2.8",
+    "zb"
+   ],
+   "a": [
+    "-W/2+2.8",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2-2.4",
+    "zb"
+   ],
+   "puerta": [
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "W/2-2.4",
+    "zb"
+   ],
+   "a": [
+    "W/2-2.4",
+    "D"
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pagar en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "mostrador_tienda",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "tarjetero",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pila_bolsas_papel",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "bolsa_papel_grande",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "cesta_calcetines",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_joyas",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "rollo_papel_regalo",
+   "en": [
+    "mostrador_tienda"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "contra_pared",
+   "obj": "armario_trascaja",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "sobre",
+   "obj": "pila_bolsas_papel",
+   "en": [
+    "armario_trascaja"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "rotulo_tienda_a",
+   "variantes": [
+    "rotulo_tienda_a",
+    "rotulo_tienda_b",
+    "rotulo_tienda_c"
+   ],
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_a",
+   "regla": "contra_pared",
+   "variantes": [
+    "cortina_probador_izq",
+    "cortina_probador_der"
+   ],
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_b",
+   "regla": "contra_pared",
+   "variantes": [
+    "cortina_probador_der",
+    "cortina_probador_izq"
+   ],
+   "pared": "S",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_a",
+   "regla": "pared",
+   "obj": "espejo_probador",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_b",
+   "regla": "pared",
+   "obj": "espejo_probador",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_a",
+   "regla": "pared",
+   "obj": "gancho_probador",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_b",
+   "regla": "pared",
+   "obj": "gancho_probador",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_a",
+   "regla": "esquina",
+   "variantes": [
+    "taburete_probador",
+    "banqueta_probador"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "probador_b",
+   "regla": "esquina",
+   "obj": "taburete_probador",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "probador_a",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "probador_b",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_ropa_almacen",
+    "caja_carton"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "burra_almacen_fundas",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "variantes": [
+    "vaporizador_ropa",
+    "maniqui_almacen",
+    "tabla_planchar"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "obj": "caja_ropa_almacen",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "espejo_pared_grande",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "variantes": [
+    "maniqui_vestido_rojo",
+    "maniqui_vestido_azul",
+    "maniqui_vestido_mostaza",
+    "maniqui_vaqueros",
+    "maniqui_traje",
+    "maniqui_abrigo"
+   ],
+   "pared": "S",
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "antena_antihurto",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "perchero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "expositor_bolsos",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_ropa_baja",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_ropa_pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pila_jerseys_rojo",
+    "pila_jerseys_azul_marino",
+    "pila_jerseys_verde",
+    "pila_jerseys_mostaza",
+    "pila_jerseys_gris",
+    "pila_jerseys_crudo",
+    "pila_vaqueros_claro",
+    "pila_vaqueros_medio",
+    "pila_vaqueros_oscuro",
+    "pila_camisetas_blanca",
+    "pila_camisetas_negra",
+    "pila_camisetas_rosa",
+    "pila_camisetas_turquesa",
+    "pila_polos_azul",
+    "pila_polos_granate",
+    "pila_pantalones_beige",
+    "pila_pantalones_gris",
+    "pila_sudaderas_negra",
+    "pila_sudaderas_burdeos",
+    "bufandas_dobladas",
+    "gorros_lana"
+   ],
+   "en": [
+    "estanteria_ropa_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pila_jerseys_rojo",
+    "pila_jerseys_azul_marino",
+    "pila_jerseys_verde",
+    "pila_jerseys_mostaza",
+    "pila_jerseys_gris",
+    "pila_jerseys_crudo",
+    "pila_vaqueros_claro",
+    "pila_vaqueros_medio",
+    "pila_vaqueros_oscuro",
+    "pila_camisetas_blanca",
+    "pila_camisetas_negra",
+    "pila_camisetas_rosa",
+    "pila_camisetas_turquesa",
+    "pila_polos_azul",
+    "pila_polos_granate",
+    "pila_pantalones_beige",
+    "pila_pantalones_gris",
+    "pila_sudaderas_negra",
+    "pila_sudaderas_burdeos",
+    "bufandas_dobladas",
+    "gorros_lana"
+   ],
+   "en": [
+    "estanteria_ropa_baja"
+   ],
+   "relleno": [
+    0.7,
+    0.95
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "bolso_negro",
+    "bolso_marron",
+    "bolso_rojo",
+    "bolso_azul"
+   ],
+   "en": [
+    "expositor_bolsos"
+   ],
+   "relleno": [
+    0.7,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "expositor_zapatos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "par_zapatos_hombre_negro",
+    "par_zapatos_hombre_marron",
+    "par_zapatos_mujer_rojo",
+    "par_zapatillas_blancas",
+    "par_zapatillas_azules",
+    "par_botas_marron",
+    "par_botas_negras",
+    "pila_cajas_zapatos"
+   ],
+   "en": [
+    "expositor_zapatos"
+   ],
+   "relleno": [
+    0.75,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "espejo_pared_grande",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "burra_pared_abrigos",
+    "burra_pared_camisas",
+    "burra_pared_vestidos"
+   ],
+   "pared": "E",
+   "cada": 1.35,
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "aire_acondicionado_pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_moda_a",
+    "cuadro_moda_b"
+   ],
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_rebajas",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "mesa_exposicion",
+   "variantes": [
+    "mesa_exposicion",
+    "mesa_escalonada"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "pila_jerseys_rojo",
+    "pila_jerseys_azul_marino",
+    "pila_jerseys_verde",
+    "pila_jerseys_mostaza",
+    "pila_jerseys_gris",
+    "pila_jerseys_crudo",
+    "pila_vaqueros_claro",
+    "pila_vaqueros_medio",
+    "pila_vaqueros_oscuro",
+    "pila_camisetas_blanca",
+    "pila_camisetas_negra",
+    "pila_camisetas_rosa",
+    "pila_camisetas_turquesa",
+    "pila_polos_azul",
+    "pila_polos_granate",
+    "pila_pantalones_beige",
+    "pila_pantalones_gris",
+    "pila_sudaderas_negra",
+    "pila_sudaderas_burdeos",
+    "bufandas_dobladas",
+    "gorros_lana"
+   ],
+   "en": [
+    "mesa_exposicion",
+    "mesa_escalonada"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "burra_suelo_abrigos",
+    "burra_suelo_camisas",
+    "burra_suelo_vestidos"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "maniqui_abrigo",
+    "maniqui_traje",
+    "maniqui_vaqueros",
+    "maniqui_vestido_mostaza",
+    "maniqui_vestido_azul",
+    "maniqui_vestido_rojo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "espejo_pie",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "cesta_ofertas",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_calcetines",
+    "expositor_bufandas",
+    "perchero_chaquetas"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_gafas",
+    "paraguas_cubo",
+    "perfumes_expositor"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "gafas",
+    "paraguas",
+    "perfume"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.08,
+    0.1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "carril_focos",
+   "cantidad": [
+    1,
+    2
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3500,
+   4300
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 150
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 10:00-14:00,17:00-20:30; Sa 10:00-14:00",
+  "vida": [
+   "percha con una prenda probada",
+   "bolsas de papel junto a la caja",
+   "maniquíes recién vestidos",
+   "cartel de rebajas"
+  ],
+  "cerrado": "reja bajada, la luz del escaparate encendida"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Exposición, tienda de ropa textil.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Exposici%C3%B3n,_tienda_de_ropa_textil.jpg",
+   "autor": "Juan Emilio Prades Bel",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "ArtAmbient boutique interior Arta.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:ArtAmbient_boutique_interior_Arta.jpg",
+   "autor": "Steffen Mokosch",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Clothing store interior Son Moro Cala Millor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Clothing_store_interior_Son_Moro_Cala_Millor.jpg",
+   "autor": "Steffen Mokosch",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Interior sports clothing store Cala Millor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_sports_clothing_store_Cala_Millor.jpg",
+   "autor": "Steffen Mokosch",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "305 Laden fuer Textilien in Cala Millor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:305_Laden_fuer_Textilien_in_Cala_Millor.jpg",
+   "autor": "Usien",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Flassaders, 21 (interior amb maniquins).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Flassaders,_21_(interior_amb_maniquins).jpg",
+   "autor": "Enfo",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Mobiliario comercial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mobiliario_comercial.jpg",
+   "autor": "Indiswood",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Centre Comercial Splau 11.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Centre_Comercial_Splau_11.jpg",
+   "autor": "Jordiferrer",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bilbao - Centro Comercial Zubiarte 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bilbao_-_Centro_Comercial_Zubiarte_03.jpg",
+   "autor": "Zarateman",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Bilbao - Centro Comercial Zubiarte 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bilbao_-_Centro_Comercial_Zubiarte_04.jpg",
+   "autor": "Zarateman",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior de una tienda de ropa, Pucallpa.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_de_una_tienda_de_ropa,_Pucallpa.JPG",
+   "autor": "DSan",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Bilbao - Centro Comercial Zubiarte 06.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bilbao_-_Centro_Comercial_Zubiarte_06.jpg",
+   "autor": "Zarateman",
+   "licencia": "CC0"
+  }
+ ]
+}

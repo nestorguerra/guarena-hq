@@ -1,0 +1,79 @@
+PASS grupo ramificado respeta referencia inmediata y si_no sin alterar fallback 
+PASS el grupo rechaza el hueco aislado y compromete tres entradas originales 
+PASS grupo imposible conserva colocación individual y estado aleatorio 
+PASS frentes reales completos respetan obligatorios y accesos 
+PASS grupo con opcional preferido conserva fallback y aleatorio sin compromiso parcial 
+PASS el grupo de aseo rechaza un rincón sin pared para su toalla 
+PASS banos grandes conservan conjuntos de aseo, espejo y reserva frontal WC 
+PASS selecciona dormitorio, pintura y taller sin confundirlos 
+PASS el filtro de dormitorio no coloca muebles exclusivos de otra habitacion 
+PASS la cobertura cuenta tambien habitaciones sin kit 
+PASS exigir todas detecta un kit ausente aunque el mobiliario anterior funcione 
+PASS un kit fallido conserva el diagnostico y hace fallar la validacion 
+PASS tanda 1: cama apoyada y mesita junto al cabecero; espejo sobre lavabo 
+PASS tanda 1: las casas no superponen pantalla heredada y lámpara del kit 
+PASS tanda 1: cocina, baño y dormitorio se montan en casas reales 
+PASS tanda 1: los muebles conservan sueño, comida, nevera y ocultacion 
+PASS tanda 2: comedor, niños, joven, estudio y despacho por kit 
+PASS tanda 2: camas, mesa y asientos, escritorio y lectura por habitación 
+PASS tanda 3: ninguna habitación de vecinos vuelve al mobiliario anterior 
+PASS tanda 3: instrumentos, pintura, costura y botín del cazador 
+PASS integración: un cuadro accesible en hall o pasillo no es una habitación sin kit 
+PASS integración: comida, nevera, ocultación, cajones y despertar alcanzables 
+PASS integración: la casa completa respeta mallas, luces y montaje 
+PASS acabado: cocina amplia con mesa y joven con tele apoyada y sofá 
+PASS acabado: el color de catálogo solo se convierte una vez a lineal 
+PASS acabado: dos lienzos de semillas distintas conservan sus dibujos 
+PASS Annie: habitaciones renovadas sin perder escalera ni funciones propias 
+PASS los revestimientos dejan libres los huecos de puertas y ventanas 
+PASS los lotes conservan el acabado sereno de los materiales domésticos 
+PASS el bisel conserva la envolvente física de una pieza 
+PASS la luz por habitación se restaura y respeta apagones 
+PASS el cruce entre dos luces no produce un salto de brillo 
+PASS las cocinas usan unidades domésticas sin bloques de stock comercial 
+PASS costura conserva el asiento frente al puesto de trabajo 
+PASS la oclusión doméstica conserva el exterior y restaura cada vista 
+PASS los umbrales de superficie conservan los muebles esenciales 
+PASS el puesto con silla se cuenta una vez y exige su asiento vinculado 
+PASS el frente modular prueba el extremo libre antes de dispersarse 
+PASS un armario alto preferido se intenta sobre la encimera 
+PASS el inodoro conserva espacio frontal y el validador detecta su bloqueo 
+PASS el útil suspendido exige su referencia sólo cuando se solicita 
+PASS las pertenencias de trastero conservan huella y apoyo 
+PASS trastero ofrece pertenencias reproducibles sin seleccionar la ficha 
+PASS trastero compone pareja alta y baja antes de prolongar el almacenaje 
+PASS altos de cocina proporcionados, estilos excluyentes y huecos protegidos 
+PASS infantil 5045 y fichas conservan puesto unido, usos y paso real 
+PASS infantil conserva volumen, roles y reservas negativas del puesto 
+PASS despensa: cada envase cabe bajo las baldas reales de sus soportes 
+PASS despensa: fichas, perfiles y fallback conservan el programa obligatorio 
+PASS identidad infantil conserva dibujos distintos y variación textil al montar 
+PASS galería infantil sigue la cama y respeta paredes bloqueadas 
+PASS comedor doméstico ofrece mesa y sillas reales, comida servida y paso 
+PASS comedor conserva capacidad en umbral y no fuerza cuatro sillas donde no caben 
+PASS comedor conserva todo el botín y lo apoya fuera de la mesa puesta 
+PASS comedor sin aparador ni alacena conserva pertenencias con fallback visible y accesible 
+PASS botín sobre un mueble bajo no invade la reserva alta de una ventana 
+PASS jarra de un servicio centrado respeta la reserva alta aunque la mesa quepa debajo 
+PASS laboratorio comedor usa el foco doméstico real y conserva el mínimo de luz 
+PASS biblioteca infantil conserva los apoyos internos de cuentos y manualidades 
+PASS infantil agrupa biblioteca con puesto y conserva salida exacta del armario 
+PASS grupo de estudio comprueba ambos órdenes y conserva fallback y RNG 
+PASS el acabado infantil usa la cama real para colorear una sola pared alta 
+PASS infantil recupera juego libre y banco de lectura utilizable sin invadir cortinas 
+PASS banco conserva apoyos y separacion optativa sin hueco en frontera de alfombras 
+PASS laboratorio infantil resuelve29/51/63 sin cambiar el marco original 
+PASS laboratorio bloqueado conserva el error tras12 intentos y dimensiones fijas 
+PASS cocina: programa compuesto conserva núcleo, puestos, cuotas y receta efectiva 
+PASS cocina: rollback no vacío conserva cuatro fallbacks y aleatorio íntegros 
+PASS cocina: nicho, vajilla y pan conservan apoyos sin penetración interna 
+PASS estudio: programa adulto completo, apoyos y usos en tres marcos reales 
+PASS estudio: caller real entrega mesa y pinta su pared con huecos 
+PASS estudio: fallback no vacio conserva programa y paso en marco pequeño fijo 
+PASS estudio: tela real libre del puesto y ordenador, con negativo de paño largo 
+PASS salon: lectura conserva inventario, acciones y fallbacks y registra asiento real 
+PASS salon: postpaso conserva azar y soportes, rechaza inicio ocupado y excepción sin mutar 
+PASS salon: caller pinta acento y conserva color por vertice en un material doméstico 
+PASS salon: construir no ordena paredes con un comparador aleatorio 
+PASS salon: alfombra interior y borde quedan visibles sobre el suelo agrupado 
+78 pruebas, 0 fallos

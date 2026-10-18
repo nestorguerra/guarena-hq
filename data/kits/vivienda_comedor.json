@@ -1,0 +1,370 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Comedor familiar",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.5,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "va_mesa_comedor",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "giro": [
+    0,
+    90
+   ],
+   "centrado": true,
+   "area_max": 12,
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": 2,
+    "lados": [
+     "+z",
+     "-z"
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "va_mesa_familiar",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "giro": [
+    0,
+    90
+   ],
+   "centrado": true,
+   "area_min": 12,
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": 4,
+    "lados": [
+     "+z",
+     "-z",
+     "+x",
+     "-x"
+    ]
+   }
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "aparador",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_alacena",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cuadro_paisaje",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "fotos_familia",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cuadro_virgen",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_servicio_comedor_2",
+   "en": [
+    "va_mesa_comedor"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "centrado": true,
+   "area_max": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_servicio_comedor_4",
+   "en": [
+    "va_mesa_familiar"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "centrado": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_joyero_guardado",
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "joyero"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_lata_guardada",
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "lata"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "va_reloj_guardado",
+   "en": [
+    "aparador",
+    "va_alacena"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "botin": "reloj"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "va_vajilla_guardada_platos",
+    "va_vajilla_guardada_tazas"
+   ],
+   "en": [
+    "va_alacena"
+   ],
+   "por_soporte": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "bandeja",
+    "azucarero",
+    "taza_cafe",
+    "taza_desayuno",
+    "plato_cafe",
+    "plato_llano",
+    "vaso_agua",
+    "copa_vino",
+    "cucharilla",
+    "servilletero",
+    "cubiertos_servicio",
+    "servilleta_doblada",
+    "jarra_agua",
+    "salero_pimentero",
+    "aceitera_vinagrera",
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "bote_caramelos",
+    "florero_mesa",
+    "portarretratos",
+    "reloj_sobremesa"
+   ],
+   "en": [
+    "aparador"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "va_mesa_comedor",
+   "area_max": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "va_mesa_familiar",
+   "area_min": 12
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "My Dining Room.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:My_Dining_Room.JPG",
+   "autor": "Mokes123 (talk) (Uploads)",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "After, Dining Room Living Room - Flickr - Tall Chris.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:After%2C_Dining_Room_Living_Room_-_Flickr_-_Tall_Chris.jpg",
+   "autor": "Tall Chris",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Dining Room 556.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_556.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 558.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_558.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 559.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_559.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Dining Room 560.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dining_Room_560.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Peles Castle Interior - Royal Dining Room (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_Royal_Dining_Room_%281%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Peles Castle Interior - Royal Dining Room (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_Royal_Dining_Room_%282%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Basildon Park, Dining Room - geograph.org.uk - 3029945.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Basildon_Park%2C_Dining_Room_-_geograph.org.uk_-_3029945.jpg",
+   "autor": "Len Williams",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Castle Ward Interior - Dining Room - geograph.org.uk - 3968505.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Castle_Ward_Interior_-_Dining_Room_-_geograph.org.uk_-_3968505.jpg",
+   "autor": "Suzanne Mischyshyn",
+   "licencia": "CC BY-SA 2.0"
+  }
+ ]
+}

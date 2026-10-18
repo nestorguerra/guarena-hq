@@ -1,0 +1,49 @@
+{
+ "fecha": "2026-10-17",
+ "tanda": 1,
+ "objetivo": 4,
+ "estado": "mejora_parcial_objetivo_no_alcanzado",
+ "base": "c0c4f5315d913d07332fc9e7b2439e36d0923d3b",
+ "contratos": 22,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 49172,
+  "mallas": 59,
+  "luces": 9,
+  "montaje_ms": 145.3
+ },
+ "kits": {
+  "taller": {
+   "antes": {
+    "A": 2.658,
+    "B": 2.688
+   },
+   "ahora": {
+    "A": 2.842,
+    "B": 2.942
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  },
+  "bano": {
+   "antes": {
+    "A": 2.692,
+    "B": 2.714
+   },
+   "ahora": {
+    "A": 2.904,
+    "B": 2.754
+   },
+   "semillas_laboratorio": 81,
+   "errores": 0
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0,
+  "partida_ficticia_conservada": true
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda1_2026-10-17.md",
+ "pendiente": "Riqueza y actividad de reparación en taller; detalle y composición del baño; objetivo 4/5 en todas las salas."
+}

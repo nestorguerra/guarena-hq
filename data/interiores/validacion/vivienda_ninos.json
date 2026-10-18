@@ -1,0 +1,593 @@
+{
+ "kit": "vivienda_ninos",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_ninos",
+   "tipologia": "dormitorio",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.2,
+   "guardias": 7,
+   "objetos": 18,
+   "distintos": 15,
+   "hash": "c2581206",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_mesita",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_mesa_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_armario_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_alfombra_juego",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_dibujos_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.02,
+     "libre_m2": 12.02
+    }
+   },
+   "luz": {
+    "estancia": 0.062
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4324,
+   "mallas": 15,
+   "luces": 3,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "ninos"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_ninos",
+   "tipologia": "dormitorio",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.4,
+   "guardias": 8,
+   "objetos": 16,
+   "distintos": 15,
+   "hash": "2e23b2f2",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_mesita",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_mesa_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_armario_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_alfombra_juego",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_dibujos_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.42,
+     "libre_m2": 4.42
+    }
+   },
+   "luz": {
+    "estancia": 0.183
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3640,
+   "mallas": 15,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "ninos"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_ninos",
+   "tipologia": "dormitorio",
+   "seed": 3,
+   "W": 5,
+   "D": 2.1,
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 16,
+   "hash": "fff1949",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_mesita",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_mesa_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_armario_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_alfombra_juego_compacta",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_dibujos_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.44,
+     "libre_m2": 2.44
+    }
+   },
+   "luz": {
+    "estancia": 0.249
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3926,
+   "mallas": 14,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "ninos"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_ninos",
+   "tipologia": "dormitorio",
+   "seed": 4,
+   "W": 4.4,
+   "D": 5.1,
+   "guardias": 7,
+   "objetos": 17,
+   "distintos": 15,
+   "hash": "9c7b1665",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_mesita",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_mesa_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_armario_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_alfombra_juego",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_dibujos_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 0.47,
+     "libre_m2": 9.82
+    }
+   },
+   "luz": {
+    "estancia": 0.102
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3784,
+   "mallas": 15,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "ninos"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_ninos",
+   "tipologia": "dormitorio",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.5,
+   "guardias": 9,
+   "objetos": 20,
+   "distintos": 16,
+   "hash": "c1bf9d97",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_mesita",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "vb_mesa_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_biblioteca_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "vb_armario_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "vb_cama_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "vb_alfombra_juego",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "vb_banco_lectura_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_dibujos_ninos",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_osito",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "vb_bloques",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "libro_tumbado|jg_puzles_madera|jg_pizarr",
+     "n": 2
+    },
+    {
+     "entrada": 13,
+     "obj": "hilera_libros_a|hilera_libros_b|hilera_l",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "vb_cuentos_biblioteca|vb_hacer_bibliotec",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.3,
+     "libre_m2": 15.3
+    }
+   },
+   "luz": {
+    "estancia": 0.069
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4384,
+   "mallas": 15,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "ninos"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

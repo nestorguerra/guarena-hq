@@ -1,0 +1,24 @@
+{
+  "state": "PASS_exact_changed_block_no_GPU",
+  "rows": [
+    {
+      "seed": 4007,
+      "original": "RED_expected",
+      "candidate": "PASS",
+      "bankAdvanced4cm": "RED_expected",
+      "largerGapFixedNegative": "RED_expected_false_failure",
+      "largerGapAdaptiveNegative": "PASS",
+      "noInputMutation": true
+    },
+    {
+      "seed": 5045,
+      "original": "RED_expected",
+      "candidate": "PASS",
+      "bankAdvanced4cm": "RED_expected",
+      "largerGapFixedNegative": "RED_expected_false_failure",
+      "largerGapAdaptiveNegative": "PASS",
+      "noInputMutation": true
+    }
+  ],
+  "limits": "Exact changed T17 block; two real constructors. Full T17 and browser still pending."
+}

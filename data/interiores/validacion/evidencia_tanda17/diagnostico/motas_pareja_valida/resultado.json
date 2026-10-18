@@ -1,0 +1,141 @@
+{
+ "seed": 1481,
+ "pose": {
+  "clearance": {
+   "candidate": {
+    "free": true,
+    "position": {
+     "x": -5200.287780565694,
+     "z": -5189.9393468237295
+    },
+    "radius": 0.34,
+    "tolerance": 1e-06,
+    "bounds": {
+     "x0": -5202.890548585765,
+     "x1": -5199.409451414234,
+     "z0": -5192.374350175299,
+     "z1": -5189.641845985838
+    },
+    "inBounds": true,
+    "delta": 0,
+    "contact": false,
+    "depth": 0,
+    "insideFloorFurniture": [],
+    "circleCentres": [],
+    "testedOnlyOnClone": true,
+    "cameraMoved": false
+   },
+   "beforeRender": {
+    "free": true,
+    "position": {
+     "x": -5200.287780565694,
+     "z": -5189.9393468237295
+    },
+    "radius": 0.34,
+    "tolerance": 1e-06,
+    "bounds": {
+     "x0": -5202.890548585765,
+     "x1": -5199.409451414234,
+     "z0": -5192.374350175299,
+     "z1": -5189.641845985838
+    },
+    "inBounds": true,
+    "delta": 0,
+    "contact": false,
+    "depth": 0,
+    "insideFloorFurniture": [],
+    "circleCentres": [],
+    "testedOnlyOnClone": true,
+    "cameraMoved": false
+   },
+   "afterRender": {
+    "free": true,
+    "position": {
+     "x": -5200.287780565694,
+     "z": -5189.9393468237295
+    },
+    "radius": 0.34,
+    "tolerance": 1e-06,
+    "bounds": {
+     "x0": -5202.890548585765,
+     "x1": -5199.409451414234,
+     "z0": -5192.374350175299,
+     "z1": -5189.641845985838
+    },
+    "inBounds": true,
+    "delta": 0,
+    "contact": false,
+    "depth": 0,
+    "insideFloorFurniture": [],
+    "circleCentres": [],
+    "testedOnlyOnClone": true,
+    "cameraMoved": false
+   }
+  },
+  "encuadre": "uso",
+  "x": -5200.287780565694,
+  "y": 4.7,
+  "z": -5189.9393468237295,
+  "objetivo": [
+   -5201.15,
+   4.15,
+   -5191.008098080568
+  ],
+  "fov": 68
+ },
+ "quality": "alta",
+ "dpr": 1,
+ "materiales_recompilados": 52,
+ "photos": [
+  "motas_original",
+  "motas_sin_lint"
+ ],
+ "before": {
+  "free": true,
+  "position": {
+   "x": -5200.287780565694,
+   "z": -5189.9393468237295
+  },
+  "radius": 0.34,
+  "tolerance": 1e-06,
+  "bounds": {
+   "x0": -5202.890548585765,
+   "x1": -5199.409451414234,
+   "z0": -5192.374350175299,
+   "z1": -5189.641845985838
+  },
+  "inBounds": true,
+  "delta": 0,
+  "contact": false,
+  "depth": 0,
+  "insideFloorFurniture": [],
+  "circleCentres": [],
+  "testedOnlyOnClone": true,
+  "cameraMoved": false
+ },
+ "after": {
+  "free": true,
+  "position": {
+   "x": -5200.287780565694,
+   "z": -5189.9393468237295
+  },
+  "radius": 0.34,
+  "tolerance": 1e-06,
+  "bounds": {
+   "x0": -5202.890548585765,
+   "x1": -5199.409451414234,
+   "z0": -5192.374350175299,
+   "z1": -5189.641845985838
+  },
+  "inBounds": true,
+  "delta": 0,
+  "contact": false,
+  "depth": 0,
+  "insideFloorFurniture": [],
+  "circleCentres": [],
+  "testedOnlyOnClone": true,
+  "cameraMoved": false
+ },
+ "errors": [],
+ "intervencion": "Sólo mezcla cl.z * 0.7 → 0.0 en ShaderChunk de este contexto privado. Define de caché CLAY_DIAGNOSTIC sin uso semántico. Ninguna fuente ni geometría cambiada."
+}

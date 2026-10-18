@@ -1,0 +1,15 @@
+{
+  "state": "CPU_exact_runtime_callbacks18_PASS_no_GPU",
+  "tests": [
+    {
+      "name": "infantil recupera juego libre y banco de lectura utilizable sin invadir cortinas",
+      "pass": true
+    },
+    {
+      "name": "banco conserva apoyos y separacion optativa sin hueco en frontera de alfombras",
+      "pass": true
+    }
+  ],
+  "callback_sha256": "b650c9fa477f5257829c097f009e3037f099fefea4ee16f4a92042fd679e1333",
+  "scope": "callbacks mantenidos exactos con constructor/collider/mallas reales; sin rasterizar canvas ni navegador, sin aprobación visual"
+}

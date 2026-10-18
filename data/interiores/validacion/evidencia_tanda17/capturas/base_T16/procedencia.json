@@ -1,0 +1,53 @@
+{
+ "estado": "BASE_T16_PRIVADA_SIN_CAMBIO_PRODUCTO",
+ "fuentes_sin_cambio": 415,
+ "vistas_fisicamente_libres": 6,
+ "calidad": "alta_manual",
+ "dpr": 1,
+ "poses_con_ficha_historica": [
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1481,
+   "vista": 0,
+   "misma_pose_historica": true
+  },
+  {
+   "seed": 1481,
+   "vista": 1,
+   "misma_pose_historica": true
+  }
+ ],
+ "archivos": {
+  "captura.log": "d057e1f61f18ca8cc3153c5a60baaee6cf54720c491a5ee3013ac615fb01a5d3",
+  "capturador.py": "4d1487ab787687f03048870bc0a05f96b8d8a1debf5fddd91087457a424ddd19",
+  "casa_estudio.jpg": "d70efcfa6f89273d53a7cb6ed4c6f3a24fe1659bb56227e8b2a60c7adeca838e",
+  "casa_estudio.json": "e3550493ebe8d5730bf39d0d8106d5ba703951f8dc8b8461f07e1306f11c29e9",
+  "casa_estudio_1481_0.jpg": "9fe033ceb4761d961e8ebca67a1ff883aa33df7f9d39fe8989c755fa6754d489",
+  "casa_estudio_1481_1.jpg": "c87542c105a72d73e215f9b90678151b44e872903eaafc0da38da2fba80e5bbd",
+  "casa_estudio_1594_0.jpg": "bf1d2e1a173a1b7086a7a434502a296541697a15b9a3ac024244f0a83cdee00e",
+  "casa_estudio_1594_1.jpg": "82df37e809162d53f6816d57b3c675f9b084e05aa7fadcfdcce20e3b648ff43e",
+  "casa_estudio_3244_0.jpg": "dedd32a93b7af47e3c1688fd7c49023825243e252538526a91fd3cd919c792ed",
+  "casa_estudio_3244_1.jpg": "67a522239a4c4931ea108b8aebe3a9fac91188f055c8d13f303af387f0b85c87",
+  "fuentes_congeladas.json": "ab4d2495de580e95f244f60303c9729dc5ba6ed829f97fa2b2af593a5baff1c3"
+ },
+ "limite": "Referencia actual T16; no nueva puntuacion ni publicacion. Preserva la ficha historica."
+}

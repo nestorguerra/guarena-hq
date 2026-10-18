@@ -1,0 +1,12 @@
+{
+ "origen": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda17/estudio_final_r1/runtime.cpu.mjs",
+ "origen_sha256": "88d88223b7ad9999902fa98e8c25fd9de9c407d2639d49caf4e350c265b5c1ab",
+ "actual_sha256": "3c9783a732360f8f507301fc3267b553b647ab59348621c3c2624131308c4c90",
+ "cambio": "Lecturas read y raw apuntan a fuentes/datos activos. El snapshot base privado del cargador se sigue cotejando, pero no se usa para construir. Mismos Three170/Canvas de trazas/assetplaceholders; CPU, sin raster/FPS.",
+ "base_producto": "765c1590078779d4b5d318ed98f838a4f678f751",
+ "fallo_instrumental_preservado": {
+  "archivo": "runtime_instrumental_fallido.mjs",
+  "sha256": "a5e220cf8ab55dd40183ce7d612afd6b6e844be180272a7e826bf3f516a49041",
+  "causa": "Comentario // insertado dentro de raw en una sola línea ocultaba el resto de esa línea y sus cierres. Node rechazó sintaxis antes de construir. Se corrige a comentario de bloque."
+ }
+}

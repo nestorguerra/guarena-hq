@@ -1,0 +1,26 @@
+--- a/tools/interiores/frente_cocina.py
++++ b/tools/interiores/frente_cocina.py
+@@ -38,8 +38,8 @@
+                 pw=w*2/3-.048;pp=panel(pw,H-.068,lo+H/2,d-.024)
+                 for q in pp:q['p'][0]+=w/6
+                 p+=pp
+-                for k in range(5):p.append(cil(.105,.105,.012,x=-w/3-.055,y=lo+.024+.006+k*.012,z=.15,c='#d6d0bd',m='ceramica'))
+-                p.append(cil(.06,.055,.095,x=-w/3+.125,y=lo+.024+.0475,z=.15,c='#b4beb0',m='ceramica'))
++                # Una cazuela de servir con tapa: ocupa el hueco diario y se lee a escala de juego.
++                p += [cil(.122,.09,.16,x=-w/3,y=lo+.024+.08,z=.145,c='#a77b55',m='ceramica'),cil(.122,.122,.012,x=-w/3,y=lo+.024+.166,z=.145,c='#d3c7aa',m='ceramica'),cil(.025,.025,.025,x=-w/3,y=lo+.024+.1845,z=.145,c='#617b6c',m='ceramica')]
+             else:
+                 for x in [-w/4,w/4]:
+                     pp=panel(w/2-.05,H-.068,lo+H/2,d-.024)
+@@ -53,7 +53,11 @@
+             for q in o['partes']:
+                 if q['m']=='madera':q.pop('tinte',None);q['c']=color
+             out.append(o)
+-    p=[caja(.35,.018,.23,y=.009,c='#a58a60'),dict(f='esfera',d=[.07],p=[-.025,.0635,0],s=[1.7,.65,1],c='#bc9b68',m='comida')]
++    p=[caja(.35,.018,.23,y=.009,c='#a58a60'),caja(.245,.089,.145,x=-.025,y=.0625,z=-.022,c='#b78e57',m='comida',redondeo=.018)]
++    # Cortes de corteza sobre la cara plana del pan; estratos tangentes.
++    for x in [-.095,-.025,.045]:p.append(caja(.008,.002,.08,x=x,y=.108,z=-.022,c='#79512f',m='comida',r=[0,-20,0]))
++    # Hoja y mango apoyados sobre la tabla, junto al pan, sin aumentar su huella.
++    p += [caja(.125,.004,.018,x=-.0125,y=.020,z=.088,c='#9caaa5',m='metal'),caja(.07,.014,.022,x=.085,y=.025,z=.088,c='#725b41',m='madera')]
+     out.append(objeto('va_preparar_pan','Tabla y hogaza en preparación',.35,.109,.23,None,.9,partes=p,soporte='superficie',categoria='alimento'))
+ 
+ def programa_frente():

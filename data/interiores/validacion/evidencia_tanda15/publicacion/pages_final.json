@@ -1,0 +1,135 @@
+{
+ "conclusion": "success",
+ "databaseId": 39082644397,
+ "headSha": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "jobs": [
+  {
+   "completedAt": "2026-10-18T00:25:10Z",
+   "conclusion": "success",
+   "databaseId": 117542624949,
+   "name": "build",
+   "startedAt": "2026-10-18T00:24:36Z",
+   "status": "completed",
+   "steps": [
+    {
+     "completedAt": "2026-10-18T00:24:39Z",
+     "conclusion": "success",
+     "name": "Set up job",
+     "number": 1,
+     "startedAt": "2026-10-18T00:24:37Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:24:44Z",
+     "conclusion": "success",
+     "name": "Run actions/checkout@v7",
+     "number": 2,
+     "startedAt": "2026-10-18T00:24:39Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:24:44Z",
+     "conclusion": "success",
+     "name": "Run actions/setup-python@v7",
+     "number": 3,
+     "startedAt": "2026-10-18T00:24:44Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:00Z",
+     "conclusion": "success",
+     "name": "Empaquetar el juego",
+     "number": 4,
+     "startedAt": "2026-10-18T00:24:44Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:03Z",
+     "conclusion": "success",
+     "name": "Recursos de suelo e iglesia en Pages, portable y multijugador",
+     "number": 5,
+     "startedAt": "2026-10-18T00:25:00Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:03Z",
+     "conclusion": "success",
+     "name": "Run actions/configure-pages@v6",
+     "number": 6,
+     "startedAt": "2026-10-18T00:25:03Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:07Z",
+     "conclusion": "success",
+     "name": "Run actions/upload-pages-artifact@v5",
+     "number": 7,
+     "startedAt": "2026-10-18T00:25:03Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:07Z",
+     "conclusion": "success",
+     "name": "Post Run actions/setup-python@v7",
+     "number": 13,
+     "startedAt": "2026-10-18T00:25:07Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:07Z",
+     "conclusion": "success",
+     "name": "Post Run actions/checkout@v7",
+     "number": 14,
+     "startedAt": "2026-10-18T00:25:07Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:07Z",
+     "conclusion": "success",
+     "name": "Complete job",
+     "number": 15,
+     "startedAt": "2026-10-18T00:25:07Z",
+     "status": "completed"
+    }
+   ],
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082644397/job/117542624949"
+  },
+  {
+   "completedAt": "2026-10-18T00:25:24Z",
+   "conclusion": "success",
+   "databaseId": 117542733119,
+   "name": "deploy",
+   "startedAt": "2026-10-18T00:25:13Z",
+   "status": "completed",
+   "steps": [
+    {
+     "completedAt": "2026-10-18T00:25:15Z",
+     "conclusion": "success",
+     "name": "Set up job",
+     "number": 1,
+     "startedAt": "2026-10-18T00:25:14Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:22Z",
+     "conclusion": "success",
+     "name": "Run actions/deploy-pages@v5",
+     "number": 2,
+     "startedAt": "2026-10-18T00:25:15Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:25:22Z",
+     "conclusion": "success",
+     "name": "Complete job",
+     "number": 3,
+     "startedAt": "2026-10-18T00:25:22Z",
+     "status": "completed"
+    }
+   ],
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082644397/job/117542733119"
+  }
+ ],
+ "status": "completed",
+ "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082644397"
+}

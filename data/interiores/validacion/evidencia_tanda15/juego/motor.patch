@@ -1,0 +1,35 @@
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -56,6 +56,8 @@
+ export function amueblar(kit, seed = 1, ctx = null) {
+   const K = KITS[kit];
+   if (!K) throw new Error('sin kit: ' + kit);
++  // Separación optativa sólo en piezas individuales, nunca en grupos modulares.
++  for(const e of K.objetos)if(e.separacion_pared!=null&&(!['contra_pared','enfrente'].includes(e.regla)||e.grupo_pared))throw new Error('separacion_pared sólo admite contra_pared/enfrente sin grupo_pared');
+   const tipologia = K.tipologia, reservaUso=K.objetos.some(e=>e.espacio_frontal);
+   const r = mulberry32((seed * 2654435761 + 97) >>> 0);
+   const U = (a) => (Array.isArray(a) ? a[0] + r() * (a[1] - a[0]) : a);
+@@ -233,7 +235,7 @@
+         while(s+b.w<=pw.b-.03+1e-6){slots.push(s);s+=.1;}
+         if(e.centrado) slots.sort((a,b0)=>Math.abs(a+b.w/2-(pw.a+pw.b)/2)-Math.abs(b0+b.w/2-(pw.a+pw.b)/2));
+         for (s of slots) {
+-          const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + 0.01);
++          const c = s + b.w / 2, off = pw.fijo + (pw.eje === 'z' ? pw.n[0] : pw.n[1]) * (b.d / 2 + (e.separacion_pared ?? 0.01));
+           const [x, z] = origen(obj, pw.eje === 'z' ? off : c, pw.eje === 'z' ? c : off, pw.ry);
+           const it = { obj, x, y: 0, z, ry: pw.ry }, v = volumen(it);
+           if (!dentro(v,Z)||!libre(v))continue;
+--- a/data/kits/kit.schema.json
++++ b/data/kits/kit.schema.json
+@@ -279,6 +279,12 @@
+      "sobre_de": {
+       "type": "string",
+       "description": "Mueble de referencia para pared o luminaria de techo; el techo sigue su centro en planta."
++     },
++     "separacion_pared": {
++      "type": "number",
++      "minimum": 0,
++      "maximum": 0.5,
++      "description": "Distancia de la trasera a la pared, por defecto 0.01 m (sustituye esa holgura, no la suma). Sólo contra_pared/enfrente individual, sin grupo_pared; otros usos se rechazan al amueblar."
+      }
+     }
+    }

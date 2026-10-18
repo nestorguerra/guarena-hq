@@ -1,0 +1,107 @@
+{
+  "state": "FAIL_SINGLE_DIRECTED_CASE",
+  "requestedSeed": 4,
+  "effectiveSeed": 1152023,
+  "groupWidth": 3.2799999284744263,
+  "missing": [
+    {
+      "i": 12,
+      "obj": "t17_biblioteca",
+      "min": 1,
+      "n": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "exit",
+      "x": -9400.75,
+      "z": -9399.3,
+      "r": 1.1,
+      "label": "Salir a la calle"
+    },
+    {
+      "type": "asiento",
+      "x": -9400.020000023842,
+      "z": -9398.07000002265,
+      "r": 0.7,
+      "seat": {
+        "kind": "local",
+        "x": -9400.020000023842,
+        "z": -9398.07000002265,
+        "y": 0.03999999999999998,
+        "h": 6.283185307179586,
+        "sirve": false,
+        "tx": -9400.020000023842,
+        "tz": -9397.51000001192,
+        "mesaY": 0.75
+      },
+      "label": "Sentarse a la mesa"
+    }
+  ],
+  "validation": {
+    "kit": "vivienda_estudio",
+    "tipologia": "otra_estancia",
+    "seed": 4,
+    "W": 3.2,
+    "D": 2.8,
+    "guardias": 2,
+    "objetos": 7,
+    "distintos": 7,
+    "hash": "69252c21",
+    "errores": [
+      "obligatorio: estancia/t17_biblioteca — 0 colocados, el kit pide 1"
+    ],
+    "avisos": [],
+    "recuento": [
+      {
+        "entrada": 10,
+        "obj": "t17_mesa_amplio",
+        "n": 1
+      },
+      {
+        "entrada": 11,
+        "obj": "t17_guardado_bajo",
+        "n": 1
+      },
+      {
+        "entrada": 12,
+        "obj": "t17_biblioteca",
+        "n": 0
+      },
+      {
+        "entrada": 13,
+        "obj": "vb_ordenador",
+        "n": 1
+      },
+      {
+        "entrada": 20,
+        "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+        "n": 1
+      },
+      {
+        "entrada": 21,
+        "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+        "n": 1
+      },
+      {
+        "entrada": 22,
+        "obj": "vb_lampara_trabajo",
+        "n": 1
+      }
+    ],
+    "paso": {
+      "estancia": {
+        "alcanzable_m2": 2.98,
+        "libre_m2": 2.98
+      }
+    },
+    "luz": {
+      "estancia": 0.115
+    },
+    "flotando": 0,
+    "interpenetraciones": 0,
+    "triangulos": 490,
+    "mallas": 11,
+    "luces": 1
+  }
+}

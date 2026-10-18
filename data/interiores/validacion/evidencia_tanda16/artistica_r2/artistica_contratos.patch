@@ -1,0 +1,19 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -1133,13 +1133,13 @@
+     const auditar=id=>{const o=OBJETOS[id],P=partes({obj:id,x:0,y:0,z:0,ry:0}),err=[];
+       for(let i=0;i<P.length;i++){
+         for(let j=i+1;j<P.length;j++)if(penetra(P[i],P[j])>EPS)err.push('solape'+i+'/'+j);
+-        if(!['ceramica','comida'].includes(o.partes[i].m)||P[i].y0<EPS)continue;
+-        const v=P[i];if(!P.some((a,j)=>j!==i&&Math.abs(a.y1-v.y0)<EPS&&a.cx-a.hw<=v.cx-v.hw+EPS&&a.cx+a.hw>=v.cx+v.hw-EPS&&a.cz-a.hd<=v.cz-v.hd+EPS&&a.cz+a.hd>=v.cz+v.hd-EPS))err.push('apoyo'+i);
++        if((id!=='va_preparar_pan'&&!['ceramica','comida'].includes(o.partes[i].m))||P[i].y0<EPS)continue;
++        const v=P[i],ex=Math.abs(v.hw*Math.cos(v.a))+Math.abs(v.hd*Math.sin(v.a)),ez=Math.abs(v.hw*Math.sin(v.a))+Math.abs(v.hd*Math.cos(v.a));if(!P.some((a,j)=>j!==i&&Math.abs(a.y1-v.y0)<EPS&&a.cx-a.hw<=v.cx-ex+EPS&&a.cx+a.hw>=v.cx+ex-EPS&&a.cz-a.hd<=v.cz-ez+EPS&&a.cz+a.hd>=v.cz+ez-EPS))err.push('apoyo'+i);
+       }return err;
+     };
+     exigir(ids.length===13,'familias nuevas incompletas');for(const id of ids)exigir(!auditar(id).length,id+': '+auditar(id).join(';'));
+     const pan=OBJETOS.va_preparar_pan,original=structuredClone(pan.partes),taza=OBJETOS.va_guardar_liso,save=structuredClone(taza.partes);
+-    try{pan.partes[1].p[1]+=.036;exigir(auditar(pan.id).includes('apoyo1'),'no detecta pan flotante');taza.partes.at(-1).p[0]=taza.partes.at(-2).p[0];exigir(auditar(taza.id).some(s=>s.startsWith('solape')),'no detecta taza dentro de platos');}
++    try{pan.partes[1].p[1]+=.036;exigir(auditar(pan.id).includes('apoyo1'),'no detecta pan flotante');pan.partes=structuredClone(original);const hoja=pan.partes.findIndex(p=>p.m==='metal');exigir(hoja>=0,'falta hoja del cuchillo');pan.partes[hoja].p[1]+=.02;exigir(auditar(pan.id).includes('apoyo'+hoja),'no detecta cuchillo flotante');taza.partes.at(-1).p[0]=taza.partes.at(-2).p[0];exigir(auditar(taza.id).some(s=>s.startsWith('solape')),'no detecta taza dentro de platos');}
+     finally{pan.partes=original;taza.partes=save;}
+   });
+   return { pruebas, errores };

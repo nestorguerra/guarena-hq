@@ -1,0 +1,5 @@
+# Revisión de raíz del contrato de regresión del acabado
+
+Leído bf399200816986b687e49570b2fb9a7f27ceaefc9568bcd4b0d4376b46d443d3 completo. El callback mide la salida del constructor real antes de agrupar: materiales, normales, paños superiores no vacíos y relación con la cama real. No fija la paleta literal ni puede pasar si faltan todos los paños. Las seis casas incluyen ambas plantas y las dos orientaciones presentes. Ambas intercepciones delegan en los métodos originales y se restauran en finally, incluso ante el fallo; se liberan las geometrías de las casas terminadas.
+
+Se relee la evidencia CPU del autor con el callback exacto y dos mutantes: caller anterior a amueblar y caller posterior sin estancia. Ambos fallan por el resultado geométrico, no por comparar texto de código. La prueba es proporcionada al fallo concreto hallado y conserva los demás contratos. Aplicado sólo el delta, preservando los tres contratos Bv2. El navegador se ejecuta por separado y su recibo determinará ese estado. No acredita color percibido ni resultado4/5.

@@ -1,0 +1,342 @@
+{
+ "kit": "vivienda_taller",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 19,
+   "distintos": 14,
+   "hash": "3329b6ee",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_banco_amplio|va_banco_carpinteria_amp",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 17.34,
+     "libre_m2": 17.34
+    }
+   },
+   "luz": {
+    "estancia": 0.073
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5382,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.8,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "8f7b7750",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_banco_amplio|va_banco_carpinteria_amp",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.82,
+     "libre_m2": 8.82
+    }
+   },
+   "luz": {
+    "estancia": 0.143
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6010,
+   "mallas": 10,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 3,
+   "W": 5,
+   "D": 2.5,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 11,
+   "hash": "e9084a83",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_banco_amplio|va_banco_carpinteria_amp",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 7
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.36,
+     "libre_m2": 5.36
+    }
+   },
+   "luz": {
+    "estancia": 0.181
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4376,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.9,
+   "guardias": 4,
+   "objetos": 14,
+   "distintos": 12,
+   "hash": "da3546e9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_banco_amplio|va_banco_carpinteria_amp",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 6
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13,
+     "libre_m2": 13
+    }
+   },
+   "luz": {
+    "estancia": 0.107
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4168,
+   "mallas": 9,
+   "luces": 2,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_taller",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.3,
+   "guardias": 4,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "a08eb729",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_banco_amplio|va_banco_carpinteria_amp",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_taller",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "tal_llaves_juego|tal_martillo|tal_caja_h",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "fe_pintura_blanca|fe_pintura_roja|fe_pin",
+     "n": 10
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 18.34,
+     "libre_m2": 18.34
+    }
+   },
+   "luz": {
+    "estancia": 0.077
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 3946,
+   "mallas": 10,
+   "luces": 3,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

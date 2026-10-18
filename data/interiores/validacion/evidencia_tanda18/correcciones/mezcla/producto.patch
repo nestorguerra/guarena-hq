@@ -1,0 +1,32 @@
+--- a/src/houses.js
++++ b/src/houses.js
+@@ -608,9 +608,19 @@
+     B.add(M.wood, boxGeo(w + 0.05, h + 0.05, 0.02, 1), x - Math.sin(ry) * 0.016, y, z - Math.cos(ry) * 0.016, ry);
+     return m;
+   };
++  // Orden aleatorio finito: no depende del número de comparaciones de sort.
++  // Copiar preserva las preferencias del caller; n paredes consumen n-1 tiros.
++  const mezclarParedes = (sides) => {
++    const orden = [...sides];
++    for (let i = orden.length - 1; i > 0; i--) {
++      const j = Math.floor(r() * (i + 1));
++      [orden[i], orden[j]] = [orden[j], orden[i]];
++    }
++    return orden;
++  };
+   // hang something on a free stretch of wall (not over windows, doors or tall furniture)
+   const onWall = (rm, w, fn, sides = ['s', 'n', 'w', 'e']) => {
+-    for (const side of sides.sort(() => r() - 0.5)) {
++    for (const side of mezclarParedes(sides)) {
+       const along = side === 's' || side === 'n';
+       const lo = (along ? rm.x0 : rm.z0) + 0.35 + w / 2, hi = (along ? rm.x1 : rm.z1) - 0.35 - w / 2;
+       for (let k = 0; k < 8 && hi > lo; k++) {
+@@ -639,7 +649,7 @@
+     }
+   };
+   const plant = (rm, big = r() < 0.5) => {
+-    const p = rm.fit(0.5, 0.5, ['s', 'n', 'w', 'e'].sort(() => r() - 0.5), false, r);
++    const p = rm.fit(0.5, 0.5, mezclarParedes(['s', 'n', 'w', 'e']), false, r);
+     if (!p) return;
+     const y = rm.lv ? F2 : 0;
+     B.add(M.pot, cylGeo(big ? 0.22 : 0.15, big ? 0.16 : 0.11, big ? 0.36 : 0.24), p.x, y + (big ? 0.18 : 0.12), p.z);

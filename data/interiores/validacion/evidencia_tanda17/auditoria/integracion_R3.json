@@ -1,0 +1,40 @@
+{
+ "estado": "R3_INTEGRADO_REGENERADO_PENDIENTE_GATES_Y_JUICIOS",
+ "base_git": "4640cfa891989d9e5d7430609f6c0689e033b997",
+ "cambios_fuente": {
+  "tools/interiores/catalogo_vivienda_b.py": {
+   "antes": "59410aeb5fe499213ab19ff528acc131aae08aa3e582d0cd76f88a6ea93e9f70",
+   "ahora": "ab1662cd752e4246b4c4173d67b2de6a00d70096bec703e51f876d5edf19280f"
+  },
+  "tools/interiores/kits_vivienda_b.py": {
+   "antes": "486141fa1c52bb22a71c92c5a08a81047562e6bad04495d8a85d4a5a1517a551",
+   "ahora": "a4f36f87975650fff14f0a24e95a922b9204a2a363d9415699c4c84dab2ce2cd"
+  },
+  "src/texturas/vivienda_b.js": {
+   "antes": "508048d8b58ab97b9464c717994c7f518f45432d080bf7f6a4a418b6171f61b2",
+   "ahora": "495260611de11b2860621e19862fb14c077daaff35b360e9a936b94b7afeffbe"
+  },
+  "src/houses.js": {
+   "antes": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+   "ahora": "8c8eb246c0b919abdd0f807122272eadafc40d83033ac0dc6348cb7f51d12983"
+  },
+  "src/acabados_vivienda.js": {
+   "antes": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+   "ahora": "87838b0082d6675f1a9304c43ad79d284f67acab666074c34302b35aa3adf349"
+  },
+  "src/plastilina.js": {
+   "antes": "82c2d8d53601eabee1b7b2c80e036c3cc8704f232e700e09b31a206df245eb99",
+   "ahora": "8f1a3f291a605bb90c6c475646cac03ce1030ecad563b0d5c0f6a9dac9d377a7"
+  },
+  "tools/interiores/fotos_casa.py": {
+   "antes": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0",
+   "ahora": "fb5c874c258b929a6b28879d074f2ce932e0283027312698f5eb6d8ccc264c54"
+  }
+ },
+ "ficha": "cfe597964fc9e1c5626c9886a1521b01780fc4b5f558526003287dc4c7b04fc2",
+ "snapshot": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/calidad/tanda17/preview_final_r3",
+ "inputs_preview_estables": 493,
+ "historia_preservada": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/data/interiores/validacion/historico/calidad_tanda17_base",
+ "URL_capturador_activo": "http://localhost:8920",
+ "limites": "Las7fuentes artísticas/captura son las del preview salvo normalización de URL. Tests/CI20 añadidos; requiere gates y cierre independiente."
+}

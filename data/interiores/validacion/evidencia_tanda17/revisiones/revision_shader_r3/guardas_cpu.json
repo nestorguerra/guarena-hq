@@ -1,0 +1,27 @@
+{
+  "state": "PASS_EXACT_CAPTURE_GUARDS_CPU",
+  "scope": "Exact added guard block with controlled doubles, no rendering/GLSL compilation.",
+  "sourceSha256": "14494af582467da03d7faf777617664a460067e4a19e7d69786cab1d261ebb44",
+  "rows": [
+    {
+      "name": "clean",
+      "eligible": true,
+      "error": null
+    },
+    {
+      "name": "before_console_error",
+      "eligible": false,
+      "error": "errores antes de captura: [\"shader error\"]"
+    },
+    {
+      "name": "render_console_error",
+      "eligible": false,
+      "error": "errores de render: [\"shader error\"]"
+    },
+    {
+      "name": "link_failure_without_console",
+      "eligible": false,
+      "error": "programa WebGL no ejecutable"
+    }
+  ]
+}

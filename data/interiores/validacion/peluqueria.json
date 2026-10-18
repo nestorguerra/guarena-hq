@@ -1,0 +1,1547 @@
+{
+ "kit": "peluqueria",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "peluqueria",
+   "tipologia": "tienda_especializada",
+   "seed": 1,
+   "W": 6.6,
+   "D": 10.8,
+   "guardias": 46,
+   "objetos": 96,
+   "distintos": 50,
+   "hash": "a9830f4f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "pel_mostrador_caja",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "pel_perfumes_vitrina",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "pel_agenda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "bote_propinas|tarjetero|bote_caramelos",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "pel_expositor_pared",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "pel_prod_champu_nutritivo|pel_prod_champ",
+     "n": 9
+    },
+    {
+     "entrada": 8,
+     "obj": "pel_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "pel_cartel_precios",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pel_sofa_espera",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "pel_mesa_revistas",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "revista|periodico|pel_botes_pinzas",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "pel_revistero_pared",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "pel_cartel_peinados_a|pel_cartel_peinado",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "pel_estacion_blanca|pel_estacion_madera|",
+     "n": 4
+    },
+    {
+     "entrada": 22,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "pel_sillon_corte_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "pel_estacion_negra|pel_estacion_blanca|p",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "pel_sillon_corte_blanco",
+     "n": 2
+    },
+    {
+     "entrada": 26,
+     "obj": "pel_sillon_corte_negro",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 9
+    },
+    {
+     "entrada": 28,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 10
+    },
+    {
+     "entrada": 29,
+     "obj": "pel_carrito_blanco|pel_carrito_rosa",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_bol_tinte|pel_tubo_tinte|pel_capa_co",
+     "n": 3
+    },
+    {
+     "entrada": 31,
+     "obj": "pel_secador_casco_crema|pel_secador_casc",
+     "n": 2
+    },
+    {
+     "entrada": 32,
+     "obj": "pel_lavacabezas_negro|pel_lavacabezas_ro",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "pel_toallas_dobladas|pel_capa_corte|pel_",
+     "n": 10
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fregona_cubo|escoba",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "pel_caja_tinte|pel_bidon_oxidante|caja_c",
+     "n": 4
+    },
+    {
+     "entrada": 41,
+     "obj": "pel_esterilizador|pel_bidon_oxidante",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "pel_cesto_ropa",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 44,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 5.4,
+     "libre_m2": 5.4
+    },
+    "espera": {
+     "alcanzable_m2": 0.77,
+     "libre_m2": 0.79
+    },
+    "caja": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_caja": {
+     "alcanzable_m2": 0.85,
+     "libre_m2": 0.85
+    },
+    "tras_caja": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "est_w": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.09
+    },
+    "est_e": {
+     "alcanzable_m2": 0.8,
+     "libre_m2": 0.8
+    },
+    "centro": {
+     "alcanzable_m2": 6.22,
+     "libre_m2": 6.22
+    },
+    "lavado": {
+     "alcanzable_m2": 5.65,
+     "libre_m2": 5.65
+    },
+    "pasillo_fondo": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trastienda": {
+     "alcanzable_m2": 0.62,
+     "libre_m2": 0.62
+    },
+    "luces": {
+     "alcanzable_m2": 25.18,
+     "libre_m2": 25.2
+    }
+   },
+   "luz": {
+    "entrada": 0.204,
+    "espera": 0.284,
+    "frente_caja": 0.438,
+    "est_w": 0.306,
+    "est_e": 0.316,
+    "centro": 0.414,
+    "lavado": 0.196,
+    "pasillo_fondo": null
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 18018,
+   "mallas": 24,
+   "luces": 9,
+   "determinista": true
+  },
+  {
+   "kit": "peluqueria",
+   "tipologia": "tienda_especializada",
+   "seed": 2,
+   "W": 6.6,
+   "D": 9.3,
+   "guardias": 41,
+   "objetos": 86,
+   "distintos": 51,
+   "hash": "64624933",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "pel_mostrador_caja",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "pel_perfumes_vitrina",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "pel_agenda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "bote_propinas|tarjetero|bote_caramelos",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "pel_expositor_pared",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "pel_prod_champu_nutritivo|pel_prod_champ",
+     "n": 10
+    },
+    {
+     "entrada": 8,
+     "obj": "pel_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "pel_cartel_precios",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pel_sofa_espera",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "pel_mesa_revistas",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "revista|periodico|pel_botes_pinzas",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "pel_revistero_pared",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "pel_cartel_peinados_a|pel_cartel_peinado",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "pel_estacion_blanca|pel_estacion_madera|",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "pel_sillon_corte_rosa",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "pel_estacion_negra|pel_estacion_blanca|p",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "pel_sillon_corte_blanco",
+     "n": 2
+    },
+    {
+     "entrada": 26,
+     "obj": "pel_sillon_corte_negro",
+     "n": 0
+    },
+    {
+     "entrada": 27,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 5
+    },
+    {
+     "entrada": 28,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 6
+    },
+    {
+     "entrada": 29,
+     "obj": "pel_carrito_blanco|pel_carrito_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_bol_tinte|pel_tubo_tinte|pel_capa_co",
+     "n": 6
+    },
+    {
+     "entrada": 31,
+     "obj": "pel_secador_casco_crema|pel_secador_casc",
+     "n": 2
+    },
+    {
+     "entrada": 32,
+     "obj": "pel_lavacabezas_negro|pel_lavacabezas_ro",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "pel_toallas_dobladas|pel_capa_corte|pel_",
+     "n": 11
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fregona_cubo|escoba",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "pel_caja_tinte|pel_bidon_oxidante|caja_c",
+     "n": 4
+    },
+    {
+     "entrada": 41,
+     "obj": "pel_esterilizador|pel_bidon_oxidante",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 44,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 5.2,
+     "libre_m2": 5.2
+    },
+    "espera": {
+     "alcanzable_m2": 0.85,
+     "libre_m2": 0.85
+    },
+    "caja": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_caja": {
+     "alcanzable_m2": 0.85,
+     "libre_m2": 0.85
+    },
+    "tras_caja": {
+     "alcanzable_m2": 0.15,
+     "libre_m2": 0.15
+    },
+    "est_w": {
+     "alcanzable_m2": 0.41,
+     "libre_m2": 0.41
+    },
+    "est_e": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.27
+    },
+    "centro": {
+     "alcanzable_m2": 2.96,
+     "libre_m2": 2.96
+    },
+    "lavado": {
+     "alcanzable_m2": 5.75,
+     "libre_m2": 5.75
+    },
+    "pasillo_fondo": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trastienda": {
+     "alcanzable_m2": 1.19,
+     "libre_m2": 1.19
+    },
+    "luces": {
+     "alcanzable_m2": 22.38,
+     "libre_m2": 22.38
+    }
+   },
+   "luz": {
+    "entrada": 0.19,
+    "espera": 0.264,
+    "frente_caja": 0.407,
+    "est_w": 0.296,
+    "est_e": 0.367,
+    "centro": 0.433,
+    "lavado": 0.217,
+    "pasillo_fondo": null
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 18984,
+   "mallas": 24,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.875
+  },
+  {
+   "kit": "peluqueria",
+   "tipologia": "tienda_especializada",
+   "seed": 3,
+   "W": 6.3,
+   "D": 9,
+   "guardias": 35,
+   "objetos": 72,
+   "distintos": 48,
+   "hash": "c5cb15d1",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "pel_mostrador_caja",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "pel_perfumes_vitrina",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "pel_agenda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "bote_propinas|tarjetero|bote_caramelos",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "pel_expositor_pared",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "pel_prod_champu_nutritivo|pel_prod_champ",
+     "n": 8
+    },
+    {
+     "entrada": 8,
+     "obj": "pel_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "pel_cartel_precios",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 12,
+     "obj": "pel_sofa_espera",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "pel_mesa_revistas",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "revista|periodico|pel_botes_pinzas",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "pel_revistero_pared",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "pel_cartel_peinados_a|pel_cartel_peinado",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "pel_estacion_blanca|pel_estacion_madera|",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "pel_sillon_corte_rosa",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "pel_estacion_negra|pel_estacion_blanca|p",
+     "n": 2
+    },
+    {
+     "entrada": 25,
+     "obj": "pel_sillon_corte_blanco",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "pel_sillon_corte_negro",
+     "n": 0
+    },
+    {
+     "entrada": 27,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 5
+    },
+    {
+     "entrada": 28,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 4
+    },
+    {
+     "entrada": 29,
+     "obj": "pel_carrito_blanco|pel_carrito_rosa",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_bol_tinte|pel_tubo_tinte|pel_capa_co",
+     "n": 2
+    },
+    {
+     "entrada": 31,
+     "obj": "pel_secador_casco_crema|pel_secador_casc",
+     "n": 2
+    },
+    {
+     "entrada": 32,
+     "obj": "pel_lavacabezas_negro|pel_lavacabezas_ro",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "pel_toallas_dobladas|pel_capa_corte|pel_",
+     "n": 9
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fregona_cubo|escoba",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "pel_caja_tinte|pel_bidon_oxidante|caja_c",
+     "n": 5
+    },
+    {
+     "entrada": 41,
+     "obj": "pel_esterilizador|pel_bidon_oxidante",
+     "n": 1
+    },
+    {
+     "entrada": 42,
+     "obj": "pel_cesto_ropa",
+     "n": 0
+    },
+    {
+     "entrada": 43,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 44,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.94,
+     "libre_m2": 4.94
+    },
+    "espera": {
+     "alcanzable_m2": 0.69,
+     "libre_m2": 0.69
+    },
+    "caja": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_caja": {
+     "alcanzable_m2": 0.78,
+     "libre_m2": 0.78
+    },
+    "tras_caja": {
+     "alcanzable_m2": 0.15,
+     "libre_m2": 0.15
+    },
+    "est_w": {
+     "alcanzable_m2": 0.09,
+     "libre_m2": 0.09
+    },
+    "est_e": {
+     "alcanzable_m2": 0.8,
+     "libre_m2": 0.8
+    },
+    "centro": {
+     "alcanzable_m2": 1.89,
+     "libre_m2": 1.89
+    },
+    "lavado": {
+     "alcanzable_m2": 5.05,
+     "libre_m2": 5.05
+    },
+    "pasillo_fondo": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trastienda": {
+     "alcanzable_m2": 0.99,
+     "libre_m2": 0.99
+    },
+    "luces": {
+     "alcanzable_m2": 19.28,
+     "libre_m2": 19.28
+    }
+   },
+   "luz": {
+    "entrada": 0.204,
+    "espera": 0.284,
+    "frente_caja": 0.428,
+    "est_w": 0.313,
+    "est_e": 0.387,
+    "centro": 0.458,
+    "lavado": 0.233,
+    "pasillo_fondo": null
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 13790,
+   "mallas": 24,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "peluqueria",
+   "tipologia": "tienda_especializada",
+   "seed": 4,
+   "W": 6,
+   "D": 11.4,
+   "guardias": 53,
+   "objetos": 106,
+   "distintos": 51,
+   "hash": "c0dc18ac",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "pel_mostrador_caja",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "pel_perfumes_vitrina",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "pel_agenda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "bote_propinas|tarjetero|bote_caramelos",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "pel_expositor_pared",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "pel_prod_champu_nutritivo|pel_prod_champ",
+     "n": 10
+    },
+    {
+     "entrada": 8,
+     "obj": "pel_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "pel_cartel_precios",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pel_sofa_espera",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "pel_mesa_revistas",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "revista|periodico|pel_botes_pinzas",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "pel_revistero_pared",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "pel_cartel_peinados_a|pel_cartel_peinado",
+     "n": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "perchero",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 21,
+     "obj": "pel_estacion_blanca|pel_estacion_madera|",
+     "n": 4
+    },
+    {
+     "entrada": 22,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "pel_sillon_corte_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "pel_estacion_negra|pel_estacion_blanca|p",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "pel_sillon_corte_blanco",
+     "n": 2
+    },
+    {
+     "entrada": 26,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 10
+    },
+    {
+     "entrada": 28,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 12
+    },
+    {
+     "entrada": 29,
+     "obj": "pel_carrito_blanco|pel_carrito_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_bol_tinte|pel_tubo_tinte|pel_capa_co",
+     "n": 6
+    },
+    {
+     "entrada": 31,
+     "obj": "pel_secador_casco_crema|pel_secador_casc",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "pel_lavacabezas_negro|pel_lavacabezas_ro",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "pel_toallas_dobladas|pel_capa_corte|pel_",
+     "n": 11
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fregona_cubo|escoba",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "pel_caja_tinte|pel_bidon_oxidante|caja_c",
+     "n": 4
+    },
+    {
+     "entrada": 41,
+     "obj": "pel_esterilizador|pel_bidon_oxidante",
+     "n": 2
+    },
+    {
+     "entrada": 42,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lavabo",
+     "n": 1
+    },
+    {
+     "entrada": 44,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.79,
+     "libre_m2": 4.79
+    },
+    "espera": {
+     "alcanzable_m2": 0.4,
+     "libre_m2": 0.4
+    },
+    "caja": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_caja": {
+     "alcanzable_m2": 0.78,
+     "libre_m2": 0.78
+    },
+    "tras_caja": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "est_w": {
+     "alcanzable_m2": 0.72,
+     "libre_m2": 0.72
+    },
+    "est_e": {
+     "alcanzable_m2": 0.68,
+     "libre_m2": 0.68
+    },
+    "centro": {
+     "alcanzable_m2": 6.15,
+     "libre_m2": 6.15
+    },
+    "lavado": {
+     "alcanzable_m2": 4.32,
+     "libre_m2": 4.32
+    },
+    "pasillo_fondo": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trastienda": {
+     "alcanzable_m2": 0.66,
+     "libre_m2": 0.66
+    },
+    "luces": {
+     "alcanzable_m2": 21.83,
+     "libre_m2": 21.83
+    }
+   },
+   "luz": {
+    "entrada": 0.213,
+    "espera": 0.297,
+    "frente_caja": 0.437,
+    "est_w": 0.316,
+    "est_e": 0.32,
+    "centro": 0.417,
+    "lavado": 0.211,
+    "pasillo_fondo": null
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 20074,
+   "mallas": 24,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "peluqueria",
+   "tipologia": "tienda_especializada",
+   "seed": 5,
+   "W": 6.9,
+   "D": 10.8,
+   "guardias": 51,
+   "objetos": 107,
+   "distintos": 56,
+   "hash": "34605d04",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "pel_mostrador_caja",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "pel_perfumes_vitrina",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "pel_agenda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "datafono",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "bote_propinas|tarjetero|bote_caramelos",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "pel_expositor_pared",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "pel_prod_champu_nutritivo|pel_prod_champ",
+     "n": 10
+    },
+    {
+     "entrada": 8,
+     "obj": "pel_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "pel_cartel_precios",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "reloj_pared",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "pel_sofa_espera",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "pel_mesa_revistas",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "revista|periodico|pel_botes_pinzas",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "pel_revistero_pared",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "pel_cartel_peinados_a|pel_cartel_peinado",
+     "n": 2
+    },
+    {
+     "entrada": 17,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "perchero",
+     "n": 1
+    },
+    {
+     "entrada": 19,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "paraguas_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "pel_estacion_blanca|pel_estacion_madera|",
+     "n": 4
+    },
+    {
+     "entrada": 22,
+     "obj": "pel_sillon_corte_negro",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "pel_sillon_corte_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 24,
+     "obj": "pel_estacion_negra|pel_estacion_blanca|p",
+     "n": 4
+    },
+    {
+     "entrada": 25,
+     "obj": "pel_sillon_corte_blanco",
+     "n": 2
+    },
+    {
+     "entrada": 26,
+     "obj": "pel_sillon_corte_negro",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 10
+    },
+    {
+     "entrada": 28,
+     "obj": "pel_secador_mano|pel_plancha_pelo|pel_ce",
+     "n": 9
+    },
+    {
+     "entrada": 29,
+     "obj": "pel_carrito_blanco|pel_carrito_rosa",
+     "n": 2
+    },
+    {
+     "entrada": 30,
+     "obj": "pel_bol_tinte|pel_tubo_tinte|pel_capa_co",
+     "n": 7
+    },
+    {
+     "entrada": 31,
+     "obj": "pel_secador_casco_crema|pel_secador_casc",
+     "n": 2
+    },
+    {
+     "entrada": 32,
+     "obj": "pel_lavacabezas_negro|pel_lavacabezas_ro",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "pel_toallas_dobladas|pel_capa_corte|pel_",
+     "n": 10
+    },
+    {
+     "entrada": 35,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 36,
+     "obj": "fregona_cubo|escoba",
+     "n": 0
+    },
+    {
+     "entrada": 37,
+     "obj": "pel_calentador_toallas",
+     "n": 0
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "estanteria_metalica",
+     "n": 1
+    },
+    {
+     "entrada": 40,
+     "obj": "pel_caja_tinte|pel_bidon_oxidante|caja_c",
+     "n": 4
+    },
+    {
+     "entrada": 41,
+     "obj": "pel_esterilizador|pel_bidon_oxidante",
+     "n": 2
+    },
+    {
+     "entrada": 42,
+     "obj": "pel_cesto_ropa",
+     "n": 1
+    },
+    {
+     "entrada": 43,
+     "obj": "lavabo",
+     "n": 0
+    },
+    {
+     "entrada": 44,
+     "obj": "lampara_panel_led",
+     "n": 10
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 5.51,
+     "libre_m2": 5.51
+    },
+    "espera": {
+     "alcanzable_m2": 0.81,
+     "libre_m2": 0.81
+    },
+    "caja": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_caja": {
+     "alcanzable_m2": 0.78,
+     "libre_m2": 0.78
+    },
+    "tras_caja": {
+     "alcanzable_m2": 0.08,
+     "libre_m2": 0.08
+    },
+    "est_w": {
+     "alcanzable_m2": 0.05,
+     "libre_m2": 0.05
+    },
+    "est_e": {
+     "alcanzable_m2": 0.75,
+     "libre_m2": 0.75
+    },
+    "centro": {
+     "alcanzable_m2": 5.93,
+     "libre_m2": 5.93
+    },
+    "lavado": {
+     "alcanzable_m2": 6.46,
+     "libre_m2": 6.46
+    },
+    "pasillo_fondo": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "trastienda": {
+     "alcanzable_m2": 0.27,
+     "libre_m2": 0.49
+    },
+    "luces": {
+     "alcanzable_m2": 26.3,
+     "libre_m2": 26.51
+    }
+   },
+   "luz": {
+    "entrada": 0.237,
+    "espera": 0.338,
+    "frente_caja": 0.498,
+    "est_w": 0.237,
+    "est_e": 0.279,
+    "centro": 0.362,
+    "lavado": 0.08,
+    "pasillo_fondo": null
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 22714,
+   "mallas": 25,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

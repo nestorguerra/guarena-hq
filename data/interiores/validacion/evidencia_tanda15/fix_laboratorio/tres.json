@@ -1,0 +1,242 @@
+{
+  "state": "CPU_LITERAL_BUILDLOCAL_3_GREEN",
+  "scope": "root snapshot current, buildLocal/revisar literal, raw JSON in memory; W/D/H/door same as original RED; no GPU/build/active changes",
+  "rows": [
+    {
+      "seed": 29,
+      "before": {
+        "W": 5.9,
+        "D": 2.1,
+        "H": 2.75,
+        "hash": "d8ee0517",
+        "errors": [
+          "obligatorio: estancia/vb_alfombra_juego — 0 colocados, el kit pide 1"
+        ]
+      },
+      "after": {
+        "W": 5.9,
+        "D": 2.1,
+        "H": 2.75,
+        "hash": "bd24b7b0",
+        "errors": [],
+        "generacion": {
+          "semillaSolicitada": 29,
+          "semillaEfectiva": 104758,
+          "intento": 1,
+          "maximo": 12,
+          "agotado": false,
+          "marco": {
+            "W": 5.9,
+            "D": 2.1,
+            "H": 2.75,
+            "puertaX": -0.75
+          },
+          "intentos": [
+            {
+              "seed": 29,
+              "faltan": [
+                6
+              ],
+              "busquedasSuelo": [
+                {
+                  "entrada": 6,
+                  "probados": 4124,
+                  "colocados": 0,
+                  "limite": 16000
+                }
+              ]
+            },
+            {
+              "seed": 104758,
+              "faltan": []
+            }
+          ]
+        },
+        "rug": [
+          {
+            "i": 6,
+            "e": 6,
+            "obj": "vb_alfombra_juego",
+            "zona": "estancia",
+            "regla": "suelo_libre",
+            "x": 1.766,
+            "y": 0,
+            "z": 1.19,
+            "ry": 3.04,
+            "sop": null,
+            "sup": null,
+            "de": null,
+            "clase": "PICKUP",
+            "v": {
+              "cx": 1.7660765066622663,
+              "cz": 1.1895990508772638,
+              "hw": 0.8999999761581421,
+              "hd": 0.6499999761581421,
+              "a": 3.0399522232635707,
+              "y0": -5.215406578829018e-11,
+              "y1": 0.014000000432133675
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seed": 51,
+      "before": {
+        "W": 3.5,
+        "D": 2.1,
+        "H": 2.75,
+        "hash": "83fa2dc0",
+        "errors": [
+          "obligatorio: estancia/vb_alfombra_juego_compacta — 0 colocados, el kit pide 1"
+        ]
+      },
+      "after": {
+        "W": 3.5,
+        "D": 2.1,
+        "H": 2.75,
+        "hash": "7418dcdd",
+        "errors": [],
+        "generacion": {
+          "semillaSolicitada": 51,
+          "semillaEfectiva": 104780,
+          "intento": 1,
+          "maximo": 12,
+          "agotado": false,
+          "marco": {
+            "W": 3.5,
+            "D": 2.1,
+            "H": 2.75,
+            "puertaX": -0.75
+          },
+          "intentos": [
+            {
+              "seed": 51,
+              "faltan": [
+                7
+              ],
+              "busquedasSuelo": [
+                {
+                  "entrada": 7,
+                  "probados": 4496,
+                  "colocados": 0,
+                  "limite": 16000
+                }
+              ]
+            },
+            {
+              "seed": 104780,
+              "faltan": [],
+              "busquedasSuelo": [
+                {
+                  "entrada": 7,
+                  "probados": 468,
+                  "colocados": 1,
+                  "limite": 16000
+                }
+              ]
+            }
+          ]
+        },
+        "rug": [
+          {
+            "i": 6,
+            "e": 7,
+            "obj": "vb_alfombra_juego_compacta",
+            "zona": "estancia",
+            "regla": "suelo_libre",
+            "x": 1.09,
+            "y": 0,
+            "z": 0.924,
+            "ry": -0.1262,
+            "sop": null,
+            "sup": null,
+            "de": null,
+            "clase": "PICKUP",
+            "v": {
+              "cx": 1.0895298837125302,
+              "cz": 0.9239126250520349,
+              "hw": 0.6000000238418579,
+              "hd": 0.42500001192092896,
+              "a": -0.12624493908794038,
+              "y0": -5.215406578829018e-11,
+              "y1": 0.014000000432133675
+            }
+          }
+        ]
+      }
+    },
+    {
+      "seed": 63,
+      "before": {
+        "W": 3.5,
+        "D": 3.6,
+        "H": 2.75,
+        "hash": "ce625c71",
+        "errors": [
+          "obligatorio: estancia/vb_alfombra_juego — 0 colocados, el kit pide 1"
+        ]
+      },
+      "after": {
+        "W": 3.5,
+        "D": 3.6,
+        "H": 2.75,
+        "hash": "ac92d891",
+        "errors": [],
+        "generacion": {
+          "semillaSolicitada": 63,
+          "semillaEfectiva": 63,
+          "intento": 0,
+          "maximo": 12,
+          "agotado": false,
+          "marco": {
+            "W": 3.5,
+            "D": 3.6,
+            "H": 2.75,
+            "puertaX": -0.75
+          },
+          "intentos": [
+            {
+              "seed": 63,
+              "faltan": [],
+              "busquedasSuelo": [
+                {
+                  "entrada": 6,
+                  "probados": 1683,
+                  "colocados": 1,
+                  "limite": 16000
+                }
+              ]
+            }
+          ]
+        },
+        "rug": [
+          {
+            "i": 6,
+            "e": 6,
+            "obj": "vb_alfombra_juego",
+            "zona": "estancia",
+            "regla": "suelo_libre",
+            "x": 0.76,
+            "y": 0,
+            "z": 0.91,
+            "ry": 1.5708,
+            "sop": null,
+            "sup": null,
+            "de": null,
+            "clase": "PICKUP",
+            "v": {
+              "cx": 0.7599999761581422,
+              "cz": 0.9099999761581421,
+              "hw": 0.8999999761581421,
+              "hd": 0.6499999761581421,
+              "a": 1.5707963267948966,
+              "y0": -5.215406578829018e-11,
+              "y1": 0.014000000432133675
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

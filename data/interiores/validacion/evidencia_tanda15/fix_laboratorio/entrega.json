@@ -1,0 +1,57 @@
+{
+  "state": "PRIVATE_CPU_COMPLETE_PENDING_ROOT_GATES",
+  "source": "root active Bv3+T17 variant sealed by hashes, not HEAD05 alone; no compiled or finish copied",
+  "before": {
+    "src/locales.js": "6a86a62488f1d3162387c32414bd7c244b321f0d85658507ecf9cddbbf10dad3",
+    "data/kits/vivienda_ninos.json": "e04c07747886e8b397591a75b8be28cd0f527eff5812fe522a90f7a63fe8ad66",
+    "data/objetos/vivienda_b.json": "42d80ffe515d45e7f3dde04b602601ac008b3e184ca9150f5f0bf83b4b8f769e",
+    "src/houses.js": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706",
+    "src/acabados_vivienda.js": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9"
+  },
+  "sha256": {
+    "motor.patch": "36741ece79bdbbfb4d2d26855a53e233e9e62b3267929eb56a37682e4ffcec42",
+    "contratos.patch": "d307663d86d2ae8d178c872e777dd82fee8e9a115d35c902925cbb2c27702bef",
+    "tres.json": "fb4e6803198101e640ec43615906ef2c396713a462a11245d7b6a29be28f0771",
+    "controles.json": "a355b1a3e82e3029a31209244b7ca802c320d68a52cae9e13604aba5f08e58c6",
+    "contratos.json": "006d68c090cee1f98d9254790f3055fb69223fdebd29c1029e367d8ffcfaf705",
+    "src/locales.js": "292727250d35dfae48ac125a8b767154135054b469f6f207772b984b26c7f516",
+    "tools/interiores/validar.js": "592dd322dc184ab6beb1e06981ff1fea978f1738925e61a7927b00e1f74af348",
+    "data/kits/vivienda_ninos.json": "9e4cfc2881cbc23b2a270bcac945498f3baa1118e042c32f3157fc567063c50a",
+    "data/kits/kit.schema.json": "4e23942f376a2fff838e16bb055dd65b9ef6105c66b614c967b8843dde31400c",
+    "tools/interiores/kits_vivienda_b.py": "486141fa1c52bb22a71c92c5a08a81047562e6bad04495d8a85d4a5a1517a551",
+    "runtime.cpu.mjs": "09c1a0aa906521b5a4eea98f357f45662d697db5dca56230ff0ba7064ee9b770",
+    "tres.cpu.mjs": "818b5855afe8d013043e9f38e56b95f653ac2117afa35bcbdc3e0cd9dac9c9b1",
+    "controles.cpu.mjs": "53795b0dd055a0ccc4423c7953ef9ea7265d6972ce5dbc6bc939bf51efa21483",
+    "contratos.cpu.mjs": "7fa60d3a3c927cd6ad71cd4f2173ddd4e64bab5bb0055b87d79de8f613de769c",
+    "contratos.inc": "216cbb504a0b530eae7fbd98dd5f690900daa44705d076d4fe2a8df47253a23d"
+  },
+  "counts": {
+    "otherKits": 39,
+    "children": 81,
+    "previouslyPassingChildren": 78,
+    "houses": 31,
+    "errors": 0
+  },
+  "negativo_agotado": {
+    "pass": true,
+    "attempts": 12,
+    "frame": [
+      3.5,
+      2.1,
+      2.75,
+      -0.75
+    ]
+  },
+  "contractGate": 18,
+  "callbackState": "CPU_EXACT_CALLBACKS_GATE18_PASS",
+  "applyCheckContracts": "PASS after root integrated motor",
+  "firstCallbackAttempt": "correctly refused changed active source; preserved historico_guardia_post_integracion.stderr, not a functional failure or PASS",
+  "runtimeAfterIntegration": "affected baseline sources read from original strings already sealed in base.json; delta private applied in memory, all unchanged dependencies still checked against original SHA",
+  "limits": [
+    "No GPU/browser/build/CI/publication performed by author",
+    "Only minima trigger retries; full validation remains authoritative",
+    "Grid is finite, .05m, four cardinal angles and16000 checks per failed opted entry; not complete geometry search",
+    "39 other kits checked only seed1;78 previously valid infant laboratories and31 full houses checked for exact identity",
+    "Root reported motor applied locally and source regeneration; its complete gates remain pending"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+ "resultado": {
+  "estado": "PASS",
+  "alcance": "Cuatro puertas reales; tres bancos selección/sit/stand por métodos de producto, collider .34 y restauración; 2162 sin banco. Reposición privada al acceso; no recorrido desde entrada ni evaluación visual de animación. Residentes conservados. No compras ni recogida.",
+  "rows": [
+   {
+    "seed": 2132,
+    "estado": "PASS",
+    "entrada_ms": 203.9,
+    "programa": {
+     "perfil": "cazador",
+     "area": 14.335995450380073,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.239650459238,
+     "y": 0,
+     "z": -5197.475000052452,
+     "h": -1.5707963267948966,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.8196504580455,
+      "y": 0,
+      "z": -5197.475000052452,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 4204,
+    "estado": "PASS",
+    "entrada_ms": 110.4,
+    "programa": {
+     "perfil": "cazador",
+     "area": 15.991762687744414,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.568458024259,
+     "y": 0,
+     "z": -5196.412145199021,
+     "h": 3.141592653589793,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.568458024259,
+      "y": 0,
+      "z": -5196.992145197829,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 1679,
+    "estado": "PASS",
+    "entrada_ms": 98.7,
+    "programa": {
+     "perfil": "cazador",
+     "area": 14.587230606839851,
+     "gap_real": 0.32000000000000006,
+     "banco": 1,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    },
+    "asiento": {
+     "x": -5195.244045484183,
+     "y": 0,
+     "z": -5197.475000052452,
+     "h": -1.5707963267948966,
+     "registros": 1,
+     "distancia_seleccion": 0.5799999988075797,
+     "seleccion_real": true,
+     "sentado": true,
+     "levantado": true,
+     "salida_libre": true,
+     "salida": {
+      "x": -5195.82404548299,
+      "y": 0,
+      "z": -5197.475000052452,
+      "ruta": "standPos"
+     },
+     "posicion_restaurada": true
+    }
+   },
+   {
+    "seed": 2162,
+    "estado": "PASS",
+    "entrada_ms": 79,
+    "programa": {
+     "perfil": "cazador",
+     "area": 11.767969083226646,
+     "gap_real": 0.32000000000000006,
+     "banco": 0,
+     "botin": [
+      "rifle",
+      "prismaticos"
+     ],
+     "acciones": [
+      "read",
+      "drawer"
+     ]
+    }
+   }
+  ]
+ },
+ "consola": [],
+ "limites": "Paquete local previo al commit; no prueba Pages ni SHA público."
+}

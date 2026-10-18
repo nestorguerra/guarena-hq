@@ -1,0 +1,67 @@
+{
+  "decision": "APROBADO_PARA_CAPTURA_PRIVADA_FINAL",
+  "scope": "Revisión estática independiente; no integración ni aprobación estética",
+  "blockingFindings": [],
+  "manifest": {
+    "sha256": "5bb39f7bc90b1a8091a9cb302669777719e99e6ae2de19e44c0ee1fee7be9c5a",
+    "entriesVerified": 298,
+    "mismatches": []
+  },
+  "patch": {
+    "sha256": "222f89128d77a6ff61a28d2d226c192765877cdd1cb0116625a2b94601bb0dd9",
+    "sourceFiles": 5,
+    "replayedInMemoryExact": true,
+    "includesRootFinishR2": true
+  },
+  "activeFiveSourcesEqualBaseT16": true,
+  "canonicalCoreRecordedPosesEqualR2": [
+    3244,
+    1594,
+    1481
+  ],
+  "authorCpuReceiptsReviewed": {
+    "houses": 23,
+    "realStudies": [
+      3244,
+      1594
+    ],
+    "syntheticStudy": 1481,
+    "nonStudyControls": 20,
+    "maxMeshes": 59,
+    "maxTriangles": 63274,
+    "maxLights": 9,
+    "annieSeeds": [
+      12,
+      13
+    ],
+    "fallbackFixedSeed": 4,
+    "fallbackLabWindowNotReserved": true
+  },
+  "receiptHashes": {
+    "entrega.md": "cca62527d5640b3a15dfe5f21ed8f21c7d493af7643b173027e0de621bf22a41",
+    "full.json": "4357c13cb32940f877f2ca24cd14d27b1d3a1f225697d706f8240b99569c953c",
+    "geometria.json": "f342b180b2df94db84000f5c96272f5a06907e676f305f1addd778e41ecb7ab5",
+    "annie.json": "d2a8b6943a4af9b78f16ea8a9b1bffaccebee12f53d4fc73e81ffa7ee7816354",
+    "tela_final.json": "037bea3e6d9e5a4083ba24e9b8e6895778ed2a0c0c66a1e9d825ac4cc32d7dbb",
+    "fallback_final.json": "37ae282309545c2c3ae5cbd35b19a3f86cfc402bcb0d5c3916815ecfea6f5018",
+    "negativos.json": "21c9ff909041eeb3fb7f2c6d184ecdcb380a0e02e70fa1691da215332e3d8dc4",
+    "regeneracion.json": "2899ecd7a871e8ba3c1ad5946a3949bb5d68b9c5c138ba1f79974d2f5a9baa1f"
+  },
+  "notExecutedByReviewer": [
+    "constructors",
+    "generators",
+    "build",
+    "GPU",
+    "browser",
+    "API"
+  ],
+  "pending": [
+    "GREEN final T20 en snapshot",
+    "captura visual privada",
+    "revisión estética",
+    "gates de producción",
+    "integración fuente/paquete",
+    "publicación"
+  ],
+  "reportSha256": "57f00a4678fefa60252dabdd53767f1df841eaa92ce52d1fae44acedfa9ab830"
+}

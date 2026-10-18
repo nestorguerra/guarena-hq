@@ -1,0 +1,40 @@
+--- a/src/composicion_estar_salon.js
++++ b/src/composicion_estar_salon.js
+@@ -2,7 +2,7 @@
+ import { OBJETOS } from './interiores_datos.js';
+ import { caja } from './objetos.js';
+ import { rot, partes, penetra, superficie, mapaPaso } from './interiores_geo.js';
+-export function componerEstar({P,K,ctx,planta,H,libres,inicio,aceptar}){
++export function componerEstar({P,K,ctx,planta,H,libres,inicio,aceptar,asientoLectura=null}){
+   const cfg=K.composicion_lectura;
+   if(!cfg||K.tipologia!=='salon'||!ctx?.funciones||!cfg.perfiles.includes(ctx.perfil)||planta.W*planta.D<cfg.area_min)return null;
+   const root=p=>p.sop==null&&p.de==null&&!['pared','techo'].includes(p.regla);
+@@ -19,7 +19,7 @@
+   const parts=Q=>Q.flatMap(p=>partes(p).concat(root(p)&&OBJETOS[p.obj].clase!=='PICKUP'&&caja(p.obj).h>=.3?[volume(p)]:[]));
+   const baseline=mapaPaso(planta,parts(P),.05,.8,inicio);
+   const distance=(map,x,z)=>{let d=Infinity;for(let i=0;i<map.reach.length;i++)if(map.reach[i])d=Math.min(d,Math.hypot(-planta.W/2+(i%map.nx+.5)*map.S-x,(Math.floor(i/map.nx)+.5)*map.S-z));return d;};
+-  const seats=P.flatMap(p=>['sofa','sillon','silla'].includes(OBJETOS[p.obj].rol)?(OBJETOS[p.obj].asientos||[]).map(a=>{const[x,z]=rot(a.p[0],a.p[2],p.ry);return{x:p.x+x,z:p.z+z};}):[]).filter(s=>distance(baseline,s.x,s.z)<1.2);
++  const seats=P.flatMap((p,i)=>(['sofa','sillon','silla'].includes(OBJETOS[p.obj].rol)||i===asientoLectura)?(OBJETOS[p.obj].asientos||[]).map(a=>{const[x,z]=rot(a.p[0],a.p[2],p.ry);return{x:p.x+x,z:p.z+z};}):[]).filter(s=>distance(baseline,s.x,s.z)<1.25);
+   const attempts=[];
+   for(const gap of [.55,.65,.75,.85,.95])for(const lateral of [0,-.1,.1]){
+     const[dx,dz]=rot((sb.x0+sb.x1)/2+lateral,sb.z1+gap-tb.z0,sofa.ry),target={x:sofa.x+dx,z:sofa.z+dz,ry:sofa.ry};
+@@ -40,7 +40,7 @@
+     }
+     if(!errors.length){const map=mapaPaso(planta,parts(Q),.05,.8,inicio),ix=Math.floor((inicio.x+planta.W/2)/map.S),iz=Math.floor(inicio.z/map.S),c=iz*map.nx+ix;
+       if(ix<0||ix>=map.nx||iz<0||iz>=map.nz||!map.free[c]||!map.reach[c])errors.push('inicio');
+-      if(seats.some(s=>distance(map,s.x,s.z)>=1.2))errors.push('asiento');
++      if(seats.some(s=>distance(map,s.x,s.z)>=1.25))errors.push('asiento');
+       if(!aceptar(Q))errors.push('paso_o_uso');
+     }
+     attempts.push({gap,lateral,errores:[...new Set(errors)]});
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -738,7 +738,7 @@
+   if(lectura){P.splice(0,P.length,...lectura.P);composicionLectura=lectura.metadata;}
+ 
+   let composicionEstar;
+-  const estar=componerEstar({P,K,ctx,planta,H,libres,inicio,aceptar:candidatos=>{
++  const estar=componerEstar({P,K,ctx,planta,H,libres,inicio,asientoLectura:composicionLectura?.asiento,aceptar:candidatos=>{
+     const original=P.slice(),g=guardias;
+     try{P.splice(0,P.length,...candidatos);return !cierra([]);}
+     finally{P.splice(0,P.length,...original);guardias=g;}

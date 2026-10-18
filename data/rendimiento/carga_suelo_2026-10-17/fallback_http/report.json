@@ -1,0 +1,4118 @@
+{
+  "status": "FUNCTIONAL_CHECKS_PASSED_VISUAL_PENDING",
+  "scope": "real HTTP 404, normal intro, private browser context",
+  "expected404": [
+    "/assets/tex/asphalt_02_d.jpg",
+    "/assets/tex/dirty_concrete_n.jpg"
+  ],
+  "optionalLocal404": "/data/rotulos/reales.local.json",
+  "serverErrors": [],
+  "serverConfig": {
+    "request_queue_size": 128,
+    "protocol": "HTTP/1.1",
+    "daemon_threads": true
+  },
+  "candidate": "/Users/nestorguerra/Proyectos Vibe/Guarena HQ/.cache/perf-beta/candidate-ground-t12/dist",
+  "http": [
+    {
+      "method": "GET",
+      "path": "/test.html?estilo=real",
+      "status": 200,
+      "size": "-",
+      "time": 1792266427.651885
+    },
+    {
+      "method": "GET",
+      "path": "/assets/intro_real.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266428.117516
+    },
+    {
+      "method": "GET",
+      "path": "/assets/intro_real_cerca.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266428.182039
+    },
+    {
+      "method": "GET",
+      "path": "/data/rotulos/reales.local.json",
+      "status": 404,
+      "size": "-",
+      "time": 1792266429.217782
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico",
+      "status": 204,
+      "size": "-",
+      "time": 1792266429.259081
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/iglesia.glb",
+      "status": 200,
+      "size": "-",
+      "time": 1792266430.920814
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/asphalt_02_d.jpg",
+      "status": 404,
+      "size": "-",
+      "time": 1792266434.1647942
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/dirty_concrete_d.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.165424
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/dry_ground_01_d.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.168056
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/gravel_floor_02_d.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.168382
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/dirty_concrete_n.jpg",
+      "status": 404,
+      "size": "-",
+      "time": 1792266434.169466
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/dry_ground_01_n.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.171364
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/gravel_floor_02_n.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.17177
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/withered_grass_d.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.171937
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/sparse_grass_d.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.172891
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/asphalt_02_n.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.172964
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/withered_grass_n.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.174325
+    },
+    {
+      "method": "GET",
+      "path": "/assets/tex/sparse_grass_n.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266434.175998
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/interior.glb",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.171695
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/interior.json",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.305185
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/cal_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.325479
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/granito_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.344625
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/cal_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.346545
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/granito_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.348636
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/granito_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.350979
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/suelo_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.3539991
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/suelo_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.363672
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/suelo_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.366797
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/vidrio_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.3713121
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/madera_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.383679
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/madera_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.3841228
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/cal_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.3850398
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/madera_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.40164
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/terciopelo_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.402487
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/dorado_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4028711
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/terciopelo_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.403616
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/dorado_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.404059
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/talla_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4111302
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/dorado_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.412767
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/talla_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4146109
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/talla_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4151108
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/terciopelo_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.415193
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/plata_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.415827
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/plata_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4168131
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/azul_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.417724
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/azul_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.418005
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/lino_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.418729
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/blanco_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.420147
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/lino_nor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.422864
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/hierro_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.430197
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/marmol_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.432947
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/lino_rough.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4334002
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/hierro_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.433482
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/marmol_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.43439
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/cielo.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.44819
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/noche.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.448797
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sol_0930.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.4496078
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sol_1200.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.450479
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sol_1700.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.451146
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sol_1430.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.452016
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sol_1930.webp",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.467716
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/luz/sondas.bin",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.499467
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/pedro.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.517695
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/andres.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5184572
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/santiago.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.51969
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/pablo.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.520201
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/juan.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5216901
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/tomas.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.52238
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/mateo.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5293472
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/felipe.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.52981
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/bartolome.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.530216
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/jeronimo.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.531442
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/tadeo.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.532353
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/menor.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5325282
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/simon.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.53312
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/crucifixion.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.534143
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/ambrosio.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5387552
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/gregorio.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.542581
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/agustin.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5433128
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/bautismo.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.5493639
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/isidro.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.551102
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/ana.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.551409
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/lucia.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.584676
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/isabel.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.588332
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/roque.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.588702
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/antonio.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.589844
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/cuadros/francisco.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.591996
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/imagenes.glb",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.636415
+    },
+    {
+      "method": "GET",
+      "path": "/assets/hq/interior/tex/ojo_diff.jpg",
+      "status": 200,
+      "size": "-",
+      "time": 1792266443.872641
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico",
+      "status": 204,
+      "size": "-",
+      "time": 1792266449.186395
+    }
+  ],
+  "events": [
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "61FBA330885659FD3827642943F679FD",
+      "url": "http://127.0.0.1:54128/test.html?estilo=real"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "61FBA330885659FD3827642943F679FD",
+      "url": "http://127.0.0.1:54128/test.html?estilo=real",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.2",
+      "url": "https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.2",
+      "url": "https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.28",
+      "url": "http://127.0.0.1:54128/assets/intro_real.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.28",
+      "url": "http://127.0.0.1:54128/assets/intro_real.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.6",
+      "url": "https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.24",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuYMBYro.woff2"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.21",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuYMBYro.woff2"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.9",
+      "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5ynghnQ.woff2"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.29",
+      "url": "http://127.0.0.1:54128/assets/intro_real_cerca.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.29",
+      "url": "http://127.0.0.1:54128/assets/intro_real_cerca.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.30",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.31",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.32",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/RenderPass.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.33",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.34",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.35",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.36",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.37",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/CopyShader.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.38",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.39",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.40",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/meshopt_decoder.module.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.41",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/objects/Sky.js/+esm"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.42",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js/+esm"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.9",
+      "url": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5ynghnQ.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.21",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuYMBYro.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.6",
+      "url": "https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.24",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuYMBYro.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.31",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.32",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/RenderPass.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.37",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/CopyShader.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.36",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.30",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.35",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.34",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.33",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.42",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.41",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/objects/Sky.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.40",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/meshopt_decoder.module.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.38",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.39",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js/+esm",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.43",
+      "url": "http://127.0.0.1:54128/data/rotulos/reales.local.json"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.43",
+      "url": "http://127.0.0.1:54128/data/rotulos/reales.local.json",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "timestamp": 1792266429219.185,
+          "url": "http://127.0.0.1:54128/data/rotulos/reales.local.json",
+          "networkRequestId": "41062.43"
+        }
+      }
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.47",
+      "url": "http://127.0.0.1:54128/favicon.ico"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.47",
+      "url": "http://127.0.0.1:54128/favicon.ico",
+      "status": 204,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.48",
+      "url": "http://127.0.0.1:54128/assets/hq/iglesia.glb"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.48",
+      "url": "http://127.0.0.1:54128/assets/hq/iglesia.glb",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.62",
+      "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.63",
+      "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.64",
+      "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.65",
+      "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.66",
+      "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.67",
+      "url": "http://127.0.0.1:54128/assets/tex/withered_grass_d.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.68",
+      "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_n.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.69",
+      "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.70",
+      "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_n.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.71",
+      "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_n.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.72",
+      "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_n.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.73",
+      "url": "http://127.0.0.1:54128/assets/tex/withered_grass_n.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.62",
+      "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Intentional missing ground JPEG)",
+          "timestamp": 1792266434165.617,
+          "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg",
+          "networkRequestId": "41062.62"
+        }
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.63",
+      "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_d.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.64",
+      "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_d.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.65",
+      "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_d.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.69",
+      "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Intentional missing ground JPEG)",
+          "timestamp": 1792266434169.931,
+          "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg",
+          "networkRequestId": "41062.69"
+        }
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.70",
+      "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_n.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.71",
+      "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_n.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.67",
+      "url": "http://127.0.0.1:54128/assets/tex/withered_grass_d.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.66",
+      "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_d.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.68",
+      "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_n.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.73",
+      "url": "http://127.0.0.1:54128/assets/tex/withered_grass_n.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.72",
+      "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_n.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Runtime.consoleAPICalled",
+      "details": {
+        "type": "warning",
+        "args": [
+          {
+            "type": "string",
+            "value": "THREE.BufferGeometry.toNonIndexed(): BufferGeometry is already non-indexed."
+          }
+        ],
+        "executionContextId": 2,
+        "timestamp": 1792266435727.427,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "toNonIndexed",
+              "scriptId": "10",
+              "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm",
+              "lineNumber": 6,
+              "columnNumber": 114045
+            },
+            {
+              "functionName": "flowerBlob",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18099,
+              "columnNumber": 44
+            },
+            {
+              "functionName": "makeStreetGeometries",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18156,
+              "columnNumber": 124
+            },
+            {
+              "functionName": "buildStreetLife",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18345,
+              "columnNumber": 12
+            },
+            {
+              "functionName": "buildFurniture",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29804,
+              "columnNumber": 4
+            },
+            {
+              "functionName": "build",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29525,
+              "columnNumber": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "Runtime.consoleAPICalled",
+      "details": {
+        "type": "warning",
+        "args": [
+          {
+            "type": "string",
+            "value": "THREE.BufferGeometry.toNonIndexed(): BufferGeometry is already non-indexed."
+          }
+        ],
+        "executionContextId": 2,
+        "timestamp": 1792266435728.022,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "toNonIndexed",
+              "scriptId": "10",
+              "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm",
+              "lineNumber": 6,
+              "columnNumber": 114045
+            },
+            {
+              "functionName": "flowerBlob",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18099,
+              "columnNumber": 44
+            },
+            {
+              "functionName": "makeStreetGeometries",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18157,
+              "columnNumber": 123
+            },
+            {
+              "functionName": "buildStreetLife",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18345,
+              "columnNumber": 12
+            },
+            {
+              "functionName": "buildFurniture",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29804,
+              "columnNumber": 4
+            },
+            {
+              "functionName": "build",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29525,
+              "columnNumber": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "Runtime.consoleAPICalled",
+      "details": {
+        "type": "warning",
+        "args": [
+          {
+            "type": "string",
+            "value": "THREE.BufferGeometry.toNonIndexed(): BufferGeometry is already non-indexed."
+          }
+        ],
+        "executionContextId": 2,
+        "timestamp": 1792266435728.828,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "functionName": "toNonIndexed",
+              "scriptId": "10",
+              "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/+esm",
+              "lineNumber": 6,
+              "columnNumber": 114045
+            },
+            {
+              "functionName": "flowerBlob",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18099,
+              "columnNumber": 44
+            },
+            {
+              "functionName": "makeStreetGeometries",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18178,
+              "columnNumber": 108
+            },
+            {
+              "functionName": "buildStreetLife",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 18345,
+              "columnNumber": 12
+            },
+            {
+              "functionName": "buildFurniture",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29804,
+              "columnNumber": 4
+            },
+            {
+              "functionName": "build",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:54128/test.html?estilo=real",
+              "lineNumber": 29525,
+              "columnNumber": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266439113.011,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2382,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "unlock",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2382,
+                "columnNumber": 55
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "beginIntro",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58803,
+                "columnNumber": 8
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266439470.42,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2264,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "Liminal",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2264,
+                "columnNumber": 56
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 75
+              },
+              {
+                "functionName": "_safe",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2442,
+                "columnNumber": 43
+              },
+              {
+                "functionName": "bgMusic",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 9
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "wire",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 59539,
+                "columnNumber": 8
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266439470.502,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2264,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "Liminal",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2264,
+                "columnNumber": 70
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 75
+              },
+              {
+                "functionName": "_safe",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2442,
+                "columnNumber": 43
+              },
+              {
+                "functionName": "bgMusic",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 9
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "wire",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 59539,
+                "columnNumber": 8
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266439470.578,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2267,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "Liminal",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2267,
+                "columnNumber": 65
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 75
+              },
+              {
+                "functionName": "_safe",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2442,
+                "columnNumber": 43
+              },
+              {
+                "functionName": "bgMusic",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2717,
+                "columnNumber": 9
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "wire",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 59539,
+                "columnNumber": 8
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.74",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/interior.glb"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.74",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/interior.glb",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.75",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/interior.json"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.75",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/interior.json",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.76",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.77",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.78",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.79",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.80",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.81",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.82",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.83",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.84",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.85",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/vidrio_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.86",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.87",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.88",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.89",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.90",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.91",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.92",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.93",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.94",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.95",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.96",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.97",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.98",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.99",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.100",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.101",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.102",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/blanco_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.103",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.104",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_nor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.105",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.106",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.107",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_rough.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.108",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_diff.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.109",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_rough.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.76",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.79",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.77",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.80",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.81",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.82",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.83",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.84",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.85",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/vidrio_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.86",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.87",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.78",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.88",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.89",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.92",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.90",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.93",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.95",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.94",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.96",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.97",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.91",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.98",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.99",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.101",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.100",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.103",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.102",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/blanco_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.104",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_nor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.109",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.107",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.105",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_rough.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.108",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.106",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.110",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/cielo.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.111",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/noche.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.112",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_0930.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.113",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1200.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.114",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1430.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.115",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1700.webp"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.116",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1930.webp"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.110",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/cielo.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.111",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/noche.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.112",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_0930.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.113",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1200.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.115",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1700.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.114",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1430.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.116",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1930.webp",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.117",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sondas.bin"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.117",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sondas.bin",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.118",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pedro.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.119",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pablo.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.120",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/andres.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.121",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/santiago.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.122",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/juan.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.123",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tomas.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.124",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/mateo.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.125",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bartolome.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.126",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/felipe.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.127",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/menor.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.128",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/simon.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.129",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tadeo.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.130",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/crucifixion.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.131",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/jeronimo.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.132",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ambrosio.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.133",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/gregorio.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.134",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/agustin.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.135",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bautismo.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.136",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isidro.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.137",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ana.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.138",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/roque.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.139",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isabel.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.140",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/francisco.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.141",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/antonio.jpg"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.142",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/lucia.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.118",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pedro.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.120",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/andres.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.121",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/santiago.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.119",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pablo.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.122",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/juan.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.123",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tomas.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.124",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/mateo.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.126",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/felipe.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.125",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bartolome.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.131",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/jeronimo.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.129",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tadeo.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.127",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/menor.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.128",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/simon.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.130",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/crucifixion.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.132",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ambrosio.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.133",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/gregorio.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.134",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/agustin.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.135",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bautismo.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.136",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isidro.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.137",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ana.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.142",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/lucia.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.139",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isabel.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.138",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/roque.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.141",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/antonio.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.140",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/francisco.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.143",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/imagenes.glb"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.143",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/imagenes.glb",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.144",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/ojo_diff.jpg"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.144",
+      "url": "http://127.0.0.1:54128/assets/hq/interior/tex/ojo_diff.jpg",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.27",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B47b1z3bWuYMBYro.woff2"
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.18",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuYMBYro.woff2"
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.574,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 45
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.71,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 58
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.816,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 45
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.845,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 58
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.919,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 45
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448723.95,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 58
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448724.016,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 45
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448724.152,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 58
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448724.215,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 45
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448724.239,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4098,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4098,
+                "columnNumber": 58
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448728.126,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 4103,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "ensure",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4103,
+                "columnNumber": 74
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 4125,
+                "columnNumber": 14
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58021,
+                "columnNumber": 17
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448756.78,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2008,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "buf",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2008,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3259,
+                "columnNumber": 65
+              },
+              {
+                "functionName": "_build",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3260,
+                "columnNumber": 18
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3268,
+                "columnNumber": 22
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2531,
+                "columnNumber": 20
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "updateAudio",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58167,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58069,
+                "columnNumber": 11
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448756.948,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2008,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "buf",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2008,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3259,
+                "columnNumber": 65
+              },
+              {
+                "functionName": "_build",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3261,
+                "columnNumber": 19
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3268,
+                "columnNumber": 22
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2531,
+                "columnNumber": 20
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "updateAudio",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58167,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58069,
+                "columnNumber": 11
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448757.017,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2008,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "buf",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2008,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3259,
+                "columnNumber": 65
+              },
+              {
+                "functionName": "_build",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3262,
+                "columnNumber": 20
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3268,
+                "columnNumber": 22
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2531,
+                "columnNumber": 20
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "updateAudio",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58167,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58069,
+                "columnNumber": 11
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "other",
+          "level": "warning",
+          "text": "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio",
+          "timestamp": 1792266448757.09,
+          "url": "http://127.0.0.1:54128/test.html?estilo=real",
+          "lineNumber": 2008,
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "buf",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2008,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3259,
+                "columnNumber": 65
+              },
+              {
+                "functionName": "_build",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3263,
+                "columnNumber": 19
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 3268,
+                "columnNumber": 22
+              },
+              {
+                "functionName": "update",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 2531,
+                "columnNumber": 20
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58696,
+                "columnNumber": 23
+              },
+              {
+                "functionName": "updateAudio",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58167,
+                "columnNumber": 6
+              },
+              {
+                "functionName": "frame",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58069,
+                "columnNumber": 11
+              },
+              {
+                "functionName": "loop",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:54128/test.html?estilo=real",
+                "lineNumber": 58751,
+                "columnNumber": 34
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.18",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuYMBYro.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.27",
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B47b1z3bWuYMBYro.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.145",
+      "url": "http://127.0.0.1:54128/favicon.ico"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.145",
+      "url": "http://127.0.0.1:54128/favicon.ico",
+      "status": 204,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "id": "41062.15",
+      "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51ostz0rdg.woff2"
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.15",
+      "url": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51ostz0rdg.woff2",
+      "status": 200,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    }
+  ],
+  "checks": {
+    "assetdata_present": true,
+    "12_ground_files_external": true,
+    "optional_local_private_file_absent": true,
+    "all_12_original_files_exist": true,
+    "normal_control_and_high_quality": true,
+    "manual_no_adaptation_no_live_weather": true,
+    "intro_normal_timing_present": true,
+    "ground_active_and_church": true,
+    "albedo_observable_six_layers": true,
+    "albedo_exact_flat_only_missing": true,
+    "normal_observable_six_layers": true,
+    "normal_exact_flat_only_missing": true,
+    "missing_albedo_mean": true,
+    "player_input_moves": true,
+    "no_js_exceptions_or_gl_error": true,
+    "no_unexpected_console_or_network_errors": true,
+    "http:/assets/tex/asphalt_02_d.jpg": true,
+    "http:/assets/tex/asphalt_02_n.jpg": true,
+    "http:/assets/tex/dirty_concrete_d.jpg": true,
+    "http:/assets/tex/dirty_concrete_n.jpg": true,
+    "http:/assets/tex/dry_ground_01_d.jpg": true,
+    "http:/assets/tex/dry_ground_01_n.jpg": true,
+    "http:/assets/tex/gravel_floor_02_d.jpg": true,
+    "http:/assets/tex/gravel_floor_02_n.jpg": true,
+    "http:/assets/tex/sparse_grass_d.jpg": true,
+    "http:/assets/tex/sparse_grass_n.jpg": true,
+    "http:/assets/tex/withered_grass_d.jpg": true,
+    "http:/assets/tex/withered_grass_n.jpg": true,
+    "http:/assets/hq/iglesia.glb": true,
+    "optional_local_404_reported_separately": true,
+    "only_two_ground_errors_plus_optional_local": true
+  },
+  "limits": [
+    "No test of indefinitely pending requests",
+    "No visual quality approval",
+    "No performance claim"
+  ],
+  "html_sha256": "f89a2eb725cfa8b59c23e168b23d864efda7cd21502a3dcd85639b6890dbcf56",
+  "asset_sha256": {
+    "/assets/tex/asphalt_02_d.jpg": "4b2278045a935487c8dc7dbf93d829f81e7852d6d497b37c094fcb4f16da1b5d",
+    "/assets/tex/asphalt_02_n.jpg": "fcf34ba83486d60ceba48167ae5392aa2ad61d20ccbc09dcbb359dc6fcf4ecf9",
+    "/assets/tex/dirty_concrete_d.jpg": "a9aeeb53eb078539c8bdd8f06571264553aae676c0122c5cbb772294011e4463",
+    "/assets/tex/dirty_concrete_n.jpg": "67dbbdb1128290930bff888149a01c90d48154f4a76285832a1f5e0879aec760",
+    "/assets/tex/dry_ground_01_d.jpg": "530a7818200191d287a98d9b850aacafa7cc46b3bd61f40804d3b927bea9496b",
+    "/assets/tex/dry_ground_01_n.jpg": "a50543ac91e1375d2334880e9ccb76f775587998a7338c09cd12e123d02cc53b",
+    "/assets/tex/gravel_floor_02_d.jpg": "1a08d1aadfe48d11f332f47d42f86ee44c9dc33769b835461ab5a8b4783c33d9",
+    "/assets/tex/gravel_floor_02_n.jpg": "12a6169815b64d9f539d6efcf226d22d710d6725b3a74e19ed269ec6edf1c9e7",
+    "/assets/tex/sparse_grass_d.jpg": "2fcf170545b91d5d7d8cb09fa20913751e4e990101ce8d668fb17e29d1bd09ca",
+    "/assets/tex/sparse_grass_n.jpg": "ed99525ba36f18803a3da720302359bf06d577e50e3434e1efff85f9f5198df5",
+    "/assets/tex/withered_grass_d.jpg": "fb739be60e033c16b5c42708b1677c5c92f72ff4e055a6f6c291a79e87f343f4",
+    "/assets/tex/withered_grass_n.jpg": "27b5ea4c0a639e506b4eb8ad295595fbf8906521bb22103fc8dddde67c8d657d"
+  },
+  "url": "http://127.0.0.1:54128/test.html?estilo=real",
+  "state": {
+    "control": true,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "weatherLive": false,
+    "plastilina": false,
+    "intro": {
+      "start": 11104,
+      "figure": 11104,
+      "skin": 11115,
+      "street": 11426,
+      "flight": 11794
+    },
+    "control_ms": 21200.80000001192,
+    "player": [
+      111.9,
+      0,
+      -171.4
+    ],
+    "ground": {
+      "on": true,
+      "normals": true,
+      "mean": [
+        0.5019607843137255,
+        0.5148236113128304,
+        0.4802758558063879,
+        0.6509486481905626,
+        0.24436950809507846,
+        0.5914797748480398
+      ],
+      "albedo": {
+        "observable": true,
+        "width": 1024,
+        "height": 1024,
+        "depth": 6,
+        "bytes": 25165824,
+        "layers": [
+          {
+            "layer": 0,
+            "expectedMissing": true,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 0,
+            "sha256": "2d40d481124e9ab45798558fd3b2913b5b0ef07926851f0a36ef3628eb82c812"
+          },
+          {
+            "layer": 1,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 3079584,
+            "sha256": "14a3eccf7639c56926139d257e472e5ae1df8f41b91d24f2f28a4ffea613d488"
+          },
+          {
+            "layer": 2,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 3084886,
+            "sha256": "4b5d14aea8f5e7147c149df77723b42fbf8070b7723bcf88f4a746c80082f40b"
+          },
+          {
+            "layer": 3,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 3130866,
+            "sha256": "6046bb82c8e3d5aac6fcd6a17ee88122cd1052e5cf8b429e02f8292765cd350e"
+          },
+          {
+            "layer": 4,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 3145341,
+            "sha256": "69ba8c7d0ede040976a2f4e263fe4fb93aa053d3098eaf1901503dbcaace88e3"
+          },
+          {
+            "layer": 5,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              128,
+              255
+            ],
+            "mismatchedBytes": 3113633,
+            "sha256": "d756a82d09443ab3d8a2fecbf0497d809068122ac79ce1ceb4b002a7e1364e3f"
+          }
+        ]
+      },
+      "normal": {
+        "observable": true,
+        "width": 512,
+        "height": 512,
+        "depth": 6,
+        "bytes": 6291456,
+        "layers": [
+          {
+            "layer": 0,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 705689,
+            "sha256": "d157fadf2f110eb0f888e3bc0039863eb29c130b3fb4e0a5852272c1f0692510"
+          },
+          {
+            "layer": 1,
+            "expectedMissing": true,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 0,
+            "sha256": "9671e84e7218c48068d96399f6054a7ff7381b4a8747c105a3fad8ac6b4f9c3f"
+          },
+          {
+            "layer": 2,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 711220,
+            "sha256": "1f73cb572a7b842213ab601e5823de17422449263c84fb34561537acf7cb05ec"
+          },
+          {
+            "layer": 3,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 762291,
+            "sha256": "46de7f741d0ef39ac013949c8388909c1cc16bb691277131b491567d8b7f0494"
+          },
+          {
+            "layer": 4,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 758988,
+            "sha256": "586cc1f921bcd6d044230061a909f5fd44ea4b3a44b98b9a9af2347ed403e46e"
+          },
+          {
+            "layer": 5,
+            "expectedMissing": false,
+            "flat": [
+              128,
+              128,
+              255,
+              255
+            ],
+            "mismatchedBytes": 769737,
+            "sha256": "e2d291ead6dfde19f8170fce60b1d5ce0d31654299c1fd39359130a3bd262157"
+          }
+        ]
+      }
+    },
+    "church": true,
+    "errors": [],
+    "resources": [
+      {
+        "url": "http://127.0.0.1:54128/assets/intro_real.jpg",
+        "status": 200,
+        "decoded": 663246
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/intro_real_cerca.jpg",
+        "status": 200,
+        "decoded": 588978
+      },
+      {
+        "url": "http://127.0.0.1:54128/favicon.ico",
+        "status": 204,
+        "decoded": 0
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/iglesia.glb",
+        "status": 200,
+        "decoded": 10084432
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg",
+        "status": 404,
+        "decoded": 469
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_d.jpg",
+        "status": 200,
+        "decoded": 277181
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_d.jpg",
+        "status": 200,
+        "decoded": 269446
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_d.jpg",
+        "status": 200,
+        "decoded": 121599
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg",
+        "status": 404,
+        "decoded": 469
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/dry_ground_01_n.jpg",
+        "status": 200,
+        "decoded": 56208
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/withered_grass_d.jpg",
+        "status": 200,
+        "decoded": 369220
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/gravel_floor_02_n.jpg",
+        "status": 200,
+        "decoded": 166622
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_n.jpg",
+        "status": 200,
+        "decoded": 70714
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_n.jpg",
+        "status": 200,
+        "decoded": 117192
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/sparse_grass_d.jpg",
+        "status": 200,
+        "decoded": 236092
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/tex/withered_grass_n.jpg",
+        "status": 200,
+        "decoded": 113403
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/interior.glb",
+        "status": 200,
+        "decoded": 11887848
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/interior.json",
+        "status": 200,
+        "decoded": 2244
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_diff.jpg",
+        "status": 200,
+        "decoded": 1137256
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_rough.jpg",
+        "status": 200,
+        "decoded": 19128
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/cal_nor.jpg",
+        "status": 200,
+        "decoded": 2037368
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_diff.jpg",
+        "status": 200,
+        "decoded": 209698
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_nor.jpg",
+        "status": 200,
+        "decoded": 558552
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/granito_rough.jpg",
+        "status": 200,
+        "decoded": 46013
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_nor.jpg",
+        "status": 200,
+        "decoded": 550009
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_rough.jpg",
+        "status": 200,
+        "decoded": 87816
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/suelo_diff.jpg",
+        "status": 200,
+        "decoded": 1704348
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/vidrio_diff.jpg",
+        "status": 200,
+        "decoded": 78623
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_diff.jpg",
+        "status": 200,
+        "decoded": 225851
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_nor.jpg",
+        "status": 200,
+        "decoded": 74266
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/madera_rough.jpg",
+        "status": 200,
+        "decoded": 25181
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_diff.jpg",
+        "status": 200,
+        "decoded": 14413
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_nor.jpg",
+        "status": 200,
+        "decoded": 45504
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_diff.jpg",
+        "status": 200,
+        "decoded": 32447
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/terciopelo_rough.jpg",
+        "status": 200,
+        "decoded": 16980
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_nor.jpg",
+        "status": 200,
+        "decoded": 107631
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/dorado_rough.jpg",
+        "status": 200,
+        "decoded": 14344
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_diff.jpg",
+        "status": 200,
+        "decoded": 101721
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_rough.jpg",
+        "status": 200,
+        "decoded": 57800
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/talla_nor.jpg",
+        "status": 200,
+        "decoded": 182027
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_diff.jpg",
+        "status": 200,
+        "decoded": 7236
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/plata_rough.jpg",
+        "status": 200,
+        "decoded": 7663
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_rough.jpg",
+        "status": 200,
+        "decoded": 9899
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/azul_diff.jpg",
+        "status": 200,
+        "decoded": 35606
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/blanco_diff.jpg",
+        "status": 200,
+        "decoded": 4218
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_diff.jpg",
+        "status": 200,
+        "decoded": 50555
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_nor.jpg",
+        "status": 200,
+        "decoded": 53883
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/lino_rough.jpg",
+        "status": 200,
+        "decoded": 11636
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_diff.jpg",
+        "status": 200,
+        "decoded": 52710
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/marmol_rough.jpg",
+        "status": 200,
+        "decoded": 12777
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_diff.jpg",
+        "status": 200,
+        "decoded": 5807
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/hierro_rough.jpg",
+        "status": 200,
+        "decoded": 4485
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_0930.webp",
+        "status": 200,
+        "decoded": 530754
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1200.webp",
+        "status": 200,
+        "decoded": 809530
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/noche.webp",
+        "status": 200,
+        "decoded": 2063994
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/cielo.webp",
+        "status": 200,
+        "decoded": 1906666
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1430.webp",
+        "status": 200,
+        "decoded": 820054
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1700.webp",
+        "status": 200,
+        "decoded": 796314
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sol_1930.webp",
+        "status": 200,
+        "decoded": 808592
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/luz/sondas.bin",
+        "status": 200,
+        "decoded": 1044288
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pedro.jpg",
+        "status": 200,
+        "decoded": 121445
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/andres.jpg",
+        "status": 200,
+        "decoded": 116654
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/santiago.jpg",
+        "status": 200,
+        "decoded": 103989
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/pablo.jpg",
+        "status": 200,
+        "decoded": 121886
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/juan.jpg",
+        "status": 200,
+        "decoded": 133622
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tomas.jpg",
+        "status": 200,
+        "decoded": 166335
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/mateo.jpg",
+        "status": 200,
+        "decoded": 118329
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bartolome.jpg",
+        "status": 200,
+        "decoded": 128315
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/felipe.jpg",
+        "status": 200,
+        "decoded": 145622
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/jeronimo.jpg",
+        "status": 200,
+        "decoded": 35448
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/crucifixion.jpg",
+        "status": 200,
+        "decoded": 102528
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/menor.jpg",
+        "status": 200,
+        "decoded": 157676
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/simon.jpg",
+        "status": 200,
+        "decoded": 102265
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/tadeo.jpg",
+        "status": 200,
+        "decoded": 126326
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ambrosio.jpg",
+        "status": 200,
+        "decoded": 39411
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/agustin.jpg",
+        "status": 200,
+        "decoded": 38228
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/gregorio.jpg",
+        "status": 200,
+        "decoded": 40862
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isidro.jpg",
+        "status": 200,
+        "decoded": 84669
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/bautismo.jpg",
+        "status": 200,
+        "decoded": 361703
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/ana.jpg",
+        "status": 200,
+        "decoded": 75714
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/lucia.jpg",
+        "status": 200,
+        "decoded": 62336
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/roque.jpg",
+        "status": 200,
+        "decoded": 62989
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/francisco.jpg",
+        "status": 200,
+        "decoded": 63525
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/isabel.jpg",
+        "status": 200,
+        "decoded": 89991
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/cuadros/antonio.jpg",
+        "status": 200,
+        "decoded": 57519
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/imagenes.glb",
+        "status": 200,
+        "decoded": 17498488
+      },
+      {
+        "url": "http://127.0.0.1:54128/assets/hq/interior/tex/ojo_diff.jpg",
+        "status": 200,
+        "decoded": 5117
+      }
+    ],
+    "glError": 0
+  },
+  "movement": {
+    "input": -1,
+    "before": [
+      111.90347437234335,
+      0,
+      -171.39656231845254
+    ],
+    "after": [
+      111.9814095256781,
+      0,
+      -171.88923991556447
+    ],
+    "distance": 0.498803671619708
+  },
+  "end": {
+    "errors": [],
+    "control": true,
+    "glError": 0
+  },
+  "expectedGroundErrors": [
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.62",
+      "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Intentional missing ground JPEG)",
+          "timestamp": 1792266434165.617,
+          "url": "http://127.0.0.1:54128/assets/tex/asphalt_02_d.jpg",
+          "networkRequestId": "41062.62"
+        }
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.69",
+      "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Intentional missing ground JPEG)",
+          "timestamp": 1792266434169.931,
+          "url": "http://127.0.0.1:54128/assets/tex/dirty_concrete_n.jpg",
+          "networkRequestId": "41062.69"
+        }
+      }
+    }
+  ],
+  "optionalLocalErrors": [
+    {
+      "method": "Network.responseReceived",
+      "id": "41062.43",
+      "url": "http://127.0.0.1:54128/data/rotulos/reales.local.json",
+      "status": 404,
+      "fromDiskCache": false,
+      "fromServiceWorker": false
+    },
+    {
+      "method": "Log.entryAdded",
+      "details": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "timestamp": 1792266429219.185,
+          "url": "http://127.0.0.1:54128/data/rotulos/reales.local.json",
+          "networkRequestId": "41062.43"
+        }
+      }
+    }
+  ],
+  "unexpectedErrors": []
+}

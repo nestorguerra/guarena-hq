@@ -1,0 +1,224 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_d6abeabd7c6f4fcfbcc4361048847e92",
+ "request_sha256": "9621c6b27d4a53120ee009e166fcf6c91fff3937e3b34404044e18dcdb0ee5e7",
+ "fecha": "2026-10-17T14:20:10.839990+00:00",
+ "kit": "costura",
+ "revisor": "A",
+ "ficha": "data/interiores/fichas/casa_costura.jpg",
+ "ficha_sha256": "02eb6fdf263bb10b91ed070adaeb5c4ceb58d3979b2844d331d7f32b64fad25b",
+ "referencias": [
+  {
+   "titulo": "Campbell House Spokane Sewing Room 2018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Campbell_House_Spokane_Sewing_Room_2018.jpg",
+   "autor": "Antony-22",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Campbell_House_Spokane_Sewing_Room_2018.jpg/960px-Campbell_House_Spokane_Sewing_Room_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Looking ESE through sewing room - second floor - Tinsley Living Farm - Museum of the Rockies - 2013-07-08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+   "autor": "Tim Evanson",
+   "licencia": "CC BY-SA 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg/960px-Looking_ESE_through_sewing_room_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.78,
+  "coherencia": 2.81,
+  "iluminacion": 3.03,
+  "variedad": 2.88,
+  "lectura_funcional": 2.81
+ },
+ "media": 2.862,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.78,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.23
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.73
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.81,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.26
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.62
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.66
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.03,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.1
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.75
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.13
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.88,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.13
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.86
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.88
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.81,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.19
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.78
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.81
+  }
+ ],
+ "uso": {
+  "input_tokens": 4261,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4261
+ }
+}

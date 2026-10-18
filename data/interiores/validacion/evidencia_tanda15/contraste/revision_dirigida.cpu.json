@@ -1,0 +1,145 @@
+{
+  "state": "PASS_CPU_no_GPU",
+  "synthetic": [
+    {
+      "side": "s",
+      "lv": 0,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "s"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "n",
+      "lv": 0,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "n"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "w",
+      "lv": 0,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "w"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "e",
+      "lv": 0,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "e"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "s",
+      "lv": 1,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "s"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "n",
+      "lv": 1,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "n"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "w",
+      "lv": 1,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "w"
+      ],
+      "materialKeys": 6
+    },
+    {
+      "side": "e",
+      "lv": 1,
+      "upperFragments": 20,
+      "coloredWalls": [
+        "e"
+      ],
+      "materialKeys": 6
+    }
+  ],
+  "houses": [
+    {
+      "seed": 4007,
+      "room": "A1",
+      "lv": 1,
+      "bedRotation": 0,
+      "coloredWalls": [
+        "s"
+      ],
+      "upperFragments": 6
+    },
+    {
+      "seed": 5045,
+      "room": "A1",
+      "lv": 1,
+      "bedRotation": 0,
+      "coloredWalls": [
+        "s"
+      ],
+      "upperFragments": 6
+    },
+    {
+      "seed": 1296,
+      "room": "R0",
+      "lv": 0,
+      "bedRotation": 0,
+      "coloredWalls": [
+        "s"
+      ],
+      "upperFragments": 8
+    },
+    {
+      "seed": 3405,
+      "room": "R0",
+      "lv": 0,
+      "bedRotation": 3.141592653589793,
+      "coloredWalls": [
+        "n"
+      ],
+      "upperFragments": 8
+    },
+    {
+      "seed": 1555,
+      "room": "A2",
+      "lv": 1,
+      "bedRotation": 0,
+      "coloredWalls": [
+        "s"
+      ],
+      "upperFragments": 8
+    },
+    {
+      "seed": 4034,
+      "room": "R0",
+      "lv": 0,
+      "bedRotation": 0,
+      "coloredWalls": [
+        "s"
+      ],
+      "upperFragments": 8
+    }
+  ],
+  "source": {
+    "patch": "cc5b2445555c1814d5cda804dca2d5ce53e7c9e338e85179e8c53add23d5a98e",
+    "finishes": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+    "houses": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706"
+  },
+  "limits": "Canvas stub; emitted geometry/material keys and real callers, no pixels or shadows."
+}

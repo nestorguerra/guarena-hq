@@ -1,0 +1,140 @@
+{
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=44e3de3",
+ "errores": [],
+ "revision_servida": "44e3de33d69b5cf2a4822bc7abe8ed146fdc7fa8",
+ "carga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ },
+ "entradas": [
+  {
+   "seed": 2786,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 198.8,
+   "habitaciones": 6
+  },
+  {
+   "seed": 3244,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 126.2,
+   "habitaciones": 6
+  },
+  {
+   "seed": 1594,
+   "plano": "dosPlantas",
+   "plantas": 2,
+   "entrada_ms": 125.2,
+   "habitaciones": 6
+  },
+  {
+   "seed": 1689,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 91.9,
+   "habitaciones": 7
+  },
+  {
+   "seed": 2132,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 87.5,
+   "habitaciones": 7
+  },
+  {
+   "seed": 1639,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 62.6,
+   "habitaciones": 4
+  },
+  {
+   "seed": 5157,
+   "plano": "pasillo",
+   "plantas": 1,
+   "entrada_ms": 107.9,
+   "habitaciones": 7
+  },
+  {
+   "seed": 3627,
+   "plano": "lateral",
+   "plantas": 1,
+   "entrada_ms": 74,
+   "habitaciones": 5
+  }
+ ],
+ "annie": {
+  "entrada_ms": 91.6,
+  "kits": 5,
+  "personalizadas": [
+   "dormitorio"
+  ],
+  "acciones": [
+   "exit",
+   "mirror",
+   "bed",
+   "safe",
+   "tv",
+   "read",
+   "drawer",
+   "eat",
+   "fridge"
+  ],
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.899999999999636
+   }
+  ],
+  "banco": 700,
+  "siesta": true
+ },
+ "comercios": [
+  {
+   "tipo": "bar",
+   "acciones": 1
+  },
+  {
+   "tipo": "cafeteria",
+   "acciones": 1
+  },
+  {
+   "tipo": "farmacia",
+   "acciones": 1
+  }
+ ],
+ "consola": [],
+ "recarga_partida": {
+  "dinero": 321,
+  "banco": 700,
+  "decoracion": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "evo": "{\"testigo\":\"evo\"}",
+  "fija": "{\"testigo\":\"fija\"}"
+ },
+ "ci": 39057155420,
+ "pages": 39057301779
+}

@@ -1,0 +1,958 @@
+{
+ "tipologia": "salon",
+ "nombre": "Salón de una casa del pueblo",
+ "nota": "El salón de las casas de Guareña: la tele y, enfrente, el sofá o la mesa camilla con sus sillas; la estantería de libros, el aparador con las cosas buenas, la vitrina de la vajilla en las casas de los mayores, la lumbre en las rústicas; fotos de la familia, la Virgen o los pósteres según quién viva, y la vida encima de las mesas.",
+ "superficie": {
+  "ancho": [
+   3.3,
+   7.8
+  ],
+  "fondo": [
+   3.4,
+   4.8
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "mueble_tv_pequeno",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "mueble_tv",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "televisor_tubo",
+   "en": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "televisor_plano",
+   "en": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "enfrente",
+   "variantes": [
+    "sofa_tres_plazas",
+    "sofa_dos_plazas"
+   ],
+   "de": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "entre",
+   "obj": "alfombra_salon",
+   "a": [
+    "sofa_tres_plazas",
+    "sofa_dos_plazas"
+   ],
+   "b": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "entre",
+   "obj": "mesa_centro_cristal",
+   "a": [
+    "sofa_tres_plazas",
+    "sofa_dos_plazas"
+   ],
+   "b": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "estilo": [
+    "moderno",
+    "lujo",
+    "joven"
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "entre",
+   "obj": "mesa_centro",
+   "a": [
+    "sofa_tres_plazas",
+    "sofa_dos_plazas"
+   ],
+   "b": [
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "estilo": [
+    "!moderno",
+    "!lujo",
+    "!joven"
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "conjunto",
+   "obj": "mesa_camilla",
+   "sillas": {
+    "variantes": [
+     "silla_comedor"
+    ],
+    "n": [
+     2,
+     3
+    ]
+   },
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "sillon_orejero",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio",
+    "cazador",
+    "agricultor"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "estanteria_libros",
+    "estanteria_libros_ancha"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "area_max": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "estanteria_libros",
+    "estanteria_libros_ancha"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "area_min": 22,
+   "perfil": [
+    "abuela",
+    "matrimonio",
+    "cazador",
+    "musico",
+    "agricultor"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "estanteria_libros_ancha",
+   "pared": [
+    "E",
+    "W",
+    "N",
+    "S"
+   ],
+   "centrado": true,
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "perfil": [
+    "artista",
+    "estudiante",
+    "familia",
+    "rico"
+   ],
+   "area_min": 22,
+   "grupo_pared": "lectura_salon"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "sillon_moderno",
+   "de": "estanteria_libros_ancha",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": true,
+   "buscar_refs": true,
+   "perfil": [
+    "artista",
+    "estudiante",
+    "familia",
+    "rico"
+   ],
+   "area_min": 22,
+   "grupo_pared": "lectura_salon"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "mesita_auxiliar",
+   "de": "sillon_moderno",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": true,
+   "buscar_refs": true,
+   "perfil": [
+    "artista",
+    "estudiante",
+    "familia",
+    "rico"
+   ],
+   "area_min": 22,
+   "grupo_pared": "lectura_salon"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "lampara_pie",
+   "de": "mesita_auxiliar",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": true,
+   "buscar_refs": true,
+   "perfil": [
+    "artista",
+    "estudiante",
+    "familia",
+    "rico"
+   ],
+   "area_min": 22,
+   "grupo_pared": "lectura_salon"
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "sillon_moderno",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio",
+    "!cazador",
+    "!agricultor"
+   ],
+   "area_max": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "sillon_moderno",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "musico"
+   ],
+   "area_min": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "chimenea",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "estilo": [
+    "rustico"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "piano_pared",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "musico"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
+   "obj": "guitarra_soporte",
+   "cantidad": [
+    0,
+    1
+   ],
+   "botin": "guitarra"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "hilera_libros_a",
+    "hilera_libros_b",
+    "hilera_libros_c",
+    "hilera_libros_d",
+    "hilera_libros_e",
+    "hilera_libros_f"
+   ],
+   "en": [
+    "estanteria_libros",
+    "estanteria_libros_ancha"
+   ],
+   "relleno": [
+    0.55,
+    0.95
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "libro_tumbado",
+    "portarretratos",
+    "figura_porcelana"
+   ],
+   "en": [
+    "estanteria_libros",
+    "estanteria_libros_ancha"
+   ],
+   "cantidad": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "aparador",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vitrina_salon",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio",
+    "rico"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "mesita_auxiliar",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "area_max": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "mesita_auxiliar",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "area_min": 22,
+   "perfil": [
+    "abuela",
+    "matrimonio",
+    "cazador",
+    "musico",
+    "agricultor"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
+   "variantes": [
+    "planta_maceta_salon",
+    "planta_grande"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
+   "obj": "lampara_pie",
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "!abuela",
+    "!matrimonio"
+   ],
+   "area_max": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
+   "obj": "lampara_pie",
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "cazador",
+    "musico",
+    "agricultor"
+   ],
+   "area_min": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "puff",
+   "cantidad": [
+    0,
+    1
+   ],
+   "estilo": [
+    "joven",
+    "alegre",
+    "bohemio"
+   ],
+   "area_max": 22
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "puff",
+   "cantidad": [
+    0,
+    1
+   ],
+   "estilo": [
+    "joven",
+    "alegre",
+    "bohemio"
+   ],
+   "area_min": 22,
+   "perfil": [
+    "abuela",
+    "matrimonio",
+    "cazador",
+    "musico",
+    "agricultor"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cuadro_oleo",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "botin": "cuadro"
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cuadro_virgen",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "poster_enmarcado",
+   "pared": "*",
+   "cantidad": [
+    1,
+    2
+   ],
+   "estilo": [
+    "joven"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "cabeza_ciervo",
+   "pared": "*",
+   "cantidad": [
+    1,
+    2
+   ],
+   "perfil": [
+    "cazador"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "variantes": [
+    "fotos_familia",
+    "cuadro_paisaje",
+    "cuadro_foto_antigua",
+    "plato_pared"
+   ],
+   "pared": "*",
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "espejo_salon",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "tapete_ganchillo",
+   "en": [
+    "mesa_centro",
+    "mesa_centro_cristal",
+    "mesa_camilla",
+    "aparador"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "cartera",
+   "en": [
+    "mesa_centro",
+    "mesa_centro_cristal",
+    "mesa_camilla",
+    "aparador",
+    "mesita_auxiliar",
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "botin": "cartera"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "movil",
+   "en": [
+    "mesa_centro",
+    "mesa_centro_cristal",
+    "mesa_camilla",
+    "aparador",
+    "mesita_auxiliar",
+    "mueble_tv",
+    "mueble_tv_pequeno"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "botin": "movil"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "consola_videojuegos",
+   "en": [
+    "mueble_tv",
+    "mueble_tv_pequeno",
+    "mesa_centro",
+    "mesa_centro_cristal",
+    "mesa_camilla",
+    "mesita_auxiliar",
+    "aparador"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "botin": "consola"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "radio_antigua",
+   "en": [
+    "mueble_tv",
+    "mueble_tv_pequeno",
+    "aparador",
+    "mesita_auxiliar"
+   ],
+   "cantidad": [
+    0,
+    1
+   ],
+   "perfil": [
+    "abuela",
+    "matrimonio"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "vida",
+   "variantes": [
+    "frutero",
+    "jarron_flores",
+    "revista",
+    "periodico",
+    "mando_tele",
+    "cenicero",
+    "libro_tumbado",
+    "velas"
+   ],
+   "en": [
+    "mesa_centro",
+    "mesa_centro_cristal",
+    "mesa_camilla",
+    "aparador",
+    "mesita_auxiliar"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "vida",
+   "variantes": [
+    "figura_porcelana",
+    "portarretratos",
+    "jarron_flores",
+    "reloj_sobremesa",
+    "velas",
+    "figura_toro",
+    "lampara_mesa"
+   ],
+   "en": [
+    "aparador",
+    "chimenea",
+    "piano_pared",
+    "mesita_auxiliar"
+   ],
+   "por_soporte": [
+    2,
+    4
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "telefono_casa",
+   "en": [
+    "mesita_auxiliar",
+    "aparador"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "vida",
+   "variantes": [
+    "manta_doblada",
+    "cojin_suelto"
+   ],
+   "en": [
+    "sofa_tres_plazas",
+    "sofa_dos_plazas"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "fraccion": [
+    0.5,
+    0.9
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_arana",
+   "por_m2": [
+    0.06,
+    0.09
+   ],
+   "estilo": [
+    "lujo",
+    "antiguo"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "por_m2": [
+    0.06,
+    0.09
+   ],
+   "estilo": [
+    "!lujo",
+    "!antiguo"
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "las cosas de la familia a la vista"
+  ],
+  "horario_defecto": "Mo-Su 00:00-24:00"
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Sala 6 Casa comienzos siglo XX, salón.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sala_6_Casa_comienzos_siglo_XX,_sal%C3%B3n.jpg",
+   "autor": "Mentxuwiki",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Mesa-camilla.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mesa-camilla.jpg",
+   "autor": "Santi77a",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Casa-Museo de La Siervita en El Sauzal 5.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa-Museo_de_La_Siervita_en_El_Sauzal_5.jpg",
+   "autor": "CanaryIslands",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Casa Museo Tomás Morales2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Casa_Museo_Tom%C3%A1s_Morales2.jpg",
+   "autor": "Raycojimenezg",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "SalónCasaMuseoPérezGaldós.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sal%C3%B3nCasaMuseoP%C3%A9rezGald%C3%B3s.jpg",
+   "autor": "Miguelazo84",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Salón Casa Museo Antonio Machado.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sal%C3%B3n_Casa_Museo_Antonio_Machado.jpg",
+   "autor": "Nurfermi",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Salón en la Casa Museo Padre Novoa.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sal%C3%B3n_en_la_Casa_Museo_Padre_Novoa.jpg",
+   "autor": "Azahara00",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Museo Casa de Leguizamón. Comedor original.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Museo_Casa_de_Leguizam%C3%B3n._Comedor_original.jpg",
+   "autor": "Yucucu",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Living room in apartment of Condomínio do Edifício Zaher, Le Blond, Rio de Janeiro, Brazil.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Living_room_in_apartment_of_Condom%C3%ADnio_do_Edif%C3%ADcio_Zaher,_Le_Blond,_Rio_de_Janeiro,_Brazil.jpg",
+   "autor": "Wilfredor",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "FIRST FLOOR APARTMENT LIVING ROOM INTERIOR. OPEN DOORWAY AT PHOTO CENTER OPENS TO KITCHEN. OPEN DOORWAY AT PHOTO LEFT OPENS TO BATHROOM. VIEW TO NORTHWEST. - Lee Vining Creek HAER CAL,26-LEVIN.V,1A-15.tif",
+   "url": "https://commons.wikimedia.org/wiki/File:FIRST_FLOOR_APARTMENT_LIVING_ROOM_INTERIOR._OPEN_DOORWAY_AT_PHOTO_CENTER_OPENS_TO_KITCHEN._OPEN_DOORWAY_AT_PHOTO_LEFT_OPENS_TO_BATHROOM._VIEW_TO_NORTHWEST._-_Lee_Vining_Creek_HAER_CAL,26-LEVIN.V,1A-15.tif",
+   "autor": "Related names:\n\nSouthern California Edison Company, Owner\nSouthern Sierras Power Company, Builder",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Living room of a typical rural house in northeast Brazil.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Living_room_of_a_typical_rural_house_in_northeast_Brazil.jpg",
+   "autor": "Wilfredor",
+   "licencia": "CC0"
+  }
+ ]
+}

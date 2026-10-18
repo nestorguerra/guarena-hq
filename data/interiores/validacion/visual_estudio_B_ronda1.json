@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_1141412d3a504094874e343901754e2b",
+ "request_sha256": "677233de26becb850964b6eb6946171eed2f26b3bb596a3d129d9acee0f8b738",
+ "fecha": "2026-10-17T14:10:58.167554+00:00",
+ "kit": "estudio",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_estudio.jpg",
+ "ficha_sha256": "a2c4f45b854f7b1f01e6174626952b0a4f8d41a067d8427d2c6316e92f794f4d",
+ "referencias": [
+  {
+   "titulo": "Abbotsford House Study Room.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Abbotsford_House_Study_Room.jpg",
+   "autor": "Michael D Beckwith",
+   "licencia": "CC0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Abbotsford_House_Study_Room.jpg/960px-Abbotsford_House_Study_Room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Interieur werkkamer - Study Interior (5259995311).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interieur_werkkamer_-_Study_Interior_%285259995311%29.jpg",
+   "autor": "Het Nieuwe Instituut - Architecture Collection",
+   "licencia": "No restrictions",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Interieur_werkkamer_-_Study_Interior_%285259995311%29.jpg/960px-Interieur_werkkamer_-_Study_Interior_%285259995311%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.73,
+  "coherencia": 2.69,
+  "iluminacion": 2.92,
+  "variedad": 2.87,
+  "lectura_funcional": 1.9
+ },
+ "media": 2.622,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.73,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.27
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.7
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.74
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.69,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.33
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.6
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.64
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 1.92,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.17
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.72
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.09
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.75
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.87,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.21
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.66
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.1
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.69
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 0.9,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.33
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.47
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.18
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.53
+  }
+ ],
+ "uso": {
+  "input_tokens": 4173,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4173
+ }
+}

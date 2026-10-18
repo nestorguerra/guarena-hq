@@ -1,0 +1,422 @@
+{
+ "tipologia": "dormitorio",
+ "nombre": "Cuarto de los niños",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.1,
+   5.2
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_cama_ninos",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_mesita",
+   "de": "vb_cama_ninos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_mesa_ninos",
+   "pared": [
+    "N",
+    "S",
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "silla_frontal": "vb_silla_ninos",
+   "grupo_pared": "estudio_infantil"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_biblioteca_ninos",
+   "de": "vb_mesa_ninos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "grupo_pared": "estudio_infantil"
+  },
+  {
+   "zona": "estancia",
+   "regla": "esquina",
+   "obj": "vb_armario_ninos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "espacio_frontal": [
+    0.7,
+    0.6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_cama_ninos",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 20,
+   "habitacion": [
+    "ninos"
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "vb_alfombra_juego",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "suelo_determinista": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "suelo_libre",
+   "obj": "vb_alfombra_juego_compacta",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "suelo_determinista": true,
+   "area_max": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "enfrente",
+   "obj": "vb_banco_lectura_ninos",
+   "de": "vb_biblioteca_ninos",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "centrado": true,
+   "si_no": false,
+   "separacion_pared": 0.14,
+   "espacio_frontal": [
+    0.7,
+    0.55
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "vb_dibujos_ninos",
+   "pared": "*",
+   "sobre_de": "vb_cama_ninos",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_osito",
+   "en": [
+    "vb_mesita"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_bloques",
+   "en": [
+    "vb_biblioteca_ninos"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "libro_tumbado",
+    "jg_puzles_madera",
+    "jg_pizarras",
+    "jg_dinosaurios",
+    "jg_tren_madera",
+    "jg_cartas",
+    "jg_pinturas_dedos",
+    "bz_cochecitos",
+    "vb_bloques",
+    "bloc_notas",
+    "grapadora",
+    "va_tela_algodon",
+    "va_botones",
+    "va_cinta_metrica",
+    "va_ovillo",
+    "lb_estuches",
+    "bz_cuadernos",
+    "bz_cuadernos_a4",
+    "vb_cuaderno",
+    "vb_acuarelas",
+    "vb_paleta",
+    "va_panuelos",
+    "va_cepillo_pelo",
+    "cesta_calcetines",
+    "vb_hucha",
+    "vb_despertador",
+    "vb_cesto",
+    "vb_ropa",
+    "vb_colcha",
+    "vb_joyero",
+    "vb_gafas",
+    "manta_doblada",
+    "vb_brujula",
+    "vb_prismaticos",
+    "vb_linterna",
+    "vb_auriculares"
+   ],
+   "en": [
+    "vb_mesa_ninos"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "hilera_libros_a",
+    "hilera_libros_b",
+    "hilera_libros_c",
+    "hilera_libros_e",
+    "hilera_libros_f",
+    "lb_libros_infantiles",
+    "lb_libros_bolsillo",
+    "lb_libros_atlas",
+    "lb_diccionarios",
+    "lb_libros_cara_c",
+    "libro_tumbado",
+    "jg_puzles_madera",
+    "jg_pizarras",
+    "jg_dinosaurios",
+    "jg_figuras_accion",
+    "jg_tren_madera",
+    "jg_cartas",
+    "jg_pinturas_dedos",
+    "bz_cochecitos",
+    "vb_bloques",
+    "bloc_notas",
+    "portalapices",
+    "grapadora",
+    "va_tela_algodon",
+    "va_botones",
+    "va_cinta_metrica",
+    "va_ovillo",
+    "lb_estuches",
+    "lb_calculadoras",
+    "lb_gomas_tijeras",
+    "bz_cuadernos",
+    "bz_cuadernos_a4",
+    "vb_cuaderno",
+    "vb_acuarelas",
+    "vb_paleta",
+    "vb_pinceles",
+    "va_panuelos",
+    "va_cepillo_pelo",
+    "cesta_calcetines",
+    "vb_hucha",
+    "vb_despertador",
+    "vb_cesto",
+    "vb_ropa",
+    "vb_colcha",
+    "vb_joyero",
+    "vb_gafas",
+    "portarretratos",
+    "manta_doblada",
+    "vb_brujula",
+    "vb_prismaticos",
+    "vb_linterna",
+    "vb_auriculares"
+   ],
+   "en": [
+    "vb_mesita"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "vb_cuentos_biblioteca",
+    "vb_hacer_biblioteca"
+   ],
+   "en": [
+    "vb_biblioteca_ninos"
+   ],
+   "por_soporte": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Wickers Building — Children Bedroom — 001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_001.jpg",
+   "autor": "Steven Pavlov",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Wickers Building — Children Bedroom — 002.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_002.jpg",
+   "autor": "Steven Pavlov",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Romania-1687 - Children's Bedroom (7646877616).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Romania-1687_-_Children%27s_Bedroom_%287646877616%29.jpg",
+   "autor": "Dennis G. Jarvis",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Muckross House Children's Bedroom 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Muckross_House_Children%27s_Bedroom_01.jpg",
+   "autor": "Spike",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "2nd flr Kids Childrens Bedroom panorama.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:2nd_flr_Kids_Childrens_Bedroom_panorama.jpg",
+   "autor": "Chris Light",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Child's Bedroom (15075384432).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Child%27s_Bedroom_%2815075384432%29.jpg",
+   "autor": "Personal Creations",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Child's bedroom in a house 8d21177v.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Child%27s_bedroom_in_a_house_8d21177v.jpg",
+   "autor": "Marjory Collins",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "The Children's Bedroom. Malahide Castle - geograph.org.uk - 8404748.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:The_Children%27s_Bedroom._Malahide_Castle_-_geograph.org.uk_-_8404748.jpg",
+   "autor": "Marathon",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Interior, children's bedroom. State Library Victoria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior%2C_children%27s_bedroom._State_Library_Victoria.jpg",
+   "autor": "F. Oswald Barnett (Frederick Oswald) 1883-1972 photographer.",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "The Children's Bedroom in Muckross House - geograph.org.uk - 7871728.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:The_Children%27s_Bedroom_in_Muckross_House_-_geograph.org.uk_-_7871728.jpg",
+   "autor": "Marathon",
+   "licencia": "CC BY-SA 2.0"
+  }
+ ]
+}

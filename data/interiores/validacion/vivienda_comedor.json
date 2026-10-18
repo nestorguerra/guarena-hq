@@ -1,0 +1,498 @@
+{
+ "kit": "vivienda_comedor",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_comedor",
+   "tipologia": "otra_estancia",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.3,
+   "guardias": 3,
+   "objetos": 19,
+   "distintos": 14,
+   "hash": "cad896c7",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_mesa_familiar",
+     "mesas": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_virgen",
+     "n": 0
+    },
+    {
+     "entrada": 8,
+     "obj": "va_servicio_comedor_4",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_joyero_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reloj_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_vajilla_guardada_platos|va_vajilla_gu",
+     "n": 4
+    },
+    {
+     "entrada": 13,
+     "obj": "bandeja|azucarero|taza_cafe|taza_desayun",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 13.24,
+     "libre_m2": 13.24
+    }
+   },
+   "luz": {
+    "estancia": 0.058
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6226,
+   "mallas": 15,
+   "luces": 1,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_comedor",
+   "tipologia": "otra_estancia",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.8,
+   "guardias": 3,
+   "objetos": 20,
+   "distintos": 14,
+   "hash": "7ec13d1a",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_mesa_familiar",
+     "mesas": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fotos_familia",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_virgen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_servicio_comedor_4",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_joyero_guardado",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "va_lata_guardada",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_vajilla_guardada_platos|va_vajilla_gu",
+     "n": 4
+    },
+    {
+     "entrada": 13,
+     "obj": "bandeja|azucarero|taza_cafe|taza_desayun",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.85,
+     "libre_m2": 4.85
+    }
+   },
+   "luz": {
+    "estancia": 0.058
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5566,
+   "mallas": 13,
+   "luces": 1,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_comedor",
+   "tipologia": "otra_estancia",
+   "seed": 3,
+   "W": 5,
+   "D": 2.5,
+   "guardias": 3,
+   "objetos": 18,
+   "distintos": 12,
+   "hash": "4e52335f",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_mesa_familiar",
+     "mesas": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fotos_familia",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_virgen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_servicio_comedor_4",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_vajilla_guardada_platos|va_vajilla_gu",
+     "n": 4
+    },
+    {
+     "entrada": 13,
+     "obj": "bandeja|azucarero|taza_cafe|taza_desayun",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.98,
+     "libre_m2": 2.98
+    }
+   },
+   "luz": {
+    "estancia": 0.08
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5412,
+   "mallas": 12,
+   "luces": 1,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_comedor",
+   "tipologia": "otra_estancia",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.9,
+   "guardias": 3,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "7a0e1377",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_mesa_familiar",
+     "mesas": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fotos_familia",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_virgen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_servicio_comedor_4",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_vajilla_guardada_platos|va_vajilla_gu",
+     "n": 4
+    },
+    {
+     "entrada": 13,
+     "obj": "bandeja|azucarero|taza_cafe|taza_desayun",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 8.99,
+     "libre_m2": 8.99
+    }
+   },
+   "luz": {
+    "estancia": 0.084
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5318,
+   "mallas": 15,
+   "luces": 1,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_comedor",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.3,
+   "guardias": 3,
+   "objetos": 18,
+   "distintos": 13,
+   "hash": "ded42246",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_mesa_familiar",
+     "mesas": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "cuadro_paisaje",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "fotos_familia",
+     "n": 0
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_virgen",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_servicio_comedor_4",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_vajilla_guardada_platos|va_vajilla_gu",
+     "n": 4
+    },
+    {
+     "entrada": 13,
+     "obj": "bandeja|azucarero|taza_cafe|taza_desayun",
+     "n": 3
+    },
+    {
+     "entrada": 15,
+     "obj": "lampara_techo_salon",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 14.18,
+     "libre_m2": 14.18
+    }
+   },
+   "luz": {
+    "estancia": 0.052
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5422,
+   "mallas": 13,
+   "luces": 1,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.947
+  }
+ ]
+}

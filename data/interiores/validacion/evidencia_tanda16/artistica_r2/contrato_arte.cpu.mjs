@@ -1,0 +1,4 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{runtime}from'./runtime.cpu.mjs';
+const root='.cache/calidad/cocina_t16/artistica_r2/',api=runtime(true),source=fs.readFileSync(root+'contratos.inc','utf8'),code=source.slice(source.indexOf("  if(opts.tanda>=19)await caso('cocina: nicho")),rows=[];
+const caso=(name,fn)=>{try{fn();rows.push({name,pass:true});}catch(e){rows.push({name,pass:false,error:String(e.stack)});}},exigir=(ok,msg)=>assert(ok,msg);
+await new Function('opts','caso','exigir','OBJETOS','partes','penetra','return(async()=>{'+code+'})();')({tanda:19},caso,exigir,api.data.OBJETOS,api.geo.partes,api.geo.penetra);fs.writeFileSync(root+'contrato_arte.json',JSON.stringify({state:rows.every(r=>r.pass)?'PASS':'FAIL',rows},null,2)+'\n');console.log(rows);assert(rows.every(r=>r.pass));

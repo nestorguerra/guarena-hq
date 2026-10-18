@@ -1,0 +1,87 @@
+--- a/tools/interiores/fotos_casa.py
++++ b/tools/interiores/fotos_casa.py
+@@ -15,6 +15,44 @@
+   const H = await import('/src/houses.js');
+   const THREE=await import('three');
+   const {caja}=await import('/src/objetos.js');
++  const {OBJETOS}=await import('/src/interiores_datos.js');
++  // Physical clearance only: never resolve the actual candidate/camera in place.
++  function cameraClearance(h,est,col,position){
++    if(!est||!col?.resolveCircle)throw Error('faltan estancia o colisionador de planta');
++    const radius=.34,tolerance=1e-6;
++    const bounds={x0:est.origen.x-est.W/2+radius,x1:est.origen.x+est.W/2-radius,
++      z0:est.origen.z+radius,z1:est.origen.z+est.D-radius};
++    if(![position.x,position.z,est.origen.y,...Object.values(bounds)].every(Number.isFinite))throw Error('pose o límites de estancia no finitos');
++    const inBounds=position.x>=bounds.x0-tolerance&&position.x<=bounds.x1+tolerance&&position.z>=bounds.z0-tolerance&&position.z<=bounds.z1+tolerance;
++    const q={x:position.x,z:position.z},contact=col.resolveCircle(q,radius);
++    const delta=Math.hypot(q.x-position.x,q.z-position.z),insideFloorFurniture=[],circleCentres=[];
++    // Match the floor-footprint exclusions in houses.js; borders alone miss deep interiors.
++    for(const room of h.estancias){
++      if(Math.abs(room.origen.y-est.origen.y)>tolerance)continue;
++      for(const p of room.colocados){
++        const b=caja(p.obj);
++        if(p.sop!=null||p.regla==='pared'||p.regla==='techo'||OBJETOS[p.obj].clase==='PICKUP'||b.h<.3)continue;
++        const dx=position.x-room.origen.x-p.x,dz=position.z-room.origen.z-p.z;
++        const cs=Math.cos(p.ry),sn=Math.sin(p.ry),x=dx*cs-dz*sn,z=dx*sn+dz*cs;
++        if(x>=b.x0-tolerance&&x<=b.x1+tolerance&&z>=b.z0-tolerance&&z<=b.z1+tolerance)
++          insideFloorFurniture.push({room:room.sala,obj:p.obj,index:p.i,local:[x,z],bounds:[b.x0,b.z0,b.x1,b.z1]});
++      }
++    }
++    // resolveCircle ignores exact circle centres (d2<=1e-8), including live props.
++    for(let i=0;i<col.nCirc;i++)if(col.circleAlive[i]){
++      const at=i*5,dx=position.x-col.circles[at],dz=position.z-col.circles[at+1];
++      if(dx*dx+dz*dz<=1e-8)circleCentres.push(i);
++    }
++    return {free:inBounds&&Number.isFinite(delta)&&Number.isFinite(contact.depth)&&delta<=tolerance&&contact.depth<=tolerance&&!insideFloorFurniture.length&&!circleCentres.length,
++      position:{x:position.x,z:position.z},radius,tolerance,bounds,inBounds,delta,contact:!!contact.hit,depth:contact.depth,
++      insideFloorFurniture,circleCentres,testedOnlyOnClone:true,cameraMoved:false};
++  }
++  function requireCameraClearance(h,est,col,position,stage){
++    const result=cameraClearance(h,est,col,position);
++    if(!result.free)throw Error('cámara ocupada '+stage+': '+JSON.stringify(result));
++    return result;
++  }
++  // End physical clearance helpers.
+   const g = window.game, tipo = %s, n = %d, kid = %s, perfil = %s, out = [];
+   g.sky.hour = 12;
+   const r = g.renderer; r.setSize(1280, 720, false); if (g.composer) g.composer.setSize(1280, 720);
+@@ -57,13 +95,13 @@
+       const fov=foco?(tipo==='trastero'?68:60):['bano','comedor'].includes(tipo)?75:68;
+       const pruebaCam=objetivos.length||tipo==='comedor'?new THREE.PerspectiveCamera(fov,16/9,.05,1000):null;
+       const esquinas=objetivos.flatMap(p=>{const b=caja(p.obj),out=[];for(const lx of [b.x0,b.x1])for(const ly of [b.y0,b.y1])for(const lz of [b.z0,b.z1])out.push(new THREE.Vector3(est.origen.x+p.x+lx*Math.cos(p.ry)+lz*Math.sin(p.ry),y+(p.y||0)+ly,est.origen.z+p.z-lx*Math.sin(p.ry)+lz*Math.cos(p.ry)));return out;});
+-      h.group.updateMatrixWorld(true);let mejor=-Infinity,puertaElegida=null,recortesElegidos=null;
++      h.group.updateMatrixWorld(true);let mejor=-Infinity,puertaElegida=null,recortesElegidos=null,clearanceElegido=null;
+       const opacos=[];h.group.traverse(o=>{if(o.isMesh&&o.visible&&!o.material?.transparent)opacos.push(o);});
+       const hojas=h.doors.flatMap(d=>{const m=[];d.pivot.traverse(o=>{if(o.isMesh)m.push(o);});return m;});
+       const rejilla=tipo==='comedor'?[.08,.1,.12,.18,.25,.35,.5,.65,.75,.82,.88,.9,.92]:[.2,.3,.4,.5,.6,.7,.8];
+       for(const [fx,fz] of [[f,f],[1-f,f],[f,1-f],[f,.5],[.5,f],...rejilla.flatMap(fx=>rejilla.map(fz=>[fx,fz]))]){
+-        const q={x:rm.x0+(rm.x1-rm.x0)*fx,z:rm.z0+(rm.z1-rm.z0)*fz},antes={...q};col.resolveCircle(q,.34);
+-        if(Math.hypot(q.x-antes.x,q.z-antes.z)>.05)continue;
++        const q={x:rm.x0+(rm.x1-rm.x0)*fx,z:rm.z0+(rm.z1-rm.z0)*fz};
++        const clearance=cameraClearance(h,est,col,q);if(!clearance.free)continue;
+         if(!foco&&Math.hypot(q.x-cx,q.z-cz)<Math.min(1.15,Math.min(rm.x1-rm.x0,rm.z1-rm.z0)*.4))continue;
+         if(!foco&&vistas.length&&Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)<.5)continue;
+         if(preparacion&&centros.some(p=>(Math.sin(p.p.ry)*(q.x-p.x)+Math.cos(p.p.ry)*(q.z-p.z))/Math.max(.001,Math.hypot(q.x-p.x,q.z-p.z))<Math.cos(55*Math.PI/180)))continue;
+@@ -95,7 +133,7 @@
+         const separacion=vistas.length?Math.min(2,Math.hypot(q.x-vistas[0].x,q.z-vistas[0].z)):0;
+         const similitud=vistas.length?Math.max(0,((q.x-cx)*(vistas[0].x-cx)+(q.z-cz)*(vistas[0].z-cz))/Math.max(.001,Math.hypot(q.x-cx,q.z-cz)*Math.hypot(vistas[0].x-cx,vistas[0].z-cz))):0;
+         const nota=(foco?(k===0?-Math.abs(dist-(tipo==='trastero'?2.1:1.6)):dist)-(tapa?10:0):lectura*3+separacion-similitud*5-(tapa?4:0)-Math.abs(dist-2)*.15)-recortes*100-(sanitario?Math.max(0,1.1-Math.hypot(q.x-cx,q.z-cz))*8:0);
+-        if(nota>mejor){mejor=nota;x=q.x;z=q.z;puertaElegida=puertaPrimerPlano;recortesElegidos=recortes;}
++        if(nota>mejor){mejor=nota;x=q.x;z=q.z;puertaElegida=puertaPrimerPlano;recortesElegidos=recortes;clearanceElegido=clearance;}
+       }
+       if(!Number.isFinite(mejor))throw Error('sin cámara libre: '+tipo+'/'+s);
+       for (let i = 0; i < 3; i++) g.frame(1 / 30);
+@@ -112,8 +150,12 @@
+         recortesElegidos=esquinas.length?esquinas.filter(v=>{const p=v.clone().project(cam);return p.z< -1||p.z>1||Math.abs(p.x)>.94||Math.abs(p.y)>.94;}).length:null;
+         if(puertaElegida>.12||recortesElegidos>0)throw Error('cobertura final incompleta: '+tipo+'/'+s+'/'+k+' puerta='+puertaElegida+' recortes='+recortesElegidos+' cam='+JSON.stringify({x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fuera:esquinas.map((v,i)=>({i,p:v.clone().project(cam)})).filter(q=>Math.abs(q.p.x)>.94||Math.abs(q.p.y)>.94)}));
+       }
+-      vistas.push({encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(tipo==='comedor'?{cobertura:{hoja_cercana_fraccion:puertaElegida,muestras:35,distancia_max:1.25,limite:.12,medido:'pose_final_antes_render',esquinas_evaluadas:esquinas.length,esquinas_recortadas:recortesElegidos}}:{}),...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
++      const clearanceAntes=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' antes de render');
++      const poseAntes=JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov});
++      vistas.push({clearance:{candidate:clearanceElegido,beforeRender:clearanceAntes},encuadre:k===0?'uso':'conjunto',x,y:y+1.6,z,objetivo:[cx,y+alturaObjetivo,cz],fov:cam.fov,...(tipo==='comedor'?{cobertura:{hoja_cercana_fraccion:puertaElegida,muestras:35,distancia_max:1.25,limite:.12,medido:'pose_final_antes_render',esquinas_evaluadas:esquinas.length,esquinas_recortadas:recortesElegidos}}:{}),...(objetivos.length?{objetos_objetivo:objetivos.map(p=>p.obj)}:{})});
+       g.render();
++      vistas[vistas.length-1].clearance.afterRender=requireCameraClearance(h,est,col,cam.position,tipo+'/'+s+'/'+k+' después de render');
++      if(JSON.stringify({position:cam.position.toArray(),quaternion:cam.quaternion.toArray(),fov:cam.fov})!==poseAntes)throw Error('render cambió la pose de cámara: '+tipo+'/'+s+'/'+k);
+       await fetch('/__snap?name=casa_' + tipo + '_' + s + '_' + k, { method: 'POST', body: r.domElement.toDataURL('image/jpeg', 0.86) });
+     }
+     out.push({ seed: s, kit:H.kitDeEstancia(rm.type,prof.id),perfil: prof.id, estilo: prof.style, plano: prof.layout, sala: [+(rm.x1 - rm.x0).toFixed(1), +(rm.z1 - rm.z0).toFixed(1)], planta: rm.lv, quality:g.qKey, dpr:r.getPixelRatio(), vistas });

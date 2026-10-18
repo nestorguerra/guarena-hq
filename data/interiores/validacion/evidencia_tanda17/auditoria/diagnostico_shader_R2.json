@@ -1,0 +1,7 @@
+{
+ "red": [
+  "THREE.WebGLProgram: Shader Error 0 - VALIDATE_STATUS false\n\nMaterial Name: \nMaterial Type: MeshStandardMaterial\n\nProgram Info Log: Fragment shader is not compiled.\n\nFRAGMENT\n\nERROR: 0:1625: '*' : wrong operand types - no operation '*' exists that takes a left-hand operand of type 'highp float' and a right operand of type 'const int' (or there is no acceptable conversion)\n\n  1620:   gClayDark = cl."
+ ],
+ "green": [],
+ "intervencion": "Conversión explícita float de define numérico0, geometría/cámara invariable; 64px, shader real."
+}

@@ -1,0 +1,1367 @@
+{
+ "kit": "informatica",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "informatica",
+   "tipologia": "tienda_especializada",
+   "seed": 1,
+   "W": 6.6,
+   "D": 10.2,
+   "guardias": 39,
+   "objetos": 132,
+   "distintos": 61,
+   "hash": "c6347e00",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "inf_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 1,
+     "obj": "inf_expositor_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "inf_pendrives_exp|datafono|inf_router|el",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "inf_estanteria_accesorios",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "inf_caja_pc|inf_router|inf_disco_duro|in",
+     "n": 25
+    },
+    {
+     "entrada": 7,
+     "obj": "inf_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_oficina",
+     "n": 0
+    },
+    {
+     "entrada": 10,
+     "obj": "inf_estanteria_accesorios",
+     "n": 5
+    },
+    {
+     "entrada": 11,
+     "obj": "inf_acc_auriculares_cable|inf_acc_cargad",
+     "n": 25
+    },
+    {
+     "entrada": 12,
+     "obj": "inf_puesto_pc_exp",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "inf_teclado_raton|inf_router|inf_disco_d",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "inf_mesa_exposicion",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "inf_portatil_13|inf_portatil_15|inf_port",
+     "n": 10
+    },
+    {
+     "entrada": 16,
+     "obj": "inf_impresora|inf_teclado_raton|inf_rout",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "inf_mesa_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "inf_movil_negro|inf_movil_azul|inf_movil",
+     "n": 6
+    },
+    {
+     "entrada": 19,
+     "obj": "inf_pendrives_exp|inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 20,
+     "obj": "taburete_alto|silla_visita",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "inf_panel_fundas|inf_panel_cables|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "inf_torre_pc|inf_caja_portatil",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "paraguas_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "inf_cartel_movil|inf_cartel_portatil|inf",
+     "n": 2
+    },
+    {
+     "entrada": 27,
+     "obj": "inf_panel_cables|inf_panel_fundas|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 28,
+     "obj": "inf_pantalla_pared",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "inf_banco_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "inf_soldador|inf_destornilladores|inf_pl",
+     "n": 3
+    },
+    {
+     "entrada": 33,
+     "obj": "inf_taburete_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "inf_estanteria_piezas",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "inf_caja_pc|caja_carton|inf_router|inf_i",
+     "n": 9
+    },
+    {
+     "entrada": 36,
+     "obj": "inf_cajonera_piezas|inf_caja_portatil|in",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "inf_destornilladores|inf_placa_madre",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 0
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.37,
+     "libre_m2": 4.37
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.49,
+     "libre_m2": 1.49
+    },
+    "tras": {
+     "alcanzable_m2": 0.22,
+     "libre_m2": 0.22
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "sala": {
+     "alcanzable_m2": 4.78,
+     "libre_m2": 4.78
+    },
+    "sala_e": {
+     "alcanzable_m2": 5.69,
+     "libre_m2": 5.69
+    },
+    "fondo": {
+     "alcanzable_m2": 6.63,
+     "libre_m2": 6.63
+    },
+    "reparacion": {
+     "alcanzable_m2": 1.02,
+     "libre_m2": 1.02
+    },
+    "luces": {
+     "alcanzable_m2": 24.36,
+     "libre_m2": 24.36
+    }
+   },
+   "luz": {
+    "entrada": 0.215,
+    "frente_barra": 0.45,
+    "sala": 0.37,
+    "sala_e": 0.301,
+    "fondo": 0.217
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 20964,
+   "mallas": 25,
+   "luces": 9,
+   "determinista": true
+  },
+  {
+   "kit": "informatica",
+   "tipologia": "tienda_especializada",
+   "seed": 2,
+   "W": 6.6,
+   "D": 9,
+   "guardias": 35,
+   "objetos": 123,
+   "distintos": 52,
+   "hash": "d564fbd9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "inf_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 1,
+     "obj": "inf_expositor_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "inf_pendrives_exp|datafono|inf_router|el",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "inf_estanteria_accesorios",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "inf_caja_pc|inf_router|inf_disco_duro|in",
+     "n": 24
+    },
+    {
+     "entrada": 7,
+     "obj": "inf_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_oficina",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "inf_estanteria_accesorios",
+     "n": 4
+    },
+    {
+     "entrada": 11,
+     "obj": "inf_acc_auriculares_cable|inf_acc_cargad",
+     "n": 21
+    },
+    {
+     "entrada": 12,
+     "obj": "inf_puesto_pc_exp",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "inf_teclado_raton|inf_router|inf_disco_d",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "inf_mesa_exposicion",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "inf_portatil_13|inf_portatil_15|inf_port",
+     "n": 10
+    },
+    {
+     "entrada": 16,
+     "obj": "inf_impresora|inf_teclado_raton|inf_rout",
+     "n": 4
+    },
+    {
+     "entrada": 17,
+     "obj": "inf_mesa_moviles",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "inf_movil_negro|inf_movil_azul|inf_movil",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "inf_pendrives_exp|inf_exp_sim",
+     "n": 0
+    },
+    {
+     "entrada": 20,
+     "obj": "taburete_alto|silla_visita",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "inf_panel_fundas|inf_panel_cables|inf_pa",
+     "n": 1
+    },
+    {
+     "entrada": 22,
+     "obj": "inf_torre_pc|inf_caja_portatil",
+     "n": 1
+    },
+    {
+     "entrada": 23,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "paraguas_cubo",
+     "n": 1
+    },
+    {
+     "entrada": 26,
+     "obj": "inf_cartel_movil|inf_cartel_portatil|inf",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "inf_panel_cables|inf_panel_fundas|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 28,
+     "obj": "inf_pantalla_pared",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "inf_banco_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "inf_soldador|inf_destornilladores|inf_pl",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "inf_taburete_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "inf_estanteria_piezas",
+     "n": 2
+    },
+    {
+     "entrada": 35,
+     "obj": "inf_caja_pc|caja_carton|inf_router|inf_i",
+     "n": 19
+    },
+    {
+     "entrada": 36,
+     "obj": "inf_cajonera_piezas|inf_caja_portatil|in",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "inf_destornilladores|inf_placa_madre",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.4,
+     "libre_m2": 4.4
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.69,
+     "libre_m2": 1.69
+    },
+    "tras": {
+     "alcanzable_m2": 0.02,
+     "libre_m2": 0.02
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.02,
+     "libre_m2": 0.02
+    },
+    "sala": {
+     "alcanzable_m2": 3.56,
+     "libre_m2": 3.56
+    },
+    "sala_e": {
+     "alcanzable_m2": 1.53,
+     "libre_m2": 1.53
+    },
+    "fondo": {
+     "alcanzable_m2": 7.33,
+     "libre_m2": 7.33
+    },
+    "reparacion": {
+     "alcanzable_m2": 0.85,
+     "libre_m2": 0.85
+    },
+    "luces": {
+     "alcanzable_m2": 19.73,
+     "libre_m2": 19.73
+    }
+   },
+   "luz": {
+    "entrada": 0.195,
+    "frente_barra": 0.409,
+    "sala": 0.337,
+    "sala_e": 0.307,
+    "fondo": 0.244
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 18042,
+   "mallas": 26,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 0.871
+  },
+  {
+   "kit": "informatica",
+   "tipologia": "tienda_especializada",
+   "seed": 3,
+   "W": 6.3,
+   "D": 8.7,
+   "guardias": 38,
+   "objetos": 111,
+   "distintos": 52,
+   "hash": "17e96399",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "inf_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 1,
+     "obj": "inf_expositor_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "inf_pendrives_exp|datafono|inf_router|el",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "inf_estanteria_accesorios",
+     "n": 2
+    },
+    {
+     "entrada": 6,
+     "obj": "inf_caja_pc|inf_router|inf_disco_duro|in",
+     "n": 31
+    },
+    {
+     "entrada": 7,
+     "obj": "inf_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_oficina",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "inf_estanteria_accesorios",
+     "n": 3
+    },
+    {
+     "entrada": 11,
+     "obj": "inf_acc_auriculares_cable|inf_acc_cargad",
+     "n": 15
+    },
+    {
+     "entrada": 12,
+     "obj": "inf_puesto_pc_exp",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "inf_teclado_raton|inf_router|inf_disco_d",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "inf_mesa_exposicion",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "inf_portatil_13|inf_portatil_15|inf_port",
+     "n": 4
+    },
+    {
+     "entrada": 16,
+     "obj": "inf_impresora|inf_teclado_raton|inf_rout",
+     "n": 3
+    },
+    {
+     "entrada": 17,
+     "obj": "inf_mesa_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "inf_movil_negro|inf_movil_azul|inf_movil",
+     "n": 6
+    },
+    {
+     "entrada": 19,
+     "obj": "inf_pendrives_exp|inf_exp_sim",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "taburete_alto|silla_visita",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "inf_panel_fundas|inf_panel_cables|inf_pa",
+     "n": 0
+    },
+    {
+     "entrada": 22,
+     "obj": "inf_torre_pc|inf_caja_portatil",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "inf_cartel_movil|inf_cartel_portatil|inf",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "inf_panel_cables|inf_panel_fundas|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 28,
+     "obj": "inf_pantalla_pared",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 30,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "inf_banco_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "inf_soldador|inf_destornilladores|inf_pl",
+     "n": 3
+    },
+    {
+     "entrada": 33,
+     "obj": "inf_taburete_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "inf_estanteria_piezas",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "inf_caja_pc|caja_carton|inf_router|inf_i",
+     "n": 9
+    },
+    {
+     "entrada": 36,
+     "obj": "inf_cajonera_piezas|inf_caja_portatil|in",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "inf_destornilladores|inf_placa_madre",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_panel_led",
+     "n": 6
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.99,
+     "libre_m2": 3.99
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.45,
+     "libre_m2": 1.45
+    },
+    "tras": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.14,
+     "libre_m2": 0.14
+    },
+    "sala": {
+     "alcanzable_m2": 1.87,
+     "libre_m2": 1.87
+    },
+    "sala_e": {
+     "alcanzable_m2": 1.88,
+     "libre_m2": 1.88
+    },
+    "fondo": {
+     "alcanzable_m2": 5.49,
+     "libre_m2": 5.49
+    },
+    "reparacion": {
+     "alcanzable_m2": 1.2,
+     "libre_m2": 1.21
+    },
+    "luces": {
+     "alcanzable_m2": 16.46,
+     "libre_m2": 16.48
+    }
+   },
+   "luz": {
+    "entrada": 0.157,
+    "frente_barra": 0.334,
+    "sala": 0.286,
+    "sala_e": 0.243,
+    "fondo": 0.194
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 14666,
+   "mallas": 24,
+   "luces": 6,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "informatica",
+   "tipologia": "tienda_especializada",
+   "seed": 4,
+   "W": 6,
+   "D": 10.799999999999999,
+   "guardias": 36,
+   "objetos": 106,
+   "distintos": 53,
+   "hash": "a33a7623",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "inf_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 1,
+     "obj": "inf_expositor_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "inf_pendrives_exp|datafono|inf_router|el",
+     "n": 3
+    },
+    {
+     "entrada": 5,
+     "obj": "inf_estanteria_accesorios",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "inf_caja_pc|inf_router|inf_disco_duro|in",
+     "n": 8
+    },
+    {
+     "entrada": 7,
+     "obj": "inf_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_oficina",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "inf_estanteria_accesorios",
+     "n": 5
+    },
+    {
+     "entrada": 11,
+     "obj": "inf_acc_auriculares_cable|inf_acc_cargad",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "inf_puesto_pc_exp",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "inf_teclado_raton|inf_router|inf_disco_d",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "inf_mesa_exposicion",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "inf_portatil_13|inf_portatil_15|inf_port",
+     "n": 5
+    },
+    {
+     "entrada": 16,
+     "obj": "inf_impresora|inf_teclado_raton|inf_rout",
+     "n": 3
+    },
+    {
+     "entrada": 17,
+     "obj": "inf_mesa_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "inf_movil_negro|inf_movil_azul|inf_movil",
+     "n": 6
+    },
+    {
+     "entrada": 19,
+     "obj": "inf_pendrives_exp|inf_exp_sim",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "taburete_alto|silla_visita",
+     "n": 1
+    },
+    {
+     "entrada": 21,
+     "obj": "inf_panel_fundas|inf_panel_cables|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "inf_torre_pc|inf_caja_portatil",
+     "n": 0
+    },
+    {
+     "entrada": 23,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 24,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "inf_cartel_movil|inf_cartel_portatil|inf",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "inf_panel_cables|inf_panel_fundas|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 28,
+     "obj": "inf_pantalla_pared",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "extintor_super",
+     "n": 0
+    },
+    {
+     "entrada": 31,
+     "obj": "inf_banco_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "inf_soldador|inf_destornilladores|inf_pl",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "inf_taburete_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "inf_estanteria_piezas",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "inf_caja_pc|caja_carton|inf_router|inf_i",
+     "n": 9
+    },
+    {
+     "entrada": 36,
+     "obj": "inf_cajonera_piezas|inf_caja_portatil|in",
+     "n": 2
+    },
+    {
+     "entrada": 37,
+     "obj": "inf_destornilladores|inf_placa_madre",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_panel_led",
+     "n": 8
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 3.94,
+     "libre_m2": 3.94
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.56,
+     "libre_m2": 1.56
+    },
+    "tras": {
+     "alcanzable_m2": 0.21,
+     "libre_m2": 0.21
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.06,
+     "libre_m2": 0.06
+    },
+    "sala": {
+     "alcanzable_m2": 5.47,
+     "libre_m2": 5.47
+    },
+    "sala_e": {
+     "alcanzable_m2": 7.04,
+     "libre_m2": 7.04
+    },
+    "fondo": {
+     "alcanzable_m2": 5.66,
+     "libre_m2": 5.66
+    },
+    "reparacion": {
+     "alcanzable_m2": 0.68,
+     "libre_m2": 0.7
+    },
+    "luces": {
+     "alcanzable_m2": 25.09,
+     "libre_m2": 25.12
+    }
+   },
+   "luz": {
+    "entrada": 0.18,
+    "frente_barra": 0.371,
+    "sala": 0.318,
+    "sala_e": 0.289,
+    "fondo": 0.221
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 19606,
+   "mallas": 25,
+   "luces": 8,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "informatica",
+   "tipologia": "tienda_especializada",
+   "seed": 5,
+   "W": 6.9,
+   "D": 10.2,
+   "guardias": 43,
+   "objetos": 114,
+   "distintos": 56,
+   "hash": "a3c194cb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "inf_mostrador",
+     "n": 2
+    },
+    {
+     "entrada": 1,
+     "obj": "inf_expositor_moviles",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "pel_tpv",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "inf_exp_sim",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "inf_pendrives_exp|datafono|inf_router|el",
+     "n": 2
+    },
+    {
+     "entrada": 5,
+     "obj": "inf_estanteria_accesorios",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "inf_caja_pc|inf_router|inf_disco_duro|in",
+     "n": 12
+    },
+    {
+     "entrada": 7,
+     "obj": "inf_rotulo",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "silla_oficina",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "inf_estanteria_accesorios",
+     "n": 5
+    },
+    {
+     "entrada": 11,
+     "obj": "inf_acc_auriculares_cable|inf_acc_cargad",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "inf_puesto_pc_exp",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "inf_teclado_raton|inf_router|inf_disco_d",
+     "n": 0
+    },
+    {
+     "entrada": 14,
+     "obj": "inf_mesa_exposicion",
+     "n": 2
+    },
+    {
+     "entrada": 15,
+     "obj": "inf_portatil_13|inf_portatil_15|inf_port",
+     "n": 10
+    },
+    {
+     "entrada": 16,
+     "obj": "inf_impresora|inf_teclado_raton|inf_rout",
+     "n": 6
+    },
+    {
+     "entrada": 17,
+     "obj": "inf_mesa_moviles",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "inf_movil_negro|inf_movil_azul|inf_movil",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "inf_pendrives_exp|inf_exp_sim",
+     "n": 0
+    },
+    {
+     "entrada": 20,
+     "obj": "taburete_alto|silla_visita",
+     "n": 2
+    },
+    {
+     "entrada": 21,
+     "obj": "inf_panel_fundas|inf_panel_cables|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 22,
+     "obj": "inf_torre_pc|inf_caja_portatil",
+     "n": 2
+    },
+    {
+     "entrada": 23,
+     "obj": "planta_grande",
+     "n": 1
+    },
+    {
+     "entrada": 24,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 25,
+     "obj": "paraguas_cubo",
+     "n": 0
+    },
+    {
+     "entrada": 26,
+     "obj": "inf_cartel_movil|inf_cartel_portatil|inf",
+     "n": 1
+    },
+    {
+     "entrada": 27,
+     "obj": "inf_panel_cables|inf_panel_fundas|inf_pa",
+     "n": 2
+    },
+    {
+     "entrada": 28,
+     "obj": "inf_pantalla_pared",
+     "n": 0
+    },
+    {
+     "entrada": 29,
+     "obj": "planta_grande",
+     "n": 0
+    },
+    {
+     "entrada": 30,
+     "obj": "extintor_super",
+     "n": 1
+    },
+    {
+     "entrada": 31,
+     "obj": "inf_banco_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 32,
+     "obj": "inf_soldador|inf_destornilladores|inf_pl",
+     "n": 2
+    },
+    {
+     "entrada": 33,
+     "obj": "inf_taburete_reparacion",
+     "n": 1
+    },
+    {
+     "entrada": 34,
+     "obj": "inf_estanteria_piezas",
+     "n": 1
+    },
+    {
+     "entrada": 35,
+     "obj": "inf_caja_pc|caja_carton|inf_router|inf_i",
+     "n": 10
+    },
+    {
+     "entrada": 36,
+     "obj": "inf_cajonera_piezas|inf_caja_portatil|in",
+     "n": 1
+    },
+    {
+     "entrada": 37,
+     "obj": "inf_destornilladores|inf_placa_madre",
+     "n": 1
+    },
+    {
+     "entrada": 38,
+     "obj": "papelera",
+     "n": 1
+    },
+    {
+     "entrada": 39,
+     "obj": "lampara_panel_led",
+     "n": 9
+    }
+   ],
+   "paso": {
+    "entrada": {
+     "alcanzable_m2": 4.69,
+     "libre_m2": 4.69
+    },
+    "barra": {
+     "alcanzable_m2": 0,
+     "libre_m2": 0
+    },
+    "frente_barra": {
+     "alcanzable_m2": 1.43,
+     "libre_m2": 1.43
+    },
+    "tras": {
+     "alcanzable_m2": 0.21,
+     "libre_m2": 0.21
+    },
+    "pared_w": {
+     "alcanzable_m2": 0.04,
+     "libre_m2": 0.04
+    },
+    "sala": {
+     "alcanzable_m2": 6.79,
+     "libre_m2": 6.79
+    },
+    "sala_e": {
+     "alcanzable_m2": 3.79,
+     "libre_m2": 3.79
+    },
+    "fondo": {
+     "alcanzable_m2": 7.52,
+     "libre_m2": 7.52
+    },
+    "reparacion": {
+     "alcanzable_m2": 1.59,
+     "libre_m2": 1.59
+    },
+    "luces": {
+     "alcanzable_m2": 26.52,
+     "libre_m2": 26.52
+    }
+   },
+   "luz": {
+    "entrada": 0.206,
+    "frente_barra": 0.44,
+    "sala": 0.356,
+    "sala_e": 0.287,
+    "fondo": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 20894,
+   "mallas": 26,
+   "luces": 9,
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

@@ -1,0 +1,1106 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Taller mecánico y recambios",
+ "nota": "El taller de coches de un pueblo de las Vegas Altas: el mostrador de recambios con sus estanterías de cajas junto a la puerta, el despacho y una salita con neumáticos de muestra, y al fondo la nave: un elevador de dos columnas con un coche, los bancos y las cajoneras de herramientas contra la pared, las estanterías de neumáticos, los bidones de aceite y, tras un tabique, el almacén. Luz fría, de nave. Sin marcas. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   8.1,
+   9.6
+  ],
+  "fondo": [
+   12.0,
+   14.4
+  ],
+  "alto": 3.6
+ },
+ "variables": {
+  "xm": "W/2-1.5",
+  "z0": "1.8",
+  "z1": "4.3",
+  "zt": "4.8",
+  "zf": "D-2.4",
+  "xo": "-W/2+3.0",
+  "xa": "W/2-3.2"
+ },
+ "paso_libre": 0.9,
+ "pared": "#dcdedf",
+ "suelo": "concrete_floor_damaged_01",
+ "suelo_color": "#8e9296",
+ "puntos": {
+  "dependiente": [
+   "xm+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xm-0.9",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir recambios o presupuesto en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.5"
+   ]
+  },
+  {
+   "id": "sala_cliente",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.5",
+    "xm-1.4",
+    "4.6"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xm-0.3",
+    "z0",
+    "xm+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xm-1.4",
+    "z0",
+    "xm-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "trasbarra",
+   "publica": false,
+   "rect": [
+    "xm+0.33",
+    "1.5",
+    "W/2",
+    "6.0"
+   ]
+  },
+  {
+   "id": "taller",
+   "publica": true,
+   "rect": [
+    "-W/2+0.8",
+    "zt",
+    "W/2-1.5",
+    "zf"
+   ]
+  },
+  {
+   "id": "pared_oeste",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zt",
+    "-W/2+0.8",
+    "zf"
+   ]
+  },
+  {
+   "id": "pared_este",
+   "publica": false,
+   "rect": [
+    "W/2-1.5",
+    "6.2",
+    "W/2",
+    "zf"
+   ]
+  },
+  {
+   "id": "oficina",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zf",
+    "xo",
+    "D"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": true,
+   "rect": [
+    "xo",
+    "zf",
+    "xa",
+    "D"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "xa",
+    "zf",
+    "W/2",
+    "D"
+   ]
+  },
+  {
+   "id": "luces_frente",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "zt"
+   ]
+  },
+  {
+   "id": "luces_taller",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zt",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zf"
+   ],
+   "a": [
+    "xo",
+    "zf"
+   ],
+   "puerta": [
+    1.9,
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xo",
+    "zf"
+   ],
+   "a": [
+    "xo",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "xa",
+    "zf"
+   ],
+   "a": [
+    "xa",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "xa",
+    "zf"
+   ],
+   "a": [
+    "W/2",
+    "zf"
+   ],
+   "puerta": [
+    0.5,
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xm-1.4",
+    "z0",
+    "xm-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pedir en el mostrador: sin muebles delante"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "tal_mostrador_recambios",
+   "eje": "z",
+   "linea": [
+    "xm",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "tal_exp_linternas",
+   "en": [
+    "tal_mostrador_recambios"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "linterna"
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "tal_catalogo_recambios",
+   "en": [
+    "tal_mostrador_recambios"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "pel_tpv",
+   "en": [
+    "tal_mostrador_recambios"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "tal_mostrador_recambios"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "variantes": [
+    "bote_propinas",
+    "tarjetero",
+    "tal_prod_ambientadores",
+    "tal_prod_bombillas"
+   ],
+   "en": [
+    "tal_mostrador_recambios"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "contra_pared",
+   "obj": "tal_estanteria_recambios",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "sobre",
+   "variantes": [
+    "tal_prod_filtro_aceite",
+    "tal_prod_filtro_aire",
+    "tal_prod_pastillas_freno",
+    "tal_prod_discos_freno",
+    "tal_prod_bujias",
+    "tal_prod_baterias",
+    "tal_prod_escobillas",
+    "tal_prod_aceite_5l",
+    "tal_prod_aceite_1l",
+    "tal_prod_anticongelante",
+    "tal_prod_bombillas",
+    "tal_prod_correas",
+    "tal_prod_amortiguadores",
+    "tal_prod_limpiaparabrisas",
+    "tal_prod_ambientadores",
+    "tal_prod_cadenas_nieve",
+    "tal_prod_cables_arranque"
+   ],
+   "en": [
+    "tal_estanteria_recambios"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "pared",
+   "obj": "tal_rotulo",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "suelo_libre",
+   "obj": "taburete_alto",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "contra_pared",
+   "obj": "tal_banco_trabajo",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "contra_pared",
+   "variantes": [
+    "tal_cajonera_roja",
+    "tal_cajonera_azul",
+    "tal_cajonera_gris"
+   ],
+   "pared": "W",
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "contra_pared",
+   "obj": "tal_banco_trabajo_madera",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "sobre",
+   "variantes": [
+    "tal_llaves_juego",
+    "tal_martillo",
+    "tal_caja_herramientas",
+    "tal_lampara_inspeccion",
+    "tal_motor_arranque",
+    "tal_pistones",
+    "tal_trapos",
+    "tal_rollo_papel_taller"
+   ],
+   "en": [
+    "tal_banco_trabajo",
+    "tal_banco_trabajo_madera",
+    "tal_cajonera_roja",
+    "tal_cajonera_azul",
+    "tal_cajonera_gris"
+   ],
+   "por_soporte": [
+    1,
+    3
+   ],
+   "obligatorio": true,
+   "vende": "herramientas"
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "pared",
+   "obj": "tal_panel_herramientas",
+   "pared": "W",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "pared",
+   "obj": "tal_senal_epi",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_oeste",
+   "regla": "pared",
+   "obj": "extintor_super",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "pared_este",
+   "regla": "contra_pared",
+   "obj": "tal_compresor",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "contra_pared",
+   "obj": "tal_estanteria_neumaticos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_bidon_aceite_azul",
+    "tal_bidon_aceite_negro",
+    "tal_bidon_aceite_usado"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_garrafas_aceite_palet",
+    "tal_contenedor_residuos"
+   ],
+   "cantidad": [
+    0,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "pared_este",
+   "regla": "pared",
+   "obj": "tal_senal_epi",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "contra_pared",
+   "obj": "banco_espera",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "pared",
+   "variantes": [
+    "tal_cartel_tarifas",
+    "tal_cartel_neumaticos",
+    "tal_cartel_revision"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "contra_pared",
+   "obj": "tal_estanteria_baja",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "sobre",
+   "variantes": [
+    "tal_prod_neumatico_expuesto",
+    "tal_prod_filtro_aceite",
+    "tal_prod_aceite_1l",
+    "tal_prod_limpiaparabrisas"
+   ],
+   "en": [
+    "tal_estanteria_baja"
+   ],
+   "relleno": [
+    0.5,
+    0.8
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_pila_neumaticos_a",
+    "tal_pila_neumaticos_b",
+    "tal_pila_neumaticos_c"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "suelo_libre",
+   "obj": "revistero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala_cliente",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguas_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "oficina",
+   "regla": "contra_pared",
+   "obj": "puesto_oficina",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "oficina",
+   "regla": "contra_pared",
+   "obj": "archivador_metalico",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "oficina",
+   "regla": "contra_pared",
+   "obj": "estanteria_archivadores",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "oficina",
+   "regla": "sobre",
+   "variantes": [
+    "archivador_azul",
+    "archivador_rojo",
+    "archivador_verde",
+    "archivador_negro",
+    "archivador_amarillo",
+    "pila_carpetas"
+   ],
+   "en": [
+    "estanteria_archivadores"
+   ],
+   "relleno": [
+    0.5,
+    0.85
+   ],
+   "todas": true
+  },
+  {
+   "zona": "oficina",
+   "regla": "sobre",
+   "variantes": [
+    "monitor_pc_encendido",
+    "telefono_fijo",
+    "teclado",
+    "bloc_notas",
+    "calculadora"
+   ],
+   "en": [
+    "puesto_oficina"
+   ],
+   "por_soporte": [
+    2,
+    3
+   ]
+  },
+  {
+   "zona": "oficina",
+   "regla": "pared",
+   "obj": "tablon_corcho",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "oficina",
+   "regla": "pared",
+   "obj": "calendario_pared",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "oficina",
+   "regla": "suelo_libre",
+   "obj": "silla_visita",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "oficina",
+   "regla": "esquina",
+   "obj": "planta_alta",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "obj": "tal_lavabo_industrial",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "pared",
+   "variantes": [
+    "tal_cartel_revision",
+    "tal_cartel_neumaticos"
+   ],
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "obj": "tal_dispensador_papel",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "contra_pared",
+   "obj": "tal_banco_trabajo_madera",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "obj": "tal_contenedor_residuos",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_bateria_cargador",
+    "tal_taburete_taller"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "fondo",
+   "regla": "sobre",
+   "variantes": [
+    "tal_trapos",
+    "tal_rollo_papel_taller",
+    "tal_llaves_juego"
+   ],
+   "en": [
+    "tal_banco_trabajo_madera"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "tal_estanteria_recambios",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "tal_prod_baterias",
+    "tal_prod_escobillas",
+    "tal_prod_aceite_5l",
+    "tal_prod_aceite_1l",
+    "tal_prod_anticongelante",
+    "tal_prod_bombillas",
+    "tal_prod_correas",
+    "tal_prod_amortiguadores",
+    "tal_prod_limpiaparabrisas",
+    "tal_prod_ambientadores",
+    "tal_prod_cadenas_nieve",
+    "tal_prod_cables_arranque",
+    "caja_carton"
+   ],
+   "en": [
+    "tal_estanteria_recambios"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "tal_estanteria_baja",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "tal_prod_neumatico_expuesto",
+    "tal_prod_filtro_aire",
+    "tal_prod_pastillas_freno"
+   ],
+   "en": [
+    "tal_estanteria_baja"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "suelo_libre",
+   "variantes": [
+    "palet_madera",
+    "tal_garrafas_aceite_palet",
+    "pila_cajones_vacios"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "modulos",
+   "obj": "tal_elevador_azul",
+   "eje": "x",
+   "linea": [
+    "zt+2.0",
+    "-W/2+0.9",
+    "W/2-0.9"
+   ],
+   "mira": "+z",
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_desmontadora_neumaticos",
+    "tal_equilibradora"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_gato_hidraulico",
+    "tal_caballetes",
+    "tal_carro_aceite",
+    "tal_carro_mecanico",
+    "tal_taburete_taller"
+   ],
+   "cantidad": [
+    0,
+    4
+   ],
+   "todas": true
+  },
+  {
+   "zona": "taller",
+   "regla": "suelo_libre",
+   "variantes": [
+    "tal_bidon_aceite_usado",
+    "tal_pila_neumaticos_a",
+    "tal_bateria_cargador"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "suelo_libre",
+   "obj": "tal_coche_capo_abierto",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "luces_frente",
+   "regla": "techo",
+   "obj": "regleta_led_techo",
+   "por_m2": [
+    0.06,
+    0.08
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "luces_taller",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "por_m2": [
+    0.045,
+    0.06
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   5,
+   9
+  ],
+  "temperatura_k": [
+   4200,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "taller",
+  "horario_defecto": "Mo-Fr 08:30-13:30,15:30-19:30; Sa 09:00-13:00",
+  "vida": [
+   "el coche elevado",
+   "una mancha de aceite en el suelo",
+   "la radio del taller",
+   "un neumático apoyado en la pared"
+  ],
+  "cerrado": "persiana bajada, el elevador abajo"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Taller mecánico.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Taller_mec%C3%A1nico.jpg",
+   "autor": "La Encartada Museoa",
+   "licencia": "CC BY-SA 3.0 es"
+  },
+  {
+   "titulo": "Car mechanic worker repairing suspension of lifted automobile at auto repair garage shop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Car_mechanic_worker_repairing_suspension_of_lifted_automobile_at_auto_repair_garage_shop.jpg",
+   "autor": "Shixart1985",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Rootes Maidstone building.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Rootes_Maidstone_building.jpg",
+   "autor": "John K  Thorne",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior of the Car Machine Shop at Petone Railway Workshops, 1928 ATLIB 311731.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_the_Car_Machine_Shop_at_Petone_Railway_Workshops,_1928_ATLIB_311731.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Interior view of the Tool Shop at Petone Railway Workshops, 1928 ATLIB 311746.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_view_of_the_Tool_Shop_at_Petone_Railway_Workshops,_1928_ATLIB_311746.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Machine shop interior, railway workshops, Petone ATLIB 205984.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Machine_shop_interior,_railway_workshops,_Petone_ATLIB_205984.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Petone Railway Workshops. Interior view of new fitting shop, circa 1924. ATLIB 288997.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Petone_Railway_Workshops._Interior_view_of_new_fitting_shop,_circa_1924._ATLIB_288997.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Petone Railway Workshops. Interior view of new fitting shop, circa 1924. ATLIB 289000.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Petone_Railway_Workshops._Interior_view_of_new_fitting_shop,_circa_1924._ATLIB_289000.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Petone Railway Workshops. Interior view of the Erecting Shop, 1900. ATLIB 272504.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Petone_Railway_Workshops._Interior_view_of_the_Erecting_Shop,_1900._ATLIB_272504.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Interior view of the tinsmiths' shop at Hillside Railway Workshops, Dunedin. ATLIB 290304.png",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_view_of_the_tinsmiths%27_shop_at_Hillside_Railway_Workshops,_Dunedin._ATLIB_290304.png",
+   "autor": "Godber, Albert Percy, 1875-1949",
+   "licencia": "Public domain"
+  }
+ ]
+}

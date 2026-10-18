@@ -1,0 +1,64 @@
+{
+  "state": "APPROVED_PRIVATE_GREYBOX_CAPTURE_ONLY",
+  "scope": "Independent file/hash/JSON delta review and plant inspection; author CPU receipts read, not re-executed; no GPU/API/product writes",
+  "inputHashes": {
+    "manifest.json": "d5d6138512f7943655b7360a9aa308ecb03aaa4674968dbc4bb3725462998504",
+    "entrega.md": "22f7816bfc3c1a110b7810f5feb2ca95f7099fece0d7434a9a0ef3efeb2c0ba5",
+    "greybox_r2_contra_t16.patch": "ed0c405f0ca5d22e1960a70f04fbd05a42dde6432938d7927ef3489c7ae59c49",
+    "orden_r2_contra_r1.patch": "67c8bde0c846da6386ce7943014f568ad19394cfeea0d6097ec17507093a82b9",
+    "fit.json": "0fa10adf0032f15fbf9f9a0f738c027e67eac96ffc6b156335ba39962377f46d",
+    "full.json": "6c97bda1de613873f79542114a50631752f1d48d8f10c398f4a68de251b4afa2",
+    "huecos.json": "64528f8928e82112dc65677d50cc2f426375c33fab2e0cced20b9999936a13a4",
+    "annie.json": "d993ba7d3683e6945ea4c47a19c88a70b1340fd01de96da6cc23dd2b8a74fc8b",
+    "negativos.json": "a8a43fd080821ef900a1bb222f3407ec0f1ebc8d1342e9c89b5a877783d59bb0",
+    "fallback.json": "4b2f3984f1c566c109011095befa63faeda340aa062312cc789dde2e236942c1",
+    "planta_r1_r2.png": "cba2c1ce1a2c8c439be603ee2282bad736253b8a73ec15e146eab027d8346016"
+  },
+  "r1Manifest": "63461d72a6baaa29da7968773a23c6dcb8b12eea96cc71b26938c0d615533f07",
+  "authorizingReview": "fe813f3402c909ee6ac11bb0be51883014355b581beca741b8a066bf2fb82848",
+  "independentChecks": {
+    "r2HashEntries": 47,
+    "r2HashMismatches": [],
+    "r1HashEntries": 45,
+    "r1HashMismatches": [],
+    "exactRecipeDeltaOnlyOrderAndImmediateReferences": true,
+    "changedCandidateFiles": [
+      "data/kits/vivienda_estudio.json",
+      "data/kits/vivienda_estudio_grey_amplio.json",
+      "src/interiores_datos.js"
+    ],
+    "catalogModelsAndEngineEqualR1": true
+  },
+  "authorReceiptSummary": {
+    "fitSeeds": [
+      3244,
+      1594,
+      1481
+    ],
+    "allFirstAttemptNoMissing": true,
+    "fullHouseCount": 23,
+    "controlsWithoutStudy": 20,
+    "fullErrors": 0,
+    "maxOpeningPenetration": 0,
+    "annieSeeds": [
+      12,
+      13
+    ],
+    "annieFiveRoomsGeometryMaterialsCollidersActionsExact": true
+  },
+  "blockingFindingsForPrivateCapture": [],
+  "pending": [
+    "Visual effect unknown; same height/dimensions do not prove occlusion solved",
+    "3244 front shifts through existing solver; compare whole composition and window",
+    "1594 fixed entrance point/FOV/targeting rule plus canonical views; document camera changes",
+    "1481 synthetic; only two documented town studies",
+    "Greybox budgets not final model or FPS proof",
+    "Functional positive fallback case with complete individual program, 0.80 m access and budget plus production coverage remain pending"
+  ],
+  "productionApproved": false,
+  "visualQualityApproved": false,
+  "filesWrittenOnly": [
+    ".cache/calidad/tanda17/revision_geometria_r2.md",
+    ".cache/calidad/tanda17/revision_geometria_r2.json"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+ "estado": "PREVIEW_CAPTURADO_NO_APROBACION_FINAL",
+ "fuentes_candidata_verificadas_sin_cambio": 116,
+ "capturador_sha256": "6b45ac1f4ef9c824877fe277f838d57815f0fd34b4293dafe7d77950f054e996",
+ "salidas_esperadas": [
+  "data/interiores/fichas/casa_cocina.jpg",
+  "data/interiores/fichas/casa_cocina.json"
+ ],
+ "primer_control": "El primer assert comparó indebidamente las dos salidas capturadas contra la ficha histórica copiada y falló sólo en esos archivos. No fue fallo del producto. El control corregido excluye esas salidas previstas y verifica todas las demás fuentes y el capturador con URL privada declarada.",
+ "vistas_libres": 6,
+ "comparacion_poses": [
+  {
+   "seed": 2786,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 2786,
+   "vista": 1,
+   "misma_pose": true
+  },
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose": true
+  }
+ ],
+ "archivos": {
+  "casa_cocina_3244_0.jpg": "a0350d2892be0c72033ed9232632623b91ee1e25fc14abd09f73a4f3c41fedae",
+  "casa_cocina_3244_1.jpg": "aa14a8ab61c0701c48d701b6f2d6fcff340ccc04e48ceaeb279361031af78fb5",
+  "casa_cocina.json": "10aeeb984b5f8c7de009f74237e02c8ab5a70283e4f858e365089daabbbe031f",
+  "casa_cocina_1594_0.jpg": "cef7187a511443ac6aba4aa99575ab133752f2cce05dd1f365d6c17abcdcf4d2",
+  "casa_cocina_1594_1.jpg": "f92ee300fdc702499ac8bd4d11aa5395ee44276c0d18f1a4e42d59464eb219fd",
+  "casa_cocina_2786_0.jpg": "a09cdbe8a45b8d7fc2eccb69333d069e848584dec2ec962410f05a4d55c7bd51",
+  "casa_cocina.jpg": "eede2f4b7b174e1ff26696f7a60522542f99ce5683fd44bacf7c221325eef51c",
+  "casa_cocina_2786_1.jpg": "b61142b6b635ef61e65a58421bbff7181f8a371af57394336cf386785af6f14a"
+ },
+ "limite": "Snapshot privado anterior a las últimas correcciones de integridad de metadatos. Sin API ni aprobación final ni producto modificado."
+}

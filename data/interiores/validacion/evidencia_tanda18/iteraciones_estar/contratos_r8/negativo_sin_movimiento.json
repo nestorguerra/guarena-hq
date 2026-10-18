@@ -1,0 +1,13 @@
+{
+  "state": "FAIL",
+  "scope": "Callbacks literales sobre R8 sellado. Three/Canvas trazas sin GPU. Coste CPU no sustituye renderer.",
+  "seal": "efe9f0cba1e9f48aa598210d73bc620b04f4feb88ea3a42f093b62764e51101f",
+  "rows": [
+    {
+      "name": "estar.fragment.js",
+      "state": "FAIL",
+      "error": "Error: 3244: prueba vacía de estar\n    at exigir (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/negativos.cpu.mjs:3:365)\n    at eval (eval at <anonymous> (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/negativos.cpu.mjs:5:7), <anonymous>:18:7)\n    at async caso (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/negativos.cpu.mjs:3:211)\n    at async eval (eval at <anonymous> (file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/negativos.cpu.mjs:5:7), <anonymous>:3:21)\n    at async file:///Users/nestorguerra/Proyectos%20Vibe/Guarena%20HQ/.cache/calidad/tanda18/contratos_r8/negativos.cpu.mjs:5:1",
+      "cfgRestored": true
+    }
+  ]
+}

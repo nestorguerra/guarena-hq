@@ -1,0 +1,602 @@
+{
+ "estado": "verificado_acotado",
+ "semillas_reales": [
+  4007,
+  5045
+ ],
+ "semilla_sintetica": 1296,
+ "limites": "Posicionamiento de prueba en la interacción; no mide navegación hasta el armario. El primer intento de 1296 falló al buscar una puerta real inexistente; v2 usa puerta temporal sin alterar inventario. No se oculta ese fallo del instrumento.",
+ "intentos": [
+  {
+   "archivo": ".cache/calidad/tanda11_ninos_armario/report.json",
+   "sha256": "eac66e5854d6ada17d1eb1fe4e2d9c71e58738fcdbc86d190e70d16663ad39c4",
+   "estado": "FAILED",
+   "errores": [
+    "RuntimeError: {\"exceptionId\": 1, \"text\": \"Uncaught (in promise) Error: no existe puerta real 1296\", \"lineNumber\": 0, \"columnNumber\": 0, \"exception\": {\"type\": \"object\", \"subtype\": \"error\", \"className\": \"Error\", \"description\": \"Error: no existe puerta real 1296\\n    at check (<anonymous>:5:43)\\n    at Object.enter (<anonymous>:31:89)\\n    at <anonymous>:1:48\\n    at <anonymous>:1:61\", \"objectId\": \"-7238295148668295324.2.1\"}}"
+   ]
+  },
+  {
+   "archivo": ".cache/calidad/tanda11_ninos_armario_1296_v2/report.json",
+   "sha256": "9bf38db2cf3de969d0e149b616e7dbbb87649d0302347fc58be34af19b6d8617",
+   "estado": "FUNCTIONALLY_VERIFIED_VISUAL_PENDING",
+   "errores": []
+  }
+ ],
+ "pruebas": [
+  {
+   "seed": 4007,
+   "state": "FUNCTIONAL_CHECKS_PASSED",
+   "enter": {
+    "seed": 4007,
+    "positionBefore": {
+     "x": -5202.038060748949,
+     "y": 3.1,
+     "z": -5193.816561789997
+    },
+    "controlsBefore": {
+     "enabled": true,
+     "state": "play",
+     "fp": true,
+     "fovOverride": 0
+    },
+    "entryPrompt": "Esconderse en el armario",
+    "entryMethod": "Interiors.hideIn(real interaction)",
+    "fixture": "position at interaction; navigation not tested"
+   },
+   "before_image": ".cache/calidad/tanda11_ninos_armario/4007_before.jpg",
+   "hide": {
+    "seed": 4007,
+    "eye": {
+     "world": {
+      "x": -5202.05806075491,
+      "y": 4.4,
+      "z": -5193.010811788924
+     },
+     "local": {
+      "x": -1.2338315829845553e-17,
+      "y": 1.3000000000000003,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999973,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "VERIFIED_SCREENSHOT_REVIEW"
+    },
+    "position": {
+     "x": -5202.05806075491,
+     "y": 3.1,
+     "z": -5193.130811788924
+    },
+    "exitPrompt": "Salir del armario"
+   },
+   "hidden_image": ".cache/calidad/tanda11_ninos_armario/4007_hidden.jpg",
+   "hidden_movement": {
+    "position": {
+     "x": -5202.05806075491,
+     "y": 3.1,
+     "z": -5193.130811788924
+    },
+    "eye": {
+     "world": {
+      "x": -5202.05806075491,
+      "y": 4.4,
+      "z": -5193.010811788924
+     },
+     "local": {
+      "x": -1.2338315829845553e-17,
+      "y": 1.3000000000000003,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999973,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+    },
+    "pinned": true
+   },
+   "exit": {
+    "position": {
+     "x": -5202.038060748949,
+     "y": 3.1,
+     "z": -5193.816561789997
+    },
+    "controlsRestored": true,
+    "prompt": "Esconderse en el armario"
+   },
+   "after_image": ".cache/calidad/tanda11_ninos_armario/4007_after.jpg",
+   "movement": {
+    "position": {
+     "x": -5202.100121746544,
+     "y": 3.1,
+     "z": -5193.891857474131
+    },
+    "distance": 0.09757564999387981
+   },
+   "leave": {
+    "seed": 4007,
+    "before": {
+     "x": -5202.038060748949,
+     "y": 3.1,
+     "z": -5193.816561789997
+    },
+    "hidden": {
+     "seed": 4007,
+     "eye": {
+      "world": {
+       "x": -5202.05806075491,
+       "y": 4.4,
+       "z": -5193.010811788924
+      },
+      "local": {
+       "x": -1.2338315829845553e-17,
+       "y": 1.3000000000000003,
+       "z": -0.10074999451626354
+      },
+      "body": {
+       "d": [
+        0.95,
+        1.5,
+        0.42
+       ],
+       "p": [
+        0,
+        0.75,
+        0
+       ]
+      },
+      "margin": [
+       0.475,
+       0.19999999999999973,
+       0.10925000548373645
+      ],
+      "nominalInside": true,
+      "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+     },
+     "position": {
+      "x": -5202.05806075491,
+      "y": 3.1,
+      "z": -5193.130811788924
+     },
+     "exitPrompt": "Salir del armario"
+    },
+    "exit": {
+     "x": -5202.038060748949,
+     "y": 3.1,
+     "z": -5193.816561789997
+    },
+    "movement": {
+     "position": {
+      "x": -5202.100121746544,
+      "y": 3.1,
+      "z": -5193.891857474131
+     },
+     "distance": 0.09757564999387981
+    },
+    "saveUnchanged": true
+   },
+   "visual": "before/hidden/after inspeccionadas por raiz; rendija y salida visibles; sin bloqueo al volver"
+  },
+  {
+   "seed": 5045,
+   "state": "FUNCTIONAL_CHECKS_PASSED",
+   "enter": {
+    "seed": 5045,
+    "positionBefore": {
+     "x": -5201.686971059814,
+     "y": 3.1,
+     "z": -5194.102925701067
+    },
+    "controlsBefore": {
+     "enabled": true,
+     "state": "play",
+     "fp": true,
+     "fovOverride": 0
+    },
+    "entryPrompt": "Esconderse en el armario",
+    "entryMethod": "Interiors.hideIn(real interaction)",
+    "fixture": "position at interaction; navigation not tested"
+   },
+   "before_image": ".cache/calidad/tanda11_ninos_armario/5045_before.jpg",
+   "hide": {
+    "seed": 5045,
+    "eye": {
+     "world": {
+      "x": -5201.726971041932,
+      "y": 4.4,
+      "z": -5194.95867570214
+     },
+     "local": {
+      "x": 0,
+      "y": 1.3000000000000003,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999973,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "VERIFIED_SCREENSHOT_REVIEW"
+    },
+    "position": {
+     "x": -5201.726971041932,
+     "y": 3.1,
+     "z": -5194.83867570214
+    },
+    "exitPrompt": "Salir del armario"
+   },
+   "hidden_image": ".cache/calidad/tanda11_ninos_armario/5045_hidden.jpg",
+   "hidden_movement": {
+    "position": {
+     "x": -5201.726971041932,
+     "y": 3.1,
+     "z": -5194.83867570214
+    },
+    "eye": {
+     "world": {
+      "x": -5201.726971041932,
+      "y": 4.4,
+      "z": -5194.95867570214
+     },
+     "local": {
+      "x": 0,
+      "y": 1.3000000000000003,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999973,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+    },
+    "pinned": true
+   },
+   "exit": {
+    "position": {
+     "x": -5201.686971059814,
+     "y": 3.1,
+     "z": -5194.102925701067
+    },
+    "controlsRestored": true,
+    "prompt": "Esconderse en el armario"
+   },
+   "after_image": ".cache/calidad/tanda11_ninos_armario/5045_after.jpg",
+   "movement": {
+    "position": {
+     "x": -5201.657365658387,
+     "y": 3.1,
+     "z": -5193.875207108932
+    },
+    "distance": 0.22963500821415303
+   },
+   "leave": {
+    "seed": 5045,
+    "before": {
+     "x": -5201.686971059814,
+     "y": 3.1,
+     "z": -5194.102925701067
+    },
+    "hidden": {
+     "seed": 5045,
+     "eye": {
+      "world": {
+       "x": -5201.726971041932,
+       "y": 4.4,
+       "z": -5194.95867570214
+      },
+      "local": {
+       "x": 0,
+       "y": 1.3000000000000003,
+       "z": -0.10074999451626354
+      },
+      "body": {
+       "d": [
+        0.95,
+        1.5,
+        0.42
+       ],
+       "p": [
+        0,
+        0.75,
+        0
+       ]
+      },
+      "margin": [
+       0.475,
+       0.19999999999999973,
+       0.10925000548373645
+      ],
+      "nominalInside": true,
+      "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+     },
+     "position": {
+      "x": -5201.726971041932,
+      "y": 3.1,
+      "z": -5194.83867570214
+     },
+     "exitPrompt": "Salir del armario"
+    },
+    "exit": {
+     "x": -5201.686971059814,
+     "y": 3.1,
+     "z": -5194.102925701067
+    },
+    "movement": {
+     "position": {
+      "x": -5201.657365658387,
+      "y": 3.1,
+      "z": -5193.875207108932
+     },
+     "distance": 0.22963500821415303
+    },
+    "saveUnchanged": true
+   },
+   "visual": "before/hidden/after inspeccionadas por raiz; rendija y salida visibles; sin bloqueo al volver"
+  },
+  {
+   "seed": 1296,
+   "state": "FUNCTIONAL_CHECKS_PASSED",
+   "enter": {
+    "seed": 1296,
+    "syntheticFixture": true,
+    "doorSource": "temporary object, fotos_casa.py pattern",
+    "inventoryUnchanged": true,
+    "positionBefore": {
+     "x": -5195.870487204418,
+     "y": 0,
+     "z": -5198.95
+    },
+    "controlsBefore": {
+     "enabled": true,
+     "state": "play",
+     "fp": true,
+     "fovOverride": 0
+    },
+    "entryPrompt": "Esconderse en el armario",
+    "entryMethod": "Interiors.hideIn(real interaction)",
+    "fixture": "position at interaction; navigation not tested"
+   },
+   "before_image": ".cache/calidad/tanda11_ninos_armario_1296_v2/1296_before.jpg",
+   "hide": {
+    "seed": 1296,
+    "eye": {
+     "world": {
+      "x": -5195.860487186536,
+      "y": 1.3,
+      "z": -5199.805750001073
+     },
+     "local": {
+      "x": 0,
+      "y": 1.3,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999996,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "VERIFIED_SCREENSHOT_REVIEW"
+    },
+    "position": {
+     "x": -5195.860487186536,
+     "y": 0,
+     "z": -5199.685750001073
+    },
+    "exitPrompt": "Salir del armario"
+   },
+   "hidden_image": ".cache/calidad/tanda11_ninos_armario_1296_v2/1296_hidden.jpg",
+   "hidden_movement": {
+    "position": {
+     "x": -5195.860487186536,
+     "y": 0,
+     "z": -5199.685750001073
+    },
+    "eye": {
+     "world": {
+      "x": -5195.860487186536,
+      "y": 1.3,
+      "z": -5199.805750001073
+     },
+     "local": {
+      "x": 0,
+      "y": 1.3,
+      "z": -0.10074999451626354
+     },
+     "body": {
+      "d": [
+       0.95,
+       1.5,
+       0.42
+      ],
+      "p": [
+       0,
+       0.75,
+       0
+      ]
+     },
+     "margin": [
+      0.475,
+      0.19999999999999996,
+      0.10925000548373645
+     ],
+     "nominalInside": true,
+     "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+    },
+    "pinned": true
+   },
+   "exit": {
+    "position": {
+     "x": -5195.870487204418,
+     "y": 0,
+     "z": -5198.95
+    },
+    "controlsRestored": true,
+    "prompt": "Esconderse en el armario"
+   },
+   "after_image": ".cache/calidad/tanda11_ninos_armario_1296_v2/1296_after.jpg",
+   "movement": {
+    "position": {
+     "x": -5195.870487204418,
+     "y": 0,
+     "z": -5198.845003956123
+    },
+    "distance": 0.10499604387678119
+   },
+   "leave": {
+    "seed": 1296,
+    "syntheticFixture": true,
+    "inventoryUnchanged": true,
+    "before": {
+     "x": -5195.870487204418,
+     "y": 0,
+     "z": -5198.95
+    },
+    "hidden": {
+     "seed": 1296,
+     "eye": {
+      "world": {
+       "x": -5195.860487186536,
+       "y": 1.3,
+       "z": -5199.805750001073
+      },
+      "local": {
+       "x": 0,
+       "y": 1.3,
+       "z": -0.10074999451626354
+      },
+      "body": {
+       "d": [
+        0.95,
+        1.5,
+        0.42
+       ],
+       "p": [
+        0,
+        0.75,
+        0
+       ]
+      },
+      "margin": [
+       0.475,
+       0.19999999999999996,
+       0.10925000548373645
+      ],
+      "nominalInside": true,
+      "visibleInside": "PENDING_SCREENSHOT_REVIEW"
+     },
+     "position": {
+      "x": -5195.860487186536,
+      "y": 0,
+      "z": -5199.685750001073
+     },
+     "exitPrompt": "Salir del armario"
+    },
+    "exit": {
+     "x": -5195.870487204418,
+     "y": 0,
+     "z": -5198.95
+    },
+    "movement": {
+     "position": {
+      "x": -5195.870487204418,
+      "y": 0,
+      "z": -5198.845003956123
+     },
+     "distance": 0.10499604387678119
+    },
+    "saveUnchanged": true
+   },
+   "visual": "before/hidden/after inspeccionadas por raiz; rendija y salida visibles; sin bloqueo al volver"
+  }
+ ],
+ "partida_tras_recarga": {
+  "money": 321,
+  "bank": 700,
+  "bag": [],
+  "homeDecor": [
+   {
+    "id": "cuadro",
+    "x": 0,
+    "y": 4.7,
+    "z": 4.9,
+    "ry": 3.141592653589793,
+    "seed": 23
+   }
+  ],
+  "inside": false,
+  "hidden": false
+ },
+ "persistencia_igual": true,
+ "consola": [],
+ "captura": "data/interiores/validacion/tanda11_armarios.jpg",
+ "captura_sha256": "7d1f159282e578eb88d67e815c0268bfd526ba6a244aeedcf991268671bef760"
+}

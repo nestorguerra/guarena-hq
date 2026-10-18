@@ -1,0 +1,116 @@
+{
+  "scope": "Revisión/contratos privados CPU, sin WebGL ni gates globales",
+  "snapshot": {
+    "file": ".cache/calidad/tanda19/prototipo_r8/preparado.json",
+    "sha256": "34dc720c76b6965951a8b66f16bacc95d27429ba4f34630025d5785c32b1512a",
+    "archivos": 494,
+    "verificados": true
+  },
+  "patch": "16d68d671913eb7d9b8aa40907ab9a92d525cb6733231d4e5c69c191e812fd7f",
+  "callback": "1be00296af3ea9bfd37779661d7b09b77177f6273a354719e1a082558f595929",
+  "receipts": {
+    "cpu_positivo_prototipo_r8.json": {
+      "hash": "63e3d3cc9050ad9b4747b73766c84ae41a990fd5e080a42fd7938daf47471143",
+      "rows": [
+        {
+          "name": "trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas",
+          "estado": "PASS",
+          "error": ""
+        },
+        {
+          "name": "junto_a: separación frontal optativa conserva default, RNG y reservas",
+          "estado": "PASS",
+          "error": ""
+        },
+        {
+          "name": "trofeos: banco opcional no fuerza huecos ni pierde el guardado",
+          "estado": "PASS",
+          "error": ""
+        }
+      ]
+    },
+    "cpu_banco_sin_reserva_prototipo_r8.json": {
+      "hash": "b35f7f7f8b6655558b80e852292d7fb23320f8515d9a23c99b92221e2c3459bd",
+      "rows": [
+        {
+          "name": "trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas",
+          "estado": "FAIL",
+          "error": "Error: 2132: banco sin reserva frontal"
+        },
+        {
+          "name": "junto_a: separación frontal optativa conserva default, RNG y reservas",
+          "estado": "PASS",
+          "error": ""
+        },
+        {
+          "name": "trofeos: banco opcional no fuerza huecos ni pierde el guardado",
+          "estado": "PASS",
+          "error": ""
+        }
+      ]
+    },
+    "cpu_banco_botas_flotantes_prototipo_r8.json": {
+      "hash": "de0225b93a999390083107ebf1ef091fabbcd0c2c83fcc6057d27a842091edd1",
+      "rows": [
+        {
+          "name": "trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas",
+          "estado": "FAIL",
+          "error": "Error: banco: botas o bolsa sin apoyo físico"
+        },
+        {
+          "name": "junto_a: separación frontal optativa conserva default, RNG y reservas",
+          "estado": "PASS",
+          "error": ""
+        },
+        {
+          "name": "trofeos: banco opcional no fuerza huecos ni pierde el guardado",
+          "estado": "PASS",
+          "error": ""
+        }
+      ]
+    },
+    "cpu_banco_sin_asiento_prototipo_r8.json": {
+      "hash": "fcf6bd49ce146b154800c69830d7e609909e61fce1a389a02092953aac163e4a",
+      "rows": [
+        {
+          "name": "trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas",
+          "estado": "FAIL",
+          "error": "Error: 2132: banco sin asiento propio"
+        },
+        {
+          "name": "junto_a: separación frontal optativa conserva default, RNG y reservas",
+          "estado": "PASS",
+          "error": ""
+        },
+        {
+          "name": "trofeos: banco opcional no fuerza huecos ni pierde el guardado",
+          "estado": "PASS",
+          "error": ""
+        }
+      ]
+    }
+  },
+  "archivos": {
+    "INFORME.md": "3dc28c838e382c08120505518bd45eb0a5753bad1c8bfd8cd033299a09e0a4d9",
+    "api.fragment.js": "71c0c34086011c0d98a2315fc79be303e64c0fa9e413bc2abb5c34eb3ce2bb9f",
+    "banco_casa.inc": "4d72d62b6093ce273c56e14f1f7f493c02e9eeae6b52091268c2a77287889fc7",
+    "banco_geometria.inc": "d6d1543a7f1d5bc2216cf575f1e0993295e52b5f5b4660479e66e0702f41eb2d",
+    "base.js": "678f408bb34c87d05625e638a75fede7df8f7fe341e387f5a64338848e177a65",
+    "candidata.js": "10c03d98ea379d184d92b610ca80bdb746a3b6800ac6661f8dfdc8d7e22f5cc0",
+    "catalogo_delta.json": "b82cdd3254e783451bb79acefc804d88a31df87a956b7b4c278f51dfdd4a9760",
+    "contrato.fragment.js": "1be00296af3ea9bfd37779661d7b09b77177f6273a354719e1a082558f595929",
+    "contratos.patch": "16d68d671913eb7d9b8aa40907ab9a92d525cb6733231d4e5c69c191e812fd7f",
+    "cpu_banco_botas_flotantes.log": "de0225b93a999390083107ebf1ef091fabbcd0c2c83fcc6057d27a842091edd1",
+    "cpu_banco_botas_flotantes_prototipo_r8.json": "de0225b93a999390083107ebf1ef091fabbcd0c2c83fcc6057d27a842091edd1",
+    "cpu_banco_sin_asiento.log": "fcf6bd49ce146b154800c69830d7e609909e61fce1a389a02092953aac163e4a",
+    "cpu_banco_sin_asiento_prototipo_r8.json": "fcf6bd49ce146b154800c69830d7e609909e61fce1a389a02092953aac163e4a",
+    "cpu_banco_sin_reserva.log": "b35f7f7f8b6655558b80e852292d7fb23320f8515d9a23c99b92221e2c3459bd",
+    "cpu_banco_sin_reserva_prototipo_r8.json": "b35f7f7f8b6655558b80e852292d7fb23320f8515d9a23c99b92221e2c3459bd",
+    "cpu_positivo.log": "63e3d3cc9050ad9b4747b73766c84ae41a990fd5e080a42fd7938daf47471143",
+    "cpu_positivo_prototipo_r8.json": "63e3d3cc9050ad9b4747b73766c84ae41a990fd5e080a42fd7938daf47471143",
+    "preparar_patch.py": "baff1144093194257c1bd8600bb4faab3c55a24dd6e790320576078f24402849",
+    "probar.cpu.mjs": "eae26bf6353ed194713471d36297626507cb95cb92d7a4c9a32284885166d94f",
+    "probe.cpu.mjs": "9ed2afca81cb24e84885ac104d0d55b7fa307969a3695fecd15aa920fb40c09e",
+    "probe.json": "7319d1d5d368e037b1121d807ace1e44e2a74073c197281ff13bf765e5f54471"
+  }
+}

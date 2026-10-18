@@ -1,0 +1,392 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Cuarto de trofeos del cazador",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.1,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_armero",
+   "pared": "*",
+   "centrado": true,
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "grupo_pared": "guardado_campo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_guardado_campo",
+   "de": "vb_armero",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": true,
+   "grupo_pared": "guardado_campo"
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_banco_equipo_campo",
+   "de": "vb_guardado_campo",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": false,
+   "grupo_pared": "guardado_campo",
+   "area_min": 13,
+   "espacio_frontal": [
+    0.7,
+    0.65
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_rifle",
+   "en": [
+    "vb_armero"
+   ],
+   "centrado": true,
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "botin": "rifle"
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "vb_cornamenta",
+   "pared": "*",
+   "sobre_de": "vb_armero",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "vb_cornamenta",
+   "pared": "*",
+   "sobre_de": "vb_guardado_campo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "enfrente",
+   "obj": "vb_sillon_campo",
+   "de": "vb_guardado_campo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "si_no": true,
+   "area_min": 11,
+   "separacion_pared": 0.5,
+   "centrado": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "enfrente",
+   "obj": "vb_sillon_campo",
+   "de": "vb_guardado_campo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "si_no": true,
+   "area_max": 11
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_mesa_consulta_campo",
+   "de": "vb_sillon_campo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "lados": [
+    "frente"
+   ],
+   "buscar_refs": true,
+   "si_no": true,
+   "area_min": 11,
+   "separacion_frontal": 0.32
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "vb_mesa_campo",
+   "de": "vb_sillon_campo",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "buscar_refs": true,
+   "si_no": true,
+   "area_max": 11
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "libro_tumbado",
+   "en": [
+    "vb_mesa_campo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "centrado": true,
+   "area_max": 11
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_prismaticos",
+   "en": [
+    "vb_guardado_campo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "botin": "prismaticos"
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "obj": "vb_bolsa_caza",
+   "en": [
+    "vb_guardado_campo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "vb_biblioteca_campo",
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "centrado": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "pared",
+   "obj": "vb_mapa_campo",
+   "pared": "*",
+   "sobre_de": "vb_biblioteca_campo",
+   "cantidad": [
+    0,
+    1
+   ],
+   "preferir": true,
+   "si_no": false
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "lb_libros_rojos",
+    "lb_libros_azules",
+    "lb_libros_verdes",
+    "lb_libros_ocres",
+    "lb_libros_negros",
+    "lb_libros_crema",
+    "lb_libros_granates",
+    "lb_libros_mixtos_a",
+    "lb_libros_mixtos_b",
+    "lb_libros_turquesas",
+    "lb_libros_grises",
+    "lb_libros_bolsillo",
+    "lb_libros_enciclopedia",
+    "lb_libros_atlas",
+    "lb_pila_novedad_a",
+    "lb_pila_novedad_b",
+    "lb_pila_novedad_c",
+    "lb_libros_cara_a",
+    "lb_libros_cara_b",
+    "lb_libros_cara_c",
+    "lb_carpetas_anillas",
+    "lb_diccionarios",
+    "vb_cuaderno",
+    "bloc_notas",
+    "vb_brujula",
+    "vb_linterna",
+    "vb_bolsa_caza",
+    "vb_prismaticos",
+    "libro_tumbado",
+    "reloj_sobremesa"
+   ],
+   "en": [
+    "vb_guardado_campo",
+    "vb_biblioteca_campo"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "lampara_techo_salon",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Antler trophy room panorama (38373754584).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Antler_trophy_room_panorama_%2838373754584%29.jpg",
+   "autor": "Thomas Quine",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "20080316505DR Gaußig (Doberschau-G) Schloß Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:20080316505DR_Gau%C3%9Fig_%28Doberschau-G%29_Schlo%C3%9F_Jagdzimmer.jpg",
+   "autor": "Jörg Blobelt",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Burg Katzenstein, das Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Burg_Katzenstein%2C_das_Jagdzimmer.jpg",
+   "autor": "Holger Uwe Schmitt",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Intérieur du château de Gruyères (salle des trophées de chasse).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_du_ch%C3%A2teau_de_Gruy%C3%A8res_%28salle_des_troph%C3%A9es_de_chasse%29.jpg",
+   "autor": "Daniel CULSAN",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Intérieur du château de Gruyères (salle des trophées).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_du_ch%C3%A2teau_de_Gruy%C3%A8res_%28salle_des_troph%C3%A9es%29.jpg",
+   "autor": "Daniel CULSAN",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Emil Pinkau Arbeitszimmerzimmer 1912.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Emil_Pinkau_Arbeitszimmerzimmer_1912.jpg",
+   "autor": "Unknown photographer",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Geweihsammlung Graf von Arco-Zinneberg.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Geweihsammlung_Graf_von_Arco-Zinneberg.jpg",
+   "autor": "Anonymus",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "BurgBerwartstein Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:BurgBerwartstein_Jagdzimmer.jpg",
+   "autor": "Lokilech",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Trautenfels Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Trautenfels_Jagdzimmer.jpg",
+   "autor": "Geisler Martin",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Rammenau Jagdzimmer.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Rammenau_Jagdzimmer.jpg",
+   "autor": "Martin Geisler",
+   "licencia": "CC BY-SA 3.0"
+  }
+ ]
+}

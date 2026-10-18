@@ -1,0 +1,198 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -8,7 +8,7 @@
+ import * as THREE from 'three';
+ import { programaLuzDomestica, HouseBuilder } from '/src/housekit.js';
+ import { construir, caja } from '/src/objetos.js';
+-import { partes, penetra, espacioFrontal, mapaPaso, rot } from '/src/interiores_geo.js';
++import { partes, penetra, espacioFrontal, mapaPaso, rot, superficie } from '/src/interiores_geo.js';
+ 
+ const exigir = (ok, mensaje) => { if (!ok) throw new Error(mensaje); };
+ const tirar = (h) => h.group.traverse((o) => { if (o.isMesh) o.geometry.dispose(); });
+@@ -1487,5 +1487,186 @@
+       exigir(!componerEstar({...params,libres:[{cx:0,cz:e.D/2,hw:e.W/2,hd:e.D/2,a:0,y0:0,y1:e.H}]}),seed+': invade reserva total');
+     }finally{K.composicion_lectura=cfg;if(h)tirar(h);}}}finally{K.composicion_lectura=cfg;}
+   });
++  if(opts.tanda>=22)await caso('trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas',async()=>{
++    const K=KITS.vivienda_trofeos,proto=HouseBuilder.prototype,add=proto.add,planos=[],B=await(await fetch('/data/quality_budgets.json')).json();
++    const cerca=(a,b,t=1e-6)=>Math.abs(a-b)<=t;
++    const separacion=(p,W,D)=>{const[x,z]=rot(0,-p.v.hd,p.ry),bx=p.v.cx+x,bz=p.v.cz+z;return Math.cos(p.ry)>.9?bz:Math.cos(p.ry)<-.9?D-bz:Math.sin(p.ry)>.9?bx+W/2:W/2-bx;};
++    // Frontera de la política de asiento, con el frente real y el acceso de
++    // laboratorio. Es una fixture parcial declarada, no un gate del kit entero.
++    for(const D of[2.749,2.75]){
++      const W=4,puerta=K.puerta??0,ctx={W,D,H:2.95,funciones:true,inicio:{x:puerta,z:.5},libres:[{cx:puerta,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}],filtro:q=>['vb_armero','vb_guardado_campo','vb_sillon_campo','vb_mesa_campo','vb_mesa_consulta_campo','libro_tumbado'].includes(q.obj)};
++      const A=amueblar('vivienda_trofeos',2132,ctx),ss=A.P.filter(p=>p.obj==='vb_sillon_campo');
++      exigir(A.P.some(p=>p.obj==='vb_armero')&&A.P.some(p=>p.obj==='vb_guardado_campo')&&ss.length===1,'frontera11 sin programa de asiento');
++      exigir(cerca(separacion(ss[0],W,D),W*D<11?.01:.50,1e-5),'asiento pierde solución compacta o separación en11m2');
++      const compacta=W*D<11,mid=compacta?'vb_mesa_campo':'vb_mesa_consulta_campo',ms=A.P.filter(p=>['vb_mesa_campo','vb_mesa_consulta_campo'].includes(p.obj));
++      exigir(ms.length===1&&ms[0].obj===mid,'frontera11 sin mesa del programa');
++      const libros=A.P.filter(p=>p.obj==='libro_tumbado');exigir(compacta?libros.length===1&&libros[0].sop===A.P.indexOf(ms[0]):libros.length===0,'consulta compacta/amplia incorrecta');
++    }
++
++    // Testigos dentro de poliedros convexos construidos por la ruta real. No
++    // basta el contacto de AABB de la esfera escalada con la placa o las astas.
++    const solido=parte=>{
++      exigir(['caja','cil','esfera'].includes(parte.f),'primitiva no convexa fuera del oráculo');
++      const id='__contrato_t22_primitiva',anterior=OBJETOS[id];let g;
++      try{OBJETOS[id]={...OBJETOS.vb_cornamenta,partes:[parte]};g=construir([{obj:id,x:0,y:0,z:0,ry:0}],{domestico:true});}
++      finally{if(anterior)OBJETOS[id]=anterior;else delete OBJETOS[id];}
++      try{
++        const puntos=[],caras=[];g.updateMatrixWorld(true);g.traverse(o=>{if(!o.isMesh)return;const v=o.geometry.attributes.position,ix=o.geometry.index;
++          for(let n=0;n<(ix?ix.count:v.count);n+=3){const t=[0,1,2].map(k=>new THREE.Vector3().fromBufferAttribute(v,ix?ix.getX(n+k):n+k).applyMatrix4(o.matrixWorld));puntos.push(...t);caras.push(t);}
++        });exigir(caras.length>0,'unión sin geometría real');
++        const centro=new THREE.Box3().setFromPoints(puntos).getCenter(new THREE.Vector3()),planos=caras.flatMap(([a,b,c])=>{const n=b.clone().sub(a).cross(c.clone().sub(a));if(n.lengthSq()<1e-16)return[];n.normalize();if(n.dot(centro.clone().sub(a))>0)n.negate();return[{n,a}];});
++        return {vertices:puntos,bounds:new THREE.Box3().setFromPoints(puntos),puntos:puntos.concat(caras.map(t=>t[0].clone().add(t[1]).add(t[2]).multiplyScalar(1/3))),planos};
++      }finally{tirar({group:g});}
++    };
++    const toca=(a,b)=>a.puntos.some(p=>b.planos.every(q=>q.n.dot(p.clone().sub(q.a)) < -1e-6))||b.puntos.some(p=>a.planos.every(q=>q.n.dot(p.clone().sub(q.a)) < -1e-6));
++    const conexion=ps=>{
++      const puente=ps.filter(p=>p.f==='esfera'),placas=ps.filter(p=>p.f==='caja');if(puente.length!==1||placas.length!==1)return false;
++      const raices=[-1,1].map(sign=>ps.filter(p=>p.f==='cil'&&Math.sign(p.p[0])===sign).sort((a,b)=>a.p[1]-b.p[1])[0]);if(raices.some(p=>!p))return false;
++      const c=solido(puente[0]);return [placas[0],...raices].every(p=>toca(c,solido(p)));
++    };
++    exigir(conexion(OBJETOS.vb_cornamenta.partes),'astas sin unión física con placa y dos raíces');
++    const sinPuente=OBJETOS.vb_cornamenta.partes.filter(p=>p.f!=='esfera');exigir(!conexion(sinPuente),'negativo sin unión no detectado');
++    const alto=structuredClone(OBJETOS.vb_cornamenta.partes);alto.find(p=>p.f==='esfera').p[1]+=.09;exigir(!conexion(alto),'unión aparente por AABB aceptada');
++    exigir(Math.abs(caja('vb_prismaticos').y0)<1e-6,'prismáticos flotan desde su origen');
++    // Conexión real del respaldo: evita repetir el defecto de 30 mm de aire.
++    const conectaAsiento=ps=>{
++      const base=ps.find(p=>p.f==='caja'&&p.d[0]>.6&&p.p[1]<.4),respaldo=ps.find(p=>p.f==='caja'&&p.m==='tela'&&p.d[0]>.5&&p.d[1]>.6&&p.p[2]<-.2),montantes=ps.filter(p=>p.f==='caja'&&p.m==='madera'&&p.d[1]>.5&&p.d[0]<.06&&p.p[2]<-.25);
++      if(!base||!respaldo||montantes.length!==2)return false;
++      const b=solido(base),r=solido(respaldo);return montantes.every(p=>{const m=solido(p);return toca(m,b)&&toca(m,r);});
++    };
++    exigir(conectaAsiento(OBJETOS.vb_sillon_campo.partes),'respaldo sin conexión física al bastidor');
++    const sinMontantes=OBJETOS.vb_sillon_campo.partes.filter(p=>!(p.f==='caja'&&p.d[1]>.5&&p.d[0]<.06&&p.p[2]<-.25));exigir(!conectaAsiento(sinMontantes),'negativo respaldo flotante aceptado');
++    const sinManta=OBJETOS.vb_sillon_campo.partes.filter(p=>!(p.m==='tela'&&p.d[1]===.004));exigir(sinManta.length<OBJETOS.vb_sillon_campo.partes.length&&conectaAsiento(sinManta),'manta usada como junta estructural');
++    const atlasApoyado=ps=>{
++      const cover=ps.find(p=>p.m==='carton'),pages=ps.filter(p=>p.m==='papel'&&p.d[1]>.008),tablero=ps.find(p=>p.f==='caja'&&p.d[0]>.8&&p.p[1]>.5&&p.p[1]<.62);
++      if(!cover||pages.length!==2||!tablero)return false;
++      const c=solido(cover).bounds,t=solido(tablero).bounds;
++      if(Math.abs(c.min.y-t.max.y)>1e-6||c.min.x<t.min.x||c.max.x>t.max.x||c.min.z<t.min.z||c.max.z>t.max.z)return false;
++      return pages.every(p=>{const q=solido(p);return q.bounds.min.x>=c.min.x-1e-6&&q.bounds.max.x<=c.max.x+1e-6&&q.bounds.min.z>=c.min.z-1e-6&&q.bounds.max.z<=c.max.z+1e-6&&q.bounds.min.y-c.max.y<=.001&&c.max.y-q.bounds.min.y<=.005;});
++    };
++    exigir(atlasApoyado(OBJETOS.vb_mesa_consulta_campo.partes),'atlas sin apoyo físico en mesa/cubierta');
++    const atlasFlotante=structuredClone(OBJETOS.vb_mesa_consulta_campo.partes);for(const p of atlasFlotante)if(p.m==='papel'&&p.d[1]>.008)p.p[1]+=.02;
++    exigir(!atlasApoyado(atlasFlotante),'negativo páginas flotantes aceptado');
++
++    // Apoyo de botas y bolsa contra los triángulos de la balda/tablero reales.
++    // Se muestrea la zona plana interior de cada pieza redondeada, no sus AABB.
++    const apoyoBanco=(pieza,soporte)=>{
++      const q=solido(pieza).bounds,t=solido(soporte).bounds;if(Math.abs(q.min.y-t.max.y)>1e-6)return false;
++      const id='__contrato_t22_apoyo_banco',prev=OBJETOS[id];let g;
++      try{
++        OBJETOS[id]={...OBJETOS.vb_banco_equipo_campo,partes:[soporte]};g=construir([{obj:id,x:0,y:0,z:0,ry:0}],{domestico:true});g.updateMatrixWorld(true);
++        const m=(pieza.redondeo||0)+.002,xx=[q.min.x+m,q.max.x-m],zz=[q.min.z+m,q.max.z-m],ray=new THREE.Raycaster();
++        return [...xx.flatMap(x=>zz.map(z=>[x,z])),[(q.min.x+q.max.x)/2,(q.min.z+q.max.z)/2]].every(([x,z])=>{ray.set(new THREE.Vector3(x,q.min.y+.01,z),new THREE.Vector3(0,-1,0));ray.far=.02;const hit=ray.intersectObject(g,true)[0];return hit&&Math.abs(hit.point.y-q.min.y)<1e-6;});
++      }finally{if(g)tirar({group:g});if(prev)OBJETOS[id]=prev;else delete OBJETOS[id];}
++    };
++    const equipoApoyado=ps=>{
++      const suelas=ps.filter(p=>p.m==='goma'),bolsa=ps.find(p=>p.m==='tela'&&p.d[1]>.15&&p.d[0]>.2&&p.d[0]<.3),balda=ps.find(p=>p.m==='madera'&&p.d[0]>1&&p.p[1]<.2),tablero=ps.find(p=>p.m==='madera'&&p.d[0]>1&&p.p[1]>.4);
++      return suelas.length===2&&bolsa&&balda&&tablero&&suelas.every(p=>apoyoBanco(p,balda))&&apoyoBanco(bolsa,tablero);
++    };
++    exigir(equipoApoyado(OBJETOS.vb_banco_equipo_campo.partes),'banco: botas o bolsa sin apoyo físico');
++    for(const modo of['botas','bolsa','fuera']){const ps=structuredClone(OBJETOS.vb_banco_equipo_campo.partes);for(const p of ps){if(modo==='botas'&&p.m==='goma')p.p[1]+=.02;if(modo==='bolsa'&&p.m==='tela'&&p.d[1]>.15&&p.d[0]>.2&&p.d[0]<.3)p.p[1]+=.02;if(modo==='fuera'&&p.m==='goma')p.p[0]+=1;}exigir(!equipoApoyado(ps),'negativo apoyo banco aceptado: '+modo);}
++
++    proto.add=function(key,geo,x,y,z,ry=0){
++      if(key==='acabado_domestico_salon_vertices'&&geo.parameters?.width&&geo.attributes.color){const c=geo.attributes.color;planos.push({x:this.ox+x,y,z:this.oz+z,ry,w:geo.parameters.width,h:geo.parameters.height,ny:geo.attributes.normal.getY(0),rgb:[c.getX(0),c.getY(0),c.getZ(0)]});}
++      return add.call(this,key,geo,x,y,z,ry);
++    };
++    let h;
++    try{for(const seed of[2132,4204,1679,2162]){
++      planos.length=0;h=H.buildVecino(seed);const e=h.estancias.find(e=>e.kit==='vivienda_trofeos');exigir(e,seed+': falta sala real');
++      const uno=id=>{const xs=e.colocados.filter(p=>p.obj===id);exigir(xs.length===1,seed+': cantidad '+id);return xs[0];},ar=uno('vb_armero'),bajo=uno('vb_guardado_campo'),rifle=uno('vb_rifle'),sillon=uno('vb_sillon_campo'),bib=uno('vb_biblioteca_campo'),mesa=uno(e.W*e.D<11?'vb_mesa_campo':'vb_mesa_consulta_campo');
++      exigir(bajo.de===ar.i&&cerca(bajo.ry,ar.ry),seed+': frente no agrupado');
++      exigir(cerca(separacion(sillon,e.W,e.D),e.W*e.D<11?.01:.50,1e-5),seed+': respaldo no respeta separación física');
++      const[dx,dz]=rot(bajo.v.cx-ar.v.cx,bajo.v.cz-ar.v.cz,-ar.ry);
++      exigir(cerca(Math.abs(dx),ar.v.hw+bajo.v.hw+.04,1e-5)&&Math.abs(dz)<.12,seed+': módulos no contiguos');
++      const apoyo=(p,padre)=>{
++        exigir(p.sop===padre.i&&Number.isInteger(p.sup),seed+': soporte incorrecto '+p.obj);const sup=superficie(padre.obj,p.sup);exigir(sup,seed+': superficie inexistente');
++        const[x,z]=rot(p.x-padre.x,p.z-padre.z,-padre.ry),b=caja(p.obj);exigir(cerca((p.y||0)+b.y0,(padre.y||0)+sup.y),seed+': apoyo sin contacto '+p.obj);
++        // El margen de reparto no es el borde físico. Cinco rayos contra
++        // triángulos del padre, a altura exacta, conservan apoyo y contacto.
++        const g=construir([{obj:padre.obj,x:0,y:0,z:0,ry:0}],{domestico:true});
++        try{g.updateMatrixWorld(true);const puntos=[...([b.x0,b.x1].flatMap(bx=>[b.z0,b.z1].map(bz=>[bx,bz]))),[(b.x0+b.x1)/2,(b.z0+b.z1)/2]],ray=new THREE.Raycaster();
++          for(const[bx,bz]of puntos){const[rx,rz]=rot(bx,bz,p.ry-padre.ry);ray.set(new THREE.Vector3(x+rx,sup.y+.02,z+rz),new THREE.Vector3(0,-1,0));ray.far=.04;const hit=ray.intersectObject(g,true)[0];exigir(hit&&cerca(hit.point.y,sup.y),seed+': huella sin tablero físico '+p.obj);}
++        }finally{tirar({group:g});}
++      };
++      apoyo(rifle,ar);exigir(cerca(rifle.y,.12),seed+': cota de rifle');
++      exigir(Math.max(0,...partes(rifle).flatMap(a=>partes(ar).map(b=>penetra(a,b))))<=.005,seed+': rifle atraviesa su propio soporte');
++      const prismas=e.colocados.filter(p=>p.obj==='vb_prismaticos'&&K.objetos[p.e]?.botin==='prismaticos');exigir(prismas.length===1,seed+': prismáticos de botín ausentes');apoyo(prismas[0],bajo);
++      if(seed===2132){
++        const falla=(p,patron)=>{let err=null;try{apoyo(p,bajo);}catch(e){err=e;}exigir(err&&String(err).includes(patron),'negativo de apoyo no detectado');};
++        falla({...prismas[0],y:prismas[0].y+.02},'apoyo sin contacto');
++        const[dx,dz]=rot(caja(bajo.obj).x1+.2,0,bajo.ry);falla({...prismas[0],x:bajo.x+dx,z:bajo.z+dz},'huella sin tablero físico');
++      }
++      for(const[id,p]of[['rifle',rifle],['prismaticos',prismas[0]]]){const ls=h.loot.filter(i=>i.id===id);exigir(ls.length===1&&ls[0].sala===e.sala&&ls[0].mesh?.userData.objetoBotin===p.obj,seed+': botín desvinculado '+id);const box=new THREE.Box3().setFromObject(ls[0].mesh);exigir(cerca(box.min.y,e.origen.y+p.y+caja(p.obj).y0),seed+': malla loot fuera del apoyo');if(id==='rifle')exigir(ls[0].def.weapon==='rifle'&&ls[0].def.ammo===12,'recompensa rifle alterada');else exigir(JSON.stringify(ls[0].def.value)==='[20,60]','recompensa prismáticos alterada');}
++      const trofeos=e.colocados.filter(p=>p.obj==='vb_cornamenta');exigir(trofeos.length===2,seed+': mínimo dos trofeos');
++      for(const ref of[ar,bajo]){const t=trofeos.filter(p=>K.objetos[p.e].sobre_de===ref.obj);exigir(t.length===1,seed+': referencia de trofeo');const[x]=rot(t[0].v.cx-ref.v.cx,t[0].v.cz-ref.v.cz,-ref.ry);exigir(Math.abs(x)<1e-6&&cerca(t[0].ry,ref.ry),seed+': trofeo fuera del frente');}
++      const mapas=e.colocados.filter(p=>p.obj==='vb_mapa_campo');exigir(mapas.length<=1,seed+': mapa duplicado');
++      for(const p of mapas){const[x]=rot(p.v.cx-bib.v.cx,p.v.cz-bib.v.cz,-bib.ry);exigir(p.regla==='pared'&&K.objetos[p.e].sobre_de===bib.obj&&Math.abs(x)<1e-6&&cerca(p.ry,bib.ry),seed+': mapa sin referencia de biblioteca');}
++      exigir(OBJETOS[sillon.obj].rol==='sillon'&&OBJETOS[bib.obj].rol==='libros'&&OBJETOS[bajo.obj].rol==='comoda','roles domésticos perdidos');
++      for(const st of OBJETOS[sillon.obj].asientos||[]){const[x,z]=rot(st.p[0],st.p[2],sillon.ry);exigir(h.pieces.seat.some(s=>Math.hypot(s.x-e.origen.x-sillon.x-x,s.z-e.origen.z-sillon.z-z)<1e-6&&cerca(s.h,sillon.ry)),seed+': asiento real ausente');}exigir(OBJETOS[sillon.obj].asientos?.length===1,'asiento vacío');
++      for(const type of['read','drawer'])exigir(h.inter.some(i=>i.sala===e.sala&&i.type===type),seed+': acción '+type+' ausente');
++      if(e.W*e.D<11){const libro=e.colocados.find(p=>p.obj==='libro_tumbado'&&p.sop===mesa.i);exigir(libro,seed+': mesa compacta sin consulta');apoyo(libro,mesa);}
++      else {const[lateral,frontal]=rot(mesa.v.cx-sillon.v.cx,mesa.v.cz-sillon.v.cz,-sillon.ry);exigir(mesa.regla==='junto_a'&&Math.abs(lateral)<1e-6&&cerca(mesa.ry,sillon.ry)&&cerca(frontal-mesa.v.hd-sillon.v.hd,.32),seed+': mesa no centrada o separación frontal incorrecta');exigir(!e.colocados.some(p=>p.obj==='libro_tumbado'&&p.sop===mesa.i),seed+': libro colocado sobre atlas integrado');}
++
++      const bancos=e.colocados.filter(p=>p.obj==='vb_banco_equipo_campo');
++      exigir(bancos.length===(seed===2162?0:1),seed+': banco canónico ausente o presente bajo13m2');
++      for(const p of bancos){
++        const ob=OBJETOS[p.obj],entry=K.objetos[p.e];
++        exigir(entry.obligatorio===false&&entry.si_no===false&&entry.area_min===13&&entry.grupo_pared==='guardado_campo'&&p.de===bajo.i&&cerca(p.ry,bajo.ry),seed+': banco pierde condición optativa o relación');
++        const[lateral,fondo]=rot(p.v.cx-bajo.v.cx,p.v.cz-bajo.v.cz,-bajo.ry);exigir(cerca(Math.abs(lateral),p.v.hw+bajo.v.hw+.04,1e-5)&&Math.abs(fondo)<.12,seed+': banco fuera de frente modular');
++        exigir(ob.rol==='silla'&&ob.clase==='CARRY'&&ob.asientos?.length===1,seed+': banco sin asiento propio');
++        const st=ob.asientos[0],[sx,sz]=rot(st.p[0],st.p[2],p.ry),registrado=h.pieces.seat.filter(s=>Math.hypot(s.x-e.origen.x-p.x-sx,s.z-e.origen.z-p.z-sz)<1e-6&&cerca(s.h,p.ry));
++        exigir(registrado.length===1&&registrado[0].chair,seed+': banco sin registro real de asiento');
++        const asiento=solido(ob.partes.find(q=>q.m==='tela'&&q.d[0]>.6)).bounds;
++        exigir(cerca(st.p[1],asiento.max.y)&&st.p[0]>asiento.min.x&&st.p[0]<asiento.max.x&&st.p[2]>asiento.min.z&&st.p[2]<asiento.max.z,seed+': punto de asiento fuera de cojín');
++        const reserva=espacioFrontal(p,caja(p.obj),entry.espacio_frontal);exigir(reserva&&entry.espacio_frontal[0]>=.70&&entry.espacio_frontal[1]>=.65,seed+': banco sin reserva frontal');
++        exigir(e.colocados.filter(q=>q.i!==p.i).flatMap(partes).every(q=>penetra(q,reserva)<=.005)&&e.libres.every(q=>penetra(q,reserva)<=.005),seed+': reserva banco ocupada');
++        // Punto literal, sin buscar una celda vecina que repare una obstrucción.
++        const[fx,fz]=rot(st.p[0],caja(p.obj).z1+.4,p.ry),front={x:p.x+fx,z:p.z+fz};
++        const acceso=extra=>{const m=mapaPaso(e,[...e.colocados.flatMap(partes),...extra],.05,.8,e.inicio),i=Math.floor((front.x+e.W/2)/m.S),j=Math.floor(front.z/m.S),c=j*m.nx+i;return i>=0&&i<m.nx&&j>=0&&j<m.nz&&m.free[c]&&m.reach[c];};
++        exigir(acceso([])&&Math.hypot(fx-sx,fz-sz)<1.25,seed+': banco sin selección accesible con paso80');
++        exigir(!acceso([{cx:front.x,cz:front.z,hw:.15,hd:.15,a:0,y0:0,y1:1}]),'negativo frente banco bloqueado aceptado');
++      }
++
++      const pool=K.objetos.filter((q,i)=>e.activas.includes(i)&&q.variantes&&q.por_soporte),ids=new Set();
++      for(const q of pool)for(const id of q.variantes){exigir(!/^lb_(libros_infantiles|comics_|estuches|rotuladores|gomas_tijeras|cuadernos_espiral|cuadernos_rojos)/.test(id),'pool infantil '+id);const b=caja(id);if(e.colocados.filter(p=>q.en.includes(p.obj)).some(p=>(OBJETOS[p.obj].superficies||[]).some((s,k)=>{const r=superficie(p.obj,k);return r&&b.w<=r.x1-r.x0+1e-6&&b.d<=r.z1-r.z0+1e-6&&p.y+r.y+b.y1<=e.H;})))ids.add(id);}
++      exigir(ids.size>=30,seed+': pool efectivo menor que30');
++      const color=new THREE.Color('#5f7465'),acento=planos.filter(p=>Math.abs(p.x-e.origen.x)<=e.W/2+.1&&p.z>=e.origen.z-.1&&p.z<=e.origen.z+e.D+.1&&p.y>=e.origen.y&&p.y<=e.origen.y+e.H&&Math.abs(p.ny)<.1&&p.rgb.every((v,i)=>Math.abs(v-[color.r,color.g,color.b][i])<1e-6));
++      exigir(acento.reduce((a,p)=>a+p.w*p.h,0)>.5&&acento.every(p=>Math.cos(p.ry-ar.ry)>.99),seed+': caller sin pared de armero');
++      exigir(!revisar({local:e,group:{traverse(){}}},B).errores.length&&!revisarUso(h).errores.length,seed+': programa o uso inválido');
++      tirar(h);h=null;
++    }}finally{proto.add=add;if(h)tirar(h);}
++  });
++  if(opts.tanda>=22)await caso('junto_a: separación frontal optativa conserva default, RNG y reservas',async()=>{
++    const id='__contrato_t22_frente',anterior=KITS[id],base={tipologia:'fixture_frente',superficie:{ancho:[5,5],fondo:[5,5],alto:3},puerta:0,paso_libre:.8,zonas:[{id:'estancia',publica:true,rect:['-W/2','0','W/2','D']}],objetos:[{zona:'estancia',obj:'sillon_orejero',regla:'contra_pared',pared:'N',centrado:true,cantidad:[1,1],obligatorio:true},{zona:'estancia',obj:'mesa_baja',regla:'junto_a',de:'sillon_orejero',lados:['frente'],cantidad:[1,1],obligatorio:true,si_no:false}]};
++    const ctx={W:5,D:5,H:3,funciones:true,inicio:{x:0,z:.5},libres:[{cx:0,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}]};
++    const run=(edit=()=>{},reservas=[])=>{KITS[id]=structuredClone(base);edit(KITS[id].objetos[1]);return amueblar(id,4,{...ctx,libres:[...ctx.libres,...reservas]});};
++    const gap=A=>{exigir(A.P.length===2&&A.P[0].obj==='sillon_orejero'&&A.P[1].obj==='mesa_baja','fixture frontal vacía o incompleta');const[s,t]=A.P,[,z]=rot(t.v.cx-s.x,t.v.cz-s.z,-s.ry);return z-t.v.hd-caja(s.obj).z1;};
++    try{
++      const a=run(),b=run(e=>e.separacion_frontal=.06);
++      exigir(JSON.stringify(a.P)===JSON.stringify(b.P)&&JSON.stringify(a.activas)===JSON.stringify(b.activas)&&a.guardias===b.guardias&&a.U([0,1])===b.U([0,1]),'default frontal altera colocación o azar');
++      exigir(Math.abs(gap(a)-.06)<1e-6&&Math.abs(gap(b)-.06)<1e-6,'default frontal no mide seis cm');
++      const c=run(e=>e.separacion_frontal=.38);exigir(Math.abs(gap(c)-.38)<1e-6,'holgura frontal optativa ignorada');
++      const reserva={...c.P[1].v},antes=JSON.stringify(reserva),d=run(e=>e.separacion_frontal=.38,[reserva]);
++      exigir(d.P.length===1&&d.P[0].obj==='sillon_orejero'&&JSON.stringify(reserva)===antes,'frente invade reserva o altera referencia');
++      for(const edit of[e=>e.separacion_frontal=.01,e=>e.separacion_frontal=1.01,e=>{e.separacion_frontal=.38;e.regla='contra_pared';},e=>{e.separacion_frontal=.38;e.lados=['derecha'];},e=>{e.separacion_frontal=.38;e.grupo_pared='g';}]){
++        let error=null;try{run(edit);}catch(e){error=e;}exigir(error&&String(error).includes('separacion_frontal'),'opción frontal inválida aceptada');
++      }
++    }finally{if(anterior===undefined)delete KITS[id];else KITS[id]=anterior;}
++  });
++  if(opts.tanda>=22)await caso('trofeos: banco opcional no fuerza huecos ni pierde el guardado',async()=>{
++    const id='__contrato_t22_banco',old=KITS[id],original=KITS.vivienda_trofeos,bank=structuredClone(original.objetos.find(e=>e.obj==='vb_banco_equipo_campo'));
++    // Fixture parcial no vacía: se conserva el grupo y su recuperación real,
++    // con un guardado obligatorio en pared y el banco optativo de producción.
++    const run=(W,D,edit=()=>{})=>{KITS[id]={...structuredClone(original),objetos:[{zona:'estancia',obj:'vb_guardado_campo',regla:'contra_pared',pared:'N',centrado:true,cantidad:[1,1],obligatorio:true,preferir:true,grupo_pared:bank.grupo_pared},structuredClone(bank)]};edit(KITS[id].objetos[1]);return amueblar(id,2132,{W,D,H:2.75,funciones:true,inicio:{x:0,z:.5},libres:[{cx:0,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}]});};
++    try{
++      const fit=run(4,4),narrow=run(2.25,6),small=run(4,3.249);
++      exigir(fit.P.length===2&&fit.P[1].obj===bank.obj&&fit.P[1].de===0,'fixture banco nunca admite');
++      for(const A of[narrow,small])exigir(A.P.length===1&&A.P[0].obj==='vb_guardado_campo','banco opcional fuerza hueco o pierde guardado');
++      // La reserva aumenta sólo en el clon: la omisión debe proceder del
++      // espacio necesario, no de retirar una entrada ni del filtro de área.
++      const reserved=run(4,4,e=>e.espacio_frontal=[.70,5]);
++      exigir(reserved.P.length===1&&reserved.P[0].obj==='vb_guardado_campo','banco admite reserva frontal imposible');
++    }finally{if(old)KITS[id]=old;else delete KITS[id];}
++  });
+   return { pruebas, errores };
+ }

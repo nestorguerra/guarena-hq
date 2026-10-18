@@ -1,0 +1,69 @@
+{
+  "state": "PASS_PATCHES_EXACTLY_RECONSTRUCT_CANDIDATE",
+  "patches": [
+    {
+      "patch": "motor.patch",
+      "sha256": "0e79151039e3eff3eff7cf718c100545197e311ec7cc461508ce0dd85644301a",
+      "files": [
+        {
+          "path": "src/locales.js",
+          "sha256": "ee5a6e285c46d133e9ef386437e200e3ca42a475e0ef287c02e6925d7fe22a0f"
+        },
+        {
+          "path": "src/houses.js",
+          "sha256": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe"
+        },
+        {
+          "path": "tools/interiores/validar.js",
+          "sha256": "9f23556c92001f384e39a828926a32ddd1f97576175cb7250fa27d18c6460f5d"
+        },
+        {
+          "path": "tools/interiores/datos.py",
+          "sha256": "3334228a3a123c26f5c9391bb6d49ed8c553c46245759eaa87b9c88a4c3888c4"
+        },
+        {
+          "path": "data/kits/kit.schema.json",
+          "sha256": "34b83cc9c176412ad8fe496413c24ef0e3795226901748a82d0ad94250d1e8a7"
+        }
+      ]
+    },
+    {
+      "patch": "modelos_receta.patch",
+      "sha256": "ece1a5f92da6b04c919b314b23e1b28c8b27b1f681ea5a42cdc944f1c18d68d1",
+      "files": [
+        {
+          "path": "tools/interiores/frente_cocina.py",
+          "sha256": "424e7fb2a450f4ea9e9c486beb8ebb1f05233e3351c683c309d003ea70ec7ae1"
+        },
+        {
+          "path": "tools/interiores/catalogo_vivienda_a.py",
+          "sha256": "f2e1b39faa33d36415c42c8bc0787d8d1f366bb42d7659642ad9dd843c15d035"
+        },
+        {
+          "path": "tools/interiores/kits_vivienda_a.py",
+          "sha256": "0a5f0803addf01d2e5cdfe98ca8020a4b74ddf0eec34188321b0e2ae9710f7e5"
+        }
+      ]
+    },
+    {
+      "patch": "contratos.patch",
+      "sha256": "4fe8f2a3465906708b8dc05f936e7b45a8d2b1c3d3c08c85aea20e85e35a37f5",
+      "files": [
+        {
+          "path": "tools/interiores/casas_pruebas.js",
+          "sha256": "6b73efebfa36153027b17006fdc9330a6f6ef5380e529377856fcc31aeefef92"
+        }
+      ]
+    },
+    {
+      "patch": "capturador.patch",
+      "sha256": "df5e101adf0db26fffcf0fb6c26bc0ee90455cc7efa1e13391a1c195cd113810",
+      "files": [
+        {
+          "path": "tools/interiores/fotos_casa.py",
+          "sha256": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0"
+        }
+      ]
+    }
+  ]
+}

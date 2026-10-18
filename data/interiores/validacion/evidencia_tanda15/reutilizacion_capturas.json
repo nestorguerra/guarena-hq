@@ -1,0 +1,27 @@
+{
+ "estado": "reutilización explícita tras arreglo lógico; sin nueva llamada de puntuación",
+ "ficha_sha256": "8a902376baea6e83f2457ae80ecd4cb4cdd6a82faeab26f1476ea741004a782e",
+ "captura_original": "capturas/final_Bv3/procedencia.json",
+ "posterior_a_la_captura": "corrección del fallback de alfombra y reintentos de laboratorio con marco fijo",
+ "invariancia_observada": {
+  "casas": 31,
+  "incluye_canonicas": [
+   4007,
+   5045,
+   1296
+  ],
+  "estancias_nav_geometria_atributos_y_transformaciones_luces": true,
+  "P_y_extraccion_U_siguiente": true,
+  "fuente_recibo": "fix_laboratorio/controles.json",
+  "recibo_sha256": "a355b1a3e82e3029a31209244b7ca802c320d68a52cae9e13604aba5f08e58c6",
+  "alcance": "31 construcciones por semilla; no son 31 casas del inventario público. 1296 es una fixture sintética."
+ },
+ "fuentes_actuales": {
+  "src/locales.js": "292727250d35dfae48ac125a8b767154135054b469f6f207772b984b26c7f516",
+  "src/houses.js": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706",
+  "src/acabados_vivienda.js": "5c65b324b83ffed145793b01bb5635b85b31f6b71c232f32879f42f48adc71e9",
+  "src/interiores_datos.js": "0ff5030ff8cb8dfd1b340b110d5ac6db33a983359cfd243e225972ce6b843805",
+  "data/kits/vivienda_ninos.json": "13dfabff443feea41bb77bff2205674f2d9083e30182613814a52fb962bb0e1b"
+ },
+ "limite": "No se presenta una comparación nueva de píxeles, sombras o todas las semillas. El arreglo no contiene cambios artísticos y conserva las construcciones canónicas por semilla. Las evaluaciones siguen ligadas a la ficha exacta, sin repetir para buscar otra nota."
+}

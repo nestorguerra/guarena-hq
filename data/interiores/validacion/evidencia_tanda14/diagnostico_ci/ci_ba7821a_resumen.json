@@ -1,0 +1,27 @@
+{
+ "commit": "ba7821a11c8114e33d62dafdb29c00321561d0f9",
+ "ci": 39073689420,
+ "estado": "FAIL",
+ "etapa": "arranque inicial",
+ "errores": [
+  "RuntimeError: {\"exceptionId\": 1, \"text\": \"Uncaught (in promise) Error: juego no preparado: []\", \"lineNumber\": 0, \"columnNumber\": 0, \"exception\": {\"type\": \"object\", \"subtype\": \"error\", \"className\": \"Error\", \"description\": \"Error: juego no preparado: []\\n    at <anonymous>:1:609\", \"objectId\": \"-11873602343554286.2.1\"}}"
+ ],
+ "diagnostico": {
+  "documento": "complete",
+  "estado": "intro",
+  "carga_oculta": true,
+  "jugador": true,
+  "personaje": true,
+  "intro": {
+   "start": 73898,
+   "figure": 73898,
+   "skin": 73907,
+   "street": 75641,
+   "flight": 145286
+  },
+  "vuelo": true,
+  "errores": []
+ },
+ "flight_t": 0.060945777777779674,
+ "conclusion_acotada": "Juego cargado, límite de la prueba vencido durante vuelo. No se han ejecutado recogidas. Renderer no registrado; no se atribuye un driver ni causa de rendimiento."
+}

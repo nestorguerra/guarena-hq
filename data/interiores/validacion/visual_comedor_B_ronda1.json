@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_6da91ca39a0a47a09c0d299294d060be",
+ "request_sha256": "dc095f8f7e9c0cff1ba08d0d9f1ffab5c06ce3968f7d925fe6145df352be26ab",
+ "fecha": "2026-10-17T14:10:53.669727+00:00",
+ "kit": "comedor",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_comedor.jpg",
+ "ficha_sha256": "93931e203e489ea17ce1ddb72e6c10e83d4f4af8fd04a464d95539d637d776ad",
+ "referencias": [
+  {
+   "titulo": "My Dining Room.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:My_Dining_Room.JPG",
+   "autor": "Mokes123 (talk) (Uploads)",
+   "licencia": "Public domain",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/My_Dining_Room.JPG/960px-My_Dining_Room.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "After, Dining Room Living Room - Flickr - Tall Chris.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:After%2C_Dining_Room_Living_Room_-_Flickr_-_Tall_Chris.jpg",
+   "autor": "Tall Chris",
+   "licencia": "CC BY 2.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/After%2C_Dining_Room_Living_Room_-_Flickr_-_Tall_Chris.jpg/960px-After%2C_Dining_Room_Living_Room_-_Flickr_-_Tall_Chris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.81,
+  "coherencia": 2.94,
+  "iluminacion": 3.41,
+  "variedad": 3.18,
+  "lectura_funcional": 2.18
+ },
+ "media": 2.904,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.81,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.24
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.66
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.07
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.69
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.94,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.14
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.76
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.08
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.78
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.41,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.04
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.53
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.41
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.59
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 2.18,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.1
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.64
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.24
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.68
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.18,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.17
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.51
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.3
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.57
+  }
+ ],
+ "uso": {
+  "input_tokens": 4261,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4261
+ }
+}

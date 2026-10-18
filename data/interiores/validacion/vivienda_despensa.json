@@ -1,0 +1,478 @@
+{
+ "kit": "vivienda_despensa",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4,
+   "guardias": 3,
+   "objetos": 50,
+   "distintos": 39,
+   "hash": "28def241",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.75,
+     "libre_m2": 15.75
+    }
+   },
+   "luz": {
+    "estancia": 0.098
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4206,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.1999999999999997,
+   "guardias": 3,
+   "objetos": 53,
+   "distintos": 42,
+   "hash": "bd7a35cd",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 0
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5.34,
+     "libre_m2": 5.34
+    }
+   },
+   "luz": {
+    "estancia": 0.163
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4742,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 3,
+   "W": 5,
+   "D": 1.9,
+   "guardias": 2,
+   "objetos": 33,
+   "distintos": 29,
+   "hash": "85ce48b8",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 3
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 11
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 13
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 2.96,
+     "libre_m2": 2.96
+    }
+   },
+   "luz": {
+    "estancia": 0.205
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2424,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.6,
+   "guardias": 3,
+   "objetos": 52,
+   "distintos": 40,
+   "hash": "3c8f6f6c",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 0
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "va_alimento_pan_molde|va_alimento_gallet",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 15
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.97,
+     "libre_m2": 11.97
+    }
+   },
+   "luz": {
+    "estancia": 0.112
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4916,
+   "mallas": 9,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despensa",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4,
+   "guardias": 5,
+   "objetos": 70,
+   "distintos": 46,
+   "hash": "6b7a79ce",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_estante",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "aparador",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_estante_alto",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "va_tinaja",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_cajas_apiladas",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_alimento_garrafa_aceite|va_alimento_v",
+     "n": 2
+    },
+    {
+     "entrada": 10,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 16
+    },
+    {
+     "entrada": 11,
+     "obj": "va_reserva_0|va_reserva_1|va_reserva_2|v",
+     "n": 42
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.9,
+     "libre_m2": 15.9
+    }
+   },
+   "luz": {
+    "estancia": 0.099
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5054,
+   "mallas": 10,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

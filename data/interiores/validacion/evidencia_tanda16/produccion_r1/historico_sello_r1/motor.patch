@@ -1,0 +1,287 @@
+--- a/src/locales.js
++++ b/src/locales.js
+@@ -54,7 +54,7 @@
+ // through starts there), libres the house's own clear areas (the swing of its doors; its windows: nothing tall or hung
+ // there), filtro (whether an entry belongs to this household: its profile, its style)
+ export function amueblar(kit, seed = 1, ctx = null) {
+-  const K = KITS[kit];
++  let K = KITS[kit];
+   if (!K) throw new Error('sin kit: ' + kit);
+   // Separación optativa sólo en piezas individuales, nunca en grupos modulares.
+   for(const e of K.objetos)if(e.separacion_pared!=null&&(!['contra_pared','enfrente'].includes(e.regla)||e.grupo_pared))throw new Error('separacion_pared sólo admite contra_pared/enfrente sin grupo_pared');
+@@ -535,7 +535,7 @@
+   };
+   // Grupos de módulos: probar el frente completo antes de comprometer su primera pieza.
+   // La búsqueda no consume r ni modifica P/cursores si falla: conserva el fallback anterior.
+-  const aplicable = e => zonas[e.zona] && reglas[e.regla] && !(e.area_min != null && W*D < e.area_min) && !(e.area_max != null && W*D >= e.area_max) && !(ctx?.filtro && !ctx.filtro(e));
++  const aplicable = e => !e.fase && zonas[e.zona] && reglas[e.regla] && !(e.area_min != null && W*D < e.area_min) && !(e.area_max != null && W*D >= e.area_max) && !(ctx?.filtro && !ctx.filtro(e));
+   const entradasActivas = [...K.objetos.entries()].filter(([,e]) => aplicable(e));
+   const gruposIntentados = new Set(), entradasAgrupadas = new Set();
+   const probarGrupoPared = (miembros, Z) => {
+@@ -646,7 +646,88 @@
+     }
+   }
+ 
+-  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
++  // Composición declarada de cocina: sustituir sólo después de amueblar la base.
++  // No consume U/r, mueve el núcleo ni busca una nueva distribución de la mesa.
++  let composicionCocina;
++  if(K.composicion_cocina&&K.objetos.some(e=>e.fase==='composicion_cocina')){
++    if(tipologia!=='cocina')throw new Error('composicion_cocina requiere tipologia cocina');
++    const cfg=K.composicion_cocina,original=P.slice(),guardiasBase=guardias;
++    const entradaActividad=K.objetos.findIndex(e=>e.fase==='composicion_cocina'&&e.obj===cfg.actividad);
++    if(entradaActividad<0)throw new Error('composicion_cocina sin entrada de actividad');
++    const ip=original.findIndex(p=>['va_encimera','va_encimera_amplia'].includes(p.obj)),
++      inf=original.findIndex(p=>p.obj==='va_nevera'),ia=original.findIndex(p=>p.obj==='va_alacena');
++    const prep=original[ip],fridge=original[inf],pantry=original[ia];
++    const iu=prep?original.findIndex(p=>p.regla==='pared'&&cfg.versiones.some(v=>v.referencias.includes(p.obj))&&p.zona===prep.zona&&Math.abs(p.x-prep.x)+Math.abs(p.z-prep.z)<.35):-1;
++    const version=iu<0?null:cfg.versiones.find(v=>v.referencias.includes(original[iu].obj));
++    const intentos=[];
++    if(prep&&fridge&&pantry&&version&&prep.zona===fridge.zona&&prep.zona===pantry.zona&&Math.abs(fridge.ry-prep.ry)<1e-6){
++      const ry=prep.ry,pb=caja(prep.obj),fb=caja(fridge.obj),[rx,rz]=rot(fridge.x-prep.x,fridge.z-prep.z,-ry);
++      const min=Math.min(pb.x0,rx+fb.x0),max=Math.max(pb.x1,rx+fb.x1),lado=Math.sign(rx),
++        alto=version[prep.obj==='va_encimera_amplia'?'alto_amplio':'alto'];
++      // Sólo el frente contiguo existente y los dos anchos de modelo declarados.
++      if(lado&&Math.abs((pb.z0)-(rz+fb.z0))<.04&&Math.abs(caja(alto).w-(max-min))<1e-5){
++        const [wx,wz]=rot(0,pb.z0-.01,ry),wallX=prep.x+wx,wallZ=prep.z+wz;
++        const quitar=new Set([ia,iu]);
++        const despejar=new Set(original.flatMap((p,i)=>['va_encimera','va_encimera_amplia','va_lavadora','va_alacena'].includes(p.obj)&& (p.obj!=='va_alacena'||i===ia)?[i]:[]));
++        // Retirar dependientes recursivos: ningún sop/de puede quedar huérfano.
++        for(let cambio=true;cambio;){cambio=false;original.forEach((p,i)=>{if(!quitar.has(i)&&((p.sop!=null&&(quitar.has(p.sop)||despejar.has(p.sop)))||(p.de!=null&&quitar.has(p.de)))){quitar.add(i);cambio=true;}});}
++        const transformar={va_encimera:version.preparacion,va_encimera_amplia:version.preparacion_amplia,va_cocina:version.cocina,va_cocina_amplia:version.cocina_amplia};
++        const crear=(obj,x,y,z,angle,extra)=>{const p={obj,x,y,z,ry:angle,zona:prep.zona,...extra};p.v=volumen(p);return p;};
++        // La limpieza sólo retira decoración: un uso/botín futuro obliga a rollback.
++        const protegido=[...quitar].some(i=>{if(i===ia||i===iu)return false;const p=original[i],o=OBJETOS[p.obj],e=K.objetos[p.e];return o.rol||o.interaccion||o.interacciones||o.botin||o.vende||o.asientos?.length||e?.botin;});
++        for(const modo of protegido?[]:['extremo_amplio','extremo_compacto','huella_actual']){
++          const obj=modo==='extremo_amplio'?version.alacena_amplia:version.alacena,b=caja(obj);
++          let x,z,angle=ry;
++          if(modo==='huella_actual'){
++            angle=pantry.ry;const ab=caja(pantry.obj),[dx,dz]=rot(0,ab.z0,angle);x=pantry.x+dx;z=pantry.z+dz;
++          }else{
++            const [dx,dz]=rot(rx+(lado>0?fb.x1:fb.x0)+lado*(.04+b.w/2),.01,ry);x=wallX+dx;z=wallZ+dz;
++          }
++          const indices=new Map(),candidatos=[];
++          original.forEach((p,i)=>{if(quitar.has(i))return;indices.set(i,candidatos.length);candidatos.push(crear(transformar[p.obj]||p.obj,p.x,p.y,p.z,p.ry,{...p,obj:transformar[p.obj]||p.obj}));});
++          const columna=crear(obj,x,0,z,angle,{e:pantry.e,regla:modo==='huella_actual'?pantry.regla:'junto_a',de:modo==='huella_actual'?pantry.de:inf,sop:null,sup:null});
++          indices.set(ia,candidatos.length);candidatos.push(columna);
++          const [ux,uz]=rot((min+max)/2,.003,ry),banda=crear(alto,wallX+ux,0,wallZ+uz,ry,{e:original[iu].e,regla:'pared',sop:null,sup:null});
++          indices.set(iu,candidatos.length);candidatos.push(banda);
++          const [ax,az]=rot((pb.x0+pb.x1)/2,(pb.z0+pb.z1)/2,ry),actividad=crear(cfg.actividad,prep.x+ax,.89,prep.z+az,ry,{e:entradaActividad,regla:'sobre',sop:ip,sup:0});
++          candidatos.push(actividad);
++          for(const p of candidatos){if(p.sop!=null)p.sop=indices.get(p.sop);if(p.de!=null)p.de=indices.get(p.de);}
++          const errors=[],Z=zonas[prep.zona],nuevos=[columna,banda,actividad],pPrep=candidatos[indices.get(ip)];
++          for(const p of nuevos){
++            if(!dentro(p.v,Z)||p.v.y1>H+TOL)errors.push('fuera');
++            if(libres.some(l=>partes(p).some(v=>penetra(l,v)>.005)))errors.push('hueco');
++            if(candidatos.some(q=>q!==p&&!(p===actividad&&q===pPrep)&&hunde(p,q)>.005))errors.push('colision');
++          }
++          for(const [p,anchoUso]of [[columna,Math.min(.7,b.w)],[pPrep,Math.min(.8,pb.w-.05)],[candidatos[indices.get(inf)],.7]]){
++            const R=espacioFrontal(p,caja(p.obj),[anchoUso,.8]);
++            if(!dentro(R,Z)||candidatos.some(q=>q!==p&&q!==actividad&&partes(q).some(v=>penetra(R,v)>.005)))errors.push('frente_uso');
++          }
++          // Evaluar el conjunto literal con las reservas y acceso de la base.
++          P.splice(0,P.length,...candidatos);
++          if(!errors.length&&cierra([]))errors.push('paso_o_funcion');
++          P.splice(0,P.length,...original);
++          intentos.push({modo,errores:[...new Set(errors)]});
++          if(errors.length)continue;
++          // Metadatos de receta coherentes con todos los objetos comprometidos.
++          const nuevoK={...K,objetos:K.objetos.map(e=>({...e}))};
++          for(const p of candidatos){
++            if(p===actividad)continue;
++            const e=nuevoK.objetos[p.e];if(!e||e.regla==='conjunto')continue;
++            if(transformar[e.obj]||p===columna||p===banda){e.obj=p.obj;delete e.variantes;}
++          }
++          for(const[p,medidas]of[[columna,[Math.min(.7,b.w),.8]],[pPrep,[Math.min(.8,pb.w-.05),.8]],[candidatos[indices.get(inf)],[.7,.8]]])nuevoK.objetos[p.e].espacio_frontal=medidas;
++          nuevoK.objetos[entradaActividad]={...nuevoK.objetos[entradaActividad],en:[pPrep.obj]};
++          K=nuevoK;activas.push(actividad.e);P.splice(0,P.length,...candidatos);
++          composicionCocina={modo,intentos,retirados:[...quitar].map(i=>({indice:i,obj:original[i].obj,e:original[i].e,sop:original[i].sop,de:original[i].de})),indices:[...indices],actividad:actividad.e};
++          break;
++        }
++      }
++    }
++    // Rollback íntegro del resultado y del contador de guardas; jamás se llamó r/U.
++    if(!composicionCocina)guardias=guardiasBase;
++  }
++
++  return { K, tipologia, seed, W, D, H, ev, U, puertaX, inicio, ancho, avisos, zonas, tabiques, libres, P, guardias, debe, activas, ...(composicionCocina?{composicionCocina}:{}), ...(busquedasSuelo.length?{busquedasSuelo}:{}) };
+ }
+ 
+ // a business, built round its kit's layout. hogar (the validator, for the kits of a home's rooms): lay it out for that
+@@ -778,7 +859,7 @@
+   const colocados = P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: +p.x.toFixed(3), y: +(p.y || 0).toFixed(3), z: +p.z.toFixed(3), ry: +p.ry.toFixed(4), sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v }));
+   let hh = 2166136261;
+   for (const c of colocados) for (const ch of `${c.obj}|${c.x}|${c.y}|${c.z}|${c.ry};`) { hh ^= ch.charCodeAt(0); hh = Math.imul(hh, 16777619) >>> 0; }
+-  h.local = { kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
++  h.local = { ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit, tipologia, seed:semillaSolicitada, W, D, H, puertaX, ancho, zonas, tabiques, libres, colocados, luces, avisos, guardias, debe, activas, hogar, hash: hh.toString(16), title };
+   if(intentos.length>1||A.busquedasSuelo)h.local.generacion={semillaSolicitada,semillaEfectiva:A.seed,intento:intentos.length-1,maximo:12,agotado:faltan(A).length>0,marco,intentos};
+   if (programaLuz) h.local.modoLuz = 'casa'; // Calibración doméstica: intensidad real / 5,5 en el validador existente.
+   h.venue = false;
+--- a/src/houses.js
++++ b/src/houses.js
+@@ -1070,7 +1070,7 @@
+       return false;
+     }
+     const P = A.P, K = A.K;
+-    estancias.push({ kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
++    estancias.push({ ...(A.composicionCocina?{entradasEfectivas:K.objetos,composicionCocina:A.composicionCocina}:{}),kit: kid, sala: rm.id, tipologia: K.tipologia, seed: A.seed, W, D: Dd, H: A.H, origen:{x:B.ox+ox,y:yl,z:B.oz+oz},inicio, ancho: A.ancho, zonas: A.zonas, tabiques: [], libres, luces: [], activas: A.activas, debe: A.debe, avisos: A.avisos, hogar: { perfil: prof.id, estilo: prof.style },
+       colocados: P.map((p, i) => ({ i, e: p.e, obj: p.obj, zona: p.zona, regla: p.regla, x: p.x, y: p.y || 0, z: p.z, ry: p.ry, sop: p.sop, sup: p.sup, de: p.de ?? null, clase: OBJETOS[p.obj].clase, v: p.v })) });
+     // the loot: the first piece of each such entry; one the room had no room for goes back to the pool
+     const deBotin = new Map();
+--- a/tools/interiores/validar.js
++++ b/tools/interiores/validar.js
+@@ -8,7 +8,7 @@
+ //  - rendimiento: triangles, meshes and lights within data/quality_budgets.json;
+ //  - variación: the same seed gives the same layout (its hash), another seed a different one (≥ 30 % of it).
+ //   const V = await import('/tools/interiores/validar.js'); await V.validar('cafeteria', 7)
+-import { buildLocal } from '/src/locales.js';
++import { buildLocal, filtroHogar } from '/src/locales.js';
+ import { PROFILES, buildVecino, kitDeEstancia } from '/src/houses.js';
+ import { KITS, OBJETOS } from '/src/interiores_datos.js';
+ import { caja } from '/src/objetos.js';
+@@ -18,7 +18,31 @@
+ const DEG = Math.PI / 180;
+ 
+ export function revisar(h, presupuesto) {
+-  const L = h.local, K = KITS[L.kit], C = L.colocados, err = [], av = [];
++  const L = h.local, base = KITS[L.kit], K = L.entradasEfectivas?{...base,objetos:L.entradasEfectivas}:base, C = L.colocados, err = [], av = [];
++  // La composición publica su receta efectiva por estancia, sin reescribir KITS.
++  // Puede cambiar modelos y reservas, nunca rebajar las cuotas globales.
++  if(L.entradasEfectivas){
++    if(!base.composicion_cocina||K.objetos.length!==base.objetos.length)err.push('receta efectiva: programa o longitud incoherentes');
++    for(const[i,e]of K.objetos.entries())for(const key of ['zona','regla','cantidad','obligatorio','por_m2','por_soporte','fase'])
++      if(JSON.stringify(e[key])!==JSON.stringify(base.objetos[i]?.[key]))err.push('receta efectiva: altera contrato '+i+'/'+key);
++    const filtro=L.hogar?filtroHogar({...L.hogar,habitacion:'cocina'}):()=>true;
++    for(const[i,e]of base.objetos.entries()){
++      if(e.botin||!L.zonas[e.zona]||!filtro(e)||(e.area_min!=null&&L.W*L.D<e.area_min)||(e.area_max!=null&&L.W*L.D>=e.area_max))continue;
++      if((e.obligatorio||(e.cantidad?.[0]||0)>0)&&!L.activas?.includes(i))err.push('receta efectiva: activa obligatoria omitida '+i);
++      if(e.espacio_frontal&&(!K.objetos[i]?.espacio_frontal||e.espacio_frontal.some((n,j)=>K.objetos[i].espacio_frontal[j]<n)))err.push('receta efectiva: rebaja reserva global '+i);
++    }
++    const versiones=base.composicion_cocina?.versiones||[],es=(p,key)=>versiones.some(v=>[v[key],v[key+'_amplia']].includes(p.obj));
++    const columna=C.find(p=>es(p,'alacena')),prep=C.find(p=>es(p,'preparacion')),nevera=C.find(p=>p.obj==='va_nevera');
++    for(const[p,ancho]of[[columna,columna?Math.min(.7,caja(columna.obj).w):.7],[prep,prep?Math.min(.8,caja(prep.obj).w-.05):.8],[nevera,.7]]){
++      const reserva=p&&K.objetos[p.e]?.espacio_frontal;
++      if(!p||!reserva||reserva[0]<ancho-1e-6||reserva[1]<.8-1e-6)err.push('receta efectiva: reserva de programa ausente o reducida');
++    }
++    for(const[i,c]of C.entries()){
++      if(!K.objetos[c.e])err.push('referencia: entrada e inexistente '+i);
++      for(const key of ['sop','de'])if(c[key]!=null&&(!Number.isInteger(c[key])||c[key]<0||c[key]>=C.length||c[key]===i))err.push('referencia: '+key+' invalido '+i);
++      if(c.sop!=null&&!OBJETOS[C[c.sop]?.obj]?.superficies?.[c.sup])err.push('referencia: sup sin superficie '+i);
++    }
++  }
+   const { W, D, H } = L;
+   // ---- obligatorios y densidades
+   const porEntrada = new Map();
+@@ -59,7 +83,7 @@
+   for (const c of C) {
+     const v = c.v, b = caja(c.obj);
+     let gap;
+-    if (c.sop != null) { const s = C[c.sop], sup = OBJETOS[s.obj].superficies[c.sup]; gap = Math.abs(v.y0 - ((s.y || 0) + sup.y)); }
++    if (c.sop != null) { const s = C[c.sop], sup = OBJETOS[s?.obj]?.superficies?.[c.sup]; if(!sup){err.push('referencia: apoyo inexistente '+c.obj);continue;} gap = Math.abs(v.y0 - ((s.y || 0) + sup.y)); }
+     else if (c.regla === 'techo') gap = Math.abs(v.y1 - H);
+     else if (c.regla === 'pared') {
+       // (its back against a wall of its zone, or of the room)
+--- a/tools/interiores/datos.py
++++ b/tools/interiores/datos.py
+@@ -96,6 +96,17 @@
+             if it['zona'] not in {z['id'] for z in k['zonas']}: errs.append(f'{kid}: objeto {i} en una zona que no existe «{it["zona"]}»')
+         for it in k['objetos']:
+             for oid in it.get('en', []): ids.add(oid)
++        comp=k.get('composicion_cocina')
++        if comp:
++            if k['tipologia']!='cocina':errs.append(f'{kid}: composicion_cocina fuera de cocina')
++            actividad=[e for e in k['objetos'] if e.get('fase')=='composicion_cocina']
++            if len(actividad)!=1 or actividad[0].get('obj')!=comp['actividad'] or actividad[0]['regla']!='sobre' or actividad[0].get('cantidad')!=[1,1] or not actividad[0].get('obligatorio'):errs.append(f'{kid}: entrada diferida de actividad incoherente')
++            for version in comp['versiones']:
++                for oid in version['referencias']+list(v for key,v in version.items() if key!='referencias')+[comp['actividad']]:
++                    if oid not in OBJ:errs.append(f'{kid}: composicion nombra objeto ausente {oid}')
++                    else:ids.add(oid)
++        for e in k['objetos']:
++            if e.get('fase') and not comp:errs.append(f'{kid}: fase diferida sin programa')
+         n_min = max(k['minimo_objetos_distintos'], MIN.get(k['tipologia'], 40))
+         if len(ids) < n_min: errs.append(f'{kid}: {len(ids)} objetos distintos, la tipología pide {n_min}')
+         mood = k['moodboard']
+--- a/data/kits/kit.schema.json
++++ b/data/kits/kit.schema.json
+@@ -289,6 +289,11 @@
+      "suelo_determinista": {
+       "type": "boolean",
+       "description": "Opt-in sólo suelo_libre con obj fijo y obligatorio:true. Tras200intentos aleatorios incompletos prueba cuatro ejes y rejilla finita, sin relajar guardas ni tocar una colocación exitosa."
++     },
++     "fase": {
++      "enum": [
++       "composicion_cocina"
++      ]
+      }
+     }
+    }
+@@ -386,6 +391,69 @@
+      }
+     }
+    }
++  },
++  "composicion_cocina": {
++   "type": "object",
++   "required": [
++    "actividad",
++    "versiones"
++   ],
++   "additionalProperties": false,
++   "properties": {
++    "actividad": {
++     "type": "string"
++    },
++    "versiones": {
++     "type": "array",
++     "items": {
++      "type": "object",
++      "required": [
++       "referencias",
++       "alacena",
++       "alacena_amplia",
++       "alto",
++       "alto_amplio",
++       "preparacion",
++       "preparacion_amplia",
++       "cocina",
++       "cocina_amplia"
++      ],
++      "additionalProperties": false,
++      "properties": {
++       "referencias": {
++        "type": "array",
++        "items": {
++         "type": "string"
++        }
++       },
++       "alacena": {
++        "type": "string"
++       },
++       "alacena_amplia": {
++        "type": "string"
++       },
++       "alto": {
++        "type": "string"
++       },
++       "alto_amplio": {
++        "type": "string"
++       },
++       "preparacion": {
++        "type": "string"
++       },
++       "preparacion_amplia": {
++        "type": "string"
++       },
++       "cocina": {
++        "type": "string"
++       },
++       "cocina_amplia": {
++        "type": "string"
++       }
++      }
++     }
++    }
++   }
+   }
+  }
+ }

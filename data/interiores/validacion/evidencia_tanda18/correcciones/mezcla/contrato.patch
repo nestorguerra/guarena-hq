@@ -1,0 +1,23 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -1390,5 +1390,20 @@
+       let mallas=0;h.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});exigir(mallas<=60,seed+': excede60mallas');tirar(h);h=null;
+     }}finally{proto.add=add;if(h)tirar(h);}
+   });
++  if(opts.tanda>=21)await caso('salon: construir no ordena paredes con un comparador aleatorio',()=>{
++    // Las dos rutas activas (decoración y plantas) deben mezclar con consumo
++    // finito. No depender de cuántas veces V8 llama al comparador de sort.
++    const original=Array.prototype.sort,paredes=new Set(['s','n','w','e']);let h;
++    Array.prototype.sort=function(comparar){
++      if(typeof comparar==='function'&&this.length===4&&new Set(this).size===4&&this.every(x=>paredes.has(x)))throw Error('orden de paredes dependiente del comparador');
++      return original.call(this,comparar);
++    };
++    try{
++      h=H.buildVecino(3244);
++      exigir(h.estancias.some(e=>e.composicionLectura),'fixture sin admisión real de lectura');
++      exigir(h.loot.length===h.profile.loot.length&&h.inter.some(i=>i.type==='loot'),'fixture sin pertenencias/acciones');
++      exigir(!revisarUso(h).errores.length,'mezcla deja usos inaccesibles');
++    }finally{Array.prototype.sort=original;if(h)tirar(h);}
++  });
+   return { pruebas, errores };
+ }

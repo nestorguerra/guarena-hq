@@ -1,0 +1,76 @@
+{
+ "seed": 1594,
+ "perfil": "estudiante",
+ "calidad": "alta",
+ "dpr": 1,
+ "punto": [
+  -5199.469532269612,
+  4.7,
+  -5194.0573493495585
+ ],
+ "objetivo": [
+  -5202.15046775423,
+  4.08,
+  -5192.892349361479
+ ],
+ "fov": 75,
+ "inicio": {
+  "x": 1.6804677303880453,
+  "z": 0.6749999999999998
+ },
+ "camara": {
+  "before": {
+   "free": true,
+   "position": {
+    "x": -5199.469532269612,
+    "z": -5194.0573493495585
+   },
+   "radius": 0.34,
+   "tolerance": 1e-06,
+   "bounds": {
+    "x0": -5202.9904677303875,
+    "x1": -5199.309532269612,
+    "z0": -5194.392349349559,
+    "z1": -5192.922349349559
+   },
+   "inBounds": true,
+   "delta": 0,
+   "contact": false,
+   "depth": 0,
+   "insideFloorFurniture": [],
+   "circleCentres": [],
+   "testedOnlyOnClone": true,
+   "cameraMoved": false
+  },
+  "after": {
+   "free": true,
+   "position": {
+    "x": -5199.469532269612,
+    "z": -5194.0573493495585
+   },
+   "radius": 0.34,
+   "tolerance": 1e-06,
+   "bounds": {
+    "x0": -5202.9904677303875,
+    "x1": -5199.309532269612,
+    "z0": -5194.392349349559,
+    "z1": -5192.922349349559
+   },
+   "inBounds": true,
+   "delta": 0,
+   "contact": false,
+   "depth": 0,
+   "insideFloorFurniture": [],
+   "circleCentres": [],
+   "testedOnlyOnClone": true,
+   "cameraMoved": false
+  }
+ },
+ "puesto": "t17_mesa_amplio",
+ "marco": {
+  "W": 4.360935460776091,
+  "D": 2.15,
+  "H": 2.75
+ },
+ "limite": "Pose fija en inicio físico real, mirada al puesto real; no es cámara canónica ni evaluación formal."
+}

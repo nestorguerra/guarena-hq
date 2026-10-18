@@ -1,0 +1,761 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Estanco (tabaco, lotería y prensa)",
+ "nota": "El estanco de un pueblo de las Vegas Altas: un mostrador largo de madera con tapa de piedra, detrás los muebles de cajetillas genéricas (sin marca) y el terminal de lotería, en el mostrador la vitrina de décimos y sellos, mecheros y la caja, revisteros de pared, islas de prensa y el expositor de prensa junto a la puerta, golosinas y chocolate, postales, el cartel de recargas de móvil y la trastienda con los fardos de la prensa. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.7,
+   6.9
+  ],
+  "fondo": [
+   9.3,
+   10.8
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "W/2-1.8",
+  "z0": "1.4",
+  "z1": "5.0",
+  "zb": "D-1.9"
+ },
+ "paso_libre": 0.9,
+ "pared": "#efe8d6",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#c0b49c",
+ "puntos": {
+  "dependiente": [
+   "xc+0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.75",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.3"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "centro",
+   "publica": true,
+   "rect": [
+    "-W/2+1.5",
+    "1.9",
+    "xc-1.4",
+    "zb-0.3"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.3",
+    "z1"
+   ],
+   "nota": "el sitio para pedir en el mostrador: sin muebles delante"
+  },
+  {
+   "rect": [
+    "xc+0.35",
+    "(z0+z1)/2-0.45",
+    "xc+1.25",
+    "(z0+z1)/2+0.45"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "mostrador_estanco",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "vitrina_loteria",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "terminal_loteria",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_mecheros",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_sellos",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "balanza_postal",
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "variantes": [
+    "es_pila_periodicos",
+    "es_pila_revistas",
+    "bote_caramelos",
+    "expositor_llaveros",
+    "sello_tampon",
+    "expositor_pilas_mostrador"
+   ],
+   "en": [
+    "mostrador_estanco"
+   ],
+   "cantidad": [
+    0,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "rotulo_estanco",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "contra_pared",
+   "variantes": [
+    "mueble_tabaco_a",
+    "mueble_tabaco_b",
+    "mueble_tabaco_c"
+   ],
+   "pared": "E",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "suelo_libre",
+   "obj": "silla_madera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "variantes": [
+    "reloj_pared",
+    "calendario_pared"
+   ],
+   "pared": "N",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "es_pila_revistas",
+    "es_pila_periodicos",
+    "es_chocolatinas"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "fardos_prensa",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "torre_cajas_bazar",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "panel_cargadores",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "cargador"
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "cartel_menores",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "expositor_prensa",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "revistero_giratorio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "regleta_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_loteria",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "cartel_recargas",
+    "cartel_sellos"
+   ],
+   "pared": "W",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "variantes": [
+    "revistero_pared_a",
+    "revistero_pared_b"
+   ],
+   "pared": "W",
+   "llenar": true,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_estanco_pared",
+   "pared": "N",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expositor_golosinas",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "chocolate"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expositor_papeleria_giratorio",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "cuaderno"
+  },
+  {
+   "zona": "centro",
+   "regla": "suelo_libre",
+   "obj": "isla_revistas",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_postales",
+    "expositor_cuadernos",
+    "revistero_giratorio"
+   ],
+   "cantidad": [
+    1,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "lb_sobres",
+    "bz_pilas",
+    "es_pipas_bolsas",
+    "bz_pegamentos",
+    "es_caramelos_bolsas",
+    "es_tarjetas_regalo",
+    "es_chicles",
+    "es_panuelos",
+    "es_chocolatinas",
+    "lb_rotuladores",
+    "lb_cuadernos_espiral",
+    "es_cerillas_mecheros"
+   ],
+   "en": [
+    "estanteria_estanco_pared"
+   ],
+   "relleno": [
+    0.88,
+    0.98
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "regleta_led",
+   "por_m2": [
+    0.07,
+    0.09
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3700,
+   4300
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 180
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 07:30-14:00,16:30-20:30; Sa 08:00-14:00,17:00-20:00",
+  "vida": [
+   "la prensa del día recién colocada",
+   "décimos de lotería en la vitrina",
+   "un mechero olvidado sobre el mostrador",
+   "revistas del corazón en el revistero"
+  ],
+  "cerrado": "reja bajada, el rótulo encendido"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Estanco y Lotería, Marchena.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_y_Loter%C3%ADa,_Marchena.jpg",
+   "autor": "CFA1877",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Estanco Cortés Vázquez en Horche (Guadalajara).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_Cort%C3%A9s_V%C3%A1zquez_en_Horche_(Guadalajara).jpg",
+   "autor": "Tobias Catenaria tren",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Estanco (Ceuta).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_(Ceuta).jpg",
+   "autor": "CarlosVdeHabsburgo",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Estanco Catedral.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_Catedral.jpg",
+   "autor": "Daniel Capilla",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Olocau - Estanco nº1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Olocau_-_Estanco_n%C2%BA1.jpg",
+   "autor": "Olocau.Digital",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Estanco e caixa de correos Monterroso.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_e_caixa_de_correos_Monterroso.jpg",
+   "autor": "Estevoaei",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Estanco.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco.jpg",
+   "autor": "https://www.flickr.com/photos/gonmi/",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Estanco las Parcelas.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_las_Parcelas.jpg",
+   "autor": "Uregapedia",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Estanco GIB 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_GIB_01.jpg",
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Estanco GIB 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_GIB_02.jpg",
+   "autor": "Eduardo Milla",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "O Estanco Fisteus Curtis.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:O_Estanco_Fisteus_Curtis.jpg",
+   "autor": "Nemigo",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Estanco de Tabaco.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Estanco_de_Tabaco.JPG",
+   "autor": "Mexch",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Banyuls-dels-aspres tobacco shop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Banyuls-dels-aspres_tobacco_shop.jpg",
+   "autor": "Palauenc05",
+   "licencia": "CC BY-SA 4.0"
+  }
+ ]
+}

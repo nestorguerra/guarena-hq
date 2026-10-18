@@ -1,0 +1,149 @@
+// Pruebas de contrato: ejercitan los constructores reales; los kits alterados se restauran siempre.
+import * as H from '/src/houses.js';
+import { KITS, OBJETOS } from '/src/interiores_datos.js';
+import { filtroHogar, amueblar, buildLocal } from '/src/locales.js';
+import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
+import * as THREE from 'three';
+import { programaLuzDomestica, HouseBuilder } from '/src/housekit.js';
+import { construir, caja } from '/src/objetos.js';
+import { partes, penetra, espacioFrontal, mapaPaso } from '/src/interiores_geo.js';
+
+const exigir=(ok,m)=>{if(!ok)throw Error(m)};const tirar=h=>h.group.traverse(o=>{if(o.isMesh)o.geometry.dispose();});
+export async function probar(){const opts={tanda:20},pruebas=[];const caso=async(nombre,fn)=>{try{await fn();pruebas.push({nombre,estado:'PASS'});}catch(e){pruebas.push({nombre,estado:'FAIL',motivo:String(e.message||e)});}};
+  if(opts.tanda>=20)await caso('estudio: programa adulto completo, apoyos y usos en tres marcos reales',async()=>{
+    const B=await(await fetch('/data/quality_budgets.json')).json();
+    for(const seed of[3244,1594,1481]){
+      const h=H.buildVecino(seed);try{
+        const e=h.estancias.find(e=>e.kit==='vivienda_estudio'),C=e?.colocados||[];
+        const mesa=C.find(p=>p.obj==='vb_puesto_estudio_amplio'),bajo=C.find(p=>p.obj==='vb_guardado_estudio'),biblioteca=C.find(p=>p.obj==='vb_biblioteca_estudio');
+        exigir(mesa&&bajo&&biblioteca,seed+': falta programa adulto de trabajo/consulta');
+        const silla=C.find(p=>p.de===C.indexOf(mesa)&&OBJETOS[p.obj].rol==='silla');
+        exigir(silla,seed+': puesto sin asiento frontal ligado');
+        exigir(bajo.de===C.indexOf(mesa)&&biblioteca.de===C.indexOf(bajo),seed+': relación mesa/bajo/biblioteca perdida en la muestra');
+        const pantallas=C.filter(p=>p.obj==='vb_ordenador');
+        exigir(pantallas.length===1&&pantallas[0].sop===C.indexOf(mesa)&&OBJETOS.vb_ordenador.clase==='PICKUP',seed+': pantalla duplicada o sin apoyo/identidad independiente');
+        for(const p of C)if(p.sop!=null)exigir(OBJETOS[C[p.sop]?.obj]?.superficies?.[p.sup],seed+': superficie de apoyo ausente');
+        exigir(e.ancho===.8,seed+': rebaja paso doméstico');
+        const r=revisar({local:e,group:{traverse(){}}},B);exigir(!r.errores.length,seed+': '+r.errores.join('; '));
+        exigir(!revisarUso(h).errores.length,seed+': uso real inaccesible');
+        let mallas=0;h.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});exigir(mallas<=B.interior.mallas_max,seed+': presupuesto global excedido');
+        const sinBiblioteca={...e,colocados:C.filter(p=>p!==biblioteca)};
+        exigir(revisar({local:sinBiblioteca,group:{traverse(){}}},B).errores.some(s=>s.includes('obligatorio:')&&s.includes('vb_biblioteca_estudio')),seed+': acepta estudio sin biblioteca obligatoria');
+      }finally{tirar(h);}
+    }
+  });
+  if(opts.tanda>=20)await caso('estudio: caller real entrega mesa y pinta su pared con huecos',()=>{
+    const proto=HouseBuilder.prototype,add=proto.add,mat=proto.mat;
+    let planos=[],materiales=new Map();
+    proto.mat=function(...args){const key=mat.apply(this,args);if(key.startsWith('acabado_domestico_'))materiales.set(key,this.mats.get(key));return key;};
+    proto.add=function(key,geo,x,y,z,ry=0){
+      if(key.startsWith('acabado_domestico_')&&geo.type==='PlaneGeometry')planos.push({key,x:this.ox+x,y,z:this.oz+z,ry,w:geo.parameters.width,h:geo.parameters.height,ny:geo.attributes.normal.getY(0)});
+      return add.call(this,key,geo,x,y,z,ry);
+    };
+    try{for(const[seed,color]of[[3244,'#657b71'],[1594,'#637b86'],[1481,'#81735e']]){
+      planos=[];materiales=new Map();let h;
+      try{
+        h=H.buildVecino(seed,{x:-5200,z:-5200});
+        const e=h.estancias.find(e=>e.kit==='vivienda_estudio'),mesa=e?.colocados.find(p=>p.obj==='vb_puesto_estudio_amplio');exigir(mesa,seed+': falta mesa del caller');
+        const x0=e.origen.x-e.W/2,x1=e.origen.x+e.W/2,z0=e.origen.z,z1=z0+e.D,y=e.origen.y;
+        const dentro=p=>p.x>=x0-1e-6&&p.x<=x1+1e-6&&p.z>=z0-1e-6&&p.z<=z1+1e-6&&p.y>=y-1e-6&&p.y<=y+e.H+1e-6;
+        const paredes=planos.filter(p=>dentro(p)&&Math.abs(p.ny)<1e-6),acento='acabado_domestico_'+color,cal='acabado_domestico_#e9e3d4';
+        exigir(paredes.length>=4&&materiales.has(acento)&&materiales.has(cal),seed+': faltan paredes reales de estudio');
+        let area=0;const opuestas=new Set();
+        for(const p of paredes){
+          const uso=Math.sin(p.ry)*Math.sin(mesa.ry)+Math.cos(p.ry)*Math.cos(mesa.ry)>.999;
+          exigir(p.key===(uso?acento:cal),seed+': acento no sigue orientación de mesa real');
+          if(uso)area+=p.w*p.h;else opuestas.add(Math.round(Math.sin(p.ry))+','+Math.round(Math.cos(p.ry)));
+        }
+        exigir(area>.5&&opuestas.size>=3,seed+': falta paño de uso o tres paredes claras');
+        exigir(planos.some(p=>dentro(p)&&p.key===cal&&p.ny<-.99&&Math.abs(p.y-(y+e.H-.008))<1e-6),seed+': techo no pertenece a esta planta/estancia');
+      }finally{if(h)tirar(h);}
+    }}finally{proto.add=add;proto.mat=mat;}
+  });
+  if(opts.tanda>=20)await caso('estudio: fallback no vacio conserva programa y paso en marco pequeño fijo',async()=>{
+    const B=await(await fetch('/data/quality_budgets.json')).json(),K=KITS.vivienda_estudio,id='vivienda___estudio_individual_contrato';
+    const hogar={perfil:'estudiante',estilo:'joven',botin:H.PROFILES.estudiante.loot,habitacion:'estudio'},ctx={W:3.2,D:2.8,H:2.75,libres:[{cx:-.75,cz:.5,hw:.58,hd:.5,a:0,y0:0,y1:2.4}],inicio:{x:-.75,z:.5}};
+    let h;
+    try{
+      h=buildLocal('vivienda_estudio',4,{x:-5200,z:-5200},'Contrato de estudio',hogar,ctx);
+      const e=h.local,C=e.colocados;
+      exigir(e.W===3.2&&e.D===2.8&&e.H===2.75&&e.puertaX===-.75&&e.ancho===.8,'se altera marco/puerta/paso del caso4');
+      for(const id of['vb_puesto_estudio_amplio','vb_guardado_estudio','vb_biblioteca_estudio','vb_ordenador'])exigir(C.some(p=>p.obj===id),'falta '+id+' en fallback pequeño');
+      exigir(C.some(p=>p.obj==='vb_biblioteca_estudio'&&p.regla==='contra_pared'),'no ejercita recuperación de biblioteca en otra pared');
+      exigir(!revisar(h,B).errores.length,'programa individual inválido: '+revisar(h,B).errores.join('; '));
+      exigir(e.seed===4&&!e.generacion?.agotado,'se pierde solicitada4 o agota programa pequeño');
+      const seed=e.generacion?.semillaEfectiva??e.seed,con={...ctx,filtro:filtroHogar(hogar)};
+      const A=amueblar('vivienda_estudio',seed,con);
+      const biblioteca=A.P.find(p=>p.obj==='vb_biblioteca_estudio'),frente=espacioFrontal(biblioteca,caja(biblioteca.obj),[.75,.8]);
+      const M=mapaPaso({W:A.W,D:A.D,zonas:A.zonas,tabiques:A.tabiques},A.P.flatMap(partes),.05,.8,ctx.inicio);
+      const celda=(x,z)=>Math.floor(z/M.S)*M.nx+Math.floor((x+A.W/2)/M.S),entrada=celda(ctx.inicio.x,ctx.inicio.z),uso=celda(frente.cx,frente.cz);
+      exigir(M.free[entrada]===1&&M.reach[entrada]===1&&M.free[uso]===1&&M.reach[uso]===1,'entrada o frente de biblioteca sin paso real .80');
+      KITS[id]={...K,objetos:K.objetos.map(({grupo_pared,...e})=>e)};
+      const I=amueblar(id,seed,con);
+      exigir(A.P.length>4&&JSON.stringify(A.P)===JSON.stringify(I.P)&&JSON.stringify(A.activas)===JSON.stringify(I.activas),'rechazo de grupo cambia receta individual o la vacía');
+      exigir(A.U([0,1])===I.U([0,1])&&A.U([0,1])===I.U([0,1]),'rechazo de grupo consume RNG compartido');
+    }finally{delete KITS[id];if(h)tirar(h);}
+  });
+  if(opts.tanda>=20)await caso('estudio: tela real libre del puesto y ordenador, con negativo de paño largo',()=>{
+    const proto=HouseBuilder.prototype,add=proto.add;
+    let telas=[];
+    // add transforma la geometría recibida: copiar ANTES conserva el paño real.
+    proto.add=function(key,g,x,y,z,ry=0){
+      if(key==='curtain'){
+        const copia=g.clone();telas.push(copia);
+        copia.rotateY(ry).translate(this.ox+x,y,this.oz+z);
+      }
+      return add.call(this,key,g,x,y,z,ry);
+    };
+    try{for(const seed of[3244,1594,1481]){
+      telas=[];let h;
+      try{
+        h=H.buildVecino(seed,{x:-5200,z:-5200});
+        const salas=h.estancias.filter(e=>e.kit==='vivienda_estudio');exigir(salas.length===1,seed+': falta estudio dirigido');
+        const e=salas[0],C=e.colocados,mesas=C.filter(p=>OBJETOS[p.obj]?.rol==='mesa'),ordenadores=C.filter(p=>p.obj==='vb_ordenador');
+        exigir(mesas.length===1&&ordenadores.length===1,seed+': falta puesto u ordenador real');
+        const mesa=mesas[0];exigir(ordenadores[0].sop===C.indexOf(mesa),seed+': ordenador no apoyado en el puesto');
+        const paneles=C.filter(p=>/^vb_panel_estudio_/.test(p.obj));
+        const objetivos=[mesa,ordenadores[0],...paneles];
+        const marco=new THREE.Box3(new THREE.Vector3(e.origen.x-e.W/2,e.origen.y,e.origen.z),new THREE.Vector3(e.origen.x+e.W/2,e.origen.y+e.H,e.origen.z+e.D));
+        const locales=telas.filter(g=>{g.computeBoundingBox();return g.boundingBox.intersectsBox(marco);});
+        // rooms no expone open: views conserva los huecos exteriores físicos del
+        // constructor. La cota inferior excluye puertas; no inferir ventana de tela.
+        const room=h.rooms.find(r=>r.id===e.sala);exigir(room,seed+': falta marco arquitectónico del estudio');
+        const ventanas=h.views.filter(v=>{
+          const c=v.box.getCenter(new THREE.Vector3());
+          return v.box.min.y>e.origen.y+.4&&v.box.max.y<e.origen.y+e.H+.01&&c.x>=room.x0-.08&&c.x<=room.x1+.08&&c.z>=room.z0-.08&&c.z<=room.z1+.08;
+        });
+        if(!ventanas.length){exigir(!locales.length,seed+': tela local sin ventana real');continue;}
+        exigir(locales.length>=2*ventanas.length,seed+': faltan paños reales de ventanas del estudio');
+        const paños=locales.map(g=>{
+          const pos=g.attributes.position,idx=g.index?.array,n=idx?idx.length:pos.count,tri=[];
+          exigir(n>=3&&n%3===0,seed+': tela sin triángulos');
+          for(let i=0;i<n;i+=3)tri.push([0,1,2].map(k=>new THREE.Vector3().fromBufferAttribute(pos,idx?idx[i+k]:i+k)));
+          return {tri,min:g.boundingBox.min.y,max:g.boundingBox.max.y};
+        });
+        const intersecciones=paños=>{
+          const hits=[];
+          for(const item of objetivos)for(const[k,b]of partes(item).entries()){
+            const cs=Math.cos(b.a),sn=Math.sin(b.a),box=new THREE.Box3(new THREE.Vector3(-b.hw+.001,b.y0+.001,-b.hd+.001),new THREE.Vector3(b.hw-.001,b.y1-.001,b.hd-.001));
+            if(box.isEmpty())continue;
+            for(const paño of paños)for(const t of paño.tri){
+              const local=t.map(v=>{const x=v.x-e.origen.x-b.cx,z=v.z-e.origen.z-b.cz;return new THREE.Vector3(x*cs-z*sn,v.y-e.origen.y,x*sn+z*cs);});
+              if(box.intersectsTriangle(new THREE.Triangle(...local))){hits.push(item.obj+' parte '+k);break;}
+            }
+          }
+          return hits;
+        };
+        const hits=intersecciones(paños);exigir(!hits.length,seed+': tela atraviesa '+hits.join(', '));
+        const cortos=paños.filter(p=>Math.abs(p.max-p.min-.945)<1e-5&&Math.abs(p.max-e.origen.y-2.225)<1e-5&&Math.abs(p.min-e.origen.y-1.28)<1e-5);
+        exigir(cortos.length>=2,seed+': faltan paños cortos reales con top conservado');
+        if(seed===3244){
+          // Sólo un doble de los triángulos capturados: recuperar altura antigua,
+          // conservando top y todos los x/z. No tocar geometría ni muebles vivos.
+          const largos=cortos.map(p=>({...p,tri:p.tri.map(t=>t.map(v=>new THREE.Vector3(v.x,p.max+(v.y-p.max)*2.05/(p.max-p.min),v.z)))}));
+          exigir(intersecciones(largos).length>0,'3244: negativo de paño largo dejó de reproducir el defecto real');
+        }
+      }finally{try{if(h)tirar(h);}finally{for(const g of telas)g.dispose();telas=[];}}
+    }}finally{proto.add=add;for(const g of telas)g.dispose();}
+  });
+return pruebas;}

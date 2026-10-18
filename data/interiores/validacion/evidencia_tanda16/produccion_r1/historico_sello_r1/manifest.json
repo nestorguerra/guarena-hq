@@ -1,0 +1,73 @@
+{
+  "state": "PRIVATE_CANDIDATE_SEALED_CPU_PASS_REVIEW_PENDING",
+  "base_head": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+  "current_head": "e9022e45a48f10eaea24be9be39e75a47aea49b5",
+  "base_sources": {
+    "src/locales.js": "292727250d35dfae48ac125a8b767154135054b469f6f207772b984b26c7f516",
+    "src/houses.js": "20336003f922f667b29e2b7eb349fe720bd2d9dcb3aa6e5bdfe23043a3491706",
+    "tools/interiores/validar.js": "592dd322dc184ab6beb1e06981ff1fea978f1738925e61a7927b00e1f74af348",
+    "tools/interiores/datos.py": "6f5b0637fed4948715afb8b17e786dd2979800ca1c208d1da475b68dc77a37a6",
+    "data/kits/kit.schema.json": "4e23942f376a2fff838e16bb055dd65b9ef6105c66b614c967b8843dde31400c",
+    "tools/interiores/frente_cocina.py": null,
+    "tools/interiores/catalogo_vivienda_a.py": "cfed6ea37b35fc1aeef355b42a31219279b2da2f27254dec428c93b00c236690",
+    "tools/interiores/kits_vivienda_a.py": "ee47f465ab79dae2fe3854cd24afae17dc4275b3a07d5ce508ee885c8127cb93",
+    "tools/interiores/casas_pruebas.js": "38a4588abd651fffb47dfa1408ca85a75448c585edd23c36ab57aaddcea38f96",
+    "tools/interiores/fotos_casa.py": "6881d0b2f2d528552a0480ccc43188c8a4071ea73364418df387f077ebb69cae"
+  },
+  "candidate_sources": {
+    "src/locales.js": "ea8533a5e78f841f538b2c23e9b512d500aa5ec3ebb2f4d3f9009cf470d6adeb",
+    "src/houses.js": "0cc7187789132bfb111315e024fb049538310aa7b9cf9beb4e64888fb81c0ebe",
+    "tools/interiores/validar.js": "000817a9410cd9ef7f6be04de275440d8c116997a0f593afc8574432f756b162",
+    "tools/interiores/datos.py": "3334228a3a123c26f5c9391bb6d49ed8c553c46245759eaa87b9c88a4c3888c4",
+    "data/kits/kit.schema.json": "34b83cc9c176412ad8fe496413c24ef0e3795226901748a82d0ad94250d1e8a7",
+    "tools/interiores/frente_cocina.py": "424e7fb2a450f4ea9e9c486beb8ebb1f05233e3351c683c309d003ea70ec7ae1",
+    "tools/interiores/catalogo_vivienda_a.py": "f2e1b39faa33d36415c42c8bc0787d8d1f366bb42d7659642ad9dd843c15d035",
+    "tools/interiores/kits_vivienda_a.py": "0a5f0803addf01d2e5cdfe98ca8020a4b74ddf0eec34188321b0e2ae9710f7e5",
+    "tools/interiores/casas_pruebas.js": "3216b22af7b55f9b8afb0a0a085bc64e22bde695d9a3e54e2f66a3b81427fcbc",
+    "tools/interiores/fotos_casa.py": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0"
+  },
+  "generated_private_from_current_source": {
+    "data/objetos/vivienda_a.json": "b01ebb89e7be0c1a732d5851174c121a15f2f56a47f28a98dfb529b3628ad909",
+    "data/kits/vivienda_cocina.json": "fe4d8c3730b207bb8a057183ed492b5c651709f8cabd454cbecf8edf3faf5a7f",
+    "src/interiores_datos.js": "f9225cd52d687a2d766f51f6dc5dcaef7c4089077ef993c1037d8a8d02fad9e2"
+  },
+  "patches": {
+    "contratos.patch": "96d94d7f1178dc2929fde91150069d6de4b526467c822a074c21fb7f3083cab8",
+    "capturador.patch": "df5e101adf0db26fffcf0fb6c26bc0ee90455cc7efa1e13391a1c195cd113810",
+    "modelos_receta.patch": "ece1a5f92da6b04c919b314b23e1b28c8b27b1f681ea5a42cdc944f1c18d68d1",
+    "motor.patch": "0dae1249bd1018d8aaf3ae9de59ab75067daed43d6f321e79cef5ea8745096ec"
+  },
+  "active_source_bytes_unchanged": {
+    "src/locales.js": true,
+    "src/houses.js": true,
+    "tools/interiores/validar.js": true,
+    "tools/interiores/datos.py": true,
+    "data/kits/kit.schema.json": true,
+    "tools/interiores/catalogo_vivienda_a.py": true,
+    "tools/interiores/kits_vivienda_a.py": true,
+    "tools/interiores/casas_pruebas.js": true,
+    "tools/interiores/fotos_casa.py": true
+  },
+  "changed_snapshot_files": [
+    "data/kits/kit.schema.json",
+    "data/kits/vivienda_cocina.json",
+    "data/objetos/vivienda_a.json",
+    "src/houses.js",
+    "src/locales.js",
+    "tools/interiores/catalogo_vivienda_a.py",
+    "tools/interiores/datos.py",
+    "tools/interiores/fotos_casa.py",
+    "tools/interiores/kits_vivienda_a.py",
+    "tools/interiores/validar.js",
+    "tools/interiores/casas_pruebas.js"
+  ],
+  "new_source": [
+    "tools/interiores/frente_cocina.py"
+  ],
+  "notes": [
+    "No GPU/browser/build/commit/push/API; datos.py is raw data validation/private JS data generation, not game build",
+    "Entradas efectivas serialized only for accepted composition; global contracts and household/area/fase remain floor",
+    "Three new tanda19 callbacks + prior surface-threshold callback executed literally CPU, not all66 browser callbacks",
+    "Six baseline camera poses compared using complete literal CPU camera search with real geometry/rays/collider; no image render"
+  ]
+}

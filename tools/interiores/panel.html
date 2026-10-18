@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interiores de Guareña</title>
+<!-- The state of every interior (technical backlog, I-06): the inventory (I-01), each kit's validation (I-04), its card
+     and moodboard, and the reviewers' marks (I-05). Served by the development server:
+     http://localhost:8920/tools/interiores/panel.html -->
+<style>
+  :root {
+    --bg: #f5f1ea; --card: #fffdf9; --ink: #2a2622; --mute: #7a7168; --line: #e3dcd1; --accent: #a8572c;
+    --ok: #2f7d4a; --ok-bg: #e2f1e6; --warn: #9a6a12; --warn-bg: #f7ecd2; --bad: #a23b2a; --bad-bg: #f6dfd9;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1d1a17; --card: #26221e; --ink: #ece5dc; --mute: #a59b90; --line: #3a342e; --accent: #e08a55;
+      --ok: #7fcf98; --ok-bg: #213529; --warn: #e6bd6a; --warn-bg: #3a3020; --bad: #f09682; --bad-bg: #3d2520; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 "Iowan Old Style", Georgia, serif; padding: 0 16px 48px; }
+  header { max-width: 1180px; margin: 0 auto; padding-block: 28px 12px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; text-wrap: balance; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mute); margin: 32px 0 12px; font-family: -apple-system, system-ui, sans-serif; }
+  .sub { color: var(--mute); margin: 0; }
+  main { max-width: 1180px; margin: 0 auto; }
+  .cifras { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 18px; font-family: -apple-system, system-ui, sans-serif; }
+  .cifras div { display: flex; flex-direction: column; }
+  .cifras b { font-size: 26px; font-variant-numeric: tabular-nums; font-family: "Iowan Old Style", Georgia, serif; }
+  .cifras span { font-size: 12px; color: var(--mute); text-transform: uppercase; letter-spacing: 0.06em; }
+  .kits { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .kit { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  .fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
+  .fotos img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--bg); }
+  .fotos .sin { aspect-ratio: 16 / 9; display: grid; place-items: center; color: var(--mute); font-size: 12px; background: var(--bg); grid-column: span 2; }
+  .cuerpo { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; font-family: -apple-system, system-ui, sans-serif; font-size: 13px; }
+  .cuerpo h3 { margin: 0; font: 600 17px/1.3 "Iowan Old Style", Georgia, serif; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .cuerpo h3 small { font: 12px -apple-system, system-ui, sans-serif; color: var(--mute); }
+  .fila { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { padding: 2px 8px; border-radius: 99px; font-size: 12px; background: var(--bg); color: var(--mute); white-space: nowrap; }
+  .chip.ok { background: var(--ok-bg); color: var(--ok); } .chip.warn { background: var(--warn-bg); color: var(--warn); } .chip.bad { background: var(--bad-bg); color: var(--bad); }
+  .mood a { color: var(--accent); text-decoration: none; } .mood a:hover { text-decoration: underline; }
+  .mood { color: var(--mute); font-size: 12px; overflow-wrap: anywhere; }
+  .errs { margin: 0; padding-left: 16px; color: var(--bad); font-size: 12px; }
+  .filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; font-family: -apple-system, system-ui, sans-serif; }
+  select, input { font: inherit; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .tabla { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font: 13px -apple-system, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-weight: 600; color: var(--mute); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; position: sticky; top: 0; background: var(--card); }
+  td.num { text-align: right; }
+  .nota { color: var(--mute); font-size: 12px; font-family: -apple-system, system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Interiores de Guareña</h1>
+  <p class="sub">Cada puerta del pueblo y lo que hay detrás: inventario, kits, validador, fichas y revisión (épica I del backlog técnico).</p>
+  <div class="cifras" id="cifras"></div>
+</header>
+<main>
+  <h2>Kits</h2>
+  <div class="kits" id="kits"></div>
+  <h2>Inventario</h2>
+  <div class="filtros">
+    <select id="fTip"><option value="">Todas las tipologías</option></select>
+    <select id="fEst"><option value="">Todos los estados</option><option>completo</option><option>basico</option><option>vacio</option></select>
+    <input id="fTxt" placeholder="Buscar…" size="16">
+  </div>
+  <div class="tabla"><table><thead><tr><th>Interior</th><th>Tipología</th><th>Nombre</th><th>Estado</th><th>Accesible</th><th>m²</th><th>Kit</th><th>OSM</th></tr></thead><tbody id="inv"></tbody></table></div>
+  <p class="nota" id="pie"></p>
+</main>
+<script type="module">
+const j = async (u) => { try { const r = await fetch(u, { cache: 'no-store' }); return r.ok ? await r.json() : null; } catch (e) { return null; } };
+const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const [inv, datos, rev] = await Promise.all([j('/data/interiors_inventory.json'), j('/data/interiores/datos.json'), j('/data/interiors_review.json')]);
+const kits = Object.entries((datos && datos.kits) || {});
+// ---- the figures
+const R = inv ? inv.resumen : null;
+document.getElementById('cifras').innerHTML = R ? [
+  [R.interiores, 'interiores'], [R.puertas, 'puertas'], [R.por_estado.completo || 0, 'completos'], [R.por_estado.basico || 0, 'básicos'], [R.por_estado.vacio || 0, 'vacíos'], [kits.length, 'kits'],
+].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('') : '<div><span>Sin inventario: python3 tools/interiores/inventario.py</span></div>';
+// ---- the kits: card, validation, moodboard, review
+const box = document.getElementById('kits');
+for (const [id, k] of kits) {
+  const [K, V] = await Promise.all([j(`/data/kits/${id}.json`), j(`/data/interiores/validacion/${id}.json`)]);
+  const fotos = await Promise.all([0, 1, 2, 3].map(async (i) => { const u = `/data/interiores/fichas/${id}_${i}.jpg`; try { const r = await fetch(u, { method: 'HEAD' }); return r.ok ? u : null; } catch (e) { return null; } }));
+  const res = V ? V.resultados : [];
+  const errs = res.flatMap((r) => r.errores.map((e) => `s${r.seed}: ${e}`));
+  const vchip = !V ? '<span class="chip warn">sin validar</span>' : errs.length ? `<span class="chip bad">${errs.length} errores</span>` : `<span class="chip ok">validador en verde · ${res.length} semillas</span>`;
+  const objs = res.map((r) => r.objetos), tris = Math.max(0, ...res.map((r) => r.triangulos || 0));
+  const revs = ((rev && rev.revisiones) || []).filter((r) => r.kit === id);
+  const media = (r) => Object.values(r.puntos).reduce((a, b) => a + b, 0) / Object.values(r.puntos).length;
+  const okRev = revs.length >= ((rev && rev.umbral.revisores) || 2) && revs.every((r) => media(r) >= rev.umbral.media && Math.min(...Object.values(r.puntos)) >= rev.umbral.minimo);
+  const rchip = !revs.length ? '<span class="chip warn">revisión pendiente</span>' : `<span class="chip ${okRev ? 'ok' : 'warn'}">${revs.length} revisión${revs.length > 1 ? 'es' : ''} · media ${(revs.reduce((a, r) => a + media(r), 0) / revs.length).toFixed(1)}</span>`;
+  const mood = (K && K.moodboard || []).slice(0, 3).map((m) => `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo.replace(/\.(jpe?g|png)$/i, ''))}</a> <span>(${esc(m.autor)}, ${esc(m.licencia)})</span>`).join('<br>');
+  const card = document.createElement('article');
+  card.className = 'kit';
+  card.innerHTML = `<div class="fotos">${fotos.some(Boolean) ? fotos.map((u) => (u ? `<img src="${u}" alt="" loading="lazy">` : '<img alt="">')).join('') : '<div class="sin">Sin ficha: python3 tools/interiores/ficha.py ' + esc(id) + '</div>'}</div>
+    <div class="cuerpo"><h3>${esc(K ? K.nombre || id : id)} <small>${esc(k.tipologia)}</small></h3>
+    <div class="fila">${vchip}${rchip}<span class="chip">${k.objetos_distintos} objetos distintos</span>${objs.length ? `<span class="chip">${Math.min(...objs)}–${Math.max(...objs)} por local</span>` : ''}${tris ? `<span class="chip">${Math.round(tris / 1000)} mil triángulos</span>` : ''}<span class="chip">moodboard ${k.moodboard}</span></div>
+    ${errs.length ? `<ul class="errs">${errs.slice(0, 6).map((e) => `<li>${esc(e)}</li>`).join('')}</ul>` : ''}
+    <div class="mood">${mood}</div></div>`;
+  box.appendChild(card);
+}
+// ---- the inventory
+const rows = (inv && inv.interiors) || [];
+const fTip = document.getElementById('fTip');
+for (const t of [...new Set(rows.map((r) => r.tipologia))].sort()) fTip.insertAdjacentHTML('beforeend', `<option>${esc(t)}</option>`);
+const pinta = () => {
+  const t = fTip.value, e = document.getElementById('fEst').value, q = document.getElementById('fTxt').value.toLowerCase();
+  const vis = rows.filter((r) => (!t || r.tipologia === t) && (!e || r.estado === e) && (!q || JSON.stringify(r).toLowerCase().includes(q)));
+  document.getElementById('inv').innerHTML = vis.map((r) => `<tr><td>${esc(r.interior_id)}</td><td>${esc(r.tipologia)}</td><td>${esc(r.nombre || '—')}</td><td><span class="chip ${r.estado === 'completo' ? 'ok' : r.estado === 'basico' ? 'warn' : 'bad'}">${esc(r.estado)}</span></td><td>${r.accesible ? 'sí' : 'no'}</td><td class="num">${r.superficie_m2 ?? '—'}</td><td>${esc(r.kit || '—')}</td><td>${esc(r.osm || '—')}</td></tr>`).join('');
+  document.getElementById('pie').textContent = `${vis.length} de ${rows.length} interiores${inv && inv.errores.length ? ` · ${inv.errores.length} errores del inventario` : ' · inventario sin errores'}.`;
+};
+for (const id of ['fTip', 'fEst', 'fTxt']) document.getElementById(id).addEventListener('input', pinta);
+pinta();
+</script>
+</body>
+</html>

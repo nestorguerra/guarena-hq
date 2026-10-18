@@ -1,0 +1,255 @@
+{
+ "conclusion": "success",
+ "databaseId": 39082348306,
+ "headSha": "1884bfd462612df7cf2fc802ebdd083628ce1c72",
+ "jobs": [
+  {
+   "completedAt": "2026-10-18T00:20:05Z",
+   "conclusion": "success",
+   "databaseId": 117541734607,
+   "name": "validate_signs",
+   "startedAt": "2026-10-18T00:19:41Z",
+   "status": "completed",
+   "steps": [
+    {
+     "completedAt": "2026-10-18T00:19:43Z",
+     "conclusion": "success",
+     "name": "Set up job",
+     "number": 1,
+     "startedAt": "2026-10-18T00:19:42Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:48Z",
+     "conclusion": "success",
+     "name": "Run actions/checkout@v7",
+     "number": 2,
+     "startedAt": "2026-10-18T00:19:43Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:48Z",
+     "conclusion": "success",
+     "name": "Run actions/setup-python@v7",
+     "number": 3,
+     "startedAt": "2026-10-18T00:19:48Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:51Z",
+     "conclusion": "success",
+     "name": "Run actions/setup-node@v4",
+     "number": 4,
+     "startedAt": "2026-10-18T00:19:48Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:51Z",
+     "conclusion": "success",
+     "name": "Adaptación de calidad y límites del navegador",
+     "number": 5,
+     "startedAt": "2026-10-18T00:19:51Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:51Z",
+     "conclusion": "success",
+     "name": "Luz doméstica y restauración de las vistas",
+     "number": 6,
+     "startedAt": "2026-10-18T00:19:51Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:54Z",
+     "conclusion": "success",
+     "name": "Empaquetar el juego",
+     "number": 7,
+     "startedAt": "2026-10-18T00:19:51Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:55Z",
+     "conclusion": "success",
+     "name": "Recursos de suelo e iglesia en Pages, portable y multijugador",
+     "number": 8,
+     "startedAt": "2026-10-18T00:19:54Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Marcas y marcadores en la copia publicable (R-07, V-02)",
+     "number": 9,
+     "startedAt": "2026-10-18T00:19:55Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Entidades y emparejamiento (R-02, R-04)",
+     "number": 10,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Informe",
+     "number": 11,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Post Run actions/setup-node@v4",
+     "number": 20,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Post Run actions/setup-python@v7",
+     "number": 21,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Post Run actions/checkout@v7",
+     "number": 22,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:02Z",
+     "conclusion": "success",
+     "name": "Complete job",
+     "number": 23,
+     "startedAt": "2026-10-18T00:20:02Z",
+     "status": "completed"
+    }
+   ],
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082348306/job/117541734607"
+  },
+  {
+   "completedAt": "2026-10-18T00:23:27Z",
+   "conclusion": "success",
+   "databaseId": 117541734737,
+   "name": "validate_interiors",
+   "startedAt": "2026-10-18T00:19:41Z",
+   "status": "completed",
+   "steps": [
+    {
+     "completedAt": "2026-10-18T00:19:43Z",
+     "conclusion": "success",
+     "name": "Set up job",
+     "number": 1,
+     "startedAt": "2026-10-18T00:19:42Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:48Z",
+     "conclusion": "success",
+     "name": "Run actions/checkout@v7",
+     "number": 2,
+     "startedAt": "2026-10-18T00:19:43Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:48Z",
+     "conclusion": "success",
+     "name": "Run actions/setup-python@v7",
+     "number": 3,
+     "startedAt": "2026-10-18T00:19:48Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:49Z",
+     "conclusion": "success",
+     "name": "Objetos y kits (I-02, X-01, X-02)",
+     "number": 4,
+     "startedAt": "2026-10-18T00:19:48Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:19:49Z",
+     "conclusion": "success",
+     "name": "Los datos del juego, al día con los objetos y los kits",
+     "number": 5,
+     "startedAt": "2026-10-18T00:19:49Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:01Z",
+     "conclusion": "success",
+     "name": "Servidor de desarrollo y Chrome sin ventana (siempre sin sonido)",
+     "number": 6,
+     "startedAt": "2026-10-18T00:19:49Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:20:39Z",
+     "conclusion": "success",
+     "name": "Interiores, cinco semillas por kit (I-03, I-04, V-03)",
+     "number": 7,
+     "startedAt": "2026-10-18T00:20:01Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:21:15Z",
+     "conclusion": "success",
+     "name": "Contratos funcionales de las viviendas",
+     "number": 8,
+     "startedAt": "2026-10-18T00:20:39Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:21:19Z",
+     "conclusion": "success",
+     "name": "Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)",
+     "number": 9,
+     "startedAt": "2026-10-18T00:21:15Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:23:24Z",
+     "conclusion": "success",
+     "name": "Recoger objetos próximos y conservar su recompensa al recargar",
+     "number": 10,
+     "startedAt": "2026-10-18T00:21:19Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:23:24Z",
+     "conclusion": "success",
+     "name": "Post Run actions/setup-python@v7",
+     "number": 19,
+     "startedAt": "2026-10-18T00:23:24Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:23:24Z",
+     "conclusion": "success",
+     "name": "Post Run actions/checkout@v7",
+     "number": 20,
+     "startedAt": "2026-10-18T00:23:24Z",
+     "status": "completed"
+    },
+    {
+     "completedAt": "2026-10-18T00:23:25Z",
+     "conclusion": "success",
+     "name": "Complete job",
+     "number": 21,
+     "startedAt": "2026-10-18T00:23:24Z",
+     "status": "completed"
+    }
+   ],
+   "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082348306/job/117541734737"
+  }
+ ],
+ "status": "completed",
+ "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39082348306"
+}

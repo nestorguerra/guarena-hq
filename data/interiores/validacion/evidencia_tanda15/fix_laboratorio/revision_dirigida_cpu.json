@@ -1,0 +1,85 @@
+{
+  "state": "PASS",
+  "scope": "CPU actual buildLocal/amueblar/revisar; Canvas stub, no GPU; one target + 12 exhausted synthetic attempts",
+  "patchSHA": "36741ece79bdbbfb4d2d26855a53e233e9e62b3267929eb56a37682e4ffcec42",
+  "rows": [
+    {
+      "test": "poses and next RNG unchanged",
+      "seed": 1,
+      "fallback": null
+    },
+    {
+      "test": "poses and next RNG unchanged",
+      "seed": 51,
+      "fallback": [
+        {
+          "entrada": 7,
+          "probados": 4496,
+          "colocados": 0,
+          "limite": 16000
+        }
+      ]
+    },
+    {
+      "test": "literal 51 final",
+      "hash": "7418dcdd",
+      "generacion": {
+        "semillaSolicitada": 51,
+        "semillaEfectiva": 104780,
+        "intento": 1,
+        "maximo": 12,
+        "agotado": false,
+        "marco": {
+          "W": 3.5,
+          "D": 2.1,
+          "H": 2.75,
+          "puertaX": -0.75
+        },
+        "intentos": [
+          {
+            "seed": 51,
+            "faltan": [
+              7
+            ],
+            "busquedasSuelo": [
+              {
+                "entrada": 7,
+                "probados": 4496,
+                "colocados": 0,
+                "limite": 16000
+              }
+            ]
+          },
+          {
+            "seed": 104780,
+            "faltan": [],
+            "busquedasSuelo": [
+              {
+                "entrada": 7,
+                "probados": 468,
+                "colocados": 1,
+                "limite": 16000
+              }
+            ]
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "test": "exhausted preserves FAIL",
+      "attempts": 12,
+      "seed": 1152070,
+      "errors": [
+        "obligatorio: estancia/vb_cama_ninos — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_mesita — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_mesa_ninos — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_biblioteca_ninos — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_armario_ninos — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_alfombra_juego_compacta — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_osito — 0 colocados, el kit pide 1",
+        "obligatorio: estancia/vb_bloques — 0 colocados, el kit pide 1"
+      ]
+    }
+  ]
+}

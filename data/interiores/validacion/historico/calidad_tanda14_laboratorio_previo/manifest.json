@@ -1,0 +1,26 @@
+{
+ "estado": "FAIL conservado",
+ "motivo": "29/81 semillas del laboratorio comedor, luz genérica diferente del programa doméstico. Umbral sin cambios.",
+ "archivos": [
+  {
+   "fuente": "data/interiores/validacion/vivienda_comedor.json",
+   "copia": "data/interiores/validacion/historico/calidad_tanda14_laboratorio_previo/vivienda_comedor.json",
+   "sha256": "29290b690c1ee97c571e6e5caa35906873ccf5ab186b8be46487e2c84b545ade"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/kits81.log",
+   "copia": "data/interiores/validacion/historico/calidad_tanda14_laboratorio_previo/kits81.log",
+   "sha256": "ad1a9a222c3a3f490e2d14a64bca1949d84475b1455c41a1dda22e95a057bf99"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/validacion_ejecuciones.json",
+   "copia": "data/interiores/validacion/historico/calidad_tanda14_laboratorio_previo/validacion_ejecuciones.json",
+   "sha256": "0f646b8bd7fae50e3b166ea3d2a8b5d25cb55b8d99ff65050fbb63814c4d938d"
+  },
+  {
+   "fuente": ".cache/calidad/tanda14/estado_candidato.json",
+   "copia": "data/interiores/validacion/historico/calidad_tanda14_laboratorio_previo/estado_candidato.json",
+   "sha256": "ab08ba69ae9dd7eb92fc09e6d3185c226f356982a7a5b964d224881422dc0865"
+  }
+ ]
+}

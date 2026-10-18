@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_0255e5ed50d44d19a8a269b7f6b9c060",
+ "request_sha256": "075a1a6b5a934c272eebadecd1655eb1252e0cc61d93180374dd9305fee6d4dc",
+ "fecha": "2026-10-17T14:10:52.900815+00:00",
+ "kit": "dormitorio",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_dorm.jpg",
+ "ficha_sha256": "537a6f97fbcc8535b4d9307e2d939fc254e7c0c801b0d3da0cbe188cc2bbda2c",
+ "referencias": [
+  {
+   "titulo": "Bedroom, Interior of apartment in Brisbane, 2025, 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_01.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_01.jpg/960px-Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Bedroom, Interior of apartment in Brisbane, 2025, 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_02.jpg",
+   "autor": "Chris Olszewski",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_02.jpg/960px-Bedroom%2C_Interior_of_apartment_in_Brisbane%2C_2025%2C_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.8,
+  "coherencia": 2.91,
+  "iluminacion": 3.19,
+  "variedad": 3.04,
+  "lectura_funcional": 1.99
+ },
+ "media": 2.786,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.8,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.23
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.71
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.05
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.75
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.91,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.64
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.11
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.68
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.19,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.72
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.22
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.76
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 2.04,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.02
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.19
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.55
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.21
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.03
+    }
+   ],
+   "confidence": 0.58
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 0.99,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.37
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.35
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.22
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.04
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.17
+  }
+ ],
+ "uso": {
+  "input_tokens": 4280,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4280
+ }
+}

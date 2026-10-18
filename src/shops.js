@@ -12,8 +12,14 @@ import { WEAPONS } from './weapons.js';
 import { randomDesc } from './characters.js';
 import { mulberry32, fmtMoney } from './util.js';
 import { PERK } from './perks.js';
+import { MENU } from './terrace.js';
+import { buildLocal } from './locales.js';
+import { KITS } from './interiores_datos.js';
+import { GENERICOS_TIPO } from './rotulos_datos.js';
 
 const pick = (a, r = Math.random) => a[Math.floor(r() * a.length)];
+// a price as it is written here: 2 €, 1,30 €
+const eur = (v) => (Number.isInteger(v) ? `${v} €` : `${v.toFixed(2).replace('.', ',')} €`);
 
 // hours: [[open, close], …] in the day's hours
 const SHOP_H = [[9.5, 14], [17, 20.5]];
@@ -47,7 +53,37 @@ export const SHOP_TYPES = {
     stock: ['kebab', 'durum', 'falafel', 'patatas', 'refresco', 'agua'] },
   gimnasio: { kinds: [], name: 'el gimnasio', title: 'Gimnasio', hours: [[7, 22.5]], floor: 'concrete_floor_damaged_01', wall: 0xe9eef0,
     stock: ['isotonica', 'agua'] },
+  // (the ones furnished from a kit, data/kits: src/locales.js; at the counter, what they serve — taken there and then —
+  // and what they sell to take away)
+  cafeteria: { kinds: ['amenity:cafe'], kit: 'cafeteria', name: 'la cafetería', title: 'Cafetería', hours: [[7, 23]], floor: 'floor_tiles_06', wall: 0xefe6d2,
+    carta: ['cafe', 'churros', 'refresco', 'cana', 'torta'], stock: ['magdalenas', 'bocadillo', 'agua', 'zumo'] },
+  bar: { kinds: ['amenity:bar', 'amenity:pub', 'amenity:casino'], kit: 'bar', name: 'el bar', title: 'Bar', hours: [[8, 24]], floor: 'floor_tiles_06', wall: 0xe8dcc4,
+    carta: ['cana', 'tinto', 'pitarra', 'cafe', 'refresco', 'migas', 'torta'], stock: ['bocadillo', 'agua', 'patatas'] },
+  // (only from their kit: until it is there, the business has no door)
+  ropa: { kinds: ['shop:clothes', 'shop:shoes', 'shop:boutique'], kit: 'ropa', soloKit: true, name: 'la tienda de ropa', title: 'Moda y Complementos', hours: SHOP_H,
+    stock: ['gafas', 'paraguas', 'perfume'] },
+  farmacia: { kinds: ['amenity:pharmacy'], kit: 'farmacia', soloKit: true, name: 'la farmacia', title: 'Farmacia', hours: [[9.5, 14], [17, 21]], blip: ['+', '#5ad07a'],
+    curas: [['Tiritas y agua oxigenada', 'Para los rasguños: +15 de salud.', 4, 15, '🩹'], ['Botiquín de primeros auxilios', 'Vendas, gasas y algo para el dolor: +50 de salud.', 14, 50, '🧰']],
+    stock: ['agua', 'perfume'] },
+  banco: { kinds: ['amenity:bank'], kit: 'banco', soloKit: true, name: 'el banco', title: 'Banco', hours: [[8.5, 14]], blip: ['€', '#e8c85a'], saldo: true, stock: [] },
+  oficina: { kinds: ['office:insurance', 'office:company', 'office:yes', 'amenity:driving_school', 'amenity:dentist', 'amenity:post_office', 'amenity:clinic'], kit: 'oficina', soloKit: true,
+    name: 'la oficina', title: 'Oficina', hours: [[9, 14], [16.5, 19]], stock: [] },
+  restaurante: { kinds: ['amenity:restaurant', 'amenity:fast_food'], kit: 'restaurante', soloKit: true, name: 'el restaurante', title: 'Casa de comidas', hours: [[13, 16.5], [20.5, 23.5]],
+    carta: ['migas', 'torta', 'cana', 'tinto', 'refresco', 'cafe'], stock: ['bocadillo', 'agua'] },
 };
+// (the shops of the town made from a kit once there is one: the supermarket and the gym, the hand-made ones as their kits
+// arrive — until then they keep their hand-made inside)
+Object.assign(SHOP_TYPES.super, { kit: 'supermercado' });
+Object.assign(SHOP_TYPES.gimnasio, { kit: 'gimnasio' });
+for (const [t, k] of Object.entries({ muebles: 'muebles', electro: 'electro', flores: 'floristeria', bazar: 'bazar', ferreteria: 'ferreteria', libreria: 'libreria', jugueteria: 'jugueteria', informatica: 'informatica', panaderia: 'panaderia', fruteria: 'fruteria' })) SHOP_TYPES[t].kit = k;
+// (more businesses of the map that only open once their kit is there; called what they are: Estanco, Óptica, Taller…)
+Object.assign(SHOP_TYPES, {
+  estanco: { kinds: ['shop:tobacco', 'shop:lottery', 'shop:kiosk', 'shop:newsagent'], kit: 'estanco', soloKit: true, porTipo: true, name: 'el estanco', title: 'Estanco', hours: [[9, 14], [17, 20.5]], stock: ['chocolate', 'cuaderno', 'cargador'] },
+  joyeria: { kinds: ['shop:jewelry', 'shop:optician', 'shop:watches'], kit: 'joyeria', soloKit: true, porTipo: true, name: 'la joyería', title: 'Joyería', hours: SHOP_H, stock: ['gafas', 'reloj', 'perfume'] },
+  perfumeria: { kinds: ['shop:perfumery', 'shop:cosmetics'], kit: 'perfumeria', soloKit: true, porTipo: true, name: 'la perfumería', title: 'Perfumería', hours: SHOP_H, stock: ['perfume'] },
+  peluqueria: { kinds: ['shop:hairdresser', 'shop:beauty'], kit: 'peluqueria', soloKit: true, porTipo: true, name: 'la peluquería', title: 'Peluquería', hours: [[9.5, 14], [16.5, 20.5]], stock: ['perfume'] },
+  taller: { kinds: ['shop:car_repair', 'shop:car_parts', 'craft:glaziery', 'shop:trade'], kit: 'taller', soloKit: true, porTipo: true, name: 'el taller', title: 'Taller', hours: [[8.5, 14], [16, 19.5]], stock: ['herramientas', 'linterna'] },
+});
 const ACCENT = { kebab: 0xb83a24, gimnasio: 0x1f6fb2, armeria: 0x3a5a2a, muebles: 0x7a4e2c, electro: 0x2a5a9a, flores: 0x4a8a3a, bazar: 0xc8202a, ferreteria: 0xd87a1a, libreria: 0x2a3a6a, jugueteria: 0xe8a33a, super: 0x2a8a4a, panaderia: 0xb8742a, fruteria: 0x5aa84a, informatica: 0x3a4a5a };
 // invented names for the second, third… shop of the same kind
 const NAMES = {
@@ -56,6 +92,12 @@ const NAMES = {
   muebles: ['Muebles y Decoración La Vega', 'Muebles El Roble'],
   libreria: ['Librería El Tintero', 'Papelería La Pluma'],
   informatica: ['Informática El Enchufe', 'Móviles La Antena'],
+  bar: ['Bar El Cruce', 'Bar La Parada', 'Mesón El Jamón', 'Bar Los Arcos', 'Bar El Rincón', 'Taberna La Bota', 'Bar La Fuente', 'Bar El Paseo', 'Mesón La Encina',
+    'Bar El Pilar', 'Bar Las Eras', 'Taberna El Tonel', 'Bar La Dehesa', 'Bar El Chato', 'Bar La Esquina'],
+  cafeteria: ['Cafetería La Espiga', 'Cafetería El Molino', 'Café Central'],
+  ropa: ['Modas La Plaza', 'Boutique El Paseo', 'Calzados El Pilar', 'Tejidos La Fuente', 'Moda Joven La Vega', 'Zapatería Las Eras', 'Modas El Arco', 'Complementos La Encina'],
+  farmacia: ['Farmacia del Centro', 'Farmacia de la Plaza'],
+  banco: ['Banco del Valle', 'Banco La Encina', 'Banco Campo Verde', 'Caja La Dehesa', 'Banco Horizonte'],
 };
 
 export function isOpen(type, hour) { const t = SHOP_TYPES[type]; return !t || t.hours.some(([a, b]) => hour >= a && hour < b); }
@@ -124,6 +166,7 @@ export function price(id) { const d = ITEMS[id]; return d ? Math.max(1, Math.rou
 // ---------------------------------------------------------------- the inside of a shop
 export function buildShop(type, seed = 1, origin = INTERIOR_ORIGIN, title = null) {
   const T = SHOP_TYPES[type] || SHOP_TYPES.bazar;
+  if (T.kit && KITS[T.kit]) { const h = buildLocal(T.kit, seed, origin, title); h.shop = type; return h; }
   const r = mulberry32(seed);
   const B = new HouseBuilder(origin.x, origin.z, false);
   const arm = type === 'armeria';
@@ -495,14 +538,17 @@ export class Shops {
     for (const p of map.pois) {
       if (!map.inTown(p.x, p.z)) continue;
       const type = p.shopType || Object.keys(SHOP_TYPES).find((t) => SHOP_TYPES[t].kinds.includes(p.kind));
-      if (!type) continue;
+      if (!type || (SHOP_TYPES[type].soloKit && !KITS[SHOP_TYPES[type].kit])) continue;
       const door = this.fixDoor(activities.doorOf(p));
       if (!door || used.some((u) => Math.hypot(u.x - door.x, u.z - door.z) < 5)) continue;
       used.push(door);
       const n = count[type] = (count[type] || 0) + 1;
       const T = SHOP_TYPES[type];
-      const title = p.title || (n === 1 ? T.title : (NAMES[type] && NAMES[type][(n - 2) % NAMES[type].length]) || T.title);
-      this.add({ ...door, type, title, name: T.name, seed: 300 + this.list.length * 17 + n });
+      // (an office is called what it is: the insurance office, the driving school, the dentist's)
+      const title = p.title || (type === 'oficina' || T.porTipo ? GENERICOS_TIPO[p.kind] || T.title : n === 1 ? T.title : (NAMES[type] && NAMES[type][(n - 2) % NAMES[type].length]) || T.title);
+      // (its seed by its point of the map, not by its place in the list: the same shop inside whatever others open)
+      const poi = map.pois.indexOf(p);
+      this.add({ ...door, type, title, name: T.name, seed: 300 + poi * 17, poi });
     }
     // the gun shop: the building by the Cooperativa where the old sign stood
     const gs = activities.gunShop;
@@ -518,7 +564,11 @@ export class Shops {
       }
     }
     // the ones for the house and for things show on the map (the food shops are everywhere: only up close)
-    for (const s of this.list) if (!['armeria', 'super', 'panaderia', 'fruteria'].includes(s.type)) g.hud.setBlip('tienda' + this.list.indexOf(s), { x: s.x, z: s.z, label: 'T', color: '#8fe39b', name: s.title, edge: false, small: true });
+    for (const s of this.list) {
+      if (['armeria', 'super', 'panaderia', 'fruteria'].includes(s.type)) continue;
+      const bar = s.type === 'bar' || s.type === 'cafeteria' || s.type === 'restaurante', B = SHOP_TYPES[s.type].blip;
+      g.hud.setBlip('tienda' + this.list.indexOf(s), { x: s.x, z: s.z, label: B ? B[0] : bar ? 'B' : 'T', color: B ? B[1] : bar ? '#f0b85a' : '#8fe39b', name: s.title, edge: false, small: true });
+    }
   }
   // a map point for a shop often sits on the facade itself: find the building behind it, so that the door has a
   // pavement spot in front and a point inside (the way in, the way out, the street seen from the shop window)
@@ -632,6 +682,14 @@ export class Shops {
         : { kind: 'train', title: 'Entrenar una hora', sub: `Cinta, pesas y saco. Nivel de forma ${lv} de 10: cada hora, más aguante al esprintar, recuperas antes el aliento y pegas más fuerte.`, price: 4, ico: '🏋️' });
     }
     if (H.s.type === 'armeria') for (const it of g.activities.shopItems()) out.push({ ...it, ico: it.kind === 'weapon' || it.kind === 'ammo' ? '🎯' : it.kind === 'armor' ? '🦺' : '🩹' });
+    // the bank: what you have; the chemist's: something for the wounds
+    if (SHOP_TYPES[H.s.type].saldo) out.push({ kind: 'saldo', title: 'Consultar el saldo', sub: `Tienes ${fmtMoney(g.player.money)} en la cuenta.`, price: 0, ico: '🏦', off: true });
+    for (const [title, sub, pr, cura, ico] of SHOP_TYPES[H.s.type].curas || []) out.push({ kind: 'health', title, sub, price: Math.max(1, Math.round(pr * PERK.price)), cura, ico });
+    // what the bar serves, there and then (the terrace's own list)
+    for (const id of SHOP_TYPES[H.s.type].carta || []) {
+      const m = MENU.find((q) => q.id === id);
+      if (m) out.push({ kind: 'carta', id, title: m.name, sub: m.stamina ? 'Para tomar aquí. Te espabila.' : 'Para tomar aquí, en la barra.', price: Math.max(1, Math.round(m.price * PERK.price * 10) / 10), ico: { beer: '🍺', cup: '☕', wine: '🍷', soda: '🥤', plate: '🍽️' }[m.cup] || '🍽️', m });
+    }
     for (const id of SHOP_TYPES[H.s.type].stock) {
       const d = ITEMS[id];
       if (!d) continue;
@@ -679,6 +737,16 @@ export class Shops {
       this.train();
       return true;
     }
+    if (row.kind === 'carta') { // (served on the counter and taken there)
+      p.money -= row.price;
+      p.health = Math.min(100, p.health + row.m.hp);
+      if (row.m.stamina) p.stamina = 1;
+      g.audio.sfx('money', { vol: 0.6 });
+      g.hud.notify(`${row.ico} ${row.title}: −${eur(row.price)}`, 'ok', 3);
+      this.say(pick(['¡Marchando!', 'Aquí tiene. ¡Que aproveche!', 'Ahora mismo.', 'Ahí va, bien {servido|servida}.']));
+      g.persist();
+      return true;
+    }
     if (row.kind === 'item') {
       const d = ITEMS[row.id];
       if (d.unique && g.inv.has(row.id)) return false;
@@ -692,6 +760,16 @@ export class Shops {
       g.persist();
       return true;
     }
+    if (row.kind === 'health' && this.here && this.here.s.type !== 'armeria') { // (the chemist's)
+      if (p.health >= 100) { this.say('Está usted como una rosa. Guárdelo para cuando haga falta.'); return false; }
+      p.money -= row.price;
+      p.health = Math.min(100, p.health + (row.cura || 50));
+      g.audio.sfx('money', { vol: 0.6 });
+      g.hud.notify(`${row.ico} ${row.title}: −${eur(row.price)} · +${row.cura} de salud`, 'ok', 3);
+      this.say(pick(['Aquí tiene. Que se mejore.', 'Con esto, como nuevo.', 'Si no mejora, al médico, ¿eh?']));
+      g.persist();
+      return true;
+    }
     // the gun shop's own things
     if (row.kind === 'armor' && p.armor >= 100) { this.say('Ya lleva el chaleco puesto, y como nuevo.'); return false; }
     if (row.kind === 'health' && p.health >= 100) { this.say('Está usted como una rosa: el botiquín, para cuando haga falta.'); return false; }
@@ -700,7 +778,7 @@ export class Shops {
     if (row.kind === 'weapon') { W.give(row.id, WEAPONS[row.id].ammoPack || 0); W.select(row.id); }
     else if (row.kind === 'ammo') W.give(row.id, WEAPONS[row.id].ammoPack);
     else if (row.kind === 'armor') p.armor = 100;
-    else if (row.kind === 'health') p.health = Math.min(100, p.health + 50);
+    else if (row.kind === 'health') p.health = Math.min(100, p.health + (row.cura || 50));
     g.audio.sfx('money');
     g.hud.weapon(true);
     g.hud.notify(`${row.title}: −${row.price} €`, 'ok', 3);
@@ -720,7 +798,7 @@ export class Shops {
     g.state = 'shop';
     g.input.exitLock();
     g.hud.prompt('');
-    this.say(this.here.s.type === 'armeria' ? '¿Qué va a ser?' : '¿Qué le pongo?', 1800);
+    this.say(this.here.s.type === 'armeria' ? '¿Qué va a ser?' : SHOP_TYPES[this.here.s.type].carta ? '¿Qué te pongo?' : '¿Qué le pongo?', 1800);
   }
   renderStore() {
     const g = this.g, money = g.player.money, ui = g.ui;
@@ -729,7 +807,7 @@ export class Shops {
     const dev = g.input.device;
     ui.shopSub.innerHTML = `Llevas <b style="color:var(--money)">${fmtMoney(money)}</b>. ${dev === 'touch' ? 'Toca' : dev === 'pad' ? `Elige con la cruceta y pulsa ${g.input.key('', 0)} en` : 'Haz clic (o ↑ ↓ e Intro) en'} lo que quieras comprar.`;
     ui.shopList.innerHTML = this.items.map((it, i) =>
-      `<button class="item${money < it.price || it.off ? ' off' : ''}${i === this.sel ? ' on' : ''}" data-i="${i}"><span><b>${it.ico ? it.ico + ' ' : ''}${it.title}</b><small>${it.sub}</small></span><span class="price">${it.off ? '✓' : it.kind === 'job' || it.kind === 'quitjob' ? '' : it.price + ' €'}</span></button>`).join('');
+      `<button class="item${money < it.price || it.off ? ' off' : ''}${i === this.sel ? ' on' : ''}" data-i="${i}"><span><b>${it.ico ? it.ico + ' ' : ''}${it.title}</b><small>${it.sub}</small></span><span class="price">${it.off ? '✓' : it.kind === 'job' || it.kind === 'quitjob' ? '' : eur(it.price)}</span></button>`).join('');
   }
   buyAt(i) {
     const it = this.items && this.items[i];

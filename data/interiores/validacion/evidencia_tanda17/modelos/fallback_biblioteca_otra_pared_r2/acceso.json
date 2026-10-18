@@ -1,0 +1,72 @@
+{
+  "state": "PASS_DIRECTED_FRONT_ACCESS_AND_CORE_EXACT",
+  "seed": 4,
+  "ctx": {
+    "W": 3.2,
+    "D": 2.8,
+    "H": 2.75,
+    "libres": [
+      {
+        "cx": -0.75,
+        "cz": 0.5,
+        "hw": 0.58,
+        "hd": 0.5,
+        "a": 0,
+        "y0": 0,
+        "y1": 2.4
+      }
+    ],
+    "inicio": {
+      "x": -0.75,
+      "z": 0.5
+    }
+  },
+  "coreExact": [
+    "t17_mesa_amplio",
+    "silla_comedor",
+    "t17_guardado_bajo",
+    "vb_ordenador"
+  ],
+  "library": {
+    "e": 12,
+    "obj": "t17_biblioteca",
+    "x": 0.3300000000000002,
+    "y": 0,
+    "z": 0.18000000178813935,
+    "ry": 0,
+    "sop": null,
+    "sup": null,
+    "v": {
+      "cx": 0.3300000000000002,
+      "cz": 0.18000000178813935,
+      "hw": 0.5,
+      "hd": 0.17000000178813934,
+      "a": 0,
+      "y0": -2.3841858265427618e-8,
+      "y1": 1.7000000476837158
+    }
+  },
+  "role": "libros",
+  "front": {
+    "cx": 0.3300000000000002,
+    "cz": 0.7500000035762787,
+    "hw": 0.375,
+    "hd": 0.4,
+    "a": 0,
+    "y0": 0.08,
+    "y1": 1.2
+  },
+  "bodyWidth": 0.8,
+  "grid": 0.05,
+  "entryCell": {
+    "index": 657,
+    "free": 1,
+    "reachable": 1
+  },
+  "frontCell": {
+    "index": 998,
+    "free": 1,
+    "reachable": 1
+  },
+  "scope": "Actual mapaPaso from literal .8 entrance to library front; not interaction execution nor universal navigation. No positive association de claimed: existing fallback against another wall leaves de unset; function is libros in same study plus reachable front."
+}

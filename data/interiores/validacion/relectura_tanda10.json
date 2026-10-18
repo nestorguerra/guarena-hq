@@ -1,0 +1,88 @@
+{
+ "fecha": "2026-10-17",
+ "revision_fuente": "48f77feceef519c3ede275a00db0e6630aa50b07",
+ "alcance": "Relectura visual de trece kits con el render de tanda 10; no es una nueva mejora del juego",
+ "kits": {
+  "comedor": {
+   "A": 3.194,
+   "B": 3.018
+  },
+  "costura": {
+   "A": 3.48,
+   "B": 3.602
+  },
+  "despacho": {
+   "A": 3.146,
+   "B": 3.278
+  },
+  "despensa": {
+   "A": 3.058,
+   "B": 3.092
+  },
+  "dormitorio": {
+   "A": 3.086,
+   "B": 3.21
+  },
+  "estudio": {
+   "A": 3.086,
+   "B": 3.066
+  },
+  "joven": {
+   "A": 3.272,
+   "B": 3.236
+  },
+  "musica": {
+   "A": 3.324,
+   "B": 3.244
+  },
+  "ninos": {
+   "A": 2.978,
+   "B": 2.9
+  },
+  "pintura": {
+   "A": 3.206,
+   "B": 3.164
+  },
+  "salon": {
+   "A": 3.116,
+   "B": 3.14
+  },
+  "taller": {
+   "A": 3.082,
+   "B": 3.264
+  },
+  "trofeos": {
+   "A": 3.034,
+   "B": 3.222
+  }
+ },
+ "evaluaciones": 26,
+ "aprobadas": 0,
+ "captura": {
+  "calidad": "alta manual",
+  "dpr": 1,
+  "estilo": "plastilina",
+  "hora": 12,
+  "muestras_por_kit": 3
+ },
+ "exclusiones": {
+  "annie": "Su ficha y evaluación siguen siendo históricas.",
+  "cocina_bano_trastero": "Ya evaluados en tanda 10; no repetidos."
+ },
+ "historico": "data/interiores/validacion/historico/antes_relectura_tanda10",
+ "imagenes": {
+  "comedor": "efc558c3ce332761ccb4bf7034f18f6d208831e13118fff86b1af81b7e84fefa",
+  "costura": "56cbacfbc727ec71dd4f45913620bf26af3d9b2c8bd8aaecfdf1800d627a23a4",
+  "despacho": "d8482f40325712169695f2a1d0ed4e114a873509b2d90320c4cc9df8f5759aae",
+  "despensa": "003d39beaa29053eef57ddd898e33dac3e1572abf5cc405ec73ea045c77ecbfa",
+  "dormitorio": "923f1f48b3875a996f81921ea9bea7ae74fd4cc4cf0a43235c8960a28dd5cbea",
+  "estudio": "8e6b5e276ce0980af26a091f8388f48fb2e3fe20a3460d4980c992a6f0d61e9b",
+  "joven": "19afe4b4bc6df6fbe7e329a6ff83ffa9434bd21d2ec093d2c9ad5b7b204d78cf",
+  "musica": "5bafb5d3ccae798545b9cf94d1d8fb0a9e2b351687b8ef2f0ce8b752ab136289",
+  "ninos": "a35faa3a2de019f419b4ab98c90564b9288829f517bf65fb6859bad8b033a4da",
+  "pintura": "373d3f891917a77533b3e7b4fd56aea5d1b72903ffcaa8a50628498af1caf458",
+  "salon": "f17dbf8c03bed386bdd01689719af4e106b2ea7678dd43aedc9b95ef12c620ad",
+  "taller": "fa347c063251ea7b15c69461642d28b2a316eec990584df56fdd111a8579146d",
+  "trofeos": "8987ee2a6b9d2ba0e697ae7aed2fb55ac1c6c65e2a8c9d54a6fcdfd7a734a14d"
+ }
+}

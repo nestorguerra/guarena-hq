@@ -1,0 +1,978 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Floristería",
+ "nota": "La floristería de un pueblo de las Vegas Altas: cubos de zinc con flores cortadas de todos los colores en escalerillas y por el suelo, plantas en maceta sobre mesas y estantes, el mostrador encalado con tapa de zinc y su caja, la mesa de trabajo con los rollos de papel y las cintas, la pila de agua, la puerta de la cámara fría y un almacén con tierra y macetas. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   5.4,
+   6.9
+  ],
+  "fondo": [
+   11.4,
+   12.9
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "zm": "D-5.4",
+  "zb": "D-2.4"
+ },
+ "paso_libre": 0.9,
+ "pared": "#eef2e6",
+ "suelo": "rock_tile_floor",
+ "suelo_color": "#bfbbae",
+ "puntos": {
+  "dependiente": [
+   "0.5",
+   "zm+0.8"
+  ],
+  "mostrador": [
+   "0.5",
+   "zm-0.75"
+  ]
+ },
+ "pedir": "Pagar en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "W/2",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "mostrador",
+   "publica": false,
+   "rect": [
+    "-W/2+1.5",
+    "zm-0.35",
+    "W/2",
+    "zm+0.35"
+   ]
+  },
+  {
+   "id": "taller",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zm+0.37",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "fondo",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2-2.2",
+    "D"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "W/2-2.2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "W/2-2.2",
+    "zb"
+   ],
+   "a": [
+    "W/2-2.2",
+    "D"
+   ]
+  },
+  {
+   "de": [
+    "W/2-2.2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "0.2",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "-W/2",
+    "zm-0.9",
+    "W/2",
+    "zm-0.36"
+   ],
+   "nota": "la cola delante del mostrador: sin muebles"
+  },
+  {
+   "rect": [
+    "-W/2",
+    "zm-1.7",
+    "-W/2+1.6",
+    "zm+1.1"
+   ],
+   "nota": "el paso del personal entre la sala y el taller"
+  },
+  {
+   "rect": [
+    "W/2-2.4",
+    "zb-1.3",
+    "W/2-0.7",
+    "zb"
+   ],
+   "nota": "el paso hasta la puerta del almacén"
+  },
+  {
+   "rect": [
+    "0.05",
+    "zm+0.35",
+    "0.95",
+    "zm+1.25"
+   ],
+   "nota": "donde está la dependienta"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "mostrador_floristeria",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "-W/2+1.5",
+    "W/2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "portabobinas_cintas",
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "jarron_flores_mostrador",
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "ramo_envuelto_rosas",
+    "ramo_envuelto_primavera"
+   ],
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "tarjetero_dedicatorias",
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "rollo_papel_regalo",
+    "cesta_mimbre_flores"
+   ],
+   "en": [
+    "mostrador_floristeria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "conjunto",
+   "obj": "mesa_trabajo_floristeria",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "sobre",
+   "obj": "tijeras_floristeria",
+   "en": [
+    "mesa_trabajo_floristeria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "sobre",
+   "variantes": [
+    "ramo_envuelto_primavera",
+    "cesta_mimbre_flores",
+    "rollo_papel_regalo",
+    "portabobinas_cintas",
+    "tarjetero_dedicatorias"
+   ],
+   "en": [
+    "mesa_trabajo_floristeria"
+   ],
+   "cantidad": [
+    1,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "taller",
+   "regla": "sobre",
+   "obj": "cubo_flores_eucalipto",
+   "en": [
+    "mesa_trabajo_floristeria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "obj": "rollos_papel_pared",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "obj": "rotulo_floristeria",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "pared",
+   "obj": "estante_floristeria_pared",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "contra_pared",
+   "obj": "fregadero_floristeria",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "esquina",
+   "variantes": [
+    "saco_tierra",
+    "regadera_zinc",
+    "macetero_grande_b"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "taller",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "taller",
+   "regla": "sobre",
+   "obj": "fl_jarrones",
+   "en": [
+    "estante_floristeria_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "contra_pared",
+   "obj": "puerta_camara_frio",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "fondo",
+   "regla": "esquina",
+   "variantes": [
+    "cubo_flores_rosas_blancas",
+    "cubo_flores_gladiolos"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "taller",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "fl_macetas_apiladas",
+    "caja_carton",
+    "fl_jarrones"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "saco_tierra",
+   "pared": "W",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "variantes": [
+    "regadera_zinc",
+    "caja_carton"
+   ],
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "variantes": [
+    "macetero_grande_a",
+    "planta_alta"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "cubo_flores_girasoles",
+    "cubo_flores_margaritas",
+    "cubo_flores_tulipanes"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "escalera_cubos_flores",
+   "pared": "W",
+   "cantidad": [
+    1,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "escalera_cubos_flores",
+   "pared": "E",
+   "cantidad": [
+    0,
+    3
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "mesa_plantas_floristeria",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "fl_sansevieria",
+    "fl_crasas",
+    "fl_ficus",
+    "fl_lavanda",
+    "fl_cactus_columnar",
+    "fl_begonia",
+    "fl_flor_pascua",
+    "fl_orquidea_rosa",
+    "fl_helecho",
+    "fl_orquidea_blanca"
+   ],
+   "en": [
+    "mesa_plantas_floristeria"
+   ],
+   "por_soporte": [
+    3,
+    4
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "cubo_flores_claveles_rojos",
+    "cubo_flores_gerberas",
+    "cubo_flores_tulipanes",
+    "cubo_flores_crisantemos",
+    "cubo_flores_girasoles",
+    "cubo_flores_paniculata",
+    "cubo_flores_claveles_blancos",
+    "cubo_flores_eucalipto",
+    "cubo_flores_gladiolos",
+    "cubo_flores_hortensias",
+    "cubo_flores_rosas_blancas",
+    "cubo_flores_margaritas",
+    "cubo_flores_lavanda",
+    "cubo_flores_rosas_rosas",
+    "cubo_flores_lirios",
+    "cubo_flores_rosas_rojas"
+   ],
+   "en": [
+    "escalera_cubos_flores"
+   ],
+   "por_soporte": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": "flores"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expositor_geranios",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "geranios"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "expositor_cactus",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "cactus"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "estante_plantas_interior",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "planta"
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "fl_ficus",
+    "fl_sansevieria",
+    "fl_begonia",
+    "fl_orquidea_blanca",
+    "fl_flor_pascua",
+    "fl_lavanda",
+    "fl_crasas",
+    "fl_helecho",
+    "fl_orquidea_rosa",
+    "fl_cactus_columnar"
+   ],
+   "en": [
+    "estante_plantas_interior"
+   ],
+   "por_soporte": [
+    3,
+    4
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "cubo_flores_hortensias",
+    "cubo_flores_paniculata",
+    "cubo_flores_eucalipto",
+    "cubo_flores_lavanda",
+    "cubo_flores_crisantemos",
+    "cubo_flores_gladiolos",
+    "cubo_flores_gerberas",
+    "cubo_flores_tulipanes",
+    "cubo_flores_lirios",
+    "cubo_flores_margaritas",
+    "cubo_flores_girasoles",
+    "cubo_flores_claveles_blancos",
+    "cubo_flores_claveles_rojos",
+    "cubo_flores_rosas_blancas",
+    "cubo_flores_rosas_rosas",
+    "cubo_flores_rosas_rojas"
+   ],
+   "cantidad": [
+    3,
+    6
+   ],
+   "todas": true
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "macetero_grande_a",
+    "macetero_grande_b",
+    "planta_alta",
+    "planta_grande"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "pizarra_floristeria",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "cartel_ramos",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_botanico_a",
+    "cuadro_botanico_b",
+    "cuadro_botanico_c"
+   ],
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cada": 1.2,
+   "maximo": 4,
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "estante_floristeria_pared",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "obj": "fl_jarrones",
+   "en": [
+    "estante_floristeria_pared"
+   ],
+   "relleno": [
+    0.8,
+    0.95
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "planta_colgante",
+   "cantidad": [
+    2,
+    3
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.12,
+    0.16
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3900,
+   4400
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 09:30-14:00,17:00-20:30; Su 10:00-13:30",
+  "vida": [
+   "gotas de agua en el suelo junto a los cubos",
+   "un ramo a medio atar sobre la mesa",
+   "hojas cortadas en el suelo del taller",
+   "el olor a flor recién cortada"
+  ],
+  "cerrado": "persiana bajada, los cubos dentro de la cámara"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Espaicol Tienda.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Espaicol_Tienda.jpg",
+   "autor": "Floristeriaespaicol",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Podesta and Baldocchi interior, 1922.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Podesta_and_Baldocchi_interior,_1922.jpg",
+   "autor": "Unknown authorUnknown author",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "(20230620) Peppers in pots at flower shop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:(20230620)_Peppers_in_pots_at_flower_shop.jpg",
+   "autor": "Roy Zuo",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Colony Bazaar flower and plant shop - DPLA - 37916bd423a1c815f3e05ef3f2726b2b.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Colony_Bazaar_flower_and_plant_shop_-_DPLA_-_37916bd423a1c815f3e05ef3f2726b2b.jpg",
+   "autor": "David E. Lucas",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Colony Bazaar flower and plant shop - DPLA - 916d80f1af79fa2c17b265166d02f77e.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Colony_Bazaar_flower_and_plant_shop_-_DPLA_-_916d80f1af79fa2c17b265166d02f77e.jpg",
+   "autor": "David E. Lucas",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Golden Flower Kirkkokatu 16 Oulu 20250322 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Golden_Flower_Kirkkokatu_16_Oulu_20250322_01.jpg",
+   "autor": "Estormiz",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Golden Flower Kirkkokatu 16 Oulu 20250322 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Golden_Flower_Kirkkokatu_16_Oulu_20250322_02.jpg",
+   "autor": "Estormiz",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Golden Flower Kirkkokatu 16 Oulu 20250322 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Golden_Flower_Kirkkokatu_16_Oulu_20250322_03.jpg",
+   "autor": "Estormiz",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior of Hanaichi Flower Shop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Hanaichi_Flower_Shop.jpg",
+   "autor": "Kentaro Ohno",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Julie Østbyes Blomsterforretning - no-nb digifoto 20160203 00271 NB NS 000766C.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Julie_%C3%98stbyes_Blomsterforretning_-_no-nb_digifoto_20160203_00271_NB_NS_000766C.jpg",
+   "autor": "Narve Skarpmoen",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Julie Østbyes Blomsterforretning - no-nb digifoto 20160203 00273 NB NS 000766E.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Julie_%C3%98stbyes_Blomsterforretning_-_no-nb_digifoto_20160203_00273_NB_NS_000766E.jpg",
+   "autor": "Narve Skarpmoen",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "WFM Bayhill Flower Shop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:WFM_Bayhill_Flower_Shop.jpg",
+   "autor": "Nielsoncaetanosalmeron",
+   "licencia": "CC BY 4.0"
+  }
+ ]
+}

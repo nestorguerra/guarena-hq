@@ -1,0 +1,37 @@
+{
+ "estado": "CAPTURAS_R4_VERIFICADAS",
+ "fuentes_privadas_estables": 493,
+ "vistas_libres": 6,
+ "errores_y_programas_no_ejecutables_vetados": true,
+ "misma_pose_base_T17": [
+  {
+   "seed": 2786,
+   "vistas": [
+    true,
+    true
+   ]
+  },
+  {
+   "seed": 3244,
+   "vistas": [
+    true,
+    true
+   ]
+  },
+  {
+   "seed": 1594,
+   "vistas": [
+    true,
+    true
+   ]
+  }
+ ],
+ "ficha_sha256": "67b799b21ce503b2af4e290700a34c2fc0f64aad62df973ce93b995b0121eb3c",
+ "limitaciones": [
+  "El literal limites de procedencia.json heredaba el texto de8927; URL efectiva del capturador8931 y acabadoR4 sellado.",
+  "La formal anterior mantiene5/6poses respecto a la base T17, se declara la diferencia2786/0.",
+  "Recorte de camilla2786/0 conservado; la otra vista muestra el conjunto.",
+  "A/B son dos juicios del mismo modelo con orden de referencias invertido, no verificadores funcionales.",
+  "La pareja3244 y familia4007 complementan revisión independiente; no se añaden a la entrada formal."
+ ]
+}

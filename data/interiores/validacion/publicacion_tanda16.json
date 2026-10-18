@@ -1,0 +1,36 @@
+{
+ "tanda": 16,
+ "fecha": "2026-10-18T01:11:26.056433+00:00",
+ "estado": "publicada_y_verificada",
+ "commit": "288e24e6a4ee8fbab9ff9f7cb0534c289a14947b",
+ "url": "https://nestorguerra.github.io/guarena-hq/?estilo=plastilina&v=288e24e6a4ee8fbab9ff9f7cb0534c289a14947b",
+ "ci": {
+  "run": 39085048712,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39085048712",
+  "arbol_ci_y_head_identico": "d12d2d10b8cd54f95ca74d1f3c5732e0b7899d9a"
+ },
+ "pages": {
+  "run": 39085385522,
+  "estado": "success",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39085385522"
+ },
+ "integracion": {
+  "informe": "data/interiores/validacion/integracion_publica_tanda16.json",
+  "sha256": "66e1d1ef8d6e0a3290e810242ea896db48387e6475dfc809650c068c958060cd",
+  "estado": "PASS",
+  "casas": 8,
+  "annie_kits": 5,
+  "comercios_con_acciones": 3,
+  "partida_ficticia_y_recarga": true,
+  "revision_antes_y_despues": "288e24e6a4ee8fbab9ff9f7cb0534c289a14947b",
+  "maximo_entrada_ms": 193.3,
+  "annie_entrada_ms": 87.9
+ },
+ "visual": {
+  "A": 3.276,
+  "B": 3.256,
+  "objetivo_4_alcanzado": false
+ },
+ "limites": "Muestras en M1; no acredita rendimiento universal ni calidad visual 4/5. Los tres comercios conservan acciones; no se ejecutan compras. El contrato de botín pasa en CI y no se repite públicamente en esta tanda."
+}

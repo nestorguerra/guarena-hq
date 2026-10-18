@@ -1,0 +1,224 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_353b9219bb14414e9075c61342d6edca",
+ "request_sha256": "68f9bf9e0d1cc5d7521049b8a216df78bb1ba9bdb191892feb96f8bee1c12060",
+ "fecha": "2026-10-17T14:20:14.930908+00:00",
+ "kit": "musica",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_musica.jpg",
+ "ficha_sha256": "8d1adc7ff353cec8a2d6d1318afb0f943d644c4e01c68413e83b4c28e67d07a3",
+ "referencias": [
+  {
+   "titulo": "Music room-Interior of Schloss Sanssouci.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Music_room-Interior_of_Schloss_Sanssouci.jpg",
+   "autor": "Yair Haklai",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Music_room-Interior_of_Schloss_Sanssouci.jpg/960px-Music_room-Interior_of_Schloss_Sanssouci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Peles Castle Interior - New Music Room (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg",
+   "autor": "Carol I of Romania",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg/960px-Peles_Castle_Interior_-_New_Music_Room_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "rubrica": {
+  "densidad": "¿La habitación tiene muebles y enseres suficientes para su tamaño y uso doméstico, sin vacíos dominantes ni amontonamientos?",
+  "coherencia": "¿Los muebles y enseres pertenecen a esta clase de habitación doméstica y permiten reconocer su uso? Valore lo visible en cada muestra.",
+  "iluminacion": "¿Se distinguen muebles y superficies de uso sin zonas negras ni quemadas? Valore luz doméstica, dentro del acabado artesanal del juego.",
+  "variedad": "¿Las semillas y perfiles de las capturas muestran habitaciones domésticas distintas y creíbles, con composición y elementos variados?",
+  "lectura_funcional": "¿Se distinguen la entrada, las zonas de uso doméstico y el espacio para circular? Valore descanso, estudio, cocina o aseo según la habitación. No se requieren zonas comerciales de pedir, pagar o personal."
+ },
+ "puntuaciones": {
+  "densidad": 2.94,
+  "coherencia": 3.25,
+  "iluminacion": 3.25,
+  "variedad": 3.09,
+  "lectura_funcional": 2.92
+ },
+ "media": 3.09,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.94,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.09
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.88
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.03
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.9
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 2.25,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.07
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.63
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.28
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.68
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 2.25,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.05
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.66
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.28
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.71
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 2.09,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.0
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.07
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.78
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.14
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.81
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 1.92,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.16
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.74
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.08
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.77
+  }
+ ],
+ "uso": {
+  "input_tokens": 4006,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4006
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "before": "http://localhost:8920/.cache/perf-beta/base/packed.html?estilo=plastilina",
+ "after": "http://localhost:8920/.cache/perf-beta/candidate-ground-t12/dist/test.html?estilo=plastilina",
+ "rounds": 3,
+ "seconds": 20,
+ "load_only": true,
+ "mbps": 12.0,
+ "auto": false,
+ "out": ".cache/perf-beta/cold-ground-t12",
+ "ready_method": "normal_intro_no_fast_forward",
+ "boot_seed": 388,
+ "weather_live": false
+}

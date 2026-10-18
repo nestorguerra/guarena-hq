@@ -1,0 +1,270 @@
+{
+ "fecha": "2026-10-18T02:38:33.850522+00:00",
+ "commit": "765c1590078779d4b5d318ed98f838a4f678f751",
+ "ci": {
+  "conclusion": "success",
+  "databaseId": 39090590632,
+  "headSha": "765c1590078779d4b5d318ed98f838a4f678f751",
+  "jobs": [
+   {
+    "completedAt": "2026-10-18T02:38:11Z",
+    "conclusion": "success",
+    "databaseId": 117566301572,
+    "name": "validate_interiors",
+    "startedAt": "2026-10-18T02:34:46Z",
+    "status": "completed",
+    "steps": [
+     {
+      "completedAt": "2026-10-18T02:34:48Z",
+      "conclusion": "success",
+      "name": "Set up job",
+      "number": 1,
+      "startedAt": "2026-10-18T02:34:47Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:54Z",
+      "conclusion": "success",
+      "name": "Run actions/checkout@v7",
+      "number": 2,
+      "startedAt": "2026-10-18T02:34:48Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:54Z",
+      "conclusion": "success",
+      "name": "Run actions/setup-python@v7",
+      "number": 3,
+      "startedAt": "2026-10-18T02:34:54Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:55Z",
+      "conclusion": "success",
+      "name": "Objetos y kits (I-02, X-01, X-02)",
+      "number": 4,
+      "startedAt": "2026-10-18T02:34:54Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:55Z",
+      "conclusion": "success",
+      "name": "Los datos del juego, al día con los objetos y los kits",
+      "number": 5,
+      "startedAt": "2026-10-18T02:34:55Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:12Z",
+      "conclusion": "success",
+      "name": "Servidor de desarrollo y Chrome sin ventana (siempre sin sonido)",
+      "number": 6,
+      "startedAt": "2026-10-18T02:34:55Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:46Z",
+      "conclusion": "success",
+      "name": "Interiores, cinco semillas por kit (I-03, I-04, V-03)",
+      "number": 7,
+      "startedAt": "2026-10-18T02:35:12Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:36:20Z",
+      "conclusion": "success",
+      "name": "Contratos funcionales de las viviendas",
+      "number": 8,
+      "startedAt": "2026-10-18T02:35:46Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:36:24Z",
+      "conclusion": "success",
+      "name": "Cobertura estricta de casas completas (30 en PR, 200 nocturna/manual)",
+      "number": 9,
+      "startedAt": "2026-10-18T02:36:20Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:38:08Z",
+      "conclusion": "success",
+      "name": "Recoger objetos próximos y conservar su recompensa al recargar",
+      "number": 10,
+      "startedAt": "2026-10-18T02:36:24Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:38:08Z",
+      "conclusion": "success",
+      "name": "Post Run actions/setup-python@v7",
+      "number": 19,
+      "startedAt": "2026-10-18T02:38:08Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:38:09Z",
+      "conclusion": "success",
+      "name": "Post Run actions/checkout@v7",
+      "number": 20,
+      "startedAt": "2026-10-18T02:38:08Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:38:09Z",
+      "conclusion": "success",
+      "name": "Complete job",
+      "number": 21,
+      "startedAt": "2026-10-18T02:38:09Z",
+      "status": "completed"
+     }
+    ],
+    "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39090590632/job/117566301572"
+   },
+   {
+    "completedAt": "2026-10-18T02:35:21Z",
+    "conclusion": "success",
+    "databaseId": 117566301786,
+    "name": "validate_signs",
+    "startedAt": "2026-10-18T02:34:47Z",
+    "status": "completed",
+    "steps": [
+     {
+      "completedAt": "2026-10-18T02:34:48Z",
+      "conclusion": "success",
+      "name": "Set up job",
+      "number": 1,
+      "startedAt": "2026-10-18T02:34:48Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:57Z",
+      "conclusion": "success",
+      "name": "Run actions/checkout@v7",
+      "number": 2,
+      "startedAt": "2026-10-18T02:34:48Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:57Z",
+      "conclusion": "success",
+      "name": "Run actions/setup-python@v7",
+      "number": 3,
+      "startedAt": "2026-10-18T02:34:57Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:58Z",
+      "conclusion": "success",
+      "name": "Run actions/setup-node@v4",
+      "number": 4,
+      "startedAt": "2026-10-18T02:34:57Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:58Z",
+      "conclusion": "success",
+      "name": "Adaptación de calidad y límites del navegador",
+      "number": 5,
+      "startedAt": "2026-10-18T02:34:58Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:34:58Z",
+      "conclusion": "success",
+      "name": "Luz doméstica y restauración de las vistas",
+      "number": 6,
+      "startedAt": "2026-10-18T02:34:58Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:02Z",
+      "conclusion": "success",
+      "name": "Empaquetar el juego",
+      "number": 7,
+      "startedAt": "2026-10-18T02:34:58Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:06Z",
+      "conclusion": "success",
+      "name": "Recursos de suelo e iglesia en Pages, portable y multijugador",
+      "number": 8,
+      "startedAt": "2026-10-18T02:35:02Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:17Z",
+      "conclusion": "success",
+      "name": "Marcas y marcadores en la copia publicable (R-07, V-02)",
+      "number": 9,
+      "startedAt": "2026-10-18T02:35:06Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:17Z",
+      "conclusion": "success",
+      "name": "Entidades y emparejamiento (R-02, R-04)",
+      "number": 10,
+      "startedAt": "2026-10-18T02:35:17Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:17Z",
+      "conclusion": "success",
+      "name": "Informe",
+      "number": 11,
+      "startedAt": "2026-10-18T02:35:17Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:17Z",
+      "conclusion": "success",
+      "name": "Post Run actions/setup-node@v4",
+      "number": 20,
+      "startedAt": "2026-10-18T02:35:17Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:18Z",
+      "conclusion": "success",
+      "name": "Post Run actions/setup-python@v7",
+      "number": 21,
+      "startedAt": "2026-10-18T02:35:17Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:18Z",
+      "conclusion": "success",
+      "name": "Post Run actions/checkout@v7",
+      "number": 22,
+      "startedAt": "2026-10-18T02:35:18Z",
+      "status": "completed"
+     },
+     {
+      "completedAt": "2026-10-18T02:35:18Z",
+      "conclusion": "success",
+      "name": "Complete job",
+      "number": 23,
+      "startedAt": "2026-10-18T02:35:18Z",
+      "status": "completed"
+     }
+    ],
+    "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39090590632/job/117566301786"
+   }
+  ],
+  "status": "completed",
+  "url": "https://github.com/nestorguerra/guarena-hq/actions/runs/39090590632"
+ },
+ "workflow_verificado": {
+  "conclusion": "success",
+  "head_sha": "765c1590078779d4b5d318ed98f838a4f678f751",
+  "id": 39090590632,
+  "path": ".github/workflows/validar.yml",
+  "status": "completed"
+ },
+ "main_anterior": "288e24e6a4ee8fbab9ff9f7cb0534c289a14947b",
+ "arbol_ci_y_producto": "e2af93749799ccc14704bfc0e8a13013fa473f8a",
+ "merge_ci": "822df6e00731b1c0e997a006c13f8cfb757b7d51",
+ "main_verificado": "765c1590078779d4b5d318ed98f838a4f678f751"
+}

@@ -1,0 +1,4591 @@
+{
+ "status": "captured_and_invariants_checked_not_visually_approved",
+ "started_utc": "2026-10-17T18:13:27.909477+00:00",
+ "instrument": ".cache/calidad/tanda8/contraste.py",
+ "instrument_sha256": "9db4a4811fd0569ca7d1ce36b7e6dd9b15e5fcd85465c1018c995fb2be7d05e8",
+ "source_manifest": {
+  "before": {
+   "index.html": "a85d233c7b732e1965b1f763487662cc7766940ff0248b50a46916f7f2d78247",
+   "src/acabados_vivienda.js": "c439f596d8256cfae5e3a9fec0318ff4e28b456ca980ed84a51a161d9955ce6c",
+   "src/activities.js": "7ca59568c160b7d4c929e2cbf1871cedd6e557622f37d16e9714a64afd046cbc",
+   "src/assets.js": "e7293c8b81183caf5085a16d9b7032dfdf8c895103faa187c0039337a889c334",
+   "src/atrio.js": "3957611b3e46fa35b59389df76386d0dedde1f37dbb932ff4f2b94f13d94fc38",
+   "src/audio.js": "cf0634b15d1dbb19123f5e96a5ca1ef6c65dcaf073850873de4f5eb6815260f4",
+   "src/audio_stub.js": "480625890c983aba8a26e05b1bf187b0fbccd120df9a8ee31382e38e3d104fba",
+   "src/backrooms.js": "a93e85425b1175262458591ec677013ef1098a107325e3ad22a8f83eac2f15b2",
+   "src/buildings.js": "fb6d20432e16fe02077ff188e29dc00271a5cc2d8b209f1b12023906d366564e",
+   "src/calles.js": "58861e17d40a1cfb4eced62e3c122b052c5288bb7c4f9d1e26732883e4009ec8",
+   "src/calles_arreglos.js": "1b3f26bc0a1f309d8a763baeadaae620552566864d73517b7c2d65529cfa7995",
+   "src/calles_casas.js": "55821513272ea7ed2cdf151ea8e2916978000a94b66649202548408be509f240",
+   "src/calles_estilos.js": "3b4f5ff43d3615b0c7ece8b72296e8396488a6348047dcc3f421ff737ada4d33",
+   "src/calles_medianas.js": "467fa3828e0cdcc52c40c411738532425b964793df66f5b5b757faa2492ab52f",
+   "src/calles_tapias.js": "01624d9adb4ea33ea369bd524e00cb11bcdc67a0460aa254200370641f61a519",
+   "src/carinterior.js": "28e00c934df7d9d2b326fc788220c174331c0cc786c4bf0daab0d2f5baeeb61e",
+   "src/casa_annie.js": "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+   "src/casa_lotes.js": "8a122a4ee74ec7e67361712adf82be46fe272efc616f346972b86310337985cc",
+   "src/census.js": "1660fe754bbaf1f4393d7644588822b6647324016a2221bc1cfafa42c86e7c05",
+   "src/chant.js": "e7f6c0c48164e0cc50cd195653c3e0b917dce69f2a43ea72b862987fd4cf18e5",
+   "src/characters.js": "317406457690d3cddb79930d3a569a061316159a57e5e0523ca26b4bd91bd8a4",
+   "src/charbuild.js": "d24e2c4bd7c804b5eb8bd337d08d3209b8aa0321134713e648a0cee4acca4a75",
+   "src/charla.js": "32ae6495cbaccdc9a4e9cd49cab87fbd43658bc05c0e789dfd908d1ae7dbb347",
+   "src/church.js": "3c05d449c5e488ac4ae09ba46c778a23f70de65aedf6018ac0e12f60ab635ac0",
+   "src/churchdoors.js": "8dab14537a57163589b200dbef3b89ae98b493d233bf746f9bf8faf5aecb5e0c",
+   "src/churchtex.js": "9acda8af4db461cebe28c89afb1851d8cce9a1cffb0fad23d93e2427162201ec",
+   "src/collision.js": "741797a927a683ed5a58240d0df9d0bbad777cc3a88de4ff39fbae030ddecc5d",
+   "src/debug.js": "c8c7e4ef90c575850a53061ce4b9e2eb466877288982fc4c35ab122494bce30f",
+   "src/decor.js": "67fa7d5a07c43cf5dfa990f827d748d2a37d0c582745409c3f8d07d880423ace",
+   "src/detalles.js": "e2163d3ffdc1ec6cef4ebb90101c36ba1b1a9b8eb9b4403ad30673b39e7941fa",
+   "src/dogs.js": "f6e02f84c2697689d8fe2b86a824ad03727dffabcf241212cd818abbe8b94664",
+   "src/editor.js": "452ee15ad8dc2b7ca052be3574ff3f05e0c7a991808bbff0c22f68c12ba936ae",
+   "src/effects.js": "dc71e4f7874bed0c8702e5f0ab2dfc0c32716e7b060e5572f542a3cc631be0f6",
+   "src/facades.js": "b5ae217c408182d805ef710fc59880ac8986c74058a6af767b81b68524af1cad",
+   "src/fachadas.js": "e03918611cec7e94a080a295ca8fe20cc1712c788607fb44cb6e712c4fb337f4",
+   "src/fishing.js": "fdc5c066d73efc01c858dd27d9829b603aba63133e90f7a49c03576fc7445626",
+   "src/fleet.js": "7a41c54fa1a19a8dfeb5d6b5aa6691e2c67e5016d2a37b9bcb8181eff3c8a5d4",
+   "src/fm.js": "7a5758332422417a921883ca297849ccb6e5a3fdd5a4769021339d0b871a88ef",
+   "src/game.js": "e3c07ab69474367ecc931eade8b0909b91c4a226a83e230e939aa04e8da3f968",
+   "src/ground.js": "858360942e5386df3a70e74bdfca254ff9d8194ddbf41a8e82d89efa3b66646f",
+   "src/groundfx.js": "8501f373429ee0340bb67915918d6ebc92e09a8d321e412f0b561e14d0e4c136",
+   "src/gunmodels.js": "da2a8c925de284a0b726a864f24a327d4cdb505c33cca3a34e90254d27a48f19",
+   "src/gunrig.js": "64baab7794a6747cf4c8f0d07110a8162bbdb77ee11f3411d2274c832123ce3e",
+   "src/hero.js": "47a3edc09b2c230502716c51f95f73f98ae4d6d08868165352eca25082089b40",
+   "src/herodata.js": "8db93399acda77be7e45b39a48b1a98290ac6115f1b36cb1651bb22aa13846aa",
+   "src/heroik.js": "10c9678488bd38b260bd25a42bf6a0809a8ea491c3b92cef6b70fd742c6fcc56",
+   "src/heromotion.js": "c9b8183413b7c824f1d095c9214798f34bc78456b511b1098a72eca58c3c4e0a",
+   "src/herowear.js": "efe2a5acb8e46468effbb5820a78a5ce3d7c4d2d3c5b8ea85fb07f9104898535",
+   "src/hiper.js": "0c364f070ef1e6e58cdd0ecbacef59e26d8c3fc20c99d0154893d87f611b0410",
+   "src/hiperinterior.js": "8085cccfd359494e3724ada7dba01ecb78e50509996dcfcb4d6e339b6aea09bb",
+   "src/home.js": "172288e9ee31d6d8d3431bfb0fa9f3ab5670f854f54eb2636f64b4028ecb69be",
+   "src/housekit.js": "22e277465684f93b4964cc4e328d3fa9f672c26cc5e02aafeed47505dc6d0d3a",
+   "src/houses.js": "6344eec05f0edaea8bbd75426962ca3d134f66ec98ce3319d1d74a6469adc518",
+   "src/hud.js": "f7e9ced9540ce154a4c186a158c0235af91fd737184c1e51cb51e7b436d953b6",
+   "src/infill.js": "427cc7dd583c299c39a59f0628e9c28ce0a26c02f8b594b862fc82b5b123910c",
+   "src/input.js": "a754c64b185f4c627641f0cd8dbb8bb2381346ba2d659f4572db1cd9d5a60d69",
+   "src/interiores_datos.js": "c2cc37d404aef2c4655c0c0ab3b17881285cdcff504d2c0dabd96180db71e0c3",
+   "src/interiores_geo.js": "824930bc65d52e366d6943ea8a83e9a5badbc866f6e4b3ed4ff04805a00146ba",
+   "src/interiors.js": "d42c69de2fd724f82fed09e5a87d53a52d771223f334bede88c1356ea3d4ba45",
+   "src/intro.js": "517b012f7ae988cb6a19da2138de135f38505277522091fcf5734da645cd402c",
+   "src/inventory.js": "3664501d19f11d87a832bc3b0b5500ba951ac8ec4e7ccd5ee5de216178eee6d1",
+   "src/items.js": "6145c42cb7a008d858b3feddad50b034d3b02f6e91abbafaf8b590c05f5156ff",
+   "src/jobs.js": "35af3f17deaf3375770be53098b1ea45aa039082293f2cda7e4cc2ae97911b10",
+   "src/kerbs.js": "642d6c4b22aa9ead5822bc9f06c2e5cfdcd0349901f846899137628b70b10e22",
+   "src/landmarks.js": "fb986c83e52a623ebb835ee54bf8b3ef8d2773102403d17bcde352a96eb46eca",
+   "src/locales.js": "964bf2f6230e3c4d457a18479a48cf997d4ce0cd84c771e43e61220031ce01b2",
+   "src/looks.js": "16c79c3b2b1c29e8b66b9d693058ab2cbafa46b66d8981764c43cef7628f93d8",
+   "src/luz_vivienda.js": "babeedf2c322f1056332e7917de58f039717b7edfeb0df17ea7adf2b19a54e6b",
+   "src/main.js": "d8ba6554cbac487d0c5182ae5466a2e45c6e9f7fc700cf2c67dc44989fcc92e1",
+   "src/malfeitos.js": "4de260c7af9eedbc53cceda4cc2578dcb3d577e3dc428141d12d279b6d64ef59",
+   "src/mapdata.js": "de1b353f4d537fdf3f847944330215b608de37676723cf4e8c0ffc35609567fe",
+   "src/materials.js": "876f300c5e3a71aec9756cdb0b2f33823a6f75ac14d54eb22961e218fe240dbe",
+   "src/mercadillo.js": "2446ec78b410719c0c41da57c3394ecd070456b5ca97f5444799338fd1695f45",
+   "src/merendero.js": "5652de1a75be72e946c98b60b03892843e93b1235aaf8cfe695ee0bc3697dc78",
+   "src/mhdata.js": "ae9216674dd05ec927e6f2327ed6f48c13591dc5a6657c1aa6476ff63b8d6cbb",
+   "src/missions.js": "2c6eace94996fcc1dcc710c64b8d93c0c47bfe51a65f3c601b948b11135e276d",
+   "src/motion.js": "2d18fcd49ec7e3c99bbe7a19f21f8856083c82ae50fec85ee004926e0e6aebcd",
+   "src/net.js": "0f273585becf013aca8496e9a434452d9bafcd7edc1026fb7b1a3bfa252fcf52",
+   "src/npcmind.js": "96cbe7982040f24970fd41a4e3e1aa7b7765b18731019a58727e1afa21102fa2",
+   "src/objetos.js": "cfaf0d3e8532cc9e969c441da2e90f0d5c00d6682fe468c6673f8f839a58fac3",
+   "src/online.js": "5b26b6ee27b8fb8eed06a53c29ae9268424a1a58ffb93655fcdeba012f339954",
+   "src/paintings.js": "49bcaaa4bd2bf161b1f7747a65b836836220a89190a1795e1e42aa3821990401",
+   "src/pantano.js": "381df7e8a3487230dd52150ce15aaee0e7e12c9bdda225fb602ca17287d9f8cb",
+   "src/peds.js": "1e8ab8eb86e7859168b40ab4e8997e90898f302f9971654c9dc4866d18891802",
+   "src/perks.js": "f7d203d1996d54a898fbd4e557bf36914dbc258bc8abf1372e2bed7eef527efa",
+   "src/phone.js": "34566d3bc389a671620ce321223906595f2d9f784878b3566bd7be824d7673dd",
+   "src/pickups.js": "85daa85cf62f684626ae7745fb2bd8e10921f7d0905fb03aab827d963be47dbd",
+   "src/plastilina.js": "82c2d8d53601eabee1b7b2c80e036c3cc8704f232e700e09b31a206df245eb99",
+   "src/player.js": "bed0e82caf7666f023d1c01e1d1609547d52849222e550ab06afb66dd1f549f2",
+   "src/police.js": "ff0d4dd23e119d31b740a8063b05c59b41dcf76d80ce9f9033b8dbf2f76643f9",
+   "src/pools.js": "0fd240fa28e2c188f3a85e4386f7852179094dcc498e53bff45acbb2575fb389",
+   "src/post_scene.js": "b8a5955d77b352ac00faa5c988576978fe10d3aa333b6625820059379b4f6676",
+   "src/props.js": "49ae51e7a1eaac224d490536ad7b48c6ebdf3d9e1820b48030a07b9c3734ad09",
+   "src/ragdoll.js": "3d6f593438c790fe527771a9d40deecdbcb66885ce81abc6bc23c67e945fa894",
+   "src/rain.js": "9f397041758ed7c62f34e2e0d6b3255170b37fdbc759bbce42aa138a6cbd7621",
+   "src/rendimiento.js": "c5a818d5e1ee9ecc5bb564e4a9982375e01055e7e221e2eed70678c0ca47c1ec",
+   "src/retablo.js": "d7002e2166f768516481ebab6d48e3fbc81662a8b3d9b3f594a74e25484b7445",
+   "src/rotulos.js": "6161659e5873c0f6ff1057c3d287c956858d8e1ee93865001d65e89516d02833",
+   "src/rotulos_datos.js": "d66d91ff73f805315642925476285292c4a4d72feb7b909e8e6e64b974f68b8f",
+   "src/rotulos_tiendas.js": "cf263c3a02dadb1fd2a554d31b8333bb064265df5c0811649af7a1326fce4c27",
+   "src/schools.js": "074b0cc59f6e9a01abbe934d7130615b5aa79952e806465bf3c2c4ac88778165",
+   "src/shops.js": "848ddaa0e293187d248a3fe5ef9881aee03a23b70c1b3cd241119d5b6eb2a83a",
+   "src/signs.js": "ffab307b215b50ed375834a7914735ebcf1aeddf931d2469288bad2dc36133bd",
+   "src/sky.js": "c169f28e2af378201ccf30f9810f814ca527cca34917c038c53f0d289ebfa95d",
+   "src/solidez.js": "a44f4e4136c5cb8feb8f798c3364f95f3933d5e5a1c47d3019c6c490ef703c41",
+   "src/springs.js": "c8f4f7fb47b25f64a9c586932a744273a206e0b3d888920529aab289450440eb",
+   "src/statues.js": "225c47d462b9d46580d4932f2123918fe6b8464f7e134af5be2ab5a49fc459b1",
+   "src/streetlife.js": "828bea43a1438c51b6a5e9461df2138b7e5a4c278b3473f02c96c63bb1f74950",
+   "src/style.js": "7e40de7592ce023d259d664bc00481ce433db091f9044657d02a7282066849c8",
+   "src/tapias.js": "156e257f6720b563d7f358480534a497b42b97ae478e5cdccc05d8e59932ad32",
+   "src/terrace.js": "6aa9196f6ac138c2d73f7bd1e3d7da335b12f4e040a2e7df937ae5dbfa4a0f0e",
+   "src/texturas/comercio.js": "8956f76bb940612546d544be71ad5876c3f6b099ee247124c4c2e704e4cfe628",
+   "src/texturas/servicios.js": "c84e631bafbd70d364c41536be052657888e47cb42d0f0344fec2a33094adb4e",
+   "src/texturas/tiendas_a.js": "aa5524a267a2cc79980b76c792961a6ddeba210a09f7badf2e90653eebdb31ba",
+   "src/texturas/tiendas_b.js": "1dc5554c91c29a26b4dc4d7a82250e59987edf89df26bc93a3a531b01193d901",
+   "src/texturas/vivienda_a.js": "f65a89a841b6d26cbd83585e78610b071e610048096cfacb9830b5e44529e661",
+   "src/texturas/vivienda_b.js": "5cb5247ff552602801b8e970a42d6cbef6cf61782de23ebf5eddd888b75d8b35",
+   "src/textures.js": "4af4a002959c421a1000a4cd28526769c62c93d246e17381855dff5903c9af02",
+   "src/townplus.js": "d54f9aea589bc2f9e88f71a0e661f9d903e6c0c58a085cd125a6dccaa3858610",
+   "src/traffic.js": "0dfa86b0f58c09be9c09eb395975b56a3b4ed30a801bf03b5f729e250fcb81c9",
+   "src/trees.js": "140e0361a9bb49aee3a27480a9a87170addeeb7fb92029eb031336ebe612c0a7",
+   "src/util.js": "8c5dcfb913978c17e00966a10ee18628c986de7d841890832ac31fa010720601",
+   "src/vegetation.js": "608b8befb8227a482219dd105791baf3100eb90181b827d8cb73adb51862ca53",
+   "src/vehicles.js": "fc4a1e03cb338b1cc7c4346b00727792a07bf5ab2f48e559e1d299fea7c053e8",
+   "src/venuekit.js": "cb725675bc8f0f375c125b53a1f7b74ed4c38fb9127ac0fa1b9f6f5101fb6042",
+   "src/venues.js": "bbac64a2dabc3202d8adca9a1ef016ca35e50fe8d143c3c4c255d71e06361dfd",
+   "src/viewmodel.js": "95ec0e2dc541c0123932be27966ff00b6078763911193a59c11d2301357a8730",
+   "src/weapons.js": "831be8f4b74196d751f09c593b755e2c09d58592a6c54e513e5d3fe11848f78b",
+   "src/weather.js": "dc0a7cb67f9cc97a46d644269ec760f2ba4d4cc7427ef98d3638d8ce88839cd8",
+   "src/windowview.js": "36197ac44564cf7f45f0a9d79125eb5d2e5396679b0055f9a5b21b061de5c82b",
+   "src/world.js": "512cfbdad3aa8f395b6f7b846bfaf210c117d6603aebeb11e8a0360615479d28",
+   "src/zombies.js": "be7a0b8f06f9874e2ecdf58344063975f2839dd316139170747f06697d037b93"
+  },
+  "after": {
+   "index.html": "a85d233c7b732e1965b1f763487662cc7766940ff0248b50a46916f7f2d78247",
+   "src/acabados_vivienda.js": "c439f596d8256cfae5e3a9fec0318ff4e28b456ca980ed84a51a161d9955ce6c",
+   "src/activities.js": "7ca59568c160b7d4c929e2cbf1871cedd6e557622f37d16e9714a64afd046cbc",
+   "src/assets.js": "e7293c8b81183caf5085a16d9b7032dfdf8c895103faa187c0039337a889c334",
+   "src/atrio.js": "3957611b3e46fa35b59389df76386d0dedde1f37dbb932ff4f2b94f13d94fc38",
+   "src/audio.js": "cf0634b15d1dbb19123f5e96a5ca1ef6c65dcaf073850873de4f5eb6815260f4",
+   "src/audio_stub.js": "480625890c983aba8a26e05b1bf187b0fbccd120df9a8ee31382e38e3d104fba",
+   "src/backrooms.js": "a93e85425b1175262458591ec677013ef1098a107325e3ad22a8f83eac2f15b2",
+   "src/buildings.js": "fb6d20432e16fe02077ff188e29dc00271a5cc2d8b209f1b12023906d366564e",
+   "src/calles.js": "58861e17d40a1cfb4eced62e3c122b052c5288bb7c4f9d1e26732883e4009ec8",
+   "src/calles_arreglos.js": "1b3f26bc0a1f309d8a763baeadaae620552566864d73517b7c2d65529cfa7995",
+   "src/calles_casas.js": "55821513272ea7ed2cdf151ea8e2916978000a94b66649202548408be509f240",
+   "src/calles_estilos.js": "3b4f5ff43d3615b0c7ece8b72296e8396488a6348047dcc3f421ff737ada4d33",
+   "src/calles_medianas.js": "467fa3828e0cdcc52c40c411738532425b964793df66f5b5b757faa2492ab52f",
+   "src/calles_tapias.js": "01624d9adb4ea33ea369bd524e00cb11bcdc67a0460aa254200370641f61a519",
+   "src/carinterior.js": "28e00c934df7d9d2b326fc788220c174331c0cc786c4bf0daab0d2f5baeeb61e",
+   "src/casa_annie.js": "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+   "src/casa_lotes.js": "8a122a4ee74ec7e67361712adf82be46fe272efc616f346972b86310337985cc",
+   "src/census.js": "1660fe754bbaf1f4393d7644588822b6647324016a2221bc1cfafa42c86e7c05",
+   "src/chant.js": "e7f6c0c48164e0cc50cd195653c3e0b917dce69f2a43ea72b862987fd4cf18e5",
+   "src/characters.js": "317406457690d3cddb79930d3a569a061316159a57e5e0523ca26b4bd91bd8a4",
+   "src/charbuild.js": "d24e2c4bd7c804b5eb8bd337d08d3209b8aa0321134713e648a0cee4acca4a75",
+   "src/charla.js": "32ae6495cbaccdc9a4e9cd49cab87fbd43658bc05c0e789dfd908d1ae7dbb347",
+   "src/church.js": "3c05d449c5e488ac4ae09ba46c778a23f70de65aedf6018ac0e12f60ab635ac0",
+   "src/churchdoors.js": "8dab14537a57163589b200dbef3b89ae98b493d233bf746f9bf8faf5aecb5e0c",
+   "src/churchtex.js": "9acda8af4db461cebe28c89afb1851d8cce9a1cffb0fad23d93e2427162201ec",
+   "src/collision.js": "741797a927a683ed5a58240d0df9d0bbad777cc3a88de4ff39fbae030ddecc5d",
+   "src/debug.js": "c8c7e4ef90c575850a53061ce4b9e2eb466877288982fc4c35ab122494bce30f",
+   "src/decor.js": "67fa7d5a07c43cf5dfa990f827d748d2a37d0c582745409c3f8d07d880423ace",
+   "src/detalles.js": "e2163d3ffdc1ec6cef4ebb90101c36ba1b1a9b8eb9b4403ad30673b39e7941fa",
+   "src/dogs.js": "f6e02f84c2697689d8fe2b86a824ad03727dffabcf241212cd818abbe8b94664",
+   "src/editor.js": "452ee15ad8dc2b7ca052be3574ff3f05e0c7a991808bbff0c22f68c12ba936ae",
+   "src/effects.js": "dc71e4f7874bed0c8702e5f0ab2dfc0c32716e7b060e5572f542a3cc631be0f6",
+   "src/facades.js": "b5ae217c408182d805ef710fc59880ac8986c74058a6af767b81b68524af1cad",
+   "src/fachadas.js": "e03918611cec7e94a080a295ca8fe20cc1712c788607fb44cb6e712c4fb337f4",
+   "src/fishing.js": "fdc5c066d73efc01c858dd27d9829b603aba63133e90f7a49c03576fc7445626",
+   "src/fleet.js": "7a41c54fa1a19a8dfeb5d6b5aa6691e2c67e5016d2a37b9bcb8181eff3c8a5d4",
+   "src/fm.js": "7a5758332422417a921883ca297849ccb6e5a3fdd5a4769021339d0b871a88ef",
+   "src/game.js": "d76a693fe8f56cf590aaf172f1896ebb091db956b787d366304c5620a3b68717",
+   "src/ground.js": "858360942e5386df3a70e74bdfca254ff9d8194ddbf41a8e82d89efa3b66646f",
+   "src/groundfx.js": "8501f373429ee0340bb67915918d6ebc92e09a8d321e412f0b561e14d0e4c136",
+   "src/gunmodels.js": "da2a8c925de284a0b726a864f24a327d4cdb505c33cca3a34e90254d27a48f19",
+   "src/gunrig.js": "64baab7794a6747cf4c8f0d07110a8162bbdb77ee11f3411d2274c832123ce3e",
+   "src/hero.js": "47a3edc09b2c230502716c51f95f73f98ae4d6d08868165352eca25082089b40",
+   "src/herodata.js": "8db93399acda77be7e45b39a48b1a98290ac6115f1b36cb1651bb22aa13846aa",
+   "src/heroik.js": "10c9678488bd38b260bd25a42bf6a0809a8ea491c3b92cef6b70fd742c6fcc56",
+   "src/heromotion.js": "c9b8183413b7c824f1d095c9214798f34bc78456b511b1098a72eca58c3c4e0a",
+   "src/herowear.js": "efe2a5acb8e46468effbb5820a78a5ce3d7c4d2d3c5b8ea85fb07f9104898535",
+   "src/hiper.js": "0c364f070ef1e6e58cdd0ecbacef59e26d8c3fc20c99d0154893d87f611b0410",
+   "src/hiperinterior.js": "8085cccfd359494e3724ada7dba01ecb78e50509996dcfcb4d6e339b6aea09bb",
+   "src/home.js": "172288e9ee31d6d8d3431bfb0fa9f3ab5670f854f54eb2636f64b4028ecb69be",
+   "src/housekit.js": "22e277465684f93b4964cc4e328d3fa9f672c26cc5e02aafeed47505dc6d0d3a",
+   "src/houses.js": "6344eec05f0edaea8bbd75426962ca3d134f66ec98ce3319d1d74a6469adc518",
+   "src/hud.js": "f7e9ced9540ce154a4c186a158c0235af91fd737184c1e51cb51e7b436d953b6",
+   "src/infill.js": "427cc7dd583c299c39a59f0628e9c28ce0a26c02f8b594b862fc82b5b123910c",
+   "src/input.js": "a754c64b185f4c627641f0cd8dbb8bb2381346ba2d659f4572db1cd9d5a60d69",
+   "src/interiores_datos.js": "c2cc37d404aef2c4655c0c0ab3b17881285cdcff504d2c0dabd96180db71e0c3",
+   "src/interiores_geo.js": "824930bc65d52e366d6943ea8a83e9a5badbc866f6e4b3ed4ff04805a00146ba",
+   "src/interiors.js": "d42c69de2fd724f82fed09e5a87d53a52d771223f334bede88c1356ea3d4ba45",
+   "src/intro.js": "517b012f7ae988cb6a19da2138de135f38505277522091fcf5734da645cd402c",
+   "src/inventory.js": "3664501d19f11d87a832bc3b0b5500ba951ac8ec4e7ccd5ee5de216178eee6d1",
+   "src/items.js": "6145c42cb7a008d858b3feddad50b034d3b02f6e91abbafaf8b590c05f5156ff",
+   "src/jobs.js": "35af3f17deaf3375770be53098b1ea45aa039082293f2cda7e4cc2ae97911b10",
+   "src/kerbs.js": "642d6c4b22aa9ead5822bc9f06c2e5cfdcd0349901f846899137628b70b10e22",
+   "src/landmarks.js": "fb986c83e52a623ebb835ee54bf8b3ef8d2773102403d17bcde352a96eb46eca",
+   "src/locales.js": "964bf2f6230e3c4d457a18479a48cf997d4ce0cd84c771e43e61220031ce01b2",
+   "src/looks.js": "16c79c3b2b1c29e8b66b9d693058ab2cbafa46b66d8981764c43cef7628f93d8",
+   "src/luz_vivienda.js": "e5f077d898fe59c503f828b684f11e858b00a870a51cbc0d0a25fd7a875b2cb1",
+   "src/main.js": "d8ba6554cbac487d0c5182ae5466a2e45c6e9f7fc700cf2c67dc44989fcc92e1",
+   "src/malfeitos.js": "4de260c7af9eedbc53cceda4cc2578dcb3d577e3dc428141d12d279b6d64ef59",
+   "src/mapdata.js": "de1b353f4d537fdf3f847944330215b608de37676723cf4e8c0ffc35609567fe",
+   "src/materials.js": "876f300c5e3a71aec9756cdb0b2f33823a6f75ac14d54eb22961e218fe240dbe",
+   "src/mercadillo.js": "2446ec78b410719c0c41da57c3394ecd070456b5ca97f5444799338fd1695f45",
+   "src/merendero.js": "5652de1a75be72e946c98b60b03892843e93b1235aaf8cfe695ee0bc3697dc78",
+   "src/mhdata.js": "ae9216674dd05ec927e6f2327ed6f48c13591dc5a6657c1aa6476ff63b8d6cbb",
+   "src/missions.js": "2c6eace94996fcc1dcc710c64b8d93c0c47bfe51a65f3c601b948b11135e276d",
+   "src/motion.js": "2d18fcd49ec7e3c99bbe7a19f21f8856083c82ae50fec85ee004926e0e6aebcd",
+   "src/net.js": "0f273585becf013aca8496e9a434452d9bafcd7edc1026fb7b1a3bfa252fcf52",
+   "src/npcmind.js": "96cbe7982040f24970fd41a4e3e1aa7b7765b18731019a58727e1afa21102fa2",
+   "src/objetos.js": "cfaf0d3e8532cc9e969c441da2e90f0d5c00d6682fe468c6673f8f839a58fac3",
+   "src/online.js": "5b26b6ee27b8fb8eed06a53c29ae9268424a1a58ffb93655fcdeba012f339954",
+   "src/paintings.js": "49bcaaa4bd2bf161b1f7747a65b836836220a89190a1795e1e42aa3821990401",
+   "src/pantano.js": "381df7e8a3487230dd52150ce15aaee0e7e12c9bdda225fb602ca17287d9f8cb",
+   "src/peds.js": "1e8ab8eb86e7859168b40ab4e8997e90898f302f9971654c9dc4866d18891802",
+   "src/perks.js": "f7d203d1996d54a898fbd4e557bf36914dbc258bc8abf1372e2bed7eef527efa",
+   "src/phone.js": "34566d3bc389a671620ce321223906595f2d9f784878b3566bd7be824d7673dd",
+   "src/pickups.js": "85daa85cf62f684626ae7745fb2bd8e10921f7d0905fb03aab827d963be47dbd",
+   "src/plastilina.js": "82c2d8d53601eabee1b7b2c80e036c3cc8704f232e700e09b31a206df245eb99",
+   "src/player.js": "bed0e82caf7666f023d1c01e1d1609547d52849222e550ab06afb66dd1f549f2",
+   "src/police.js": "ff0d4dd23e119d31b740a8063b05c59b41dcf76d80ce9f9033b8dbf2f76643f9",
+   "src/pools.js": "0fd240fa28e2c188f3a85e4386f7852179094dcc498e53bff45acbb2575fb389",
+   "src/post_scene.js": "b8a5955d77b352ac00faa5c988576978fe10d3aa333b6625820059379b4f6676",
+   "src/props.js": "49ae51e7a1eaac224d490536ad7b48c6ebdf3d9e1820b48030a07b9c3734ad09",
+   "src/ragdoll.js": "3d6f593438c790fe527771a9d40deecdbcb66885ce81abc6bc23c67e945fa894",
+   "src/rain.js": "9f397041758ed7c62f34e2e0d6b3255170b37fdbc759bbce42aa138a6cbd7621",
+   "src/rendimiento.js": "c5a818d5e1ee9ecc5bb564e4a9982375e01055e7e221e2eed70678c0ca47c1ec",
+   "src/retablo.js": "d7002e2166f768516481ebab6d48e3fbc81662a8b3d9b3f594a74e25484b7445",
+   "src/rotulos.js": "6161659e5873c0f6ff1057c3d287c956858d8e1ee93865001d65e89516d02833",
+   "src/rotulos_datos.js": "d66d91ff73f805315642925476285292c4a4d72feb7b909e8e6e64b974f68b8f",
+   "src/rotulos_tiendas.js": "cf263c3a02dadb1fd2a554d31b8333bb064265df5c0811649af7a1326fce4c27",
+   "src/schools.js": "074b0cc59f6e9a01abbe934d7130615b5aa79952e806465bf3c2c4ac88778165",
+   "src/shops.js": "848ddaa0e293187d248a3fe5ef9881aee03a23b70c1b3cd241119d5b6eb2a83a",
+   "src/signs.js": "ffab307b215b50ed375834a7914735ebcf1aeddf931d2469288bad2dc36133bd",
+   "src/sky.js": "c169f28e2af378201ccf30f9810f814ca527cca34917c038c53f0d289ebfa95d",
+   "src/solidez.js": "a44f4e4136c5cb8feb8f798c3364f95f3933d5e5a1c47d3019c6c490ef703c41",
+   "src/springs.js": "c8f4f7fb47b25f64a9c586932a744273a206e0b3d888920529aab289450440eb",
+   "src/statues.js": "225c47d462b9d46580d4932f2123918fe6b8464f7e134af5be2ab5a49fc459b1",
+   "src/streetlife.js": "828bea43a1438c51b6a5e9461df2138b7e5a4c278b3473f02c96c63bb1f74950",
+   "src/style.js": "7e40de7592ce023d259d664bc00481ce433db091f9044657d02a7282066849c8",
+   "src/tapias.js": "156e257f6720b563d7f358480534a497b42b97ae478e5cdccc05d8e59932ad32",
+   "src/terrace.js": "6aa9196f6ac138c2d73f7bd1e3d7da335b12f4e040a2e7df937ae5dbfa4a0f0e",
+   "src/texturas/comercio.js": "8956f76bb940612546d544be71ad5876c3f6b099ee247124c4c2e704e4cfe628",
+   "src/texturas/servicios.js": "c84e631bafbd70d364c41536be052657888e47cb42d0f0344fec2a33094adb4e",
+   "src/texturas/tiendas_a.js": "aa5524a267a2cc79980b76c792961a6ddeba210a09f7badf2e90653eebdb31ba",
+   "src/texturas/tiendas_b.js": "1dc5554c91c29a26b4dc4d7a82250e59987edf89df26bc93a3a531b01193d901",
+   "src/texturas/vivienda_a.js": "f65a89a841b6d26cbd83585e78610b071e610048096cfacb9830b5e44529e661",
+   "src/texturas/vivienda_b.js": "5cb5247ff552602801b8e970a42d6cbef6cf61782de23ebf5eddd888b75d8b35",
+   "src/textures.js": "4af4a002959c421a1000a4cd28526769c62c93d246e17381855dff5903c9af02",
+   "src/townplus.js": "d54f9aea589bc2f9e88f71a0e661f9d903e6c0c58a085cd125a6dccaa3858610",
+   "src/traffic.js": "0dfa86b0f58c09be9c09eb395975b56a3b4ed30a801bf03b5f729e250fcb81c9",
+   "src/trees.js": "140e0361a9bb49aee3a27480a9a87170addeeb7fb92029eb031336ebe612c0a7",
+   "src/util.js": "8c5dcfb913978c17e00966a10ee18628c986de7d841890832ac31fa010720601",
+   "src/vegetation.js": "608b8befb8227a482219dd105791baf3100eb90181b827d8cb73adb51862ca53",
+   "src/vehicles.js": "fc4a1e03cb338b1cc7c4346b00727792a07bf5ab2f48e559e1d299fea7c053e8",
+   "src/venuekit.js": "cb725675bc8f0f375c125b53a1f7b74ed4c38fb9127ac0fa1b9f6f5101fb6042",
+   "src/venues.js": "bbac64a2dabc3202d8adca9a1ef016ca35e50fe8d143c3c4c255d71e06361dfd",
+   "src/viewmodel.js": "95ec0e2dc541c0123932be27966ff00b6078763911193a59c11d2301357a8730",
+   "src/weapons.js": "831be8f4b74196d751f09c593b755e2c09d58592a6c54e513e5d3fe11848f78b",
+   "src/weather.js": "dc0a7cb67f9cc97a46d644269ec760f2ba4d4cc7427ef98d3638d8ce88839cd8",
+   "src/windowview.js": "36197ac44564cf7f45f0a9d79125eb5d2e5396679b0055f9a5b21b061de5c82b",
+   "src/world.js": "512cfbdad3aa8f395b6f7b846bfaf210c117d6603aebeb11e8a0360615479d28",
+   "src/zombies.js": "be7a0b8f06f9874e2ecdf58344063975f2839dd316139170747f06697d037b93"
+  }
+ },
+ "changed_sources": [
+  "src/game.js",
+  "src/luz_vivienda.js"
+ ],
+ "fixtures": [
+  {
+   "seed": 3886,
+   "kit": "vivienda_trastero",
+   "planta": 1,
+   "view": {
+    "encuadre": "uso",
+    "x": -5201.645711675622,
+    "y": 4.7,
+    "z": -5190.598622429828,
+    "objetivo": [
+     -5200.843029696829,
+     3.95,
+     -5192.387699005529
+    ],
+    "fov": 68
+   },
+   "source": ".cache/calidad/tanda8-base/data/interiores/fichas/casa_trastero.json",
+   "sha256": "f2ea8c41ed5565cadfe4f65000552e288f3858c2ddb1650bf2dc7b6464c65ddd"
+  },
+  {
+   "seed": 2786,
+   "kit": "vivienda_cocina",
+   "planta": 0,
+   "view": {
+    "encuadre": "uso",
+    "x": -5202.484797229434,
+    "y": 1.6,
+    "z": -5191.932200476764,
+    "objetivo": [
+     -5203.921341792224,
+     1.05,
+     -5191.569619883765
+    ],
+    "fov": 60
+   },
+   "source": ".cache/calidad/tanda8-base/data/interiores/fichas/casa_cocina.json",
+   "sha256": "a9ad37ef8212c0c4b1c3a6e2b6bfe1f4b42f46f7b2682a19b560662255f43ba8"
+  }
+ ],
+ "scope": [
+  "exterior_before_enter_day",
+  "trastero_day",
+  "trastero_night",
+  "trastero_lamp_night",
+  "trastero_blackout_night",
+  "exterior_after_exit_day",
+  "cocina_day",
+  "cocina_night"
+ ],
+ "expected_domestic_factors": {
+  "environment": 0.55,
+  "bounce": 0.25
+ },
+ "limitations": [
+  "Static poses, not temporal stability",
+  "HTML HUD excluded",
+  "Existing street door maps explicitly seeded review interiors"
+ ],
+ "errors": [],
+ "before": {
+  "url": "http://localhost:8920/.cache/calidad/tanda8-base/index.html?estilo=plastilina",
+  "images": [
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": false,
+     "clearGlass": false,
+     "emissive": null,
+     "outdoor": null,
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     }
+    },
+    "state": {
+     "kind": null,
+     "profile": null,
+     "profileSeed": null,
+     "layout": null,
+     "powered": null,
+     "origin": null,
+     "rooms": [],
+     "life": {
+      "attached": false,
+      "t": null,
+      "tvOn": null,
+      "people": []
+     },
+     "houseLights": []
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      874.2042769686482,
+      1.65,
+      38.6601320584398
+     ],
+     "rotation": [
+      -3.0632948078867366,
+      -0.026091919343553704,
+      -3.139545762593367,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "exterior_before_enter_day",
+    "file": "before_exterior_before_enter_day.png",
+    "sha256": "8d61e1459d01261868b21d857ef2e8fe32bc1a3b5357c7cf865a75871852bef0"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 3.848,
+      "hemi": 1.35
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 0.7425000000000002,
+        "sun": 0.46175999999999995
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_day",
+    "file": "before_trastero_day.png",
+    "sha256": "eb1f1fe2f7a67775e51366d44a431b29e07293757d6e857f8f708ea23878aa57"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_night",
+    "file": "before_trastero_night.png",
+    "sha256": "c88846d97774d4f542c52fb72a2db146bd4f4b2978dade941ea29db75ebdd4c7"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      1.2327744709798796,
+      0.5876191441073803,
+      -1.0057060441211736,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_lamp_night",
+    "file": "before_trastero_lamp_night.png",
+    "sha256": "723c0ba20b747fc23f8e354e81b5f6ae72b18c71e7e66d02de7dc20171f7f290"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 0.23399999999999999,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": false,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 0,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 0,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 0,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 0,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 0,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 0,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 0,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 0,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_blackout_night",
+    "file": "before_trastero_blackout_night.png",
+    "sha256": "c9d99b3998b612f20bc58984664f587c27fdff348f609ea5e6972379c9fb23d4"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": false,
+     "clearGlass": false,
+     "emissive": null,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     }
+    },
+    "state": {
+     "kind": null,
+     "profile": null,
+     "profileSeed": null,
+     "layout": null,
+     "powered": null,
+     "origin": null,
+     "rooms": [],
+     "life": {
+      "attached": false,
+      "t": null,
+      "tvOn": null,
+      "people": []
+     },
+     "houseLights": []
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      874.2042769686482,
+      1.65,
+      38.6601320584398
+     ],
+     "rotation": [
+      -3.0632948078867366,
+      -0.026091919343553704,
+      -3.139545762593367,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "exterior_after_exit_day",
+    "file": "before_exterior_after_exit_day.png",
+    "sha256": "630d90bbcf7eb0f4a92fa5605826a9a242a53320f94394054c5b1d827f9c2123"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 3.848,
+      "hemi": 1.35
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 0.7425000000000002,
+        "sun": 0.46175999999999995
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "matrimonio",
+     "profileSeed": 2786,
+     "layout": "pasillo",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "pasillo",
+       "type": "pasillo",
+       "lv": 0,
+       "x0": -5200.70325267618,
+       "z0": -5200,
+       "x1": -5199.29674732382,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "L0",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5200,
+       "x1": -5200.70325267618,
+       "z1": -5195.455048651527
+      },
+      {
+       "id": "L1",
+       "type": "dorm",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5195.455048651527,
+       "x1": -5200.70325267618,
+       "z1": -5192.274619907606
+      },
+      {
+       "id": "L2",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5192.274619907606,
+       "x1": -5200.70325267618,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "R0",
+       "type": "comedor",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5200,
+       "x1": -5195.733658217313,
+       "z1": -5196.223508313997
+      },
+      {
+       "id": "R1",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5196.223508313997,
+       "x1": -5195.733658217313,
+       "z1": -5194.094807367748
+      },
+      {
+       "id": "R2",
+       "type": "despensa",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5194.094807367748,
+       "x1": -5195.733658217313,
+       "z1": -5189.421124650585
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": false,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5200,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       },
+       {
+        "i": 1,
+        "state": "idle",
+        "x": -5203.116341782687,
+        "y": 0,
+        "z": -5191.574619907607,
+        "heading": 4.71238898038469,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5194.710562325292
+       ],
+       "intensity": 10.578875349415465,
+       "distance": 10.578875349415465,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5197.727524325764
+       ],
+       "intensity": 9.18210132459032,
+       "distance": 10.462881557294363,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5193.864834279567
+       ],
+       "intensity": 7.626288323675643,
+       "distance": 8.752447705507755,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5190.847872279095
+       ],
+       "intensity": 7.253522517044169,
+       "distance": 8.290395839316604,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5198.111754156998
+       ],
+       "intensity": 8.305912443907614,
+       "distance": 9.53742105485274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5195.1591578408725
+       ],
+       "intensity": 6.427120368827894,
+       "distance": 7.1605110007239885,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5191.757966009167
+       ],
+       "intensity": 9.328879352574623,
+       "distance": 10.610022446872529,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      -5202.484797229434,
+      1.6,
+      -5191.932200476764
+     ],
+     "rotation": [
+      -2.1536379702184583,
+      1.1408363439841431,
+      2.1982668772629426,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "cocina_day",
+    "file": "before_cocina_day.png",
+    "sha256": "b23cae65cb07773b9d3de265d14f3d2122c9f4e5ad2486889179365b3bc18e4e"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "matrimonio",
+     "profileSeed": 2786,
+     "layout": "pasillo",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "pasillo",
+       "type": "pasillo",
+       "lv": 0,
+       "x0": -5200.70325267618,
+       "z0": -5200,
+       "x1": -5199.29674732382,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "L0",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5200,
+       "x1": -5200.70325267618,
+       "z1": -5195.455048651527
+      },
+      {
+       "id": "L1",
+       "type": "dorm",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5195.455048651527,
+       "x1": -5200.70325267618,
+       "z1": -5192.274619907606
+      },
+      {
+       "id": "L2",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5192.274619907606,
+       "x1": -5200.70325267618,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "R0",
+       "type": "comedor",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5200,
+       "x1": -5195.733658217313,
+       "z1": -5196.223508313997
+      },
+      {
+       "id": "R1",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5196.223508313997,
+       "x1": -5195.733658217313,
+       "z1": -5194.094807367748
+      },
+      {
+       "id": "R2",
+       "type": "despensa",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5194.094807367748,
+       "x1": -5195.733658217313,
+       "z1": -5189.421124650585
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": false,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5200,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       },
+       {
+        "i": 1,
+        "state": "idle",
+        "x": -5203.116341782687,
+        "y": 0,
+        "z": -5191.574619907607,
+        "heading": 4.71238898038469,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5194.710562325292
+       ],
+       "intensity": 10.578875349415465,
+       "distance": 10.578875349415465,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5197.727524325764
+       ],
+       "intensity": 9.18210132459032,
+       "distance": 10.462881557294363,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5193.864834279567
+       ],
+       "intensity": 7.626288323675643,
+       "distance": 8.752447705507755,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5190.847872279095
+       ],
+       "intensity": 7.253522517044169,
+       "distance": 8.290395839316604,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5198.111754156998
+       ],
+       "intensity": 8.305912443907614,
+       "distance": 9.53742105485274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5195.1591578408725
+       ],
+       "intensity": 6.427120368827894,
+       "distance": 7.1605110007239885,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5191.757966009167
+       ],
+       "intensity": 9.328879352574623,
+       "distance": 10.610022446872529,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      -5202.484797229434,
+      1.6,
+      -5191.932200476764
+     ],
+     "rotation": [
+      -2.1536379702184583,
+      1.1408363439841431,
+      2.1982668772629426,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "cocina_night",
+    "file": "before_cocina_night.png",
+    "sha256": "ed397959344d3633964ef767d3b22d1ae6a9144c3e452a324d8bafa867b07f14"
+   }
+  ],
+  "entries": [
+   {
+    "seed": 3886,
+    "kit": "vivienda_trastero",
+    "planta": 1,
+    "entrance": {
+     "x": -5202.4285583781075,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 3886,
+    "kit": "vivienda_trastero",
+    "planta": 1,
+    "entrance": {
+     "x": -5202.4285583781075,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 2786,
+    "kit": "vivienda_cocina",
+    "planta": 0,
+    "entrance": {
+     "x": -5200,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 2786,
+    "kit": "vivienda_cocina",
+    "planta": 0,
+    "entrance": {
+     "x": -5200,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   }
+  ],
+  "street_fixture": {
+   "door": {
+    "seed": 2786,
+    "name": "Casa de Paco y Mari",
+    "x": 874.3220378230882,
+    "z": 43.15859094801093,
+    "fx": 874.4201718684549,
+    "fz": 46.90730668932021
+   },
+   "camera": {
+    "x": 874.2042769686482,
+    "y": 1.65,
+    "z": 38.6601320584398,
+    "objetivo": [
+     874.3377392703469,
+     1.25,
+     43.75838546662042
+    ],
+    "fov": 60
+   },
+   "mapping": "Existing street door; interior model uses the explicitly recorded fixture seed"
+  }
+ },
+ "after": {
+  "url": "http://localhost:8920/index.html?estilo=plastilina",
+  "images": [
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": false,
+     "clearGlass": false,
+     "emissive": null,
+     "outdoor": null,
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     }
+    },
+    "state": {
+     "kind": null,
+     "profile": null,
+     "profileSeed": null,
+     "layout": null,
+     "powered": null,
+     "origin": null,
+     "rooms": [],
+     "life": {
+      "attached": false,
+      "t": null,
+      "tvOn": null,
+      "people": []
+     },
+     "houseLights": []
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      874.2042769686482,
+      1.65,
+      38.6601320584398
+     ],
+     "rotation": [
+      -3.0632948078867366,
+      -0.026091919343553704,
+      -3.139545762593367,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "exterior_before_enter_day",
+    "file": "after_exterior_before_enter_day.png",
+    "sha256": "1b065255502969fc3de4f4784a6e4e8d9b186a563367ac752c3ca9503d120c6b"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 3.848,
+      "hemi": 1.35
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.33,
+        "bounce": 0.2375,
+        "hemi": 0.7425000000000002,
+        "sun": 0.46175999999999995
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_day",
+    "file": "after_trastero_day.png",
+    "sha256": "64d6efff3ab64e00dcc13001a670161a60b882d039cbc682e7d3d8ad804e9848"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.24750000000000003,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_night",
+    "file": "after_trastero_night.png",
+    "sha256": "9a89cefa0843eee5656f2aadfe86f7435754d593c7b8cf535953d2b58c6e0f78"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.24750000000000003,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 11,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 7.015127625176682,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 10.676762885968945,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 8.45117525731263,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 11,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 7.648437932574749,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 9.575967376320001,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 5.815127625176682,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      1.2327744709798796,
+      0.5876191441073803,
+      -1.0057060441211736,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_lamp_night",
+    "file": "after_trastero_lamp_night.png",
+    "sha256": "6cc55f37382ffb02836116e9561c8ce0ec88c6d6b72e0cabc04b4b70bc122bb3"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": [
+      {
+       "main": false,
+       "ambient": {
+        "environment": 0.45,
+        "bounce": 0,
+        "hemi": 1.3,
+        "sun": 0.9
+       }
+      }
+     ]
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.24750000000000003,
+        "bounce": 0,
+        "hemi": 0.23399999999999999,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.23399999999999999,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "estudiante",
+     "profileSeed": 3886,
+     "layout": "dosPlantas",
+     "powered": false,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "salon",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5196.207699004934
+      },
+      {
+       "id": "hall",
+       "type": "hall",
+       "lv": 0,
+       "x0": -5198.671441621892,
+       "z0": -5196.207699004934,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "cocina",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5196.207699004934,
+       "x1": -5198.671441621892,
+       "z1": -5191.998622429827
+      },
+      {
+       "id": "bano",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5203.628558378108,
+       "z0": -5191.998622429827,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "A0",
+       "type": "dormJoven",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5200,
+       "x1": -5196.371441621892,
+       "z1": -5195.007699004933
+      },
+      {
+       "id": "A1",
+       "type": "estudio",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5195.007699004933,
+       "x1": -5198.671441621892,
+       "z1": -5192.707699004934
+      },
+      {
+       "id": "A2",
+       "type": "trastero",
+       "lv": 1,
+       "x0": -5203.628558378108,
+       "z0": -5192.707699004934,
+       "x1": -5198.671441621892,
+       "z1": -5189.192571379756
+      },
+      {
+       "id": "rellano",
+       "type": "hall",
+       "lv": 1,
+       "x0": -5198.671441621892,
+       "z0": -5195.007699004933,
+       "x1": -5196.371441621892,
+       "z1": -5189.192571379756
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": true,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5202.4285583781075,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5198.103849502467
+       ],
+       "intensity": 0,
+       "distance": 13.639762336945909,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        2.62,
+        -5192.7001351923445
+       ],
+       "intensity": 0,
+       "distance": 7.015127625176682,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5194.10316071738
+       ],
+       "intensity": 0,
+       "distance": 11.876304811097345,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        2.62,
+        -5190.595596904792
+       ],
+       "intensity": 0,
+       "distance": 9.696962272316487,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5200,
+        5.52,
+        -5197.503849502466
+       ],
+       "intensity": 0,
+       "distance": 15.649691617881476,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5193.857699004933
+       ],
+       "intensity": 0,
+       "distance": 8.779137276842274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5201.15,
+        5.52,
+        -5190.9501351923445
+       ],
+       "intensity": 0,
+       "distance": 10.85321661189714,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.521441621892,
+        5.52,
+        -5192.100135192345
+       ],
+       "intensity": 0,
+       "distance": 6,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 68,
+     "position": [
+      -5201.645711675622,
+      4.7,
+      -5190.598622429828
+     ],
+     "rotation": [
+      -0.3969568364896918,
+      -0.3923207288357448,
+      -0.15892673304988883,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "trastero_blackout_night",
+    "file": "after_trastero_blackout_night.png",
+    "sha256": "5e36c31106abe258534af2320008becea24dc0601e7ab1f26bf44b4c5e2d5807"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": false,
+     "clearGlass": false,
+     "emissive": null,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.6,
+        "bounce": 0.95,
+        "hemi": 1.35,
+        "sun": 3.848
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 1.35,
+      "sun": 3.848
+     }
+    },
+    "state": {
+     "kind": null,
+     "profile": null,
+     "profileSeed": null,
+     "layout": null,
+     "powered": null,
+     "origin": null,
+     "rooms": [],
+     "life": {
+      "attached": false,
+      "t": null,
+      "tvOn": null,
+      "people": []
+     },
+     "houseLights": []
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      874.2042769686482,
+      1.65,
+      38.6601320584398
+     ],
+     "rotation": [
+      -3.0632948078867366,
+      -0.026091919343553704,
+      -3.139545762593367,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "exterior_after_exit_day",
+    "file": "after_exterior_after_exit_day.png",
+    "sha256": "1c255d2c7a82ac669c54734e5fc4a74a46eaf3d049d5834d4d691295dc766396"
+   },
+   {
+    "hour": 12,
+    "night": 0,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.6,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 3.848,
+      "hemi": 1.35
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "viewBefore": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.33,
+        "bounce": 0.2375,
+        "hemi": 0.7425000000000002,
+        "sun": 0.46175999999999995
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     },
+     "after": {
+      "environment": 0.6,
+      "bounce": 0.95,
+      "hemi": 0.7425000000000002,
+      "sun": 0.46175999999999995
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "matrimonio",
+     "profileSeed": 2786,
+     "layout": "pasillo",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "pasillo",
+       "type": "pasillo",
+       "lv": 0,
+       "x0": -5200.70325267618,
+       "z0": -5200,
+       "x1": -5199.29674732382,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "L0",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5200,
+       "x1": -5200.70325267618,
+       "z1": -5195.455048651527
+      },
+      {
+       "id": "L1",
+       "type": "dorm",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5195.455048651527,
+       "x1": -5200.70325267618,
+       "z1": -5192.274619907606
+      },
+      {
+       "id": "L2",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5192.274619907606,
+       "x1": -5200.70325267618,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "R0",
+       "type": "comedor",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5200,
+       "x1": -5195.733658217313,
+       "z1": -5196.223508313997
+      },
+      {
+       "id": "R1",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5196.223508313997,
+       "x1": -5195.733658217313,
+       "z1": -5194.094807367748
+      },
+      {
+       "id": "R2",
+       "type": "despensa",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5194.094807367748,
+       "x1": -5195.733658217313,
+       "z1": -5189.421124650585
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": false,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5200,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       },
+       {
+        "i": 1,
+        "state": "idle",
+        "x": -5203.116341782687,
+        "y": 0,
+        "z": -5191.574619907607,
+        "heading": 4.71238898038469,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5194.710562325292
+       ],
+       "intensity": 10.578875349415465,
+       "distance": 10.578875349415465,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5197.727524325764
+       ],
+       "intensity": 9.18210132459032,
+       "distance": 10.462881557294363,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5193.864834279567
+       ],
+       "intensity": 7.626288323675643,
+       "distance": 8.752447705507755,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5190.847872279095
+       ],
+       "intensity": 7.253522517044169,
+       "distance": 8.290395839316604,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5198.111754156998
+       ],
+       "intensity": 8.305912443907614,
+       "distance": 9.53742105485274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5195.1591578408725
+       ],
+       "intensity": 6.427120368827894,
+       "distance": 7.1605110007239885,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5191.757966009167
+       ],
+       "intensity": 9.328879352574623,
+       "distance": 10.610022446872529,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.14,
+     "threshold": 0.95,
+     "radius": 0.75
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      -5202.484797229434,
+      1.6,
+      -5191.932200476764
+     ],
+     "rotation": [
+      -2.1536379702184583,
+      1.1408363439841431,
+      2.1982668772629426,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "cocina_day",
+    "file": "after_cocina_day.png",
+    "sha256": "4d4de40b3b1169f8a8ead7f588a3e8adb89936b899d7b845a66b6d9cc6f06139"
+   },
+   {
+    "hour": 23,
+    "night": 1,
+    "quality": "alta",
+    "qualityMode": "manual",
+    "dynRes": false,
+    "exposure": 0.9,
+    "weather": {
+     "cover": 0.42,
+     "over": 0,
+     "rain": 0,
+     "snow": 0,
+     "fog": 0,
+     "fogFar": 3000,
+     "storm": 0,
+     "wind": 0,
+     "windX": 0,
+     "windZ": 0,
+     "flash": 0
+    },
+    "environment": {
+     "forced": true,
+     "updates": 1,
+     "replaced": false,
+     "intensity": 0.45,
+     "timer": 3
+    },
+    "window": {
+     "active": true,
+     "clearGlass": true,
+     "emissive": 0,
+     "outdoor": {
+      "sun": 0.9,
+      "hemi": 1.3
+     },
+     "renderedPasses": []
+    },
+    "renderAmbient": {
+     "before": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "viewBefore": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "insideMain": [
+      {
+       "main": true,
+       "ambient": {
+        "environment": 0.24750000000000003,
+        "bounce": 0,
+        "hemi": 0.7150000000000001,
+        "sun": 0.108
+       }
+      }
+     ],
+     "viewAfter": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     },
+     "after": {
+      "environment": 0.45,
+      "bounce": 0,
+      "hemi": 0.7150000000000001,
+      "sun": 0.108
+     }
+    },
+    "state": {
+     "kind": "vecino",
+     "profile": "matrimonio",
+     "profileSeed": 2786,
+     "layout": "pasillo",
+     "powered": true,
+     "origin": {
+      "x": -5200,
+      "z": -5200
+     },
+     "rooms": [
+      {
+       "id": "pasillo",
+       "type": "pasillo",
+       "lv": 0,
+       "x0": -5200.70325267618,
+       "z0": -5200,
+       "x1": -5199.29674732382,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "L0",
+       "type": "salon",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5200,
+       "x1": -5200.70325267618,
+       "z1": -5195.455048651527
+      },
+      {
+       "id": "L1",
+       "type": "dorm",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5195.455048651527,
+       "x1": -5200.70325267618,
+       "z1": -5192.274619907606
+      },
+      {
+       "id": "L2",
+       "type": "cocina",
+       "lv": 0,
+       "x0": -5204.266341782687,
+       "z0": -5192.274619907606,
+       "x1": -5200.70325267618,
+       "z1": -5189.421124650585
+      },
+      {
+       "id": "R0",
+       "type": "comedor",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5200,
+       "x1": -5195.733658217313,
+       "z1": -5196.223508313997
+      },
+      {
+       "id": "R1",
+       "type": "bano",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5196.223508313997,
+       "x1": -5195.733658217313,
+       "z1": -5194.094807367748
+      },
+      {
+       "id": "R2",
+       "type": "despensa",
+       "lv": 0,
+       "x0": -5199.29674732382,
+       "z0": -5194.094807367748,
+       "x1": -5195.733658217313,
+       "z1": -5189.421124650585
+      }
+     ],
+     "life": {
+      "attached": true,
+      "t": 0,
+      "tvOn": false,
+      "people": [
+       {
+        "i": 0,
+        "state": "host",
+        "x": -5200,
+        "y": 0,
+        "z": -5197.1,
+        "heading": 3.141592653589793,
+        "visible": true
+       },
+       {
+        "i": 1,
+        "state": "idle",
+        "x": -5203.116341782687,
+        "y": 0,
+        "z": -5191.574619907607,
+        "heading": 4.71238898038469,
+        "visible": true
+       }
+      ]
+     },
+     "houseLights": [
+      {
+       "position": [
+        -5200,
+        2.62,
+        -5194.710562325292
+       ],
+       "intensity": 10.578875349415465,
+       "distance": 10.578875349415465,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5197.727524325764
+       ],
+       "intensity": 9.18210132459032,
+       "distance": 10.462881557294363,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5193.864834279567
+       ],
+       "intensity": 7.626288323675643,
+       "distance": 8.752447705507755,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5202.484797229434,
+        2.62,
+        -5190.847872279095
+       ],
+       "intensity": 7.253522517044169,
+       "distance": 8.290395839316604,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5198.111754156998
+       ],
+       "intensity": 8.305912443907614,
+       "distance": 9.53742105485274,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5195.1591578408725
+       ],
+       "intensity": 6.427120368827894,
+       "distance": 7.1605110007239885,
+       "decay": 1.6
+      },
+      {
+       "position": [
+        -5197.515202770566,
+        2.62,
+        -5191.757966009167
+       ],
+       "intensity": 9.328879352574623,
+       "distance": 10.610022446872529,
+       "decay": 1.6
+      }
+     ]
+    },
+    "bloom": {
+     "strength": 0.6,
+     "threshold": 0.85,
+     "radius": 0.6
+    },
+    "canvas": [
+     1920,
+     1080
+    ],
+    "pr": 1.5,
+    "camera": {
+     "fov": 60,
+     "position": [
+      -5202.484797229434,
+      1.6,
+      -5191.932200476764
+     ],
+     "rotation": [
+      -2.1536379702184583,
+      1.1408363439841431,
+      2.1982668772629426,
+      "XYZ"
+     ],
+     "near": 0.25,
+     "far": 4200,
+     "aspect": 1.7777777777777777
+    },
+    "scene_samples": 4,
+    "composer_samples": 0,
+    "direct": true,
+    "gl_error": 0,
+    "errors": [],
+    "name": "cocina_night",
+    "file": "after_cocina_night.png",
+    "sha256": "2f4f1124f1b0c5ab031bb00cbca40d0e57ac5e167ecf1332b4db975de7cf4bcc"
+   }
+  ],
+  "entries": [
+   {
+    "seed": 3886,
+    "kit": "vivienda_trastero",
+    "planta": 1,
+    "entrance": {
+     "x": -5202.4285583781075,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 3886,
+    "kit": "vivienda_trastero",
+    "planta": 1,
+    "entrance": {
+     "x": -5202.4285583781075,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 2786,
+    "kit": "vivienda_cocina",
+    "planta": 0,
+    "entrance": {
+     "x": -5200,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   },
+   {
+    "seed": 2786,
+    "kit": "vivienda_cocina",
+    "planta": 0,
+    "entrance": {
+     "x": -5200,
+     "z": -5198.8
+    },
+    "windowAttached": true,
+    "clearGlass": true,
+    "life": true
+   }
+  ],
+  "street_fixture": {
+   "door": {
+    "seed": 2786,
+    "name": "Casa de Paco y Mari",
+    "x": 874.3220378230882,
+    "z": 43.15859094801093,
+    "fx": 874.4201718684549,
+    "fz": 46.90730668932021
+   },
+   "camera": {
+    "x": 874.2042769686482,
+    "y": 1.65,
+    "z": 38.6601320584398,
+    "objetivo": [
+     874.3377392703469,
+     1.25,
+     43.75838546662042
+    ],
+    "fov": 60
+   },
+   "mapping": "Existing street door; interior model uses the explicitly recorded fixture seed"
+  }
+ },
+ "comparability": [
+  {
+   "name": "exterior_before_enter_day",
+   "different_invariants": []
+  },
+  {
+   "name": "trastero_day",
+   "different_invariants": []
+  },
+  {
+   "name": "trastero_night",
+   "different_invariants": []
+  },
+  {
+   "name": "trastero_lamp_night",
+   "different_invariants": []
+  },
+  {
+   "name": "trastero_blackout_night",
+   "different_invariants": []
+  },
+  {
+   "name": "exterior_after_exit_day",
+   "different_invariants": []
+  },
+  {
+   "name": "cocina_day",
+   "different_invariants": []
+  },
+  {
+   "name": "cocina_night",
+   "different_invariants": []
+  },
+  {
+   "name": "before_exterior_return",
+   "different_invariants": []
+  },
+  {
+   "name": "after_exterior_return",
+   "different_invariants": []
+  }
+ ],
+ "finished_utc": "2026-10-17T18:14:26.804654+00:00"
+}

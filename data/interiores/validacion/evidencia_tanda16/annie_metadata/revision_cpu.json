@@ -1,0 +1,301 @@
+{
+  "state": "PASS_CPU_NOT_BROWSER",
+  "before": "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+  "after": "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09",
+  "rows": [
+    {
+      "seed": 12,
+      "red": [
+        "cocina: receta efectiva: composicion sin metadatos requeridos",
+        "cocina: receta efectiva: reserva de programa ausente o reducida",
+        "cocina: receta efectiva: reserva de programa ausente o reducida",
+        "cocina: receta efectiva: reserva de programa ausente o reducida"
+      ],
+      "green": [],
+      "onlyMetadataAdded": true,
+      "meshGeometryAndPosesExact": true,
+      "collidersExact": true,
+      "doors": 7,
+      "lights": 9,
+      "meshes": 60,
+      "actions": [
+        {
+          "type": "exit",
+          "x": -9700,
+          "z": -9699.3,
+          "r": 1.1,
+          "label": "Salir a la calle"
+        },
+        {
+          "type": "mirror",
+          "x": -9698.55,
+          "z": -9692.8,
+          "r": 0.6,
+          "label": "Mirarse al espejo"
+        },
+        {
+          "type": "mirror",
+          "x": -9698.2,
+          "z": -9699.05,
+          "r": 0.7,
+          "y": 3.1,
+          "label": "Arreglarse en el tocador"
+        },
+        {
+          "type": "bed",
+          "x": -9700.6,
+          "z": -9697,
+          "r": 1,
+          "y": 3.1,
+          "label": "Echarse una siesta en su cama"
+        },
+        {
+          "type": "safe",
+          "x": -9697.84,
+          "z": -9697.25,
+          "r": 0.75,
+          "y": 3.1,
+          "label": "Caja fuerte"
+        },
+        {
+          "x": -9702.235,
+          "z": -9698.785,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "tv",
+          "label": "Encender la tele",
+          "r": 0.9
+        },
+        {
+          "x": -9698.835,
+          "z": -9699.135,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "read",
+          "label": "Hojear un libro",
+          "r": 0.9
+        },
+        {
+          "x": -9701.485,
+          "z": -9697.235,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "drawer",
+          "label": "Registrar los cajones",
+          "r": 0.9
+        },
+        {
+          "x": -9699.435,
+          "z": -9696.735,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9702.135,
+          "z": -9692.685,
+          "y": 0,
+          "sala": "cocina",
+          "type": "eat",
+          "label": "Picar algo de la cocina",
+          "r": 0.9
+        },
+        {
+          "x": -9699.885,
+          "z": -9692.735,
+          "y": 0,
+          "sala": "cocina",
+          "type": "fridge",
+          "label": "Abrir la nevera",
+          "r": 0.9
+        },
+        {
+          "x": -9702.685,
+          "z": -9690.485,
+          "y": 0,
+          "sala": "bano",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9702.335,
+          "z": -9694.085,
+          "y": 3.1,
+          "sala": "banoAlto",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9702.335,
+          "z": -9691.735,
+          "y": 3.1,
+          "sala": "estudio",
+          "type": "read",
+          "label": "Hojear un libro",
+          "r": 0.9
+        },
+        {
+          "x": -9702.385,
+          "z": -9691.685,
+          "y": 3.1,
+          "sala": "estudio",
+          "type": "drawer",
+          "label": "Registrar los cajones",
+          "r": 0.9
+        }
+      ],
+      "stairsHeight": 1.5500000000005125
+    },
+    {
+      "seed": 13,
+      "red": [
+        "cocina: receta efectiva: composicion sin metadatos requeridos",
+        "cocina: receta efectiva: reserva de programa ausente o reducida",
+        "cocina: receta efectiva: reserva de programa ausente o reducida",
+        "cocina: receta efectiva: reserva de programa ausente o reducida"
+      ],
+      "green": [],
+      "onlyMetadataAdded": true,
+      "meshGeometryAndPosesExact": true,
+      "collidersExact": true,
+      "doors": 7,
+      "lights": 9,
+      "meshes": 60,
+      "actions": [
+        {
+          "type": "exit",
+          "x": -9700,
+          "z": -9699.3,
+          "r": 1.1,
+          "label": "Salir a la calle"
+        },
+        {
+          "type": "mirror",
+          "x": -9698.55,
+          "z": -9692.8,
+          "r": 0.6,
+          "label": "Mirarse al espejo"
+        },
+        {
+          "type": "mirror",
+          "x": -9698.2,
+          "z": -9699.05,
+          "r": 0.7,
+          "y": 3.1,
+          "label": "Arreglarse en el tocador"
+        },
+        {
+          "type": "bed",
+          "x": -9700.6,
+          "z": -9697,
+          "r": 1,
+          "y": 3.1,
+          "label": "Echarse una siesta en su cama"
+        },
+        {
+          "type": "safe",
+          "x": -9697.84,
+          "z": -9697.25,
+          "r": 0.75,
+          "y": 3.1,
+          "label": "Caja fuerte"
+        },
+        {
+          "x": -9702.285,
+          "z": -9697.185,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "tv",
+          "label": "Encender la tele",
+          "r": 0.9
+        },
+        {
+          "x": -9700.735,
+          "z": -9697.085,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "read",
+          "label": "Hojear un libro",
+          "r": 0.9
+        },
+        {
+          "x": -9698.885,
+          "z": -9699.035,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "drawer",
+          "label": "Registrar los cajones",
+          "r": 0.9
+        },
+        {
+          "x": -9702.235,
+          "z": -9698.685,
+          "y": 0,
+          "sala": "saloncito",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9702.135,
+          "z": -9692.685,
+          "y": 0,
+          "sala": "cocina",
+          "type": "eat",
+          "label": "Picar algo de la cocina",
+          "r": 0.9
+        },
+        {
+          "x": -9699.885,
+          "z": -9692.735,
+          "y": 0,
+          "sala": "cocina",
+          "type": "fridge",
+          "label": "Abrir la nevera",
+          "r": 0.9
+        },
+        {
+          "x": -9702.185,
+          "z": -9690.085,
+          "y": 0,
+          "sala": "bano",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9702.685,
+          "z": -9694.085,
+          "y": 3.1,
+          "sala": "banoAlto",
+          "type": "mirror",
+          "label": "Mirarse al espejo",
+          "r": 0.9
+        },
+        {
+          "x": -9700.835,
+          "z": -9690.385,
+          "y": 3.1,
+          "sala": "estudio",
+          "type": "read",
+          "label": "Hojear un libro",
+          "r": 0.9
+        },
+        {
+          "x": -9700.035,
+          "z": -9692.085,
+          "y": 3.1,
+          "sala": "estudio",
+          "type": "drawer",
+          "label": "Registrar los cajones",
+          "r": 0.9
+        }
+      ],
+      "stairsHeight": 1.5500000000005125
+    }
+  ]
+}

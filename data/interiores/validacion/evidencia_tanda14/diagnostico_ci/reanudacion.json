@@ -1,0 +1,16 @@
+{
+ "fecha": "2026-10-18",
+ "estado": "PASS fuente y paquete M1; pendiente CI",
+ "base_producto": "83a7bc6fdedf2fef2ffb6ca6fefb136daa9dde0a",
+ "alcance": "Contrato mecánico de botín desde reanudación existente, perfil bajo manual. No certifica cinemática ni rendimiento. La introducción completa conserva pruebas M1 anteriores.",
+ "ci_previo": "39074521794 FAIL durante vuelo, driver SwiftShader registrado; no llegó a recoger",
+ "script_sha256": "121da2a38f0ca43c64e1d8e055d1a737b412577006eb2bfd27d35af839a0fcec",
+ "workflow_sha256": "bbefd8d5db03f2a9ef9452fad43ac3e951e0d5184c6005d01bda9ca6a9e5f050",
+ "evidencia": {
+  "botin_reanudacion_fuente_v6.json": "c7cee6a330641943d684c2e7433462a760ccc7285924b649c7d570d38941b500",
+  "botin_reanudacion_paquete_v6.json": "a5f53679504acbd7fd27821a8dea584806b9bcc6235fa7602d9ea5782ceb5b6e",
+  "reanudacion_revision_codigo.md": "11c0a830ba9f9a4e578e7c9d527a25102a92a1ca2af467b550025b1f92401225",
+  "reanudacion_revision_cpu.py": "31ed9939e1d87747e3b4c73bdd662dee8483dff1dd5a8e6bb4c470c6389d963f",
+  "reanudacion_revision_cpu.json": "9d4dfcc34bf5ed8dd953f9744226ebb244478fe91e50037ee15d2b47396c11a0"
+ }
+}

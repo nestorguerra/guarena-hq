@@ -1,0 +1,56 @@
+{
+  "status": "CPU_CHECKS_PASSED_BROWSER_NOT_EXECUTED",
+  "classifier_synthetic": {
+    "ground": 2,
+    "optional": 2,
+    "unexpected": 4
+  },
+  "v1_review": {
+    "expectedGroundErrors": 2,
+    "optionalLocalErrors": 2,
+    "unexpectedErrors": 18
+  },
+  "v1_loading_failures": [
+    {
+      "url": "http://127.0.0.1:53599/assets/tex/withered_grass_d.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/tex/dirty_concrete_n.jpg",
+      "error": "net::ERR_SOCKET_NOT_CONNECTED"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/tex/dry_ground_01_n.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/granito_rough.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/suelo_diff.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/suelo_nor.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/suelo_rough.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/vidrio_diff.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    },
+    {
+      "url": "http://127.0.0.1:53599/assets/hq/interior/tex/madera_diff.jpg",
+      "error": "net::ERR_CONNECTION_RESET"
+    }
+  ],
+  "hashes": {
+    ".cache/perf-beta/ground_http_fallback_v2.py": "6286c7a289fab91afbd70e7af1896520c7f4f3284cc228cc9f242345f51ec483",
+    ".cache/perf-beta/ground_http_fallback.py": "732d852b865dfc062707ee08b0d93f0ad9fc68c45a82ef2bd5956c8c47ef9706",
+    ".cache/perf-beta/ground-http-fallback-t12/report.json": "e7852a7f143132e1ede13c4173c03ed971199fa358f7468dfad717ee451f1ca0"
+  }
+}

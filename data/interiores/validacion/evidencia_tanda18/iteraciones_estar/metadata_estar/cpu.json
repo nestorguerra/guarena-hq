@@ -1,0 +1,53 @@
+{
+  "state": "PASS",
+  "scope": "CPU dirigida. Geometría/atributos/colores/matrices/materiales comparados exactos, Canvas de trazas sin raster ni GPU; no valida píxeles de textura. No barrido81 ni gate de presupuesto.",
+  "seal": "efe9f0cba1e9f48aa598210d73bc620b04f4feb88ea3a42f093b62764e51101f",
+  "rows": [
+    {
+      "seed": 34,
+      "scope": "buildLocal y validar literales con marco/puerta/hogar del laboratorio",
+      "perfil": "rico",
+      "lectura": true,
+      "estar": null,
+      "metadataReport": null,
+      "errors": [],
+      "visualBefore": "8c53879c6cc4d89a4713f856c0d86cfe921943a3f94c69402075d999e49ff759",
+      "visualAfter": "8c53879c6cc4d89a4713f856c0d86cfe921943a3f94c69402075d999e49ff759",
+      "colocadosExactos": true,
+      "accionesExactas": true,
+      "localExceptMetadataExact": true,
+      "reportExceptMetadataExact": true
+    },
+    {
+      "seed": 3244,
+      "localSeed": 424969,
+      "scope": "buildLocal con marco exacto de salón vecino3244; NO laboratorio literal",
+      "estar": {
+        "sofa": 2,
+        "mesa": 4,
+        "alfombra": 3,
+        "gap": 0.55,
+        "lateral": 0,
+        "movidos": [
+          3,
+          4,
+          31,
+          32,
+          33
+        ],
+        "intentos": [
+          {
+            "gap": 0.55,
+            "lateral": 0,
+            "errores": []
+          }
+        ]
+      },
+      "reportLineaLiteralNoVacia": true,
+      "visualExact": true,
+      "visualHash": "7ea295e04c8faa7e937fa500dcd7bb68f61d51a1a5d4a92d8e69d0f937c5b553",
+      "colocadosExactos": true,
+      "accionesExactas": true
+    }
+  ]
+}

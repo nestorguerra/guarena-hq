@@ -1,0 +1,79 @@
+{
+ "estado": "PASS",
+ "url": "http://localhost:8920/dist/test.html?estilo=plastilina",
+ "alcance": "selector real, recompensa y recarga; residentes retirados",
+ "errores": [],
+ "etapa": "completado",
+ "renderizado": {
+  "calidad": "baja",
+  "automatica": false,
+  "dpr": 0.8,
+  "tamano": [
+   1024,
+   576
+  ],
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)"
+ },
+ "recogida": {
+  "acciones": [
+   {
+    "id": "joyero",
+    "etiqueta": "Coger: joyero con joyas <small>(≈ 165 €)</small>",
+    "antes": {
+     "dinero": 321,
+     "mochila": 0
+    },
+    "despues": {
+     "dinero": 321,
+     "mochila": 1
+    },
+    "malla_oculta": true
+   },
+   {
+    "id": "lata",
+    "etiqueta": "Coger: lata de galletas con dinero",
+    "antes": {
+     "dinero": 321,
+     "mochila": 1
+    },
+    "despues": {
+     "dinero": 419,
+     "mochila": 1
+    },
+    "malla_oculta": true
+   }
+  ],
+  "dinero": 419,
+  "mochila": [
+   {
+    "id": "joyero",
+    "name": "Joyero con joyas",
+    "value": 93
+   }
+  ],
+  "errores": []
+ },
+ "renderizado_tras_recarga": {
+  "calidad": "baja",
+  "automatica": false,
+  "dpr": 0.8,
+  "tamano": [
+   1024,
+   576
+  ],
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)"
+ },
+ "recarga": {
+  "dinero": 419,
+  "mochila": [
+   {
+    "id": "joyero",
+    "name": "Joyero con joyas",
+    "value": 93
+   }
+  ],
+  "evo": "testigo_evo",
+  "fija": "testigo_fija",
+  "errores": []
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "sourceSHA": "5aee0ac3aa2dd0cd40d0a9566919fab98953f70892ae04f628c5686517aa5877",
+  "rows": [
+    {
+      "name": "literal_positive",
+      "pass": true
+    },
+    {
+      "name": "old_material_filter",
+      "pass": false,
+      "error": "no detecta cuchillo flotante"
+    },
+    {
+      "name": "knife_absent",
+      "pass": true
+    }
+  ]
+}

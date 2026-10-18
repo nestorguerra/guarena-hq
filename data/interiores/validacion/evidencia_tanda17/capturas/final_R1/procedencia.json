@@ -1,0 +1,58 @@
+{
+ "estado": "FINAL_ESTUDIO_CAPTURADO_PENDIENTE_REVISION_VISUAL",
+ "inputs_estables": 493,
+ "vistas_libres": 6,
+ "calidad": "alta_manual",
+ "dpr": 1,
+ "poses": [
+  {
+   "seed": 3244,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_greybox_R2": true
+  },
+  {
+   "seed": 3244,
+   "vista": 1,
+   "misma_pose_base": false,
+   "misma_pose_greybox_R2": true
+  },
+  {
+   "seed": 1594,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_greybox_R2": true
+  },
+  {
+   "seed": 1594,
+   "vista": 1,
+   "misma_pose_base": false,
+   "misma_pose_greybox_R2": true
+  },
+  {
+   "seed": 1481,
+   "vista": 0,
+   "misma_pose_base": false,
+   "misma_pose_greybox_R2": true
+  },
+  {
+   "seed": 1481,
+   "vista": 1,
+   "misma_pose_base": true,
+   "misma_pose_greybox_R2": true
+  }
+ ],
+ "archivos": {
+  "casa_estudio_3244_1.jpg": "24b6dea141dfb7ce8922a14a4eb4a2cbe822313efb77df35bc96234b5afe0d4e",
+  "casa_estudio_3244_0.jpg": "7322546961f08711cd3a484fe11dd105b87bdb51b06992dae5ce4c5a778de7b6",
+  "casa_estudio_1481_1.jpg": "81f07011753c6f2867e9b8f501912763dc17dcdf6dec862ab31b0b5ecada5139",
+  "casa_estudio_1481_0.jpg": "209c8f49fd130bc52e46288413cf6d0746fe5e3f5e4324b1f641f820f482c272",
+  "capturador.py": "4b0ffdc88356ded9d0a9d384057f3cd621a659eb1248d68c703e87271f905617",
+  "casa_estudio_1594_1.jpg": "943af28e94b6e70a0081643d45f3d61036f6e19e1958fdaab62aa5fa4996202e",
+  "casa_estudio.jpg": "7e5f2635ce48ddb7438ccf762952b1126fa926b39d5fe719ee62724e35c21503",
+  "casa_estudio_1594_0.jpg": "22db34258af32193c1a6e97a342f882444b45ab37a6f769e3b2d28c07d3f030d",
+  "casa_estudio.json": "a2606f95d3802b56e3a726c19611e5b0bc2779c94f48d5bd261e37120f82f6cd",
+  "fuentes_antes_captura.json": "f36a99f91b427dd9dbac0993d7aa3a1d35d0cc714cca34fe08d50a42c044a5dd"
+ },
+ "limites": "Snapshot combinado final de estudio. Sin API ni fuentes activas o aprobación de calidad. Capturador original con URL8924."
+}

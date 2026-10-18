@@ -1,0 +1,274 @@
+{
+ "tipologia": "otra_estancia",
+ "nombre": "Taller doméstico de bricolaje",
+ "superficie": {
+  "ancho": [
+   3.2,
+   7.8
+  ],
+  "fondo": [
+   2.5,
+   5
+  ],
+  "alto": 2.75
+ },
+ "variables": {},
+ "puerta": -0.75,
+ "paso_libre": 0.8,
+ "zonas": [
+  {
+   "id": "estancia",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [],
+ "objetos": [
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_max": 10.5
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "variantes": [
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
+   ],
+   "pared": "*",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true,
+   "area_min": 10.5
+  },
+  {
+   "zona": "estancia",
+   "regla": "junto_a",
+   "obj": "va_estante_taller",
+   "de": [
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica",
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_cajas_apiladas",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true
+  },
+  {
+   "zona": "estancia",
+   "regla": "contra_pared",
+   "obj": "va_estante_taller",
+   "pared": "*",
+   "cantidad": [
+    0,
+    1
+   ],
+   "obligatorio": false,
+   "preferir": true,
+   "area_min": 12
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "tal_llaves_juego",
+    "tal_martillo",
+    "tal_caja_herramientas",
+    "tal_trapos",
+    "tal_rollo_papel_taller",
+    "fe_niveles_metros",
+    "fe_tijeras_poda",
+    "fe_guantes_trabajo"
+   ],
+   "en": [
+    "va_banco",
+    "va_banco_carpinteria",
+    "va_banco_mecanica",
+    "va_banco_amplio",
+    "va_banco_carpinteria_amplio",
+    "va_banco_mecanica_amplio"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "sobre",
+   "variantes": [
+    "fe_pintura_blanca",
+    "fe_pintura_roja",
+    "fe_pintura_azul",
+    "fe_pintura_verde",
+    "fe_pintura_amarilla",
+    "fe_pintura_gris",
+    "fe_barniz",
+    "fe_pintura_cubo",
+    "fe_cajas_tornillos",
+    "fe_cajas_clavos_puntas",
+    "fe_tacos",
+    "fe_bisagras",
+    "fe_candados",
+    "fe_silicona",
+    "fe_cola",
+    "fe_cintas",
+    "fe_cable_bobinas",
+    "fe_enchufes",
+    "fe_grifos",
+    "fe_tuberias_pvc",
+    "fe_guantes_trabajo",
+    "fe_tijeras_poda",
+    "fe_regaderas",
+    "fe_abonos",
+    "fe_maletines",
+    "fe_taladros_caja",
+    "fe_brocas",
+    "fe_niveles_metros",
+    "fe_brochas",
+    "tal_llaves_juego",
+    "tal_martillo",
+    "tal_caja_herramientas",
+    "tal_trapos",
+    "tal_rollo_papel_taller"
+   ],
+   "en": [
+    "va_estante_taller"
+   ],
+   "por_soporte": [
+    3,
+    6
+   ]
+  },
+  {
+   "zona": "estancia",
+   "regla": "techo",
+   "obj": "vb_lampara_trabajo",
+   "por_m": [
+    0.4,
+    0.42
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   1,
+   3
+  ],
+  "temperatura_k": [
+   2700,
+   3000
+  ],
+  "minimo_lux_publico": 60
+ },
+ "ambiente": {
+  "sonido": "casa",
+  "vida": [
+   "objetos cotidianos del hogar"
+  ]
+ },
+ "minimo_objetos_distintos": 30,
+ "moodboard": [
+  {
+   "titulo": "Turning over the tools. (27616250774).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Turning_over_the_tools._%2827616250774%29.jpg",
+   "autor": "Ed Schipul from Houston, TX, US",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Eric Archer making a MeeBlip 7 - Dr. Bleep's garage workshop - MeeBlip build session, Austin, TX, 2010-10-17.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Eric_Archer_making_a_MeeBlip_7_-_Dr._Bleep%27s_garage_workshop_-_MeeBlip_build_session%2C_Austin%2C_TX%2C_2010-10-17.jpg",
+   "autor": "Create Digital Media",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Dr. Bleep making a MeeBlip 8 - Dr. Bleep's garage workshop - MeeBlip build session, Austin, TX, 2010-10-17.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dr._Bleep_making_a_MeeBlip_8_-_Dr._Bleep%27s_garage_workshop_-_MeeBlip_build_session%2C_Austin%2C_TX%2C_2010-10-17.jpg",
+   "autor": "Create Digital Media",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Home workshop owner of Swedish origin 8d22973v.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Home_workshop_owner_of_Swedish_origin_8d22973v.jpg",
+   "autor": "Marjory Collins",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Gfp-illinois-lincoln-home-workbench.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Gfp-illinois-lincoln-home-workbench.jpg",
+   "autor": "Yinan Chen",
+   "licencia": "Public Domain"
+  },
+  {
+   "titulo": "A1C Clayton Cupit, USAF (3) (14509519185).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:A1C_Clayton_Cupit%2C_USAF_%283%29_%2814509519185%29.jpg",
+   "autor": "U.S. Department of Defense Current Photos",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "A1C Clayton Cupit, USAF (10) (14529647083).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:A1C_Clayton_Cupit%2C_USAF_%2810%29_%2814529647083%29.jpg",
+   "autor": "U.S. Department of Defense Current Photos",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "A1C Clayton Cupit, USAF (6) (14508164444).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:A1C_Clayton_Cupit%2C_USAF_%286%29_%2814508164444%29.jpg",
+   "autor": "U.S. Department of Defense Current Photos",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Home machine shop owner working for defense 8d22977v.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Home_machine_shop_owner_working_for_defense_8d22977v.jpg",
+   "autor": "Marjory Collins",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Home workshop owner's wife bringing coffee during the morning's work8d22975v.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Home_workshop_owner%27s_wife_bringing_coffee_during_the_morning%27s_work8d22975v.jpg",
+   "autor": "Marjory Collins",
+   "licencia": "Public domain"
+  }
+ ]
+}

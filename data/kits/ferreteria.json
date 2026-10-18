@@ -1,0 +1,914 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Ferretería",
+ "nota": "La ferretería de pueblo: un mostrador largo de lado a lado con la regla de latón y la máquina de copiar llaves, detrás la pared de cajoncitos de tornillos y las estanterías de cajas, los paneles de herramientas colgadas y las estanterías bajas en las paredes de la sala, góndolas de pintura, fontanería y electricidad, la torre de botes, mangueras, escobas, escaleras, cemento y plantas en la entrada y el almacén al fondo. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.0,
+   7.5
+  ],
+  "fondo": [
+   12.3,
+   13.5
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "zm": "D-5.6",
+  "zr": "D-1.9"
+ },
+ "paso_libre": 0.9,
+ "pared": "#ebe4d2",
+ "suelo": "rock_tile_floor",
+ "suelo_color": "#c4c0b4",
+ "puntos": {
+  "dependiente": [
+   "0",
+   "zm+0.8"
+  ],
+  "mostrador": [
+   "0",
+   "zm-0.75"
+  ]
+ },
+ "pedir": "Pedir en el mostrador",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.4"
+   ]
+  },
+  {
+   "id": "tienda",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.4",
+    "W/2",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "isla",
+   "publica": true,
+   "rect": [
+    "-W/2+0.42",
+    "1.9",
+    "W/2-0.42",
+    "zm-0.9"
+   ]
+  },
+  {
+   "id": "mostrador",
+   "publica": false,
+   "rect": [
+    "-W/2+1.5",
+    "zm-0.35",
+    "W/2",
+    "zm+0.35"
+   ]
+  },
+  {
+   "id": "trasmostrador",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zm+0.37",
+    "W/2",
+    "zr"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zr",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zr"
+   ],
+   "a": [
+    "W/2",
+    "zr"
+   ],
+   "puerta": [
+    "W-1.8",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "-W/2",
+    "zm-0.9",
+    "W/2",
+    "zm-0.36"
+   ],
+   "nota": "la cola delante del mostrador: sin muebles"
+  },
+  {
+   "rect": [
+    "-W/2",
+    "zm-1.7",
+    "-W/2+1.6",
+    "zm+1.1"
+   ],
+   "nota": "el paso del personal entre la sala y la trastienda"
+  },
+  {
+   "rect": [
+    "-0.45",
+    "zm+0.35",
+    "0.45",
+    "zm+1.25"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "mostrador",
+   "regla": "modulos",
+   "obj": "mostrador_ferreteria",
+   "eje": "x",
+   "linea": [
+    "zm",
+    "-W/2+1.5",
+    "W/2"
+   ],
+   "mira": "-z",
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "maquina_llaves",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "expositor_linternas_mostrador",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "linterna"
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "balanza_comercial",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "bote_caramelos",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "obj": "calculadora",
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "sobre",
+   "variantes": [
+    "fe_cajas_tornillos",
+    "fe_tacos"
+   ],
+   "en": [
+    "mostrador_ferreteria"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "mostrador",
+   "regla": "techo",
+   "obj": "luminaria_campana",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "cajonera_tornillos",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "estanteria_ferreteria_pared",
+   "pared": "N",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "obj": "rotulo_ferreteria",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "obj": "tablero_llaves",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "obj": "cartel_llaves",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "contra_pared",
+   "obj": "estanteria_ferreteria_pared",
+   "pared": "E",
+   "llenar": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "suelo_libre",
+   "obj": "silla_madera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "pared",
+   "variantes": [
+    "reloj_pared",
+    "calendario_pared"
+   ],
+   "pared": "E",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "sobre",
+   "variantes": [
+    "fe_brocas",
+    "fe_enchufes",
+    "fe_grifos",
+    "fe_tuberias_pvc",
+    "bz_alargaderas",
+    "fe_candados",
+    "fe_bisagras",
+    "fe_cajas_tornillos",
+    "fe_cola",
+    "fe_silicona",
+    "fe_tacos",
+    "fe_cintas",
+    "fe_niveles_metros",
+    "bz_pilas",
+    "fe_cajas_clavos_puntas",
+    "bz_bombillas",
+    "fe_cable_bobinas"
+   ],
+   "en": [
+    "estanteria_ferreteria_pared"
+   ],
+   "relleno": [
+    0.85,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "fe_pintura_cubo",
+    "fe_abonos"
+   ],
+   "en": [
+    "cajonera_tornillos"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "trasmostrador",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "fe_pintura_blanca",
+    "fe_pintura_cubo",
+    "fe_cajas_tornillos",
+    "fe_abonos"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "variantes": [
+    "palet_sacos_cemento",
+    "cubos_albanil_pila"
+   ],
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "carretilla_obra",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "caja_carton",
+   "pared": "E",
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escalera_tijera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "ventilador_pie",
+    "paraguas_cubo"
+   ],
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "ventilador",
+    "paraguas"
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_geranios",
+    "macetas_terracota"
+   ],
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "geranios",
+    "planta"
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "suelo_libre",
+   "variantes": [
+    "carretilla_obra",
+    "palet_sacos_cemento",
+    "carrete_manguera",
+    "cubos_albanil_pila"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "tienda",
+   "regla": "pared",
+   "variantes": [
+    "panel_herramientas",
+    "panel_navajas",
+    "panel_llaves_fijas",
+    "panel_alicates",
+    "panel_destornilladores",
+    "panel_martillos",
+    "panel_sierras"
+   ],
+   "pared": "E",
+   "cada": 1.1,
+   "maximo": 7,
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "herramientas",
+    "navaja"
+   ]
+  },
+  {
+   "zona": "tienda",
+   "regla": "pared",
+   "variantes": [
+    "escalera_extensible_colgada"
+   ],
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tienda",
+   "regla": "pared",
+   "obj": "cartel_pinturas",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "contra_pared",
+   "obj": "estanteria_ferreteria_baja",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "contra_pared",
+   "obj": "estanteria_ferreteria_baja",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "filas",
+   "obj": "gondola_ferreteria",
+   "eje": "x",
+   "pasillo": 0.95,
+   "margen": [
+    0.95,
+    0.95
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "suelo_libre",
+   "variantes": [
+    "torre_botes_pintura",
+    "expositor_herramientas_jardin",
+    "expositor_escobas",
+    "escalera_tijera"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "sobre",
+   "variantes": [
+    "fe_pintura_amarilla",
+    "fe_insecticidas",
+    "fe_enchufes",
+    "bz_alargaderas",
+    "fe_candados",
+    "fe_bisagras",
+    "fe_pintura_azul",
+    "fe_tijeras_poda",
+    "fe_cajas_clavos_puntas",
+    "fe_cola",
+    "bz_bombillas",
+    "fe_cajas_tornillos",
+    "fe_grifos",
+    "fe_brochas",
+    "fe_barniz",
+    "fe_abonos",
+    "fe_niveles_metros",
+    "fe_tacos",
+    "fe_pintura_verde",
+    "fe_pintura_gris",
+    "fe_pintura_roja",
+    "fe_regaderas",
+    "fe_pintura_cubo",
+    "fe_brocas",
+    "fe_pintura_blanca",
+    "fe_taladros_caja",
+    "bz_pilas",
+    "fe_silicona",
+    "fe_guantes_trabajo",
+    "fe_maletines",
+    "fe_cintas",
+    "fe_tuberias_pvc",
+    "fe_cable_bobinas"
+   ],
+   "en": [
+    "gondola_ferreteria"
+   ],
+   "relleno": [
+    0.85,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "sobre",
+   "variantes": [
+    "fe_maletines",
+    "fe_abonos",
+    "fe_regaderas",
+    "fe_tuberias_pvc",
+    "fe_barniz",
+    "fe_grifos",
+    "fe_pintura_verde",
+    "fe_pintura_amarilla",
+    "fe_cintas",
+    "fe_insecticidas",
+    "fe_pintura_gris",
+    "fe_pintura_cubo",
+    "fe_guantes_trabajo",
+    "fe_tijeras_poda",
+    "fe_cola",
+    "fe_pintura_blanca",
+    "fe_pintura_roja",
+    "fe_brochas",
+    "fe_taladros_caja",
+    "fe_pintura_azul",
+    "fe_silicona"
+   ],
+   "en": [
+    "estanteria_ferreteria_baja"
+   ],
+   "relleno": [
+    0.85,
+    0.97
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "techo",
+   "obj": "regleta_fluorescente",
+   "por_m2": [
+    0.2,
+    0.25
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "tienda",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "tienda",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "tienda",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3900,
+   4500
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Fr 09:00-14:00,16:30-20:00; Sa 09:00-14:00",
+  "vida": [
+   "el tablero de llaves recién renovado",
+   "un saco de cemento junto a la puerta",
+   "la regla de latón del mostrador",
+   "una caja de tornillos abierta"
+  ],
+  "cerrado": "reja bajada, la luz del mostrador encendida"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Ferretería.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Ferreter%C3%ADa.JPG",
+   "autor": "Schumi4ever",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "0 Quincaillerie Michel - Soignies (2).JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:0_Quincaillerie_Michel_-_Soignies_(2).JPG",
+   "autor": "Jean-Pol GRANDMONT",
+   "licencia": "CC BY 3.0"
+  },
+  {
+   "titulo": "0 Quincaillerie Michel - Soignies (3).JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:0_Quincaillerie_Michel_-_Soignies_(3).JPG",
+   "autor": "Jean-Pol GRANDMONT",
+   "licencia": "CC BY 3.0"
+  },
+  {
+   "titulo": "Berkeley Heights NJ Hardware store.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Berkeley_Heights_NJ_Hardware_store.jpg",
+   "autor": "Tomwsulcer",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Hardware store - Arlington, MA - 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Hardware_store_-_Arlington,_MA_-_01.jpg",
+   "autor": "Daderot",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Hardware store Porto Portugal (52787278789).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Hardware_store_Porto_Portugal_(52787278789).jpg",
+   "autor": "amanderson2",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Soaps at hardware store Porto Portugal (52787500323).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Soaps_at_hardware_store_Porto_Portugal_(52787500323).jpg",
+   "autor": "amanderson2",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Streets hardware store, Brockenhurst - geograph.org.uk - 170729.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Streets_hardware_store,_Brockenhurst_-_geograph.org.uk_-_170729.jpg",
+   "autor": "Peter Facey",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Steilacoom, WA - Bair Drug & Hardware interior 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Steilacoom,_WA_-_Bair_Drug_%26_Hardware_interior_01.jpg",
+   "autor": "Joe Mabel",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Cluttered desk at the historic Harrison Brothers Hardware Store, Huntsville, Alabama LCCN2011635028.tif",
+   "url": "https://commons.wikimedia.org/wiki/File:Cluttered_desk_at_the_historic_Harrison_Brothers_Hardware_Store,_Huntsville,_Alabama_LCCN2011635028.tif",
+   "autor": "Carol M. Highsmith",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "One of many cluttered but nostalgic walls inside the Harrison Brothers Hardware store, a sort of classic general store on the town square, Huntsville, Alabama LCCN2011634765.tif",
+   "url": "https://commons.wikimedia.org/wiki/File:One_of_many_cluttered_but_nostalgic_walls_inside_the_Harrison_Brothers_Hardware_store,_a_sort_of_classic_general_store_on_the_town_square,_Huntsville,_Alabama_LCCN2011634765.tif",
+   "autor": "Carol M. Highsmith",
+   "licencia": "Public domain"
+  },
+  {
+   "titulo": "Tweedy and Popp Hardware Store interior, ca 1923 (SEATTLE 254).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Tweedy_and_Popp_Hardware_Store_interior,_ca_1923_(SEATTLE_254).jpg",
+   "autor": "Unknown authorUnknown author",
+   "licencia": "Public domain"
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+  "state": "PASS",
+  "scope": "CPU de hashes y procedencia. Sin GPU/build/API ni repetición de gates. No evaluación artística.",
+  "date": "2026-10-18T02:30:20.332448+00:00",
+  "rows": [
+    {
+      "check": "base_git",
+      "pass_": true,
+      "base": "4640cfa891989d9e5d7430609f6c0689e033b997"
+    },
+    {
+      "check": "active_frozen",
+      "pass_": true,
+      "count": 415,
+      "mismatches": []
+    },
+    {
+      "check": "integration:tools/interiores/catalogo_vivienda_b.py",
+      "pass_": true,
+      "sha256": "ab1662cd752e4246b4c4173d67b2de6a00d70096bec703e51f876d5edf19280f"
+    },
+    {
+      "check": "integration:tools/interiores/kits_vivienda_b.py",
+      "pass_": true,
+      "sha256": "a4f36f87975650fff14f0a24e95a922b9204a2a363d9415699c4c84dab2ce2cd"
+    },
+    {
+      "check": "integration:src/texturas/vivienda_b.js",
+      "pass_": true,
+      "sha256": "495260611de11b2860621e19862fb14c077daaff35b360e9a936b94b7afeffbe"
+    },
+    {
+      "check": "integration:src/houses.js",
+      "pass_": true,
+      "sha256": "8c8eb246c0b919abdd0f807122272eadafc40d83033ac0dc6348cb7f51d12983"
+    },
+    {
+      "check": "integration:src/acabados_vivienda.js",
+      "pass_": true,
+      "sha256": "87838b0082d6675f1a9304c43ad79d284f67acab666074c34302b35aa3adf349"
+    },
+    {
+      "check": "integration:src/plastilina.js",
+      "pass_": true,
+      "sha256": "8f1a3f291a605bb90c6c475646cac03ce1030ecad563b0d5c0f6a9dac9d377a7"
+    },
+    {
+      "check": "integration:tools/interiores/fotos_casa.py",
+      "pass_": true,
+      "sha256": "fb5c874c258b929a6b28879d074f2ce932e0283027312698f5eb6d8ccc264c54"
+    },
+    {
+      "check": "sealed_R1_unchanged:tools/interiores/catalogo_vivienda_b.py",
+      "pass_": true
+    },
+    {
+      "check": "sealed_R1_unchanged:tools/interiores/kits_vivienda_b.py",
+      "pass_": true
+    },
+    {
+      "check": "sealed_R1_unchanged:src/texturas/vivienda_b.js",
+      "pass_": true
+    },
+    {
+      "check": "sealed_R1_unchanged:src/houses.js",
+      "pass_": true
+    },
+    {
+      "check": "derived_equals_preview:data/objetos/vivienda_b.json",
+      "pass_": true,
+      "sha256": "2bbcfef4ed82744ca76ca28b8f0c12f073c8df72a2c870f3f017d060f784f8d2"
+    },
+    {
+      "check": "derived_equals_preview:data/kits/vivienda_estudio.json",
+      "pass_": true,
+      "sha256": "98faedebba14826ce9f3c41ff53ca43155af459ed717fc0cf6ba1609610a47d4"
+    },
+    {
+      "check": "derived_equals_preview:data/interiores/datos.json",
+      "pass_": true,
+      "sha256": "a21186bd44d80ea128b4bd40c0bbaccde009a17c680270ad5c3860c25681a1b8"
+    },
+    {
+      "check": "derived_equals_preview:src/interiores_datos.js",
+      "pass_": true,
+      "sha256": "bdfcc374d5e4ea754c235cf262ea3fc1a5abc3acdd55f5b55f02545148202d98"
+    },
+    {
+      "check": "validation_patch_seal",
+      "pass_": true,
+      "sha256": "de5836e82adacf2e689d68d5675b16689ae4737caa5e1bf979e152453a955920"
+    },
+    {
+      "check": "apply_sealed_patch_private",
+      "pass_": true,
+      "error": ""
+    },
+    {
+      "check": "exact_patch_integrated:tools/interiores/casas_pruebas.js",
+      "pass_": true,
+      "sha256": "57e5eb5fda126387aa7bc0a7d218380418db85619eb7f83b69388042709bc79b"
+    },
+    {
+      "check": "exact_patch_integrated:.github/workflows/validar.yml",
+      "pass_": true,
+      "sha256": "13830f5bfa74efe81614393e5cef76d227a6221bfaf5be429575f0fc7df965d0"
+    },
+    {
+      "check": "literal_fragment:contratos_estudio_r2.fragment.js",
+      "pass_": true,
+      "callbacks": 3,
+      "sha256": "fbb6b7371c0c1a6ca1fa6692588bf73243dfaa50a165e8434f019cfaa2c9444a"
+    },
+    {
+      "check": "literal_fragment:contratos_tela.fragment.js",
+      "pass_": true,
+      "callbacks": 1,
+      "sha256": "a25a4816c5c02f335e53c6c5ac7831f4bca39bf106c53163a183a39e6d97f2a4"
+    },
+    {
+      "check": "history_exact_base:casa_estudio.jpg",
+      "pass_": true,
+      "sha256": "8e6b5e276ce0980af26a091f8388f48fb2e3fe20a3460d4980c992a6f0d61e9b"
+    },
+    {
+      "check": "history_exact_base:casa_estudio.json",
+      "pass_": true,
+      "sha256": "a24ff13c45cc59b943ad012c952c6e351208612b252e5e555f88470411c55071"
+    },
+    {
+      "check": "history_exact_base:visual_estudio_A.json",
+      "pass_": true,
+      "sha256": "59872e51a84aa851eb13277f436c1f22715ccc22348cd6227be36cd85c62e0fd"
+    },
+    {
+      "check": "history_exact_base:visual_estudio_B.json",
+      "pass_": true,
+      "sha256": "739751437c79706097db6fc339800a0f34443293bcc9d0e5076e51eac1b0b4d8"
+    },
+    {
+      "check": "image_preview_active_archive",
+      "pass_": true,
+      "sha256": "cfe597964fc9e1c5626c9886a1521b01780fc4b5f558526003287dc4c7b04fc2"
+    },
+    {
+      "check": "formal_arithmetic:A",
+      "pass_": true,
+      "mean": 3.222,
+      "request_id": "req_30de407d9b6544238f6d33bab1ace1de"
+    },
+    {
+      "check": "formal_arithmetic:B",
+      "pass_": true,
+      "mean": 3.208,
+      "request_id": "req_4a735f8e194e414daca88dd3f8916595"
+    },
+    {
+      "check": "regeneration_receipt",
+      "pass_": true,
+      "count": 22
+    },
+    {
+      "check": "nine_gate_exits",
+      "pass_": true,
+      "gates": [
+        {
+          "nombre": "contratos",
+          "exit_code": 0
+        },
+        {
+          "nombre": "kits5",
+          "exit_code": 0
+        },
+        {
+          "nombre": "casas200",
+          "exit_code": 0
+        },
+        {
+          "nombre": "kits81",
+          "exit_code": 0
+        },
+        {
+          "nombre": "integracion_fuente",
+          "exit_code": 0
+        },
+        {
+          "nombre": "build",
+          "exit_code": 0
+        },
+        {
+          "nombre": "recursos",
+          "exit_code": 0
+        },
+        {
+          "nombre": "marcas",
+          "exit_code": 0
+        },
+        {
+          "nombre": "integracion_paquete",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "check": "browser_contracts_receipt",
+      "pass_": true,
+      "count": 73
+    },
+    {
+      "check": "integration_receipt:integracion_juego.json",
+      "pass_": true,
+      "sha256": "838c3c86004727ab2d4daf53d3b962b6c46910e15ffa2d48544803e63165661b"
+    },
+    {
+      "check": "source_routes",
+      "pass_": true,
+      "runs": [
+        16,
+        32,
+        16,
+        32
+      ]
+    },
+    {
+      "check": "integration_receipt:integracion_paquete.json",
+      "pass_": true,
+      "sha256": "f32bcc1ce5bc22875870c10f4a2ceaf7abe1fc24e1d1f3e9f2623380b63289a1"
+    }
+  ],
+  "gates_snapshot": [
+    {
+      "nombre": "contratos",
+      "exit_code": 0
+    },
+    {
+      "nombre": "kits5",
+      "exit_code": 0
+    },
+    {
+      "nombre": "casas200",
+      "exit_code": 0
+    },
+    {
+      "nombre": "kits81",
+      "exit_code": 0
+    },
+    {
+      "nombre": "integracion_fuente",
+      "exit_code": 0
+    },
+    {
+      "nombre": "build",
+      "exit_code": 0
+    },
+    {
+      "nombre": "recursos",
+      "exit_code": 0
+    },
+    {
+      "nombre": "marcas",
+      "exit_code": 0
+    },
+    {
+      "nombre": "integracion_paquete",
+      "exit_code": 0
+    }
+  ]
+}

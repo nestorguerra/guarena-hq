@@ -1,0 +1,110 @@
+--- a/tools/interiores/casas_pruebas.js
++++ b/tools/interiores/casas_pruebas.js
+@@ -1,6 +1,7 @@
+ // Pruebas de contrato: ejercitan los constructores reales; los kits alterados se restauran siempre.
+ import * as H from '/src/houses.js';
+ import { componerLectura } from '/src/composicion_lectura_salon.js';
++import { componerEstar } from '/src/composicion_estar_salon.js';
+ import { KITS, OBJETOS } from '/src/interiores_datos.js';
+ import { filtroHogar, amueblar, buildLocal } from '/src/locales.js';
+ import { validarCasas, revisarUso, revisar } from '/tools/interiores/validar.js';
+@@ -1301,27 +1302,31 @@
+       try{
+         delete K.composicion_lectura;a=H.buildVecino(seed);K.composicion_lectura=cfg;b=H.buildVecino(seed);
+         const x=a.estancias.find(e=>e.kit==='vivienda_salon'),e=b.estancias.find(e=>e.kit==='vivienda_salon');
+-        exigir(x&&e,seed+': falta salón');const meta=e.composicionLectura;
++        exigir(x&&e,seed+': falta salón');const meta=e.composicionLectura,estar=e.composicionEstar,movidos=new Set([...(meta?.movidos||[]),...(estar?.movidos||[])]);
+         igual(x.colocados.map(identidad),e.colocados.map(identidad),seed+': cambia identidad/soporte');
+         igual(a.inter.map(accion),b.inter.map(accion),seed+': pierde acción o recompensa');
+         igual(a.estancias.filter(q=>q!==x),b.estancias.filter(q=>q!==e),seed+': altera otras habitaciones');
+         exigir(!revisarUso(b).errores.length,seed+': uso inaccesible');
+         exigir(!revisar({local:e,group:{traverse(){}}},presupuesto).errores.length,seed+': programa inválido');
+         let mallas=0;b.group.traverse(o=>{if(o.isMesh&&o.visible)mallas++;});exigir(mallas<=presupuesto.interior.mallas_max,seed+': coste excedido');
+-        if(seed===3244||seed===1594){
+-          exigir(meta&&meta.movidos.length>4,seed+': admisión/dependientes vacíos');
+-          for(let i=0;i<x.colocados.length;i++)if(!meta.movidos.includes(i))igual(x.colocados[i],e.colocados[i],seed+': mueve pieza ajena '+i);
++        exigir(!!meta===(seed===3244||seed===1594),seed+': cambia admisión de lectura');
++        if(meta||estar){
++          exigir(movidos.size>0&&[...movidos].every(i=>Number.isInteger(i)&&i>=0&&i<e.colocados.length),seed+': unión de movidos inválida');
++          for(let i=0;i<x.colocados.length;i++)if(!movidos.has(i))igual(x.colocados[i],e.colocados[i],seed+': mueve pieza ajena '+i);
++          if(meta){
++          exigir(meta.movidos.length>4,seed+': admisión/dependientes vacíos');
+           const p=e.colocados[meta.asiento],o=OBJETOS[p.obj];exigir(p.obj==='puff'&&o.asientos?.length===1,seed+': cambia fixture de asiento');
+           const st=o.asientos[0],[dx,dz]=rot(st.p[0],st.p[2],p.ry),sx=e.origen.x+p.x+dx,sz=e.origen.z+p.z+dz;
+           const nuevos=b.pieces.seat.filter(s=>Math.hypot(s.x-sx,s.z-sz)<1e-6&&Math.abs(s.h-p.ry)<1e-6);
+           exigir(nuevos.length===1&&b.pieces.seat.length===a.pieces.seat.length+1,seed+': puff sin asiento real o duplicado');
+           igual(a.pieces.seat.map(asiento),b.pieces.seat.filter(s=>s!==nuevos[0]).map(asiento),seed+': altera asientos existentes');
++          }else igual(a.pieces.seat.map(asiento),b.pieces.seat.map(asiento),seed+': estar altera asientos');
+         }else{
+           exigir(!meta,seed+': fallback/no optante alterado');igual(x.colocados,e.colocados,seed+': fallback parcial');igual(x.activas,e.activas,seed+': activas sin rollback');
+           igual(a.inter.map(i=>[...accion(i),i.x,i.y,i.z]),b.inter.map(i=>[...accion(i),i.x,i.y,i.z]),seed+': desplaza acciones en fallback');
+           igual(a.pieces.seat.map(asiento),b.pieces.seat.map(asiento),seed+': añade asiento en fallback');
+-          if(seed===4007||seed===4685)for(const type of ['phone','drawer'])exigir(b.inter.some(i=>i.sala===e.sala&&i.type===type),seed+': pierde '+type);
+-        }
++        }
++        if(seed===4007||seed===4685)for(const type of ['phone','drawer'])exigir(b.inter.some(i=>i.sala===e.sala&&i.type===type),seed+': pierde '+type);
+       }finally{K.composicion_lectura=cfg;if(a)tirar(a);if(b)tirar(b);}
+     }}finally{K.composicion_lectura=cfg;}
+   });
+@@ -1413,7 +1418,7 @@
+     }finally{Array.prototype.sort=original;if(h)tirar(h);}
+   });
+   if(opts.tanda>=21)await caso('salon: alfombra interior y borde quedan visibles sobre el suelo agrupado',()=>{
+-    for(const [seed,centro]of [[3244,'#7a4a8a'],[1594,'#6a2a8a'],[2786,null]]){
++    for(const [seed,centro]of [[3244,'#c8bda5'],[1594,'#c8bda5'],[2786,null]]){
+       let h;try{
+         h=H.buildVecino(seed,{x:-5200,z:-5200});h.group.updateMatrixWorld(true);
+         const e=h.estancias.find(e=>e.kit==='vivienda_salon');exigir(e,seed+': falta salón');
+@@ -1424,7 +1429,7 @@
+         }
+         exigir(rugs.length===1,seed+': falta alfombra real');const p=rugs[0];
+         exigir(p.sop==null&&p.clase==='PICKUP'&&e.ancho===.8,seed+': cambia soporte, clase o paso');
+-        for(const [x,z,top,ex,ez,col]of [[.85,.55,.004,.9,.6,centro],[.95,.65,.003,1,.7,'#7a2a2a']]){
++        for(const [x,z,top,ex,ez,col]of [[.85,.55,.004,.9,.6,centro],[.95,.65,.003,1,.7,'#687565']]){
+           const [dx,dz]=rot(x,z,p.ry),ray=new THREE.Raycaster(new THREE.Vector3(e.origen.x+p.x+dx,e.origen.y+.04,e.origen.z+p.z+dz),new THREE.Vector3(0,-1,0),0,.05);
+           const visible=o=>{for(;o;o=o.parent)if(!o.visible)return false;return true;};
+           const hits=ray.intersectObject(h.group,true).filter(i=>visible(i.object)),hit=hits[0];
+@@ -1444,5 +1449,43 @@
+       }finally{if(h)tirar(h);}
+     }
+   });
++  if(opts.tanda>=21)await caso('salon: estar aislado conserva núcleo, dependientes, selección y rollback',async()=>{
++    const K=KITS.vivienda_salon,cfg=K.composicion_lectura,B=await(await fetch('/data/quality_budgets.json')).json();exigir(cfg,'falta programa');
++    const igual=(a,b,m)=>exigir(JSON.stringify(a)===JSON.stringify(b),m);
++    try{for(const seed of[3244,1594,2786]){let h;try{
++      delete K.composicion_lectura;h=H.buildVecino(seed);const e=h.estancias.find(e=>e.kit==='vivienda_salon');exigir(e,seed+': sin fixture');
++      const ctx={W:e.W,D:e.D,H:e.H,inicio:e.inicio,libres:e.libres,funciones:true,perfil:e.hogar.perfil,filtro:x=>e.activas.includes(K.objetos.indexOf(x))};
++      const legacy=amueblar(e.kit,e.seed,ctx);K.composicion_lectura=cfg;
++      const planta={W:e.W,D:e.D,zonas:e.zonas,tabiques:e.tabiques},aceptar=Q=>!revisar({local:{...e,colocados:Q},group:{traverse(){}}},B).errores.length;
++      const common={K,ctx,planta,H:e.H,libres:e.libres,inicio:e.inicio,aceptar};
++      const lectura=componerLectura({...common,P:legacy.P}),P=lectura?.P||legacy.P,sello=JSON.stringify(P),params={...common,P,asientoLectura:lectura?.metadata.asiento};
++      const estar=componerEstar(params),A=amueblar(e.kit,e.seed,ctx);
++      exigir(A.K===K,seed+': cambia identidad K');igual(legacy.activas,A.activas,seed+': cambia activas');exigir(legacy.guardias===A.guardias,seed+': deja guardias');
++      for(let i=0;i<12;i++)exigir(legacy.U([0,1])===A.U([0,1]),seed+': consume RNG conjunto');
++      exigir(!!estar===(seed!==2786)&&!!A.composicionEstar===(seed!==2786),seed+': admisión/fallback inesperado');
++      if(!estar){igual(P,A.P,seed+': fallback cambia poses');continue;}
++      exigir(lectura&&estar.metadata.movidos.some(i=>Math.hypot(estar.P[i].x-P[i].x,estar.P[i].z-P[i].z)>.1),seed+': prueba vacía de estar');
++      igual(estar.P,A.P,seed+': helper aislado difiere de integración real');
++      for(let i=0;i<P.length;i++){
++        const q=estar.P[i],p=P[i];igual([q.obj,q.e,q.sop,q.sup,q.de,q.clase],[p.obj,p.e,p.sop,p.sup,p.de,p.clase],seed+': cambia identidad/referencia');
++        if(!estar.metadata.movidos.includes(i))igual(q,p,seed+': mueve núcleo ajeno');
++        if(estar.metadata.movidos.includes(i)&&p.sop!=null){
++          const relativo=(v,s)=>[...rot(v.x-s.x,v.z-s.z,-s.ry),v.y-s.y,v.ry-s.ry],a=relativo(p,P[p.sop]),b=relativo(q,estar.P[q.sop]);
++          exigir(a.every((n,k)=>Math.abs(n-b[k])<1e-8),seed+': dependiente pierde apoyo relativo');
++        }
++      }
++      const caminar=Q=>Q.flatMap(p=>partes(p).concat(p.sop==null&&!['pared','techo'].includes(p.regla)&&OBJETOS[p.obj].clase!=='PICKUP'&&caja(p.obj).h>=.3?[p.v]:[]));
++      const antes=mapaPaso(planta,caminar(P),.05,.8,e.inicio),despues=mapaPaso(planta,caminar(estar.P),.05,.8,e.inicio);
++      const distancia=(m,x,z)=>{let d=Infinity;for(let i=0;i<m.reach.length;i++)if(m.reach[i])d=Math.min(d,Math.hypot(-e.W/2+(i%m.nx+.5)*m.S-x,(Math.floor(i/m.nx)+.5)*m.S-z));return d;};
++      let puff=false;
++      P.forEach((p,i)=>{if(!['sofa','sillon','silla'].includes(OBJETOS[p.obj].rol)&&i!==params.asientoLectura)return;for(const a of OBJETOS[p.obj].asientos||[]){const[x,z]=rot(a.p[0],a.p[2],p.ry);if(i===params.asientoLectura)puff=true;if(distancia(antes,p.x+x,p.z+z)<1.25)exigir(distancia(despues,p.x+x,p.z+z)<1.25,seed+': pierde asiento seleccionable');}});
++      exigir(puff,seed+': no comprueba asiento real de lectura');
++      let rechazos=0;exigir(componerEstar({...params,aceptar:()=>{rechazos++;return false;}})===null&&rechazos>0,seed+': rechazo vacío o ignorado');
++      let excepcion=false;try{componerEstar({...params,aceptar:()=>{throw Error('estar_rechazo');}});}catch(err){exigir(err.message==='estar_rechazo','excepción ajena');excepcion=true;}
++      exigir(excepcion&&JSON.stringify(P)===sello,seed+': excepción/rechazo muta base');
++      exigir(!componerEstar({...params,inicio:{x:-999,z:-999}}),seed+': acepta inicio exterior');
++      exigir(!componerEstar({...params,libres:[{cx:0,cz:e.D/2,hw:e.W/2,hd:e.D/2,a:0,y0:0,y1:e.H}]}),seed+': invade reserva total');
++    }finally{K.composicion_lectura=cfg;if(h)tirar(h);}}}finally{K.composicion_lectura=cfg;}
++  });
+   return { pruebas, errores };
+ }

@@ -1,0 +1,390 @@
+{
+ "before": [
+  {
+   "type": "exit",
+   "label": "Salir a la calle",
+   "r": 1.1,
+   "x": -5202.759626767225,
+   "z": -5199.3
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5197.609626767226,
+   "y": 0,
+   "z": -5199.1
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5201.409626767225,
+   "y": 0,
+   "z": -5196.7
+  },
+  {
+   "type": "mirror",
+   "label": "Mirarse al espejo",
+   "r": 0.6,
+   "x": -5196.659626767225,
+   "y": 0,
+   "z": -5199.2
+  },
+  {
+   "id": "cuadro",
+   "type": "loot",
+   "label": "Coger: cuadro al óleo",
+   "def": {
+    "name": "Cuadro al óleo",
+    "value": [
+     80,
+     300
+    ]
+   },
+   "r": 1.1,
+   "x": -5197.745373232774,
+   "y": 0,
+   "z": -5193.984569721321
+  },
+  {
+   "type": "eat",
+   "label": "Picar algo de la cocina",
+   "r": 0.9,
+   "x": -5202.909626767225,
+   "y": 0,
+   "z": -5192.563677196391
+  },
+  {
+   "type": "fridge",
+   "label": "Abrir la nevera",
+   "r": 0.8,
+   "x": -5200.659626767225,
+   "y": 0,
+   "z": -5192.613677196391
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5202.509626767225,
+   "y": 0,
+   "z": -5194.7136771963915
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5199.909626767225,
+   "y": 0,
+   "z": -5192.363677196391
+  },
+  {
+   "type": "mirror",
+   "label": "Mirarse al espejo",
+   "r": 0.6,
+   "x": -5203.009626767225,
+   "y": 0,
+   "z": -5190.435092816837
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5198.309626767225,
+   "y": 3.1,
+   "z": -5199
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5197.559626767225,
+   "y": 3.1,
+   "z": -5199.05
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5196.959626767225,
+   "y": 3.1,
+   "z": -5198.650000000001
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5202.509626767225,
+   "y": 3.1,
+   "z": -5193.513677196391
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5200.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5199.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5200.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "tv",
+   "label": "Encender la tele",
+   "r": 0.9,
+   "x": -5203.03315148909,
+   "y": 0,
+   "z": -5196.429189269829
+  },
+  {
+   "id": "portatil",
+   "type": "loot",
+   "label": "Coger: portátil",
+   "def": {
+    "name": "Portátil",
+    "value": [
+     90,
+     220
+    ]
+   },
+   "r": 0.95,
+   "x": -5203.459626767225,
+   "y": 3.1,
+   "z": -5198.55
+  },
+  {
+   "id": "cartera",
+   "type": "loot",
+   "label": "Coger: cartera",
+   "def": {
+    "name": "Cartera",
+    "cash": [
+     15,
+     90
+    ]
+   },
+   "r": 0.95,
+   "x": -5198.759626767225,
+   "y": 3.1,
+   "z": -5199.1
+  },
+  {
+   "type": "well",
+   "label": "Asomarse al pozo",
+   "r": 0.9,
+   "x": -5199.57545756506,
+   "z": -5187.436480551585
+  }
+ ],
+ "after": [
+  {
+   "type": "exit",
+   "label": "Salir a la calle",
+   "r": 1.1,
+   "x": -5202.759626767225,
+   "z": -5199.3
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5197.609626767226,
+   "y": 0,
+   "z": -5199.1
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5201.409626767225,
+   "y": 0,
+   "z": -5196.7
+  },
+  {
+   "type": "mirror",
+   "label": "Mirarse al espejo",
+   "r": 0.6,
+   "x": -5196.609626767226,
+   "y": 0,
+   "z": -5199.25
+  },
+  {
+   "id": "cuadro",
+   "type": "loot",
+   "label": "Coger: cuadro al óleo",
+   "def": {
+    "name": "Cuadro al óleo",
+    "value": [
+     80,
+     300
+    ]
+   },
+   "r": 1.1,
+   "x": -5197.745373232774,
+   "y": 0,
+   "z": -5193.984569721321
+  },
+  {
+   "type": "eat",
+   "label": "Picar algo de la cocina",
+   "r": 0.9,
+   "x": -5202.909626767225,
+   "y": 0,
+   "z": -5192.563677196391
+  },
+  {
+   "type": "fridge",
+   "label": "Abrir la nevera",
+   "r": 0.8,
+   "x": -5200.659626767225,
+   "y": 0,
+   "z": -5192.613677196391
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5202.509626767225,
+   "y": 0,
+   "z": -5194.7136771963915
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5199.909626767225,
+   "y": 0,
+   "z": -5192.363677196391
+  },
+  {
+   "type": "mirror",
+   "label": "Mirarse al espejo",
+   "r": 0.6,
+   "x": -5203.009626767225,
+   "y": 0,
+   "z": -5190.435092816837
+  },
+  {
+   "type": "hide",
+   "label": "Esconderse en el armario",
+   "r": 0.8,
+   "x": -5198.309626767225,
+   "y": 3.1,
+   "z": -5199
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5197.559626767225,
+   "y": 3.1,
+   "z": -5199.05
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5196.959626767225,
+   "y": 3.1,
+   "z": -5198.650000000001
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5202.509626767225,
+   "y": 3.1,
+   "z": -5193.513677196391
+  },
+  {
+   "type": "drawer",
+   "label": "Registrar los cajones",
+   "r": 0.8,
+   "x": -5200.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5199.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "read",
+   "label": "Hojear un libro",
+   "r": 0.8,
+   "x": -5200.059626767225,
+   "y": 3.1,
+   "z": -5189.563677196391
+  },
+  {
+   "type": "tv",
+   "label": "Encender la tele",
+   "r": 0.9,
+   "x": -5203.03315148909,
+   "y": 0,
+   "z": -5196.429189269829
+  },
+  {
+   "id": "portatil",
+   "type": "loot",
+   "label": "Coger: portátil",
+   "def": {
+    "name": "Portátil",
+    "value": [
+     90,
+     220
+    ]
+   },
+   "r": 0.95,
+   "x": -5203.459626767225,
+   "y": 3.1,
+   "z": -5198.55
+  },
+  {
+   "id": "cartera",
+   "type": "loot",
+   "label": "Coger: cartera",
+   "def": {
+    "name": "Cartera",
+    "cash": [
+     15,
+     90
+    ]
+   },
+   "r": 0.95,
+   "x": -5198.759626767225,
+   "y": 3.1,
+   "z": -5199.1
+  },
+  {
+   "type": "well",
+   "label": "Asomarse al pozo",
+   "r": 0.9,
+   "x": -5199.57545756506,
+   "z": -5187.436480551585
+  }
+ ],
+ "counts": [
+  21,
+  21
+ ]
+}

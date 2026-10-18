@@ -1,0 +1,1317 @@
+{
+ "tipologia": "restaurante",
+ "nombre": "Casa de comidas",
+ "nota": "La casa de comidas de un pueblo de las Vegas Altas, con su menú del día: una barra pequeña a la entrada (taburetes, caja, vitrina de tapas, el jamón colgado y los botelleros detrás), el comedor con las mesas puestas (mantel, platos, cubiertos, copas, cesta de pan, botella de vino, servilletas) y sillas de anea, la pizarra del menú, los cuadros y la cabeza de ciervo, el aseo, y la cocina tras un tabique con su fogón, campana, mesas de acero, fregadero y neveras. La puerta de la calle en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   8.4,
+   9.6
+  ],
+  "fondo": [
+   12.0,
+   13.8
+  ],
+  "alto": 3.3
+ },
+ "variables": {
+  "xc": "W/2-1.95",
+  "z0": "1.7",
+  "z1": "5.3",
+  "zk": "D-3.6",
+  "za": "D-6.0",
+  "xa": "-W/2+2.1"
+ },
+ "paso_libre": 0.9,
+ "pared": "#efe3c8",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#cdb592",
+ "puntos": {
+  "dependiente": [
+   "xc+0.75",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc-0.95",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pedir en la barra",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "xc-0.4",
+    "1.2"
+   ]
+  },
+  {
+   "id": "barra",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_barra",
+   "publica": true,
+   "rect": [
+    "xc-1.3",
+    "z0",
+    "xc-0.33",
+    "z1"
+   ]
+  },
+  {
+   "id": "trasbarra",
+   "publica": false,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "W/2",
+    "z1+0.2"
+   ]
+  },
+  {
+   "id": "comedor",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.2",
+    "xc-1.35",
+    "za-0.1"
+   ]
+  },
+  {
+   "id": "comedor2",
+   "publica": true,
+   "rect": [
+    "-W/2+2.2",
+    "za-0.1",
+    "W/2",
+    "zk-0.1"
+   ]
+  },
+  {
+   "id": "aseo",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "za",
+    "xa",
+    "zk"
+   ]
+  },
+  {
+   "id": "cocina",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zk",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zk"
+   ],
+   "a": [
+    "W/2",
+    "zk"
+   ],
+   "puerta": [
+    "W-2.4",
+    1.0
+   ]
+  },
+  {
+   "de": [
+    "xa",
+    "za"
+   ],
+   "a": [
+    "xa",
+    "zk"
+   ]
+  },
+  {
+   "de": [
+    "-W/2",
+    "za"
+   ],
+   "a": [
+    "xa",
+    "za"
+   ],
+   "puerta": [
+    0.55,
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc-1.3",
+    "(z0+z1)/2-0.55",
+    "xc-0.3",
+    "(z0+z1)/2+0.55"
+   ],
+   "nota": "el sitio para pedir en la barra, junto a la caja: sin taburetes"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "barra",
+   "regla": "modulos",
+   "obj": "barra_modulo",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "-x",
+   "obligatorio": true,
+   "vende": [
+    "bocadillo",
+    "agua"
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "vitrina_tapas",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "tirador_cerveza",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "servilletero",
+   "en": [
+    "barra_modulo"
+   ],
+   "por_m": [
+    0.3,
+    0.5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "palillero",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "bote_propinas",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "sobre",
+   "obj": "jamonero",
+   "en": [
+    "barra_modulo"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "barra",
+   "regla": "vida",
+   "variantes": [
+    "plato_tortilla",
+    "cuenco_aceitunas",
+    "plato_jamon",
+    "vaso_cana",
+    "copa_vino",
+    "taza_cafe",
+    "servilleta_arrugada"
+   ],
+   "en": [
+    "barra_modulo"
+   ],
+   "fraccion": [
+    0.5,
+    0.8
+   ],
+   "por_soporte": [
+    1,
+    3
+   ]
+  },
+  {
+   "zona": "frente_barra",
+   "regla": "fila",
+   "obj": "taburete_alto",
+   "eje": "z",
+   "linea": [
+    "xc-0.68",
+    "z0+0.3",
+    "z1-0.3"
+   ],
+   "cada": 0.6,
+   "mira": "+x",
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "contra_pared",
+   "obj": "nevera_bebidas",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "contra_pared",
+   "obj": "mueble_trasbarra",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "pared",
+   "obj": "botellero_pared",
+   "pared": "E",
+   "cada": 1.25,
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "sobre",
+   "obj": "cafetera_industrial",
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "sobre",
+   "variantes": [
+    "tostadora",
+    "exprimidor",
+    "microondas"
+   ],
+   "en": [
+    "mueble_trasbarra"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "trasbarra",
+   "regla": "sobre",
+   "variantes": [
+    "botella_whisky",
+    "botella_ron",
+    "botella_ginebra",
+    "botella_anis",
+    "botella_brandy",
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "botella_vermut",
+    "botella_licor_hierbas",
+    "botella_pacharan",
+    "botella_agua_mineral",
+    "botella_refresco_cola",
+    "botella_refresco_naranja",
+    "botella_cerveza",
+    "botella_mosto"
+   ],
+   "en": [
+    "botellero_pared"
+   ],
+   "relleno": [
+    0.7,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "por_m": [
+    0.3,
+    0.4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "barra",
+   "regla": "techo",
+   "obj": "jamon_colgado",
+   "por_m": [
+    0.3,
+    0.5
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "contra_pared",
+   "obj": "caballete_menu",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "perchero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "paraguero",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "conjunto",
+   "variantes": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_anea",
+     "silla_comedor_tapizada",
+     "silla_madera"
+    ],
+    "n": [
+     2,
+     4
+    ]
+   },
+   "por_m2": [
+    0.1,
+    0.15
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "sobre",
+   "variantes": [
+    "cubiertos_servicio",
+    "plato_llano",
+    "copa_vino",
+    "vaso_agua",
+    "servilleta_doblada"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "por_soporte": [
+    4,
+    6
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "sobre",
+   "obj": "cesta_pan",
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.6,
+    0.9
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "sobre",
+   "variantes": [
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "botella_agua_mineral",
+    "jarra_agua"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.6,
+    0.9
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "sobre",
+   "variantes": [
+    "salero_pimentero",
+    "aceitera_vinagrera",
+    "florero_mesa"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "vida",
+   "variantes": [
+    "plato_hondo",
+    "plato_postre",
+    "plato_tortilla",
+    "plato_jamon",
+    "cuenco_aceitunas",
+    "periodico",
+    "carta_menu"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.3,
+    0.6
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "contra_pared",
+   "obj": "aparador_comedor",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "sobre",
+   "variantes": [
+    "plato_llano",
+    "copa_vino",
+    "botella_vino_tinto",
+    "florero_mesa",
+    "cesta_pan"
+   ],
+   "en": [
+    "aparador_comedor"
+   ],
+   "cantidad": [
+    0,
+    4
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "obj": "rotulo_restaurante",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "obj": "pizarra_menu_pared",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "variantes": [
+    "cuadro_paisaje",
+    "cuadro_foto_antigua",
+    "cartel_toros"
+   ],
+   "pared": "W",
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "obj": "cabeza_ciervo",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "obj": "lampara_aplique",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "pared",
+   "obj": "reloj_pared",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "comedor",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "por_m2": [
+    0.07,
+    0.1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor2",
+   "regla": "conjunto",
+   "variantes": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "sillas": {
+    "variantes": [
+     "silla_anea",
+     "silla_comedor_tapizada",
+     "silla_madera"
+    ],
+    "n": [
+     2,
+     4
+    ]
+   },
+   "por_m2": [
+    0.1,
+    0.16
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor2",
+   "regla": "sobre",
+   "variantes": [
+    "cubiertos_servicio",
+    "plato_llano",
+    "copa_vino",
+    "vaso_agua",
+    "servilleta_doblada"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "por_soporte": [
+    4,
+    6
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor2",
+   "regla": "sobre",
+   "obj": "cesta_pan",
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.6,
+    0.9
+   ]
+  },
+  {
+   "zona": "comedor2",
+   "regla": "sobre",
+   "variantes": [
+    "botella_vino_tinto",
+    "botella_vino_blanco",
+    "botella_agua_mineral",
+    "jarra_agua"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.6,
+    0.9
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor2",
+   "regla": "sobre",
+   "variantes": [
+    "salero_pimentero",
+    "aceitera_vinagrera",
+    "florero_mesa"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "por_soporte": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "comedor2",
+   "regla": "vida",
+   "variantes": [
+    "plato_hondo",
+    "plato_postre",
+    "plato_tortilla",
+    "plato_jamon",
+    "cuenco_aceitunas",
+    "periodico",
+    "carta_menu"
+   ],
+   "en": [
+    "mesa_mantel_blanca",
+    "mesa_mantel_cuadros",
+    "mesa_cuadrada_mantel",
+    "mesa_redonda_mantel"
+   ],
+   "fraccion": [
+    0.3,
+    0.6
+   ],
+   "por_soporte": [
+    1,
+    2
+   ]
+  },
+  {
+   "zona": "comedor2",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "contra_pared",
+   "obj": "inodoro",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "esquina",
+   "obj": "escobilla",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "aseo",
+   "regla": "pared",
+   "obj": "lavabo",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "pared",
+   "obj": "espejo_aseo",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "lavabo"
+  },
+  {
+   "zona": "aseo",
+   "regla": "pared",
+   "obj": "dispensador_jabon",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "pared",
+   "obj": "secamanos",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "pared",
+   "obj": "portarrollos",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "aseo",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "aseo",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "cocina_fuegos",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "pared",
+   "obj": "campana_extractora",
+   "pared": "N",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "sobre_de": "cocina_fuegos"
+  },
+  {
+   "zona": "cocina",
+   "regla": "sobre",
+   "variantes": [
+    "olla_grande",
+    "cazuela_barro",
+    "sarten_grande",
+    "cacerola"
+   ],
+   "en": [
+    "cocina_fuegos"
+   ],
+   "cantidad": [
+    1,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "fregadero_acero",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "nevera_industrial",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "arcon_congelador",
+   "pared": "E",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "lavavajillas",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "mesa_acero",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "suelo_libre",
+   "obj": "mesa_acero",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "sobre",
+   "variantes": [
+    "freidora",
+    "plancha_cocina",
+    "tabla_cortar",
+    "garrafa_aceite",
+    "olla_grande",
+    "cazuela_barro"
+   ],
+   "en": [
+    "mesa_acero"
+   ],
+   "cantidad": [
+    2,
+    4
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "sobre",
+   "variantes": [
+    "tabla_cortar",
+    "caja_verduras",
+    "garrafa_aceite"
+   ],
+   "en": [
+    "arcon_congelador"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "pared",
+   "obj": "estante_ollas",
+   "pared": "W",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "sobre",
+   "variantes": [
+    "caja_carton",
+    "caja_vasos",
+    "garrafa_aceite",
+    "saco_cafe"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "suelo_libre",
+   "variantes": [
+    "caja_verduras",
+    "saco_patatas",
+    "carro_servicio"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true
+  },
+  {
+   "zona": "cocina",
+   "regla": "esquina",
+   "obj": "cubo_basura_pedal",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "cocina",
+   "regla": "techo",
+   "obj": "lampara_colgante",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   6,
+   9
+  ],
+  "temperatura_k": [
+   2700,
+   3200
+  ],
+  "dia": {
+   "intensidad": 0.8
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 80
+ },
+ "ambiente": {
+  "sonido": "restaurante",
+  "horario_defecto": "Mo-Su 13:00-16:30,20:30-23:30",
+  "vida": [
+   "el menú del día en la pizarra",
+   "cestas de pan en las mesas",
+   "copas a medias",
+   "la cocina al fondo con las ollas al fuego"
+  ],
+  "cerrado": "persiana bajada y sillas sobre las mesas",
+  "clientela": {
+   "maximo": 12,
+   "horas": [
+    [
+     13,
+     16.5,
+     0.7
+    ],
+    [
+     20.5,
+     23.5,
+     0.55
+    ],
+    [
+     9,
+     12,
+     0.12
+    ]
+   ],
+   "frases": [
+    "Hoy de primero hay migas, ¡y están de rechupete!",
+    "Ponme un tinto de verano bien fresquito.",
+    "¿Queda postre casero?",
+    "El cordero es de aquí, de las Vegas.",
+    "Esto sí que es comer como en casa.",
+    "Otra de pan, que se acaba."
+   ]
+  }
+ },
+ "minimo_objetos_distintos": 60,
+ "moodboard": [
+  {
+   "titulo": "Barra y Comedor del Restaurante Degusto (2922933046).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Barra_y_Comedor_del_Restaurante_Degusto_(2922933046).jpg",
+   "autor": "Javier Lastras from España/Spain",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "ComedorLaFinca.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:ComedorLaFinca.jpg",
+   "autor": "Gastronomus",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Comedor del Restaurante Degusto (2922082063).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Comedor_del_Restaurante_Degusto_(2922082063).jpg",
+   "autor": "Javier Lastras from España/Spain",
+   "licencia": "CC BY 2.0"
+  },
+  {
+   "titulo": "Comedor del restaurante.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Comedor_del_restaurante.jpg",
+   "autor": "Canplanes",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Comedor interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Comedor_interior.jpg",
+   "autor": "Tcastano",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "InteriorTaberna-Antonio Sánchez.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:InteriorTaberna-Antonio_S%C3%A1nchez.jpg",
+   "autor": "Tamorlan",
+   "licencia": "CC BY 3.0"
+  },
+  {
+   "titulo": "Interior del Mesón de La Dolores, Calatayud.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_del_Mes%C3%B3n_de_La_Dolores,_Calatayud.jpg",
+   "autor": "José Luis Filpo Cabana",
+   "licencia": "CC BY 4.0"
+  },
+  {
+   "titulo": "Mesón Los Gemelos Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Mes%C3%B3n_Los_Gemelos_Interior.jpg",
+   "autor": "StellarD",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Museo del Traje, comedor restaurante, Madrid, España, 2015.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Museo_del_Traje,_comedor_restaurante,_Madrid,_Espa%C3%B1a,_2015.JPG",
+   "autor": "Benjamín Núñez González",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Restaurante con 2 huevos salamanca.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Restaurante_con_2_huevos_salamanca.jpg",
+   "autor": "Leonardoroma",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Salón Isabelino-Lhardy.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sal%C3%B3n_Isabelino-Lhardy.jpg",
+   "autor": "Tamorlan",
+   "licencia": "CC BY 3.0"
+  }
+ ]
+}

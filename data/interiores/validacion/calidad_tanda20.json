@@ -1,0 +1,36 @@
+{
+ "fecha": "2026-10-18",
+ "tanda": 20,
+ "estado": "avance_parcial_publicacion_solicitada",
+ "objetivo": 4,
+ "objetivo_4_alcanzado": false,
+ "nueva_puntuacion_formal": false,
+ "base": "7767e2cdd7bea78100669cddcd48a276fcf044a2",
+ "contratos": 82,
+ "casas": 200,
+ "habitaciones": 1166,
+ "maximos": {
+  "triangulos": 75676,
+  "mallas": 60,
+  "luces": 9,
+  "montaje_ms": 687.6
+ },
+ "kits": {
+  "dormitorio": {
+   "semillas_laboratorio": 81,
+   "errores": 0,
+   "nota": "R1 sin nueva puntuación; evaluación anterior histórica"
+  },
+  "joven": {
+   "semillas_laboratorio": 81,
+   "errores": 0,
+   "nota": "Sólo cama individual compartida; resto de programa y paleta sin editar"
+  }
+ },
+ "integracion": {
+  "fuente_errores": 0,
+  "paquete_errores": 0
+ },
+ "revision_independiente": "data/interiores/revision_calidad_tanda20_2026-10-18.md",
+ "pendiente": "Usuario detiene las mejoras y solicita probar lo actual. 4/5 pendiente; centro de sala amplia, ribete morado/alfombra y paños/carteles. CI/Pages y prueba pública todavía pendientes en este commit."
+}

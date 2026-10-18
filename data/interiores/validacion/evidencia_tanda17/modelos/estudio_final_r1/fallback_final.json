@@ -1,0 +1,471 @@
+{
+  "state": "PASS_LITERAL_FINAL_MODELS_INDIVIDUAL_FALLBACK_NOT_VISUAL",
+  "requestedSeed": 4,
+  "effectiveSeed": 4,
+  "frame": [
+    3.2,
+    2.8,
+    2.75
+  ],
+  "door": -0.75,
+  "requiredPassage": 0.8,
+  "meshes": 14,
+  "triangles": 5774,
+  "lights": 1,
+  "errors": [],
+  "library": {
+    "obj": "vb_biblioteca_estudio",
+    "zona": "estancia",
+    "regla": "contra_pared",
+    "x": 0.3300000000000002,
+    "y": 0,
+    "z": 0.18000000178813935,
+    "ry": 0,
+    "sop": null,
+    "sup": null,
+    "e": 12,
+    "v": {
+      "cx": 0.3300000000000002,
+      "cz": 0.18000000178813935,
+      "hw": 0.5,
+      "hd": 0.17000000178813934,
+      "a": 0,
+      "y0": -2.3841858265427618e-8,
+      "y1": 1.7000000476837158
+    }
+  },
+  "entryAndUseFreeReachableAt08": {
+    "entry": true,
+    "use": true
+  },
+  "individualLayoutAndNextTwoRngExact": true,
+  "negative": {
+    "errors": [
+      "obligatorio: estancia/vb_puesto_estudio_amplio — 0 colocados, el kit pide 1",
+      "obligatorio: estancia/vb_guardado_estudio — 0 colocados, el kit pide 1",
+      "obligatorio: estancia/vb_biblioteca_estudio — 0 colocados, el kit pide 1",
+      "obligatorio: estancia/vb_ordenador — 0 colocados, el kit pide 1",
+      "obligatorio: estancia/vb_panel_estudio_estudiante — 0 colocados, el kit pide 1",
+      "obligatorio: estancia/vb_consulta_estudio_estudiante — 0 colocados, el kit pide 2"
+    ],
+    "generation": {
+      "semillaSolicitada": 4,
+      "semillaEfectiva": 1152023,
+      "intento": 11,
+      "maximo": 12,
+      "agotado": true,
+      "marco": {
+        "W": 3.2,
+        "D": 2.8,
+        "H": 2.75,
+        "puertaX": -0.75
+      },
+      "intentos": [
+        {
+          "seed": 4,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 104733,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 209462,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 314191,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 418920,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 523649,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 628378,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 733107,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 837836,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 942565,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 1047294,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        },
+        {
+          "seed": 1152023,
+          "faltan": [
+            10,
+            11,
+            12,
+            13,
+            15,
+            22
+          ]
+        }
+      ]
+    },
+    "frame": [
+      3.2,
+      2.8,
+      2.75
+    ]
+  },
+  "items": [
+    {
+      "i": 0,
+      "e": 10,
+      "obj": "vb_puesto_estudio_amplio",
+      "zona": "estancia",
+      "regla": "contra_pared",
+      "x": -0.02,
+      "y": 0,
+      "z": 2.49,
+      "ry": 3.1416,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PUSH",
+      "v": {
+        "cx": -0.020000023841857617,
+        "cz": 2.489999988079071,
+        "hw": 0.6499999761581421,
+        "hd": 0.30000001192092896,
+        "a": 3.141592653589793,
+        "y0": 1.0728836485895954e-8,
+        "y1": 1.2200000286102295
+      }
+    },
+    {
+      "i": 1,
+      "e": 10,
+      "obj": "vb_silla_estudio",
+      "zona": "estancia",
+      "regla": "junto_a",
+      "x": -0.02,
+      "y": 0,
+      "z": 1.91,
+      "ry": 6.2832,
+      "sop": null,
+      "sup": null,
+      "de": 0,
+      "clase": "CARRY",
+      "v": {
+        "cx": -0.020000023841857548,
+        "cz": 1.909999977350235,
+        "hw": 0.2199999988079071,
+        "hd": 0.2199999988079071,
+        "a": 6.283185307179586,
+        "y0": 1.19209286886246e-9,
+        "y1": 0.9800000190734863
+      }
+    },
+    {
+      "i": 2,
+      "e": 11,
+      "obj": "vb_guardado_estudio",
+      "zona": "estancia",
+      "regla": "junto_a",
+      "x": 1.12,
+      "y": 0,
+      "z": 2.615,
+      "ry": 3.1416,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PUSH",
+      "v": {
+        "cx": 1.1199999403953556,
+        "cz": 2.6150000029802323,
+        "hw": 0.44999998807907104,
+        "hd": 0.17499999701976776,
+        "a": 3.141592653589793,
+        "y0": -7.450580430390374e-11,
+        "y1": 0.7799999713897705
+      }
+    },
+    {
+      "i": 3,
+      "e": 12,
+      "obj": "vb_biblioteca_estudio",
+      "zona": "estancia",
+      "regla": "contra_pared",
+      "x": 0.33,
+      "y": 0,
+      "z": 0.18,
+      "ry": 0,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PUSH",
+      "v": {
+        "cx": 0.3300000000000002,
+        "cz": 0.18000000178813935,
+        "hw": 0.5,
+        "hd": 0.17000000178813934,
+        "a": 0,
+        "y0": -2.3841858265427618e-8,
+        "y1": 1.7000000476837158
+      }
+    },
+    {
+      "i": 4,
+      "e": 13,
+      "obj": "vb_ordenador",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": -0.02,
+      "y": 0.75,
+      "z": 2.665,
+      "ry": 3.1416,
+      "sop": 0,
+      "sup": 0,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": -0.020000023841857638,
+        "cz": 2.652499988824129,
+        "hw": 0.1899999976158142,
+        "hd": 0.0924999974668026,
+        "a": 3.141592653589793,
+        "y0": 0.7500000003874302,
+        "y1": 1.0600000023841858
+      }
+    },
+    {
+      "i": 5,
+      "e": 15,
+      "obj": "vb_panel_estudio_estudiante",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": -0.02,
+      "y": 0.75,
+      "z": 2.665,
+      "ry": 3.1416,
+      "sop": 0,
+      "sup": 0,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": -0.02000002384185765,
+        "cz": 2.759499985873699,
+        "hw": 0.550000011920929,
+        "hd": 0.0005000010132789612,
+        "a": 3.141592653589793,
+        "y0": 0.7500000065565109,
+        "y1": 1.1699999868869781
+      }
+    },
+    {
+      "i": 6,
+      "e": 22,
+      "obj": "vb_consulta_estudio_estudiante",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": 0.33,
+      "y": 1.215,
+      "z": 0.165,
+      "ry": 0,
+      "sop": 3,
+      "sup": 2,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": 0.3312499988079073,
+        "cz": 0.16500000178813934,
+        "hw": 0.2537499964237213,
+        "hd": 0.125,
+        "a": 0,
+        "y0": 1.2149999991059304,
+        "y1": 1.465
+      }
+    },
+    {
+      "i": 7,
+      "e": 22,
+      "obj": "vb_consulta_estudio_estudiante",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": 0.33,
+      "y": 0.415,
+      "z": 0.165,
+      "ry": 0,
+      "sop": 3,
+      "sup": 0,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": 0.3312499988079073,
+        "cz": 0.16500000178813934,
+        "hw": 0.2537499964237213,
+        "hd": 0.125,
+        "a": 0,
+        "y0": 0.41499999910593033,
+        "y1": 0.665
+      }
+    },
+    {
+      "i": 8,
+      "e": 24,
+      "obj": "lb_libros_granates",
+      "zona": "estancia",
+      "regla": "sobre",
+      "x": 0.33,
+      "y": 0.815,
+      "z": 0.165,
+      "ry": 0,
+      "sop": 3,
+      "sup": 1,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": 0.3614003154635431,
+        "cz": 0.16500000178813934,
+        "hw": 0.19825433939695358,
+        "hd": 0.10100000351667404,
+        "a": 0,
+        "y0": 0.8149999935213685,
+        "y1": 1.0778137469291686
+      }
+    },
+    {
+      "i": 9,
+      "e": 26,
+      "obj": "fotos_familia",
+      "zona": "estancia",
+      "regla": "pared",
+      "x": -1.597,
+      "y": 0,
+      "z": 0.89,
+      "ry": 1.5708,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "PICKUP",
+      "v": {
+        "cx": -1.5889999997038395,
+        "cz": 0.8900000035762787,
+        "hw": 0.3400000035762787,
+        "hd": 0.008000000296160575,
+        "a": 1.5707963267948966,
+        "y0": 1.3300000429153442,
+        "y1": 1.7100000381469727
+      }
+    },
+    {
+      "i": 10,
+      "e": 27,
+      "obj": "vb_lampara_trabajo",
+      "zona": "estancia",
+      "regla": "techo",
+      "x": 0,
+      "y": 2.75,
+      "z": 1.4,
+      "ry": 0,
+      "sop": null,
+      "sup": null,
+      "de": null,
+      "clase": "FIXED",
+      "v": {
+        "cx": 0,
+        "cz": 1.4,
+        "hw": 0.4000000059604645,
+        "hd": 0.09000000357627869,
+        "a": 0,
+        "y0": 2.6450000032782555,
+        "y1": 2.7500000000745057
+      }
+    }
+  ],
+  "limits": "Laboratorio sin reserva de su ventana: biblioteca puede taparla en proyección; prueba mecánica, no aprobación de luz/imagen. No implica retorno a receta T16 ni un solver nuevo."
+}

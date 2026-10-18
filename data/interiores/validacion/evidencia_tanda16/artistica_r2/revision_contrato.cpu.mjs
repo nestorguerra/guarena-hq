@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';import{runtime}from'./runtime.cpu.mjs';
+const root='.cache/calidad/cocina_t16/artistica_r2/',source=fs.readFileSync(root+'candidata/tools/interiores/casas_pruebas.js','utf8'),begin=source.indexOf("  if(opts.tanda>=19)await caso('cocina: nicho"),code=source.slice(begin,source.indexOf('  return { pruebas, errores };',begin));assert(begin>0);
+const rows=[];
+async function run(name,editCode=x=>x,editData=()=>{}){const api=runtime(true);editData(api.data.OBJETOS);const before=JSON.stringify(api.data.OBJETOS),results=[];const caso=(n,fn)=>{try{fn();results.push({pass:true});}catch(e){results.push({pass:false,error:String(e.message)});}},exigir=(x,msg)=>assert(x,msg);await new Function('opts','caso','exigir','OBJETOS','partes','penetra','return(async()=>{'+editCode(code)+'})();')({tanda:19},caso,exigir,api.data.OBJETOS,api.geo.partes,api.geo.penetra);assert.equal(results.length,1);assert.equal(JSON.stringify(api.data.OBJETOS),before,'contract leaks mutated model');rows.push({name,...results[0]});}
+await run('literal_positive');
+await run('old_material_filter',x=>x.replace("(id!=='va_preparar_pan'&&!['ceramica','comida'].includes(o.partes[i].m))","!['ceramica','comida'].includes(o.partes[i].m)"));
+await run('knife_absent',x=>x,O=>{O.va_preparar_pan.partes=O.va_preparar_pan.partes.filter(p=>p.m!=='metal');});
+assert(rows[0].pass);assert(!rows[2].pass&&rows[2].error.includes('hoja')); assert(!rows[1].pass&&rows[1].error.includes('cuchillo flotante'));fs.writeFileSync(root+'revision_contrato_cpu.json',JSON.stringify({sourceSHA:crypto.createHash('sha256').update(source).digest('hex'),rows},null,2)+'\n');console.log(rows);

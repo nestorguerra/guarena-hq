@@ -1,0 +1,217 @@
+{
+ "estado": "evaluado",
+ "proveedor": "OpenAI Decisions",
+ "modelo": "gpt-6-luna",
+ "request_id": "req_0953c99dab7a40c795b4b18731e85df6",
+ "request_sha256": "a227ebba2dd6c303f4da15c48e1fe82291b00976ccdeebf1d3039d1cbe1f90ff",
+ "fecha": "2026-10-17T14:13:46.625527+00:00",
+ "kit": "ninos",
+ "revisor": "B",
+ "ficha": "data/interiores/fichas/casa_ninos.jpg",
+ "ficha_sha256": "30913ddaa6c94b78e73661c2130288287723471d880eed37e82180a9411378f4",
+ "referencias": [
+  {
+   "titulo": "Wickers Building — Children Bedroom — 001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_001.jpg",
+   "autor": "Steven Pavlov",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_001.jpg/960px-Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "titulo": "Wickers Building — Children Bedroom — 002.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_002.jpg",
+   "autor": "Steven Pavlov",
+   "licencia": "CC BY-SA 4.0",
+   "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_002.jpg/960px-Wickers_Building_%E2%80%94_Children_Bedroom_%E2%80%94_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ ],
+ "escala": "score API base cero + 1; media ponderada de niveles 1 a 5",
+ "puntuaciones": {
+  "densidad": 2.74,
+  "coherencia": 2.88,
+  "iluminacion": 2.89,
+  "variedad": 2.72,
+  "lectura_funcional": 1.86
+ },
+ "media": 2.618,
+ "supera_umbral": false,
+ "respuestas": [
+  {
+   "type": "score",
+   "name": "densidad",
+   "score": 1.74,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.25
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.73
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.01
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.0
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "coherencia",
+   "score": 1.88,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.01
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.18
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.74
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.77
+  },
+  {
+   "type": "score",
+   "name": "iluminacion",
+   "score": 1.89,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.22
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.6
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.13
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.02
+    }
+   ],
+   "confidence": 0.63
+  },
+  {
+   "type": "score",
+   "name": "variedad",
+   "score": 1.72,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.03
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.3
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.6
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.06
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.01
+    }
+   ],
+   "confidence": 0.63
+  },
+  {
+   "type": "score",
+   "name": "lectura_funcional",
+   "score": 0.86,
+   "probabilities": [
+    {
+     "value": 0,
+     "label": "1",
+     "probability": 0.42
+    },
+    {
+     "value": 1,
+     "label": "2",
+     "probability": 0.38
+    },
+    {
+     "value": 2,
+     "label": "3",
+     "probability": 0.15
+    },
+    {
+     "value": 3,
+     "label": "4",
+     "probability": 0.02
+    },
+    {
+     "value": 4,
+     "label": "5",
+     "probability": 0.03
+    }
+   ],
+   "confidence": 0.28
+  }
+ ],
+ "uso": {
+  "input_tokens": 4776,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 0,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 4776
+ }
+}

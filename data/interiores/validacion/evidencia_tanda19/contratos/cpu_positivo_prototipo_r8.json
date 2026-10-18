@@ -1,0 +1,35 @@
+{
+  "mode": "positivo",
+  "candidate": ".cache/calidad/tanda19/prototipo_r8/",
+  "seal": "34dc720c76b6965951a8b66f16bacc95d27429ba4f34630025d5785c32b1512a",
+  "construcciones": [
+    2132,
+    4204,
+    1679,
+    2162
+  ],
+  "scope": "Callback literal CPU: constructores/geometría Three r170 reales; Canvas trazas sin GPU ni gates. Cuatro casas dirigidas sólo en positivo.",
+  "callback": "1be00296af3ea9bfd37779661d7b09b77177f6273a354719e1a082558f595929",
+  "inputs": {
+    "src/locales.js": "1eb797da998b0886f6e31af5b326b7ec06fc72041720f9948a12755e43afd114",
+    "src/houses.js": "e37d877dad234ac651b7dbf83c4a7fc5772a125fce97b91da2511e11786aad64",
+    "src/acabados_vivienda.js": "c98023c7de3f91caad1b88d0aaa3c6bf4092c835079432ed9769932c868058d6",
+    "data/objetos/vivienda_b.json": "6ef2375ceae0a7bf20d2199e1f34cbe5f4c16245cf75a9ca5a0b93da5559592c",
+    "data/kits/vivienda_trofeos.json": "6d4b63527faede89f5516c0b5d673e6e6c72fe83dce94b75596e3e4d48e56620"
+  },
+  "restored": true,
+  "rows": [
+    {
+      "name": "trofeos: frente, botín apoyado, consulta amplia/compacta y acabado real; uniones físicas",
+      "estado": "PASS"
+    },
+    {
+      "name": "junto_a: separación frontal optativa conserva default, RNG y reservas",
+      "estado": "PASS"
+    },
+    {
+      "name": "trofeos: banco opcional no fuerza huecos ni pierde el guardado",
+      "estado": "PASS"
+    }
+  ]
+}

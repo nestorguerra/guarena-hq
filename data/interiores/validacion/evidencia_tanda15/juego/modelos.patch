@@ -1,0 +1,283 @@
+--- a/tools/interiores/catalogo_vivienda_b.py
++++ b/tools/interiores/catalogo_vivienda_b.py
+@@ -55,6 +55,25 @@
+     juego['partes'][0].pop('tinte',None);juego['partes'][0]['c']='#647b78'
+     juego['partes'][1]['tex']=dict(tipo='vivienda_juego_ninos_b')
+     out.append(juego)
++    # Una huella de juego proporcionada también a los dormitorios estrechos.
++    # Misma textura propia y dos piezas de la alfombra grande; no hay juguetitos nuevos.
++    compacta=copy.deepcopy(juego)
++    compacta['id']='vb_alfombra_juego_compacta';compacta['nombre']='Alfombra compacta de juego con circuito'
++    for pieza in compacta['partes']:
++        pieza['d'][0]*=1.2/1.8;pieza['p'][0]*=1.2/1.8
++        pieza['d'][2]*=.85/1.3;pieza['p'][2]*=.85/1.3
++    out.append(compacta)
++    # Banco infantil de lectura: asiento de 90 × 32 cm a 40 cm y guardado bajo real.
++    # Cada tablero apoya en el inferior; el asiento puentea laterales y división.
++    # Dos cajas textiles integradas, sin superficies para acumular adornos.
++    p=[caja(.9,.035,.32,y=.0175,c='#c6b28d')]
++    for x in [-.435,.435]:p.append(caja(.03,.30,.32,x=x,y=.185,c='#c6b28d'))
++    p += [caja(.84,.30,.025,y=.185,z=-.1475,c='#8b7965'),
++          caja(.025,.30,.295,y=.185,z=.0125,c='#c6b28d'),
++          caja(.9,.065,.32,y=.3675,c='#567c91',m='tela')]
++    for x in [-.21625,.21625]:p.append(caja(.33,.22,.25,x=x,y=.145,z=.0125,c='#a4b1a0',m='tela'))
++    out.append(objeto('vb_banco_lectura_ninos','Banco de lectura con dos cajas de guardado',.9,.4,.32,'sillon',18,
++                      partes=p,asientos=[dict(p=[0,0,.015],h=.4,anim='banco')]))
+     # Armario bajo de ropa: cuerpo de 95 × 42 × 150 cm, no una cómoda.
+     p=[caja(.95,1.5,.42,c='#cbb591')]
+     for x in [-.2345,.2345]:
+--- a/tools/interiores/kits_vivienda_b.py
++++ b/tools/interiores/kits_vivienda_b.py
+@@ -41,7 +41,11 @@
+                junto('vb_biblioteca_ninos',mesa_id,True,buscar_refs=True,si_no=False,grupo_pared='estudio_infantil'),
+                E('esquina','vb_armario_ninos',cantidad=[1,1],obligatorio=True,preferir=True,espacio_frontal=[.7,.6]),
+                pared('vb_cama_ninos',False,area_min=20,habitacion=['ninos']),
+-               E('suelo_libre','vb_alfombra_juego',cantidad=[0,1],preferir=True,area_min=12),
++               # Lectura frente a los libros: sólo si cabe con el cuerpo y su uso.
++               # Separar la trasera deja intactas las cortinas hasta el suelo.
++               E('suelo_libre','vb_alfombra_juego',cantidad=[1,1],obligatorio=True,area_min=12),
++               E('suelo_libre','vb_alfombra_juego_compacta',cantidad=[1,1],obligatorio=True,area_max=12),
++               E('enfrente','vb_banco_lectura_ninos',de='vb_biblioteca_ninos',cantidad=[0,1],preferir=True,centrado=True,si_no=False,separacion_pared=.14,espacio_frontal=[.7,.55]),
+                E('pared','vb_dibujos_ninos',pared='*',sobre_de='vb_cama_ninos',cantidad=[0,1],preferir=True,si_no=False)]
+             soportes=['vb_mesita',mesa_id,'vb_biblioteca_ninos']
+         if id=='ninos':p += [E('sobre','vb_osito',en=['vb_mesita'],cantidad=[1,1],obligatorio=True),E('sobre','vb_bloques',en=['vb_biblioteca_ninos'],cantidad=[1,1],obligatorio=True)]
+--- a/data/objetos/vivienda_b.json
++++ b/data/objetos/vivienda_b.json
+@@ -1931,6 +1931,193 @@
+    ]
+   },
+   {
++   "id": "vb_alfombra_juego_compacta",
++   "nombre": "Alfombra compacta de juego con circuito",
++   "categoria": "textil",
++   "clase": "PICKUP",
++   "masa": 3,
++   "material": "madera",
++   "soporte": "suelo",
++   "partes": [
++    {
++     "f": "caja",
++     "d": [
++      1.2,
++      0.012,
++      0.8500000000000001
++     ],
++     "p": [
++      0.0,
++      0.006,
++      0.0
++     ],
++     "c": "#647b78",
++     "m": "tela"
++    },
++    {
++     "f": "caja",
++     "d": [
++      1.0999999999999999,
++      0.002,
++      0.7519230769230769
++     ],
++     "p": [
++      0.0,
++      0.013,
++      0.0
++     ],
++     "c": "#bba584",
++     "m": "tela",
++     "tex": {
++      "tipo": "vivienda_juego_ninos_b"
++     }
++    }
++   ]
++  },
++  {
++   "id": "vb_banco_lectura_ninos",
++   "nombre": "Banco de lectura con dos cajas de guardado",
++   "categoria": "mueble",
++   "clase": "CARRY",
++   "masa": 18,
++   "material": "madera",
++   "soporte": "suelo",
++   "partes": [
++    {
++     "f": "caja",
++     "d": [
++      0.9,
++      0.035,
++      0.32
++     ],
++     "p": [
++      0,
++      0.0175,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.03,
++      0.3,
++      0.32
++     ],
++     "p": [
++      -0.435,
++      0.185,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.03,
++      0.3,
++      0.32
++     ],
++     "p": [
++      0.435,
++      0.185,
++      0
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.84,
++      0.3,
++      0.025
++     ],
++     "p": [
++      0,
++      0.185,
++      -0.1475
++     ],
++     "c": "#8b7965",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.025,
++      0.3,
++      0.295
++     ],
++     "p": [
++      0,
++      0.185,
++      0.0125
++     ],
++     "c": "#c6b28d",
++     "m": "madera"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.9,
++      0.065,
++      0.32
++     ],
++     "p": [
++      0,
++      0.3675,
++      0
++     ],
++     "c": "#567c91",
++     "m": "tela"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.33,
++      0.22,
++      0.25
++     ],
++     "p": [
++      -0.21625,
++      0.145,
++      0.0125
++     ],
++     "c": "#a4b1a0",
++     "m": "tela"
++    },
++    {
++     "f": "caja",
++     "d": [
++      0.33,
++      0.22,
++      0.25
++     ],
++     "p": [
++      0.21625,
++      0.145,
++      0.0125
++     ],
++     "c": "#a4b1a0",
++     "m": "tela"
++    }
++   ],
++   "asientos": [
++    {
++     "p": [
++      0,
++      0,
++      0.015
++     ],
++     "h": 0.4,
++     "anim": "banco"
++    }
++   ],
++   "rol": "sillon"
++  },
++  {
+    "id": "vb_armario_ninos",
+    "nombre": "Armario infantil de ropa",
+    "categoria": "mueble",
+--- a/data/kits/vivienda_ninos.json
++++ b/data/kits/vivienda_ninos.json
+@@ -123,11 +123,40 @@
+    "regla": "suelo_libre",
+    "obj": "vb_alfombra_juego",
+    "cantidad": [
++    1,
++    1
++   ],
++   "obligatorio": true,
++   "area_min": 12
++  },
++  {
++   "zona": "estancia",
++   "regla": "suelo_libre",
++   "obj": "vb_alfombra_juego_compacta",
++   "cantidad": [
++    1,
++    1
++   ],
++   "obligatorio": true,
++   "area_max": 12
++  },
++  {
++   "zona": "estancia",
++   "regla": "enfrente",
++   "obj": "vb_banco_lectura_ninos",
++   "de": "vb_biblioteca_ninos",
++   "cantidad": [
+     0,
+     1
+    ],
+    "preferir": true,
+-   "area_min": 12
++   "centrado": true,
++   "si_no": false,
++   "separacion_pared": 0.14,
++   "espacio_frontal": [
++    0.7,
++    0.55
++   ]
+   },
+   {
+    "zona": "estancia",

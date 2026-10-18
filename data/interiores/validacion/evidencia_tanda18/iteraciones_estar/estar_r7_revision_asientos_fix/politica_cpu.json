@@ -1,0 +1,56 @@
+{
+  "state": "PASS",
+  "scope": "Política de alcance: mapas reach controlados explícitos, geometría/catálogo reales3244. No prueba ruta física nueva ni navegador.",
+  "rows": [
+    {
+      "name": "puff exacto protegido",
+      "accepted": false,
+      "nearest": [
+        0.9503946482757059,
+        1.2602578981415384
+      ],
+      "calls": 16,
+      "state": "PASS"
+    },
+    {
+      "name": "RED al omitir puff",
+      "accepted": true,
+      "nearest": [
+        0.9503946482757059,
+        1.2602578981415384
+      ],
+      "calls": 2,
+      "state": "PASS"
+    },
+    {
+      "name": "baseline seleccionable 1.20..1.25 protegido",
+      "accepted": false,
+      "nearest": [
+        1.2052593079268679,
+        1.2600198533418445
+      ],
+      "calls": 16,
+      "state": "PASS"
+    },
+    {
+      "name": "RED al excluir baseline desde1.2",
+      "accepted": true,
+      "nearest": [
+        1.2052593079268679,
+        1.2600198533418445
+      ],
+      "calls": 2,
+      "state": "PASS"
+    },
+    {
+      "name": "candidato seleccionable entre1.20..1.25 válido",
+      "accepted": true,
+      "nearest": [
+        0.9521817008725455,
+        1.2052593079268679
+      ],
+      "calls": 2,
+      "state": "PASS"
+    }
+  ]
+}

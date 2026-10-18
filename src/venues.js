@@ -768,14 +768,15 @@ export class VenueLife {
       const O = h.origin;
       const x = O.x + c.x, z = O.z + c.z, y = c.y || 0;
       ch.object.position.set(x, y, z); ch.object.rotation.y = c.h || 0;
-      if (c.pose === 'sit') ch.setBase('sit'); else if (c.pose === 'talk') ch.setBase('talk');
+      if (c.pose === 'sit' || c.pose === 'talk' || c.pose === 'sitTalk') ch.setBase(c.pose); // (sitTalk: chatting in a chair, hands moving)
       g.scene.add(ch.object);
+      if (c.asiento) c.asiento.ocupado = true; // (a kit's seat: not free for you)
       this.people.push({ ch, x, z, y, heading: c.h || 0, c });
     }
   }
   update(dt) {
     this.t += dt;
-    for (const p of this.people) { p.ch.update(dt, 0, { fidget: p.c.pose !== 'sit' }); p.ch.object.position.set(p.x, p.y, p.z); p.ch.object.rotation.y = p.heading; }
+    for (const p of this.people) { p.ch.update(dt, 0, { fidget: p.c.pose !== 'sit' && p.c.pose !== 'sitTalk' }); p.ch.object.position.set(p.x, p.y, p.z); p.ch.object.rotation.y = p.heading; }
     this.lineT -= dt;
     if (this.lineT > 0 || !this.people.length) return;
     this.lineT = 9 + Math.random() * 8;
@@ -785,5 +786,5 @@ export class VenueLife {
     const p = near[Math.floor(Math.random() * near.length)];
     this.g.peds.say({ x: p.x, z: p.z, y: p.y }, p.c.lines[Math.floor(Math.random() * p.c.lines.length)], true);
   }
-  dispose() { for (const p of this.people) { this.g.scene.remove(p.ch.object); p.ch.dispose(); } this.people = []; }
+  dispose() { for (const p of this.people) { if (p.c.asiento) p.c.asiento.ocupado = false; this.g.scene.remove(p.ch.object); p.ch.dispose(); } this.people = []; }
 }

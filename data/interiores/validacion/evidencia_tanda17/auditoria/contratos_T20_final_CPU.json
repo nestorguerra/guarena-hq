@@ -1,0 +1,239 @@
+{
+  "state": "PASS_FOUR_LITERAL_CPU_CALLBACKS",
+  "scope": "Candidate sealed finalR1; real Three r170/HouseBuilder/buildVecino/buildLocal/finishes/texture code/validators. Canvas tracing stub, texture asset placeholders. No browser/GPU/API/build/81/200. 3244/1594 inventory identities; 1481 synthetic directed seed.",
+  "provenance": {
+    "manifestSha256": "5bb39f7bc90b1a8091a9cb302669777719e99e6ae2de19e44c0ee1fee7be9c5a",
+    "sealedEntries": 298,
+    "verifiedBeforeAndAfter": true,
+    "patchSha256": "9a9cb6a41861fd9fee50a503765788c3004fa900d25863016fff6999ab403d83",
+    "callbackSourceSha256": "393b27d11f4da71778028eae85d4f71eee902ee5cf08a16bb25f48c43172ed2a",
+    "budgetSha256": "810f946235ab30794aff2b6b0f2352c428921e344bea5e399b47e1875ea7c2ee",
+    "runtimeSha256": "88d88223b7ad9999902fa98e8c25fd9de9c407d2639d49caf4e350c265b5c1ab",
+    "runnerSha256": "2aaddf4c7dfb1cccf6c26f4b8fd8dbe88e3ce054660f0b0fd415881f9d1812bc"
+  },
+  "rows": [
+    {
+      "name": "estudio: programa adulto completo, apoyos y usos en tres marcos reales",
+      "state": "PASS",
+      "builds": [
+        {
+          "kind": "buildVecino",
+          "seed": 3244,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "artista",
+              "frame": [
+                5.469253534451127,
+                3.3143072992563254,
+                2.75
+              ],
+              "seed": 425071
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1594,
+          "study": [
+            {
+              "sala": "A1",
+              "perfil": "estudiante",
+              "frame": [
+                4.360935460776091,
+                2.15,
+                2.75
+              ],
+              "seed": 208904
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1481,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "musico",
+              "frame": [
+                4.161097171530127,
+                3.412504189461471,
+                2.75
+              ],
+              "seed": 194118
+            }
+          ]
+        }
+      ],
+      "longClothNegative": {
+        "executed": false
+      },
+      "clones": 64,
+      "disposedClones": 64,
+      "undisposedClones": 0,
+      "prototypeRestored": true
+    },
+    {
+      "name": "estudio: caller real entrega mesa y pinta su pared con huecos",
+      "state": "PASS",
+      "builds": [
+        {
+          "kind": "buildVecino",
+          "seed": 3244,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "artista",
+              "frame": [
+                5.469253534451127,
+                3.3143072992563254,
+                2.75
+              ],
+              "seed": 425071
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1594,
+          "study": [
+            {
+              "sala": "A1",
+              "perfil": "estudiante",
+              "frame": [
+                4.360935460776091,
+                2.15,
+                2.75
+              ],
+              "seed": 208904
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1481,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "musico",
+              "frame": [
+                4.161097171530127,
+                3.412504189461471,
+                2.75
+              ],
+              "seed": 194118
+            }
+          ]
+        }
+      ],
+      "longClothNegative": {
+        "executed": false
+      },
+      "clones": 64,
+      "disposedClones": 64,
+      "undisposedClones": 0,
+      "prototypeRestored": true
+    },
+    {
+      "name": "estudio: fallback no vacio conserva programa y paso en marco pequeño fijo",
+      "state": "PASS",
+      "builds": [
+        {
+          "kind": "buildLocal",
+          "kit": "vivienda_estudio",
+          "seed": 4,
+          "effectiveSeed": 4,
+          "generation": null,
+          "frame": [
+            3.2,
+            2.8,
+            2.75
+          ],
+          "objects": [
+            "vb_puesto_estudio_amplio",
+            "vb_silla_estudio",
+            "vb_guardado_estudio",
+            "vb_biblioteca_estudio",
+            "vb_ordenador",
+            "vb_panel_estudio_estudiante",
+            "vb_consulta_estudio_estudiante",
+            "vb_consulta_estudio_estudiante",
+            "lb_libros_granates",
+            "fotos_familia",
+            "vb_lampara_trabajo"
+          ]
+        }
+      ],
+      "longClothNegative": {
+        "executed": false
+      },
+      "clones": 0,
+      "disposedClones": 0,
+      "undisposedClones": 0,
+      "prototypeRestored": true
+    },
+    {
+      "name": "estudio: tela real libre del puesto y ordenador, con negativo de paño largo",
+      "state": "PASS",
+      "builds": [
+        {
+          "kind": "buildVecino",
+          "seed": 3244,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "artista",
+              "frame": [
+                5.469253534451127,
+                3.3143072992563254,
+                2.75
+              ],
+              "seed": 425071
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1594,
+          "study": [
+            {
+              "sala": "A1",
+              "perfil": "estudiante",
+              "frame": [
+                4.360935460776091,
+                2.15,
+                2.75
+              ],
+              "seed": 208904
+            }
+          ]
+        },
+        {
+          "kind": "buildVecino",
+          "seed": 1481,
+          "study": [
+            {
+              "sala": "A2",
+              "perfil": "musico",
+              "frame": [
+                4.161097171530127,
+                3.412504189461471,
+                2.75
+              ],
+              "seed": 194118
+            }
+          ]
+        }
+      ],
+      "longClothNegative": {
+        "executed": true,
+        "detectedCollision": true,
+        "message": "3244: negativo de paño largo dejó de reproducir el defecto real"
+      },
+      "clones": 82,
+      "disposedClones": 82,
+      "undisposedClones": 0,
+      "prototypeRestored": true
+    }
+  ]
+}

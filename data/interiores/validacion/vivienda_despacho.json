@@ -1,0 +1,508 @@
+{
+ "kit": "vivienda_despacho",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.2,
+   "guardias": 9,
+   "objetos": 39,
+   "distintos": 26,
+   "hash": "6db58420",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 15.06,
+     "libre_m2": 15.06
+    }
+   },
+   "luz": {
+    "estancia": 0.072
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7002,
+   "mallas": 15,
+   "luces": 3,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.4,
+   "guardias": 6,
+   "objetos": 24,
+   "distintos": 21,
+   "hash": "17b14612",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 5,
+     "libre_m2": 5
+    }
+   },
+   "luz": {
+    "estancia": 0.156
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5604,
+   "mallas": 12,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 3,
+   "W": 5,
+   "D": 2.1,
+   "guardias": 4,
+   "objetos": 24,
+   "distintos": 20,
+   "hash": "8a926ab9",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 3
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 14
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 3.09,
+     "libre_m2": 3.09
+    }
+   },
+   "luz": {
+    "estancia": 0.198
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5134,
+   "mallas": 17,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.8,
+   "guardias": 7,
+   "objetos": 39,
+   "distintos": 30,
+   "hash": "9115ee04",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 3
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 0
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 26
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 2
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 11.5,
+     "libre_m2": 11.5
+    }
+   },
+   "luz": {
+    "estancia": 0.108
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7342,
+   "mallas": 17,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_despacho",
+   "tipologia": "otra_estancia",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.2,
+   "guardias": 9,
+   "objetos": 41,
+   "distintos": 26,
+   "hash": "82815b84",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "vb_mesa_despacho_0|vb_mesa_despacho_1|vb",
+     "n": 1
+    },
+    {
+     "entrada": 1,
+     "obj": "vb_silla_despacho",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "vb_comoda",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "sillon_orejero",
+     "n": 1
+    },
+    {
+     "entrada": 5,
+     "obj": "estanteria_libros",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "cuadro_paisaje|fotos_familia|poster_enma",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "vb_ordenador",
+     "n": 1
+    },
+    {
+     "entrada": 9,
+     "obj": "vb_mesa_lectura",
+     "n": 1
+    },
+    {
+     "entrada": 10,
+     "obj": "vb_alfombra",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "lb_libros_rojos|lb_libros_azules|lb_libr",
+     "n": 28
+    },
+    {
+     "entrada": 12,
+     "obj": "vb_plafon",
+     "n": 3
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 16.04,
+     "libre_m2": 16.04
+    }
+   },
+   "luz": {
+    "estancia": 0.076
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 7016,
+   "mallas": 16,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

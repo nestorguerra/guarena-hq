@@ -1,0 +1,106 @@
+{
+ "seed": 3244,
+ "quality": "alta",
+ "dpr": 1,
+ "chosen": {
+  "position": [
+   -5197.280761262942,
+   1.6,
+   -5196.324125616932
+  ],
+  "target": [
+   -5197.7413674141835,
+   0.9499999850988388,
+   -5198.985000007749
+  ],
+  "fov": 68,
+  "clipped": 0
+ },
+ "clearanceBefore": {
+  "free": true,
+  "position": {
+   "x": -5197.280761262942,
+   "z": -5196.324125616932
+  },
+  "radius": 0.34,
+  "tolerance": 1e-06,
+  "bounds": {
+   "x0": -5203.544626767225,
+   "x1": -5196.455373232775,
+   "z0": -5199.585,
+   "z1": -5196.028677196391
+  },
+  "inBounds": true,
+  "delta": 0,
+  "contact": false,
+  "depth": 0,
+  "insideFloorFurniture": [],
+  "circleCentres": [],
+  "testedOnlyOnClone": true,
+  "cameraMoved": false
+ },
+ "clearanceAfter": {
+  "free": true,
+  "position": {
+   "x": -5197.280761262942,
+   "z": -5196.324125616932
+  },
+  "radius": 0.34,
+  "tolerance": 1e-06,
+  "bounds": {
+   "x0": -5203.544626767225,
+   "x1": -5196.455373232775,
+   "z0": -5199.585,
+   "z1": -5196.028677196391
+  },
+  "inBounds": true,
+  "delta": 0,
+  "contact": false,
+  "depth": 0,
+  "insideFloorFurniture": [],
+  "circleCentres": [],
+  "testedOnlyOnClone": true,
+  "cameraMoved": false
+ },
+ "composicion": {
+  "pared": "biblioteca_actual",
+  "offset": 1,
+  "biblioteca": 5,
+  "asiento": 26,
+  "mesita": 23,
+  "lampara": 25,
+  "movidos": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   23,
+   25,
+   26,
+   38,
+   39,
+   44
+  ],
+  "intentos": [
+   {
+    "pared": "biblioteca_actual",
+    "offset": 1,
+    "errores": []
+   }
+  ]
+ },
+ "errors": []
+}

@@ -1,0 +1,254 @@
+{
+ "resultado": {
+  "estado": "FAIL",
+  "rows": [
+   {
+    "seed": 2786,
+    "estado": "PASS",
+    "salas": [
+     {
+      "sala": "L1",
+      "tipo": "dorm",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ]
+   },
+   {
+    "seed": 3244,
+    "estado": "FAIL",
+    "salas": [
+     {
+      "sala": "A0",
+      "tipo": "dorm",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_amplia",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ],
+    "error": "Error: mesa desligada del sillón\n    at ok (<anonymous>:3:31)\n    at <anonymous>:35:227"
+   },
+   {
+    "seed": 1689,
+    "estado": "PASS",
+    "salas": [
+     {
+      "sala": "L1",
+      "tipo": "dorm",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     },
+     {
+      "sala": "R3",
+      "tipo": "dorm2",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ]
+   },
+   {
+    "seed": 2132,
+    "estado": "PASS",
+    "salas": [
+     {
+      "sala": "L1",
+      "tipo": "dorm",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     },
+     {
+      "sala": "R3",
+      "tipo": "dorm2",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ]
+   },
+   {
+    "seed": 5157,
+    "estado": "PASS",
+    "salas": [
+     {
+      "sala": "L1",
+      "tipo": "dorm",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     },
+     {
+      "sala": "R3",
+      "tipo": "dorm2",
+      "kit": "vivienda_dormitorio",
+      "camas": [
+       {
+        "obj": "vb_cama_doble",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ]
+   },
+   {
+    "seed": 1594,
+    "estado": "PASS",
+    "salas": [
+     {
+      "sala": "A0",
+      "tipo": "dormJoven",
+      "kit": "vivienda_joven",
+      "camas": [
+       {
+        "obj": "vb_cama_individual",
+        "indice": 0,
+        "actualBed": true,
+        "lieOnBed": true,
+        "wake": true,
+        "salida_libre": true
+       }
+      ],
+      "ocultacion": [
+       {
+        "hideIn": true,
+        "unhide": true,
+        "salida_libre": true
+       }
+      ],
+      "lectura": null
+     }
+    ]
+   }
+  ],
+  "alcance": "Cinco vecinos dormitorio más joven real1594; camas mediante HouseLife.lieOnBed/wake y armarios mediante hideIn/unhide. Fixture privada reposicionada; sin recorrido desde entrada, evaluación visual dentro del armario ni siesta del jugador en cama ajena. Lectura3244: enlaces, apoyos nominales y registro de asiento; no activación de leer/sentarse. Render/veto shader. Persistencia global comparada por wrapper."
+ },
+ "consola": [],
+ "limites": "Paquete local previo al commit; no prueba Pages ni SHA público."
+}

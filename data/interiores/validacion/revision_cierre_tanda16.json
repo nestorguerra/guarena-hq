@@ -1,0 +1,45 @@
+{
+  "unlisted_files": [],
+  "dossier_files_exact": 160,
+  "frozen_sources_match_active": 413,
+  "capture_source_differences_documented": {
+    "src/casa_annie.js": [
+      "843af3240a9f23dfb51399261e2fb35c22b994bba71d4224e072fda64ccf52ff",
+      "7364d553829e4a86b470d266ef9849cf3498e3cec584404e6d5e5dbd0fd8ff09"
+    ],
+    "tools/interiores/casas_pruebas.js": [
+      "6b73efebfa36153027b17006fdc9330a6f6ef5380e529377856fcc31aeefef92",
+      "886f1cad61d16bad12e34b3d6835ee56d52bef73e362d80b618a3f8e0f23d9e8"
+    ]
+  },
+  "identical_free_poses": 6,
+  "judgments": {
+    "A": {
+      "mean": 3.276,
+      "request_id": "req_b9abd86a2b6f485c8a4e8b5afad07be5"
+    },
+    "B": {
+      "mean": 3.256,
+      "request_id": "req_ea1ad59eadc84dcfacb10b467cf4f0a0"
+    }
+  },
+  "image": "d445639e300adceccfb7f0c9ed2c9e95064091633584c115b2e4db0ab815fc91",
+  "source_collision_runs": [
+    16,
+    32,
+    16,
+    32
+  ],
+  "state": "PASS_DOCUMENTARY_CLOSURE_NOT_CI_OR_PUBLICATION",
+  "gates": 9,
+  "contracts": 69,
+  "previous_Annie_FAIL_preserved": true,
+  "houses": 200,
+  "rooms": 1166,
+  "literal_kitchen_seeds": 81,
+  "kits": 40,
+  "kits_seeds": 5,
+  "regenerated_identical": 22,
+  "manifest_sha256": "68e9a0f21c971bdd9ae450e038ce2299c6527bd90efc6bb37050b80e12d3551a",
+  "frozen_sha256": "7b28c42f49f4bfdd837c300268b8c7b0241b9cbba0da1cc2cdbf92c7625fad8b"
+}

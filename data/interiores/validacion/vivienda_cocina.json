@@ -1,0 +1,513 @@
+{
+ "kit": "vivienda_cocina",
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "errores": 0,
+ "resultados": [
+  {
+   "kit": "vivienda_cocina",
+   "tipologia": "cocina",
+   "seed": 1,
+   "W": 6.2,
+   "D": 4.199999999999999,
+   "guardias": 7,
+   "objetos": 28,
+   "distintos": 23,
+   "hash": "91fbb337",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_cocina_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_encimera_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_nevera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_banda_rustico_amplio",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_guardar_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "va_encimera_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "mesa_camilla",
+     "mesas": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "va_isla_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 13
+    },
+    {
+     "entrada": 19,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "va_preparar_pan",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 10.78,
+     "libre_m2": 10.78
+    }
+   },
+   "luz": {
+    "estancia": 0.072
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6218,
+   "mallas": 11,
+   "luces": 3,
+   "hogar": "abuela · antiguo",
+   "contexto_hogar": {
+    "perfil": "abuela",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "reloj"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true
+  },
+  {
+   "kit": "vivienda_cocina",
+   "tipologia": "cocina",
+   "seed": 2,
+   "W": 5.9,
+   "D": 2.6999999999999997,
+   "guardias": 5,
+   "objetos": 12,
+   "distintos": 10,
+   "hash": "788500fb",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_cocina_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_encimera_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_nevera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_banda_rustico_amplio",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_guardar_rustico_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "mesa_camilla",
+     "mesas": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "va_preparar_pan",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.66,
+     "libre_m2": 4.85
+    }
+   },
+   "luz": {
+    "estancia": 0.146
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 4154,
+   "mallas": 11,
+   "luces": 2,
+   "hogar": "matrimonio · antiguo",
+   "contexto_hogar": {
+    "perfil": "matrimonio",
+    "estilo": "antiguo",
+    "botin": [
+     "joyero",
+     "colchon",
+     "cartera",
+     "lata"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_cocina",
+   "tipologia": "cocina",
+   "seed": 3,
+   "W": 5,
+   "D": 2.4,
+   "guardias": 4,
+   "objetos": 9,
+   "distintos": 8,
+   "hash": "fcbb5841",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 0,
+     "obj": "va_cocina_liso",
+     "n": 1
+    },
+    {
+     "entrada": 2,
+     "obj": "va_encimera_liso",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_nevera",
+     "n": 1
+    },
+    {
+     "entrada": 7,
+     "obj": "va_banda_liso",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_guardar_liso_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 0
+    },
+    {
+     "entrada": 19,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "va_preparar_pan",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 4.86,
+     "libre_m2": 4.86
+    }
+   },
+   "luz": {
+    "estancia": 0.185
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 2912,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "familia · moderno",
+   "contexto_hogar": {
+    "perfil": "familia",
+    "estilo": "moderno",
+    "botin": [
+     "consola",
+     "portatil",
+     "hucha",
+     "cartera",
+     "movil"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_cocina",
+   "tipologia": "cocina",
+   "seed": 4,
+   "W": 4.4,
+   "D": 4.8,
+   "guardias": 7,
+   "objetos": 30,
+   "distintos": 27,
+   "hash": "6e208c96",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_cocina_amplia_liso",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_encimera_amplia_liso",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_nevera",
+     "n": 1
+    },
+    {
+     "entrada": 8,
+     "obj": "va_banda_liso_amplio",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_guardar_liso",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "va_encimera_amplia_liso",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 16,
+     "obj": "va_mesa_comedor",
+     "mesas": 1
+    },
+    {
+     "entrada": 18,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 16
+    },
+    {
+     "entrada": 19,
+     "obj": "vb_lampara_trabajo",
+     "n": 2
+    },
+    {
+     "entrada": 20,
+     "obj": "va_preparar_pan",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 9.06,
+     "libre_m2": 9.06
+    }
+   },
+   "luz": {
+    "estancia": 0.108
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 5404,
+   "mallas": 10,
+   "luces": 2,
+   "hogar": "estudiante · joven",
+   "contexto_hogar": {
+    "perfil": "estudiante",
+    "estilo": "joven",
+    "botin": [
+     "portatil",
+     "guitarra",
+     "altavoz",
+     "consola"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  },
+  {
+   "kit": "vivienda_cocina",
+   "tipologia": "cocina",
+   "seed": 5,
+   "W": 6.5,
+   "D": 4.199999999999999,
+   "guardias": 7,
+   "objetos": 30,
+   "distintos": 25,
+   "hash": "c2235fac",
+   "errores": [],
+   "avisos": [],
+   "recuento": [
+    {
+     "entrada": 1,
+     "obj": "va_cocina_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 3,
+     "obj": "va_encimera_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 4,
+     "obj": "va_nevera",
+     "n": 1
+    },
+    {
+     "entrada": 6,
+     "obj": "va_banda_rustico_amplio",
+     "n": 1
+    },
+    {
+     "entrada": 11,
+     "obj": "va_lavadora",
+     "n": 1
+    },
+    {
+     "entrada": 12,
+     "obj": "va_guardar_rustico_amplia",
+     "n": 1
+    },
+    {
+     "entrada": 13,
+     "obj": "va_encimera_amplia_rustico",
+     "n": 1
+    },
+    {
+     "entrada": 14,
+     "obj": "va_alacena",
+     "n": 1
+    },
+    {
+     "entrada": 15,
+     "obj": "mesa_camilla",
+     "mesas": 1
+    },
+    {
+     "entrada": 17,
+     "obj": "va_isla_cocina",
+     "n": 0
+    },
+    {
+     "entrada": 18,
+     "obj": "va_alimento_atun|va_alimento_sardinillas",
+     "n": 15
+    },
+    {
+     "entrada": 19,
+     "obj": "vb_lampara_trabajo",
+     "n": 3
+    },
+    {
+     "entrada": 20,
+     "obj": "va_preparar_pan",
+     "n": 1
+    }
+   ],
+   "paso": {
+    "estancia": {
+     "alcanzable_m2": 12.93,
+     "libre_m2": 12.93
+    }
+   },
+   "luz": {
+    "estancia": 0.076
+   },
+   "flotando": 0,
+   "interpenetraciones": 0,
+   "triangulos": 6186,
+   "mallas": 11,
+   "luces": 3,
+   "hogar": "cazador · rustico",
+   "contexto_hogar": {
+    "perfil": "cazador",
+    "estilo": "rustico",
+    "botin": [
+     "rifle",
+     "jamon",
+     "cartera",
+     "prismaticos"
+    ],
+    "habitacion": "dorm"
+   },
+   "determinista": true,
+   "diferencia_con_semilla_1": 1
+  }
+ ]
+}

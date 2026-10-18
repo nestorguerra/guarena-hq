@@ -1,0 +1,22 @@
+{
+ "estado": "PASS_4_CALLBACKS_CONSTRUCCION_SIN_RENDER",
+ "pruebas": [
+  {
+   "nombre": "estudio: programa adulto completo, apoyos y usos en tres marcos reales",
+   "estado": "PASS"
+  },
+  {
+   "nombre": "estudio: caller real entrega mesa y pinta su pared con huecos",
+   "estado": "PASS"
+  },
+  {
+   "nombre": "estudio: fallback no vacio conserva programa y paso en marco pequeño fijo",
+   "estado": "PASS"
+  },
+  {
+   "nombre": "estudio: tela real libre del puesto y ordenador, con negativo de paño largo",
+   "estado": "PASS"
+  }
+ ],
+ "limite": "El wrapper intentó leer lista como objeto después de guardar resultado; TypeError instrumental posterior. No se repite navegador. No prueba shaders: R2 rechazado visualmente por desaparición de paños."
+}

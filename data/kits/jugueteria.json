@@ -1,0 +1,871 @@
+{
+ "tipologia": "tienda_especializada",
+ "nombre": "Juguetería",
+ "nota": "La juguetería de un pueblo de las Vegas Altas: el mostrador azul y amarillo con la caja a un lado de la puerta (el espejo del bazar: a la izquierda), muñecas, construcciones, puzles, peluches y juegos en estanterías y góndolas de colores, bicicletas y patinetes de exposición, el tren eléctrico en su mesa, la casa de muñecas, la piscina de bolas, el oso gigante, el buzón de los Reyes Magos y el almacén al fondo. La puerta en z = 0, el fondo en z = D; x de -W/2 a W/2.",
+ "superficie": {
+  "ancho": [
+   6.3,
+   8.1
+  ],
+  "fondo": [
+   10.8,
+   12.9
+  ],
+  "alto": 3.0
+ },
+ "variables": {
+  "xc": "-W/2+1.7",
+  "z0": "1.5",
+  "z1": "3.9",
+  "zb": "D-2.2"
+ },
+ "paso_libre": 0.9,
+ "pared": "#f4ecd6",
+ "suelo": "floor_tiles_06",
+ "suelo_color": "#d6d0c0",
+ "puntos": {
+  "dependiente": [
+   "xc-0.8",
+   "(z0+z1)/2"
+  ],
+  "mostrador": [
+   "xc+0.75",
+   "(z0+z1)/2"
+  ]
+ },
+ "pedir": "Pagar en caja",
+ "zonas": [
+  {
+   "id": "entrada",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "0",
+    "W/2",
+    "1.3"
+   ]
+  },
+  {
+   "id": "caja",
+   "publica": false,
+   "rect": [
+    "xc-0.3",
+    "z0",
+    "xc+0.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "trascaja",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "z0",
+    "xc-0.33",
+    "z1+0.2"
+   ]
+  },
+  {
+   "id": "frente_caja",
+   "publica": true,
+   "rect": [
+    "xc+0.33",
+    "z0",
+    "xc+1.3",
+    "z1"
+   ]
+  },
+  {
+   "id": "frente_e",
+   "publica": false,
+   "rect": [
+    "W/2-1.0",
+    "1.3",
+    "W/2",
+    "4.9"
+   ]
+  },
+  {
+   "id": "puestos",
+   "publica": true,
+   "rect": [
+    "xc+1.35",
+    "1.3",
+    "W/2-0.9",
+    "4.9"
+   ]
+  },
+  {
+   "id": "sala",
+   "publica": true,
+   "rect": [
+    "-W/2",
+    "1.3",
+    "W/2",
+    "zb"
+   ]
+  },
+  {
+   "id": "isla",
+   "publica": true,
+   "rect": [
+    "-W/2+0.45",
+    "5.0",
+    "W/2-0.45",
+    "zb"
+   ]
+  },
+  {
+   "id": "almacen",
+   "publica": false,
+   "rect": [
+    "-W/2",
+    "zb",
+    "W/2",
+    "D"
+   ]
+  }
+ ],
+ "tabiques": [
+  {
+   "de": [
+    "-W/2",
+    "zb"
+   ],
+   "a": [
+    "W/2",
+    "zb"
+   ],
+   "puerta": [
+    "W-1.6",
+    1.0
+   ]
+  }
+ ],
+ "libres": [
+  {
+   "rect": [
+    "xc+0.3",
+    "z0",
+    "xc+1.3",
+    "z1"
+   ],
+   "nota": "el sitio para pagar en el mostrador: sin muebles delante"
+  },
+  {
+   "rect": [
+    "xc-1.15",
+    "(z0+z1)/2-0.45",
+    "xc-0.35",
+    "(z0+z1)/2+0.45"
+   ],
+   "nota": "donde está el dependiente"
+  }
+ ],
+ "objetos": [
+  {
+   "zona": "caja",
+   "regla": "modulos",
+   "obj": "mostrador_jugueteria",
+   "eje": "z",
+   "linea": [
+    "xc",
+    "z0",
+    "z1"
+   ],
+   "mira": "+x",
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "caja_registradora",
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "datafono",
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "pila_bolsas_plastico",
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "bote_caramelos",
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "obj": "expositor_llaveros",
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "caja",
+   "regla": "sobre",
+   "variantes": [
+    "jg_cartas",
+    "bz_pompas",
+    "jg_pinturas_dedos"
+   ],
+   "en": [
+    "mostrador_jugueteria"
+   ],
+   "cantidad": [
+    0,
+    2
+   ]
+  },
+  {
+   "zona": "trascaja",
+   "regla": "contra_pared",
+   "obj": "armario_trascaja",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "pared",
+   "obj": "rotulo_jugueteria",
+   "pared": "W",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "trascaja",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "estanteria_metalica",
+   "pared": "N",
+   "cantidad": [
+    2,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "sobre",
+   "variantes": [
+    "caja_bazar_grande",
+    "caja_carton",
+    "jg_juegos_mesa_a",
+    "jg_juegos_mesa_c",
+    "jg_munecas_rosa"
+   ],
+   "en": [
+    "estanteria_metalica"
+   ],
+   "relleno": [
+    0.6,
+    0.9
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "torre_cajas_bazar",
+   "pared": "W",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "variantes": [
+    "bici_infantil_azul",
+    "triciclo_rojo",
+    "patinete_juguete"
+   ],
+   "pared": "E",
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "almacen",
+   "regla": "contra_pared",
+   "obj": "caja_bazar_grande",
+   "pared": "W",
+   "cantidad": [
+    0,
+    3
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "fregona_cubo",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "esquina",
+   "obj": "escoba",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "almacen",
+   "regla": "techo",
+   "obj": "plafon_pequeno",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "papelera",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "buzon_reyes_magos",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "entrada",
+   "regla": "esquina",
+   "obj": "planta_grande",
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_e",
+   "regla": "pared",
+   "obj": "cartel_juguetes",
+   "pared": "E",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_e",
+   "regla": "pared",
+   "obj": "guirnalda_banderines",
+   "pared": "E",
+   "cantidad": [
+    1,
+    2
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "frente_e",
+   "regla": "contra_pared",
+   "obj": "estanteria_jugueteria_baja",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_jugueteria_pared",
+   "pared": "E",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_jugueteria_pared",
+   "pared": "W",
+   "llenar": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "contra_pared",
+   "obj": "estanteria_jugueteria_pared",
+   "pared": "N",
+   "llenar": true
+  },
+  {
+   "zona": "sala",
+   "regla": "conjunto",
+   "obj": "mesa_tren_juguete",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "variantes": [
+    "bici_infantil_roja",
+    "bici_infantil_azul",
+    "patinete_juguete",
+    "triciclo_rojo"
+   ],
+   "cantidad": [
+    1,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "puestos",
+   "regla": "suelo_libre",
+   "variantes": [
+    "oso_gigante_trono",
+    "red_balones"
+   ],
+   "cantidad": [
+    2,
+    2
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "peluche",
+    "balon"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "obj": "mesa_juegos_mesa",
+   "cantidad": [
+    1,
+    1
+   ],
+   "obligatorio": true,
+   "vende": "parchis"
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "expositor_cometas",
+    "expositor_comics",
+    "expositor_posters"
+   ],
+   "cantidad": [
+    3,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true,
+   "vende": [
+    "cometa",
+    "comic",
+    "poster"
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "suelo_libre",
+   "variantes": [
+    "casa_munecas",
+    "cubo_pelotas_grande",
+    "percha_disfraces"
+   ],
+   "cantidad": [
+    2,
+    3
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "isla",
+   "regla": "filas",
+   "obj": "gondola_jugueteria",
+   "eje": "z",
+   "pasillo": 1.2,
+   "margen": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "zona": "isla",
+   "regla": "sobre",
+   "variantes": [
+    "jg_juegos_mesa_b",
+    "jg_juegos_mesa_a",
+    "jg_juegos_mesa_c",
+    "jg_construccion_b",
+    "jg_peluche_perros",
+    "jg_cartas",
+    "bz_cochecitos",
+    "jg_pizarras",
+    "jg_construccion_a",
+    "jg_pistas_coches",
+    "jg_munecas_lila",
+    "bz_pompas",
+    "jg_bloques_madera",
+    "jg_dinosaurios",
+    "jg_cubos_playa",
+    "jg_munecas_rosa",
+    "jg_ciencia",
+    "jg_peluche_elefantes",
+    "jg_pinturas_dedos",
+    "bz_pelotas_saltarinas",
+    "jg_peluche_conejos",
+    "jg_tren_madera",
+    "jg_robots",
+    "jg_peluche_osos",
+    "jg_xilofonos",
+    "jg_figuras_accion",
+    "bz_munecas",
+    "jg_pistolas_agua",
+    "bz_puzles",
+    "jg_puzles_madera"
+   ],
+   "en": [
+    "gondola_jugueteria"
+   ],
+   "relleno": [
+    0.85,
+    0.98
+   ],
+   "todas": true
+  },
+  {
+   "zona": "frente_e",
+   "regla": "sobre",
+   "variantes": [
+    "jg_peluche_osos",
+    "bz_puzles",
+    "jg_peluche_perros",
+    "jg_cubos_playa",
+    "jg_bloques_madera",
+    "jg_juegos_mesa_c",
+    "bz_munecas",
+    "jg_pinturas_dedos",
+    "bz_cochecitos",
+    "jg_robots",
+    "jg_juegos_mesa_a",
+    "jg_peluche_conejos",
+    "jg_peluche_elefantes",
+    "jg_xilofonos",
+    "jg_tren_madera",
+    "jg_munecas_lila",
+    "jg_pizarras",
+    "bz_pompas",
+    "jg_pistas_coches",
+    "jg_juegos_mesa_b",
+    "jg_figuras_accion",
+    "jg_construccion_a",
+    "jg_pistolas_agua",
+    "jg_puzles_madera",
+    "jg_cartas",
+    "jg_dinosaurios",
+    "jg_munecas_rosa",
+    "jg_ciencia",
+    "jg_construccion_b",
+    "bz_pelotas_saltarinas"
+   ],
+   "en": [
+    "estanteria_jugueteria_baja"
+   ],
+   "relleno": [
+    0.85,
+    0.98
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "sobre",
+   "variantes": [
+    "jg_peluche_perros",
+    "jg_juegos_mesa_a",
+    "jg_pinturas_dedos",
+    "jg_tren_madera",
+    "jg_dinosaurios",
+    "jg_figuras_accion",
+    "jg_puzles_madera",
+    "jg_peluche_osos",
+    "jg_munecas_lila",
+    "jg_cubos_playa",
+    "jg_cartas",
+    "jg_pistolas_agua",
+    "jg_construccion_a",
+    "bz_munecas",
+    "jg_ciencia",
+    "jg_pizarras",
+    "jg_robots",
+    "jg_construccion_b",
+    "jg_juegos_mesa_b",
+    "jg_peluche_conejos",
+    "jg_juegos_mesa_c",
+    "bz_puzles",
+    "bz_pompas",
+    "jg_peluche_elefantes",
+    "jg_munecas_rosa",
+    "jg_pistas_coches",
+    "bz_cochecitos",
+    "jg_xilofonos",
+    "jg_bloques_madera",
+    "bz_pelotas_saltarinas"
+   ],
+   "en": [
+    "estanteria_jugueteria_pared"
+   ],
+   "relleno": [
+    0.85,
+    0.98
+   ],
+   "todas": true,
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "lampara_panel_led",
+   "por_m2": [
+    0.09,
+    0.11
+   ],
+   "obligatorio": true
+  },
+  {
+   "zona": "sala",
+   "regla": "pared",
+   "obj": "extintor",
+   "pared": [
+    "W",
+    "E"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "entrada",
+   "regla": "pared",
+   "obj": "senal_salida",
+   "pared": [
+    "E",
+    "W"
+   ],
+   "cantidad": [
+    0,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "camara_seguridad",
+   "cantidad": [
+    1,
+    1
+   ]
+  },
+  {
+   "zona": "sala",
+   "regla": "techo",
+   "obj": "detector_humo",
+   "cantidad": [
+    1,
+    1
+   ]
+  }
+ ],
+ "iluminacion": {
+  "fuentes": [
+   4,
+   9
+  ],
+  "temperatura_k": [
+   3800,
+   4400
+  ],
+  "dia": {
+   "intensidad": 0.9
+  },
+  "noche": {
+   "intensidad": 1.0
+  },
+  "minimo_lux_publico": 200
+ },
+ "ambiente": {
+  "sonido": "tienda",
+  "horario_defecto": "Mo-Sa 10:00-14:00,17:00-20:30",
+  "vida": [
+   "el tren da vueltas sobre su mesa",
+   "una bici de exposición junto a la puerta",
+   "cartas a los Reyes Magos en el buzón",
+   "peluches por todas partes"
+  ],
+  "cerrado": "reja bajada, el escaparate iluminado"
+ },
+ "minimo_objetos_distintos": 40,
+ "moodboard": [
+  {
+   "titulo": "Benjamin Pollocks Toy Shop interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Benjamin_Pollocks_Toy_Shop_interior.jpg",
+   "autor": "Jack1956",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Benjamin Pollocks Toy Shop interior 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Benjamin_Pollocks_Toy_Shop_interior_1.jpg",
+   "autor": "Jack1956",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Interior of Streets Toy Shop, Ringwood - geograph.org.uk - 174283.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Streets_Toy_Shop,_Ringwood_-_geograph.org.uk_-_174283.jpg",
+   "autor": "Peter Facey",
+   "licencia": "CC BY-SA 2.0"
+  },
+  {
+   "titulo": "Prague Praha 2014 Holmstad Toy store Golden Lane.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Prague_Praha_2014_Holmstad_Toy_store_Golden_Lane.jpg",
+   "autor": "Øyvind Holmstad",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Sint Nicolaas etalages in Amsterdam Kinderen kijken naar de etalages, Bestanddeelnr 913-2134.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Sint_Nicolaas_etalages_in_Amsterdam_Kinderen_kijken_naar_de_etalages,_Bestanddeelnr_913-2134.jpg",
+   "autor": "Wim van Rossem for Anefo",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Toy and jewelry shop - Arlington, MA.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Toy_and_jewelry_shop_-_Arlington,_MA.jpg",
+   "autor": "Daderot",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Vibrant Toy and Stationery Store Interior.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Vibrant_Toy_and_Stationery_Store_Interior.jpg",
+   "autor": "Hihifap39",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "XS Lelut Oulu.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:XS_Lelut_Oulu.jpg",
+   "autor": "Santtu37",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "XS Lelut Valkea Oulu 20251102.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:XS_Lelut_Valkea_Oulu_20251102.jpg",
+   "autor": "Estormiz",
+   "licencia": "CC0"
+  },
+  {
+   "titulo": "Pink girls section of toy store.jpeg",
+   "url": "https://commons.wikimedia.org/wiki/File:Pink_girls_section_of_toy_store.jpeg",
+   "autor": "OttawaAC",
+   "licencia": "CC BY-SA 3.0"
+  },
+  {
+   "titulo": "Plush toys in Eslite Spectrum Huwei Store.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Plush_toys_in_Eslite_Spectrum_Huwei_Store.jpg",
+   "autor": "Dquai",
+   "licencia": "CC BY-SA 4.0"
+  },
+  {
+   "titulo": "Mibu Toy Museum Gift Shop 1.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Mibu_Toy_Museum_Gift_Shop_1.JPG",
+   "autor": "京浜にけ",
+   "licencia": "CC BY-SA 3.0"
+  }
+ ]
+}

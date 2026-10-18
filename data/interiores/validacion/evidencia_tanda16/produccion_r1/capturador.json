@@ -1,0 +1,255 @@
+{
+  "state": "PASS_CPU_SELECTOR_AND_BASE_POSES_NO_BROWSER",
+  "old_sha256": "6881d0b2f2d528552a0480ccc43188c8a4071ea73364418df387f077ebb69cae",
+  "candidate_sha256": "77b720197f924cd0e5552181db340d5bd2b182471f9e21ab41a214819c1820f0",
+  "delta": "one identity predicate only; full CPU camera search reused literally, with actual baseline geometry/collider, no GPU/render; future candidate may select different poses because geometry changed",
+  "recognizedPreparations": [
+    "va_encimera",
+    "va_encimera_amplia",
+    "va_encimera_rustico",
+    "va_encimera_amplia_rustico",
+    "va_encimera_liso",
+    "va_encimera_amplia_liso",
+    "va_encimera_vajillero",
+    "va_encimera_amplia_vajillero"
+  ],
+  "rows": [
+    {
+      "seed": 2786,
+      "sixBasePosesPreserved": true,
+      "poses": [
+        {
+          "x": -9702.484797229434,
+          "y": 1.6,
+          "z": -9690.847872279095,
+          "fov": 60,
+          "objetivo": [
+            -9703.561341758845,
+            1.05,
+            -9691.929619917142
+          ],
+          "objetivos": [],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9702.484797229434,
+              "z": -9690.847872279095
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9703.851341782687,
+              "x1": -9701.11825267618,
+              "z0": -9691.859619907606,
+              "z1": -9689.836124650585
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        },
+        {
+          "x": -9703.553723961386,
+          "y": 1.6,
+          "z": -9689.991823701988,
+          "fov": 68,
+          "objetivo": [
+            -9702.268841727255,
+            1.4,
+            -9691.908369915056
+          ],
+          "objetivos": [
+            "va_encimera",
+            "va_nevera"
+          ],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9703.553723961386,
+              "z": -9689.991823701988
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9703.851341782687,
+              "x1": -9701.11825267618,
+              "z0": -9691.859619907606,
+              "z1": -9689.836124650585
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        }
+      ]
+    },
+    {
+      "seed": 3244,
+      "sixBasePosesPreserved": true,
+      "poses": [
+        {
+          "x": -9702.27385070689,
+          "y": 1.6,
+          "z": -9693.106526568658,
+          "fov": 60,
+          "objetivo": [
+            -9702.924626760072,
+            1.05,
+            -9691.780092807301
+          ],
+          "objetivos": [],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9702.27385070689,
+              "z": -9693.106526568658
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9703.544626767225,
+              "x1": -9698.755373232774,
+              "z0": -9695.198677196391,
+              "z1": -9691.850092816838
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        },
+        {
+          "x": -9700.026149293111,
+          "y": 1.6,
+          "z": -9694.360101882525,
+          "fov": 68,
+          "objetivo": [
+            -9701.070976743884,
+            1.4,
+            -9691.801342809387
+          ],
+          "objetivos": [
+            "va_encimera_amplia",
+            "va_nevera"
+          ],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9700.026149293111,
+              "z": -9694.360101882525
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9703.544626767225,
+              "x1": -9698.755373232774,
+              "z0": -9695.198677196391,
+              "z1": -9691.850092816838
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        }
+      ]
+    },
+    {
+      "seed": 1594,
+      "sixBasePosesPreserved": true,
+      "poses": [
+        {
+          "x": -9702.052187092155,
+          "y": 1.6,
+          "z": -9693.409405116026,
+          "fov": 60,
+          "objetivo": [
+            -9702.370467723234,
+            1.05,
+            -9692.022442284133
+          ],
+          "objetivos": [],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9702.052187092155,
+              "z": -9693.409405116026
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9702.990467730388,
+              "x1": -9699.309532269612,
+              "z0": -9695.592349349557,
+              "z1": -9692.09244229367
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        },
+        {
+          "x": -9700.247812907844,
+          "y": 1.6,
+          "z": -9695.14136793838,
+          "fov": 68,
+          "objetivo": [
+            -9700.516817707046,
+            1.4,
+            -9692.043692286219
+          ],
+          "objetivos": [
+            "va_encimera_amplia",
+            "va_nevera"
+          ],
+          "clearance": {
+            "free": true,
+            "position": {
+              "x": -9700.247812907844,
+              "z": -9695.14136793838
+            },
+            "radius": 0.34,
+            "tolerance": 0.000001,
+            "bounds": {
+              "x0": -9702.990467730388,
+              "x1": -9699.309532269612,
+              "z0": -9695.592349349557,
+              "z1": -9692.09244229367
+            },
+            "inBounds": true,
+            "delta": 0,
+            "contact": false,
+            "depth": 0,
+            "insideFloorFurniture": [],
+            "circleCentres": [],
+            "testedOnlyOnClone": true,
+            "cameraMoved": false
+          }
+        }
+      ]
+    }
+  ]
+}
